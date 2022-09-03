@@ -135,7 +135,7 @@ animation-duration: 3s;
 }
 
 /* ANSWERS/RIGHT SECTION */
-.answer-section, .settings-section {
+.answer-section {
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -147,11 +147,25 @@ animation-duration: 3s;
   top: 31%;
 
 }
-.settings-section{
 
-  left: 5%;
-  top:5%;
 
+.settings-section {
+  border:4px solid orange;
+  width: 40%;
+  display: block;
+  left:6%;
+  top: -3%;
+  position:fixed;
+  height:50%;
+z-index: 6000;
+}
+.settings-button{
+  margin-top:100px;
+  height: 300px;
+  width:300px;
+  position:fixed;
+  border:4px solid red;
+  border-radius:50%;
 }
 @keyframes fade-in  {
   0%{opacity: 0},
@@ -170,8 +184,8 @@ button {
   display: flex;
   margin-bottom:5%;
   padding: 8px;}
-.correct {
-  background-color: #2f922f;
+  .correct {
+    background-color: #2f922f;
 }
 
 .incorrect {
@@ -198,12 +212,12 @@ button svg {
   left: 0%;
   width: 100%;
   transform: scale(1);
-top:0%;
+  top:0%;
 z-index: -1;
 }
 
 #app-bg{
-
+  
   position: fixed;
   top: 0%;
   left: 0%;
@@ -226,18 +240,24 @@ z-index: -1;
     width: 10px;
     height: 10px;
     border-radius: 100%;
-}
-.settingsButton{
+  }
+  .settingsButton{
   transform: scale(0.5);
   position: relative;
   padding: 0;
-
+  
 }
-.settings{
-  border:4px solid gray;
+#settings{
+  border:4px solid rgb(255, 0, 0);
   position:fixed;
   z-index: 9999;
+width:100%;
+left:0%;
+top:0%;
+height:100%;
+
 }
+
 #toggle-settings-btn{
   left:86%;
   background-color:#555e7d;
@@ -256,20 +276,20 @@ z-index: -1;
 }
 
 .ringfort{
-
+  
   position: absolute;
   top: -2%;
   left: 130%;
 }
 #Rain{
   position:fixed;
-
-pointer-events: none;
-    height: 100%;
-    width: 100%;
-    top: 0%;
+  
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  top: 0%;
     left: 0%;
-}
+  }
 .drop{
   border:1px solid rgba(169, 169, 169, 0.429);
   z-index: 9000;
@@ -286,4 +306,19 @@ pointer-events: none;
   }
   #hidden{
     display: none;
+  }
+
+  .settings-bg{
+    height:100%;
+    width:100%;
+    position: fixed;
+    top:0;
+    left:0;
+  }
+
+
+  .settings-button{
+
+    transform:scale(0.5);
+    border-radius: 5px solid orange ;
   }

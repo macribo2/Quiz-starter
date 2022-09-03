@@ -291,17 +291,18 @@ const[score, setScore] = useState(0)
 
 
 			
-			{ showSettings ? (<div id="settings">
+			{showSettings ? (<>
+						<img src={ bg0} className="settings-bg" alt="low intensity background image graphic, expect this to change sometimes."/>	
+				<div id="settings">
 				
 			
-				<div className='settings-section'>
-					<button className="settingsButton">.<img src={settingsBtnGamepad}/></button>
-					<button className="settingsButton">.<img src={settingsBtnTouchscreen}/></button>
-					<button className="settingsButton">.<img src={settingsBtnKeyboard}/></button>
-				</div>
-
-				
-</div>	) : null} }
+					<div className='settings-section'>
+						<button className="settings-button">.<img src={settingsBtnGamepad}/></button>
+						<button className="settings-button">.<img src={settingsBtnTouchscreen}/></button>
+						<button className="settings-button">.<img src={settingsBtnKeyboard}/></button>
+						</div>
+					</div>
+				</>): null} 
 		</div>
 	);
 }
