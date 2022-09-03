@@ -19,9 +19,9 @@ import drone from "./audio/drone.wav"
 import stars from './images/stars.gif';
 import ReactAudioPlayer from 'react-audio-player';
 import settingsBG from './images/fortuna-bg.png';
-import settingsBtnGamepad from './images/ciorcal-glass.png';
-import settingsBtnTouchscreen from './images/ciorcal-glass.png';
-import settingsBtnKeyboard from './images/ciorcal-glass.png';
+import settingsBtnGamepad from './images/settings/gamepad.png';
+import settingsBtnTouchscreen from './images/settings/smartphone.png';
+import settingsBtnKeyboard from './images/settings/keyboard.png';
 import './fonts/Urchlo Romhanach.ttf';
 export default function App() {
 	const [musicPlay, playMusic]  = useState("-")
@@ -293,14 +293,15 @@ const[score, setScore] = useState(0)
 			
 			{showSettings ? (<>
 						<img src={ bg0} className="settings-bg" alt="low intensity background image graphic, expect this to change sometimes."/>	
-				<div id="settings">
 				
 			
-					<div className='settings-section'>
-						<button className="settings-button">.<img src={settingsBtnGamepad}/></button>
+					<div className='setting-menu'>
+						{/* <button className="settings-button">.<img src={settingsBtnGamepad}/></button>
 						<button className="settings-button">.<img src={settingsBtnTouchscreen}/></button>
-						<button className="settings-button">.<img src={settingsBtnKeyboard}/></button>
-						</div>
+						<button className="settings-button">.<img src={settingsBtnKeyboard} /></button> */}
+						<div className="settings-button" id="sb0">gamepad.<img src={settingsBtnGamepad}/></div>
+					<div className="settings-button" id="sb1" > <img src={settingsBtnKeyboard } />keyboard.</div>
+					<div className="settings-button" id="sb2">touchscreen.<img src={settingsBtnTouchscreen} /></div>
 					</div>
 				</>): null} 
 		</div>
