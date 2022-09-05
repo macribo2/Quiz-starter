@@ -23,6 +23,10 @@ import settingsBtnGamepad from './images/settings/gamepad.png';
 import settingsBtnTouchscreen from './images/settings/smartphone.png';
 import settingsBtnKeyboard from './images/settings/keyboard.png';
 import './fonts/Urchlo Romhanach.ttf';
+
+
+
+
 export default function App() {
 	const [musicPlay, playMusic]  = useState("-")
 	const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -38,7 +42,7 @@ export default function App() {
 	function Greeting(props) { 
 		const isRaining = props.isRaining;
 		if (isRaining) {
-			return <ReactRain numDrops="400" />
+			return <ReactRain className="react-rain" numDrops="200" />
 		}
 		else {
 			
@@ -57,11 +61,11 @@ export default function App() {
 	const questions = [
 	
 		{
-			questionText: 'An bhfuil tú ag teacht chugat féin?',
+			questionText: 'Tiochfaidh tú ar ais chugat féín...',
 			answerOptions: [
-				{ answerText: 'tá', isCorrect: true },
-				{ answerText: 'níl', isCorrect: true},
-				{ answerText: 'Cad é seo?', isCorrect: true},
+				{ answerText: 'Ní go fóil', isCorrect: true, storyPath:'A' },
+				{ answerText: 'Cá bhuil mé?', isCorrect: true, storyPath:'B'},
+				{ answerText: 'las solas', isCorrect: true, storyPath:'C'},
 
 				],
 		},
@@ -186,9 +190,11 @@ const[score, setScore] = useState(0)
 		}
 	}
 
-	const handleAnswerButtonClick = (isCorrect) => { 
+	const handleAnswerButtonClick = (isCorrect, storyPath) => { 
 	
-	
+		if (storyPath === "A") {alert(storyPath) }
+		if (storyPath === "B") { alert(storyPath)}
+		if (storyPath === "C") { alert(storyPath)}
 		
 		if (isCorrect) { 
 		setScore(score+1)		}
@@ -226,7 +232,12 @@ const[score, setScore] = useState(0)
 		} else { setShowScore(true)}
 	}
 
+	const handleInputSelect = (UI) => { 
+		
+		console.log(UI);
+		setSettings(0)
 
+	}
 //setup init appearance:
 	
 	
@@ -299,9 +310,11 @@ const[score, setScore] = useState(0)
 						{/* <button className="settings-button">.<img src={settingsBtnGamepad}/></button>
 						<button className="settings-button">.<img src={settingsBtnTouchscreen}/></button>
 						<button className="settings-button">.<img src={settingsBtnKeyboard} /></button> */}
-						<div className="settings-button" id="sb0">gamepad.<img src={settingsBtnGamepad}/></div>
-					<div className="settings-button" id="sb1" > <img src={settingsBtnKeyboard } />keyboard.</div>
-					<div className="settings-button" id="sb2">touchscreen.<img src={settingsBtnTouchscreen} /></div>
+						<div className="settings-button" id="sb0" 	onClick={() => handleInputSelect('gamepad')}><img src={settingsBtnGamepad}onClick={() => handleInputSelect('gamepad')} /></div>
+					<div className="settings-button" id="sb1"
+						onClick={() => handleInputSelect('keyboard')}
+					> <img src={settingsBtnKeyboard} onClick={() => handleInputSelect('keyboard')} /></div>
+					<div className="settings-button" id="sb2"  onClick={() => handleInputSelect('touchscreen')}><img src={settingsBtnTouchscreen} onClick={() => handleInputSelect('touchscreen')}/></div>
 					</div>
 				</>): null} 
 		</div>
