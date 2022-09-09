@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import SettingsMenu from './components/settings-menu/settings-menu'
 import glass from './images/big-glass.png';
-import bg0 from './images/zone-off.png';
 import bg1 from './images/bg4.png';
 import fairyRing from './images/question-backgrounds/fairy-ring0.gif';
 import hill from './images/rainy-hill0.gif';
@@ -9,19 +9,15 @@ import field from './images/rainy-field0.gif';
 import ReactRain from 'react-rain-animation';
 import "react-rain-animation/lib/style.css";
  
-import Geaga from './components/geaga/geaga.jsx'; 
 import bg2 from './images/bgAnim5.gif';
 import boxes from './images/boxes.gif';
-import geaga from './images/bg4.png';
 import bg3 from './images/blinding-light-county.jpg';
 import blackripple from './images/blackripple.gif'
+import black from './images/black.png'
 import drone from "./audio/drone.wav"
 import stars from './images/stars.gif';
 import ReactAudioPlayer from 'react-audio-player';
 import settingsBG from './images/fortuna-bg.png';
-import settingsBtnGamepad from './images/settings/gamepad.png';
-import settingsBtnTouchscreen from './images/settings/smartphone.png';
-import settingsBtnKeyboard from './images/settings/keyboard.png';
 import './fonts/Urchlo Romhanach.ttf';
 
 
@@ -35,7 +31,6 @@ export default function App() {
 	const [ringFort, ringFortIsOn] = useToggle();
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(1);
-	
 	let hints = [`Are you returning to yourself?`,
 		`you remember... rain | fire`,
 		`pwd Print Working directory`, ``, ``, ``]
@@ -48,6 +43,13 @@ export default function App() {
 			
 			return null
 		}
+	}
+
+	const handleInputSelect = (UI) => { 
+		
+		console.log(UI);
+		setSettings(0)
+
 	}
 	function useToggle(initialValue = false) {
 		const [value, setValue] = React.useState(initialValue);
@@ -179,16 +181,16 @@ const[score, setScore] = useState(0)
 
 
 
-	const handleMenuButtonClick = (showSettings) => {
-		if (showSettings === 0) {
-			setSettings(1);
-			console.log("hello" + {showGlass});
-		}
-		else {
-			setSettings(0);
-			console.log("hello" + showGlass);
-		}
-	}
+	// const handleMenuButtonClick = (showSettings) => {
+	// 	if (showSettings === 0) {
+	// 		setSettings(1);
+	// 		console.log("hello" + {showGlass});
+	// 	}
+	// 	else {
+	// 		setSettings(0);
+	// 		console.log("hello" + showGlass);
+	// 	}
+	// }
 
 	const handleAnswerButtonClick = (isCorrect, storyPath) => { 
 	
@@ -232,12 +234,6 @@ const[score, setScore] = useState(0)
 		} else { setShowScore(true)}
 	}
 
-	const handleInputSelect = (UI) => { 
-		
-		console.log(UI);
-		setSettings(0)
-
-	}
 //setup init appearance:
 	
 	
@@ -248,7 +244,7 @@ const[score, setScore] = useState(0)
 		<Greeting isRaining={ currentQuestion >=2?true:false} />
 
 			<ReactAudioPlayer src={currentQuestion === 1 ? drone : null}  autoPlay />
-			<img id="app-bg" src={blackripple} className="question-img app-bg-blackripple" alt="gray 3d cubes transition animation." />		
+			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="gray 3d cubes transition animation." />		
 			
 			<img id="stars" src={stars} className={currentQuestion === 0 ? "question-img" : "hidden"} alt="wheeling starfield" />		
 
@@ -295,28 +291,16 @@ const[score, setScore] = useState(0)
 
 
 			<button id="toggle-glass-btn" onClick={toggleIsOn}	><img src={blank} id="blank" alt="transparent square" /></button>
-			{currentQuestion === 3 ? < Geaga /> : null}
-			<button id="toggle-settings-btn" onClick={setSettings}	><img src={blank} id="blank" alt="transparent square" /></button>
-			{ currentQuestion === 3 ? < Geaga /> : null }
+
+			{/* {currentQuestion === 3 ? < Geaga /> : null} */}
+			{/* <button id="toggle-settings-btn" onClick={setSettings}	><img src={blank} id="blank" alt="transparent square" /></button> */}
 
 
 
 			
-			{showSettings ? (<>
-						<img src={ bg0} className="settings-bg" alt="low intensity background image graphic, expect this to change sometimes."/>	
-				
-			
-					<div className='setting-menu'>
-						{/* <button className="settings-button">.<img src={settingsBtnGamepad}/></button>
-						<button className="settings-button">.<img src={settingsBtnTouchscreen}/></button>
-						<button className="settings-button">.<img src={settingsBtnKeyboard} /></button> */}
-						<div className="settings-button" id="sb0" 	onClick={() => handleInputSelect('gamepad')}><img src={settingsBtnGamepad}onClick={() => handleInputSelect('gamepad')} /></div>
-					<div className="settings-button" id="sb1"
-						onClick={() => handleInputSelect('keyboard')}
-					> <img src={settingsBtnKeyboard} onClick={() => handleInputSelect('keyboard')} /></div>
-					<div className="settings-button" id="sb2"  onClick={() => handleInputSelect('touchscreen')}><img src={settingsBtnTouchscreen} onClick={() => handleInputSelect('touchscreen')}/></div>
-					</div>
-				</>): null} 
+			{showSettings ? <SettingsMenu showSettings={showSettings} handleInputSelect={ handleInputSelect} />
+						
+				: null} 
 		</div>
 	);
 }

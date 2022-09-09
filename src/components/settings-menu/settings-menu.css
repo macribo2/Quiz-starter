@@ -1,0 +1,30 @@
+
+  .setting-menu{
+    
+	top: 2%;
+		position: fixed;
+		left: 1%;
+		height: 100%;
+		width: 100%;
+	  z-index: 400;
+	  display: grid;
+	justify-content: left;}
+
+	.settings-bg{
+		height:100%;
+		width:100%;
+		position: fixed;
+		top:0;
+		left:0;
+	  }
+
+	  #sb0,#sb1,#sb2,#sb3{
+		/* border:4px solid salmon; */
+	  position:relative;
+	  z-index: 8000;
+	  top:-15%;
+	  left:10%;
+	  width: 35%;
+	  transform:scale(0.5)
+	  }
+	  
