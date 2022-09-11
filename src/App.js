@@ -19,21 +19,29 @@ import stars from './images/stars.gif';
 import ReactAudioPlayer from 'react-audio-player';
 import settingsBG from './images/fortuna-bg.png';
 import './fonts/Urchlo Romhanach.ttf';
+import Geaga from './components/geaga/geaga.jsx'; 
 
 
 
 
 export default function App() {
-	const [musicPlay, playMusic]  = useState("-")
+	let playerGender = "male";
+	let dodi = "dó";
+	if (playerGender != "male") { 
+		dodi = "dí"
+	}
+	
+	const [musicPlay, playMusic] = useState
+	("-")
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [showGlass, setShowGlass] = useState(0);
 	const [ringFort, ringFortIsOn] = useToggle();
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(1);
-	let hints = [`Are you returning to yourself?`,
-		`you remember... rain | fire`,
-		`pwd Print Working directory`, ``, ``, ``]
+	let hints = [`"Another visitor has arrived my brethren," says a voice that gives you chills`,
+		`"He is dead," says another voice`,
+		`Is that so. And, what name is upon thee?`, ``, ``, ``]
 	function Greeting(props) { 
 		const isRaining = props.isRaining;
 		if (isRaining) {
@@ -63,26 +71,24 @@ export default function App() {
 	const questions = [
 	
 		{
-			questionText: 'Tiochfaidh tú ar ais chugat féín...',
+			questionText: '"Tá chuirteoir eile tagtha a bráithre," arsa guth a chuireann drithlíní eagla ort.',
 			answerOptions: [
-				{ answerText: 'Ní go fóil', isCorrect: true, storyPath:'A' },
-				{ answerText: 'Cá bhuil mé?', isCorrect: true, storyPath:'B'},
-				{ answerText: 'las solas', isCorrect: true, storyPath:'C'},
+				{ answerText: '>', isCorrect: true, storyPath:'A' }
 
 				],
 		},
 		{
-			questionText: 'Is cuimhin leat...',
+			questionText: '"Tá sé marabh!" arsa guth eile',
 			answerOptions: [
 				
-				{ answerText: 'báisteach', isCorrect: true },
-				{ answerText: 'tine', isCorrect: false },
-			
+				{ answerText: '"Níl mé!"', playerGender:"male", isCorrect: true },
+				{ answerText: '...', isCorrect: false },
+				{ answerText: '"Níl sí!"', isCorrect: true, playerGender:"female" },
 			],
 			
 		},
 		{
-			questionText: '',
+			questionText: 'Ab ea. Agus, cad is ainm {dodi}?',
 			answerOptions: [ 
 			
 
@@ -179,7 +185,7 @@ const[score, setScore] = useState(0)
 		}
 	}
 
-
+	// { currentQuestion===0? position answers}
 
 	// const handleMenuButtonClick = (showSettings) => {
 	// 	if (showSettings === 0) {
@@ -248,7 +254,7 @@ const[score, setScore] = useState(0)
 			
 			<img id="stars" src={stars} className={currentQuestion === 0 ? "question-img" : "hidden"} alt="wheeling starfield" />		
 
-			<img id="question-img" src={blackripple} className = {currentQuestion >= 1?  "special-class":"hidden"  } alt="must have alt" />		
+			{/* <img id="question-img" src={blackripple} className = {currentQuestion >= 1?  "special-class":"hidden"  } alt="must have alt" />		 */}
 			{/* a small fairy ring on a rainy night. An app menu and point of return. */}
 			<img id="question-img"  className = {currentQuestion >= 2 ?  
 				"question-img" : "hidden"} src={fairyRing} alt="rainy fields dark and wild" />
@@ -284,11 +290,12 @@ const[score, setScore] = useState(0)
 
 				</>
 			)}
-			<div className= "field-ringfort-menu">
+
+			{/* <div className= "field-ringfort-menu">
 			<button id={currentQuestion === 2 ? "field" : "hidden"}onClick={() => handleFieldButtonClick()} > <img src={field} alt="a small grassy field"/></button >
 			<button className={currentQuestion === 2 ? "ringfort" : "hidden" } onClick={() => handleRingfortButtonClick()} > <img src={hill} alt="image of a circle of stones on top of a hill." /></button >
-			</div>
-
+			</div> */}
+			{ currentQuestion >= 2 ? <Geaga/>:null}
 
 			<button id="toggle-glass-btn" onClick={toggleIsOn}	><img src={blank} id="blank" alt="transparent square" /></button>
 

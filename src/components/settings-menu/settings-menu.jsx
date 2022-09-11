@@ -1,5 +1,4 @@
 import './settings-menu.css';
-import Geaga from '../../components/geaga/geaga.jsx'; 
 
 import bg0 from '../../images/zone-off.png';
 import React, { useState } from 'react';
@@ -15,8 +14,7 @@ import settingsBtnKeyboard from '../../images/settings/keyboard.png';
 
 return <>
 <img src={ bg0} className="settings-bg" alt="low intensity background image graphic, expect this to change sometimes."/>	
-				<Geaga />
-			
+				
 					<div className='setting-menu'>
 						{/* <button className="settings-button">.<img src={settingsBtnGamepad}/></button>
 						<button className="settings-button">.<img src={settingsBtnTouchscreen}/></button>
