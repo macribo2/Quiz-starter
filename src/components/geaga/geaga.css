@@ -11,7 +11,7 @@ left: 33%;
 	z-index: 30;
     position: fixed;
     top: 0%;
-    left: 36%;
+    left: -3%;
     opacity: 0.5;
 	animation: fade-out 4s forwards;
 }
@@ -21,14 +21,17 @@ left: 33%;
 	z-index: 29;
     position: fixed;
     top: 0%;
-    left: 36%;
+    left: -3%;
 }
 .hill{
 	z-index: 4;
+	position:fixed;
+	left:-1%;
 }
 .shadow-hill{
 	position:fixed;
 	z-index:5;
+	left:-1%;
 	animation: fade-out 4s forwards
 
 }
@@ -43,7 +46,7 @@ left: 33%;
 
 	top: 38%;
     transform: scale(1.1);
-    left: 58%;
+    left: 21%;
     opacity: 0.5;
     position: fixed;
 	z-index: 33;

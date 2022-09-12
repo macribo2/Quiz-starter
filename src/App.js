@@ -25,12 +25,7 @@ import Geaga from './components/geaga/geaga.jsx';
 
 
 export default function App() {
-	let playerGender = "male";
-	let dodi = "dó";
-	if (playerGender != "male") { 
-		dodi = "dí"
-	}
-	
+	const [gender, setGender] = useState('male');
 	const [musicPlay, playMusic] = useState
 	("-")
 	const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -39,9 +34,13 @@ export default function App() {
 	const [ringFort, ringFortIsOn] = useToggle();
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(1);
-	let hints = [`"Another visitor has arrived my brethren," says a voice that gives you chills`,
-		`"He is dead," says another voice`,
-		`Is that so. And, what name is upon thee?`, ``, ``, ``]
+	let hints = [`"Weren't you often told not to enter the Field of the Witch alone at night?"`,
+		`"It is so. And, weren't you often told, never set foot within the fairy fort therein?"`,
+		`You were told. And where did you go a wandering last night?`, `To the Witch's Field! And here you remain. Because...?`, `Trapped. In.The Otherworld. And spotted by her goblins, by Crom.`, ``]
+	let hintsAnswersA=[`that is what I was told`,`I was told`,`To the Witch's Field`,``,``];
+	let hintsAnswersB=[`I was not told`,`I was not told`,``,``,``];
+	let hintsAnswersC=[``,``,``,``];
+	let hintsAnswersD=[``,``,``,``,``];
 	function Greeting(props) { 
 		const isRaining = props.isRaining;
 		if (isRaining) {
@@ -71,41 +70,44 @@ export default function App() {
 	const questions = [
 	
 		{
-			questionText: '"Tá chuirteoir eile tagtha a bráithre," arsa guth a chuireann drithlíní eagla ort.',
+			questionText: 'Nar dúradh leat go minic, gan dul go gort an Cailleach leat féin is d\'oiche?',
 			answerOptions: [
-				{ answerText: '>', isCorrect: true, storyPath:'A' }
+				{ answerText: 'dúradh sin liom', isCorrect: true, storyPath: 'A' },
+				{ answerText: 'Ní dúradh sin liom', isCorrect: true, storyPath:'A' }
+
 
 				],
 		},
 		{
-			questionText: '"Tá sé marabh!" arsa guth eile',
+			questionText: 'Is ea. Agus nar dúradh leat go minic, gan seasamh sa lios atá ansin?',
 			answerOptions: [
 				
-				{ answerText: '"Níl mé!"', playerGender:"male", isCorrect: true },
-				{ answerText: '...', isCorrect: false },
-				{ answerText: '"Níl sí!"', isCorrect: true, playerGender:"female" },
+				{ answerText: 'Dúradh liom',  isCorrect: true },
+				{ answerText: 'ní dúradh liom', isCorrect: true },
 			],
 			
 		},
 		{
-			questionText: 'Ab ea. Agus, cad is ainm {dodi}?',
+			questionText: 'Dúradh. Agus ndeachaigh tú ar seachrán aréir?',
 			answerOptions: [ 
-			
+				{ answerText: 'Go Gort an Ceallach.', isCorrect: true }			
 
 		]	},
 		{
-			questionText: '',
-			answerOptions: [
+			questionText: 'Go Gort an Ceallach! Agus tá tú ann fós. Mar...?',
+			answerOptions: [ 
+				{ answerText: 'Mar go bfhuil mé gramaithe san alltar', isCorrect: true },
+				{ answerText: '', isCorrect: true },
+			
 
-				],
+		]	
 		},
 		{
-			questionText: '',
+			questionText: 'Gramaithe. San. Alltar. Agus aird na fiothal ort, in ainm Chroim.',
 			answerOptions: [
-				{ answerText: '', isCorrect: false },
-				{ answerText: '...?', isCorrect: false },
-				{ answerText: ' braon sileán', isCorrect: true },
-				{ answerText: 'an fharraige', isCorrect: false },
+				{ answerText: 'fan', isCorrect: false },
+				{ answerText: 'éist', isCorrect: false },
+				{ answerText: 'teith!', isCorrect: true },
 			],
 		},
 		{
@@ -172,10 +174,18 @@ export default function App() {
 			],
 		},
 	];
+	const[isFadedOut, setIsFadedOut] = useState(true)
+	const[isHintFadedOut, setIsHintFadedOut] = useState(true)
 
 const[score, setScore] = useState(0)
 	const handleOverlayButtonClick = (showGlass) => {
 		if (showGlass === 0) {
+		
+			setIsHintFadedOut(false)
+			setTimeout(function () {
+			setIsHintFadedOut(true)
+		},1000)
+	
 			setShowGlass(1);
 			console.log("hello" + {showGlass});
 		}
@@ -199,11 +209,10 @@ const[score, setScore] = useState(0)
 	// }
 
 	const handleAnswerButtonClick = (isCorrect, storyPath) => { 
-	
-		if (storyPath === "A") {alert(storyPath) }
-		if (storyPath === "B") { alert(storyPath)}
-		if (storyPath === "C") { alert(storyPath)}
-		
+		setIsFadedOut(false)
+		setTimeout(function () {
+		setIsFadedOut(true)
+			
 		if (isCorrect) { 
 		setScore(score+1)		}
 
@@ -212,6 +221,7 @@ const[score, setScore] = useState(0)
 		if (nextQuestion < questions.length) {
 			setCurrentQuestion(nextQuestion);
 		} else { setShowScore(true)}
+		},1000)
 	}
 
 	const handleRingfortButtonClick = (isCorrect) => { 
@@ -262,11 +272,7 @@ const[score, setScore] = useState(0)
 			{currentQuestion >= 3 ?  		"question-img":"hidden"  } src={hill} alt="A rainy hilltop loose circle ofFsh stones" />
 			<img id="question-img" src={bg3} className={currentQuestion >= 8 ? "question-img" : "hidden"} alt="must have alt" />
 		 
-			{isOn ? (<div id="glass">
-				<p id="hints" >{hints[currentQuestion] }</p>	{ }
-< img  src={glass} className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />		
-</div>	) : null}
-
+			
 			{/* HINT: replace "false" with logic to display the
       score when the user has answered all the questions */}
 			{showScore ? (
@@ -281,7 +287,7 @@ const[score, setScore] = useState(0)
 
 						</div>
 						
-					<div className='answer-section'>
+						<div className={isFadedOut ? 'answer-section fadedIn' : 'answer-section fadedOut'} >
 							{questions[currentQuestion].answerOptions.map((answerOption, index) => (<button key={index}
 								onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}
 								
@@ -308,6 +314,17 @@ const[score, setScore] = useState(0)
 			{showSettings ? <SettingsMenu showSettings={showSettings} handleInputSelect={ handleInputSelect} />
 						
 				: null} 
+			{isOn ? (<div id="glass">
+				<p id="hints" className={isFadedOut ? 'fadedIn' : ' fadedOut'} >{hints[currentQuestion] }</p>
+				<p className={isFadedOut ? 'fadedIn hints' : ' fadedOut hints'}  id="hintsA">{hintsAnswersA[currentQuestion] }</p>
+				<p className={isFadedOut ? 'fadedIn hints' : ' fadedOut hints'}id="hintsB" >{hintsAnswersB[currentQuestion] }</p>
+				{/* <p className="hints" id="hintsC">{hintsAnswersC[currentQuestion]}</p>
+				 */}
+				{/* <p className="hints" id="hintsD">{hintsAnswersD[currentQuestion] }</p> */}
+< img  src={glass} className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />		
+</div>	) : null}
+
+			
 		</div>
 	);
 }
