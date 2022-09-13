@@ -1,15 +1,13 @@
 @font-face {
-  font-family: "urchlo";
-  src: local("urchlo"),url(./fonts/Urchlo\ Romhanach.ttf), format("truetype");
+  font-family: urchlo;
+  src: url(./fonts/Urchlo\ Romhanach.ttf);
 }
-
 body {
   
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif; */
-  font-family: urchlo;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
@@ -51,8 +49,8 @@ body {
 top:0%;
 left:0%;
 z-index: -1;
-animation-name: fade-out;
-animation-duration: 30s;
+opacity: 0;
+animation: fade-in 40s forwards;
 
 
 }
@@ -174,7 +172,7 @@ box-shadow: -1px 0px 20px 13px rgb(0 0 0 / 100%);
   animation-name: fade-in;
   animation-duration: 7s;
   position: fixed;
-  left:57%;
+  left:52%;
   top: 31%;
   z-index:115;
 
@@ -225,17 +223,24 @@ box-shadow: -1px 0px 20px 13px rgb(0 0 0 / 100%);
 .right-eye{
   left:49%;
 }
+
+
 button {
   text-align: center;
   justify-content: center;
   width: 100%;
   font-size: x-large;
-  color: #72c0c9;
-  background-color: #0d121be0;
+  color: #48ff00;
+  background-color: #0a1b00b1;
   border-radius: 15px;
   display: flex;
   margin-bottom:5%;
-  padding: 8px;}
+  padding: 3px;
+  box-shadow: -1px 0px 20px 13px rgb(0 0 0 / 100%);
+
+  font-family: urchlo,  Helvetica, Arial, Verdana, Tahoma, sans-serif; 
+
+}
   .correct {
     background-color: #2f922f;
 }
@@ -382,4 +387,22 @@ animation:fade-out 1s forwards;}
 
 .hints{
   left:62% !important;
+}
+
+.shadow-hill{
+	position:fixed;
+	z-index:5;
+	left:-1%;
+	animation: fade-out 4s forwards
+shadow-hill
+}
+
+
+.geaga-shadow{
+	z-index: 30;
+    position: fixed;
+    top: 0%;
+    left: -3%;
+    opacity: 0.5;
+	animation: fade-out 4s forwards;
 }

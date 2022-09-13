@@ -8,6 +8,7 @@ import blank from './images/blank.png';
 import field from './images/rainy-field0.gif';
 import ReactRain from 'react-rain-animation';
 import "react-rain-animation/lib/style.css";
+import geagaShadow from './images/geagaFaceShadow.png';
  
 import bg2 from './images/bgAnim5.gif';
 import boxes from './images/boxes.gif';
@@ -21,6 +22,7 @@ import settingsBG from './images/fortuna-bg.png';
 import './fonts/Urchlo Romhanach.ttf';
 import Geaga from './components/geaga/geaga.jsx'; 
 
+import Shadowhill from './images/shadow-hill.png';
 
 
 
@@ -70,10 +72,9 @@ export default function App() {
 	const questions = [
 	
 		{
-			questionText: 'Nar dúradh leat go minic, gan dul go gort an Cailleach leat féin is d\'oiche?',
+			questionText: '',
 			answerOptions: [
-				{ answerText: 'dúradh sin liom', isCorrect: true, storyPath: 'A' },
-				{ answerText: 'Ní dúradh sin liom', isCorrect: true, storyPath:'A' }
+				{ answerText: 'las solas', isCorrect: true, storyPath: 'A' },
 
 
 				],
@@ -263,6 +264,8 @@ const[score, setScore] = useState(0)
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="gray 3d cubes transition animation." />		
 			
 			<img id="stars" src={stars} className={currentQuestion === 0 ? "question-img" : "hidden"} alt="wheeling starfield" />		
+			<img src={ Shadowhill} className="shadow-hill"alt="rainy hill shadow-overlay " />
+			<img src={ geagaShadow} className="shadow-geaga"alt="rainy hill shadow-overlay " />
 
 			{/* <img id="question-img" src={blackripple} className = {currentQuestion >= 1?  "special-class":"hidden"  } alt="must have alt" />		 */}
 			{/* a small fairy ring on a rainy night. An app menu and point of return. */}

@@ -5,6 +5,7 @@
   "dependencies": {
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "postcss-scss": "^4.0.4",
     "react": "^16.13.1",
     "react-audio-player": "^0.17.0",
     "react-dom": "^16.13.1",
