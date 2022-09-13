@@ -38,8 +38,8 @@ export default function App() {
 	const [showGlass, setShowGlass] = useState(0);
 	const [ringFort, ringFortIsOn] = useToggle();
 	const [isOn, toggleIsOn] = useToggle();
-	const [showSettings, setSettings] = useState(1);
-	let hints = [`"Weren't you often told not to enter the Field of the Witch alone at night?"`,
+	const [showSettings, setSettings] = useState(0);
+	let hints = [`""`,
 		`"It is so. And, weren't you often told, never set foot within the fairy fort therein?"`,
 		`You were told. And where did you go a wandering last night?`, `To the Witch's Field! And here you remain. Because...?`, `Trapped. In.The Otherworld. And spotted by her goblins, by Crom.`, ``]
 	let hintsAnswersA=[`that is what I was told`,`I was told`,`To the Witch's Field`,``,``];
@@ -75,19 +75,19 @@ export default function App() {
 	const questions = [
 	
 		{
-			questionText: '',
+			questionText: 'las solas',
 			answerOptions: [
-				// { answerText: 'las solas', isCorrect: true, storyPath: 'A' },
+				{ answerText: 'ls', isCorrect: true, storyPath: 'A' },
 
 
 				],
 		},
 		{
-			questionText: 'Is ea. Agus nar dúradh leat go minic, gan seasamh sa lios atá ansin?',
+			questionText: '',
 			answerOptions: [
 				
-				{ answerText: 'Dúradh liom',  isCorrect: true },
-				{ answerText: 'ní dúradh liom', isCorrect: true },
+				{ answerText: '_',  isCorrect: true },
+				{ answerText: '_', isCorrect: true },
 			],
 			
 		},
