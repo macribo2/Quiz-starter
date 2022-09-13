@@ -393,10 +393,14 @@ animation:fade-out 1s forwards;}
 	position:fixed;
 	z-index:5;
 	left:-1%;
-	animation: fade-out 4s forwards
-shadow-hill
+	animation: fade-out 4s forwards;
 }
 
+.index-shadow-hill{
+	position:fixed;
+	z-index:5;
+	left:-1%;
+}
 
 .geaga-shadow{
 	z-index: 30;
@@ -405,4 +409,39 @@ shadow-hill
     left: -3%;
     opacity: 0.5;
 	animation: fade-out 4s forwards;
+}
+.index-geaga-shadow {
+	z-index: 30;
+    position: fixed;
+    top: 0%;
+    left: -3%;
+}
+
+
+
+
+
+
+.distant-fort{
+  position: fixed;
+  z-index: 5;
+  left: -22%;
+  top: -2%;
+  transform: scale(0.7);
+  /* animation: fade-out 4s forwards; */
+}
+.index-distant-fort{
+  position: fixed;
+  z-index: 3;
+  left: -22%;
+  top: -12%;
+  transform: scale(0.7);
+  /* animation: fade-out 4s forwards; */
+}
+.index-shadow-fields{
+  position: fixed;
+  z-index: 4;
+  left: -9%;
+  top: 50%;
+  /* animation: fade-out 4s forwards; */
 }

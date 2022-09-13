@@ -6,9 +6,11 @@ import fairyRing from './images/question-backgrounds/fairy-ring0.gif';
 import hill from './images/rainy-hill0.gif';
 import blank from './images/blank.png';
 import field from './images/rainy-field0.gif';
+import ShadowFields from './images/fields-dusk.png';
 import ReactRain from 'react-rain-animation';
 import "react-rain-animation/lib/style.css";
 import geagaShadow from './images/geagaFaceShadow.png';
+import distantFortShadow from './images/distantFort-shadow.png';
  
 import bg2 from './images/bgAnim5.gif';
 import boxes from './images/boxes.gif';
@@ -23,6 +25,7 @@ import './fonts/Urchlo Romhanach.ttf';
 import Geaga from './components/geaga/geaga.jsx'; 
 
 import Shadowhill from './images/shadow-hill.png';
+import distantFort from './images/distantFort.png';
 
 
 
@@ -74,7 +77,7 @@ export default function App() {
 		{
 			questionText: '',
 			answerOptions: [
-				{ answerText: 'las solas', isCorrect: true, storyPath: 'A' },
+				// { answerText: 'las solas', isCorrect: true, storyPath: 'A' },
 
 
 				],
@@ -264,8 +267,12 @@ const[score, setScore] = useState(0)
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="gray 3d cubes transition animation." />		
 			
 			<img id="stars" src={stars} className={currentQuestion === 0 ? "question-img" : "hidden"} alt="wheeling starfield" />		
-			<img src={ Shadowhill} className="shadow-hill"alt="rainy hill shadow-overlay " />
-			<img src={ geagaShadow} className="shadow-geaga"alt="rainy hill shadow-overlay " />
+			<img src={distantFortShadow} className="index-distant-fort" alt="distant fort on peninsula " />
+			<img src={ShadowFields} className="index-shadow-fields" alt="distant fort on peninsula " />
+
+			<img src={ Shadowhill} className="index-shadow-hill"alt="rainy hill shadow-overlay " />
+			<img src={ geagaShadow} className="index-geaga-shadow"alt="rainy hill shadow-overlay " />
+			
 
 			{/* <img id="question-img" src={blackripple} className = {currentQuestion >= 1?  "special-class":"hidden"  } alt="must have alt" />		 */}
 			{/* a small fairy ring on a rainy night. An app menu and point of return. */}
