@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import SettingsMenu from './components/settings-menu/settings-menu'
 import glass from './images/big-glass.png';
-import bg1 from './images/bg4.png';
+import geagaFace from './images/geagaFace.png';
 import fairyRing from './images/question-backgrounds/fairy-ring0.gif';
-import hill from './images/rainy-hill0.gif';
+import hill from './images/rainy-hill1.png';
 import blank from './images/blank.png';
-import field from './images/rainy-field0.gif';
+import Fields from './images/fields-twilight.png';
 import ShadowFields from './images/fields-dusk.png';
 import ReactRain from 'react-rain-animation';
 import "react-rain-animation/lib/style.css";
 import geagaShadow from './images/geagaFaceShadow.png';
 import distantFortShadow from './images/distantFort-shadow.png';
  
-import bg2 from './images/bgAnim5.gif';
+import sky from './images/bgAnim5.gif';
 import boxes from './images/boxes.gif';
 import bg3 from './images/blinding-light-county.jpg';
 import blackripple from './images/blackripple.gif'
@@ -39,11 +39,11 @@ export default function App() {
 	const [ringFort, ringFortIsOn] = useToggle();
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(0);
-	let hints = [`""`,
-		`"It is so. And, weren't you often told, never set foot within the fairy fort therein?"`,
-		`You were told. And where did you go a wandering last night?`, `To the Witch's Field! And here you remain. Because...?`, `Trapped. In.The Otherworld. And spotted by her goblins, by Crom.`, ``]
-	let hintsAnswersA=[`that is what I was told`,`I was told`,`To the Witch's Field`,``,``];
-	let hintsAnswersB=[`I was not told`,`I was not told`,``,``,``];
+	let hints = [``,
+		`Long long ago in Ireland...`,
+		``, ``, `Trapped. In.The Otherworld. And spotted by her goblins, by Crom.`, ``]
+	let hintsAnswersA=[``,``,``,``];
+	let hintsAnswersB=[``,``,``,``,``];
 	let hintsAnswersC=[``,``,``,``];
 	let hintsAnswersD=[``,``,``,``,``];
 	function Greeting(props) { 
@@ -75,19 +75,17 @@ export default function App() {
 	const questions = [
 	
 		{
-			questionText: 'las solas',
+			questionText: '',
 			answerOptions: [
-				{ answerText: 'ls', isCorrect: true, storyPath: 'A' },
+				// { answerText: 'muachta', isCorrect: true, storyPath: 'A' },
 
 
 				],
 		},
 		{
-			questionText: '',
+			questionText: 'Fadó fadó in Éireann...',
 			answerOptions: [
 				
-				{ answerText: '_',  isCorrect: true },
-				{ answerText: '_', isCorrect: true },
 			],
 			
 		},
@@ -199,7 +197,6 @@ const[score, setScore] = useState(0)
 		}
 	}
 
-	// { currentQuestion===0? position answers}
 
 	// const handleMenuButtonClick = (showSettings) => {
 	// 	if (showSettings === 0) {
@@ -211,7 +208,18 @@ const[score, setScore] = useState(0)
 	// 		console.log("hello" + showGlass);
 	// 	}
 	// }
+	const runOnStart = () => { 
+		setTimeout(function () {
+			setScore(score+1)	
+		
+		const nextQuestion = currentQuestion + 1;
+		setCurrentQuestion(nextQuestion);
 
+		if (nextQuestion < questions.length) {
+			setCurrentQuestion(nextQuestion);
+		} else { setShowScore(true)}
+	}, 5000)
+	}
 	const handleAnswerButtonClick = (isCorrect, storyPath) => { 
 		setIsFadedOut(false)
 		setTimeout(function () {
@@ -261,20 +269,24 @@ const[score, setScore] = useState(0)
 	return (
 
 		<div className='app' >
-		<Greeting isRaining={ currentQuestion >=2?true:false} />
+		<Greeting isRaining={ currentQuestion >=9?true:false} />
 
 			<ReactAudioPlayer src={currentQuestion === 1 ? drone : null}  autoPlay />
-			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="gray 3d cubes transition animation." />		
+			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="black bg." />		
+			<img id="sky" src={sky} className="question-img" alt="the sky" />		
 			
-			<img id="stars" src={stars} className={currentQuestion === 0 ? "question-img" : "hidden"} alt="wheeling starfield" />		
-			<img src={distantFortShadow} className="index-distant-fort" alt="distant fort on peninsula " />
-			<img src={ShadowFields} className="index-shadow-fields" alt="distant fort on peninsula " />
-
-			<img src={ Shadowhill} className="index-shadow-hill"alt="rainy hill shadow-overlay " />
-			<img src={ geagaShadow} className="index-geaga-shadow"alt="rainy hill shadow-overlay " />
+			<img id="stars" src={stars} className={currentQuestion <= 1 ? "question-img" : "fade-out"} alt="wheeling starfield" />		
+			<img src={distantFort} className="index-distant-fort" alt="distant fort on peninsula " />
 			
+			<img src={distantFortShadow} className={currentQuestion < 1 ? "index-distant-fort" : "index-distant-fort slow-fade"} alt="distant fort on peninsula " />
+			<img src={Fields} className="hill-fields" alt="distant fort on peninsula " />
+			<img src={ShadowFields} className={currentQuestion < 1 ? "index-shadow-fields" : "index-shadow-fields slow-fade"} alt="distant fort on peninsula " />
+			{/* <img src={ hill} className="hill"alt="rainy hill shadow-overlay " /> */}
 
-			{/* <img id="question-img" src={blackripple} className = {currentQuestion >= 1?  "special-class":"hidden"  } alt="must have alt" />		 */}
+			{/* <img src={ Shadowhill}  className={currentQuestion < 1 ? "index-shadow-hill" : "index-shadow-hill slow-fade"}alt="rainy hill shadow-overlay " /> */}
+			{/* <img src={ geagaFace} className="geaga-face" alt="skull bedecked fairy tree" />
+			<img src={ geagaShadow} className={currentQuestion < 1 ? "index-geaga-shadow" : "geaga-face geaga-fade"}alt="rainy hill shadow-overlay " />
+			 */}
 			{/* a small fairy ring on a rainy night. An app menu and point of return. */}
 			<img id="question-img"  className = {currentQuestion >= 2 ?  
 				"question-img" : "hidden"} src={fairyRing} alt="rainy fields dark and wild" />
@@ -306,7 +318,6 @@ const[score, setScore] = useState(0)
 
 				</>
 			)}
-
 			{/* <div className= "field-ringfort-menu">
 			<button id={currentQuestion === 2 ? "field" : "hidden"}onClick={() => handleFieldButtonClick()} > <img src={field} alt="a small grassy field"/></button >
 			<button className={currentQuestion === 2 ? "ringfort" : "hidden" } onClick={() => handleRingfortButtonClick()} > <img src={hill} alt="image of a circle of stones on top of a hill." /></button >
@@ -334,6 +345,7 @@ const[score, setScore] = useState(0)
 < img  src={glass} className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />		
 </div>	) : null}
 
+{ currentQuestion===0? runOnStart():null}
 			
 		</div>
 	);
