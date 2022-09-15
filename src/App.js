@@ -42,6 +42,7 @@ const stepValue = v => Math.round(v * 10) / 10
 	const [value, setValue] = useState(0)
 	
 	
+
 	
 	const [gender, setGender] = useState('male');
 	const [musicPlay, playMusic] = useState
@@ -274,20 +275,29 @@ const[score, setScore] = useState(0)
 			setCurrentQuestion(nextQuestion);
 		} else { setShowScore(true)}
 	}
-
+	let callIt = () => { }
 //setup init appearance:
 	
-	
+	let getFlatValue = (val) => { 
+		return val*10
+	}
 
 	let choiceRing = [
 	
-
+//
 		`
-`,`		Foghlamoir mé
+`,`		Beannaigh
 `,`		Ainmnigh féin
-`,`		Fan i mo thost
+`,`		dean Rince
 `,`		Chait seilg
-		`
+		`,`		Foghlamoir mé
+		`,`		Ainmnigh féin
+		`,`		Fan i do thost
+		`,`		Foghlamoir mé
+		`,`		Ainmnigh féin
+		`,`		Fan i mo thost
+		`,`		Chait seilg`
+		
 ]
 	return (
 		<div className='app' >
@@ -370,14 +380,14 @@ const[score, setScore] = useState(0)
 { currentQuestion===0? runOnStart():null}
 			
 			{currentQuestion === 1 ? <>
-				<CircularInput  className="dial" value={value} onChange={v =>setValue(stepValue(v))}>
+				<CircularInput className="dial" value={value}  onChange={v =>setValue(stepValue(v))}>
 			<CircularTrack />
 			<CircularProgress />
 					<CircularThumb />
 				
 		</CircularInput>
 			</> : null}
-			<h2 className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value]}{value}{ choiceRing.length}</h2>
+			<h2 className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value*10]}</h2>
 		</div>
 	);
 }

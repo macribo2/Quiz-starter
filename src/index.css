@@ -335,6 +335,9 @@ z-index: -1;
   /* border:1px solid orange; */
 }
 
+
+
+
 .ringfort{
   
   position: absolute;
@@ -488,8 +491,12 @@ animation:fade-out 1s forwards;}
   animation: fade-in 3s forwards;
 }
 .dial-text{
-  color: blue;
+  color: rgb(38, 79, 68);
   position: fixed;
   z-index: 5001;
   font-size: 2em;
+  left:62%;
+  top:0%;
+  font-family: "urchlo";
+  
 }
