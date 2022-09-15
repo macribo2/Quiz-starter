@@ -11,7 +11,12 @@ import ReactRain from 'react-rain-animation';
 import "react-rain-animation/lib/style.css";
 import geagaShadow from './images/geagaFaceShadow.png';
 import distantFortShadow from './images/distantFort-shadow.png';
- 
+import {
+	CircularInput,
+	CircularTrack,
+	CircularProgress,
+	CircularThumb
+} from 'react-circular-input'
 import sky from './images/bgAnim5.gif';
 import boxes from './images/boxes.gif';
 import bg3 from './images/blinding-light-county.jpg';
@@ -30,6 +35,14 @@ import distantFort from './images/distantFort.png';
 
 
 export default function App() {
+//for rotary dial values:
+
+const stepValue = v => Math.round(v * 10) / 10
+
+	const [value, setValue] = useState(0)
+	
+	
+	
 	const [gender, setGender] = useState('male');
 	const [musicPlay, playMusic] = useState
 	("-")
@@ -40,7 +53,7 @@ export default function App() {
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(0);
 	let hints = [``,
-		`Long long ago in Ireland...`,
+		`Wake up and smell the druids`,
 		``, ``, `Trapped. In.The Otherworld. And spotted by her goblins, by Crom.`, ``]
 	let hintsAnswersA=[``,``,``,``];
 	let hintsAnswersB=[``,``,``,``,``];
@@ -83,7 +96,7 @@ export default function App() {
 				],
 		},
 		{
-			questionText: 'Fadó fadó in Éireann...',
+			questionText: '',
 			answerOptions: [
 				
 			],
@@ -266,8 +279,17 @@ const[score, setScore] = useState(0)
 	
 	
 
-	return (
+	let choiceRing = [
+	
 
+		`
+`,`		Foghlamoir mé
+`,`		Ainmnigh féin
+`,`		Fan i mo thost
+`,`		Chait seilg
+		`
+]
+	return (
 		<div className='app' >
 		<Greeting isRaining={ currentQuestion >=9?true:false} />
 
@@ -347,6 +369,15 @@ const[score, setScore] = useState(0)
 
 { currentQuestion===0? runOnStart():null}
 			
+			{currentQuestion === 1 ? <>
+				<CircularInput  className="dial" value={value} onChange={v =>setValue(stepValue(v))}>
+			<CircularTrack />
+			<CircularProgress />
+					<CircularThumb />
+				
+		</CircularInput>
+			</> : null}
+			<h2 className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value]}{value}{ choiceRing.length}</h2>
 		</div>
 	);
 }

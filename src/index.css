@@ -481,3 +481,15 @@ animation:fade-out 1s forwards;}
   top: 57%;
   /* animation: fade-out 4s forwards; */
 }
+
+.dial{
+  /* border:4px solid blue; */
+  z-index: 5000;
+  animation: fade-in 3s forwards;
+}
+.dial-text{
+  color: blue;
+  position: fixed;
+  z-index: 5001;
+  font-size: 2em;
+}
