@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import SettingsMenu from './components/settings-menu/settings-menu'
 import glass from './images/big-glass.png';
 import geagaFace from './images/geagaFace.png';
-import avatar from './images/wren0.gif';
-import avatar1 from './images/data-sea.gif';
-import avatar2 from './images/draoi0.gif';
-import avatar3 from './images/diamhraí0.gif';
-import avatar4 from './images/spéirbhean0.gif';
-import avatar5 from './images/player-init.gif'
-import avatar6 from './images/prompt-0.png';
-import avatar7 from './images/aisling.gif';
-import avatar8 from './images/prompt-0.png';
-import avatar9 from './images/prompt-0.png';
+import avatar from './images/players/bodach0.gif';
+import avatar6 from './images/players/diamhraí0.gif';
+import avatar2 from './images/players/draoi0.gif';
+import avatar3 from './images/players/fianna0.png';
+import avatar4 from './images/players/gotach0.png';
+import avatar5 from './images/players/rógaire0.png'
+import avatar8 from './images/players/saoi0.png';
+import avatar7 from './images/players/seanchaí0.png';
+import avatar1 from './images/players/spéirbhean0.gif';
+import avatar9 from './images/realta.fdef7a42.gif';
 import avatar10 from './images/prompt-0.png';
 import avatar11 from './images/prompt-0.png';
 import avatar12 from './images/prompt-0.png';
@@ -72,7 +72,7 @@ const stepValue = v => Math.round(v * 10) / 10
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(0);
 	let hints = [``,
-		`Wake up and smell the druids`,
+		`Play as`,
 		``, ``, `Trapped. In.The Otherworld. And spotted by her goblins, by Crom.`, ``]
 	let hintsAnswersA=[``,``,``,``];
 	let hintsAnswersB=[``,``,``,``,``];
@@ -115,7 +115,7 @@ const stepValue = v => Math.round(v * 10) / 10
 				],
 		},
 		{
-			questionText: '',
+			questionText: 'Imir mar',
 			answerOptions: [
 				
 			],
@@ -299,20 +299,21 @@ const[score, setScore] = useState(0)
 	let getFlatValue = (val) => { 
 		return val*10
 	}
-
+	let ChoiceRingEng = [
+	
+		`a female harper`,`a druid`,`a hero, a champion, a knight`
+]
 	let choiceRing = [
 	
 //
 		`
-		`,`		
-		`,`		Dean rince
-		`,`		Lig béic
-		`,`		Bí doimhin ach bí éadrom
-		`,`		Abair dán
-		`,`	    Luí síos 
-		`,`		Samhlaigh na féidearthachta
+		`,`cruiteog`,`Draoi		
+		`,`Gaiscidheach
+		`,`Uasal
+		`,`Rógaire
+		`, `
 		`,`		Dean gáire
-		`,`		Loraigh cabhair`
+		`,`		ar thoir gaisce`
 		
 ]
 	return (
@@ -392,10 +393,17 @@ const[score, setScore] = useState(0)
 				{/* <p className="hints" id="hintsD">{hintsAnswersD[currentQuestion] }</p> */}
 < img  src={glass} className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />		
 </div>	) : null}
-<h1>{ value * 10}</h1>
-		<img src={avatar2} className={value * 10 === 0 ? 'avatar' : 'hidden'} alt="the sky" />		
-			<img  src={avatar2} className={value * 10 === 2 ? 'avatar':'hidden' } alt="the sky" />		
-			<img  src={avatar3} className={value * 10 === 3 ? 'avatar':'hidden' } alt="the sky" />
+			<img  src={avatar1} className={value*10 === 1 ? 'avatar':'hidden' } alt="the sky" />		
+			
+			<img  src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } alt="the sky" />		
+			<img src={avatar3} className={value * 10 === 3 ? 'avatar' : 'hidden'} alt="the sky" />
+			<img  src={avatar4} className={value *10=== 4 ? 'avatar':'hidden' } alt="the sky" />
+			<img  src={avatar5} className={value *10=== 5 ? 'avatar':'hidden' } alt="the sky" />
+			<img  src={avatar6} className={value *10=== 6 ? 'avatar':'hidden' } alt="the sky" />
+			<img  src={avatar7} className={value *10=== 7 ? 'avatar':'hidden' } alt="the sky" />
+			<img  src={avatar8} className={value *10=== 8 ? 'avatar':'hidden' } alt="the sky" />
+			<img  src={avatar9} className={value *10=== 9 ? 'avatar':'hidden' } alt="the sky" />
+			
 { currentQuestion===0? runOnStart():null}
 			
 			{currentQuestion === 1 ? <>
@@ -413,11 +421,10 @@ const[score, setScore] = useState(0)
 			
 
 					{/* <img src="avatar"   alt="" /> */}
-			<h2 className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]} value</h2>
-			<h1 className='dial-text' >{ value}</h1>
-		<img src={avatar2} className={value === 0 ? 'avatar' : 'hidden'} alt="the sky" />		
-			<img  src={avatar2} className={value === 2 ? 'avatar':'hidden' } alt="the sky" />		
-			<img  src={avatar3} className={value === 3 ? 'avatar':'hidden' } alt="the sky" />
+			<h2 className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]}</h2>
+			<h1 className='dial-text' >
+				
+			</h1>
 			
 		</div>
 	);

@@ -503,7 +503,6 @@ animation:fade-out 1s forwards;}
     left: 63%;
     top: 31%;
     border: 6px solid rgba(0,0,0,1);
-    animation: fade-in 0.5s forwards;
 display:block;
   }
 
