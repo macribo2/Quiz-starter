@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.0fc7be8e.chunk.css",
-    "main.js": "/static/js/main.12e5f93d.chunk.js",
-    "main.js.map": "/static/js/main.12e5f93d.chunk.js.map",
+    "main.css": "/static/css/main.c5869edd.chunk.css",
+    "main.js": "/static/js/main.110da5e7.chunk.js",
+    "main.js.map": "/static/js/main.110da5e7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3a6d9154.js",
     "runtime-main.js.map": "/static/js/runtime-main.3a6d9154.js.map",
     "static/css/2.392b0c7d.chunk.css": "/static/css/2.392b0c7d.chunk.css",
-    "static/js/2.4cd42514.chunk.js": "/static/js/2.4cd42514.chunk.js",
-    "static/js/2.4cd42514.chunk.js.map": "/static/js/2.4cd42514.chunk.js.map",
+    "static/js/2.ad78f4f8.chunk.js": "/static/js/2.ad78f4f8.chunk.js",
+    "static/js/2.ad78f4f8.chunk.js.map": "/static/js/2.ad78f4f8.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c27d20e7bef2ad943481b22a8c568d95.js": "/precache-manifest.c27d20e7bef2ad943481b22a8c568d95.js",
+    "precache-manifest.9c5dad079e9726c5b8347c82ec6257d7.js": "/precache-manifest.9c5dad079e9726c5b8347c82ec6257d7.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.392b0c7d.chunk.css.map": "/static/css/2.392b0c7d.chunk.css.map",
-    "static/css/main.0fc7be8e.chunk.css.map": "/static/css/main.0fc7be8e.chunk.css.map",
-    "static/js/2.4cd42514.chunk.js.LICENSE.txt": "/static/js/2.4cd42514.chunk.js.LICENSE.txt",
+    "static/css/main.c5869edd.chunk.css.map": "/static/css/main.c5869edd.chunk.css.map",
+    "static/js/2.ad78f4f8.chunk.js.LICENSE.txt": "/static/js/2.ad78f4f8.chunk.js.LICENSE.txt",
     "static/media/Urchlo Romhanach.ttf": "/static/media/Urchlo Romhanach.e119faec.ttf",
+    "static/media/avatar.gif": "/static/media/avatar.b14e0f65.gif",
     "static/media/bgAnim5.gif": "/static/media/bgAnim5.766a98a8.gif",
     "static/media/blackripple.gif": "/static/media/blackripple.837ece98.gif",
     "static/media/blinding-light-county.jpg": "/static/media/blinding-light-county.af9aa6f9.jpg",
@@ -23,7 +24,7 @@
     "static/media/distantFort.png": "/static/media/distantFort.45948f10.png",
     "static/media/drone.wav": "/static/media/drone.f7c21a06.wav",
     "static/media/fairy-ring0.gif": "/static/media/fairy-ring0.dfe09889.gif",
-    "static/media/fields-dusk.png": "/static/media/fields-dusk.844fa073.png",
+    "static/media/fields-dusk.png": "/static/media/fields-dusk.416f9bc1.png",
     "static/media/fields-twilight.png": "/static/media/fields-twilight.07187bdb.png",
     "static/media/gamepad.png": "/static/media/gamepad.e1601369.png",
     "static/media/geagaFace.png": "/static/media/geagaFace.85645a6f.png",
@@ -40,8 +41,8 @@
   "entrypoints": [
     "static/js/runtime-main.3a6d9154.js",
     "static/css/2.392b0c7d.chunk.css",
-    "static/js/2.4cd42514.chunk.js",
-    "static/css/main.0fc7be8e.chunk.css",
-    "static/js/main.12e5f93d.chunk.js"
+    "static/js/2.ad78f4f8.chunk.js",
+    "static/css/main.c5869edd.chunk.css",
+    "static/js/main.110da5e7.chunk.js"
   ]
 }

@@ -2,6 +2,24 @@ import React, { useState } from 'react';
 import SettingsMenu from './components/settings-menu/settings-menu'
 import glass from './images/big-glass.png';
 import geagaFace from './images/geagaFace.png';
+import avatar from './images/wren0.gif';
+import avatar1 from './images/data-sea.gif';
+import avatar2 from './images/draoi0.gif';
+import avatar3 from './images/diamhraí0.gif';
+import avatar4 from './images/spéirbhean0.gif';
+import avatar5 from './images/player-init.gif'
+import avatar6 from './images/prompt-0.png';
+import avatar7 from './images/aisling.gif';
+import avatar8 from './images/prompt-0.png';
+import avatar9 from './images/prompt-0.png';
+import avatar10 from './images/prompt-0.png';
+import avatar11 from './images/prompt-0.png';
+import avatar12 from './images/prompt-0.png';
+import avatar13 from './images/prompt-0.png';
+import avatar14 from './images/prompt-0.png';
+import avatar15 from './images/prompt-0.png';
+	
+
 import fairyRing from './images/question-backgrounds/fairy-ring0.gif';
 import hill from './images/rainy-hill1.png';
 import blank from './images/blank.png';
@@ -286,17 +304,15 @@ const[score, setScore] = useState(0)
 	
 //
 		`
-`,`		Beannaigh
-`,`		Ainmnigh féin
-`,`		dean Rince
-`,`		Chait seilg
-		`,`		Foghlamoir mé
-		`,`		Ainmnigh féin
-		`,`		Fan i do thost
-		`,`		Foghlamoir mé
-		`,`		Ainmnigh féin
-		`,`		Fan i mo thost
-		`,`		Chait seilg`
+		`,`		
+		`,`		Dean rince
+		`,`		Lig béic
+		`,`		Bí doimhin ach bí éadrom
+		`,`		Abair dán
+		`,`	    Luí síos 
+		`,`		Samhlaigh na féidearthachta
+		`,`		Dean gáire
+		`,`		Loraigh cabhair`
 		
 ]
 	return (
@@ -376,18 +392,33 @@ const[score, setScore] = useState(0)
 				{/* <p className="hints" id="hintsD">{hintsAnswersD[currentQuestion] }</p> */}
 < img  src={glass} className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />		
 </div>	) : null}
-
+<h1>{ value * 10}</h1>
+		<img src={avatar2} className={value * 10 === 0 ? 'avatar' : 'hidden'} alt="the sky" />		
+			<img  src={avatar2} className={value * 10 === 2 ? 'avatar':'hidden' } alt="the sky" />		
+			<img  src={avatar3} className={value * 10 === 3 ? 'avatar':'hidden' } alt="the sky" />
 { currentQuestion===0? runOnStart():null}
 			
 			{currentQuestion === 1 ? <>
 				<CircularInput className="dial" value={value}  onChange={v =>setValue(stepValue(v))}>
-			<CircularTrack />
+					<CircularTrack />
+			{/* <img  src={avatar} className={value === 0 ? 'hidden':'avatar' } alt="Caniuse battus tv charactéir" />		 */}
+				
 			<CircularProgress />
 					<CircularThumb />
 				
 		</CircularInput>
+					
 			</> : null}
-			<h2 className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value*10]}</h2>
+				
+			
+
+					{/* <img src="avatar"   alt="" /> */}
+			<h2 className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]} value</h2>
+			<h1 className='dial-text' >{ value}</h1>
+		<img src={avatar2} className={value === 0 ? 'avatar' : 'hidden'} alt="the sky" />		
+			<img  src={avatar2} className={value === 2 ? 'avatar':'hidden' } alt="the sky" />		
+			<img  src={avatar3} className={value === 3 ? 'avatar':'hidden' } alt="the sky" />
+			
 		</div>
 	);
 }

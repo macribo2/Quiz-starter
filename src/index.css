@@ -39,6 +39,7 @@ body {
 
 }
 .hidden{
+  /* opacity:0.5 */
   display:none;
 }
 #question-img,#stars{
@@ -490,12 +491,28 @@ animation:fade-out 1s forwards;}
   z-index: 5000;
   animation: fade-in 3s forwards;
 }
+
+
+  .avatar {
+    position: fixed;
+    z-index: 1000;
+    height: 47%;
+    width: 24%;
+    border-radius: 50%;
+    opacity: 0.7;
+    left: 63%;
+    top: 31%;
+    border: 6px solid rgba(0,0,0,1);
+    animation: fade-in 0.5s forwards;
+display:block;
+  }
+
 .dial-text{
   color: rgb(38, 79, 68);
   position: fixed;
   z-index: 5001;
   font-size: 2em;
-  left:62%;
+  left:55%;
   top:0%;
   font-family: "urchlo";
   
