@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5d1e466f9234b068edce1d87bb3a8c70",
+    "revision": "421b172f95900210a21b46077b6b254a",
     "url": "/index.html"
   },
   {
-    "revision": "4aa68c2d91f2909a6dbb",
+    "revision": "deca14eb6783b465b49a",
     "url": "/static/css/2.392b0c7d.chunk.css"
   },
   {
-    "revision": "44410ea16f32fe1d54d6",
-    "url": "/static/css/main.c5869edd.chunk.css"
+    "revision": "de841f94f18e782e780c",
+    "url": "/static/css/main.cced7fec.chunk.css"
   },
   {
-    "revision": "4aa68c2d91f2909a6dbb",
-    "url": "/static/js/2.ad78f4f8.chunk.js"
+    "revision": "deca14eb6783b465b49a",
+    "url": "/static/js/2.89f89d3c.chunk.js"
   },
   {
     "revision": "570d362d673dab785e62d2b8563e1118",
-    "url": "/static/js/2.ad78f4f8.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.89f89d3c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "44410ea16f32fe1d54d6",
-    "url": "/static/js/main.110da5e7.chunk.js"
+    "revision": "de841f94f18e782e780c",
+    "url": "/static/js/main.930184f8.chunk.js"
   },
   {
     "revision": "8de1365ab549148d0ad8",
@@ -30,10 +30,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e119faecf6fca6b1bb2f01ce6689e645",
     "url": "/static/media/Urchlo Romhanach.e119faec.ttf"
-  },
-  {
-    "revision": "b14e0f6523bb98618d812ba88fcffd73",
-    "url": "/static/media/avatar.b14e0f65.gif"
   },
   {
     "revision": "766a98a8c01da19327bcc87886c82df9",
@@ -48,16 +44,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/blinding-light-county.af9aa6f9.jpg"
   },
   {
+    "revision": "56409365d3f9490a94af92c497c824ae",
+    "url": "/static/media/bodach0.56409365.gif"
+  },
+  {
     "revision": "c4c34e0348312589e1c89b6e4dd581c9",
     "url": "/static/media/boxes.c4c34e03.gif"
+  },
+  {
+    "revision": "b8c3b5948f8ec53bba8367d1ca0f13fc",
+    "url": "/static/media/diamhraí0.b8c3b594.gif"
   },
   {
     "revision": "83e9d7168cac9d67edfafd07d7664f07",
     "url": "/static/media/distantFort-shadow.83e9d716.png"
   },
   {
-    "revision": "45948f10cb0d9bec7adf1b839fd1fda5",
-    "url": "/static/media/distantFort.45948f10.png"
+    "revision": "9fd655f696b0fa9d6b00c1c2638e6e6d",
+    "url": "/static/media/distantFort.9fd655f6.png"
+  },
+  {
+    "revision": "42f19d6adadcaf443c94690ab0b43503",
+    "url": "/static/media/draoi0.42f19d6a.gif"
   },
   {
     "revision": "f7c21a06fd73772cfc43f8f4f10afc28",
@@ -106,6 +114,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "804fe491be313efc355e82716803ea1c",
     "url": "/static/media/smartphone.804fe491.png"
+  },
+  {
+    "revision": "937375660c0c8e6fd94c83f8e6130b19",
+    "url": "/static/media/spéirbhean0.93737566.gif"
   },
   {
     "revision": "44cf0bcb14a14eb95737bdf4b0001b5c",

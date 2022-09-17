@@ -54,7 +54,7 @@ import distantFort from './images/distantFort.png';
 
 export default function App() {
 //for rotary dial values:
-
+	
 const stepValue = v => Math.round(v * 10) / 10
 
 	const [value, setValue] = useState(0)
@@ -300,20 +300,32 @@ const[score, setScore] = useState(0)
 		return val*10
 	}
 	let ChoiceRingEng = [
-	
-		`a female harper`,`a druid`,`a hero, a champion, a knight`
+	``,
+		`as 1`,
+		`as 2`,
+		`as 3`,
+		`as 4`,
+		`as 5`,
+		`as 6`,
+		`as 7`,
+		`as 8`,
+		`as 9`,
+		`as 0`
 ]
 	let choiceRing = [
 	
 //
-		`
-		`,`cruiteog`,`Draoi		
-		`,`Gaiscidheach
-		`,`Uasal
-		`,`Rógaire
-		`, `
-		`,`		Dean gáire
-		`,`		ar thoir gaisce`
+		`		`,
+		`mar 1`,
+		`mar 2`,
+		`mar 3`,
+		`mar 4`,
+		`mar 5`,
+		`mar 6`,
+		`mar 7`,
+		`mar 8`,
+		`mar 9`,
+		`mar 0`
 		
 ]
 	return (
@@ -385,6 +397,7 @@ const[score, setScore] = useState(0)
 						
 				: null} 
 			{isOn ? (<div id="glass">
+			<p className="choice-ring-0-hint">{ChoiceRingEng[value * 10]}</p>
 				<p id="hints" className={isFadedOut ? 'fadedIn' : ' fadedOut'} >{hints[currentQuestion] }</p>
 				<p className={isFadedOut ? 'fadedIn hints' : ' fadedOut hints'}  id="hintsA">{hintsAnswersA[currentQuestion] }</p>
 				<p className={isFadedOut ? 'fadedIn hints' : ' fadedOut hints'}id="hintsB" >{hintsAnswersB[currentQuestion] }</p>
@@ -407,7 +420,7 @@ const[score, setScore] = useState(0)
 { currentQuestion===0? runOnStart():null}
 			
 			{currentQuestion === 1 ? <>
-				<CircularInput className="dial" value={value}  onChange={v =>setValue(stepValue(v))}>
+				<CircularInput className="dial"value={value}  onClick={(value) =>  alert(value)}    onChange={v =>setValue(stepValue(v))}>
 					<CircularTrack />
 			{/* <img  src={avatar} className={value === 0 ? 'hidden':'avatar' } alt="Caniuse battus tv charactéir" />		 */}
 				

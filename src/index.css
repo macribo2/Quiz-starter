@@ -108,7 +108,7 @@ animation: fade-in 10s forwards;
   z-index: 1;
 }
 
-#hints,.hints{
+#hints,.hints, .choice-ring-0-hint{
   pointer-events: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.4em;
@@ -117,13 +117,11 @@ animation: fade-in 10s forwards;
   left: 8%;
 color:rgb(255, 161, 250);
 z-index: 301;
-background-color: rgba(0,0,0,1);
-box-shadow: -1px 0px 20px 13px rgb(0 0 0 / 100%);
 
 }
 #hints{
   width: 49%;
-  left:4%;
+  left:6%;
 }
 #hintsA{
   top: 28%;
@@ -140,7 +138,10 @@ box-shadow: -1px 0px 20px 13px rgb(0 0 0 / 100%);
   left: 68%;
 }
 
+.choice-ring-0-hint{
+  left:60%;
 
+}
 
 #glass{
   pointer-events: none;
@@ -248,7 +249,6 @@ button {
   display: flex;
   margin-bottom:5%;
   padding: 3px;
-  box-shadow: -1px 0px 20px 13px rgb(0 0 0 / 100%);
 
   font-family: urchlo,  Helvetica, Arial, Verdana, Tahoma, sans-serif; 
 
@@ -384,7 +384,7 @@ animation:fade-out 1s forwards;}
 
 
 .fadedIn{
-  animation:fade-in 1s forwards;
+  animation:fade-in 0.25s forwards;
 }
 
 @keyframes fade-in{
@@ -507,12 +507,12 @@ display:block;
   }
 
 .dial-text{
-  color: rgb(38, 79, 68);
-  position: fixed;
+   position: fixed;
   z-index: 5001;
-  font-size: 2em;
+  font-size: x-large;
+
   left:55%;
-  top:0%;
+  top:6%;
   font-family: "urchlo";
   
 }
