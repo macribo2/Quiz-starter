@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import SettingsMenu from './components/settings-menu/settings-menu'
 import glass from './images/big-glass.png';
+import lense from './images/ciorcal-glass.png';
 import geagaFace from './images/geagaFace.png';
-import avatar from './images/players/bodach0.gif';
 import avatar6 from './images/players/diamhraí0.gif';
 import avatar2 from './images/players/draoi0.gif';
 import avatar3 from './images/players/fianna0.png';
@@ -11,7 +11,8 @@ import avatar5 from './images/players/rógaire0.png'
 import avatar8 from './images/players/saoi0.png';
 import avatar7 from './images/players/seanchaí0.png';
 import avatar1 from './images/players/spéirbhean0.gif';
-import avatar9 from './images/realta.fdef7a42.gif';
+
+import avatar9 from './images/players/bodach0.gif';
 import avatar10 from './images/prompt-0.png';
 import avatar11 from './images/prompt-0.png';
 import avatar12 from './images/prompt-0.png';
@@ -122,9 +123,8 @@ const stepValue = v => Math.round(v * 10) / 10
 			
 		},
 		{
-			questionText: 'Dúradh. Agus ndeachaigh tú ar seachrán aréir?',
+			questionText: '',
 			answerOptions: [ 
-				{ answerText: 'Go Gort an Ceallach.', isCorrect: true }			
 
 		]	},
 		{
@@ -420,7 +420,7 @@ const[score, setScore] = useState(0)
 { currentQuestion===0? runOnStart():null}
 			
 			{currentQuestion === 1 ? <>
-				<CircularInput className="dial"value={value}  onClick={(value) =>  alert(value)}    onChange={v =>setValue(stepValue(v))}>
+				<CircularInput className="dial" value={value}  onChange={v => setValue(stepValue(v))}>{}
 					<CircularTrack />
 			{/* <img  src={avatar} className={value === 0 ? 'hidden':'avatar' } alt="Caniuse battus tv charactéir" />		 */}
 				
@@ -428,11 +428,15 @@ const[score, setScore] = useState(0)
 					<CircularThumb />
 				
 		</CircularInput>
-					
-			</> : null}
-				
 			
-
+		
+			</> : null}
+			{currentQuestion === 1 ? <>
+				<div id="buttonmash" value={value} onClick={(value) => handleAnswerButtonClick(true, value)}>
+					<img src={lense} id="lense" alt="a glass lense" />
+				</div>
+				
+			</> : null}
 					{/* <img src="avatar"   alt="" /> */}
 			<h2 className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]}</h2>
 			<h1 className='dial-text' >

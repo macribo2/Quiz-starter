@@ -2,6 +2,10 @@
   font-family: urchlo;
   src: url(./fonts/Urchlo\ Romhanach.ttf);
 }
+
+.noscroll { 
+  overflow: hidden;
+}
 body {
   
   margin: 0;
@@ -139,7 +143,7 @@ z-index: 301;
 }
 
 .choice-ring-0-hint{
-  left:60%;
+  left:55%;
 
 }
 
@@ -384,7 +388,7 @@ animation:fade-out 1s forwards;}
 
 
 .fadedIn{
-  animation:fade-in 0.25s forwards;
+  animation:fade-in 0.2s forwards;
 }
 
 @keyframes fade-in{
@@ -502,7 +506,6 @@ animation:fade-out 1s forwards;}
     opacity: 0.7;
     left: 63%;
     top: 31%;
-    border: 6px solid rgba(0,0,0,1);
 display:block;
   }
 
@@ -512,7 +515,27 @@ display:block;
   font-size: x-large;
 
   left:55%;
-  top:6%;
+  top:8%;
   font-family: "urchlo";
   
 }
+
+	
+#lense{
+  transform: scale(0.55);
+  position: fixed;
+  top: 8%;
+  left: 53%;
+  animation: fade-in 3s forwards;
+
+}
+ 
+#buttonmash{
+  position: absolute;
+  height: 130px;
+  width: 130px;
+  z-index: 6000;
+  top: 38%;
+  left: 70%;
+  border-radius: 50%;
+ }
