@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SettingsMenu from './components/settings-menu/settings-menu'
 import glass from './images/big-glass.png';
-import lense from './images/ciorcal-glass.png';
+import lens from './images/ciorcal-glass.png';
 import geagaFace from './images/geagaFace.png';
 import avatar6 from './images/players/diamhraí0.gif';
 import avatar2 from './images/players/draoi0.gif';
@@ -11,7 +11,7 @@ import avatar5 from './images/players/rógaire0.png'
 import avatar8 from './images/players/saoi0.png';
 import avatar7 from './images/players/seanchaí0.png';
 import avatar1 from './images/players/spéirbhean0.gif';
-
+import emerald from './images/misc_crystal_new.png'
 import avatar9 from './images/players/bodach0.gif';
 import avatar10 from './images/prompt-0.png';
 import avatar11 from './images/prompt-0.png';
@@ -19,7 +19,8 @@ import avatar12 from './images/prompt-0.png';
 import avatar13 from './images/prompt-0.png';
 import avatar14 from './images/prompt-0.png';
 import avatar15 from './images/prompt-0.png';
-	
+import Easca from './components/easca/easca.jsx'	
+
 
 import fairyRing from './images/question-backgrounds/fairy-ring0.gif';
 import hill from './images/rainy-hill1.png';
@@ -57,9 +58,10 @@ export default function App() {
 //for rotary dial values:
 	
 const stepValue = v => Math.round(v * 10) / 10
+const stepValue2 = v => Math.round(v * 10) / 10
 
 	const [value, setValue] = useState(0)
-	
+	let chosenPortrait = 0;	
 	
 
 	
@@ -73,8 +75,8 @@ const stepValue = v => Math.round(v * 10) / 10
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(0);
 	let hints = [``,
-		`Play as`,
-		``, ``, `Trapped. In.The Otherworld. And spotted by her goblins, by Crom.`, ``]
+		`Linux Cycle`,
+		`Who sits in the fort at Dalkey ?`, ``, ``, ``]
 	let hintsAnswersA=[``,``,``,``];
 	let hintsAnswersB=[``,``,``,``,``];
 	let hintsAnswersC=[``,``,``,``];
@@ -116,32 +118,32 @@ const stepValue = v => Math.round(v * 10) / 10
 				],
 		},
 		{
-			questionText: 'Imir mar',
+			questionText: 'Ciogal Linucs',
 			answerOptions: [
 				
 			],
 			
 		},
 		{
-			questionText: '',
+			questionText: 'Cé atá i lios an Deilg Inis?',
 			answerOptions: [ 
+
 
 		]	},
 		{
-			questionText: 'Go Gort an Ceallach! Agus tá tú ann fós. Mar...?',
+			questionText: 'Fior nó bréagach. Oscailte nó dúnta. Lasta nó múachta. sin is brí leis an Gaeilge Dénartha.',
 			answerOptions: [ 
-				{ answerText: 'Mar go bfhuil mé gramaithe san alltar', isCorrect: true },
-				{ answerText: '', isCorrect: true },
-			
-
-		]	
+				{ answerText: 'Is fior sin.', isCorrect: true },
+				{ answerText: 'Ní fíor sin.', isCorrect: true },
+			]	
 		},
 		{
-			questionText: 'Gramaithe. San. Alltar. Agus aird na fiothal ort, in ainm Chroim.',
+			questionText: 'a náid, a haon, a dó, a trí.',
 			answerOptions: [
-				{ answerText: 'fan', isCorrect: false },
-				{ answerText: 'éist', isCorrect: false },
-				{ answerText: 'teith!', isCorrect: true },
+				{ answerText: 'rogha a 00', isCorrect: false },
+				{ answerText: 'rogha a 01', isCorrect: false },
+				{ answerText: 'rogha a 10', isCorrect: true },
+				{ answerText: 'rogha a 11', isCorrect: true },
 			],
 		},
 		{
@@ -265,7 +267,31 @@ const[score, setScore] = useState(0)
 		if (nextQuestion < questions.length) {
 			setCurrentQuestion(nextQuestion);
 		} else { setShowScore(true)}
-		},1000)
+		}, 1000)
+		console.log("currentQuestion" + currentQuestion)
+		console.log("value:" + value)
+		
+	}
+
+	let gotten = 0;
+	const buttonMashClick= (isCorrect, someVal) => { 
+		setIsFadedOut(false)
+		setIsFadedOut(true)
+			
+		if (isCorrect) { 
+			setScore(score + 1)
+		}
+		
+
+		const nextQuestion = currentQuestion + 1;
+		setCurrentQuestion(nextQuestion);
+		if (nextQuestion < questions.length) {
+			setCurrentQuestion(nextQuestion);
+		} else { setShowScore(true)}
+		console.log("currentQuestion" + currentQuestion)
+		console.log("value:" + value)
+		localStorage.setItem('portrait', value * 10);
+		gotten = localStorage.getItem('portrait')
 	}
 
 	const handleRingfortButtonClick = (isCorrect) => { 
@@ -299,40 +325,45 @@ const[score, setScore] = useState(0)
 	let getFlatValue = (val) => { 
 		return val*10
 	}
-	let ChoiceRingEng = [
+
+
+	let choiceRing2Eng = [`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',]
+	let choiceRing2 = [``,`Fan nóméad`,`Las Solas`,`Iniúchadh féin`,`"Cá bhfuil mé?"`,`Siúl soir`, ,``,`Rith síar`,`Léim go Deilg Inis in aon preab amháin`,'rogha',`Las Solas`,`Imigh láithreach ó thuaidh`]
+	let choiceRingEng = [
 	``,
-		`as 1`,
-		`as 2`,
-		`as 3`,
-		`as 4`,
-		`as 5`,
-		`as 6`,
-		`as 7`,
-		`as 8`,
-		`as 9`,
-		`as 0`
+		`onwards as 1`,
+		`onwards as 2`,
+		`onwards as 3`,
+		`onwards as 4`,
+		`onwards as 5`,
+		`onwards as 6`,
+		`onwards as 7`,
+		`onwards as 8`,
+		`onwards as 9`,
+		`onwards as 0`
 ]
 	let choiceRing = [
 	
 //
 		`		`,
-		`mar 1`,
-		`mar 2`,
-		`mar 3`,
-		`mar 4`,
-		`mar 5`,
-		`mar 6`,
-		`mar 7`,
-		`mar 8`,
-		`mar 9`,
-		`mar 0`
+		`ar aghaidh mar 1`,
+		`ar aghaidh mar 2`,
+		`ar aghaidh mar 3`,
+		`ar aghaidh mar 4`,
+		`ar aghaidh mar 5`,
+		`ar aghaidh mar 6`,
+		`ar aghaidh mar 7`,
+		`ar aghaidh mar 8`,
+		`ar aghaidh mar 9`,
+		`ar aghaidh mar 0`
 		
 ]
 	return (
 		<div className='app' >
 		<Greeting isRaining={ currentQuestion >=9?true:false} />
 
-			<ReactAudioPlayer src={currentQuestion === 1 ? drone : null}  autoPlay />
+			<ReactAudioPlayer src={currentQuestion === 2 ? drone : null} autoPlay />
+			
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="black bg." />		
 			<img id="sky" src={sky} className="question-img" alt="the sky" />		
 			
@@ -379,13 +410,14 @@ const[score, setScore] = useState(0)
 
 				</>
 			)}
+
 			{/* <div className= "field-ringfort-menu">
 			<button id={currentQuestion === 2 ? "field" : "hidden"}onClick={() => handleFieldButtonClick()} > <img src={field} alt="a small grassy field"/></button >
 			<button className={currentQuestion === 2 ? "ringfort" : "hidden" } onClick={() => handleRingfortButtonClick()} > <img src={hill} alt="image of a circle of stones on top of a hill." /></button >
 			</div> */}
-			{ currentQuestion >= 2 ? <Geaga/>:null}
+			{ currentQuestion >= 3 ? <Geaga/>:null}
 
-			<button id="toggle-glass-btn" onClick={toggleIsOn}	><img src={blank} id="blank" alt="transparent square" /></button>
+			<button id="toggle-glass-btn" onClick={toggleIsOn}	><img src={emerald} id="blank" alt="emerald ring" /></button>
 
 			{/* {currentQuestion === 3 ? < Geaga /> : null} */}
 			{/* <button id="toggle-settings-btn" onClick={setSettings}	><img src={blank} id="blank" alt="transparent square" /></button> */}
@@ -397,16 +429,19 @@ const[score, setScore] = useState(0)
 						
 				: null} 
 			{isOn ? (<div id="glass">
-			<p className="choice-ring-0-hint">{ChoiceRingEng[value * 10]}</p>
+				<p className={currentQuestion === 1 ? "choice-ring-0-hint" : "hidden"}>{choiceRingEng[value * 10]}</p>
 				<p id="hints" className={isFadedOut ? 'fadedIn' : ' fadedOut'} >{hints[currentQuestion] }</p>
 				<p className={isFadedOut ? 'fadedIn hints' : ' fadedOut hints'}  id="hintsA">{hintsAnswersA[currentQuestion] }</p>
 				<p className={isFadedOut ? 'fadedIn hints' : ' fadedOut hints'}id="hintsB" >{hintsAnswersB[currentQuestion] }</p>
 				{/* <p className="hints" id="hintsC">{hintsAnswersC[currentQuestion]}</p>
 				 */}
 				{/* <p className="hints" id="hintsD">{hintsAnswersD[currentQuestion] }</p> */}
-< img  src={glass} className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />		
-</div>	) : null}
-			<img  src={avatar1} className={value*10 === 1 ? 'avatar':'hidden' } alt="the sky" />		
+< img  src={glass} className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />	
+			</div>) : null}
+			
+			<div className={ currentQuestion ===2? "avatar-land":"avatarholder"} >
+			
+			<img src={avatar1} className={value * 10 === 1 ? 'avatar' : 'hidden'} alt="the sky" />		
 			
 			<img  src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } alt="the sky" />		
 			<img src={avatar3} className={value * 10 === 3 ? 'avatar' : 'hidden'} alt="the sky" />
@@ -415,8 +450,14 @@ const[score, setScore] = useState(0)
 			<img  src={avatar6} className={value *10=== 6 ? 'avatar':'hidden' } alt="the sky" />
 			<img  src={avatar7} className={value *10=== 7 ? 'avatar':'hidden' } alt="the sky" />
 			<img  src={avatar8} className={value *10=== 8 ? 'avatar':'hidden' } alt="the sky" />
-			<img  src={avatar9} className={value *10=== 9 ? 'avatar':'hidden' } alt="the sky" />
+				<img src={avatar9} className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="the sky" />
+			</div>
 			
+
+
+
+
+
 { currentQuestion===0? runOnStart():null}
 			
 			{currentQuestion === 1 ? <>
@@ -431,18 +472,37 @@ const[score, setScore] = useState(0)
 			
 		
 			</> : null}
+
+
 			{currentQuestion === 1 ? <>
-				<div id="buttonmash" value={value} onClick={(value) => handleAnswerButtonClick(true, value)}>
-					<img src={lense} id="lense" alt="a glass lense" />
+				<div id="buttonmash" value={value} onClick={(value) => buttonMashClick(true, value)}>
+					<img src={lens} id="lens" alt="a glass lens" />
 				</div>
+				<p className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]}</p>
+			
 				
 			</> : null}
-					{/* <img src="avatar"   alt="" /> */}
-			<h2 className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]}</h2>
-			<h1 className='dial-text' >
-				
-			</h1>
+		
+			{currentQuestion === 2 ? <>
 			
+			
+				<div className={ currentQuestion ===2? "avatar-land":"avatarholder"} >
+			
+			<img src={avatar1} className={gotten === 1 ? 'avatar' : 'hidden'} alt="the sky" />		
+			
+			<img  src={avatar2} className={gotten === 2 ? 'avatar':'hidden' } alt="the sky" />		
+			<img src={avatar3} className={gotten === 3 ? 'avatar' : 'hidden'} alt="the sky" />
+			<img  src={avatar4} className={gotten=== 4 ? 'avatar':'hidden' } alt="the sky" />
+			<img  src={avatar5} className={gotten=== 5 ? 'avatar':'hidden' } alt="the sky" />
+			<img  src={avatar6} className={gotten=== 6 ? 'avatar':'hidden' } alt="the sky" />
+			<img  src={avatar7} className={gotten=== 7 ? 'avatar':'hidden' } alt="the sky" />
+			<img  src={avatar8} className={value *10=== 8 ? 'avatar':'hidden' } alt="the sky" />
+				<img src={avatar9} className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="the sky" />
+			</div>
+			
+
+			
+			</> : null}		
 		</div>
 	);
 }

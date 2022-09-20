@@ -1,0 +1,142 @@
+
+/*
+	Lord help me be better developer, but not yet.
+*/
+
+
+/* *{
+	background-color:black;} */
+	.button-group{
+		margin:0 !important;
+		align-content: center;
+	}
+	
+	@font-face { 
+		font-family: 'Urchlo Romhanach'; src: url('../../fonts/Urchlo\ Romhanach.ttf'); 
+	} 
+
+	#output{
+
+		font-size: 2em;
+	color:white;
+	}
+	.btn{
+		font-size:1.2rem;
+		/* margin:0 !important; */
+		display: block;
+		width: 100%;
+		/* margin:2px; */
+		border-radius:10px;
+padding-top:2%;
+padding-bottom:1%;		
+	
+	}
+	
+.btn-right {
+	font-size: 1.7rem;
+
+  border:3px solid#c469db9c;
+  /* padding-right:8px !important;  */
+  color: palegoldenrod;
+  /* border:2px solid #c469db */
+
+  color: rgb(255, 227, 255);
+
+}
+
+.btn-left {
+	  font-size: 1.7rem;
+  background-color: rgba(0,0,0,0.5);
+   border:3px solid rgba(247, 0, 255, 0.479);
+  /* padding-left:8px !important;  */
+  color: rgb(166, 238, 132);
+
+
+}
+	#keyboard-container, #caps-keyboard-container, #fada-mode,#new-buttons{
+
+		
+	}
+	/* #fada-mode{display:none;} */
+	#e-line, #f-line , #a-line, #c-line, #shift-line{
+		/* border:2px solid orange; */
+		width:100%;
+		display:flex;
+	}
+	
+	#shift-line{
+		bottom:27%;
+	}
+
+	#backspace{
+		
+		left:10px;
+		width:50px;
+	}
+	
+	.z-line{
+		
+		margin-left:2% !important;
+	}
+	
+	
+		.btn{
+			/* width:15%; */
+			margin:2px !important;
+	/* display:block; */
+	
+	}
+	
+	#j-line{
+		display:fixed;
+		z-index: 100;
+		
+	}
+	
+	
+	.btn-right-logo{
+		/* border:3px solid orange; */
+		/* padding-right:8px !important;  */
+		color:palegoldenrod;
+		background-color:#648136;
+		/* -webkit-animation: bounce 6.5s ease-out forwards; */
+		/* -moz-animation: bounce 1000ms ease-out forwards; */
+		/* -o-animation: bounce 1000ms ease-out forwards; */
+		/* animation: bounce 2.5s ease-out forwards;	 */
+		
+	}
+	.btn-left-logo{
+		background-color:#c469db;
+	
+		color: rgb(255, 227, 255);
+		/* border:3px solid orange; */
+		/* padding-left:8px !important;  */
+		-webkit-animation: bounce 2.2s ease-out forwards;
+		-moz-animation: bounce 1600ms ease-out forwards;
+		-o-animation: bounce 1600ms ease-out forwards;
+		animation: bounce 2.2s ease-out forwards;
+	 
+	}
+	#keyboard-container{
+
+
+
+		position:fixed;
+		display:inline-block;
+		align-content: center;
+		text-align: center;
+		z-index: 10;
+
+		/* border:4px solid orange; */
+		height:50%;
+		left:0;
+		top:39%;
+		width:100%;
+		z-index: 500;
+	
+	
+	
+	}
+
+	.hidden{display: none !important;}
+
