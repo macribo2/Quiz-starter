@@ -75,6 +75,20 @@ this.setState({redirect:'cd'})
                         <button type="button" id="." className="btn-left btn ">.</button>
                         <button type="button" id="?" className="btn-right btn ">?/!</button>
                     </div>
+
+                    <div class="btn-group btn-group-lg" id="shift-line" role="group" aria-label="...">
+        
+        <button type="button" id="undo" class="btn-right btn btn-outline-dark">
+          <i class="fa fa-undo"></i>
+        </button>
+        <button type="button" id="fada" class="btn-left btn btn-outline-dark">Ᵹ</button>
+        <button type="button" class="space btn btn-outline-dark"> </button>
+        <button type="button" class="btn-left btn btn-outline-dark caps" id="copy" data-clipboard-target="#output">
+          <i class="fa fa-copy"></i>
+        </button>
+        <button type="button" class=" enter btn-right  btn btn-outline-dark"><i class="fa fa-arrow-right"></i></button>
+        
+      </div>
                       
         </div>
       

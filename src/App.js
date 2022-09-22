@@ -21,7 +21,7 @@ import avatar14 from './images/prompt-0.png';
 import avatar15 from './images/prompt-0.png';
 import Easca from './components/easca/easca.jsx'	
 
-
+import useScreenOrientation from 'react-hook-screen-orientation';
 import fairyRing from './images/question-backgrounds/fairy-ring0.gif';
 import hill from './images/rainy-hill1.png';
 import blank from './images/blank.png';
@@ -53,7 +53,13 @@ import Shadowhill from './images/shadow-hill.png';
 import distantFort from './images/distantFort.png';
 
 
-
+const ComponentWithScreenOrientation = () => {
+	const screenOrientation = useScreenOrientation()
+  
+	return (
+	  <p>Screen orientation is: {screenOrientation}</p>
+	)
+  }
 export default function App() {
 //for rotary dial values:
 	
@@ -75,9 +81,9 @@ const stepValue2 = v => Math.round(v * 10) / 10
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(0);
 	let hints = [``,
-		`Who has entered the Lios of Dalkey ?`, `Is that so. And, who owns yonder fort?`, ``, ``]
-	let hintsAnswersA=[``,``,`I own yonder fort.`,``,``];
-	let hintsAnswersB=[``,``,`I will investigate.`,``,``,``];
+		`Who has entered the Lios of Dalkey ?`, `Is that so.`, ``, ``]
+	let hintsAnswersA=[``,``,``,``,``];
+	let hintsAnswersB=[``,``,``,``,``,``];
 	let hintsAnswersC=[``,`I own yonder fort.`,``,``];
 	let hintsAnswersD=[`I will investigate`,`I own yonder fort.`,``,``,``];
 	function Greeting(props) { 
@@ -338,13 +344,13 @@ const[score, setScore] = useState(0)
 	``,
 		`Not I!`,
 		`Not I!`,
-		`Not I!`,
-		`Not me,`,
-		`Not I,`,
-		`Not me,`,
 		`Not I`,
-		`Not I!`,
-		`Not I not I not I nor me; not I nor I nor me!`,
+		`Not me!`,
+		`Not I`,
+		`Not me`,
+		`Not I`,
+		`Not me`,
+		`Not I not I not I nor me! not I nor I nor me!`,
 		``
 	]
 	
@@ -352,13 +358,13 @@ const[score, setScore] = useState(0)
 		`		`,
 		`Ní mise!`,
 		`Ní mise!`,
-		`Ní mise!`,
-		`Ná mé`,
+		`Ní mise`,
+		`Ná mé!`,
 		`Ní mise`,
 		`Ná mé`,
 		`Ní mise`,
-		`Ná mé,`,
-		`Ní mise ní mise ní mise ná mé; ní mise ní mise ná mé!`,
+		`Ní mé`,
+		`Ní mise ní mise ní mise ná mé! ní mise ní mise ní mé!`,
 		``
 		
 	]
