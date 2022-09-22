@@ -75,12 +75,11 @@ const stepValue2 = v => Math.round(v * 10) / 10
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(0);
 	let hints = [``,
-		`Linux Cycle`,
-		`Who sits in the fort at Dalkey ?`, ``, ``, ``]
-	let hintsAnswersA=[``,``,``,``];
-	let hintsAnswersB=[``,``,``,``,``];
-	let hintsAnswersC=[``,``,``,``];
-	let hintsAnswersD=[``,``,``,``,``];
+		`Who has entered the Lios of Dalkey ?`, `Is that so. And, who owns yonder fort?`, ``, ``]
+	let hintsAnswersA=[``,``,`I own yonder fort.`,``,``];
+	let hintsAnswersB=[``,``,`I will investigate.`,``,``,``];
+	let hintsAnswersC=[``,`I own yonder fort.`,``,``];
+	let hintsAnswersD=[`I will investigate`,`I own yonder fort.`,``,``,``];
 	function Greeting(props) { 
 		const isRaining = props.isRaining;
 		if (isRaining) {
@@ -115,30 +114,30 @@ const stepValue2 = v => Math.round(v * 10) / 10
 				// { answerText: 'muachta', isCorrect: true, storyPath: 'A' },
 
 
-				],
+			],
 		},
 		{
-			questionText: 'Ciogal Linucs',
+			questionText: 'Cé atá i lios an Deilg Inis?',
 			answerOptions: [
 				
 			],
 			
 		},
 		{
-			questionText: 'Cé atá i lios an Deilg Inis?',
+			questionText: 'Ab ea. 7 Cé leis an dún sin thal?',
 			answerOptions: [ 
-
-
-		]	},
+				{ answerText: 'Is liomsa an dún sin thal.', isCorrect: true },
+				{ answerText: 'Lorgóidh mé sin.', isCorrect: true },
+			]	},
 		{
-			questionText: 'Fior nó bréagach. Oscailte nó dúnta. Lasta nó múachta. sin is brí leis an Gaeilge Dénartha.',
+			questionText: '',
 			answerOptions: [ 
-				{ answerText: 'Is fior sin.', isCorrect: true },
-				{ answerText: 'Ní fíor sin.', isCorrect: true },
+				{ answerText: 'Ní liom an dún sin thal.', isCorrect: true },
+				{ answerText: 'Cé tusa?', isCorrect: true,setShowScore},
 			]	
 		},
 		{
-			questionText: 'a náid, a haon, a dó, a trí.',
+			questionText: '.',
 			answerOptions: [
 				{ answerText: 'rogha a 00', isCorrect: false },
 				{ answerText: 'rogha a 01', isCorrect: false },
@@ -331,33 +330,39 @@ const[score, setScore] = useState(0)
 	let choiceRing2 = [``,`Fan nóméad`,`Las Solas`,`Iniúchadh féin`,`"Cá bhfuil mé?"`,`Siúl soir`, ,``,`Rith síar`,`Léim go Deilg Inis in aon preab amháin`,'rogha',`Las Solas`,`Imigh láithreach ó thuaidh`]
 	let choiceRingEng = [
 	``,
-		`onwards as 1`,
-		`onwards as 2`,
-		`onwards as 3`,
-		`onwards as 4`,
-		`onwards as 5`,
-		`onwards as 6`,
-		`onwards as 7`,
-		`onwards as 8`,
-		`onwards as 9`,
-		`onwards as 0`
+		`It is I.`,
+		`It is I.`,
+		`It is I.`,
+		`It is I.`,
+		`It is I.`,
+		`It is I.`,
+		`It is I.`,
+		`It is I.`,
+		`It is I.`,
+		`It is I.`
 ]
 	let choiceRing = [
 	
 //
 		`		`,
-		`ar aghaidh mar 1`,
-		`ar aghaidh mar 2`,
-		`ar aghaidh mar 3`,
-		`ar aghaidh mar 4`,
-		`ar aghaidh mar 5`,
-		`ar aghaidh mar 6`,
-		`ar aghaidh mar 7`,
-		`ar aghaidh mar 8`,
-		`ar aghaidh mar 9`,
-		`ar aghaidh mar 0`
+		`Mise.`,
+		`Mise.`,
+		`Mise.`,
+		`Mise.`,
+		`Mise.`,
+		`Mise.`,
+		`Mise.`,
+		`Mise.`,
+		`Mise.`,
+		`Mise.`
 		
-]
+	]
+
+	
+	
+	const directionalPad = () => { 
+		alert();
+	}
 	return (
 		<div className='app' >
 		<Greeting isRaining={ currentQuestion >=9?true:false} />
@@ -483,26 +488,24 @@ const[score, setScore] = useState(0)
 				
 			</> : null}
 		
-			{currentQuestion === 2 ? <>
 			
 			
-				<div className={ currentQuestion ===2? "avatar-land":"avatarholder"} >
+				<div className={ currentQuestion ===2? "avatar":"faded-out"} >
 			
-			<img src={avatar1} className={gotten === 1 ? 'avatar' : 'hidden'} alt="the sky" />		
+			<img src={avatar1} className={gotten === 1 ? 'avatar-land' : 'hidden'} alt="the sky" />		
 			
-			<img  src={avatar2} className={gotten === 2 ? 'avatar':'hidden' } alt="the sky" />		
-			<img src={avatar3} className={gotten === 3 ? 'avatar' : 'hidden'} alt="the sky" />
-			<img  src={avatar4} className={gotten=== 4 ? 'avatar':'hidden' } alt="the sky" />
-			<img  src={avatar5} className={gotten=== 5 ? 'avatar':'hidden' } alt="the sky" />
-			<img  src={avatar6} className={gotten=== 6 ? 'avatar':'hidden' } alt="the sky" />
-			<img  src={avatar7} className={gotten=== 7 ? 'avatar':'hidden' } alt="the sky" />
-			<img  src={avatar8} className={value *10=== 8 ? 'avatar':'hidden' } alt="the sky" />
+			<img  src={avatar2} className={gotten === 2 ? 'avatar-land':'hidden' } alt="the sky" />		
+			<img src={avatar3} className={gotten === 3 ? 'avatar-land' : 'hidden'} alt="the sky" />
+			<img  src={avatar4} className={gotten=== 4 ? 'avatar-land':'hidden' } alt="the sky" />
+			<img  src={avatar5} className={gotten=== 5 ? 'avatar-land':'hidden' } alt="the sky" />
+			<img  src={avatar6} className={gotten=== 6 ? 'avatar-land':'hidden' } alt="the sky" />
+			<img  src={avatar7} className={gotten=== 7 ? 'avatar-land':'hidden' } alt="the sky" />
+			<img  src={avatar8} className={value *10=== 8 ? 'avatar-land':'hidden' } alt="the sky" />
 				<img src={avatar9} className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="the sky" />
 			</div>
 			
-
+			{currentQuestion === 5 ?  <Easca className="faded-in"/>  : null}
 			
-			</> : null}		
 		</div>
 	);
 }
