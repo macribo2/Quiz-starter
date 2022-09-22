@@ -37,7 +37,7 @@ import {
 	CircularProgress,
 	CircularThumb
 } from 'react-circular-input'
-import sky from './images/bgAnim5.gif';
+import sky from './images/blinding-light-county.jpg';
 import boxes from './images/boxes.gif';
 import bg3 from './images/blinding-light-county.jpg';
 import blackripple from './images/blackripple.gif'
@@ -124,16 +124,12 @@ const stepValue2 = v => Math.round(v * 10) / 10
 			
 		},
 		{
-			questionText: 'Ab ea. 7 Cé leis an dún sin thal?',
-			answerOptions: [ 
-				{ answerText: 'Is liomsa an dún sin thal.', isCorrect: true },
-				{ answerText: 'Lorgóidh mé sin.', isCorrect: true },
+			questionText: 'Is tú!',
+			answerOptions: [
 			]	},
 		{
-			questionText: '',
+			questionText: 'Cé thú?',
 			answerOptions: [ 
-				{ answerText: 'Ní liom an dún sin thal.', isCorrect: true },
-				{ answerText: 'Cé tusa?', isCorrect: true,setShowScore},
 			]	
 		},
 		{
@@ -241,7 +237,17 @@ const[score, setScore] = useState(0)
 	// 		console.log("hello" + showGlass);
 	// 	}
 	// }
-	const runOnStart = () => { 
+	const runOnName = () => {
+
+		setTimeout(function () {
+		
+			
+		
+		const nextQuestion = currentQuestion + 1;
+		setCurrentQuestion(nextQuestion);
+		}, 3000);
+	 } 
+		const runOnStart = () => { 
 		setTimeout(function () {
 			setScore(score+1)	
 		
@@ -330,31 +336,30 @@ const[score, setScore] = useState(0)
 	let choiceRing2 = [``,`Fan nóméad`,`Las Solas`,`Iniúchadh féin`,`"Cá bhfuil mé?"`,`Siúl soir`, ,``,`Rith síar`,`Léim go Deilg Inis in aon preab amháin`,'rogha',`Las Solas`,`Imigh láithreach ó thuaidh`]
 	let choiceRingEng = [
 	``,
-		`It is I.`,
-		`It is I.`,
-		`It is I.`,
-		`It is I.`,
-		`It is I.`,
-		`It is I.`,
-		`It is I.`,
-		`It is I.`,
-		`It is I.`,
-		`It is I.`
-]
-	let choiceRing = [
+		`Not I!`,
+		`Not I!`,
+		`Not I!`,
+		`Not me,`,
+		`Not I,`,
+		`Not me,`,
+		`Not I`,
+		`Not I!`,
+		`Not I not I not I nor me; not I nor I nor me!`,
+		``
+	]
 	
-//
+	let choiceRing = [
 		`		`,
-		`Mise.`,
-		`Mise.`,
-		`Mise.`,
-		`Mise.`,
-		`Mise.`,
-		`Mise.`,
-		`Mise.`,
-		`Mise.`,
-		`Mise.`,
-		`Mise.`
+		`Ní mise!`,
+		`Ní mise!`,
+		`Ní mise!`,
+		`Ná mé`,
+		`Ní mise`,
+		`Ná mé`,
+		`Ní mise`,
+		`Ná mé,`,
+		`Ní mise ní mise ní mise ná mé; ní mise ní mise ná mé!`,
+		``
 		
 	]
 
@@ -372,7 +377,7 @@ const[score, setScore] = useState(0)
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="black bg." />		
 			<img id="sky" src={sky} className="question-img" alt="the sky" />		
 			
-			<img id="stars" src={stars} className={currentQuestion <= 1 ? "question-img" : "fade-out"} alt="wheeling starfield" />		
+			<img id="stars" src={stars} className={currentQuestion >= 3 ? "question-img" : "hidden"} alt="wheeling starfield" />		
 			<img src={distantFort} className="index-distant-fort" alt="distant fort on peninsula " />
 			
 			<img src={distantFortShadow} className={currentQuestion < 1 ? "index-distant-fort" : "index-distant-fort slow-fade"} alt="distant fort on peninsula " />
@@ -406,7 +411,7 @@ const[score, setScore] = useState(0)
 
 						</div>
 						
-						<div className={isFadedOut ? 'answer-section fadedIn' : 'answer-section fadedOut'} >
+						<div className={isFadedOut ? 'answer-section slow-fade-in' : 'answer-section fadedOut'} >
 							{questions[currentQuestion].answerOptions.map((answerOption, index) => (<button key={index}
 								onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}
 								
@@ -420,7 +425,7 @@ const[score, setScore] = useState(0)
 			<button id={currentQuestion === 2 ? "field" : "hidden"}onClick={() => handleFieldButtonClick()} > <img src={field} alt="a small grassy field"/></button >
 			<button className={currentQuestion === 2 ? "ringfort" : "hidden" } onClick={() => handleRingfortButtonClick()} > <img src={hill} alt="image of a circle of stones on top of a hill." /></button >
 			</div> */}
-			{ currentQuestion >= 3 ? <Geaga/>:null}
+			{ currentQuestion >= 9 ? <Geaga/>:null}
 
 			<button id="toggle-glass-btn" onClick={toggleIsOn}	><img src={emerald} id="blank" alt="emerald ring" /></button>
 
@@ -446,16 +451,16 @@ const[score, setScore] = useState(0)
 			
 			<div className={ currentQuestion ===2? "avatar-land":"avatarholder"} >
 			
-			<img src={avatar1} className={value * 10 === 1 ? 'avatar' : 'hidden'} alt="the sky" />		
+			<img src={avatar1} className={value * 10 === 1 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />		
 			
-			<img  src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } alt="the sky" />		
-			<img src={avatar3} className={value * 10 === 3 ? 'avatar' : 'hidden'} alt="the sky" />
-			<img  src={avatar4} className={value *10=== 4 ? 'avatar':'hidden' } alt="the sky" />
-			<img  src={avatar5} className={value *10=== 5 ? 'avatar':'hidden' } alt="the sky" />
-			<img  src={avatar6} className={value *10=== 6 ? 'avatar':'hidden' } alt="the sky" />
-			<img  src={avatar7} className={value *10=== 7 ? 'avatar':'hidden' } alt="the sky" />
-			<img  src={avatar8} className={value *10=== 8 ? 'avatar':'hidden' } alt="the sky" />
-				<img src={avatar9} className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="the sky" />
+			<img  src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />		
+			<img src={avatar3} className={value * 10 === 3 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />
+			<img  src={avatar4} className={value *10=== 4 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+			<img  src={avatar5} className={value *10=== 5 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+			<img  src={avatar6} className={value *10=== 6 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+			<img  src={avatar7} className={value *10=== 7 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+			<img  src={avatar8} className={value *10=== 8 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+				<img src={avatar9} className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />
 			</div>
 			
 
@@ -463,7 +468,8 @@ const[score, setScore] = useState(0)
 
 
 
-{ currentQuestion===0? runOnStart():null}
+{ currentQuestion ===0? runOnStart():null}
+{ currentQuestion ===2? runOnName():null}
 			
 			{currentQuestion === 1 ? <>
 				<CircularInput className="dial" value={value}  onChange={v => setValue(stepValue(v))}>{}
@@ -494,17 +500,17 @@ const[score, setScore] = useState(0)
 			
 			<img src={avatar1} className={gotten === 1 ? 'avatar-land' : 'hidden'} alt="the sky" />		
 			
-			<img  src={avatar2} className={gotten === 2 ? 'avatar-land':'hidden' } alt="the sky" />		
-			<img src={avatar3} className={gotten === 3 ? 'avatar-land' : 'hidden'} alt="the sky" />
-			<img  src={avatar4} className={gotten=== 4 ? 'avatar-land':'hidden' } alt="the sky" />
-			<img  src={avatar5} className={gotten=== 5 ? 'avatar-land':'hidden' } alt="the sky" />
-			<img  src={avatar6} className={gotten=== 6 ? 'avatar-land':'hidden' } alt="the sky" />
-			<img  src={avatar7} className={gotten=== 7 ? 'avatar-land':'hidden' } alt="the sky" />
-			<img  src={avatar8} className={value *10=== 8 ? 'avatar-land':'hidden' } alt="the sky" />
-				<img src={avatar9} className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="the sky" />
+			<img  src={avatar2} className={gotten === 2 ? 'avatar-land':'hidden' } alt="the selected character portrait" />		
+			<img src={avatar3} className={gotten === 3 ? 'avatar-land' : 'hidden'} alt="the selected character portrait" />
+			<img  src={avatar4} className={gotten=== 4 ? 'avatar-land':'hidden' } alt="the selected character portrait" />
+			<img  src={avatar5} className={gotten=== 5 ? 'avatar-land':'hidden' } alt="the selected character portrait" />
+			<img  src={avatar6} className={gotten=== 6 ? 'avatar-land':'hidden' } alt="the selected character portrait" />
+			<img  src={avatar7} className={gotten=== 7 ? 'avatar-land':'hidden' } alt="the selected character portrait" />
+			<img  src={avatar8} className={value *10=== 8 ? 'avatar-land':'hidden' } alt="the selected character portrait" />
+				<img src={avatar9} className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="the selected character portrait" />
 			</div>
 			
-			{currentQuestion === 5 ?  <Easca className="faded-in"/>  : null}
+			{currentQuestion === 3 ?  <Easca className="faded-in"/>  : null}
 			
 		</div>
 	);

@@ -84,7 +84,10 @@ body {
   width: 100%;
   top: 0%;
   left: 0%;
-  z-index: -2;
+  z-index: -1;
+  opacity: 0;
+  animation: fade-in 90s forwards;
+
 }
 
 #stars {
@@ -222,7 +225,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   animation-name: fade-in;
-  animation-duration: 7s;
   position: fixed;
   left: 28%;
   top: 31%;
@@ -231,7 +233,13 @@ body {
 }
 
 .slow-fade {
-  animation: fade-out 22s forwards;
+  animation: fade-out 32s forwards;
+}
+
+
+.slow-fade-in {
+  animation: fade-in 112s forwards;
+  /* border:4px solid blue; */
 }
 
 .settings-section {
@@ -255,11 +263,6 @@ body {
 
 @keyframes fade-in {
   0% {
-    opacity: 0
-  }
-
-  ,
-  7% {
     opacity: 0
   }
 
@@ -453,7 +456,11 @@ button svg {
 
 
 .faded-in {
-  animation: fade-in 5.5s forwards;
+  animation: fade-in 45.5s forwards;
+}
+
+.faded-in-slow {
+  animation: fade-in 50s forwards;
 }
 
 @keyframes fade-in {
@@ -474,10 +481,10 @@ button svg {
   0% {
     opacity: 1;
   }
-
+/* 
   20% {
     opacity: 1;
-  }
+  } */
 
   100% {
     opacity: 0;
@@ -507,7 +514,7 @@ button svg {
   position: fixed;
   z-index: 5;
   left: -1%;
-  animation: fade-out 4s forwards;
+  animation: fade-out 90s forwards;
 }
 
 .index-shadow-hill {
@@ -606,7 +613,7 @@ button svg {
 .avatar-holder {
   top: 50%;
   left: 57%;
-  border: 4px solid blue;
+  /* border: 4px solid blue; */
   display: flex;
   justify-content: center;
   z-index: 69;
@@ -750,9 +757,9 @@ animation: fade-out 2s forwards ease-out;
   color: rgb(136, 132, 13);
   position: fixed;
   background-color: rgba(0, 0, 0, 0);
-  left: 94%;
-  top: 88%;
-  z-index: 99;
+  left: 77%;
+    top: 67%;
+  z-index: 999;
   width: 25px;
   height: 25px;
   margin-bottom: 0% !important;
