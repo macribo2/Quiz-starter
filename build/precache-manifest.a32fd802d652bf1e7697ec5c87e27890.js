@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "4a591b88c7ed7f26d575",
-    "url": "/static/css/main.de049ffd.chunk.css"
+    "revision": "2c05a97eeebaacff5548",
+    "url": "/static/css/main.a6f3254f.chunk.css"
   },
   {
-    "revision": "4a591b88c7ed7f26d575",
-    "url": "/static/js/main.e329b1c5.chunk.js"
+    "revision": "2c05a97eeebaacff5548",
+    "url": "/static/js/main.2fb7e691.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "782998da5e5df49e6a1b",
+    "revision": "91b0203324696f8b0264",
     "url": "/static/css/2.7079e116.chunk.css"
   },
   {
-    "revision": "782998da5e5df49e6a1b",
-    "url": "/static/js/2.f7694a26.chunk.js"
+    "revision": "91b0203324696f8b0264",
+    "url": "/static/js/2.89323f7e.chunk.js"
   },
   {
     "revision": "f86401116e22234bed1999521b37a26b",
@@ -128,7 +128,7 @@ self.__precacheManifest = [
     "url": "/static/media/blackripple.837ece98.gif"
   },
   {
-    "revision": "75541dd99803c44ffa697efb1a96222b",
+    "revision": "3bd31d43de8fdd19148386e5fe1d7423",
     "url": "/index.html"
   }
 ];

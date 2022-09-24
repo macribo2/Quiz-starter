@@ -26,7 +26,9 @@ export default class Easca extends React.Component {
 this.setState({redirect:'cd'})
         
     }
-
+    appendToOutput(char) {
+        return <p>hello</p>
+     }
 	render(){
 		return(
             <>
@@ -44,7 +46,7 @@ this.setState({redirect:'cd'})
     
         <div id="keyboard-container" className="">
             <div className="BtnGroup BtnGroup-lg" id="e-line"role="group" aria-label="...">					
-                        <button type="button" id="e" className="btn btn-right">e</button>
+                        <button  onClick={() => console.log("e"+this.value) } type="button" id="e" className="btn btn-right">e</button>
                         <button type="button" id="r" className="btn-left btn ">r</button>
                         <button type="button" id="t" className="btn btn-right ">t</button>
                         <button type="button" id="u" className="btn-left btn ">u</button>
@@ -76,17 +78,17 @@ this.setState({redirect:'cd'})
                         <button type="button" id="?" className="btn-right btn ">?/!</button>
                     </div>
 
-                    <div class="btn-group btn-group-lg" id="shift-line" role="group" aria-label="...">
+                    <div className="btn-group btn-group-lg" id="shift-line" role="group" aria-label="...">
         
-        <button type="button" id="undo" class="btn-right btn btn-outline-dark">
-          <i class="fa fa-undo"></i>
+        <button type="button" id="undo" className="btn-right btn btn-outline-dark">
+          <i className="fa fa-undo"></i>
         </button>
-        <button type="button" id="fada" class="btn-left btn btn-outline-dark">Ᵹ</button>
-        <button type="button" class="space btn btn-outline-dark"> </button>
-        <button type="button" class="btn-left btn btn-outline-dark caps" id="copy" data-clipboard-target="#output">
-          <i class="fa fa-copy"></i>
+        <button type="button" id="fada" className="btn-left btn btn-outline-dark">Ᵹ</button>
+        <button type="button" className="space btn btn-outline-dark"> </button>
+        <button type="button" className="btn-left btn btn-outline-dark caps" id="copy" data-clipboard-target="#output">
+          <i className="fa fa-copy"></i>
         </button>
-        <button type="button" class=" enter btn-right  btn btn-outline-dark"><i class="fa fa-arrow-right"></i></button>
+        <button type="button" className=" enter btn-right  btn btn-outline-dark"><i className="fa fa-arrow-right"></i></button>
         
       </div>
                       

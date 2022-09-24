@@ -81,7 +81,7 @@ const stepValue2 = v => Math.round(v * 10) / 10
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(0);
 	let hints = [``,
-		`Who has entered the Lios of Dalkey ?`, `Is that so.`, ``, ``]
+		`Onwards as...`, `yourself!`, ``, ``]
 	let hintsAnswersA=[``,``,``,``,``];
 	let hintsAnswersB=[``,``,``,``,``,``];
 	let hintsAnswersC=[``,`I own yonder fort.`,``,``];
@@ -123,7 +123,7 @@ const stepValue2 = v => Math.round(v * 10) / 10
 			],
 		},
 		{
-			questionText: 'Cé atá i lios an Deilg Inis?',
+			questionText: 'Ar aghaidh mar...',
 			answerOptions: [
 				
 			],
@@ -342,29 +342,29 @@ const[score, setScore] = useState(0)
 	let choiceRing2 = [``,`Fan nóméad`,`Las Solas`,`Iniúchadh féin`,`"Cá bhfuil mé?"`,`Siúl soir`, ,``,`Rith síar`,`Léim go Deilg Inis in aon preab amháin`,'rogha',`Las Solas`,`Imigh láithreach ó thuaidh`]
 	let choiceRingEng = [
 	``,
-		`Not I!`,
-		`Not I!`,
-		`Not I`,
-		`Not me!`,
-		`Not I`,
-		`Not me`,
-		`Not I`,
-		`Not me`,
-		`Not I not I not I nor me! not I nor I nor me!`,
+		`Golden-headed Niamh`,
+		`a powerful druidess in Irish mythology, daughter of the arch-druid Mug Ruith.`,
+		`It is I!`,
+		`It is I...`,
+		`Me!?`,
+		`It is I`,
+		`Finn McCool`,
+		`Omna and Bagna`,
+		`Witch of the Tuatha Dé Danann`,
 		``
 	]
 	
 	let choiceRing = [
 		`		`,
-		`Ní mise!`,
-		`Ní mise!`,
-		`Ní mise`,
-		`Ná mé!`,
-		`Ní mise`,
-		`Ná mé`,
-		`Ní mise`,
-		`Ní mé`,
-		`Ní mise ní mise ní mise ná mé! ní mise ní mise ní mé!`,
+		`Niamh Cinn-Óir`,
+		`Tlachta`,
+		`Mise!`,
+		`Mise...`,
+		`Mise‽ `,
+		`Mise`,
+		`Fionn mac Cumhail`,
+		`Omna agus Bagna`,
+		`Fuamnach`,
 		``
 		
 	]
@@ -517,7 +517,13 @@ const[score, setScore] = useState(0)
 			</div>
 			
 			{currentQuestion === 3 ?  <Easca className="faded-in"/>  : null}
+			<div id="suggest-mobile">
+				
+				<p id="mob-text">á dhearadh don fónpóca I dtús báire. 
+					</p>
 			
-		</div>
+				<img id="mob-effect"src={blackripple} alt="" />
+			</div>
+			</div>
 	);
 }
