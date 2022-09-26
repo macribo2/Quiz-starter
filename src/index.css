@@ -179,9 +179,10 @@ body {
 }
 
 .choice-ring-0-hint {
-  left: 39%;
   left: 5%;
   top: 68%;
+  width:54%;
+  color:lightslategray;
 }
 
 #glass {
@@ -207,10 +208,10 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 10px;
   width: 100%;
-  text-shadow: -5px -5px 5px  #000, 5px -5px 5px  #000, -5px 5px 5px  #000, 5px 5px 5px  #000;
+  text-shadow: -4px -4px 4px  #000, 4px -4px 4px  #000, -4px 4px 4px  #000, 4px 4px 4px  #000;
 
 
-  font-family: "aonchlo";
+  font-family: "urchlo";
 }
 
 .timer-text {
@@ -702,8 +703,8 @@ animation: fade-out 2s forwards ease-out;
   color: rgb(136, 132, 13);
   position: fixed;
   background-color: rgba(0, 0, 0, 0);
-  left: 77%;
-    top: 67%;
+  left: 93%;
+    top: 88%;
   z-index: 999;
   width: 25px;
   height: 25px;

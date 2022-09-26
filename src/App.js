@@ -81,7 +81,7 @@ const stepValue2 = v => Math.round(v * 10) / 10
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(0);
 	let hints = [``,
-		`Onwards as...`, `yourself!`, ``, ``]
+		`Play as...`, `yourself!`, ``, ``]
 	let hintsAnswersA=[``,``,``,``,``];
 	let hintsAnswersB=[``,``,``,``,``,``];
 	let hintsAnswersC=[``,`I own yonder fort.`,``,``];
@@ -123,7 +123,7 @@ const stepValue2 = v => Math.round(v * 10) / 10
 			],
 		},
 		{
-			questionText: 'Ar aghaidh mar...',
+			questionText: 'Imir mar...',
 			answerOptions: [
 				
 			],
@@ -343,28 +343,28 @@ const[score, setScore] = useState(0)
 	let choiceRingEng = [
 	``,
 		`Golden-headed Niamh`,
-		`a powerful druidess in Irish mythology, daughter of the arch-druid Mug Ruith.`,
-		`It is I!`,
-		`It is I...`,
-		`Me!?`,
-		`It is I`,
-		`Finn McCool`,
-		`Omna and Bagna`,
-		`Witch of the Tuatha Dé Danann`,
+		`She who intoxicates`,
+		`"Young Deer", greatest poet of Ireland, warrior of the Fianna.`,
+		`The Dark One`,
+		`Billy the Kid`,
+		`The Vampire Chieftain`,
+		`Legendary warrior, a seer and a poet.`,
+		`Brigid the Healer, the Smith, the Goddess whom Poets adore.`,
+		`The Sea Maid`,
 		``
 	]
 	
 	let choiceRing = [
 		`		`,
 		`Niamh Cinn-Óir`,
-		`Tlachta`,
-		`Mise!`,
-		`Mise...`,
-		`Mise‽ `,
-		`Mise`,
+		`Méabh`,
+		`Oisín`,
+		`Donn Fírinne`,
+		`Liam Mac Cárthaigh`,
+		`Abhartach`,
 		`Fionn mac Cumhail`,
-		`Omna agus Bagna`,
-		`Fuamnach`,
+		`Bríd`,
+		`An Murúch`,
 		``
 		
 	]
@@ -512,11 +512,11 @@ const[score, setScore] = useState(0)
 			<img  src={avatar5} className={gotten=== 5 ? 'avatar-land':'hidden' } alt="the selected character portrait" />
 			<img  src={avatar6} className={gotten=== 6 ? 'avatar-land':'hidden' } alt="the selected character portrait" />
 			<img  src={avatar7} className={gotten=== 7 ? 'avatar-land':'hidden' } alt="the selected character portrait" />
-			<img  src={avatar8} className={value *10=== 8 ? 'avatar-land':'hidden' } alt="the selected character portrait" />
+			<img  src={avatar8} className={gotten === 8 ? 'avatar-land':'hidden' } alt="the selected character portrait" />
 				<img src={avatar9} className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="the selected character portrait" />
 			</div>
 			
-			{currentQuestion === 3 ?  <Easca className="faded-in"/>  : null}
+			{currentQuestion === 6 ?  <Easca className="faded-in"/>  : null}
 			<div id="suggest-mobile">
 				
 				<p id="mob-text">á dhearadh don fónpóca I dtús báire. 
