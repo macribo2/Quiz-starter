@@ -48,6 +48,7 @@ import ReactAudioPlayer from 'react-audio-player';
 import settingsBG from './images/fortuna-bg.png';
 import './fonts/Urchlo Romhanach.ttf';
 import Geaga from './components/geaga/geaga.jsx'; 
+import Silken from './components/silken/silken.jsx'; 
 
 import Shadowhill from './images/shadow-hill.png';
 import distantFort from './images/distantFort.png';
@@ -81,7 +82,7 @@ const stepValue2 = v => Math.round(v * 10) / 10
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(0);
 	let hints = [``,
-		`Play as...`, `yourself!`, ``, ``]
+		`Who is away with the good people?`, `yourself!`, ``, ``]
 	let hintsAnswersA=[``,``,``,``,``];
 	let hintsAnswersB=[``,``,``,``,``,``];
 	let hintsAnswersC=[``,`I own yonder fort.`,``,``];
@@ -123,7 +124,7 @@ const stepValue2 = v => Math.round(v * 10) / 10
 			],
 		},
 		{
-			questionText: 'Imir mar...',
+			questionText: 'Cé atá ar shiúl leis na sióga?',
 			answerOptions: [
 				
 			],
@@ -134,45 +135,32 @@ const stepValue2 = v => Math.round(v * 10) / 10
 			answerOptions: [
 			]	},
 		{
-			questionText: 'Cé thú?',
+			questionText: '',
 			answerOptions: [ 
 			]	
 		},
 		{
-			questionText: '.',
+			questionText: '',
 			answerOptions: [
-				{ answerText: 'rogha a 00', isCorrect: false },
-				{ answerText: 'rogha a 01', isCorrect: false },
-				{ answerText: 'rogha a 10', isCorrect: true },
-				{ answerText: 'rogha a 11', isCorrect: true },
-			],
-		},
-		{
-			questionText: 'Lasta!',
-			answerOptions: [
-				{ answerText: 'Níl', isCorrect: false },
-				{ answerText: 'Tá', isCorrect: true },
 				
 			],
 		},
 		{
-			questionText: 'Cé ṫú féin?',
-			answerOptions: [
-				{ answerText: 'Is damh seacht mbeann mé', isCorrect: true, qid:'tabhair' },
-				{ answerText: 'Is seabhac mé ar aill', isCorrect: true, qid:'falsehood' },
-				{ answerText: 'Is mé deor na gréine', isCorrect: true, qid:'listen' },
-				{ answerText: 's damh seacht mbeann mé', isCorrect: true, qid:'leave' }
+			questionText: '“Táim ag dul go Dún-na-síḋ anoċt, le ceól do ṡeinm do na daoiniḃ maiṫe, agus má ṫagann tu liom feicfiḋ tu greann breáġ.“',
+			answerOptions: [	
 			],
+		},
+		{
+			questionText: '“Táim ag dul go Dún-na-síḋ anoċt, le ceól do ṡeinm do na daoiniḃ maiṫe, agus má ṫagann tu liom feicfiḋ tu greann breáġ.“',
+			answerOptions: [
+				'Ní’l go ḃfáġ’ mé deoċ', 'Raċfad agus fáilte',
+				'aċt cia an leis-sgeul a ḋeunfas mé le mo ṁnaoi?'],
 		},
 
 		{
-			questionText: 'Súas',
+			questionText: '“Ól do ṡaiṫ,” ar san fear beag, “ní ḃéiḋ an ḃáirille sin folaṁ fad do ḃeaṫa.”',
 			answerOptions: [
-				{ answerText: 'Clé', isCorrect: false },
-				{ answerText: 'Deas', isCorrect: false },
-				{ answerText: 'Soir', isCorrect: false },
-				{ answerText: 'Síos', isCorrect: true },
-			],
+						],
 		},
 		{
 			questionText: 'Súas',
@@ -251,8 +239,11 @@ const[score, setScore] = useState(0)
 		
 		const nextQuestion = currentQuestion + 1;
 		setCurrentQuestion(nextQuestion);
-		}, 3000);
-	 } 
+		}, 4000);
+	} 
+	
+
+	
 		const runOnStart = () => { 
 		setTimeout(function () {
 			setScore(score+1)	
@@ -435,9 +426,11 @@ const[score, setScore] = useState(0)
 
 			<button id="toggle-glass-btn" onClick={toggleIsOn}	><img src={emerald} id="blank" alt="emerald ring" /></button>
 
+			{currentQuestion === 4 ? < Silken /> : null}
 			{/* {currentQuestion === 3 ? < Geaga /> : null} */}
 			{/* <button id="toggle-settings-btn" onClick={setSettings}	><img src={blank} id="blank" alt="transparent square" /></button> */}
 
+			
 
 
 			
@@ -474,8 +467,10 @@ const[score, setScore] = useState(0)
 
 
 
-{ currentQuestion ===0? runOnStart():null}
-{ currentQuestion ===2? runOnName():null}
+{ currentQuestion === 0 ? runOnStart():null}
+{ currentQuestion === 2 ? runOnName():null}
+{ currentQuestion === 3 ? runOnName():null}
+{ currentQuestion === 4 ? runOnName():null}
 			
 			{currentQuestion === 1 ? <>
 				<CircularInput className="dial" value={value}  onChange={v => setValue(stepValue(v))}>{}
@@ -502,9 +497,9 @@ const[score, setScore] = useState(0)
 		
 			
 			
-				<div className={ currentQuestion ===2? "avatar":"faded-out"} >
-			
 			<img src={avatar1} className={gotten === 1 ? 'avatar-land' : 'hidden'} alt="the sky" />		
+			
+			<div className={ currentQuestion ===2? "avatar":"faded-out"} >
 			
 			<img  src={avatar2} className={gotten === 2 ? 'avatar-land':'hidden' } alt="the selected character portrait" />		
 			<img src={avatar3} className={gotten === 3 ? 'avatar-land' : 'hidden'} alt="the selected character portrait" />
@@ -519,8 +514,8 @@ const[score, setScore] = useState(0)
 			{currentQuestion === 6 ?  <Easca className="faded-in"/>  : null}
 			<div id="suggest-mobile">
 				
-				<p id="mob-text">á dhearadh don fónpóca I dtús báire. 
-					</p>
+				<p className="mob-text">don fónpóca i dtús báire. (brú f12)
+				</p>
 			
 				<img id="mob-effect"src={blackripple} alt="" />
 			</div>

@@ -1,0 +1,12 @@
+#silken{
+
+    transform: scale(0.35);  
+}
+.silken-holder{
+	z-index: 30;
+    position: fixed;
+    top: 0%;
+    left: -3%;  
+	
+}
+

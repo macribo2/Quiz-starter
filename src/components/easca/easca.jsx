@@ -15,10 +15,15 @@ export default class Easca extends React.Component {
         }
     }
     
-    componentDidMount() {
-        if (this.state.redirect) {
-            return <Navigate to={this.state.redirect} />
-          }
+        componentDidMount() {
+            if (this.state.redirect) {
+                return <Navigate to={this.state.redirect} />
+              }
+        
+              const h1 = $('h1')
+              console.log(h1)      
+              
+              
     }
 
 

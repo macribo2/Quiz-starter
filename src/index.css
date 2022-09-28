@@ -157,7 +157,7 @@ body {
 }
 
 #hints {
-  width: 99%;
+  width: 61%;
   left: 0%;
 }
 
@@ -207,10 +207,9 @@ body {
   pointer-events: none;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 10px;
-  width: 100%;
   text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
 
-
+width:64%;
   font-family: "urchlo";
 }
 
@@ -311,7 +310,7 @@ body {
 
 }
 
-.geaga-holder {
+.geaga-holder, .silken-holder {
   position: fixed;
   top: -24%;
   z-index: 33;
@@ -708,12 +707,14 @@ button svg {
   position: fixed;
   background-color: rgba(0, 0, 0, 0);
   left: 93%;
-  top: 88%;
+  top: 4%;
   z-index: 999;
   width: 25px;
   height: 25px;
   margin-bottom: 0% !important;
   border: none;
+  opacity:0.5;
+
 
 }
 
@@ -738,13 +739,14 @@ button svg {
     z-index: 1;
   }
 
-  #mob-text {
+  .mob-text, .mob-text-2 {
     font-size: 3em;
     z-index: 5000;
-    top: -6%;
+    top: -2%;
     position: fixed;
     left: 46%;
   }
+
 
 
   .index-distant-fort {
@@ -817,7 +819,6 @@ button svg {
     left: 83%;
     top: 51%;
     transform: scale(2);
-
   }
 
 
