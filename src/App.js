@@ -12,6 +12,7 @@ import avatar8 from './images/players/saoi0.png';
 import avatar7 from './images/players/seanchaí0.png';
 import avatar1 from './images/players/spéirbhean0.gif';
 import emerald from './images/misc_crystal_new.png'
+import pearl from './images/stone-soup/misc_crystal_old.png';
 import avatar9 from './images/players/bodach0.gif';
 import avatar10 from './images/prompt-0.png';
 import avatar11 from './images/prompt-0.png';
@@ -20,6 +21,8 @@ import avatar13 from './images/prompt-0.png';
 import avatar14 from './images/prompt-0.png';
 import avatar15 from './images/prompt-0.png';
 import Easca from './components/easca/easca.jsx'	
+import MenuClick from './audio/171697__nenadsimic__menu-selection-click.wav';
+import Select from './audio/select.wav';
 
 import useScreenOrientation from 'react-hook-screen-orientation';
 import fairyRing from './images/question-backgrounds/fairy-ring0.gif';
@@ -49,28 +52,32 @@ import settingsBG from './images/fortuna-bg.png';
 import './fonts/Urchlo Romhanach.ttf';
 import Geaga from './components/geaga/geaga.jsx'; 
 import Silken from './components/silken/silken.jsx'; 
-
+import GamePad from './components/silken/silken.jsx'; 
+import AandB from './components/silken/silken.jsx';
 import Shadowhill from './images/shadow-hill.png';
 import distantFort from './images/distantFort.png';
 
 
 const ComponentWithScreenOrientation = () => {
 	const screenOrientation = useScreenOrientation()
-  
-	return (
-	  <p>Screen orientation is: {screenOrientation}</p>
-	)
-  }
-export default function App() {
-//for rotary dial values:
 	
-const stepValue = v => Math.round(v * 10) / 10
-const stepValue2 = v => Math.round(v * 10) / 10
-
+	return (
+		<p>Screen orientation is: {screenOrientation}</p>
+	)
+}
+let heroNames = ['','a Níamh', 'a Mhórgacht', 'a Oisín', 'a mháistir', 'a rógaire', 'a Thaoiseach', 'Fionn', 'a Mhórgacht', 'a Mhurúch'];
+let heroNamesEng = ['','o Níamh', 'your Highness', 'o Oisín','o master', 'you rogue','o Chieftain','Fionn','your Magnificence','o Sea Maid'];
+export default function App() {
+	//for rotary dial values:
+	
+	const stepValue = v => Math.round(v * 10) / 10
+	const stepValue2 = v => Math.round(v * 10) / 10
+	
 	const [value, setValue] = useState(0)
 	let chosenPortrait = 0;	
+	let gotten = 0;
 	
-
+	
 	
 	const [gender, setGender] = useState('male');
 	const [musicPlay, playMusic] = useState
@@ -82,11 +89,13 @@ const stepValue2 = v => Math.round(v * 10) / 10
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(0);
 	let hints = [``,
-		`Who is away with the good people?`, `yourself!`, ``, ``]
-	let hintsAnswersA=[``,``,``,``,``];
-	let hintsAnswersB=[``,``,``,``,``,``];
-	let hintsAnswersC=[``,`I own yonder fort.`,``,``];
-	let hintsAnswersD=[`I will investigate`,`I own yonder fort.`,``,``,``];
+		`...`, `yourself!`, ``, ``,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[gotten]+`, you’ll see fine fun.`,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[localStorage.getItem('portrait')]+`, you’ll see fine fun.`,``,``,``,]
+	let hintsAnswersA = [``,``,``,``,``,``,``,``];
+	let hintsAnswersB = [``,``,``,``,``,``,``,``,``];
+	let hintsAnswersC = [``,``,``,``,``,``,``];
+	let hintsAnswersD = [``, ``, ``, ``, ``];
+	
+	
 	function Greeting(props) { 
 		const isRaining = props.isRaining;
 		if (isRaining) {
@@ -124,7 +133,7 @@ const stepValue2 = v => Math.round(v * 10) / 10
 			],
 		},
 		{
-			questionText: 'Cé atá ar shiúl leis na sióga?',
+			questionText: '...',
 			answerOptions: [
 				
 			],
@@ -146,21 +155,21 @@ const stepValue2 = v => Math.round(v * 10) / 10
 			],
 		},
 		{
-			questionText: '“Táim ag dul go Dún-na-síḋ anoċt, le ceól do ṡeinm do na daoiniḃ maiṫe, agus má ṫagann tu liom feicfiḋ tu greann breáġ.“',
+			questionText: 'Táim ag dul go Dún-na-sídh anocht, le ceól a sheinm do na daoine maithe. Má ṫagann tu liom a '+heroNames[localStorage.getItem('portrait')]+', feicfidh tu greann breá.',
 			answerOptions: [	
 			],
 		},
 		{
-			questionText: '“Táim ag dul go Dún-na-síḋ anoċt, le ceól do ṡeinm do na daoiniḃ maiṫe, agus má ṫagann tu liom feicfiḋ tu greann breáġ.“',
+			questionText: 'Táim ag dul go Dún-na-sídh anocht, le ceól a sheinm do na daoine maithe. Má ṫagann tu liom a '+heroNames[localStorage.getItem('portrait')]+', feicfidh tu greann breá.',
 			answerOptions: [
-				'Ní’l go ḃfáġ’ mé deoċ', 'Raċfad agus fáilte',
-				'aċt cia an leis-sgeul a ḋeunfas mé le mo ṁnaoi?'],
+				{ answerText: '0', isCorrect: false },
+				{ answerText: '1', isCorrect: true }
+				],
 		},
-
 		{
 			questionText: '“Ól do ṡaiṫ,” ar san fear beag, “ní ḃéiḋ an ḃáirille sin folaṁ fad do ḃeaṫa.”',
 			answerOptions: [
-						],
+			]
 		},
 		{
 			questionText: 'Súas',
@@ -208,7 +217,9 @@ const[score, setScore] = useState(0)
 		
 			setIsHintFadedOut(false)
 			setTimeout(function () {
-			setIsHintFadedOut(true)
+				setIsHintFadedOut(true)
+			setTimeout( ()=> { setShowGlass(0) },6000)
+				
 		},1000)
 	
 			setShowGlass(1);
@@ -231,7 +242,7 @@ const[score, setScore] = useState(0)
 	// 		console.log("hello" + showGlass);
 	// 	}
 	// }
-	const runOnName = () => {
+	const runOnName = (waitTime) => {
 
 		setTimeout(function () {
 		
@@ -239,7 +250,7 @@ const[score, setScore] = useState(0)
 		
 		const nextQuestion = currentQuestion + 1;
 		setCurrentQuestion(nextQuestion);
-		}, 4000);
+		}, waitTime);
 	} 
 	
 
@@ -268,6 +279,8 @@ const[score, setScore] = useState(0)
 		setCurrentQuestion(nextQuestion);
 		if (nextQuestion < questions.length) {
 			setCurrentQuestion(nextQuestion);
+
+			
 		} else { setShowScore(true)}
 		}, 1000)
 		console.log("currentQuestion" + currentQuestion)
@@ -275,7 +288,6 @@ const[score, setScore] = useState(0)
 		
 	}
 
-	let gotten = 0;
 	const buttonMashClick= (isCorrect, someVal) => { 
 		setIsFadedOut(false)
 		setIsFadedOut(true)
@@ -283,7 +295,10 @@ const[score, setScore] = useState(0)
 		if (isCorrect) { 
 			setScore(score + 1)
 		}
-		
+		localStorage.setItem('portrait', value * 10);
+		gotten = localStorage.getItem('portrait');
+		console.log(gotten+"Gotten")
+
 
 		const nextQuestion = currentQuestion + 1;
 		setCurrentQuestion(nextQuestion);
@@ -292,8 +307,7 @@ const[score, setScore] = useState(0)
 		} else { setShowScore(true)}
 		console.log("currentQuestion" + currentQuestion)
 		console.log("value:" + value)
-		localStorage.setItem('portrait', value * 10);
-		gotten = localStorage.getItem('portrait')
+	
 	}
 
 	const handleRingfortButtonClick = (isCorrect) => { 
@@ -369,7 +383,16 @@ const[score, setScore] = useState(0)
 		<div className='app' >
 		<Greeting isRaining={ currentQuestion >=9?true:false} />
 
-			<ReactAudioPlayer src={currentQuestion === 2 ? drone : null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 1 ? MenuClick: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 2 ? MenuClick: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 3 ? MenuClick: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 4 ? MenuClick: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 5 ? MenuClick: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 6 ? MenuClick: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 7 ? MenuClick: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 8 ? MenuClick: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 9 ? MenuClick: null} autoPlay />
+			<ReactAudioPlayer src={currentQuestion === 2 ? Select: null} autoPlay />
 			
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="black bg." />		
 			<img id="sky" src={sky} className="question-img" alt="the sky" />		
@@ -390,7 +413,7 @@ const[score, setScore] = useState(0)
 			<img id="question-img"  className = {currentQuestion >= 2 ?  
 				"question-img" : "hidden"} src={fairyRing} alt="rainy fields dark and wild" />
 		<img id="question-img"  className = 	
-			{currentQuestion >= 3 ?  		"question-img":"hidden"  } src={hill} alt="A rainy hilltop loose circle ofFsh stones" />
+			{currentQuestion >= 10 ?  		"question-img":"hidden"  } src={hill} alt="A rainy hilltop loose circle of stones" />
 			<img id="question-img" src={bg3} className={currentQuestion >= 8 ? "question-img" : "hidden"} alt="must have alt" />
 		 
 			
@@ -422,11 +445,16 @@ const[score, setScore] = useState(0)
 			<button id={currentQuestion === 2 ? "field" : "hidden"}onClick={() => handleFieldButtonClick()} > <img src={field} alt="a small grassy field"/></button >
 			<button className={currentQuestion === 2 ? "ringfort" : "hidden" } onClick={() => handleRingfortButtonClick()} > <img src={hill} alt="image of a circle of stones on top of a hill." /></button >
 			</div> */}
-			{ currentQuestion >= 9 ? <Geaga/>:null}
+			{/* { currentQuestion >= 9 ? <Geaga/>:null} */}
 
-			<button id="toggle-glass-btn" onClick={toggleIsOn}	><img src={emerald} id="blank" alt="emerald ring" /></button>
+			<button id="toggle-glass-btn" onClick={toggleIsOn}	><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 
 			{currentQuestion === 4 ? < Silken /> : null}
+			{currentQuestion === 5 ? < Silken /> : null}
+			{currentQuestion === 6 ? < Silken /> : null}
+			{ currentQuestion === 6 ? < GamePad />:null }
+			{ currentQuestion === 6 ? < AandB />:null }
+
 			{/* {currentQuestion === 3 ? < Geaga /> : null} */}
 			{/* <button id="toggle-settings-btn" onClick={setSettings}	><img src={blank} id="blank" alt="transparent square" /></button> */}
 
@@ -468,9 +496,10 @@ const[score, setScore] = useState(0)
 
 
 { currentQuestion === 0 ? runOnStart():null}
-{ currentQuestion === 2 ? runOnName():null}
-{ currentQuestion === 3 ? runOnName():null}
-{ currentQuestion === 4 ? runOnName():null}
+{ currentQuestion === 2 ? runOnName(4000):null}
+{ currentQuestion === 3 ? runOnName(2000):null}
+{ currentQuestion === 4 ? runOnName(3000):null}
+{ currentQuestion === 5 ? runOnName(2000):null}
 			
 			{currentQuestion === 1 ? <>
 				<CircularInput className="dial" value={value}  onChange={v => setValue(stepValue(v))}>{}
@@ -511,7 +540,7 @@ const[score, setScore] = useState(0)
 				<img src={avatar9} className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="the selected character portrait" />
 			</div>
 			
-			{currentQuestion === 6 ?  <Easca className="faded-in"/>  : null}
+			{currentQuestion === 9 ?  <Easca className="faded-in"/>  : null}
 			<div id="suggest-mobile">
 				
 				<p className="mob-text">don fónpóca i dtús báire. (brú f12)

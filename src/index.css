@@ -144,27 +144,32 @@ body {
 .hints,
 .choice-ring-0-hint {
   pointer-events: none;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5em;
   position: fixed;
   top: 15%;
   left: 5%;
-  color: rosybrown;
+  color: rgb(255, 244, 224);
   z-index: 92;
   padding: 10px;
   width: 50%;
+  text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
+  
+  font-family: Arial, Helvetica, sans-serif;
 
 }
 
 #hints {
-  width: 61%;
+  width: 95%;
   left: 0%;
+  top: 25%;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 #hintsA {
-  top: 28%;
-  left: 68%;
+  top: 67%;
   z-index: 93;
+  left: 28% !important;
 
 }
 
@@ -196,20 +201,18 @@ body {
 }
 
 .question-text {
-  font-weight: 900;
   top: 0%;
   left: 0%;
   position: fixed;
-  font-size: 2em;
-  color: rosybrown;
+  font-size: 1.7em;
+  color: rgb(74, 165, 196);
   margin-bottom: 12px;
   z-index: 109;
   pointer-events: none;
-  background-color: rgba(0, 0, 0, 0.2);
   padding: 10px;
   text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
 
-width:64%;
+width:90%;
   font-family: "urchlo";
 }
 
@@ -229,7 +232,6 @@ width:64%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  animation-name: fade-in;
   position: fixed;
   left: 28%;
   top: 31%;
@@ -316,7 +318,10 @@ width:64%;
   z-index: 33;
   left: 58%;
 }
-
+.silken-holder{
+  top:36%;
+  left:-9%;
+}
 .right-eye {
   left: 49%;
 }
@@ -327,8 +332,8 @@ button {
   justify-content: center;
   width: 100%;
   font-size: x-large;
-  color: #48ff00;
-  background-color: #0a1b00b1;
+  color: #ff9cfd;
+  background-color: #112ec0;
   border-radius: 15px;
   display: flex;
   margin-bottom: 5%;

@@ -1,4 +1,4 @@
-// “Táim ag dul go Dún-na-síḋ anoċt, le ceól do ṡeinm do na daoiniḃ maiṫe, agus má ṫagann tu liom feicfiḋ tu greann breáġ.  “I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people, and if you come with me you’ll see fine fun.
+// I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people, and if you come with me you’ll see fine fun.
 
 
 
