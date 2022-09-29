@@ -20,9 +20,12 @@ import avatar12 from './images/prompt-0.png';
 import avatar13 from './images/prompt-0.png';
 import avatar14 from './images/prompt-0.png';
 import avatar15 from './images/prompt-0.png';
+import bodhran0 from './audio/bodhran0.wav';
+import jump from './audio/649725__duskbreaker__8bit-jump.wav';
+import chat from './audio/649725__duskbreaker__8bit-jump.wav';
 import Easca from './components/easca/easca.jsx'	
 import MenuClick from './audio/171697__nenadsimic__menu-selection-click.wav';
-import Select from './audio/select.wav';
+import Select from './audio/171697__nenadsimic__menu-selection-click.wav';
 
 import useScreenOrientation from 'react-hook-screen-orientation';
 import fairyRing from './images/question-backgrounds/fairy-ring0.gif';
@@ -46,13 +49,15 @@ import bg3 from './images/blinding-light-county.jpg';
 import blackripple from './images/blackripple.gif'
 import black from './images/black.png'
 import drone from "./audio/drone.wav"
+import tinkle from "./audio/tinkle.wav"
+import click from "./audio/click.wav"
 import stars from './images/stars.gif';
 import ReactAudioPlayer from 'react-audio-player';
 import settingsBG from './images/fortuna-bg.png';
 import './fonts/Urchlo Romhanach.ttf';
 import Geaga from './components/geaga/geaga.jsx'; 
 import Silken from './components/silken/silken.jsx'; 
-import GamePad from './components/silken/silken.jsx'; 
+import GamePad from './components/game-pad/game-pad.jsx'; 
 import AandB from './components/silken/silken.jsx';
 import Shadowhill from './images/shadow-hill.png';
 import distantFort from './images/distantFort.png';
@@ -155,16 +160,14 @@ export default function App() {
 			],
 		},
 		{
-			questionText: 'Táim ag dul go Dún-na-sídh anocht, le ceól a sheinm do na daoine maithe. Má ṫagann tu liom a '+heroNames[localStorage.getItem('portrait')]+', feicfidh tu greann breá.',
+			questionText: 'Táim ag dul go Dún-na-sídh anocht, le ceól a sheinm do na daoine maithe. Má ṫagann tu liom '+heroNames[localStorage.getItem('portrait')]+', feicfidh tu greann breá.',
 			answerOptions: [	
 			],
 		},
 		{
-			questionText: 'Táim ag dul go Dún-na-sídh anocht, le ceól a sheinm do na daoine maithe. Má ṫagann tu liom a '+heroNames[localStorage.getItem('portrait')]+', feicfidh tu greann breá.',
+			questionText: 'Táim ag dul go Dún-na-sídh anocht, le ceól a sheinm do na daoine maithe. Má ṫagann tu liom '+heroNames[localStorage.getItem('portrait')]+', feicfidh tu greann breá.',
 			answerOptions: [
-				{ answerText: '0', isCorrect: false },
-				{ answerText: '1', isCorrect: true }
-				],
+								],
 		},
 		{
 			questionText: '“Ól do ṡaiṫ,” ar san fear beag, “ní ḃéiḋ an ḃáirille sin folaṁ fad do ḃeaṫa.”',
@@ -393,7 +396,11 @@ const[score, setScore] = useState(0)
 			<ReactAudioPlayer src={value*10 === 8 ? MenuClick: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 9 ? MenuClick: null} autoPlay />
 			<ReactAudioPlayer src={currentQuestion === 2 ? Select: null} autoPlay />
+			<ReactAudioPlayer src={currentQuestion === 4 ? jump : null} autoPlay />
+			{/* <ReactAudioPlayer src={currentQuestion === 6 ? chat: null} autoPlay /> */}
 			
+			<ReactAudioPlayer src={isOn === false ? click: null} autoPlay />
+			<ReactAudioPlayer src={isOn === true ? tinkle: null} autoPlay />
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="black bg." />		
 			<img id="sky" src={sky} className="question-img" alt="the sky" />		
 			
@@ -413,7 +420,7 @@ const[score, setScore] = useState(0)
 			<img id="question-img"  className = {currentQuestion >= 2 ?  
 				"question-img" : "hidden"} src={fairyRing} alt="rainy fields dark and wild" />
 		<img id="question-img"  className = 	
-			{currentQuestion >= 10 ?  		"question-img":"hidden"  } src={hill} alt="A rainy hilltop loose circle of stones" />
+			{currentQuestion >= 101 ?  		"question-img":"hidden"  } src={hill} alt="A rainy hilltop loose circle of stones" />
 			<img id="question-img" src={bg3} className={currentQuestion >= 8 ? "question-img" : "hidden"} alt="must have alt" />
 		 
 			
@@ -496,7 +503,7 @@ const[score, setScore] = useState(0)
 
 
 { currentQuestion === 0 ? runOnStart():null}
-{ currentQuestion === 2 ? runOnName(4000):null}
+{ currentQuestion === 2 ? runOnName(3000):null}
 { currentQuestion === 3 ? runOnName(2000):null}
 { currentQuestion === 4 ? runOnName(3000):null}
 { currentQuestion === 5 ? runOnName(2000):null}
