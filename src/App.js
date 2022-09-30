@@ -51,6 +51,8 @@ import blackripple from './images/blackripple.gif'
 import black from './images/black.png'
 import drone from "./audio/drone.wav"
 import tinkle from "./audio/tinkle.wav"
+import tinkle1 from "./audio/dink.wav"
+
 import click from "./audio/click.wav"
 import stars from './images/stars.gif';
 import ReactAudioPlayer from 'react-audio-player';
@@ -410,7 +412,7 @@ const[score, setScore] = useState(0)
 			{/* <ReactAudioPlayer src={currentQuestion === 6 ? chat: null} autoPlay /> */}
 			
 			<ReactAudioPlayer src={isOn === false ? tinkle : null} autoPlay />
-			<ReactAudioPlayer src={isOn === true ? tinkle: null} autoPlay />
+			<ReactAudioPlayer src={isOn === true ? tinkle1: null} autoPlay />
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="black bg." />		
 			<img id="sky" src={sky} className="question-img" alt="the sky" />		
 			
