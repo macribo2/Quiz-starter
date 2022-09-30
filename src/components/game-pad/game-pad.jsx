@@ -11,7 +11,7 @@ export default class GamePad extends React.Component {
 	render() {
 
 		return (
-				<button id="btn-a" onClick={this.props.onClick}><h2 id="btn-txt">A</h2></button>		
+			<button id="btn-a" onClick={this.props.handleAnswerButtonClick}><h2 id="btn-txt">A</h2></button>		
 		)
 	}
 

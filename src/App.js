@@ -14,6 +14,7 @@ import avatar1 from './images/players/spéirbhean0.gif';
 import emerald from './images/misc_crystal_new.png'
 import pearl from './images/stone-soup/misc_crystal_old.png';
 import avatar9 from './images/players/bodach0.gif';
+import Rings0 from './components/Rings/Rings0'
 import avatar10 from './images/prompt-0.png';
 import avatar11 from './images/prompt-0.png';
 import avatar12 from './images/prompt-0.png';
@@ -26,7 +27,7 @@ import chat from './audio/649725__duskbreaker__8bit-jump.wav';
 import Easca from './components/easca/easca.jsx'	
 import MenuClick from './audio/171697__nenadsimic__menu-selection-click.wav';
 import Select from './audio/171697__nenadsimic__menu-selection-click.wav';
-
+import jam from './audio/51241__rutgermuller__8-bit-gabber-piece.wav'
 import useScreenOrientation from 'react-hook-screen-orientation';
 import fairyRing from './images/question-backgrounds/fairy-ring0.gif';
 import hill from './images/rainy-hill1.png';
@@ -81,7 +82,7 @@ export default function App() {
 	const [value, setValue] = useState(0)
 	let chosenPortrait = 0;	
 	let gotten = 0;
-	
+	let gottenRing0 = 0;
 	
 	
 	const [gender, setGender] = useState('male');
@@ -125,8 +126,7 @@ export default function App() {
 		}, []);
 		return [value, toggle];
 	  }
-	  
-	
+
 	const questions = [
 	
 		{
@@ -170,7 +170,7 @@ export default function App() {
 								],
 		},
 		{
-			questionText: '“Ól do ṡaiṫ,” ar san fear beag, “ní ḃéiḋ an ḃáirille sin folaṁ fad do ḃeaṫa.”',
+			questionText:'',
 			answerOptions: [
 			]
 		},
@@ -245,7 +245,15 @@ const[score, setScore] = useState(0)
 	// 		console.log("hello" + showGlass);
 	// 	}
 	// }
-	const runOnName = (waitTime) => {
+	const runEndPart1 = () => { 
+		return (
+	
+			<ReactAudioPlayer src={currentQuestion === 4 ? jam : null} autoPlay />
+			
+)
+
+	}
+		const runOnName = (waitTime) => {
 
 		setTimeout(function () {
 		
@@ -302,6 +310,8 @@ const[score, setScore] = useState(0)
 		gotten = localStorage.getItem('portrait');
 		console.log(gotten+"Gotten")
 
+		gottenRing0 = localStorage.getItem('ring0');
+		console.log(gottenRing0+"Gottenr0")
 
 		const nextQuestion = currentQuestion + 1;
 		setCurrentQuestion(nextQuestion);
@@ -399,7 +409,7 @@ const[score, setScore] = useState(0)
 			<ReactAudioPlayer src={currentQuestion === 4 ? jump : null} autoPlay />
 			{/* <ReactAudioPlayer src={currentQuestion === 6 ? chat: null} autoPlay /> */}
 			
-			<ReactAudioPlayer src={isOn === false ? click: null} autoPlay />
+			<ReactAudioPlayer src={isOn === false ? tinkle : null} autoPlay />
 			<ReactAudioPlayer src={isOn === true ? tinkle: null} autoPlay />
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="black bg." />		
 			<img id="sky" src={sky} className="question-img" alt="the sky" />		
@@ -459,10 +469,15 @@ const[score, setScore] = useState(0)
 			{currentQuestion === 4 ? < Silken /> : null}
 			{currentQuestion === 5 ? < Silken /> : null}
 			{currentQuestion === 6 ? < Silken /> : null}
-			{ currentQuestion === 6 ? < GamePad />:null }
+			{currentQuestion === 6 ? < GamePad handleAnswerButtonClick={handleAnswerButtonClick} /> : null}
 			{ currentQuestion === 6 ? < AandB />:null }
+			{currentQuestion === 7 ? < Silken /> : null}
+		
+			
 
-			{/* {currentQuestion === 3 ? < Geaga /> : null} */}
+			{currentQuestion === 7 ? < Rings0 /> : null}
+{ currentQuestion === 2 ? runEndPart1():null}
+
 			{/* <button id="toggle-settings-btn" onClick={setSettings}	><img src={blank} id="blank" alt="transparent square" /></button> */}
 
 			

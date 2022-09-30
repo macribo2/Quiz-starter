@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "5ebf1078275eaa99cd1e",
-    "url": "/static/css/main.c489c1ec.chunk.css"
+    "revision": "108244cc955b7486601e",
+    "url": "/static/css/main.2c101996.chunk.css"
   },
   {
-    "revision": "5ebf1078275eaa99cd1e",
-    "url": "/static/js/main.ece5f21f.chunk.js"
+    "revision": "108244cc955b7486601e",
+    "url": "/static/js/main.7d83e15c.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "45ed59e5b9ea65242b7e",
+    "revision": "144da1bf7259c053aea9",
     "url": "/static/css/2.7079e116.chunk.css"
   },
   {
-    "revision": "45ed59e5b9ea65242b7e",
-    "url": "/static/js/2.169c8e32.chunk.js"
+    "revision": "144da1bf7259c053aea9",
+    "url": "/static/js/2.60e597eb.chunk.js"
   },
   {
     "revision": "8f8a8b98c655870f6b0502069cc630bc",
@@ -44,6 +44,10 @@ self.__precacheManifest = [
     "url": "/static/media/geagaFace.85645a6f.png"
   },
   {
+    "revision": "3b9944463e2d7b90cba6e363b342856f",
+    "url": "/static/media/649725__duskbreaker__8bit-jump.3b994446.wav"
+  },
+  {
     "revision": "e8e18fef78171d833501160b1cfdf922",
     "url": "/static/media/geagaFaceShadow.e8e18fef.png"
   },
@@ -64,10 +68,6 @@ self.__precacheManifest = [
     "url": "/static/media/bodach0.56409365.gif"
   },
   {
-    "revision": "1fb52edd5a16e36317685cdefcd9b2dd",
-    "url": "/static/media/chat.1fb52edd.wav"
-  },
-  {
     "revision": "e1601369a5928e8db190be7aaf8f0146",
     "url": "/static/media/gamepad.e1601369.png"
   },
@@ -78,10 +78,6 @@ self.__precacheManifest = [
   {
     "revision": "5888bc5fc049dc72cc7f31fe7c32d8ea",
     "url": "/static/media/keyboard.5888bc5f.png"
-  },
-  {
-    "revision": "8da8b98ca4bd49a03ed1038445e62c7c",
-    "url": "/static/media/select.8da8b98c.wav"
   },
   {
     "revision": "dfe098893dbc558c04afa29ff566aa56",
@@ -152,7 +148,7 @@ self.__precacheManifest = [
     "url": "/static/media/drone.f7c21a06.wav"
   },
   {
-    "revision": "486fdacb3246a9da6457578d679c583c",
+    "revision": "99fb5a255e2481526ff3d1ab4f573460",
     "url": "/index.html"
   }
 ];
