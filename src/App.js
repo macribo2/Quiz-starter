@@ -60,6 +60,7 @@ import settingsBG from './images/fortuna-bg.png';
 import './fonts/Urchlo Romhanach.ttf';
 import Geaga from './components/geaga/geaga.jsx'; 
 import Silken from './components/silken/silken.jsx'; 
+import EnterSilken from './components/silken/EnterSilken'; 
 import GamePad from './components/game-pad/game-pad.jsx'; 
 import AandB from './components/silken/silken.jsx';
 import Shadowhill from './images/shadow-hill.png';
@@ -93,7 +94,6 @@ export default function App() {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [showGlass, setShowGlass] = useState(0);
-	const [ringFort, ringFortIsOn] = useToggle();
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(0);
 	let hints = [``,
@@ -122,10 +122,14 @@ export default function App() {
 
 	}
 	function useToggle(initialValue = false) {
+		
 		const [value, setValue] = React.useState(initialValue);
 		const toggle = React.useCallback(() => {
 		  setValue(v => !v);
 		}, []);
+		localStorage.setItem("isOn", isOn)
+		console.log(localStorage.getItem('isOn'))
+
 		return [value, toggle];
 	  }
 
@@ -177,12 +181,9 @@ export default function App() {
 			]
 		},
 		{
-			questionText: 'Súas',
+			questionText: '',
 			answerOptions: [
-				{ answerText: 'Clé', isCorrect: false },
-				{ answerText: 'Deas', isCorrect: false },
-				{ answerText: 'Soir', isCorrect: false },
-				{ answerText: 'Síos', isCorrect: true },
+			
 			],
 		},
 		{
@@ -295,7 +296,7 @@ const[score, setScore] = useState(0)
 
 			
 		} else { setShowScore(true)}
-		}, 1000)
+		}, 500)
 		console.log("currentQuestion" + currentQuestion)
 		console.log("value:" + value)
 		
@@ -390,10 +391,7 @@ const[score, setScore] = useState(0)
 	]
 
 	
-	
-	const directionalPad = () => { 
-		alert();
-	}
+
 	return (
 		<div className='app' >
 		<Greeting isRaining={ currentQuestion >=9?true:false} />
@@ -410,7 +408,6 @@ const[score, setScore] = useState(0)
 			<ReactAudioPlayer src={currentQuestion === 2 ? Select: null} autoPlay />
 			<ReactAudioPlayer src={currentQuestion === 4 ? jump : null} autoPlay />
 			{/* <ReactAudioPlayer src={currentQuestion === 6 ? chat: null} autoPlay /> */}
-			
 			<ReactAudioPlayer src={isOn === false ? tinkle : null} autoPlay />
 			<ReactAudioPlayer src={isOn === true ? tinkle1: null} autoPlay />
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="black bg." />		
@@ -429,8 +426,7 @@ const[score, setScore] = useState(0)
 			<img src={ geagaShadow} className={currentQuestion < 1 ? "index-geaga-shadow" : "geaga-face geaga-fade"}alt="rainy hill shadow-overlay " />
 			 */}
 			{/* a small fairy ring on a rainy night. An app menu and point of return. */}
-			<img id="question-img"  className = {currentQuestion >= 2 ?  
-				"question-img" : "hidden"} src={fairyRing} alt="rainy fields dark and wild" />
+
 		<img id="question-img"  className = 	
 			{currentQuestion >= 101 ?  		"question-img":"hidden"  } src={hill} alt="A rainy hilltop loose circle of stones" />
 			<img id="question-img" src={bg3} className={currentQuestion >= 8 ? "question-img" : "hidden"} alt="must have alt" />
@@ -466,19 +462,19 @@ const[score, setScore] = useState(0)
 			</div> */}
 			{/* { currentQuestion >= 9 ? <Geaga/>:null} */}
 
-			<button id="toggle-glass-btn" onClick={toggleIsOn}	><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
+			<button id={currentQuestion===7? "hidden":"toggle-glass-btn" } onClick={toggleIsOn}	><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 
-			{currentQuestion === 4 ? < Silken /> : null}
+			{currentQuestion === 4 ? < EnterSilken /> : null}
 			{currentQuestion === 5 ? < Silken /> : null}
 			{currentQuestion === 6 ? < Silken /> : null}
 			{currentQuestion === 6 ? < GamePad handleAnswerButtonClick={handleAnswerButtonClick} /> : null}
 			{ currentQuestion === 6 ? < AandB />:null }
-			{currentQuestion === 7 ? < Silken /> : null}
+			{currentQuestion === 7? < Silken /> : null}
+			{currentQuestion === 8? < Silken currentQuestion={currentQuestion} /> : null}
 		
 			
 
-			{currentQuestion === 7 ? < Rings0 /> : null}
-{ currentQuestion === 2 ? runEndPart1():null}
+			{currentQuestion === 7 ? < Rings0 toggleIsOn={toggleIsOn} isOn={ isOn} isFadedOut={ isFadedOut} buttonMashClick={buttonMashClick} /> : null}
 
 			{/* <button id="toggle-settings-btn" onClick={setSettings}	><img src={blank} id="blank" alt="transparent square" /></button> */}
 
@@ -520,9 +516,9 @@ const[score, setScore] = useState(0)
 
 
 { currentQuestion === 0 ? runOnStart():null}
-{ currentQuestion === 2 ? runOnName(3000):null}
+{ currentQuestion === 2 ? runOnName(2000):null}
 { currentQuestion === 3 ? runOnName(2000):null}
-{ currentQuestion === 4 ? runOnName(3000):null}
+{ currentQuestion === 4 ? runOnName(2000):null}
 { currentQuestion === 5 ? runOnName(2000):null}
 			
 			{currentQuestion === 1 ? <>

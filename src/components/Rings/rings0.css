@@ -1,10 +1,64 @@
 .rings0{
 
+
+	pointer-events: none;
+    font-size: 1.7em;
+    position: fixed;
+    top: -6%;
+    left: 5%;
+    color: rgb(255, 244, 224);
+    z-index: 92;
+    padding: 10px;
+    width: 72%;
+		text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
+		
+		font-family: Arial, Helvetica, sans-serif;
+	  
+	  
+}
+.hidden{
+	display:none;
+}
+#ring-glass-btn{
+
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	color: rgb(136, 132, 13);
 	position: fixed;
-	z-index: 93;
-	font-size: 1.7em;
-	color: aliceblue;
-	left: 6%;
-	top: 0%;
-	width: 94%;
+	background-color: rgba(0, 0, 0, 0);
+	left: 93%;
+	top: 4%;
+	z-index: 999;
+	width: 25px;
+	height: 25px;
+	margin-bottom: 0% !important;
+	border: none;
+	opacity:0.5;
+  
+}
+.button-mash-ring-0{position: absolute;
+height: 130px;
+width: 130px;
+z-index: 102;
+top: 35%;
+    left: 67%;
+border-radius: 50%;
+}
+.rings0Eng{
+ pointer-events: none;
+  font-size: 1.5em;
+  position: fixed;
+  top: 65%;
+  left: 5%;
+  color: rgb(255, 244, 224);
+  z-index: 92;
+  padding: 10px;
+  width: 50%;
+  text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
+
+  
+  font-family: Arial, Helvetica, sans-serif;
+
 }

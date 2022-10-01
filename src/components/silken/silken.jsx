@@ -9,7 +9,7 @@ import Shadowhill from '../../images/shadow-hill.png';
 import './silken.css';
 
 
-export default function Silken() { 
+export default function Silken(props) { 
 	
 	
 	useEffect(() => { 
@@ -26,7 +26,7 @@ export default function Silken() {
 
 			<div className="silken-holder">
 		
-				<img src={ silken } id="silken" alt="A character in fine silks" />
+				<img src={ silken }  id={ props.currentQuestion === 8? 'depart-silk':"silken"} alt="A character in fine silks" />
 
 			</div>
 

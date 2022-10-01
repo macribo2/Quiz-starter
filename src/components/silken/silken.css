@@ -5,8 +5,79 @@
 .silken-holder{
 	z-index: 30;
     position: fixed;
-    top: 0%;
+    top: 2%;
     left: -3%;  
 	
 }
 
+.enter-silken{
+    
+    left: -3%;  
+	z-index: 3;
+    position:fixed;
+    top:27%;
+    animation:drop-down 1s forwards;
+  }
+
+  #depart-silk{
+position:fixed;
+    animation:leap-away 4s forwards;
+
+  }
+
+ 
+  @keyframes leap-away{
+  
+    0% {
+      top: 2%;
+      transform: scale(0.35);  
+
+
+    }
+  
+  transform: scale(0.35);  
+  50%{top:2%;
+        
+}
+
+55%{
+  transform: scale(0.35);  
+  top: -53%;
+
+}
+65%{
+  top: -53%;
+  transform: scale(0.35);  
+
+
+}
+100% {
+      top: 13%;
+transform: scale(0.1);
+
+
+    } 
+  } 
+  @keyframes drop-down {
+  
+    0% {
+      top: 27%;
+      z-index: 3;
+
+    }
+  
+     50%{top:-10%;
+      z-index: 3;
+        
+}
+
+75%{
+    z-index: 300;
+
+}
+100% {
+      top: 2%;
+    z-index: 300 ;
+
+    } 
+  }
