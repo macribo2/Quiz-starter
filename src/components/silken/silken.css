@@ -34,20 +34,25 @@ position:fixed;
 
 
     }
+    45% {
+      top: 2%;
+      transform: scale(0.35);  
+
+
+    }
   
-  transform: scale(0.35);  
-  50%{top:2%;
+  50%{top:3%;
         
 }
 
 55%{
-  transform: scale(0.35);  
-  top: -53%;
+  transform: scale(0.3);  
+  top: -193%;
 
 }
 65%{
-  top: -53%;
-  transform: scale(0.35);  
+  top: -193%;
+  transform: scale(0.3);  
 
 
 }

@@ -27,11 +27,11 @@ body {
 html,
 body {
   margin: 0;
-  height: 100%;
   overflow: hidden;
   overflow-x: hidden;
   overflow-y: hidden;
-
+height:360px;
+width: 740px;
 }
 
 * {
@@ -262,7 +262,12 @@ width:90%;
   /* border:4px solid red; */
   /* border-radius:50%; */
 }
+@keyframes lower-fields{
 
+  0%{top:52%}
+  60%{top:52%}
+  100%{top:56%}
+}
 @keyframes fade-in {
   0% {
     opacity: 0
@@ -584,7 +589,7 @@ button svg {
   /* animation: fade-out 4s forwards; */
 }
 
-.hill-fields {
+.hill-fields,   .lower-fields {
   position: fixed;
   z-index: 4;
   left: -14%;
@@ -606,12 +611,10 @@ button svg {
 }
 
 
-.avatar {
+.avatar,#hero-leap {
   position: fixed;
   z-index: 68;
-  height: 47%;
   width: 24%;
-  border-radius: 50%;
   left: 480px;
   top: 31%;
   display: block;
@@ -655,9 +658,10 @@ button svg {
   z-index: 939;
   font-size: 3em;
   font-weight: bold;
-  left: 6%;
+  text-align: center;
+  left: 8%;
   top: -11%;
-  width: 99%;
+  width: 84%;
   background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
   -webkit-background-clip: text;
   background-clip: text;
@@ -678,9 +682,12 @@ pointer-events: none;
       background-position: 100% 0;
   }
 }
+.lower-fields{
+animation: lower-fields 3s forwards;
 
+}
 #lens {
-  /* transform: scale(0.55); */
+  transform: scale(0.85);
   position: fixed;
   top: 20px;
   left: 393px;
@@ -806,7 +813,7 @@ pointer-events: none;
     border-radius: 50%;
   }
 
-  .hill-fields {
+  .hill-fields{
     position: fixed;
     z-index: 4;
     left: 23%;
@@ -865,3 +872,48 @@ pointer-events: none;
 #test{
   border: 10px solid beige;
 }
+
+
+#hero-leap{
+  position:fixed;
+      animation:leap-away 4s forwards;
+  
+    }
+  
+   
+    @keyframes leap-away{
+    
+      0% {
+        top: 31%;
+  
+  
+      }
+
+  
+  75%{
+    transform: scale(0.3);  
+    top: -73%;
+  
+  }
+  85%{
+    top: -73%;
+    transform: scale(0.3);  
+  
+  
+  }
+  100% {
+        left: 138px;
+    top: 37%;
+  transform: scale(0.3);
+  
+  
+      } 
+    } 
+    #portrait-mode{
+      z-index: 999;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      position: fixed;
+    }
