@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import Sparkles from 'react-sparkle'
+
 import SettingsMenu from './components/settings-menu/settings-menu'
 import glass from './images/big-glass.png';
 import lens from './images/ciorcal-glass.png';
 import geagaFace from './images/geagaFace.png';
 import avatar6 from './images/players/diamhraí0.gif';
-import avatar2 from './images/players/draoi0.gif';
+import avatar2 from './images/players/douglas.png';
 import avatar3 from './images/players/fianna0.png';
 import avatar4 from './images/players/gotach0.png';
 import avatar5 from './images/players/rógaire0.png'
@@ -22,13 +24,20 @@ import avatar13 from './images/prompt-0.png';
 import avatar14 from './images/prompt-0.png';
 import avatar15 from './images/prompt-0.png';
 import bodhran0 from './audio/bodhran0.wav';
-import jump from './audio/649725__duskbreaker__8bit-jump.wav';
-import chat from './audio/649725__duskbreaker__8bit-jump.wav';
+import jump from './audio/jump-up.wav';
+import chat from './audio/457279__moogsy__lo-fi-sparkle.wav';
+import theme0 from './audio/theme0.wav';
+import spark0 from './audio/sparkle-a.wav';
+import spark1 from './audio/sparkle-b.wav';
+import spark2 from './audio/sparkle-c.wav';
+import spark3 from './audio/sparkle-d.wav';
+import spark4 from './audio/sparkle-e.wav';
 import Easca from './components/easca/easca.jsx'	
 import MenuClick from './audio/171697__nenadsimic__menu-selection-click.wav';
-import Select from './audio/171697__nenadsimic__menu-selection-click.wav';
+import Select from './audio/462092__matrixxx__sparkling-star-04.wav';
 import jam from './audio/51241__rutgermuller__8-bit-gabber-piece.wav'
 import useScreenOrientation from 'react-hook-screen-orientation';
+
 import fairyRing from './images/question-backgrounds/fairy-ring0.gif';
 import hill from './images/rainy-hill1.png';
 import blank from './images/blank.png';
@@ -74,8 +83,8 @@ const ComponentWithScreenOrientation = () => {
 		<p>Screen orientation is: {screenOrientation}</p>
 	)
 }
-let heroNames = ['','a Níamh', 'a Mhórgacht', 'a Oisín', 'a mháistir', 'a rógaire', 'a Thaoiseach', 'Fionn', 'a Mhórgacht', 'a Mhurúch'];
-let heroNamesEng = ['','o Níamh', 'your Highness', 'o Oisín','o master', 'you rogue','o Chieftain','Fionn','your Magnificence','o Sea Maid'];
+let heroNames = ['','a Níamh', 'a Ḋubhghlas', 'a Oisín', 'a mháistir', 'a rógaire', 'a Thaoiseach', 'Fionn', 'a Mhórgacht', 'a Mhurúch'];
+let heroNamesEng = ['','o Níamh', 'Douglas', 'o Oisín','o master', 'you rogue','o Chieftain','Fionn','your Magnificence','o Sea Maid'];
 export default function App() {
 	//for rotary dial values:
 	
@@ -97,7 +106,7 @@ export default function App() {
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(0);
 	let hints = [``,
-		`...`, `yourself!`, ``, ``,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[gotten]+`, you’ll see fine fun.`,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[localStorage.getItem('portrait')]+`, you’ll see fine fun.`,``,``,``,]
+		``, `yourself!`, ``, ``,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[gotten]+`, you’ll see fine fun.`,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[localStorage.getItem('portrait')]+`, you’ll see fine fun.`,``,``,``,]
 	let hintsAnswersA = [``,``,``,``,``,``,``,``];
 	let hintsAnswersB = [``,``,``,``,``,``,``,``,``];
 	let hintsAnswersC = [``,``,``,``,``,``,``];
@@ -144,7 +153,7 @@ export default function App() {
 			],
 		},
 		{
-			questionText: '...',
+			questionText: '',
 			answerOptions: [
 				
 			],
@@ -364,13 +373,14 @@ const[score, setScore] = useState(0)
 	let choiceRingEng = [
 	``,
 		`Golden-headed Niamh`,
-		`She who intoxicates`,
-		`"Young Deer", greatest poet of Ireland, warrior of the Fianna.`,
+		`
+		 The Pleasant Little Branch`,
+		`"Young Deer", greatest poet of Ireland, warrior of the Fianna`,
 		`The Dark One`,
 		`Billy the Kid`,
 		`The Vampire Chieftain`,
-		`Legendary warrior, a seer and a poet.`,
-		`Brigid the Healer, the Smith, the Goddess whom Poets adore.`,
+		`Legendary warrior, a seer and a poet`,
+		`Brigid the Healer, the Smith, the Goddess whom Poets adore`,
 		`The Sea Maid`,
 		``
 	]
@@ -378,7 +388,7 @@ const[score, setScore] = useState(0)
 	let choiceRing = [
 		`		`,
 		`Niamh Cinn-Óir`,
-		`Méabh`,
+		`An Craoibhín Aoibhinn`,
 		`Oisín`,
 		`Donn Fírinne`,
 		`Liam Mac Cárthaigh`,
@@ -395,19 +405,20 @@ const[score, setScore] = useState(0)
 	return (
 		<div className='app' >
 		<Greeting isRaining={ currentQuestion >=9?true:false} />
+		<ReactAudioPlayer src={value*10 === 0 ? theme0: null} autoPlay />
 
-			<ReactAudioPlayer src={value*10 === 1 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 2 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 3 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 4 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 5 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 6 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 7 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 8 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 9 ? MenuClick: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 1 ? spark0: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 2 ? spark1: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 3 ? spark2: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 4 ? spark3: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 5 ? spark4: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 6 ? spark1: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 7 ? spark2: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 8 ? spark3: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 9 ? spark0: null} autoPlay />
 			<ReactAudioPlayer src={currentQuestion === 2 ? Select: null} autoPlay />
 			<ReactAudioPlayer src={currentQuestion === 4 ? jump : null} autoPlay />
-			{/* <ReactAudioPlayer src={currentQuestion === 6 ? chat: null} autoPlay /> */}
+			<ReactAudioPlayer src={currentQuestion === 5 ? chat: null} autoPlay />
 			<ReactAudioPlayer src={isOn === false ? tinkle : null} autoPlay />
 			<ReactAudioPlayer src={isOn === true ? tinkle1: null} autoPlay />
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="black bg." />		
@@ -417,7 +428,7 @@ const[score, setScore] = useState(0)
 			<img src={distantFort} className="index-distant-fort" alt="distant fort on peninsula " />
 			
 			<img src={distantFortShadow} className={currentQuestion < 1 ? "index-distant-fort" : "index-distant-fort slow-fade"} alt="distant fort on peninsula " />
-			<img src={Fields} className="hill-fields" alt="distant fort on peninsula " />
+			<img src={Fields} className={currentQuestion===8?"lower-fields":"hill-fields"} alt="distant fort on peninsula " />
 			<img src={ShadowFields} className={currentQuestion < 1 ? "index-shadow-fields" : "index-shadow-fields slow-fade"} alt="distant fort on peninsula " />
 			{/* <img src={ hill} className="hill"alt="rainy hill shadow-overlay " /> */}
 
@@ -496,18 +507,23 @@ const[score, setScore] = useState(0)
 < img  src={glass} className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />	
 			</div>) : null}
 			
-			<div className={ currentQuestion ===2? "avatar-land":"avatarholder"} >
+			<div className={ currentQuestion ===2? "avatar-land":"avatarholder" }     style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh',
+      }} >
 			
-			<img src={avatar1} className={value * 10 === 1 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />		
+				<img src={avatar1} className={value * 10 === 1 ? 'avatar' : 'hidden'} id={currentQuestion ===8? "hero-leap":null } alt="a portrait of an rpg style playable character" />		
 			
-			<img  src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />		
-			<img src={avatar3} className={value * 10 === 3 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />
-			<img  src={avatar4} className={value *10=== 4 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
-			<img  src={avatar5} className={value *10=== 5 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
-			<img  src={avatar6} className={value *10=== 6 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
-			<img  src={avatar7} className={value *10=== 7 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
-			<img  src={avatar8} className={value *10=== 8 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
-				<img src={avatar9} className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />
+			<img  src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } id={currentQuestion ===8? "hero-leap":null } alt="a portrait of an rpg style playable character" />		
+			<img src={avatar3} id={currentQuestion ===8? "hero-leap":null } className={value * 10 === 3 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />
+			<img  src={avatar4}id={currentQuestion ===8? "hero-leap":null } className={value *10=== 4 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+			<img  src={avatar5}id={currentQuestion ===8? "hero-leap":null } className={value *10=== 5 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+			<img  src={avatar6}id={currentQuestion ===8? "hero-leap":null } className={value *10=== 6 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+			<img  src={avatar7}id={currentQuestion ===8? "hero-leap":null } className={value *10=== 7 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+			<img  src={avatar8}id={currentQuestion ===8? "hero-leap":null } className={value *10=== 8 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+				<img src={avatar9}id={currentQuestion ===8? "hero-leap":null } className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />
 			</div>
 			
 
@@ -537,9 +553,17 @@ const[score, setScore] = useState(0)
 
 			{currentQuestion === 1 ? <>
 				<div id="buttonmash" value={value} onClick={(value) => buttonMashClick(true, value)}>
-					<img src={lens} id="lens" alt="a glass lens" />
+					<img src={lens} id="lens" alt="a glass 	" />
 				</div>
-				<p className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]}</p>
+					<p className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]}{ value === 0 || value === 10? null:  <Sparkles
+      color="yellow"
+      count={28}
+      minSize={5}
+      maxSize={14}
+      overflowPx={35}
+      fadeOutSpeed={10}
+      flicker={true}
+    />}</p>
 			
 				
 			</> : null}
