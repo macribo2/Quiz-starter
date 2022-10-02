@@ -611,13 +611,13 @@ button svg {
 }
 
 
-.avatar,#hero-leap {
+.avatar {
   position: fixed;
   z-index: 68;
   width: 24%;
   left: 480px;
   top: 31%;
-  display: block;
+  display: block; 
 }
 
 .avatar-holder {
@@ -875,8 +875,13 @@ animation: lower-fields 3s forwards;
 
 
 #hero-leap{
-  position:fixed;
-      animation:leap-away 4s forwards;
+  position: fixed;
+  z-index: 68;
+  width: 24%;
+  left: 480px;
+  top: 31%;
+  display: block; 
+      /* animation:leap-away 4s forwards; */
   
     }
   
@@ -884,26 +889,23 @@ animation: lower-fields 3s forwards;
     @keyframes leap-away{
     
       0% {
-        top: 31%;
-  
+top:31%;  
   
       }
 
   
-  75%{
-    transform: scale(0.3);  
+  25%{
     top: -73%;
   
   }
-  85%{
+  75%{
     top: -73%;
-    transform: scale(0.3);  
   
   
   }
   100% {
-        left: 138px;
-    top: 37%;
+    top: 20%;
+    left: 98px;
   transform: scale(0.3);
   
   

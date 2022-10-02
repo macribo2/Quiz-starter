@@ -24,11 +24,17 @@ import avatar13 from './images/prompt-0.png';
 import avatar14 from './images/prompt-0.png';
 import avatar15 from './images/prompt-0.png';
 import bodhran0 from './audio/bodhran0.wav';
-import jump from './audio/649725__duskbreaker__8bit-jump.wav';
-import chat from './audio/649725__duskbreaker__8bit-jump.wav';
+import jump from './audio/jump-up.wav';
+import chat from './audio/457279__moogsy__lo-fi-sparkle.wav';
+import theme0 from './audio/theme0.wav';
+import spark0 from './audio/sparkle-a.wav';
+import spark1 from './audio/sparkle-b.wav';
+import spark2 from './audio/sparkle-c.wav';
+import spark3 from './audio/sparkle-d.wav';
+import spark4 from './audio/sparkle-e.wav';
 import Easca from './components/easca/easca.jsx'	
 import MenuClick from './audio/171697__nenadsimic__menu-selection-click.wav';
-import Select from './audio/171697__nenadsimic__menu-selection-click.wav';
+import Select from './audio/462092__matrixxx__sparkling-star-04.wav';
 import jam from './audio/51241__rutgermuller__8-bit-gabber-piece.wav'
 import useScreenOrientation from 'react-hook-screen-orientation';
 
@@ -77,7 +83,7 @@ const ComponentWithScreenOrientation = () => {
 		<p>Screen orientation is: {screenOrientation}</p>
 	)
 }
-let heroNames = ['','a Níamh', 'a Ḋubhghlas ', 'a Oisín', 'a mháistir', 'a rógaire', 'a Thaoiseach', 'Fionn', 'a Mhórgacht', 'a Mhurúch'];
+let heroNames = ['','a Níamh', 'a Ḋubhghlas', 'a Oisín', 'a mháistir', 'a rógaire', 'a Thaoiseach', 'Fionn', 'a Mhórgacht', 'a Mhurúch'];
 let heroNamesEng = ['','o Níamh', 'Douglas', 'o Oisín','o master', 'you rogue','o Chieftain','Fionn','your Magnificence','o Sea Maid'];
 export default function App() {
 	//for rotary dial values:
@@ -399,19 +405,20 @@ const[score, setScore] = useState(0)
 	return (
 		<div className='app' >
 		<Greeting isRaining={ currentQuestion >=9?true:false} />
+		<ReactAudioPlayer src={value*10 === 0 ? theme0: null} autoPlay />
 
-			<ReactAudioPlayer src={value*10 === 1 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 2 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 3 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 4 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 5 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 6 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 7 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 8 ? MenuClick: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 9 ? MenuClick: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 1 ? spark0: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 2 ? spark1: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 3 ? spark2: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 4 ? spark3: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 5 ? spark4: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 6 ? spark1: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 7 ? spark2: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 8 ? spark3: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 9 ? spark0: null} autoPlay />
 			<ReactAudioPlayer src={currentQuestion === 2 ? Select: null} autoPlay />
 			<ReactAudioPlayer src={currentQuestion === 4 ? jump : null} autoPlay />
-			{/* <ReactAudioPlayer src={currentQuestion === 6 ? chat: null} autoPlay /> */}
+			<ReactAudioPlayer src={currentQuestion === 5 ? chat: null} autoPlay />
 			<ReactAudioPlayer src={isOn === false ? tinkle : null} autoPlay />
 			<ReactAudioPlayer src={isOn === true ? tinkle1: null} autoPlay />
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="black bg." />		
@@ -549,13 +556,13 @@ const[score, setScore] = useState(0)
 					<img src={lens} id="lens" alt="a glass 	" />
 				</div>
 					<p className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]}{ value === 0 || value === 10? null:  <Sparkles
-      color="goldenrod"
-      count={8}
+      color="yellow"
+      count={28}
       minSize={5}
       maxSize={14}
       overflowPx={35}
-      fadeOutSpeed={20}
-      flicker={false}
+      fadeOutSpeed={10}
+      flicker={true}
     />}</p>
 			
 				
