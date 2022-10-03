@@ -49,13 +49,32 @@ export default function Rings0(props) {
 		}
 	}
 
-	let freagra = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',]
 	
 	let gottenRings0 = 0;
 	let Ring2AnsEng = ['',
-		'I’ll go with you, and welcome','I will, if I get my wages','Not till I get a drink','I’ll give you the price, if you\'re joking!','I feel the smell of a melodious lying Irishman under my sod of country.'
+		'I’ll go, certainly',
+		'No thank you',
+		'I will, on a wage', 'Not till I get a drink', 'I’ll give you the price, if you\'re joking!',
+		'Alchemical Symbol for Hour',
+		'choice9',
+		'I feel the smell of a melodious lying Irishman under my sod of country.',
+		'⚔',
 	]
-	let Ring2Ans = ['','Rachfaidh agus fáilte','Rachfaidh, má fhaighim mo thuarastal.','ní go bhfaighidh mé deoch',' Béarfaidh mé luach, más ag mhagaidh atá tú!”','Mothaím boladh an Éireannaigh bhinn bhréagach faoi m’ḟóidín dúṫaiġ','rogha6','rogha7','rogha8','rogha9']
+
+
+	
+	let Ring2Ans = ['',
+		'Rachfaidh cinnte',
+		'Ní go raibh maith agat',
+		'Rachfaidh, ar thuarastal',
+		'Ní go bhfaighidh mé deoch',
+		'Béarfaidh mé luach, más ag mhagaidh atá tú”',
+		'🝮',
+		'rogha9',
+		'Mothaím boladh an Éireannaigh bhinn bhréagach faoi m’ḟóidín dúṫaiġ',
+		'⚔',
+	
+	]
 	function reportStepValue3 () {
 		alert(showTheGlass);
 		console.log(showTheGlass);
@@ -81,12 +100,12 @@ export default function Rings0(props) {
 			{props.isOn ? <p className="rings0Eng">{Ring2AnsEng[value * 10]}</p> : null}
 			{ localStorage.setItem('freagra1', value * 10)
 }
-			<button id="ring-glass-btn" onClick={props.toggleIsOn}	><img src={props.isOn? pearl:emerald} id="blank" alt="a crystal or precious stone toggle on osff button" /></button>
+			<button id="ring-glass-btn" onClick={props.toggleIsOn}	><img src={props.isOn? pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 			
 
 
-			<buton className="button-mash-ring-0" onClick={ props.buttonMashClick}></buton>
-			{ props.currentQuestion === 9? 	<p className="rings0"id="freagra0">freaga0</p>:null}
+			<buton className="button-mash-ring-0" onClick={props.buttonMashClick}></buton>
+			
 		</>)
 };
 

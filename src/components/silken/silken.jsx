@@ -10,8 +10,9 @@ import './silken.css';
 
 
 export default function Silken(props) { 
-	
-	
+	let answer1 = localStorage.getItem('freagra1')
+
+	let freagra1 = ['','asdfsd', 'Agus cad é an tuarastal atá tu ’g iarraidh? Áit tigínn agus gairdín? Gheobhaidh tú sin, má éirigheann mo turas liom.', 'asdfsadc', 'dasdfasd', 'easdfas', 'asdfasdf', 'asdfdasg', 'hasdfasd',]	
 	useEffect(() => { 
 		setHasLoaded(false);
 
@@ -26,8 +27,10 @@ export default function Silken(props) {
 
 			<div className="silken-holder">
 		
-				<img src={ silken }  id={ props.currentQuestion === 8? 'depart-silk':"silken"} alt="A character in fine silks" />
+				<img src={ silken }  id={ props.currentQuestion === 9? 'depart-silk':"silken"} alt="A character in fine silks" />
 
+
+{ props.currentQuestion === 8? 	<p className="rings0"id="freagra0">{freagra1[answer1]}</p>:null}
 			</div>
 
 

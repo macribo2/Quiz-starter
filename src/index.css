@@ -278,6 +278,16 @@ width:90%;
     opacity: 1
   }
 }
+@keyframes fade-in-dial {
+  0% {
+    opacity: 0
+  }
+
+  
+  100% {
+    opacity: 0.6
+  }
+}
 
 @keyframes fade-out {
 
@@ -598,11 +608,10 @@ button svg {
 }
 
 .dial {
-
-  animation: fade-in 3s forwards;
+  animation: fade-in-dial 3s forwards;
   position: fixed;
   /* border: 4px solid blue; */
-  z-index: 100;
+  z-index: 116;
   height: 220px;
   width: 220px;
   left: 456px;
@@ -686,17 +695,23 @@ pointer-events: none;
 animation: lower-fields 3s forwards;
 
 }
+.sparkles{
+  z-index: 50;
+}
 #lens {
   transform: scale(0.85);
   position: fixed;
   top: 20px;
   left: 393px;
-  animation: fade-in 3s forwards;
+  animation: fade-in 1s forwards;
   pointer-events: none;
   display: 'flex';
   align-items: 'center';
   justify-content: 'center';
   height: '100vh';
+  opacity: 0.5;
+  z-index:102;
+
 
 }
 
@@ -704,7 +719,7 @@ animation: lower-fields 3s forwards;
   position: absolute;
   height: 130px;
   width: 130px;
-  z-index: 102;
+  z-index: 902;
   top: 38%;
   left: 70%;
   border-radius: 50%;
@@ -790,8 +805,10 @@ animation: lower-fields 3s forwards;
     position: fixed;
     top: 25%;
     left: 72%;
-    animation: fade-in 3s forwards;
+    /* animation: fade-in 3s forwards; */
     pointer-events: none;
+  opacity: 0.5;
+
   }
 
   .dial {
@@ -801,13 +818,14 @@ animation: lower-fields 3s forwards;
     position: fixed;
     top: 23%;
     left: 71%;
+    animation:fade-in 1s forwards;
 
   }
 
   #buttonmash {
     height: 430px;
     width: 430px;
-    z-index: 102;
+    z-index: 902;
     top: 20%;
     left: 70%;
     border-radius: 50%;
@@ -874,40 +892,45 @@ animation: lower-fields 3s forwards;
 }
 
 
-#hero-leap{
+#leap-me{
   position: fixed;
   z-index: 68;
   width: 24%;
   left: 480px;
   top: 31%;
   display: block; 
-      /* animation:leap-away 4s forwards; */
+      animation:leap-h 2.5s forwards;
   
     }
   
    
-    @keyframes leap-away{
+    @keyframes leap-h {
     
       0% {
-top:31%;  
+        left: 480px;
+        top: 31%;
+  
+      }
+
+      49% {
+        left: 480px;
+        top: 31%;
+        transform: scale(0.35);
   
       }
 
   
-  25%{
-    top: -73%;
-  
-  }
-  75%{
-    top: -73%;
-  
+  70%{
+    top: -71%;
+transform: scale(0.35);
+
+
   
   }
   100% {
-    top: 20%;
-    left: 98px;
-  transform: scale(0.3);
-  
+    top: 31%;
+    left:150px;
+transform: scale(0.35);
   
       } 
     } 

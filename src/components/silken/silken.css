@@ -1,13 +1,12 @@
 #silken{
 
-    transform: scale(0.35);  
+    transform: scale(0.25);  
 }
 .silken-holder{
 	z-index: 30;
     position: fixed;
-    top: 2%;
-    left: -3%;  
-	
+    top: 35%;
+    left:26%;
 }
 
 .enter-silken{
@@ -29,30 +28,20 @@ position:fixed;
   @keyframes leap-away{
   
     0% {
-      top: 2%;
+      top: 35%;
+      left:26%;
       transform: scale(0.35);  
 
-
     }
-  
-  transform: scale(0.35);  
-  50%{top:2%;
-        
-}
 
-55%{
-  transform: scale(0.35);  
+20%{
   top: -53%;
-
-}
-65%{
-  top: -53%;
-  transform: scale(0.35);  
 
 
 }
 100% {
-      top: 13%;
+      top: 16%;
+      left:0%;
 transform: scale(0.1);
 
 
@@ -76,7 +65,8 @@ transform: scale(0.1);
 
 }
 100% {
-      top: 2%;
+      top: 35%;
+      left:26%;
     z-index: 300 ;
 
     } 

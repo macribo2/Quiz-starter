@@ -10,7 +10,7 @@ import avatar2 from './images/players/douglas.png';
 import avatar3 from './images/players/fianna0.png';
 import avatar4 from './images/players/gotach0.png';
 import avatar5 from './images/players/rógaire0.png'
-import avatar8 from './images/players/saoi0.png';
+import avatar8 from './images/players/pooka.png';
 import avatar7 from './images/players/seanchaí0.png';
 import avatar1 from './images/players/spéirbhean0.gif';
 import emerald from './images/misc_crystal_new.png'
@@ -83,8 +83,8 @@ const ComponentWithScreenOrientation = () => {
 		<p>Screen orientation is: {screenOrientation}</p>
 	)
 }
-let heroNames = ['','a Níamh', 'a Ḋubhghlas', 'a Oisín', 'a mháistir', 'a rógaire', 'a Thaoiseach', 'Fionn', 'a Mhórgacht', 'a Mhurúch'];
-let heroNamesEng = ['','o Níamh', 'Douglas', 'o Oisín','o master', 'you rogue','o Chieftain','Fionn','your Magnificence','o Sea Maid'];
+let heroNames = ['','a Níamh', 'a Ḋubhghlas', 'a Oisín', 'a mháistir', 'a rógaire', 'a Thaoiseach', 'Fionn', 'a chara', 'a Mhurúch'];
+let heroNamesEng = ['','o Níamh', 'Douglas', 'o Oisín','o master', 'you rogue','o Chieftain','Fionn','o friend','o Sea Maid'];
 export default function App() {
 	//for rotary dial values:
 	
@@ -106,7 +106,7 @@ export default function App() {
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(0);
 	let hints = [``,
-		``, `yourself!`, ``, ``,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[gotten]+`, you’ll see fine fun.`,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[localStorage.getItem('portrait')]+`, you’ll see fine fun.`,``,``,``,]
+		``, `It is you!`, ``, ``,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[gotten]+`, you’ll see fine fun.`,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[localStorage.getItem('portrait')]+`, you’ll see fine fun.`,``,``,``,]
 	let hintsAnswersA = [``,``,``,``,``,``,``,``];
 	let hintsAnswersB = [``,``,``,``,``,``,``,``,``];
 	let hintsAnswersC = [``,``,``,``,``,``,``];
@@ -196,7 +196,7 @@ export default function App() {
 			],
 		},
 		{
-			questionText: 'Súas',
+			questionText: '',
 			answerOptions: [
 				{ answerText: 'Clé', isCorrect: false },
 				{ answerText: 'Deas', isCorrect: false },
@@ -205,7 +205,7 @@ export default function App() {
 			],
 		},
 		{
-			questionText: 'Súas',
+			questionText: '',
 			answerOptions: [
 				{ answerText: 'Clé', isCorrect: false },
 				{ answerText: 'Deas', isCorrect: false },
@@ -214,7 +214,7 @@ export default function App() {
 			],
 		},
 		{
-			questionText: 'Súas',
+			questionText: '',
 			answerOptions: [
 				{ answerText: 'Clé', isCorrect: false },
 				{ answerText: 'Deas', isCorrect: false },
@@ -288,7 +288,7 @@ const[score, setScore] = useState(0)
 		if (nextQuestion < questions.length) {
 			setCurrentQuestion(nextQuestion);
 		} else { setShowScore(true)}
-	}, 5000)
+	}, 100)
 	}
 	const handleAnswerButtonClick = (isCorrect, storyPath) => { 
 		setIsFadedOut(false)
@@ -380,7 +380,7 @@ const[score, setScore] = useState(0)
 		`Billy the Kid`,
 		`The Vampire Chieftain`,
 		`Legendary warrior, a seer and a poet`,
-		`Brigid the Healer, the Smith, the Goddess whom Poets adore`,
+		`A "pooka," a fairy, a sprite, a hobgoblin`,
 		`The Sea Maid`,
 		``
 	]
@@ -394,7 +394,7 @@ const[score, setScore] = useState(0)
 		`Liam Mac Cárthaigh`,
 		`Abhartach`,
 		`Fionn mac Cumhail`,
-		`Bríd`,
+		`An Púca`,
 		`An Murúch`,
 		``
 		
@@ -404,7 +404,7 @@ const[score, setScore] = useState(0)
 
 	return (
 		<div className='app' >
-		<Greeting isRaining={ currentQuestion >=9?true:false} />
+		<Greeting isRaining={ currentQuestion >=13?true:false} />
 		<ReactAudioPlayer src={value*10 === 0 ? theme0: null} autoPlay />
 
 			<ReactAudioPlayer src={value*10 === 1 ? spark0: null} autoPlay />
@@ -428,7 +428,11 @@ const[score, setScore] = useState(0)
 			<img src={distantFort} className="index-distant-fort" alt="distant fort on peninsula " />
 			
 			<img src={distantFortShadow} className={currentQuestion < 1 ? "index-distant-fort" : "index-distant-fort slow-fade"} alt="distant fort on peninsula " />
-			<img src={Fields} className={currentQuestion===8?"lower-fields":"hill-fields"} alt="distant fort on peninsula " />
+			<img src={Fields} className={currentQuestion===9?"lower-fields":"hill-fields"} alt="distant fort on peninsula " />
+
+			{currentQuestion === 9 ? () => {setTimeout(() => {
+				
+			runOnName(1000)}, 1000); }:null}
 			<img src={ShadowFields} className={currentQuestion < 1 ? "index-shadow-fields" : "index-shadow-fields slow-fade"} alt="distant fort on peninsula " />
 			{/* <img src={ hill} className="hill"alt="rainy hill shadow-overlay " /> */}
 
@@ -479,13 +483,18 @@ const[score, setScore] = useState(0)
 			{currentQuestion === 5 ? < Silken /> : null}
 			{currentQuestion === 6 ? < Silken /> : null}
 			{currentQuestion === 6 ? < GamePad handleAnswerButtonClick={handleAnswerButtonClick} /> : null}
+
+			{currentQuestion === 8 ? < GamePad handleAnswerButtonClick={handleAnswerButtonClick} /> : null}
+
 			{ currentQuestion === 6 ? < AandB />:null }
 			{currentQuestion === 7? < Silken /> : null}
 			{currentQuestion === 8? < Silken currentQuestion={currentQuestion} /> : null}
+			{currentQuestion === 9? < Silken currentQuestion={currentQuestion} /> : null}
+			{currentQuestion === 10? < Silken currentQuestion={currentQuestion} /> : null}
 		
 			
 
-			{currentQuestion === 7 ? < Rings0 toggleIsOn={toggleIsOn} isOn={ isOn} isFadedOut={ isFadedOut} buttonMashClick={buttonMashClick} /> : null}
+			{currentQuestion === 7 ? < Rings0 toggleIsOn={toggleIsOn} isOn={ isOn} isFadedOut={ isFadedOut}  buttonMashClick={buttonMashClick} /> : null}
 
 			{/* <button id="toggle-settings-btn" onClick={setSettings}	><img src={blank} id="blank" alt="transparent square" /></button> */}
 
@@ -514,25 +523,25 @@ const[score, setScore] = useState(0)
         height: '100vh',
       }} >
 			
-				<img src={avatar1} className={value * 10 === 1 ? 'avatar' : 'hidden'} id={currentQuestion ===8? "hero-leap":null } alt="a portrait of an rpg style playable character" />		
+				<img src={avatar1} className={value * 10 === 1 ? 'avatar' : 'hidden'} id={currentQuestion ===8? "leap-me":null } alt="a portrait of an rpg style playable character" />		
 			
-			<img  src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } id={currentQuestion ===8? "hero-leap":null } alt="a portrait of an rpg style playable character" />		
-			<img src={avatar3} id={currentQuestion ===8? "hero-leap":null } className={value * 10 === 3 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />
-			<img  src={avatar4}id={currentQuestion ===8? "hero-leap":null } className={value *10=== 4 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
-			<img  src={avatar5}id={currentQuestion ===8? "hero-leap":null } className={value *10=== 5 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
-			<img  src={avatar6}id={currentQuestion ===8? "hero-leap":null } className={value *10=== 6 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
-			<img  src={avatar7}id={currentQuestion ===8? "hero-leap":null } className={value *10=== 7 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
-			<img  src={avatar8}id={currentQuestion ===8? "hero-leap":null } className={value *10=== 8 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
-				<img src={avatar9}id={currentQuestion ===8? "hero-leap":null } className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />
+			<img  src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } id={currentQuestion ===10? "leap-me":null } alt="a portrait of an rpg style playable character" />		
+			<img src={avatar3} id={currentQuestion ===10? "leap-me":null } className={value * 10 === 3 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />
+			<img  src={avatar4}id={currentQuestion ===10? "leap-me":null } className={value *10=== 4 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+			<img  src={avatar5}id={currentQuestion ===10? "leap-me":null } className={value *10=== 5 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+			<img  src={avatar6}id={currentQuestion ===10? "leap-me":null } className={value *10=== 6 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+			<img  src={avatar7}id={currentQuestion ===10? "leap-me":null } className={value *10=== 7 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+			<img  src={avatar8}id={currentQuestion ===10? "leap-me":null } className={value *10=== 8 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+				<img src={avatar9}id={currentQuestion ===10? "leap-me":"hidden" } className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />
 			</div>
 			
 
 
 
 
+			{currentQuestion === 0 ? < GamePad handleAnswerButtonClick={runOnStart} /> : null}
 
-{ currentQuestion === 0 ? runOnStart():null}
-{ currentQuestion === 2 ? runOnName(2000):null}
+{ currentQuestion === 2 ? runOnName(10):null}
 { currentQuestion === 3 ? runOnName(2000):null}
 { currentQuestion === 4 ? runOnName(2000):null}
 { currentQuestion === 5 ? runOnName(2000):null}
@@ -552,17 +561,18 @@ const[score, setScore] = useState(0)
 
 
 			{currentQuestion === 1 ? <>
-				<div id="buttonmash" value={value} onClick={(value) => buttonMashClick(true, value)}>
 					<img src={lens} id="lens" alt="a glass 	" />
+				<div id="buttonmash" value={value} onClick={(value) => buttonMashClick(true, value)}>
 				</div>
-					<p className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]}{ value === 0 || value === 10? null:  <Sparkles
+					<p className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]}{ value === 0 || value === 10? null:  <Sparkles className="sparkles"
       color="yellow"
       count={28}
       minSize={5}
       maxSize={14}
       overflowPx={35}
       fadeOutSpeed={10}
-      flicker={true}
+					flicker={true}
+					
     />}</p>
 			
 				
@@ -584,7 +594,7 @@ const[score, setScore] = useState(0)
 				<img src={avatar9} className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="the selected character portrait" />
 			</div>
 			
-			{currentQuestion === 9 ?  <Easca className="faded-in"/>  : null}
+			{currentQuestion === 12 ?  <Easca className="faded-in"/>  : null}
 			<div id="suggest-mobile">
 				
 				<p className="mob-text">don fónpóca i dtús báire. (brú f12)
