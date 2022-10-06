@@ -12,7 +12,7 @@ import './silken.css';
 export default function Silken(props) { 
 	let answer1 = localStorage.getItem('freagra1')
 
-	let freagra1 = ['','asdfsd', 'Agus cad é an tuarastal atá tu ’g iarraidh? Áit tigínn agus gairdín? Gheobhaidh tú sin, má éirigheann mo turas liom.', 'asdfsadc', 'dasdfasd', 'easdfas', 'asdfasdf', 'asdfdasg', 'hasdfasd',]	
+	let freagra1 = ['','Maith go leoir.', 'Tuarastal atá tu ’g iarraidh? Áit tigínn agus gairdín. Gheobhaidh tú sin, má éirigheann mo turas liom.', 'Ar aghaidh linn le chéile!', 'Ól do ṡaiṫ! Ní ḃéiḋ an ċoirn sin folaṁ fad do ḃeaṫa.', '...', 'Slán go fóil mar sin!', 'asdfdasg', 'hasdfasd',]	
 	useEffect(() => { 
 		setHasLoaded(false);
 

@@ -30,13 +30,13 @@
 	}
 	#sb0{
 		top:-28%;
-		animation: fade-in 3s forwards;
+		animation: fade-in-a-bit 3s forwards;
 
 	}
 	
 	#sb1{
 		top:33%;
-		animation: fade-in 5s forwards;
+		animation: fade-in-a-bit 5s forwards;
 
 	}
 	
@@ -66,18 +66,18 @@
 	  left:0%;
 	}
 	#sb0{
-		top:3%;
-		animation: fade-in 3s forwards;
+		top:7%;
+		animation: fade-in-a-bit 3s forwards;
 	}
 	
 	#sb1{
-		top:29%;
-		animation: fade-in 4s forwards;
+		top:33%;
+		animation: fade-in-a-bit 4s forwards;
 
 	}
 
 	#sb2{
-		top:53%;
+		top:57%;
 		animation: fade-in 5s forwards;
 
 	}
@@ -96,3 +96,18 @@
 	20%{opacity: 0;}
 	100%{opacity: 1;}
 	}
+
+	@keyframes fade-in-a-bit{
+
+		0%{opacity: 0;}
+		20%{opacity: 0;}
+		100%{opacity: 0.3;}
+		}
+
+		#prototype{
+
+			position:fixed;
+			z-index: 850;
+			top: 20%;
+			left:30%;
+		}

@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Link
+  } from "react-router-dom";
 import Sparkles from 'react-sparkle'
-
+import ding3 from './audio/ding3.wav'
 import SettingsMenu from './components/settings-menu/settings-menu'
 import glass from './images/big-glass.png';
+import dirpad from './images/dirpad.png';
 import lens from './images/ciorcal-glass.png';
 import geagaFace from './images/geagaFace.png';
 import avatar6 from './images/players/diamhraí0.gif';
@@ -15,7 +22,7 @@ import avatar7 from './images/players/seanchaí0.png';
 import avatar1 from './images/players/spéirbhean0.gif';
 import emerald from './images/misc_crystal_new.png'
 import pearl from './images/stone-soup/misc_crystal_old.png';
-import avatar9 from './images/players/bodach0.gif';
+import avatar9 from './images/stone-soup/ironheart_preserver.png';
 import Rings0 from './components/Rings/Rings0'
 import avatar10 from './images/prompt-0.png';
 import avatar11 from './images/prompt-0.png';
@@ -26,6 +33,7 @@ import avatar15 from './images/prompt-0.png';
 import bodhran0 from './audio/bodhran0.wav';
 import jump from './audio/jump-up.wav';
 import chat from './audio/457279__moogsy__lo-fi-sparkle.wav';
+import chatShort from './audio/chatShort.wav';
 import theme0 from './audio/theme0.wav';
 import spark0 from './audio/sparkle-a.wav';
 import spark1 from './audio/sparkle-b.wav';
@@ -35,7 +43,8 @@ import spark4 from './audio/sparkle-e.wav';
 import Easca from './components/easca/easca.jsx'	
 import MenuClick from './audio/171697__nenadsimic__menu-selection-click.wav';
 import Select from './audio/462092__matrixxx__sparkling-star-04.wav';
-import jam from './audio/51241__rutgermuller__8-bit-gabber-piece.wav'
+import jam from './audio/Leon Lishner and Friends - Johnny Has Gone For A Soldier (England, on Irish Tune Siúil a Rún).mp3'
+// import jam from './audio/51241__rutgermuller__8-bit-gabber-piece.wav'
 import useScreenOrientation from 'react-hook-screen-orientation';
 
 import fairyRing from './images/question-backgrounds/fairy-ring0.gif';
@@ -53,9 +62,12 @@ import {
 	CircularProgress,
 	CircularThumb
 } from 'react-circular-input'
-import sky from './images/blinding-light-county.jpg';
+import sky from './images/long-sky.png';
 import boxes from './images/boxes.gif';
 import bg3 from './images/blinding-light-county.jpg';
+import phone0 from './images/phone-0.jpg';
+import phone1 from './images/phone-1.png';
+import phone2 from './images/phone-2.png';
 import blackripple from './images/blackripple.gif'
 import black from './images/black.png'
 import drone from "./audio/drone.wav"
@@ -74,6 +86,7 @@ import GamePad from './components/game-pad/game-pad.jsx';
 import AandB from './components/silken/silken.jsx';
 import Shadowhill from './images/shadow-hill.png';
 import distantFort from './images/distantFort.png';
+import rave from './images/color-square.gif'
 
 
 const ComponentWithScreenOrientation = () => {
@@ -84,7 +97,7 @@ const ComponentWithScreenOrientation = () => {
 	)
 }
 let heroNames = ['','a Níamh', 'a Ḋubhghlas', 'a Oisín', 'a mháistir', 'a rógaire', 'a Thaoiseach', 'Fionn', 'a chara', 'a Mhurúch'];
-let heroNamesEng = ['','o Níamh', 'Douglas', 'o Oisín','o master', 'you rogue','o Chieftain','Fionn','o friend','o Sea Maid'];
+let heroNamesEng = ['','o Níamh', 'Douglas', 'o Oisín','o master', 'you rogue','o Chieftain','Fionn','o friend','brave'];
 export default function App() {
 	//for rotary dial values:
 	
@@ -104,7 +117,7 @@ export default function App() {
 	const [showScore, setShowScore] = useState(false);
 	const [showGlass, setShowGlass] = useState(0);
 	const [isOn, toggleIsOn] = useToggle();
-	const [showSettings, setSettings] = useState(0);
+	const [showSettings, setSettings] = useState(1);
 	let hints = [``,
 		``, `It is you!`, ``, ``,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[gotten]+`, you’ll see fine fun.`,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[localStorage.getItem('portrait')]+`, you’ll see fine fun.`,``,``,``,]
 	let hintsAnswersA = [``,``,``,``,``,``,``,``];
@@ -198,10 +211,10 @@ export default function App() {
 		{
 			questionText: '',
 			answerOptions: [
-				{ answerText: 'Clé', isCorrect: false },
-				{ answerText: 'Deas', isCorrect: false },
-				{ answerText: 'Soir', isCorrect: false },
-				{ answerText: 'Síos', isCorrect: true },
+				// { answerText: 'Clé', isCorrect: false },
+				// { answerText: 'Deas', isCorrect: false },
+				// { answerText: 'Soir', isCorrect: false },
+				// { answerText: 'Síos', isCorrect: true },
 			],
 		},
 		{
@@ -247,16 +260,16 @@ const[score, setScore] = useState(0)
 	}
 
 
-	// const handleMenuButtonClick = (showSettings) => {
-	// 	if (showSettings === 0) {
-	// 		setSettings(1);
-	// 		console.log("hello" + {showGlass});
-	// 	}
-	// 	else {
-	// 		setSettings(0);
-	// 		console.log("hello" + showGlass);
-	// 	}
-	// }
+	const handleMenuButtonClick = (showSettings) => {
+		if (showSettings === 0) {
+			setSettings(1);
+			console.log("hello" + {showGlass});
+		}
+		else {
+			setSettings(0);
+			console.log("hello" + showGlass);
+		}
+	}
 	const runEndPart1 = () => { 
 		return (
 	
@@ -290,25 +303,30 @@ const[score, setScore] = useState(0)
 		} else { setShowScore(true)}
 	}, 100)
 	}
-	const handleAnswerButtonClick = (isCorrect, storyPath) => { 
+	const handleAnswerButtonClick = (isCorrect, storyPath) => {
 		setIsFadedOut(false)
 		setTimeout(function () {
-		setIsFadedOut(true)
+			setIsFadedOut(true)
 			
-		if (isCorrect) { 
-		setScore(score+1)		}
+			if (isCorrect) {
+				setScore(score + 1)
+			}
 
-		const nextQuestion = currentQuestion + 1;
-		setCurrentQuestion(nextQuestion);
-		if (nextQuestion < questions.length) {
+			const nextQuestion = currentQuestion + 1;
 			setCurrentQuestion(nextQuestion);
+			if (nextQuestion < questions.length) {
+				setCurrentQuestion(nextQuestion);
 
 			
-		} else { setShowScore(true)}
+			} else { setShowScore(true) }
 		}, 500)
 		console.log("currentQuestion" + currentQuestion)
 		console.log("value:" + value)
-		
+		return (
+
+			<ReactAudioPlayer src= {ding3}  autoPlay />
+			
+		)
 	}
 
 	const buttonMashClick= (isCorrect, someVal) => { 
@@ -381,9 +399,10 @@ const[score, setScore] = useState(0)
 		`The Vampire Chieftain`,
 		`Legendary warrior, a seer and a poet`,
 		`A "pooka," a fairy, a sprite, a hobgoblin`,
-		`The Sea Maid`,
+		`A foreigner, an adventurer`,
 		``
 	]
+
 	
 	let choiceRing = [
 		`		`,
@@ -395,17 +414,20 @@ const[score, setScore] = useState(0)
 		`Abhartach`,
 		`Fionn mac Cumhail`,
 		`An Púca`,
-		`An Murúch`,
-		``
+		`Eachtrannach`
+		
 		
 	]
 
-	
+let	dirpadHandler = () => { 
+	alert("Up to jump after Thomas; down left or right to react-route to overworld map, somewere near Dunashee.");
+	}
 
 	return (
 		<div className='app' >
 		<Greeting isRaining={ currentQuestion >=13?true:false} />
-		<ReactAudioPlayer src={value*10 === 0 ? theme0: null} autoPlay />
+		
+			<ReactAudioPlayer src={currentQuestion === 0 ? theme0 : null} autoPlay />
 
 			<ReactAudioPlayer src={value*10 === 1 ? spark0: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 2 ? spark1: null} autoPlay />
@@ -422,18 +444,19 @@ const[score, setScore] = useState(0)
 			<ReactAudioPlayer src={isOn === false ? tinkle : null} autoPlay />
 			<ReactAudioPlayer src={isOn === true ? tinkle1: null} autoPlay />
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="black bg." />		
-			<img id="sky" src={sky} className="question-img" alt="the sky" />		
+			{currentQuestion >= 1 ? <img id="sky" src={sky} className="question-img" alt="the sky" /> : null}		
 			
 			<img id="stars" src={stars} className={currentQuestion >= 3 ? "question-img" : "hidden"} alt="wheeling starfield" />		
 			<img src={distantFort} className="index-distant-fort" alt="distant fort on peninsula " />
 			
 			<img src={distantFortShadow} className={currentQuestion < 1 ? "index-distant-fort" : "index-distant-fort slow-fade"} alt="distant fort on peninsula " />
 			<img src={Fields} className={currentQuestion===9?"lower-fields":"hill-fields"} alt="distant fort on peninsula " />
-
+			<ReactAudioPlayer src={currentQuestion === 9? jam : null} autoPlay />
+{}
 			{currentQuestion === 9 ? () => {setTimeout(() => {
 				
 			runOnName(1000)}, 1000); }:null}
-			<img src={ShadowFields} className={currentQuestion < 1 ? "index-shadow-fields" : "index-shadow-fields slow-fade"} alt="distant fort on peninsula " />
+			 <img src={ShadowFields} className={currentQuestion < 1 ? "index-shadow-fields" : "index-shadow-fields slow-fade"} alt="distant fort on peninsula " />
 			{/* <img src={ hill} className="hill"alt="rainy hill shadow-overlay " /> */}
 
 			{/* <img src={ Shadowhill}  className={currentQuestion < 1 ? "index-shadow-hill" : "index-shadow-hill slow-fade"}alt="rainy hill shadow-overlay " /> */}
@@ -444,7 +467,7 @@ const[score, setScore] = useState(0)
 
 		<img id="question-img"  className = 	
 			{currentQuestion >= 101 ?  		"question-img":"hidden"  } src={hill} alt="A rainy hilltop loose circle of stones" />
-			<img id="question-img" src={bg3} className={currentQuestion >= 8 ? "question-img" : "hidden"} alt="must have alt" />
+			{/* <img id="question-img" src={bg3} className={currentQuestion >= 8 ? "question-img" : "hidden"} alt="must have alt" /> */}
 		 
 			
 			{/* HINT: replace "false" with logic to display the
@@ -467,7 +490,7 @@ const[score, setScore] = useState(0)
 								
 							>{answerOption.answerText}</button>))}
 					</div>
-
+					<ReactAudioPlayer src={currentQuestion === 8 ? chatShort: null} autoPlay />
 				</>
 			)}
 
@@ -490,7 +513,8 @@ const[score, setScore] = useState(0)
 			{currentQuestion === 7? < Silken /> : null}
 			{currentQuestion === 8? < Silken currentQuestion={currentQuestion} /> : null}
 			{currentQuestion === 9? < Silken currentQuestion={currentQuestion} /> : null}
-			{currentQuestion === 10? < Silken currentQuestion={currentQuestion} /> : null}
+			{currentQuestion === 10 ? < Silken currentQuestion={currentQuestion} /> : null}
+			
 		
 			
 
@@ -522,27 +546,25 @@ const[score, setScore] = useState(0)
         justifyContent: 'center',
         height: '100vh',
       }} >
+					<img src={avatar1} className={value * 10 === 1 ? 'avatar' : 'hidden'} id={currentQuestion ===8? "leap-me":null } alt="a portrait of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null} />		
 			
-				<img src={avatar1} className={value * 10 === 1 ? 'avatar' : 'hidden'} id={currentQuestion ===8? "leap-me":null } alt="a portrait of an rpg style playable character" />		
-			
-			<img  src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } id={currentQuestion ===10? "leap-me":null } alt="a portrait of an rpg style playable character" />		
-			<img src={avatar3} id={currentQuestion ===10? "leap-me":null } className={value * 10 === 3 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />
-			<img  src={avatar4}id={currentQuestion ===10? "leap-me":null } className={value *10=== 4 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
-			<img  src={avatar5}id={currentQuestion ===10? "leap-me":null } className={value *10=== 5 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
-			<img  src={avatar6}id={currentQuestion ===10? "leap-me":null } className={value *10=== 6 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
-			<img  src={avatar7}id={currentQuestion ===10? "leap-me":null } className={value *10=== 7 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
-			<img  src={avatar8}id={currentQuestion ===10? "leap-me":null } className={value *10=== 8 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
-				<img src={avatar9}id={currentQuestion ===10? "leap-me":"hidden" } className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />
+			<img  src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } id={currentQuestion ===10? "leap-me":null } alt="a portrait of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>		
+			<img src={avatar3} id={currentQuestion ===10? "leap-me":null } className={value * 10 === 3 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
+			<img  src={avatar4}id={currentQuestion ===10? "leap-me":null } className={value *10=== 4 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
+			<img  src={avatar5}id={currentQuestion ===10? "leap-me":null } className={value *10=== 5 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
+			<img  src={avatar6}id={currentQuestion ===10? "leap-me":null } className={value *10=== 6 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
+			<img  src={avatar7}id={currentQuestion ===10? "leap-me":null } className={value *10=== 7 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
+			<img  src={avatar8}id={currentQuestion ===10? "leap-me":null } className={value *10=== 8 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character"style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null} />
+				<img src={avatar9}id={currentQuestion ===10? "leap-me":"hidden" } className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character"style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null} />
 			</div>
 			
-
 
 
 
 			{currentQuestion === 0 ? < GamePad handleAnswerButtonClick={runOnStart} /> : null}
 
 { currentQuestion === 2 ? runOnName(10):null}
-{ currentQuestion === 3 ? runOnName(2000):null}
+{ currentQuestion === 3 ? runOnName(3500):null}
 { currentQuestion === 4 ? runOnName(2000):null}
 { currentQuestion === 5 ? runOnName(2000):null}
 			
@@ -600,8 +622,13 @@ const[score, setScore] = useState(0)
 				<p className="mob-text">don fónpóca i dtús báire. (brú f12)
 				</p>
 			
-				<img id="mob-effect"src={blackripple} alt="" />
 			</div>
-			</div>
+				<img id="mob-effect" className="phonebg2"src={phone1} alt="" />
+				{/* <img id="mob-effect1" className="phonebg1"src={phone1} alt="" />
+				<img id="mob-effect2" className="phonebg"src={phone2} alt="" /> */}
+
+			{currentQuestion === 9 ? <img src={dirpad} onClick={ dirpadHandler} className="dirpad"alt="" />:null}
+			{ currentQuestion===9?<img src={rave} className="rave"alt="flashing lights in the castle window." />:null}
+		</div>
 	);
 }

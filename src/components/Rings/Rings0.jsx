@@ -3,12 +3,20 @@ import './rings0.css';
 import lens from '../../images/ciorcal-glass.png';
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
+import ReactAudioPlayer from 'react-audio-player';
+import spark0 from '../../audio/ding0.wav';
+import spark1 from '../../audio/ding1.wav';
+import spark2 from '../../audio/ding2.wav';
+import spark3 from '../../audio/ding0.wav';
+import spark4 from '../../audio/ding2.wav';
+
 import {
 	CircularInput,
 	CircularTrack,
 	CircularProgress,
 	CircularThumb
 } from 'react-circular-input'
+import { ThemeProvider } from 'react-bootstrap';
 let showTheGlass = true; 
 export default function Rings0(props) {
 
@@ -52,26 +60,28 @@ export default function Rings0(props) {
 	
 	let gottenRings0 = 0;
 	let Ring2AnsEng = ['',
-		'I’ll go, certainly',
 		'No thank you',
-		'I will, on a wage', 'Not till I get a drink', 'I’ll give you the price, if you\'re joking!',
+		'I will, on a wage',
+		'I’ll go, certainly',
+		'Not till I get a drink',
+		'What is this',
+		'I\'ll see you there later',
 		'Alchemical Symbol for Hour',
 		'choice9',
-		'I feel the smell of a melodious lying Irishman under my sod of country.',
 		'⚔',
 	]
 
 
 	
 	let Ring2Ans = ['',
+	'Ní go raibh maith agat',
+	'Rachfaidh, ar thuarastal',
 		'Rachfaidh cinnte',
-		'Ní go raibh maith agat',
-		'Rachfaidh, ar thuarastal',
 		'Ní go bhfaighidh mé deoch',
-		'Béarfaidh mé luach, más ag mhagaidh atá tú”',
+		'Cad é seo',
+		'Feicfaidh mé ann ar ball thú',
 		'🝮',
 		'rogha9',
-		'Mothaím boladh an Éireannaigh bhinn bhréagach faoi m’ḟóidín dúṫaiġ',
 		'⚔',
 	
 	]
@@ -93,7 +103,7 @@ export default function Rings0(props) {
 		</CircularInput>
 		<img src={lens} id="lens" alt="a glass lens" />
 			
-		<p className='rings0' >{Ring2Ans[value * 10]}</p>
+		<p className='rings1' >{Ring2Ans[value * 10]}</p>
 
 
 			<h1>{ props.isOn}</h1>
@@ -105,6 +115,16 @@ export default function Rings0(props) {
 
 
 			<buton className="button-mash-ring-0" onClick={props.buttonMashClick}></buton>
+			<ReactAudioPlayer src={value*10 === 1 ? spark0: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 2 ? spark1: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 3 ? spark2: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 4 ? spark3: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 5 ? spark2: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 6 ? spark1: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 7 ? spark4: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 8 ? spark0: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 9 ? spark0: null} autoPlay />
+			
 			
 		</>)
 };
