@@ -1,12 +1,4 @@
-
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	Link,
-	useLocation
-} from "react-router-dom";
-
+import Overworld from '../../components/overworld/overworld';
 import React, { useState } from 'react';
 import Sparkles from 'react-sparkle'
 import ding3 from '../../audio/ding3.wav'
@@ -503,7 +495,7 @@ let	dirpadHandler = () => {
 			</div> */}
 			{/* { currentQuestion >= 9 ? <Geaga/>:null} */}
 
-			<button id={currentQuestion===7? "hidden":"toggle-glass-btn" } onClick={toggleIsOn}	><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
+			<button id={currentQuestion===7|| currentQuestion=== 0 ? "hidden":"toggle-glass-btn" } onClick={toggleIsOn}	><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 
 			{currentQuestion === 4 ? < EnterSilken /> : null}
 			{currentQuestion === 5 ? < Silken /> : null}
@@ -631,7 +623,8 @@ let	dirpadHandler = () => {
 				<img id="mob-effect2" className="phonebg"src={phone2} alt="" /> */}
 
 			{currentQuestion === 9 ? <img src={dirpad} onClick={ dirpadHandler} className="dirpad"alt="" />:null}
-			{ currentQuestion===9?<img src={rave} className="rave"alt="flashing lights in the castle window." />:null}
+			{currentQuestion === 9 ? <img src={rave} className="rave" alt="flashing lights in the castle window." /> : null}
+			
 		</div>
 	);
 }
