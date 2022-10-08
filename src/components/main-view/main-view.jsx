@@ -413,13 +413,14 @@ const[score, setScore] = useState(0)
 		
 		
 	]
-
-let	dirpadHandler = () => { 
-	alert("Up to jump after Thomas; down left or right to react-route to overworld map, somewere near Dunashee.");
+	let dirpadHandler = () => {
+		toggleShowOverworld(true)
 	}
-
-	return (
-		<div className='app' >
+	
+	const [showOverworld, toggleShowOverworld]= useState(false)
+	return (<>
+			{ showOverworld ===true? <Overworld/>:null}
+			{showOverworld===false? <div className='app' >
 		<Greeting isRaining={ currentQuestion >=13?true:false} />
 		
 			<ReactAudioPlayer src={currentQuestion === 0 ? theme0 : null} autoPlay />
@@ -625,6 +626,8 @@ let	dirpadHandler = () => {
 			{currentQuestion === 9 ? <img src={dirpad} onClick={ dirpadHandler} className="dirpad"alt="" />:null}
 			{currentQuestion === 9 ? <img src={rave} className="rave" alt="flashing lights in the castle window." /> : null}
 			
-		</div>
+		</div>:null}
+	</>
+	
 	);
 }

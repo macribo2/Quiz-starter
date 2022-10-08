@@ -3764,8 +3764,8 @@ export default class Overworld extends React.Component {
 
 
         return (
-            <>
-                <div className="stage-container" id="kungfu">
+            <div id="kungfu">
+                <div className="stage-container" >
                     <div className="countyMap">
 
 
@@ -3884,7 +3884,7 @@ export default class Overworld extends React.Component {
 
 
                 </div>
-            </>
+            </div>
 
         )
     }

@@ -43,7 +43,6 @@
     left: 42%;
     transform: scale(0.8);
 }
-/* #btn-a{display:none} */
 #btn-text{
 	pointer-events:none
 }

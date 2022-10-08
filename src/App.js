@@ -1,39 +1,18 @@
 import React from 'react'
 import MainView from './components/main-view/main-view';
-import Overworld from './components/overworld/overworld';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
+function App() { 
 
-
-
-const App = () => {
 	return (
-	  <Router>
-		  <Routes>
-			<Route exact path="/" element={<MainView/>}/>
-			<Route exact path="/overworld" element={<Overworld/>}/>
-		  </Routes>
-	  </Router>
-	);
-  }
-  
-  export default App;
+		<div className="App">
 
-// function App() { 
 
-// 	return (
+		<MainView />
 
+		</div>
 		
-// 		<div className="App">
+	)
+}
 
-// 		<Overworld/>
-
-// 		<MainView />
-
-// 		</div>
-		
-// 	)
-// }
-
-// export default App;
+export default App;

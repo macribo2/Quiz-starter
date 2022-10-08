@@ -80,7 +80,7 @@ width: 740px;
   width: auto;
   top: 0%;
   left: 0%;
-  z-index: -1;
+  z-index: 0;
   opacity: 0;
   animation: fade-in 5s linear forwards, scroll-sky 470s infinite linear;
 
@@ -984,4 +984,30 @@ transform: scale(0.35);
       height: 100%;
       width: 100%;
       position: fixed;
+    }
+
+
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .menu ul {
+      background-color: #222;
+      margin: 0;
+    }
+    
+    .menu li {
+      font-family: sans-serif;
+      font-size: 1.2em;
+      line-height: 40px;
+      height: 40px;
+      border-bottom: 1px solid #888;
+    }
+     
+    .menu a {
+      text-decoration: none;
+      color: #fff;
+      display: block;
     }
