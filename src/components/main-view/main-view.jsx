@@ -17,7 +17,7 @@ import avatar7 from '../../images/players/seanchaí0.png';
 import avatar1 from '../../images/players/spéirbhean0.gif';
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
-import avatar9 from '../../images/stone-soup/ironheart_preserver.png';
+import avatar9 from '../../images/stone-soup/poet.png';
 import Rings0 from '../../components/Rings/Rings0'
 import avatar10 from '../../images/prompt-0.png';
 import avatar11 from '../../images/prompt-0.png';
@@ -61,7 +61,7 @@ import sky from '../../images/long-sky.png';
 import boxes from '../../images/boxes.gif';
 import bg3 from '../../images/blinding-light-county.jpg';
 import phone0 from '../../images/phone-0.jpg';
-import phone1 from '../../images/phone-1.png';
+import phone1 from '../../images/phone-0.png';
 import phone2 from '../../images/phone-2.png';
 import blackripple from '../../images/blackripple.gif'
 import black from '../../images/black.png'
@@ -394,7 +394,7 @@ const[score, setScore] = useState(0)
 		`The Vampire Chieftain`,
 		`Legendary warrior, a seer and a poet`,
 		`A "pooka," a fairy, a sprite, a hobgoblin`,
-		`A foreigner, an adventurer`,
+		`Fedelm the poet`,
 		``
 	]
 
@@ -409,7 +409,7 @@ const[score, setScore] = useState(0)
 		`Abhartach`,
 		`Fionn mac Cumhail`,
 		`An Púca`,
-		`Eachtrannach`
+		`Fedelm an File`
 		
 		
 	]
@@ -419,11 +419,12 @@ const[score, setScore] = useState(0)
 	
 	const [showOverworld, toggleShowOverworld]= useState(false)
 	return (<>
-			{ showOverworld ===true? <Overworld/>:null}
+			{ showOverworld ===true? <Overworld tallyX={0} avatar='null' whereAmI="westmeath" />:null}
 			{showOverworld===false? <div className='app' >
 		<Greeting isRaining={ currentQuestion >=13?true:false} />
 		
 			<ReactAudioPlayer src={currentQuestion === 0 ? theme0 : null} autoPlay />
+			
 
 			<ReactAudioPlayer src={value*10 === 1 ? spark0: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 2 ? spark1: null} autoPlay />

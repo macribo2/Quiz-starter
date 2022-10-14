@@ -114,7 +114,7 @@ export default function Rings0(props) {
 			
 
 
-			<buton className="button-mash-ring-0" onClick={props.buttonMashClick}></buton>
+			<button className="button-mash-ring-0" onClick={props.buttonMashClick}></button>
 			<ReactAudioPlayer src={value*10 === 1 ? spark0: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 2 ? spark1: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 3 ? spark2: null} autoPlay />

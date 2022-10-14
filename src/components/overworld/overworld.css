@@ -1,13 +1,24 @@
 #kungfu{
-	border: 5px solid orange;
-	position:fixed;
-	z-index: 99999 !important;
+	/* border: 5px solid orange; */
+	/* position:fixed; */
+	/* z-index: 99999 !important; */
+}
+
+#mob-effect,
+#mob-text,
+#suggest-mobile {
+
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: fixed;
+  z-index: -9;
 }
 
 
-
 .sea {
-	/* background-image: url('../../img/tonnta3.gif'); */
+	background-image: url('../../images/tonnta3.gif');
   
 	/* background-size: contain; */
 	top: 0;
@@ -64,24 +75,26 @@
 	position: fixed;
 	/* padding-top: 5%; */
 	z-index: -3;
-	top: -2%;
+	top: 0%;
+		/* z-index: 30; */
+		left: 6%;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		/* background-image: url('../../images/bgAnim5.gif'); */
+		background-size: contain;
+		/* border-size: 2px solid orange; */
   }
   
   
-  .stage-container {
-  
-	/* z-index: 30; */
-	left: 6%;
-	width: 100%;
-	height: 100%;
-	/* background-image: url('../../img/bgAnim6.gif'); */
-	background-size: contain;
-	justify-content: center;
-	opacity: 0.6;
-	/* border-size: 2px solid orange; */
-  }
-  
-  .under-stage-left,
+.directional-pad{
+	left: 0%;
+    position: fixed;
+    top: 53%;
+    opacity: 1;
+    transform: scale(0.8);
+}
+  .underx-stage-left,
   .under-stage-right {
 	/* border:4px solid orange; */
 	z-index: 35;
@@ -96,15 +109,26 @@
 	background-size: contain;
 	right: 0;
 	background-color:black;
-	/* background-image: url('../../img/Dealbh_bg_dark.png'); */
+	/* background-image: url('../../images/overworld/shamrock.png'); */
   }
   
-  .under-stage-left {
-	width: 25%;
-	display: grid;
-	justify-content: center;
-	
-	opacity: 0.7;
+  .underx-stage-left {
+	width: 26%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    top: 0;
+    left: 0%;
+	opacity: 1;
+  }
+  
+  .under-stage-right {
+    width: 26%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    top: 0;
+    left: 66%;
   }
   
   
@@ -128,7 +152,7 @@
 			  background-position-y: bottom;
 	  }
 	   */
-  .under-stage-right {}
+ 
   
   #stage {
 	/* border:4px solid red; */
@@ -138,9 +162,9 @@
 	position: fixed;
 	width: 400px;
 	height: 400px;
-	/* background-image: url("../../img/countyMaps/donegal.png"); */
+	/* background-image: url("../../images/counties/leinster/westmeath.png"); */
 	/* border: 3px solid green; */
-	;
+	border-radius: 50%;
 	z-index: 32;
 	transform: scale(0.8);
   }
@@ -185,7 +209,7 @@
   
 	100% {
 	  transform: scale(1.1);
-	  margin-top:-5%  !important;
+	  margin-top:-5% ;
 	}
   }
   
@@ -320,9 +344,9 @@
 	}
   
 	100% {
-	  margin-left: -70%;
+	  margin-left: -50%;
 	  margin-top: -12%;
-	  transform: scale(2.2)
+	  transform: scale(1.4)
 	}
   
   }
@@ -641,7 +665,6 @@
   }
   
   #north {
-  opacity:0.5;
 
 	background-color: rgb(83, 60, 90);
 	border-top: 3px solid rgba(170, 176, 177, 0.5);
@@ -664,7 +687,7 @@
   
   #west {
 	border: 5px solid blueviolet;
-	background-color: blueviolet;
+	/* background-color: blueviolet; */
   
 	height: 50px;
 	width: 50px;
@@ -693,7 +716,7 @@
   }
   
   .jq-grid-item {
-	border: 3px solid rgba(0, 0, 0, 0.8);
+	/* border: 3px solid rgba(0, 0, 0, 0.8); */
 	font-size: 30px;
 	text-align: center;
 	border: 0px;
@@ -742,7 +765,7 @@
   }
   
   #origin {
-	/* background-image: url('../../img/middle.png'); */
+	background-image: url('../../images/middle.png');
 	outline: solid 1px rgba(83, 60, 90);
 	border: solid 3px rgba(83, 60, 90);
 	background-size: contain;
@@ -776,7 +799,8 @@
 	background-size: cover;
 	/* border:4px solid rgba(18, 180, 255, 0.8); */
 	background-repeat: no-repeat;
-	display: none;
+	display: block;
+
 	margin-left:-15%;
 	margin-top:-5%;
 	transform: scale(1.4);
@@ -786,7 +810,7 @@
   
   
   #btn-middle-baile {
-	/* background-image: url('../../img/middle.png'); */
+	background-image: url('../../images/middle.png');
 	border: solid 3px rgba(83, 60, 90);
 	background-size: contain;
 	height: 50px;
@@ -822,14 +846,14 @@
   }
   
   #loc {
-		color: rgb(255, 247, 0);
-		top: 81%;
+		color: rgb(252, 252, 252);
+		top: 1%;
 		width: 100%;
 		text-align: left;
 		position: fixed;
 		z-index: 5000;
 		font-family: urchlo;
-		left: 37%;
+		left: 70%;
 		transform:rotate(360)
 	  
 	 
@@ -887,7 +911,7 @@
 	max-width: 100%;
 	/* z-index: 26 !important; */
 	overflow: hidden;
-	/* background-image:url('../../img/deetsFrame.png'); */
+	background-image:url('../../images/overworld/deetsFrame.png');
 	background-size: contain;
 	/* border:4px solid blue; */
 	width: 100%;
@@ -907,7 +931,7 @@
 	position: fixed;
 	/* z-index: 26 !important; */
 	overflow: hidden;
-	/* background-image: url('../../img/geaga/geaga-1.png'); */
+	background-image: url('../../images/geaga0.png');
 	background-size: cover;
 	/* border:4px solid blue; */
 	width: 100%;
@@ -986,3 +1010,20 @@
 	transform: scale(0.5);
   
   }
+
+
+  @media only screen and (min-width: 1024px) {
+	#mob-effect,
+	#mob-effect1,#mob-effect2{
+  
+	  top: 0%;
+	  left: 0;
+	  height: 100%;
+	  width: 100%;
+	  display: block;
+	  position: fixed;
+  
+	  z-index: 99450;
+  
+  
+	}}

@@ -28,7 +28,7 @@ return <>
 					<div className="settings-button" id="sb2"  onClick={() => props.handleInputSelect('touchscreen')}><img src={settingsBtnTouchscreen} onClick={() => props.handleInputSelect('touchscreen')}/></div>
 	</div>
 	
-	<div id="prototype"><h2>Prototype</h2> <p></p><p></p><br/><br/><br/><br/><p>best viewed on samsung s8+ or emulated with the chrome-browser dev-tools (press f12 for chrome dev tools) </p></div>
+	<div id="prototype"><h2></h2> <p></p><p></p><br/><br/><br/><br/></div>
 					</>	
 
 }

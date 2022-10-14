@@ -6,10 +6,11 @@ import { BtnSelect } from '../ui/btn-select'
 import { BtnStart } from '../ui/btn-start'
 import promptVid from '../../vid/stars.mp4'
 import ciaroga from '../../images/players/rógaire0.png'
+import phone1 from '../../images/phone-0.png';
 
 
 import carlow from "../../images/counties/leinster/carlow.png"
-import dublin from "../../images/counties/leinster/dublin.png"
+import dublin from "../../images/counties/leinster/icons/dublin.png"
 import kildare from "../../images/counties/leinster/kildare.png"
 import kilkenny from "../../images/counties/leinster/kilkenny.png"
 
@@ -32,16 +33,16 @@ import { BtnD } from './../ui/btn-d';
 import { BtnM } from './../ui/btn-m';
 // import { Register } from './../register/register'
 import $ from 'jquery';
-import empty from "../../images/players/rógaire0.png"
-import shamrocks from "../../images/players/rógaire0.png"
+import empty from "../../images/empty.png"
+import shamrocks from "../../images/overworld/shamrock.png"
 //empty image for geaga beceause they're just handlers for player triggering geaga event. Geaga image now in geagaSprite
-import blocked from '../../images/players/rógaire0.png'
+import blocked from '../../images/empty.png'
 import sea0 from '../../images/tonnta1.gif'
 import sea1 from '../../images/tonnta2.gif'
 import sea2 from '../../images/tonnta3.gif'
 import sea3 from '../../images/tonnta1.gif'
 import { Col, Row } from 'react-bootstrap'
-import town0 from '../../images/players/rógaire0.png'
+import town0 from '../../images/emerald.png'
 import CountyDetails from './countyDetails.json';
 import geagaSprite from "../../images/players/rógaire0.png"
 import rogue from "../../images/players/rógaire0.png"
@@ -53,7 +54,7 @@ import sage from "../../images/players/rógaire0.png"
 import occultist from "../../images/players/rógaire0.png"
 import fenian from "../../images/players/rógaire0.png"
 import mobile from '../../images/players/rógaire0.png'
-let whereAmI = 'null';
+let whereAmI = 'Dublin';
 let whereAmIHolder = 'null';
 let avatar = '';
 
@@ -78,7 +79,8 @@ export default class Overworld extends React.Component {
             registerMenu: false,
             mobile: false,
             mobileHor: true,
-            whereAmI: localStorage.getItem('whereAmI')
+            whereAmI: 'Kildare'
+            // whereAmI: localStorage.getItem('whereAmI')
         }
 
     }
@@ -92,14 +94,14 @@ export default class Overworld extends React.Component {
     }
     jQueryCode = () => {
         let playerOverLocation = false;
-        localStorage.setItem('whereAmI', whereAmI);
+        localStorage.setItem('whereAmI', 'Kerry');
 
 
         $.getJSON('mapData.json', function (county) {
 
             $.each(county, function (key, val) {
-                console.log("val " + val.co)
-                console.log("val.county " + val.county)
+                // console.log("val " + val.co)
+                // console.log("val.county " + val.county)
 
                 if (val.co === imreoir.whereAmI) {
                     $('#output').html(val.county)
@@ -111,7 +113,6 @@ export default class Overworld extends React.Component {
                     $('.countyMap').css('left', val.left)
                     $('.countyMap').css('top', val.top)
                     $('.countyMap').css('background-image', val.countyBG)
-                    $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 10s forwards ease-in');
                     $('.countyMap').fadeIn();
                     $('.countyMap').css('background-image', town0)
 
@@ -126,11 +127,11 @@ export default class Overworld extends React.Component {
                         let whichSea = Math.floor(Math.random() * 3)
 
                         if (localStorage.whereAmI === 'antrim' || localStorage.whereAmI === 'down' || localStorage.whereAmI === 'louth' || localStorage.whereAmI === 'dublin' || localStorage.whereAmI === 'wicklow' || localStorage.whereAmI === 'wexford') {
-                            $('.sea').css('background-image', { sea0 })
+                            $('.sea').css('background-image',  sea0 )
                         } else {
-                            if (whichSea === 2) { $('.sea').css('background-image', { sea1 }) }
-                            if (whichSea === 1) { $('.sea').css('background-image', { sea2 }) }
-                            if (whichSea === 3) { $('.sea').css('background-image', { sea3 }) }
+                            if (whichSea === 2) { $('.sea').css('background-image',  sea1) }
+                            if (whichSea === 1) { $('.sea').css('background-image',  sea2) }
+                            if (whichSea === 3) { $('.sea').css('background-image',  sea3) }
                         }
                         setTimeout(function () {
 
@@ -174,12 +175,21 @@ export default class Overworld extends React.Component {
         // let imreoirJSON = JSON.stringify(imreoir);
 
         function setMap() {
-            console.log(gameObjects)
+            console.log(gameObjects+"uuuuuuuuuuu")
             $('.countyMap').css('left', imreoir.whereAmI.left)
             $('.countyMap').css('top', imreoir.whereAmI.top)
-            $('.countyMap').css('background-image', "url('../../img/countyMaps/" + imreoir.whereAmI + ".png")
+            $('.countyMap').css('background-image', "url('../../images/counties/" + imreoir.whereAmI + ".png")
 
-            $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 0s forwards ease-in');
+            $('#stage').fadeOut()
+            setTimeout(function () { 
+            $('#stage').fadeIn()
+
+            },2000)
+            setTimeout(function () { 
+            
+                $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
+            }, 500)
+
 
 
 
@@ -2888,7 +2898,6 @@ export default class Overworld extends React.Component {
                         $('.countyMap').css('top', val.top)
                         $('.countyMap').css('background-image', val.countyBG)
                         console.log('imreoir where am I?' + imreoir.whereAmI)
-                        $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 0s forwards ease-in');
 
 
                         console.log("line 123" + val.co)
@@ -2916,15 +2925,16 @@ export default class Overworld extends React.Component {
                 console.log("val " + val.co)
                 console.log("val.county " + val.county)
                 if (val.co === imreoir.whereAmI) {
-                    console.log("line 112:" + val.county);
+                    console.log("line 112!!!!!:" + val.county);
                     map = JSON.parse(val.mapData);
-                    console.log(val.mapData);
+                    console.log("OOOOOOO"+val.mapData);
+                    console.log("OOOOOOO"+val.mapData);
 
                     $('.countyMap').css('left', val.left)
                     $('.countyMap').css('top', val.top)
                     $('.countyMap').css('background-image', val.countyBG)
                     console.log('imreoir where am I?' + imreoir.whereAmI)
-                    $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 0s forwards ease-in');
+                    // $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 2s forwards ease-in');
 
 
                     console.log("line 123" + val.co)
@@ -3645,8 +3655,8 @@ export default class Overworld extends React.Component {
 
             $.getJSON('mapData.json', function (county) {
                 $.each(county, function (key, val) {
-                    console.log("val ************" + val.co)
-                    console.log("val.county " + val.county)
+                    // console.log("val ************" + val.co)
+                    // console.log("val.county " + val.county)
 
                     if (val.co === imreoir.whereAmI) {
                         $('#output').html(val.county)
@@ -3660,7 +3670,6 @@ export default class Overworld extends React.Component {
                         $('.countyMap').css('background-image', val.countyBG)
                         console.log('imreoir where am I?' + imreoir.whereAmI)
 
-                        $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 0s forwards ease-in');
 
 
                         console.log("line 123" + val.co)
@@ -3669,6 +3678,7 @@ export default class Overworld extends React.Component {
                     }
                     else {
                         console.log("does" + imreoir.whereAmI + " match " + "error loading map.");
+
                         console.log(whereAmI + 'whereAmI');
 
                     }
@@ -3678,6 +3688,7 @@ export default class Overworld extends React.Component {
 
 
             })
+            // localStorage.setItem("whereAmI","Dublin")
             imreoir.whereAmI = localStorage.getItem("whereAmI");
 
             gameObjects[playerRow][playerColumn] = 0;
@@ -3764,8 +3775,8 @@ export default class Overworld extends React.Component {
 
 
         return (
-            <div id="kungfu">
-                <div className="stage-container" >
+            <div >
+                <div className="stage-container" id="kungfu">
                     <div className="countyMap">
 
 
@@ -3775,63 +3786,23 @@ export default class Overworld extends React.Component {
                     </div>
 
 
-                    <div id="geagaSprite"> <img src={geagaSprite} alt="The fairy tree is festooned with grinning skulls. A strange eye peers back at you." /></div>
-                    <div className="geaga">    </div>
-                    <div className="passage">    </div>
-                    {/* <div className="ferns canopy-left"></div> */}
                     {/* <div className="ferns canopy-right"></div> */}
                 </div>
 
-                <div className="a-and-b-btns">
-                    <BtnA onClick={() => {
-                        $('#emblem-img').attr('src', '../../img/counties/leinster/' + localStorage.getItem('whereAmI'))
-            alert(whereAmI);
-
-                    }} ></BtnA>
-
-                        <BtnB onClick={() => { alert("B") }} ></BtnB>
-                    </div>
 
 
 
 
 
-                <div className="under-stage-left">
-
-
-
-                    <div className="directional-pad">
-                        <div className='grid-container'>
-
-                            <div className="grid-item"></div>
-                            <div className="grid-item" id="north">
-                            </div>
-                            <div className="grid-item" ></div>
-                            <div className="grid-item" id="west">
-                            </div>
-                            <div className="grid-item" id="btn-m"><div id="btn-middle-baile" /></div>
-                            <div className="grid-item" id="east">
-                            </div>
-                            <div className="grid-item"></div>
-                            <div className="grid-item" id="south">
-                            </div>
-                            <div className="grid-item"></div>
-                        </div>
-                    </div>
-
-
-                    {/* <div className="sea"></div> */}
-
-
-
-                </div>
+               
+               
                 <div id="toolbar"></div>
                 <h2 id="loc" alt="holder for location names"></h2>
 
-                <div className="emblem">
+                {/* <div className="emblem">
                     {whereAmI==='carlow'? <img src={carlow} alt="county pixelart emblem." className="emblem-img" />: <img src={dublin} alt="county pixelart emblem." className="emblem-img" />}
                     <p id="output"></p>
-                </div>
+                </div> */}
 
                 <div className="ui">
 
@@ -3860,15 +3831,7 @@ export default class Overworld extends React.Component {
                     <img id="ciaroga" src={ciaroga} />
                 </div> : null
                 }
-                <div className="select-options">
-
-                    <button className="start-options-button" onTouchStart={this.conceptHandler}>concept</button>
-                    <button className="start-options-button" onTouchStart={() => { this.setState({ registerMenu: true }) }}>{this.props.engMode === true ? "register" : "cláraigh"}</button>
-
-                    {/* <button className="inventory-button select-options-button">Ar aire!</button>
-                        <button className="inventory-button select-options-button">éist</button>
-                        <button className="inventory-button select-options-button">fíricí</button> */}
-                </div>
+           
 
 
                 {/* registration resources */}
@@ -3876,14 +3839,46 @@ export default class Overworld extends React.Component {
                 {/* {this.state.registerMenu ? <Register /> : null} */}
 
 
-                <div className="select-and-start-btns-history">
-                    <BtnSelect onClick={this.toggleStartOptions} />
-                    <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
-
-                    </BtnStart>
+                <div className="underx-stage-left">
 
 
+
+<div className="directional-pad">
+    <div className='grid-container'>
+
+        <div className="grid-item"></div>
+        <div className="grid-item" id="north">
+        </div>
+        <div className="grid-item" ></div>
+        <div className="grid-item" id="west">
+        </div>
+        <div className="grid-item" id="btn-m"><div id="btn-middle-baile" /></div>
+        <div className="grid-item" id="east">
+        </div>
+        <div className="grid-item"></div>
+        <div className="grid-item" id="south">
+        </div>
+        <div className="grid-item"></div>
+    </div>
+</div>
+
+
+{/* <div className="sea"></div> */}
+
+
+
+</div>            
+
+<div className="under-stage-right">
                 </div>
+ 
+<BtnB onClick={() => {
+    $('#emblem-img').attr('src', '../../img/counties/leinster/' + localStorage.getItem('whereAmI'))
+{/* alert(whereAmI); */}
+
+}} ></BtnB>
+<img id="mob-effect" className="phonebg2"src={phone1} alt="" />
+
             </div>
 
         )

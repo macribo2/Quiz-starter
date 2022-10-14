@@ -3,7 +3,7 @@ import React from 'react';
 import './easca.css'
 import $ from 'jquery';
 import { Col, Row, Button ,BtnGroup } from 'react-bootstrap'
-import { Navigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 
 
 
@@ -17,7 +17,7 @@ export default class Easca extends React.Component {
     
         componentDidMount() {
             if (this.state.redirect) {
-                return <Navigate to={this.state.redirect} />
+                // return <Navigate to={this.state.redirect} />
               }
         
               const h1 = $('h1')
@@ -38,7 +38,7 @@ this.setState({redirect:'cd'})
 		return(
             <>
 
-            {this.state.redirect === 'cd'? <Navigate to={this.state.redirect} />:null}
+            {/* {this.state.redirect === 'cd'? <Navigate to={this.state.redirect} />:null} */}
           
 
 

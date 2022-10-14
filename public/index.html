@@ -26,29 +26,9 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>helm</title>
-    <script>
-      function absorbEvent_(event) {
-        var e = event || window.event;
-        e.preventDefault && e.preventDefault();
-        e.stopPropagation && e.stopPropagation();
-        e.cancelBubble = true;
-        e.returnValue = false;
-        return false;
-      }
-  
-      function preventLongPressMenu(node) {
-        node.ontouchstart = absorbEvent_;
-        node.ontouchmove = absorbEvent_;
-        node.ontouchend = absorbEvent_;
-        node.ontouchcancel = absorbEvent_;
-      }
-  
-      function init() {
-        preventLongPressMenu(document.getElementById('theimage'));
-      }
-    </script>
+
   </head>
-  <body class="fior noscroll" onload="init()">
+  <body class="fior noscroll" >
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 

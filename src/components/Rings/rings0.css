@@ -47,6 +47,7 @@ z-index: 902;
 top: 35%;
     left: 67%;
 border-radius: 50%;
+opacity: 0;
 }
 .rings0Eng{
  pointer-events: none;

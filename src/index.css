@@ -82,7 +82,7 @@ width: 740px;
   left: 0%;
   z-index: 0;
   opacity: 0;
-  animation: fade-in 5s linear forwards, scroll-sky 470s infinite linear;
+  animation: fade-in 12s linear forwards, scroll-sky 470s infinite linear;
 
 }
 
@@ -650,8 +650,8 @@ button svg {
 }
 .rave{
   position: fixed;
-  top: 34%;
-  left: 1%;
+  top: 36%;
+  left: 2%;
   z-index: 2;
   width: 29px;
   height: 30px;
