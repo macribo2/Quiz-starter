@@ -419,8 +419,8 @@ const[score, setScore] = useState(0)
 	
 	const [showOverworld, toggleShowOverworld]= useState(false)
 	return (<>
-			{ showOverworld ===true? <Overworld tallyX={0} avatar='null' whereAmI="westmeath" />:null}
-			{showOverworld===false? <div className='app' >
+			{ showOverworld ===false? <Overworld tallyX={0} avatar='null' whereAmI="westmeath" />:null}
+			{showOverworld===true? <div className='app' >
 		<Greeting isRaining={ currentQuestion >=13?true:false} />
 		
 			<ReactAudioPlayer src={currentQuestion === 0 ? theme0 : null} autoPlay />

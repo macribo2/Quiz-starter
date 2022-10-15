@@ -8,7 +8,7 @@ import promptVid from '../../vid/stars.mp4'
 import ciaroga from '../../images/players/rógaire0.png'
 import phone1 from '../../images/phone-0.png';
 
-
+// import county emblems
 import carlow from "../../images/counties/leinster/carlow.png"
 import dublin from "../../images/counties/leinster/icons/dublin.png"
 import kildare from "../../images/counties/leinster/kildare.png"
@@ -19,10 +19,31 @@ import longford from "../../images/counties/leinster/longford.png"
 import louth from "../../images/counties/leinster/louth.png"
 import meath from "../../images/counties/leinster/meath.png"
 import offaly from "../../images/counties/leinster/offaly.png"
-import westmeath from "../../images/counties/leinster/westmeath.png"
-import wexford from "../../images/counties/leinster/wexford.png"
-import wicklow from "../../images/counties/leinster/wicklow.png"
+import westmeath from "../../images/counties/leinster/icons/westmeath.png"
+import antrim  from "../../images/counties/ulster/icons/antrim.png"
+import  armagh from "../../images/counties/ulster/icons/armagh.png"
+import cavan from "../../images/counties/ulster/icons/cavan.png"
+import  clare from "../../images/counties/munster/icons/clare.png"
+import cork from "../../images/counties/munster/icons/cork.png"
+import derry from "../../images/counties/ulster/icons/derry.png"
+import donegal from "../../images/counties/ulster/icons/donegal.png"
+import down from "../../images/counties//ulster/icons/down.png"
+import fermanagh from "../../images/counties/ulster/icons/fermanagh.png"
+import galway from "../../images/counties/connacht/galway.png"
+import kerry from "../../images/counties/munster/icons/kerry.png"
+import leitrim from "../../images/counties/connacht/icons/leitrim.png"
+import limerick from "../../images/counties/munster/icons/limerick.png"
+import other from "../../images/counties/other/icons/other.png"
+import monaghan from "../../images/counties/ulster/icons/monaghan.png"
+import mayo from "../../images/counties/connacht/icons/mayo.png"
+import roscommon from "../../images/counties/connacht/icons/roscommon.png"
+import sligo from "../../images/counties/connacht/icons/sligo.png"
 
+import tipperary from "../../images/counties/munster/icons/tipperary.png"
+import tyrone from "../../images/counties/ulster/icons/tyrone.png"
+import waterford from "../../images/counties/munster/icons/waterford.png"
+import wexford from "../../images/counties/leinster/icons/wexford.png"
+import wicklow from "../../images/counties/leinster/icons/wicklow.png"
 
 
 
@@ -57,6 +78,7 @@ import mobile from '../../images/players/rógaire0.png'
 let whereAmI = 'Dublin';
 let whereAmIHolder = 'null';
 let avatar = '';
+
 
 // alert(avatar);
 function setPlayerIcon() {
@@ -105,7 +127,8 @@ export default class Overworld extends React.Component {
 
                 if (val.co === imreoir.whereAmI) {
                     $('#output').html(val.county)
-
+                    whereAmI = val.whereAmI
+                    localStorage.setItem('whereAmI', whereAmI);
                     console.log("line 112:" + val.county);
                     map = JSON.parse(val.mapData);
                     console.log(val.mapData);
@@ -175,21 +198,24 @@ export default class Overworld extends React.Component {
         // let imreoirJSON = JSON.stringify(imreoir);
 
         function setMap() {
+            $('.emblem').removeClass('animateEmblem'); 
             console.log(gameObjects+"uuuuuuuuuuu")
             $('.countyMap').css('left', imreoir.whereAmI.left)
             $('.countyMap').css('top', imreoir.whereAmI.top)
             $('.countyMap').css('background-image', "url('../../images/counties/" + imreoir.whereAmI + ".png")
-
+            
             $('#stage').fadeOut()
             setTimeout(function () { 
-            $('#stage').fadeIn()
-
-            },2000)
+                $('#stage').fadeIn()
+                
+            }, 2000)
             setTimeout(function () { 
-            
+                
+                
+                $('.emblem').addClass('animateEmblem'); 
                 $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
             }, 500)
-
+            
 
 
 
@@ -2890,6 +2916,9 @@ export default class Overworld extends React.Component {
 
                     if (val.co === imreoir.whereAmI) {
                         $('#output').html(val.county)
+                        $('.emblem').attr("src","../../img/counties/icons/"+val.emblem+".png")
+                        $('.emblem-img').attr("src","./emblems/"+val.emblem+".png")
+
                         console.log("line 112:" + val.county);
                         map = JSON.parse(val.mapData);
                         console.log(val.mapData);
@@ -3659,8 +3688,9 @@ export default class Overworld extends React.Component {
                     // console.log("val.county " + val.county)
 
                     if (val.co === imreoir.whereAmI) {
+                        alert(imreoir.whereAmI)
                         $('#output').html(val.county)
-                        $('#emblem-img').attr('src', '../../img/counties/leinster/' + localStorage.getItem('whereAmI'))
+                        $('.emblem').attr('src', '../../img/counties/icons/' + localStorage.getItem('whereAmI')+'.png')
                         console.log("line 112:" + val.county);
                         map = JSON.parse(val.mapData);
                         console.log(val.mapData);
@@ -3797,12 +3827,7 @@ export default class Overworld extends React.Component {
                
                
                 <div id="toolbar"></div>
-                <h2 id="loc" alt="holder for location names"></h2>
-
-                {/* <div className="emblem">
-                    {whereAmI==='carlow'? <img src={carlow} alt="county pixelart emblem." className="emblem-img" />: <img src={dublin} alt="county pixelart emblem." className="emblem-img" />}
-                    <p id="output"></p>
-                </div> */}
+                
 
                 <div className="ui">
 
@@ -3879,6 +3904,45 @@ export default class Overworld extends React.Component {
 }} ></BtnB>
 <img id="mob-effect" className="phonebg2"src={phone1} alt="" />
 
+<h2 id="loc" alt="holder for location names"></h2>
+
+                <div className="emblem">
+                    {/* show emblem on enter new county */}
+                    {whereAmI === 'antrim' ? <img src={antrim} alt="county pixelart emblem." className="emblem-img" /> : null}
+                    {whereAmI === 'armagh' ? <img src={armagh} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'cavan' ? <img src="../../images/counties/ulster/icons/cavan.png" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'clare' ? <img src={clare} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'cork' ? <img src={cork} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'derry' ? <img src={derry} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'donegal' ? <img src={donegal} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'down' ? <img src={down} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'dublin' ? <img src={dublin} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'fermanagh' ? <img src={fermanagh} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'galway' ? <img src={galway} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'kerry' ? <img src={kerry} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'kildare' ? <img src={kildare} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'kilkenny' ? <img src={kilkenny} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'laois' ? <img src={laois} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'leitrim' ? <img src={leitrim} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'limerick' ? <img src={limerick} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'longford' ? <img src={longford} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'louth' ? <img src={louth} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'mayo' ? <img src={mayo} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'meath' ? <img src={meath} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'monaghan' ? <img src={monaghan} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'offaly' ? <img src={offaly} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'roscommon' ? <img src={roscommon} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'sligo' ? <img src={sligo} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'tipperary' ? <img src={tipperary} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'tyrone' ? <img src={tyrone} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'waterford' ? <img src={waterford} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'westmeath' ? <img src={westmeath} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'wexford' ? <img src={wexford} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'wicklow' ? <img src={wicklow} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'other' ? <img src={other} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    <p id="output"></p>
+                </div> 
+                
             </div>
 
         )

@@ -3,6 +3,10 @@
 	/* position:fixed; */
 	/* z-index: 99999 !important; */
 }
+@font-face {
+	font-family: aonchlo;
+	src: url(.././../fonts/aonchlo.ttf);
+  }
 
 #mob-effect,
 #mob-text,
@@ -869,7 +873,7 @@
 	left: 2%; */
 	color: white;
 	margin-left: 5%;
-	font-family: urchlo;
+	font-family: aonchlo;
 	z-index: 10000;
 	word-wrap: break-word;
   
@@ -1001,16 +1005,32 @@
   .emblem{
 	/* border:4px solid palegreen; */
 	justify-content: center;
-	width: 20%;
+	width: 740px;
+	height:360px;
 	text-align: center;
 	display: flexbox;
-	padding: 2%;
+	pointer-events: none;
+/* border: 3px solid blue; */
+	position: fixed;
+	transform: scale(1.5);
+	z-index: 999;
+	padding-top:120px;
+	background-color:black;
+	top:0;
+	left:0;
+	
+}
+.animateEmblem{
+	
+	animation:emblemFade 3s forwards;
 
-	position: relative;
-	transform: scale(0.5);
-  
   }
-
+@keyframes emblemFade {
+	0%{opacity:1}
+	50%{opacity:1}
+	100%{opacity:0}
+	
+}
 
   @media only screen and (min-width: 1024px) {
 	#mob-effect,

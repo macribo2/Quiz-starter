@@ -13,6 +13,7 @@
     "react-circular-input": "^0.2.4",
     "react-dom": "^16.13.1",
     "react-fade-in": "^2.0.1",
+    "react-frame-component": "^5.2.3",
     "react-hook-screen-orientation": "^1.0.4",
     "react-rain-animation": "^1.0.4",
     "react-router-dom": "^5.2.0",

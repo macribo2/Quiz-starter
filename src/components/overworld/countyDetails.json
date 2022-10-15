@@ -3,6 +3,7 @@
   "naContae": [{
       "contae": "Co. Aontroma",
       "county": "Co. Antrim",
+      "emblem":"antrim",
       "details": {
         "ceantracha": ["ceantarReaċlainn", "Dearḃóg", "Aċaḋ Eoċaille",
           "Carn Ṁéaḃla",
@@ -19,6 +20,8 @@
     {
       "contae": "Co. Ard Ṁaċa",
       "county": "Co. Armagh",
+      "emblem":"armagh",
+      
       "details": {
         "ceantracha": [
           "Sráid na nAlbanach",
@@ -37,6 +40,7 @@
     {
       "contae": "Co. Ċeaṫarlaċ",
       "county": "Co. Carlow",
+      "emblem":"carlow",
       "details": {
         "ceantracha": [
           "Cill Deirge",
@@ -55,7 +59,7 @@
 
     {
       "contae":     "Co. An Caḃáin",
-
+"emblem":"cavan",
       "county": "Co. Cavan",
       "details": {
         "ceantracha":  [
@@ -73,9 +77,11 @@
     },
 
     {
+    "emblem":"clare",
       "contae": "Co. Clare",
       "county": "Co. An Ċláir",
       "details": {
+      
         "ceantracha":  [
 			"Ceann Boirne",
 			"Fíoch Rua",
@@ -91,6 +97,7 @@
 	},
 	
     {
+    "emblem":"cork",
 		"contae":  "Co. Ċorcaí ",
 		"county": "Co. Cork",
 		"details": {
@@ -107,6 +114,7 @@
   		}
 	  },
 	  {
+	  "emblem":"derry",
 		"contae": "Co. Ḋoire",
 		"county":   "Co. Derry",
 		"details": {
@@ -125,6 +133,7 @@
 	  },
   
 	  {
+	  "emblem":"donegal",
 		"contae": "Co. Ḋún na nGall",
 		"county": "Co. Donegal",
 		"details": {
@@ -143,6 +152,7 @@
 	  },
 	  
 	  {
+	  "emblem":"down",
 		  "contae": "Co. An Dúin",		  "county": "Co. Down",
 		  "details": {
 			"ceantracha":   [
@@ -159,6 +169,7 @@
 		,
 
     {
+    "emblem":"dublin",
       "contae":  "Co. Ḃaile Átha Ċliath",
 	  
       "county": "Co. Dublin",
@@ -177,6 +188,7 @@
     },
 
     {
+    "emblem":"fermanagh",
       "contae":  "Co. Ḟear Manaċ",
       "county": "Co. Fermanagh",
       "details": {
@@ -195,6 +207,7 @@
 	},
 	
     {
+    "emblem":"galway",
 		"contae":  "Co. na Gailliṁe",
 		"county": "Co. Galway",
 		"details": {
@@ -211,6 +224,7 @@
   		}
 	  },
 	  {
+	  "emblem":"kerry",
 		"contae":  "Co. Ċiarraí",
 		"county": "Co. Kerry",
 		"details": {
@@ -230,6 +244,7 @@
 	  },
   
 	  {
+	  "emblem":"kildare",
 		"contae":  "Co. Ċill Dara",
 		"county": "Co. Kildare",
 		"details": {
@@ -248,7 +263,9 @@
 		}
 	  },
 	  
+	  
 	  {
+	  "emblem":"kilkenny",
 		  "contae":    "Co. Ċill Ċainniġ",
 		  "county": "Co. Kilkenny",
 		  "details": {
@@ -267,6 +284,7 @@
 		,
 
     {
+    "emblem":"laois",
       "contae": "Co. Laoise",
       "county": "Co. Laois",
       "details": {
@@ -285,6 +303,7 @@
     },
 
     {
+    "emblem":"leitrim",
       "contae": "Co. Liatroma",
       "county": "Co. Leitrim",
       "details": {
@@ -304,6 +323,7 @@
 	},
 	
     {
+    "emblem":"limerick",
 		"contae":     "Co. Luimnigh",
 		"county": "Co. Limerick",
 		"details": {
@@ -320,6 +340,7 @@
   		}
 	  },
 	  {
+	  "emblem":"longford",
 		"contae":  "Co. An LongFoirt",
 		"county": "Co. Longford",
 		"details": {
@@ -336,6 +357,7 @@
 	  },
   
 	  {
+	  "emblem":"louth",
 		"contae":   "Co.Lú",
 		"county": "Co. Louth",
 		"details": {
@@ -357,6 +379,7 @@
 	  },
 	  
 	  {
+	  "emblem":"mayo",
 		  "contae":   "Co. Mhaigh Eo",
 		  "county": "Co. Mayo",
 		  "details": {
@@ -375,6 +398,7 @@
 		,
 
     {
+    "emblem":"meath",
       "contae": "Co. Na Mí",
       "county": "Co. Meath",
       "details": {
@@ -393,6 +417,7 @@
     },
 
     {
+    "emblem":"monaghan",
       "contae":  "Co. Ṁuineaċáin",
       "county": "Co. Monaghan",
       "details": {
@@ -412,6 +437,7 @@
 	},
 	
     {
+    "emblem":"offaly",
 		"contae":     "Co. Uíḃ Ḟailí",
 		"county": "Co. Offaly",
 		"details": {
@@ -428,6 +454,7 @@
   		}
 	  },
 	  {
+	  "emblem":"roscommon",
 		"contae": "Co. Ros Comáin",
 		"county": "Co. Roscommon",
 		"details": {
@@ -448,6 +475,7 @@
 	  },
   
 	  {
+	  "emblem":"sligo",
 		"contae":  "Co. Shligigh",
 		"county": "Co. Sligo",
 		"details": {
@@ -466,6 +494,7 @@
 	  },
 	  
 	  {
+	  "emblem":"tipperary",
 		  "contae":     "Co. Ṫiobraid Árann",
 		  "county": "Co. Tipperary",
 		  "details": {
@@ -485,6 +514,7 @@
 		,
 
     {
+    "emblem":"tyrone",
       "contae": "Co. Ṫír Eoghain",
       "county": "Co. Tyrone",
       "details": {
@@ -504,6 +534,7 @@
     },
 
     {
+    "emblem":"waterford",
       "contae": "Co. Ṗort Láirge",
       "county": "Co. Waterford",
       "details": {
@@ -522,6 +553,7 @@
 	},
 	
     {
+    "emblem":"westmeath",
 		"contae":     "Co. Na hIarṁí",
 		"county": "Co. Westmeath",
 		"details": {
@@ -538,6 +570,7 @@
   		}
 	  },
 	  {
+	  "emblem":"wexford",
 		"contae": "Co. Loch Garman",
 		"county": "Wexford",
 		"details": {
@@ -558,6 +591,7 @@
 	  },
   
 	  {
+	  "emblem":"wicklow",
 		"contae":     "Co. Ċill Ṁantáin",
 		"county": "Co. Wicklow",
 		"details": {
@@ -576,6 +610,7 @@
 	  },
 	  
 	  {
+	  "emblem":"other",
 		  "contae": "Tír Tuatha",
 		  "county": "Otherside",
 		  "details": {
