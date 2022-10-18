@@ -2,6 +2,7 @@
 
   {
     "co":"offaly",
+          "emblem":"offaly",
     "county": "Co. Uíḃ Ḟailí",
     "mapData":"[[3, 3, 3, 2, 2, 2, 2, 2, 9, 9],[3, 3, 30, 0, 0, 0, 0, 0, 0, 8],[3, 0, 0, 0, 0, 0, 0, 0, 31, 8],[4, 0, 0, 0, 0, 0, 0, 0, 0, 8],[4, 0, 0, 0, 0, 0, 0, 34, 0, 8],[4, 0, 32, 0, 0, 0, 0, 7, 7, 7],[4, 0, 0, 0, 0, 0, 7, 7, 7, 7],[5, 0, 0, 0, 33, 7, 7, 7, 7, 7], [5, 0, 35, 6, 6, 7, 7, 7, 7, 7],[5, 6, 6, 6, 6, 7, 7, 7, 7, 7]]",
   "countyBG": "url('./countyMaps/offaly.png')",
@@ -19,6 +20,7 @@
 },
 
 {
+      "emblem":"louth",
   "co":"louth",
   "locations": [
     "Dún Dealgan",
@@ -36,6 +38,8 @@
   "left": "16px",
   "zoom": "scale(1.7)"
 }, {
+
+      "emblem":"wexford",
   "co":"wexford",
   "locations":[
     "Coill an Iarainn",
@@ -52,6 +56,7 @@
   "left": "16px",
   "zoom": "scale(1.6)"
 }, {
+      "emblem":"limerick",
   "co":"limerick",
 "locations":  [
   "Pailis Ċaonraí",
@@ -68,6 +73,8 @@
   "left": "-4px",
   "zoom": "scale(1.3)"
 }, {
+
+      "emblem":"dublin",
   "co":"dublin",
 "locations":  [
   "Fionnġlas",
@@ -84,6 +91,8 @@
   "left": "0px",
   "zoom": "scale(1.6)"
 }, {
+
+      "emblem":"leitrim",
   "co":"leitrim",
 "locations": [
   "Gleann Éada",
@@ -100,6 +109,8 @@
   "left": "0px",
   "zoom": "scale(1.5)"
 }, {
+
+      "emblem":"antrim",
   "co":"antrim",
 "locations":[
   "Reaċlainn",
@@ -116,6 +127,8 @@
   "left": "0px",
   "zoom": "scale(1.6)"
 }, {
+
+      "emblem":"donegal",
   "co":"donegal",
   "locations": [
     "Cionn Dhún Damh",
@@ -133,6 +146,8 @@
   "left": "0px",
   "zoom": "scale(1.6)"
 }, {
+
+      "emblem":"fermanagh",
   "co":"fermanagh",
 "locations": [
   "An Garastún",
@@ -151,6 +166,8 @@
   
 
 }, {
+
+      "emblem":"cork",
   "co":"cork",
 "locations": [
   "Cill na Mallaċ",
@@ -167,6 +184,8 @@
   "left": "0px",
   "zoom": "scale(1.5)"
 }, {
+
+      "emblem":"wicklow",
   "co":"wicklow",
 "locations":  [
       "Poll an Ṗúca",
@@ -183,6 +202,8 @@
   "left": "-30px",
   "zoom": "scale(1.7)"
 }, {
+
+      "emblem":"roscommon",
   "co":"roscommon",
 "locations":[
   "Cluain Fada",
@@ -199,6 +220,8 @@
   "left": "0px",
   "zoom": "scale(1.7)"
 }, {
+
+      "emblem":"derry",
   "co":"derry",
   "locations":    [
     "Doire",
@@ -216,6 +239,8 @@
   "left": "0px",
   "zoom": "scale(1.6)"
 }, {
+
+      "emblem":"sligo",
   "co":"sligo",
 "locations":[
   "Béal Átha na gCarraigíní",
@@ -232,6 +257,8 @@
   "left": "29px",
   "zoom": "scale(1.8)"
 }, {
+
+      "emblem":"tipperary",
   "co":"tipperary",
 "locations":  [
   "Ros Cré",
@@ -248,7 +275,9 @@
   "left": "16px",
   "zoom": "scale(1.8)"
 }, {
-  "co":"laois",
+
+      "emblem":"laois",
+        "co":"laois",
 "locations":    [
   "Eiréil ",
   "Darú",
@@ -264,6 +293,8 @@
   "left": "-16px",
   "zoom": "scale(1.7)"
 }, {
+
+      "emblem":"waterford",
   "co":"waterford",
 "locations":[
   "Sléiḃte an Ċomaraigh",
@@ -280,6 +311,7 @@
   "left": "-14px",
   "zoom": "scale(1.4)"
 }, {
+      "emblem":"kilkenny",
   "co":"kilkenny",
   "locations": [
     "Ġráinseaċ Ċuffe",
@@ -297,6 +329,8 @@
   "left": "16px",
   "zoom": "scale(1.4)"
 }, {
+
+      "emblem":"meath",
   "co":"meath",
 "locations":[
   "An Uaimh",
@@ -313,6 +347,7 @@
   "left": "16px",
   "zoom": "scale(1.6)"
 }, {
+      "emblem":"kerry",
   "co":"kerry",
 "locations":[
   "Cathair Saiḋḃín",
@@ -329,6 +364,8 @@
   "left": "13px",
   "zoom": "scale(1.3)"
 }, {
+
+      "emblem":"longford",
   "co":"longford",
 "locations":[
   "An Lios Breac",
@@ -345,6 +382,8 @@
   "left": "0px",
   "zoom": "scale(1.7)"
 }, {
+
+      "emblem":"mayo",
   "co":"mayo",
 "locations":[
   "Cill Ala",
@@ -361,6 +400,8 @@
   "left": "16px",
   "zoom": "scale(1.6)"
 }, {
+
+      "emblem":"westmeath",
   "co":"westmeath",
 "locations": [
   "Baile na gCailleach",
@@ -377,6 +418,8 @@
   "left": "1px",
   "zoom": "scale(1.3)"
 }, {
+
+      "emblem":"down",
   "co":"down",
   "locations":[
     "An Lorgain",
@@ -394,6 +437,7 @@
   "left": "15px",
   "zoom": "scale(1.6)"
 }, {
+      "emblem":"armagh",
   "co":"armagh",
 "locations":[
   "Sráid na nAlbanach",
@@ -410,6 +454,8 @@
   "left": "20px",
   "zoom": "scale(1.6)"
 }, {
+
+      "emblem":"carlow",
   "co":"carlow",
 "locations":[
   "Cill Deirge",
@@ -426,6 +472,7 @@
   "left": "0px",
   "zoom": "scale(1.6)"
 }, {
+      "emblem":"monaghan",
   "co":"monaghan",
   "locations":[
     "Scairbh na gCaorach",
@@ -443,6 +490,7 @@
   "left": "16px",
   "zoom": "scale(1.7)"
 }, {
+      "emblem":"galway",
   "co":"galway",
 "locations": [
   "Poll an Phúca",
@@ -459,6 +507,8 @@
   "left": "14px",
   "zoom": "scale(1.5)"
 }, {
+
+      "emblem":"kildare",
   "co":"kildare",
 "locations":[
   "Cairbre",
@@ -475,6 +525,8 @@
   "left": "16px",
   "zoom": "scale(1.6)"
 }, {
+
+      "emblem":"clare",
   "co":"clare",
 "locations": [
   "Ceann Boirne",
@@ -491,6 +543,8 @@
   "left": "23px",
   "zoom": "scale(1.3)"
 }, {
+
+      "emblem":"cavan",
   "co":"cavan",
 "locations":  [
   "Doire na Criaḋ",
@@ -507,6 +561,8 @@
   "left": "0px",
   "zoom": "scale(1.4)"
 }, {
+
+      "emblem":"tyrone",
   "co":"tyrone",
 "locations":[
   "Caisleán na Deirge",

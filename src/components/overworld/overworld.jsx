@@ -1,5 +1,9 @@
 import React from 'react';
 import './overworld.css';
+import emerald from '../../images/misc_crystal_new.png'
+import pearl from '../../images/stone-soup/misc_crystal_old.png';
+import lens from '../../images/ciorcal-glass2.png';
+import portrait from '../../images/portrait.gif'
 import { BtnA } from './../ui/btn-a';
 import { BtnB } from './../ui/btn-b';
 import { BtnSelect } from '../ui/btn-select'
@@ -7,6 +11,7 @@ import { BtnStart } from '../ui/btn-start'
 import promptVid from '../../vid/stars.mp4'
 import ciaroga from '../../images/players/rógaire0.png'
 import phone1 from '../../images/phone-0.png';
+import glass from '../../images/big-glass.png';
 
 // import county emblems
 import carlow from "../../images/counties/leinster/carlow.png"
@@ -80,14 +85,13 @@ let whereAmIHolder = 'null';
 let avatar = '';
 
 
-// alert(avatar);
 function setPlayerIcon() {
     switch (avatar) {
         // case 'rogue': return rogue;
         // case 'sage': return sage;
         // case 'poet': return poet;
         // case 'druid': return druid;
-        // case 'gallowglass': return gallowglass;
+        // case 'gallowglass': return gallow
         // case 'troll': return troll;
         // case 'occultist': return occultist;
         // case 'fenian': return fenian;
@@ -101,7 +105,8 @@ export default class Overworld extends React.Component {
             registerMenu: false,
             mobile: false,
             mobileHor: true,
-            whereAmI: 'Kildare'
+            whereAmI: 'Kildare',
+            isOn: false,
             // whereAmI: localStorage.getItem('whereAmI')
         }
 
@@ -117,10 +122,10 @@ export default class Overworld extends React.Component {
     jQueryCode = () => {
         let playerOverLocation = false;
         localStorage.setItem('whereAmI', 'Kerry');
-
+        
 
         $.getJSON('mapData.json', function (county) {
-
+            
             $.each(county, function (key, val) {
                 // console.log("val " + val.co)
                 // console.log("val.county " + val.county)
@@ -205,6 +210,8 @@ export default class Overworld extends React.Component {
             $('.countyMap').css('background-image', "url('../../images/counties/" + imreoir.whereAmI + ".png")
             
             $('#stage').fadeOut()
+            $('.emblem-img').css("opacity",0)
+
             setTimeout(function () { 
                 $('#stage').fadeIn()
                 
@@ -2917,7 +2924,15 @@ export default class Overworld extends React.Component {
                     if (val.co === imreoir.whereAmI) {
                         $('#output').html(val.county)
                         $('.emblem').attr("src","../../img/counties/icons/"+val.emblem+".png")
+
                         $('.emblem-img').attr("src","./emblems/"+val.emblem+".png")
+                       
+                        setTimeout(function () { 
+
+
+                            $('.emblem-img').fadeIn()
+                            $('.emblem-img').css('opacity','1');
+                        },100)
 
                         console.log("line 112:" + val.county);
                         map = JSON.parse(val.mapData);
@@ -3491,7 +3506,6 @@ export default class Overworld extends React.Component {
             //from the previous turn
              whereAmI = localStorage.getItem('whereAmI')
 
-            // alert(whereAmI);
             if (stage.hasChildNodes()) {
                 for (var i = 0; i < ROWS * COLUMNS; i++) {
                     stage.removeChild(stage.firstChild);
@@ -3688,9 +3702,8 @@ export default class Overworld extends React.Component {
                     // console.log("val.county " + val.county)
 
                     if (val.co === imreoir.whereAmI) {
-                        alert(imreoir.whereAmI)
                         $('#output').html(val.county)
-                        $('.emblem').attr('src', '../../img/counties/icons/' + localStorage.getItem('whereAmI')+'.png')
+                        // $('.emblem').attr('src', '../../img/counties/icons/' + localStorage.getItem('whereAmI')+'.png')
                         console.log("line 112:" + val.county);
                         map = JSON.parse(val.mapData);
                         console.log(val.mapData);
@@ -3782,7 +3795,7 @@ export default class Overworld extends React.Component {
 
         }, 3500)
     }
-
+    
     componentDidMount() {
         this.jQueryCode();
         window.addEventListener("resize", this.resize.bind(this));
@@ -3794,7 +3807,7 @@ export default class Overworld extends React.Component {
     conceptHandler() {
         window.location.replace('http://167.172.184.73:3000/history')
     }
-
+    
     render() {
 
         avatar = this.props.avatar;
@@ -3802,10 +3815,19 @@ export default class Overworld extends React.Component {
         console.log(whereAmIHolder + 'whereAmIHolder');
         console.log(whereAmI + 'whereAmI');
         whereAmI = localStorage.getItem('whereAmI');
+        
+        function runEng() {
+        // const isOn = this.state.isOn;
 
+                    console.log("isOn")
+
+         }
 
         return (
             <div >
+    <div className="bg"></div>
+
+    <div className="sea"></div>
                 <div className="stage-container" id="kungfu">
                     <div className="countyMap">
 
@@ -3888,7 +3910,6 @@ export default class Overworld extends React.Component {
 </div>
 
 
-{/* <div className="sea"></div> */}
 
 
 
@@ -3942,7 +3963,31 @@ export default class Overworld extends React.Component {
                     {whereAmI === 'other' ? <img src={other} alt="county pixelart emblem." className="emblem-img" /> :null}
                     <p id="output"></p>
                 </div> 
+                <div className="map-lens-container">
+                    <img className="map-lens" src={lens} alt="" />
+               </div>
+               <button id="toggle-glass-btn" onClick={()=>{
+                    if (this.state.isOn) {
+                        this.setState({ isOn: false })
+                        {/* alert('y') */}
+                    }
+                    else {
+                        (this.setState({ isOn: true })
+                        )
+                        {/* alert('n') */}
+                    }
                 
+                }}	><img src={this.state.isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
+
+                <div ><img id="portrait"src={ portrait}></img>
+
+ </div>
+ 
+ {this.state.isOn ? (<div id="glass">
+				
+< img  src={glass} className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />	
+			</div>) : null}
+			
             </div>
 
         )
