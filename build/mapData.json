@@ -411,6 +411,14 @@
   "Cill Ḃeagáin",
   "An Muileann gCearr"
 ],
+"locationsEng": [
+  "Baile na gCailleach",
+  "Ráth Ḟearna",
+  "Tang - the tongue",
+  "Corlis - the pidgeons",
+  "Kilbeggan - church of Bécán, distinguished Irish Saint",
+  "An Muileann gCearr"
+],
   "county": "Co. Na hIarṁí",
   "mapData": "[[3, 3, 3, 3, 3, 2, 2, 9, 9, 9],[3,3,3,0,0,0,30,9,9,9],[3,3,3,0,0,0,0,0,0,9],[4,4,0,0,0,0,0,31,0,8],[4,32,0,0,0,0,0,0,0,8],[4,0,33,0,0,0,0,0,0,8],[4,0,0,0,0,0,0,0,0,8],[5,0,0,0,0,0,35,0,7,7],[6,6,6,6,34,0,7,7,7,7],[6,6,6,6,6,6,6,7,7,7]]",
   "countyBG": "url('./countyMaps/westmeath.png')",

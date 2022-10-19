@@ -147,6 +147,7 @@ export default class Overworld extends React.Component {
 
                     // console.log("line 123" + val.co)
                     newLocations = val.locations;
+                    newLocationsEng = val.locationsEng;
                     // console.log(newLocations)
 
                     setTimeout(function () {
@@ -181,6 +182,7 @@ export default class Overworld extends React.Component {
 
         })
         let newLocations;
+        let newLocationsEng;
         let allCounties;
         $.getJSON('/whichCounty', function (data) {
             allCounties = data.naContae;
@@ -2946,7 +2948,9 @@ export default class Overworld extends React.Component {
 
                         console.log("line 123" + val.co)
                         newLocations = val.locations;
+                        newLocationsEng = val.locationsEng
                         console.log(newLocations)
+                        console.log(newLocationsEng)
                     }
                     else {
                         console.log("does > > > >" + imreoir.whereAmI + " match  error loading map.")
@@ -3087,6 +3091,11 @@ export default class Overworld extends React.Component {
         //Get a reference to the stage and output
         var stage = document.querySelector("#stage");
         var output = document.querySelector("#output");
+        function readyLocationEng(locEng) { 
+
+            $('#locEng').html(newLocationsEng[locEng])
+
+        }
         function readyLocation(loc) {
             $('#loc').html(newLocations[loc])
 
@@ -3096,6 +3105,7 @@ export default class Overworld extends React.Component {
 
         function clearLocation() {
             $('#loc').html("")
+            $('#locEng').html("")
             $('.big-btn-img').fadeOut();
             playerOverLocation = false;
 
@@ -3380,27 +3390,33 @@ export default class Overworld extends React.Component {
                         break;
                     case location0:
                         readyLocation(0)
+                        readyLocationEng(0)
 
                         break;
 
                     case location1:
                         readyLocation(1)
+                        readyLocationEng(1)
 
                         break;
                     case location2:
                         readyLocation(2)
+                        readyLocationEng(2)
 
                         break;
                     case location3:
                         readyLocation(3)
+                        readyLocationEng(3)
 
                         break;
                     case location4:
                         readyLocation(4)
+                        readyLocationEng(4)
 
                         break;
                     case location5:
                         readyLocation(5)
+                        readyLocationEng(5)
 
                         break;
                     case EXIT:
@@ -3717,6 +3733,7 @@ export default class Overworld extends React.Component {
 
                         console.log("line 123" + val.co)
                         newLocations = val.locations;
+                        newLocationsEng = val.locationsEng;
                         console.log(newLocations)
                     }
                     else {
@@ -3926,6 +3943,7 @@ export default class Overworld extends React.Component {
 <img id="mob-effect" className="phonebg2"src={phone1} alt="" />
 
 <h2 id="loc" alt="holder for location names"></h2>
+                <h2 id="locEng" className={this.state.isOn? null:"locDown"} alt="holder for location names English"></h2>
 
                 <div className="emblem">
                     {/* show emblem on enter new county */}
