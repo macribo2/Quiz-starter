@@ -3844,20 +3844,6 @@ export default class Overworld extends React.Component {
             <div >
     <div className="bg"></div>
 
-    <div className="sea"></div>
-                <div className="stage-container" id="kungfu">
-                    <div className="countyMap">
-
-
-                    </div>
-
-                    <div id="stage" >
-                    </div>
-
-
-                    {/* <div className="ferns canopy-right"></div> */}
-                </div>
-
 
 
 
@@ -3903,10 +3889,11 @@ export default class Overworld extends React.Component {
                 {/* {this.state.registerMenu ? <Register /> : null} */}
 
 
+
                 <div className="underx-stage-left">
 
 
-
+</div>
 <div className="directional-pad">
     <div className='grid-container'>
 
@@ -3924,7 +3911,6 @@ export default class Overworld extends React.Component {
         </div>
         <div className="grid-item"></div>
     </div>
-</div>
 
 
 
@@ -3945,7 +3931,27 @@ export default class Overworld extends React.Component {
 <h2 id="loc" alt="holder for location names"></h2>
                 <h2 id="locEng" className={this.state.isOn? null:"locDown"} alt="holder for location names English"></h2>
 
-                <div className="emblem">
+               
+                <div className="map-lens-container">
+ 
+ 
+                <div className="sea"></div>
+                <div className="stage-container" id="kungfu">
+                    <div className="countyMap">
+
+
+                    </div>
+
+                    <div id="stage" >
+                    </div>
+
+
+                </div>
+
+ 
+                    <img className="map-lens" src={lens} alt="" />
+               </div>
+                    <div className="emblem">
                     {/* show emblem on enter new county */}
                     {whereAmI === 'antrim' ? <img src={antrim} alt="county pixelart emblem." className="emblem-img" /> : null}
                     {whereAmI === 'armagh' ? <img src={armagh} alt="county pixelart emblem." className="emblem-img" /> :null}
@@ -3981,9 +3987,6 @@ export default class Overworld extends React.Component {
                     {whereAmI === 'other' ? <img src={other} alt="county pixelart emblem." className="emblem-img" /> :null}
                     <p id="output"></p>
                 </div> 
-                <div className="map-lens-container">
-                    <img className="map-lens" src={lens} alt="" />
-               </div>
                <button id="toggle-glass-btn" onClick={()=>{
                     if (this.state.isOn) {
                         this.setState({ isOn: false })

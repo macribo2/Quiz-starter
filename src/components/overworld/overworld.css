@@ -51,7 +51,10 @@
   position: fixed;
   z-index: 10;
   top: 7px;
-  left: 20%;
+  left: 0%;
+  display: grid;
+  justify-content: center;
+  width:100%;
 
 }
 
@@ -116,12 +119,13 @@
   top: 53%;
   opacity: 1;
   transform: scale(0.8);
+  z-index: 60;
 }
 
 .underx-stage-left,
 .under-stage-right {
   /* border:4px solid orange; */
-  z-index: 35;
+  z-index: 12;
   width: 20%;
   height: 100%;
   justify-content: center;
@@ -288,7 +292,7 @@ p {
 
     margin-left: -28%;
 
-    transform: scale(1.6)
+    transform: scale(1.1)
   }
 
 }
@@ -368,9 +372,9 @@ p {
   }
 
   100% {
-    margin-left: -50%;
+    margin-left: -27%;
     margin-top: -12%;
-    transform: scale(1.4)
+    transform: scale(1.0)
   }
 
 }
@@ -596,7 +600,7 @@ p {
   }
 
   100% {
-    transform: scale(1.4);
+    transform: scale(1.1);
     margin-left: -16%;
     margin-top: -12%;
   }
@@ -900,6 +904,7 @@ p {
   font-family: aonchlo;
   z-index: 10000;
   word-wrap: break-word;
+  margin-top:1%;
 
 }
 
@@ -1040,7 +1045,7 @@ p {
   z-index: 999;
   padding-top: 120px;
   background-color: black;
-  top: 0;
+  top: 13%;
   left: 0;
 
 }
