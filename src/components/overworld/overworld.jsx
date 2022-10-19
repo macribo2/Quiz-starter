@@ -3833,12 +3833,6 @@ export default class Overworld extends React.Component {
         console.log(whereAmI + 'whereAmI');
         whereAmI = localStorage.getItem('whereAmI');
         
-        function runEng() {
-        // const isOn = this.state.isOn;
-
-                    console.log("isOn")
-
-         }
 
         return (
             <div >
@@ -3990,13 +3984,16 @@ export default class Overworld extends React.Component {
                <button id="toggle-glass-btn" onClick={()=>{
                     if (this.state.isOn) {
                         this.setState({ isOn: false })
-                        {/* alert('y') */}
+                        
                     }
                     else {
                         (this.setState({ isOn: true })
                         )
                         {/* alert('n') */}
                     }
+                    setTimeout(()=> { this.setState({ isOn: false }) }, 3000)
+                        
+
                 
                 }}	><img src={this.state.isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 
