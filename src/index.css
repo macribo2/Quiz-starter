@@ -194,7 +194,7 @@ width: 740px;
   position: fixed;
   height: 100%;
   width: 100%;
-  z-index: 94;
+  z-index: 994;
 }
 
 .question-text {
@@ -556,6 +556,21 @@ button svg {
   left: -1%;
 }
 
+.hill-stones{
+  z-index: 4;
+  position:relative;
+  /* animation: move-down 4s forwards; */
+  /* border:4px solid blue; */
+  margin-top: 25%;
+  
+}
+
+#hill-stones{
+  
+  background-size: cover;
+
+}
+
 .geaga-shadow {
   z-index: 30;
   position: fixed;
@@ -585,20 +600,22 @@ button svg {
 
 .distant-fort {
   position: fixed;
-  z-index: 5;
-  left: -23%;
-  top: -3%;
-  transform: scale(0.7);
-  /* animation: fade-out 4s forwards; */
+  z-index: 3;
+  left: 0%;
+  top: 7px;
+  transform: scale(1.1);
+   animation: fade-in 4s forwards;
 }
 
 .index-distant-fort {
-  position: fixed;
+    position: fixed;
   z-index: 3;
-  left: -23%;
-  top: -3%;
-  transform: scale(0.7);
-  /* animation: fade-out 4s forwards; */
+  left: 0%;
+  top: 7px;
+  width:100%;
+  height:100%;
+  /* transform: scale(1.1); */
+   animation: fade-in 4s forwards;
 }
 
 .index-shadow-fields {
@@ -611,32 +628,56 @@ button svg {
 }
 
 .hill-fields,   .lower-fields {
-  position: fixed;
   z-index: 4;
-  left: -14%;
-  top: 48%;
+  
   /* animation: fade-out 4s forwards; */
 }
 
 .dial {
   animation: fade-in-dial 3s forwards;
-  position: fixed;
-  /* border: 4px solid blue; */
-  z-index: 116;
+  z-index: 126;
   height: 220px;
   width: 220px;
-  left: 456px;
-  top: 86px;
+  position: relative;
+  pointer-events: all;
+
+
+}
+.input-elements-container, .field-container{
+  pointer-events: none;
+  display: grid;
+  justify-content:center;
+  align-items: center;
+  height:100%;
+  width:100%;
+  left: 0;
+  top:0;
+  z-index: 888;
+  position: fixed;
 
 }
 
+.field-container, .stones-container{
+  justify-content:end;
+  align-items: flex-end;
+  top:0%;
+  /* animation:move-down 8s forwards; */
+  z-index: 4;
+
+}
+
+.stones-container{
+  /* animation:move-down 4s forwards;
+   */
+
+}
 
 .avatar {
   position: fixed;
   z-index: 68;
   width: 24%;
-  left: 480px;
-  top: 31%;
+  left: 73%;
+  top: 35%;
   display: block; 
 
 }
@@ -693,7 +734,7 @@ button svg {
 
 .dial-text {
   position: fixed;
-  z-index: 939;
+  z-index: 995;
   font-size: 3em;
   font-weight: bold;
   text-align: center;
@@ -710,6 +751,20 @@ button svg {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
 pointer-events: none;
+}
+@keyframes move-down {
+  0%{
+    top:0%;
+
+  }
+  50%{
+    top:0%;
+    
+  }
+  100%{
+    top:50%;
+    
+  }
 }
 @keyframes rainbow_animation {
   0%,100% {
@@ -728,16 +783,9 @@ animation: lower-fields 3s forwards;
   z-index: 50;
 }
 #lens {
-  transform: scale(0.85);
-  position: fixed;
-  top: 20px;
-  left: 393px;
+position: relative;
   animation: fade-in 1s forwards;
   pointer-events: none;
-  display: 'flex';
-  align-items: 'center';
-  justify-content: 'center';
-  height: '100vh';
   opacity: 0.5;
   z-index:102;
 
@@ -745,13 +793,12 @@ animation: lower-fields 3s forwards;
 }
 
 #buttonmash {
-  position: absolute;
+  position: relative;
   height: 130px;
   width: 130px;
-  z-index: 902;
-  top: 38%;
-  left: 70%;
+  z-index: 9902;
   border-radius: 50%;
+  /* border: 4px solid green; */
 }
 
 #mob-effect,
@@ -776,8 +823,8 @@ animation: lower-fields 3s forwards;
   color: rgb(136, 132, 13);
   position: fixed;
   background-color: rgba(0, 0, 0, 0);
-  left: 93%;
-  top: 4%;
+  left: 5%;
+  top: 87%;
   z-index: 450;
   width: 25px;
   height: 25px;
@@ -846,9 +893,6 @@ animation: lower-fields 3s forwards;
 
   #lens {
     transform: scale(2);
-    position: fixed;
-    top: 25%;
-    left: 72%;
     /* animation: fade-in 3s forwards; */
     pointer-events: none;
   opacity: 0.5;
@@ -856,12 +900,8 @@ animation: lower-fields 3s forwards;
   }
 
   .dial {
-
     width: 400px;
     height: 400px;
-    position: fixed;
-    top: 23%;
-    left: 71%;
     animation:fade-in 1s forwards;
 
   }
@@ -875,16 +915,7 @@ animation: lower-fields 3s forwards;
     border-radius: 50%;
   }
 
-  .hill-fields{
-    position: fixed;
-    z-index: 4;
-    left: 23%;
-    top: 52%;
-    /* animation: fade-out 4s forwards; */
-    transform: scale(2.6);
-  }
-
-
+ 
 
   .index-shadow-fields {
     position: fixed;

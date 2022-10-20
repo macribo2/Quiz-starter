@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "f4efe1252b062dc73f09",
-    "url": "/static/css/main.1d41d321.chunk.css"
+    "revision": "430f898485c6c1983176",
+    "url": "/static/css/main.c1446a71.chunk.css"
   },
   {
-    "revision": "f4efe1252b062dc73f09",
-    "url": "/static/js/main.20c2ec70.chunk.js"
+    "revision": "430f898485c6c1983176",
+    "url": "/static/js/main.6e6d608d.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "b3dd37f3da87e66b4b5d",
+    "revision": "ebb7d64bfed8a7579a3f",
     "url": "/static/css/2.7079e116.chunk.css"
   },
   {
-    "revision": "b3dd37f3da87e66b4b5d",
-    "url": "/static/js/2.000f6f31.chunk.js"
+    "revision": "ebb7d64bfed8a7579a3f",
+    "url": "/static/js/2.37215a3c.chunk.js"
   },
   {
     "revision": "f86401116e22234bed1999521b37a26b",
@@ -192,16 +192,8 @@ self.__precacheManifest = [
     "url": "/static/media/462092__matrixxx__sparkling-star-04.c6b1320f.wav"
   },
   {
-    "revision": "07187bdbeb991dbc6e3bbdda30d4d5d8",
-    "url": "/static/media/fields-twilight.07187bdb.png"
-  },
-  {
-    "revision": "416f9bc13c7154065ef66c0d1f3f1191",
-    "url": "/static/media/fields-dusk.416f9bc1.png"
-  },
-  {
-    "revision": "8cf48e9c3b4f28fd8018d6802e61a2f6",
-    "url": "/static/media/distantFort-shadow.8cf48e9c.png"
+    "revision": "b004304a22f53c10b355c9cddf544918",
+    "url": "/static/media/fields-twilight.b004304a.png"
   },
   {
     "revision": "557767f5d75bc811e2dee1872f7b1a65",
@@ -232,8 +224,8 @@ self.__precacheManifest = [
     "url": "/static/media/geagabg1.1913f10c.png"
   },
   {
-    "revision": "796bfbcaa0792b13a12cc4df56bc8607",
-    "url": "/static/media/distantFort.796bfbca.png"
+    "revision": "c32781c8aefe84eff8c92cbf8cfdbbff",
+    "url": "/static/media/dunashee-hor.c32781c8.gif"
   },
   {
     "revision": "c860d557f7a5adc8e547fae0867f88b6",
@@ -272,6 +264,14 @@ self.__precacheManifest = [
     "url": "/static/media/fairy-ring0.dfe09889.gif"
   },
   {
+    "revision": "416f9bc13c7154065ef66c0d1f3f1191",
+    "url": "/static/media/fields-dusk.416f9bc1.png"
+  },
+  {
+    "revision": "8cf48e9c3b4f28fd8018d6802e61a2f6",
+    "url": "/static/media/distantFort-shadow.8cf48e9c.png"
+  },
+  {
     "revision": "c4c34e0348312589e1c89b6e4dd581c9",
     "url": "/static/media/boxes.c4c34e03.gif"
   },
@@ -300,7 +300,7 @@ self.__precacheManifest = [
     "url": "/static/media/click.e15794b2.wav"
   },
   {
-    "revision": "1594ca774401b4ddf599101c02ff5033",
+    "revision": "b2e63c2436395c692aa2c0c85ca6a338",
     "url": "/index.html"
   }
 ];

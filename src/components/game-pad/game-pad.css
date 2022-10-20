@@ -8,7 +8,7 @@
   #btn-a{
 	z-index:119;
 	position:fixed;
-	top:71%;
+	top:76%;
 	animation: fade-in 2s forwards;
 	
 }
@@ -28,7 +28,6 @@
 }
 
 #btn-a, #btn-b{
-
     color: gainsboro;
     font-size: 1em;
     width: 63px;
@@ -39,8 +38,8 @@
     margin-right: 15px;
     border-radius: 50%;
     z-index: 119;
-    margin-top: -27%;
-    left: 42%;
+    margin-top: 3%;
+    left: -27%;
     transform: scale(0.8);
 }
 #btn-text{

@@ -45,7 +45,8 @@ import useScreenOrientation from 'react-hook-screen-orientation';
 import fairyRing from '../../images/question-backgrounds/fairy-ring0.gif';
 import hill from '../../images/rainy-hill1.png';
 import blank from '../../images/blank.png';
-import Fields from '../../images/fields-twilight.png';
+import Fields from '../../images/fields1.png';
+import Stones from '../../images/stones1.png';
 import ShadowFields from '../../images/fields-dusk.png';
 import ReactRain from 'react-rain-animation';
 import "react-rain-animation/lib/style.css";
@@ -80,7 +81,7 @@ import EnterSilken from '../../components/silken/EnterSilken';
 import GamePad from '../../components/game-pad/game-pad.jsx'; 
 import AandB from '../../components/silken/silken.jsx';
 import Shadowhill from '../../images/shadow-hill.png';
-import distantFort from '../../images/distantFort.png';
+import distantFort from '../../images/dunashee-hor.gif';
 import rave from '../../images/color-square.gif'
 
 
@@ -112,7 +113,7 @@ export default function App() {
 	const [showScore, setShowScore] = useState(false);
 	const [showGlass, setShowGlass] = useState(0);
 	const [isOn, toggleIsOn] = useToggle();
-	const [showSettings, setSettings] = useState(1);
+	const [showSettings, setSettings] = useState(0);
 	let hints = [``,
 		``, `It is you!`, ``, ``,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[gotten]+`, you’ll see fine fun.`,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[localStorage.getItem('portrait')]+`, you’ll see fine fun.`,``,``,``,]
 	let hintsAnswersA = [``,``,``,``,``,``,``,``];
@@ -419,8 +420,8 @@ const[score, setScore] = useState(0)
 	
 	const [showOverworld, toggleShowOverworld]= useState(false)
 	return (<>
-		{showOverworld === false? <Overworld tallyX={0} avatar='null' whereAmI="westmeath" isOn={isOn} />:null}
-			{showOverworld===true? <div className='app' >
+		{showOverworld === true? <Overworld tallyX={0} avatar='null' whereAmI="westmeath" isOn={isOn} />:null}
+			{showOverworld===false? <div className='app' >
 		<Greeting isRaining={ currentQuestion >=13?true:false} />
 		
 			<ReactAudioPlayer src={currentQuestion === 0 ? theme0 : null} autoPlay />
@@ -446,14 +447,16 @@ const[score, setScore] = useState(0)
 			<img id="stars" src={stars} className={currentQuestion >= 3 ? "question-img" : "hidden"} alt="wheeling starfield" />		
 			<img src={distantFort} className="index-distant-fort" alt="distant fort on peninsula " />
 			
-			<img src={distantFortShadow} className={currentQuestion < 1 ? "index-distant-fort" : "index-distant-fort slow-fade"} alt="distant fort on peninsula " />
-			<img src={Fields} className={currentQuestion===9?"lower-fields":"hill-fields"} alt="distant fort on peninsula " />
+			{/* <img src={distantFortShadow} className={currentQuestion < 1 ? "index-distant-fort" : "index-distant-fort slow-fade"} alt="distant fort on peninsula " /> */}
+			<div className='field-container'>
+			<img src={Fields} className="hill-fields" alt="a rough circle of stones and some fields" />
 			<ReactAudioPlayer src={currentQuestion === 9? jam : null} autoPlay />
-{}
+				</div>
+					<img src={Stones} className="hill-stones" id="hill-stones" alt="a rough circle of stones and some fields" />
 			{currentQuestion === 9 ? () => {setTimeout(() => {
 				
 			runOnName(1000)}, 1000); }:null}
-			 <img src={ShadowFields} className={currentQuestion < 1 ? "index-shadow-fields" : "index-shadow-fields slow-fade"} alt="distant fort on peninsula " />
+			 {/* <img src={ShadowFields} className={currentQuestion < 1 ? "index-shadow-fields" : "index-shadow-fields slow-fade"} alt="distant fort on peninsula " /> */}
 			{/* <img src={ hill} className="hill"alt="rainy hill shadow-overlay " /> */}
 
 			{/* <img src={ Shadowhill}  className={currentQuestion < 1 ? "index-shadow-hill" : "index-shadow-hill slow-fade"}alt="rainy hill shadow-overlay " /> */}
@@ -566,23 +569,18 @@ const[score, setScore] = useState(0)
 { currentQuestion === 5 ? runOnName(2000):null}
 			
 			{currentQuestion === 1 ? <>
-				<CircularInput className="dial" value={value}  onChange={v => setValue(stepValue(v))}>{}
-					<CircularTrack />
-			{/* <img  src={avatar} className={value === 0 ? 'hidden':'avatar' } alt="Caniuse battus tv charactéir" />		 */}
-				
-			<CircularProgress />
-					<CircularThumb />
-				
-		</CircularInput>
-			
-		
-			</> : null}
-
-
-			{currentQuestion === 1 ? <>
+				<div className="input-elements-container">
 					<img src={lens} id="lens" alt="a glass 	" />
-				<div id="buttonmash" value={value} onClick={(value) => buttonMashClick(true, value)}>
 				</div>
+				<div className="input-elements-container">
+
+				<CircularInput className="dial" value={value} onChange={v => setValue(stepValue(v))}>{ }
+						<CircularTrack />
+							<CircularProgress />
+						<CircularThumb />
+					</CircularInput>
+				</div>
+
 					<p className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]}{ value === 0 || value === 10? null:  <Sparkles className="sparkles"
       color="yellow"
       count={28}
@@ -592,11 +590,17 @@ const[score, setScore] = useState(0)
       fadeOutSpeed={10}
 					flicker={true}
 					
-    />}</p>
+				/>}</p>
+				<div className = "input-elements-container">
 			
 				
+				<div id="buttonmash" value={value} onClick={(value) => buttonMashClick(true, value)}>
+				</div>
+				</div>
 			</> : null}
-		
+
+
+			
 			
 			
 			<img src={avatar1} className={gotten === 1 ? 'avatar-land' : 'hidden'} alt="the sky" />		
