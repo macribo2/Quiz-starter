@@ -6,7 +6,12 @@ import SettingsMenu from '../../components/settings-menu/settings-menu'
 import glass from '../../images/big-glass.png';
 import dirpad from '../../images/dirpad.png';
 import lens from '../../images/ciorcal-glass.png';
+import portrait from '../../images/dunashee-vert.gif'
 import geagaFace from '../../images/geagaFace.png';
+import door from '../../images/runed_door.png';
+import gradient from '../../images/gradient2.png';
+import fog2 from '../../images/fog2.png';
+import fog3 from '../../images/fog2.png';
 import avatar6 from '../../images/players/diamhraí0.gif';
 import avatar2 from '../../images/players/douglas.png';
 import avatar3 from '../../images/players/fianna0.png';
@@ -69,7 +74,7 @@ import black from '../../images/black.png'
 import drone from "../../audio/drone.wav"
 import tinkle from "../../audio/tinkle.wav"
 import tinkle1 from "../../audio/dink.wav"
-
+import Fortuna from "./../fortuna/fortuna"; 
 import click from "../../audio/click.wav"
 import stars from '../../images/stars.gif';
 import ReactAudioPlayer from 'react-audio-player';
@@ -328,7 +333,8 @@ const[score, setScore] = useState(0)
 	const buttonMashClick= (isCorrect, someVal) => { 
 		setIsFadedOut(false)
 		setIsFadedOut(true)
-			
+
+			console.log(someVal)
 		if (isCorrect) { 
 			setScore(score + 1)
 		}
@@ -385,7 +391,7 @@ const[score, setScore] = useState(0)
 	let choiceRing2Eng = [`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',]
 	let choiceRing2 = [``,`Fan nóméad`,`Las Solas`,`Iniúchadh féin`,`"Cá bhfuil mé?"`,`Siúl soir`, ,``,`Rith síar`,`Léim go Deilg Inis in aon preab amháin`,'rogha',`Las Solas`,`Imigh láithreach ó thuaidh`]
 	let choiceRingEng = [
-	``,
+	`toggleEnglish()`,
 		`Golden-headed Niamh`,
 		`
 		 The Pleasant Little Branch`,
@@ -409,7 +415,7 @@ const[score, setScore] = useState(0)
 		`Liam Mac Cárthaigh`,
 		`Abhartach`,
 		`Fionn mac Cumhail`,
-		`An Púca`,
+		`Púca na`,
 		`Fedelm an File`
 		
 		
@@ -445,14 +451,21 @@ const[score, setScore] = useState(0)
 			{currentQuestion >= 1 ? <img id="sky" src={sky} className="question-img" alt="the sky" /> : null}		
 			
 			<img id="stars" src={stars} className={currentQuestion >= 3 ? "question-img" : "hidden"} alt="wheeling starfield" />		
-			<img src={distantFort} className="index-distant-fort" alt="distant fort on peninsula " />
+			<img src={distantFort} className={currentQuestion >= 2 ?"index-distant-fort":null} alt="distant fort on peninsula " />
+
+
+			<img src={door} className="door" alt="closed stronghold door." />
+			<div className="fog" alt="fog"></div>
 			
 			{/* <img src={distantFortShadow} className={currentQuestion < 1 ? "index-distant-fort" : "index-distant-fort slow-fade"} alt="distant fort on peninsula " /> */}
 			<div className='field-container'>
-			<img src={Fields} className="hill-fields" alt="a rough circle of stones and some fields" />
+				<img src={Fields} className="hill-fields" alt="a rough circle of stones and some fields" />
+				<div className="fog2holder" alt="fog">
+					<img src={ fog2} className="fog2"alt="fog" />
+			</div>
+				
 			<ReactAudioPlayer src={currentQuestion === 9? jam : null} autoPlay />
 				</div>
-					<img src={Stones} className="hill-stones" id="hill-stones" alt="a rough circle of stones and some fields" />
 			{currentQuestion === 9 ? () => {setTimeout(() => {
 				
 			runOnName(1000)}, 1000); }:null}
@@ -479,7 +492,8 @@ const[score, setScore] = useState(0)
 						<div className='question-section'>
 					
 						<div className='question-count'> 		
-						</div>
+							</div>
+							<img src={ gradient} className="gradient"/>
 							<div className='question-text'>{ questions[currentQuestion].questionText}</div>
 
 						</div>
@@ -500,7 +514,6 @@ const[score, setScore] = useState(0)
 			</div> */}
 			{/* { currentQuestion >= 9 ? <Geaga/>:null} */}
 
-			<button id={currentQuestion===7|| currentQuestion=== 0 ? "hidden":"toggle-glass-btn" } onClick={toggleIsOn}	><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 
 			{currentQuestion === 4 ? < EnterSilken /> : null}
 			{currentQuestion === 5 ? < Silken /> : null}
@@ -569,7 +582,9 @@ const[score, setScore] = useState(0)
 { currentQuestion === 5 ? runOnName(2000):null}
 			
 			{currentQuestion === 1 ? <>
+				
 				<div className="input-elements-container">
+				
 					<img src={lens} id="lens" alt="a glass 	" />
 				</div>
 				<div className="input-elements-container">
@@ -580,6 +595,7 @@ const[score, setScore] = useState(0)
 						<CircularThumb />
 					</CircularInput>
 				</div>
+				<img src = {gradient}className="gradient" alt="gradiate to black" />
 
 					<p className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]}{ value === 0 || value === 10? null:  <Sparkles className="sparkles"
       color="yellow"
@@ -591,11 +607,18 @@ const[score, setScore] = useState(0)
 					flicker={true}
 					
 				/>}</p>
-				<div className = "input-elements-container">
+
+				<div className="input-elements-container">
 			
-				
 				<div id="buttonmash" value={value} onClick={(value) => buttonMashClick(true, value)}>
+				
+					
+					</div>
 				</div>
+				<div className="input-elements-container">
+					
+				{value * 10 === 8?  <Fortuna />:null}	
+					
 				</div>
 			</> : null}
 
@@ -631,7 +654,17 @@ const[score, setScore] = useState(0)
 			{currentQuestion === 9 ? <img src={dirpad} onClick={ dirpadHandler} className="dirpad"alt="" />:null}
 			{currentQuestion === 9 ? <img src={rave} className="rave" alt="flashing lights in the castle window." /> : null}
 			
+			<div className='stones-container'>
+			
+				<img src={Stones} className="hill-stones" id="hill-stones" alt="a rough circle of stones and some fields" />
+				<img src={ fog3} className="fog3"alt="fog" />
+				
+			</div>
 		</div>:null}
+
+		<img src={fog3} className="fog4" alt="" />
+		<img id="portrait"src={ portrait}></img>
+			<button id={currentQuestion===7|| currentQuestion=== 0 ? "hidden":"toggle-glass-btn" } onClick={toggleIsOn}	><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 	</>
 	
 	);

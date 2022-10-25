@@ -1,23 +1,27 @@
 self.__precacheManifest = [
   {
-    "revision": "430f898485c6c1983176",
-    "url": "/static/css/main.c1446a71.chunk.css"
+    "revision": "4a8d8e52c680adbd1700",
+    "url": "/static/css/main.48b087d5.chunk.css"
   },
   {
-    "revision": "430f898485c6c1983176",
-    "url": "/static/js/main.6e6d608d.chunk.js"
+    "revision": "4a8d8e52c680adbd1700",
+    "url": "/static/js/main.05c2c6ab.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "ebb7d64bfed8a7579a3f",
+    "revision": "f71fa01ae5b20aff076c",
     "url": "/static/css/2.7079e116.chunk.css"
   },
   {
-    "revision": "ebb7d64bfed8a7579a3f",
-    "url": "/static/js/2.37215a3c.chunk.js"
+    "revision": "f71fa01ae5b20aff076c",
+    "url": "/static/js/2.002b387f.chunk.js"
+  },
+  {
+    "revision": "4c998e7444dd7492d1cab2fc0336adce",
+    "url": "/static/media/ciorcal-glass.4c998e74.png"
   },
   {
     "revision": "f86401116e22234bed1999521b37a26b",
@@ -30,10 +34,6 @@ self.__precacheManifest = [
   {
     "revision": "b25ad113f1f02825960a31011419dc41",
     "url": "/static/media/shadow-hill.b25ad113.png"
-  },
-  {
-    "revision": "4c998e7444dd7492d1cab2fc0336adce",
-    "url": "/static/media/ciorcal-glass.4c998e74.png"
   },
   {
     "revision": "f0b2dbe94f318b5b426d26c1fd4105ff",
@@ -54,6 +54,10 @@ self.__precacheManifest = [
   {
     "revision": "e8e18fef78171d833501160b1cfdf922",
     "url": "/static/media/geagaFaceShadow.e8e18fef.png"
+  },
+  {
+    "revision": "53c3f79c8abd566433975924c4182aa8",
+    "url": "/static/media/gradient2.53c3f79c.png"
   },
   {
     "revision": "b8c3b5948f8ec53bba8367d1ca0f13fc",
@@ -168,6 +172,14 @@ self.__precacheManifest = [
     "url": "/static/media/dirpad.5a8e04ef.png"
   },
   {
+    "revision": "191c448273321350771358d724e37799",
+    "url": "/static/media/dunashee-vert.191c4482.gif"
+  },
+  {
+    "revision": "c333671d8f2d260d886ac60c25366af3",
+    "url": "/static/media/runed_door.c333671d.png"
+  },
+  {
     "revision": "9ac78f83033e2519828a51d521457c3a",
     "url": "/static/media/jump-up.9ac78f83.wav"
   },
@@ -192,8 +204,12 @@ self.__precacheManifest = [
     "url": "/static/media/462092__matrixxx__sparkling-star-04.c6b1320f.wav"
   },
   {
-    "revision": "b004304a22f53c10b355c9cddf544918",
-    "url": "/static/media/fields-twilight.b004304a.png"
+    "revision": "fb95b554cbfbc8f15347bb05c07e1951",
+    "url": "/static/media/fields1.fb95b554.png"
+  },
+  {
+    "revision": "22451eb8c536faf4ec0b64c4120c7bc3",
+    "url": "/static/media/stones1.22451eb8.png"
   },
   {
     "revision": "557767f5d75bc811e2dee1872f7b1a65",
@@ -206,6 +222,10 @@ self.__precacheManifest = [
   {
     "revision": "6651d0913af95cdc7e411fa7ea663f08",
     "url": "/static/media/dink.6651d091.wav"
+  },
+  {
+    "revision": "22a022e49308028ae4ce5a3770775850",
+    "url": "/static/media/fortuna.22a022e4.mp4"
   },
   {
     "revision": "44cf0bcb14a14eb95737bdf4b0001b5c",
@@ -300,7 +320,7 @@ self.__precacheManifest = [
     "url": "/static/media/click.e15794b2.wav"
   },
   {
-    "revision": "b2e63c2436395c692aa2c0c85ca6a338",
+    "revision": "51f0910ba521508569a96bfe50dc7e79",
     "url": "/index.html"
   }
 ];

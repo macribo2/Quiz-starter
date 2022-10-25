@@ -60,29 +60,33 @@ export default function Rings0(props) {
 	
 	let gottenRings0 = 0;
 	let Ring2AnsEng = ['',
-		'No thank you',
-		'I will, on a wage',
-		'I’ll go, certainly',
-		'Not till I get a drink',
-		'What is this',
-		'I\'ll see you there later',
-		'Alchemical Symbol for Hour',
-		'choice9',
-		'⚔',
+		'Tell me about Dunashee',
+		'I will go to  Dunashee',
+		'I’m not interested...',
+		'Where am I?',
+		'What is this?',
+		'En garde!',
+		'[other]',
+		'Goodbye',
 	]
 
 
 	
 	let Ring2Ans = ['',
-	'Ní go raibh maith agat',
-	'Rachfaidh, ar thuarastal',
-		'Rachfaidh cinnte',
-		'Ní go bhfaighidh mé deoch',
-		'Cad é seo',
-		'Feicfaidh mé ann ar ball thú',
-		'🝮',
-		'rogha9',
-		'⚔',
+	
+	// 'Ó Thuaidh',	
+// 	'"Cé tú féin?"',
+// 		'"Cá bhfuil mé?"',
+		
+'Inis dom faoi Dún na Sídh',
+'Rachfaidh mé go Dún na Sídh!',
+		'Ní spéis liom...',
+		'Cé túsa?',
+	'Cá bhfuil mé?',
+		'Cad é seo?',
+		'Ar aire!',
+		'[eile]',
+		'Slán.',
 	
 	]
 	function reportStepValue3 () {
@@ -92,7 +96,13 @@ export default function Rings0(props) {
 
 	}
 	return (
-		 <>
+		<>
+			
+			<div className="input-elements-container">
+		<img src={lens} id="lens" alt="a glass lens" />
+			</div>
+		<div className="input-elements-container">
+			
 				<CircularInput className="dial" value={value}  onChange={v => setValue3(stepValue3(v))}>{}
 					<CircularTrack />
 			{/* <img  src={avatar} className={value === 0 ? 'hidden':'avatar' } alt="Caniuse battus tv charactéir" />		 */}
@@ -100,9 +110,8 @@ export default function Rings0(props) {
 			<CircularProgress />
 					<CircularThumb />
 				
-		</CircularInput>
-		<img src={lens} id="lens" alt="a glass lens" />
-			
+			</CircularInput>
+			</div>
 		<p className='rings1' >{Ring2Ans[value * 10]}</p>
 
 
@@ -110,7 +119,8 @@ export default function Rings0(props) {
 			{props.isOn ? <p className="rings0Eng">{Ring2AnsEng[value * 10]}</p> : null}
 			{ localStorage.setItem('freagra1', value * 10)
 }
-			<button id="ring-glass-btn" onClick={props.toggleIsOn}	><img src={props.isOn? pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
+			<button id="ring-glass-btn" onClick={props.toggleIsOn
+			}	><img src={props.isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 			
 
 

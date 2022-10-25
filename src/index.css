@@ -279,6 +279,25 @@ width:90%;
     opacity: 1
   }
 }
+
+
+
+@keyframes fade-to {
+  0% {
+    opacity: 1
+  }
+  20% {
+    opacity: 0.9
+  }
+  100% {
+    opacity: 0.6
+  }
+
+  
+  100% {
+    opacity: 0.8
+  }
+}
 @keyframes scroll-sky {
   0% {
     left: 0px
@@ -296,7 +315,7 @@ width:90%;
 
   
   100% {
-    opacity: 0.6
+    opacity: 0.7
   }
 }
 
@@ -561,13 +580,14 @@ button svg {
   position:relative;
   /* animation: move-down 4s forwards; */
   /* border:4px solid blue; */
-  margin-top: 25%;
+  margin-top: 10%;
   
 }
 
 #hill-stones{
   
   background-size: cover;
+  width: 100%;
 
 }
 
@@ -604,7 +624,7 @@ button svg {
   left: 0%;
   top: 7px;
   transform: scale(1.1);
-   animation: fade-in 4s forwards;
+   /* animation: fade-in 12s forwards; */
 }
 
 .index-distant-fort {
@@ -629,10 +649,68 @@ button svg {
 
 .hill-fields,   .lower-fields {
   z-index: 4;
-  
+  margin-top:5%;
+  /* display:none; */
   /* animation: fade-out 4s forwards; */
 }
+.door{
+  position: fixed;
+  z-index: 3;
+  top: 42%;
+  left: 17%;
+  transform: scale(0.16);
+  animation: fade-in 12s forwards;
 
+}
+
+.fog,.fog2, .fog3,.fog4{
+  position: fixed;
+  pointer-events: none;
+  z-index: 4;
+  top: 0%;
+  left: 0%;
+  /* animation: fade-to 20s alternate-reverse linear; */
+opacity: 0.9;
+background-color: rgb(255, 255, 255);
+height: 100%;
+width: 100%;
+}
+
+.fog4{
+
+  z-index: 999;
+  animation: fade-out 3s linear 1s 1 forwards;
+
+}
+
+.fog2{
+  top:0;
+  left: 0;
+  height: 100%;
+  opacity:0.3
+
+}
+.fog3{opacity:0.3}
+.gradient{
+  position: fixed;
+  z-index: 6;
+  top: -27%;
+  left: 0%;
+opacity: 1;
+height: 100%;
+width: 100%;
+}
+
+.gradient2{
+
+  position: fixed;
+  z-index: 6;
+  top: 0%;
+  left: 0%;
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+}
 .dial {
   animation: fade-in-dial 3s forwards;
   z-index: 126;
@@ -645,7 +723,7 @@ button svg {
 }
 .input-elements-container, .field-container{
   pointer-events: none;
-  display: grid;
+  display: flex;
   justify-content:center;
   align-items: center;
   height:100%;
@@ -669,7 +747,9 @@ button svg {
 .stones-container{
   /* animation:move-down 4s forwards;
    */
-
+   left: 0%;
+   position: fixed;
+   justify-content: end;
 }
 
 .avatar {
@@ -677,7 +757,7 @@ button svg {
   z-index: 68;
   width: 24%;
   left: 73%;
-  top: 35%;
+  top: 50%;
   display: block; 
 
 }
@@ -732,15 +812,15 @@ button svg {
 }
 
 
-.dial-text {
+.dial-text, #pO {
   position: fixed;
   z-index: 995;
   font-size: 3em;
   font-weight: bold;
   text-align: center;
-  left: 8%;
+  left: 0%;
   top: -11%;
-  width: 84%;
+  width: 100%;
   background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
   -webkit-background-clip: text;
   background-clip: text;
@@ -751,6 +831,18 @@ button svg {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
 pointer-events: none;
+background-color: #000;}
+#pO{
+
+  top: 4%;
+
+}
+#pOf{
+position: fixed;
+  top: 81%;
+  left:10%;
+  z-index: 99;
+
 }
 @keyframes move-down {
   0%{
@@ -798,7 +890,8 @@ position: relative;
   width: 130px;
   z-index: 9902;
   border-radius: 50%;
-  /* border: 4px solid green; */
+  border: 4px solid #9e9e9e;
+  pointer-events: all;
 }
 
 #mob-effect,
@@ -823,8 +916,11 @@ position: relative;
   color: rgb(136, 132, 13);
   position: fixed;
   background-color: rgba(0, 0, 0, 0);
-  left: 5%;
-  top: 87%;
+  
+  left: 84%;
+  top: 40%;
+
+
   z-index: 450;
   width: 25px;
   height: 25px;
@@ -881,12 +977,13 @@ position: relative;
 
 
 
-  .index-distant-fort {
+  .index-distant-fort, #distant-fort{
     position: fixed;
     z-index: 3;
-    left: 26%;
-    top: 13%;
     transform: scale(2);
+    left: 0;
+    top: 0;
+    width: 100%;
     /* animation: fade-out 4s forwards; */
   }
 

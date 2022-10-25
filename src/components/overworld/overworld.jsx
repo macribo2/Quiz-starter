@@ -3989,7 +3989,7 @@ export default class Overworld extends React.Component {
                     else {
                         (this.setState({ isOn: true })
                         )
-                        {/* alert('n') */}
+                        alert('n')
                     }
                     setTimeout(()=> { this.setState({ isOn: false }) }, 3000)
                         
