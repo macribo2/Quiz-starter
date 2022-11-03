@@ -60,13 +60,14 @@ export default function Rings0(props) {
 	
 	let gottenRings0 = 0;
 	let Ring2AnsEng = ['',
-		'Tell me about Dunashee',
-		'I will go to  Dunashee',
-		'I’m not interested...',
+		'Hup!',
+		'God be with you',
+		'Who are you yourself?',
 		'Where am I?',
 		'What is this?',
 		'En garde!',
-		'[other]',
+		'How is it going?',
+		'Which way are you?',
 		'Goodbye',
 	]
 
@@ -78,15 +79,16 @@ export default function Rings0(props) {
 // 	'"Cé tú féin?"',
 // 		'"Cá bhfuil mé?"',
 		
-'Inis dom faoi Dún na Sídh',
-'Rachfaidh mé go Dún na Sídh!',
-		'Ní spéis liom...',
-		'Cé túsa?',
+'Hup',
+'Dia dhuit',
+		'Cé tú féin?',
 	'Cá bhfuil mé?',
 		'Cad é seo?',
 		'Ar aire!',
-		'[eile]',
+		'Go dté mar atá?',
+		'Cén chaoí a bhuil tú?',
 		'Slán.',
+
 	
 	]
 	function reportStepValue3 () {

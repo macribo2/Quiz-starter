@@ -4,15 +4,13 @@ import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
 import lens from '../../images/ciorcal-glass2.png';
 import portrait from '../../images/portrait.gif'
-import { BtnA } from './../ui/btn-a';
 import { BtnB } from './../ui/btn-b';
-import { BtnSelect } from '../ui/btn-select'
-import { BtnStart } from '../ui/btn-start'
 import promptVid from '../../vid/stars.mp4'
 import ciaroga from '../../images/players/rógaire0.png'
 import phone1 from '../../images/phone-0.png';
 import glass from '../../images/big-glass.png';
-
+import jam from '../../audio/Fred van Eps - Irish Hearts.mp3'
+import ReactAudioPlayer from 'react-audio-player';
 // import county emblems
 import carlow from "../../images/counties/leinster/carlow.png"
 import dublin from "../../images/counties/leinster/icons/dublin.png"
@@ -51,12 +49,6 @@ import wexford from "../../images/counties/leinster/icons/wexford.png"
 import wicklow from "../../images/counties/leinster/icons/wicklow.png"
 
 
-
-import { BtnL } from './../ui/btn-l';
-import { BtnR } from './../ui/btn-r';
-import { BtnU } from './../ui/btn-u';
-import { BtnD } from './../ui/btn-d';
-import { BtnM } from './../ui/btn-m';
 // import { Register } from './../register/register'
 import $ from 'jquery';
 import empty from "../../images/empty.png"
@@ -64,38 +56,43 @@ import shamrocks from "../../images/overworld/shamrock.png"
 //empty image for geaga beceause they're just handlers for player triggering geaga event. Geaga image now in geagaSprite
 import blocked from '../../images/empty.png'
 import sea0 from '../../images/tonnta1.gif'
-import sea1 from '../../images/tonnta2.gif'
-import sea2 from '../../images/tonnta3.gif'
-import sea3 from '../../images/tonnta1.gif'
+// import sea1 from '../../images/tonnta2.gif'
+// import sea2 from '../../images/tonnta3.gif'
+// import sea3 from '../../images/tonnta1.gif'
 import { Col, Row } from 'react-bootstrap'
 import town0 from '../../images/emerald.png'
-import CountyDetails from './countyDetails.json';
-import geagaSprite from "../../images/players/rógaire0.png"
-import rogue from "../../images/players/rógaire0.png"
-// import troll from "../../img/characters/troll.gif"
-// import poet from "../../img/characters/poet.gif"
-// import druid from "../../img/characters/druid.gif"
-import gallowglass from "../../images/players/rógaire0.png"
-import sage from "../../images/players/rógaire0.png"
-import occultist from "../../images/players/rógaire0.png"
-import fenian from "../../images/players/rógaire0.png"
+
+
+import avatar1 from '../../images/players/spéirbhean0.gif';
+import avatar2 from '../../images/players/douglas.png';
+import avatar3 from '../../images/players/fianna0.png';
+import avatar4 from '../../images/players/gotach0.png';
+import avatar5 from '../../images/players/rógaire0.png'
+import avatar6 from '../../images/players/diamhraí0.gif';
+import avatar7 from '../../images/players/seanchaí0.png';
+import avatar8 from '../../images/players/pooka.png';
+import avatar9 from '../../images/players/poet.png';
 import mobile from '../../images/players/rógaire0.png'
 let whereAmI = 'Dublin';
 let whereAmIHolder = 'null';
-let avatar = '';
-
-
+let avatar = ""
 function setPlayerIcon() {
-    switch (avatar) {
-        // case 'rogue': return rogue;
-        // case 'sage': return sage;
-        // case 'poet': return poet;
-        // case 'druid': return druid;
-        // case 'gallowglass': return gallow
-        // case 'troll': return troll;
-        // case 'occultist': return occultist;
-        // case 'fenian': return fenian;
-        default: return rogue;
+    let overworldPortrait = localStorage.getItem('portrait');
+    // alert(overworldPortrait)
+    // { localStorage.setItem('portrait',"")}
+
+    switch (overworldPortrait) {
+        case "0": return avatar1;
+        case "1": return avatar1;
+        case "2": return avatar2;
+        case "3": return avatar3;
+        case "4": return avatar4;
+        case "5": return avatar5;
+        case "6": return avatar6;
+        case "7": return avatar7;
+        case "8": return avatar8;
+        case "9": return avatar9;
+        default:  return avatar9;
     }
 }
 export default class Overworld extends React.Component {
@@ -127,8 +124,6 @@ export default class Overworld extends React.Component {
         $.getJSON('mapData.json', function (county) {
             
             $.each(county, function (key, val) {
-                // console.log("val " + val.co)
-                // console.log("val.county " + val.county)
 
                 if (val.co === imreoir.whereAmI) {
                     $('#output').html(val.county)
@@ -158,9 +153,9 @@ export default class Overworld extends React.Component {
                         if (localStorage.whereAmI === 'antrim' || localStorage.whereAmI === 'down' || localStorage.whereAmI === 'louth' || localStorage.whereAmI === 'dublin' || localStorage.whereAmI === 'wicklow' || localStorage.whereAmI === 'wexford') {
                             $('.sea').css('background-image',  sea0 )
                         } else {
-                            if (whichSea === 2) { $('.sea').css('background-image',  sea1) }
-                            if (whichSea === 1) { $('.sea').css('background-image',  sea2) }
-                            if (whichSea === 3) { $('.sea').css('background-image',  sea3) }
+                            if (whichSea === 2) { $('.sea').css('background-image',  sea0) }
+                            if (whichSea === 1) { $('.sea').css('background-image',  sea0) }
+                            if (whichSea === 3) { $('.sea').css('background-image',  sea0) }
                         }
                         setTimeout(function () {
 
@@ -194,7 +189,7 @@ export default class Overworld extends React.Component {
         })
 
         let imreoir = {
-            ainm: "Uallach", craobh: "", from: "Ċill Ċainniġ", slí: "Draoi", avatar: "../../img/characters/rando0.png", whereAmI: 'donegal'
+            ainm: "Uallach", craobh: "", from: "Ċill Ċainniġ", slí: "Draoi", avatar: setPlayerIcon(), whereAmI: 'donegal'
         }
         imreoir.whereAmI = 'wicklow';
 
@@ -2969,7 +2964,6 @@ export default class Overworld extends React.Component {
         $.getJSON('mapData.json', function (county) {
 
             $.each(county, function (key, val) {
-                console.log("TESTING getJSON CALL mapData.json FROM INSIDE JQ IN baile.jsx")
                 console.log("val " + val.co)
                 console.log("val.county " + val.county)
                 if (val.co === imreoir.whereAmI) {
@@ -3200,10 +3194,18 @@ export default class Overworld extends React.Component {
 
             }
         }
+        function updateEventReport(report) {
+            $('#event-report').html(report)
+            $('#event-report').fadeIn()
+            setTimeout(function(){
+                $('#event-report').fadeOut()
 
-        $('#north').on('touchstart', function () {
+            },1500)
+         }        $('#north').on('touchstart', function () {
             // playerFacing = imreoir.avatar;
-
+             updateEventReport('ó thuaidh')
+             
+             
             if (playerRow > 0) {
                 lastPressed = 'up';
 
@@ -3220,6 +3222,8 @@ export default class Overworld extends React.Component {
 
         $('#south').on('touchstart', function () {
             // !keyboardActive;
+            updateEventReport('ó dheas')
+
             function handleFirstDown() {
                 // keyboardActive;
                 $('#océ').css('visibility', 'visible');
@@ -3244,6 +3248,7 @@ export default class Overworld extends React.Component {
         });
         $('#east').on('touchstart', function () {
             // playerFacing = imreoir.avatar;
+            updateEventReport('soir')
 
             if (playerColumn < COLUMNS - 1) {
                 gameObjects[playerRow][playerColumn] = 0;
@@ -3257,6 +3262,9 @@ export default class Overworld extends React.Component {
 
         });
         $('#west').on('touchstart', function () {
+            updateEventReport('siar')
+
+
 
             // playerFacing = imreoir.avatar;
 
@@ -3631,7 +3639,7 @@ export default class Overworld extends React.Component {
 
         setTimeout(function () {
             // $('#stage').css('opacity', '0.6');
-
+            setPlayerIcon();
             $('#stage').fadeIn();
             $('.toolbar').fadeIn();
 
@@ -3684,10 +3692,9 @@ export default class Overworld extends React.Component {
             }
         })
 
-
         let whereAbouts;
         function helloGeaga() {
-            // alert();
+            // alert('helloGeaga');
             whereAmI = whereAmIHolder;
             imreoir.whereAmI = whereAmI;
             // $('#register').removeClass('hidden')
@@ -3881,6 +3888,7 @@ export default class Overworld extends React.Component {
                 {/* registration resources */}
 
                 {/* {this.state.registerMenu ? <Register /> : null} */}
+                <ReactAudioPlayer src= {jam } autoPlay />
 
 
 
@@ -3981,15 +3989,15 @@ export default class Overworld extends React.Component {
                     {whereAmI === 'other' ? <img src={other} alt="county pixelart emblem." className="emblem-img" /> :null}
                     <p id="output"></p>
                 </div> 
-               <button id="toggle-glass-btn" onClick={()=>{
+               <button id="toggle-glass-btn2" onClick={()=>{
                     if (this.state.isOn) {
                         this.setState({ isOn: false })
-                        
+                        console.log("hi from toggle glass")
+                    
                     }
                     else {
                         (this.setState({ isOn: true })
                         )
-                        alert('n')
                     }
                     setTimeout(()=> { this.setState({ isOn: false }) }, 3000)
                         
@@ -3997,7 +4005,8 @@ export default class Overworld extends React.Component {
                 
                 }}	><img src={this.state.isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 
-                <div ><img id="portrait"src={ portrait}></img>
+                <div ><img id="portrait" src={portrait}></img>
+                    <div id="event-report"></div>
 
  </div>
  

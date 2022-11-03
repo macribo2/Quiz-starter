@@ -1,3 +1,8 @@
+
+Shinrin-Yoku, Patrick De Arteaga.
+Royalty free Music from patrickdearteaga.com 
+
+
 Starter code for quiz-app beginner react project
 
 - clone repo

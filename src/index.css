@@ -9,7 +9,16 @@
 }
 
 
-
+.distant-town{
+  /* margin-top: -16%; */
+  /* margin-left: -26%; */
+  position: fixed;
+  z-index: 4;
+top: 0;
+left: 0%;
+height: 150%;
+width: 100%;
+animation: waves 10s infinite alternate-reverse;}
 body {
 
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -76,6 +85,8 @@ width: 740px;
 
 
 #sky {
+  pointer-events: none;
+
   height: 100%;
   position: fixed;
   width: auto;
@@ -264,11 +275,7 @@ width:90%;
   /* border:4px solid red; */
   /* border-radius:50%; */
 }
-@keyframes lower-fields{
 
-  0%{top:52%}
-  100%{top:56%}
-}
 @keyframes fade-in {
   0% {
     opacity: 0
@@ -277,6 +284,16 @@ width:90%;
   
   100% {
     opacity: 1
+  }
+}
+@keyframes waves {
+  0% {
+    top: 0
+  }
+
+  
+  100% {
+    top: -100%;
   }
 }
 
@@ -581,7 +598,7 @@ button svg {
   /* animation: move-down 4s forwards; */
   /* border:4px solid blue; */
   margin-top: 10%;
-  
+  pointer-events: none;
 }
 
 #hill-stones{
@@ -623,11 +640,14 @@ button svg {
   z-index: 3;
   left: 0%;
   top: 7px;
-  transform: scale(1.1);
+
+
    /* animation: fade-in 12s forwards; */
 }
 
 .index-distant-fort {
+  pointer-events: none;
+
     position: fixed;
   z-index: 3;
   left: 0%;
@@ -636,7 +656,10 @@ button svg {
   height:100%;
   /* transform: scale(1.1); */
    animation: fade-in 4s forwards;
-}
+   border:44px solid red;
+   transform: scale(1.1) skew(15deg, 15deg);
+
+  }
 
 .index-shadow-fields {
   position: fixed;
@@ -649,9 +672,13 @@ button svg {
 
 .hill-fields,   .lower-fields {
   z-index: 4;
-  margin-top:5%;
-  /* display:none; */
+  width: 110%;
+  position: fixed;
+  margin-top: 34%;
+  /* display: none; */
   /* animation: fade-out 4s forwards; */
+  margin-left: 18px;
+
 }
 .door{
   position: fixed;
@@ -670,7 +697,7 @@ button svg {
   top: 0%;
   left: 0%;
   /* animation: fade-to 20s alternate-reverse linear; */
-opacity: 0.9;
+opacity: 0.2;
 background-color: rgb(255, 255, 255);
 height: 100%;
 width: 100%;
@@ -692,6 +719,7 @@ width: 100%;
 }
 .fog3{opacity:0.3}
 .gradient{
+  pointer-events: none;
   position: fixed;
   z-index: 6;
   top: -27%;
@@ -741,6 +769,7 @@ width: 100%;
   top:0%;
   /* animation:move-down 8s forwards; */
   z-index: 4;
+  pointer-events: none;
 
 }
 
@@ -750,14 +779,15 @@ width: 100%;
    left: 0%;
    position: fixed;
    justify-content: end;
+   display:none;
 }
 
 .avatar {
-  position: fixed;
+  position: relative;
   z-index: 68;
-  width: 24%;
-  left: 73%;
-  top: 50%;
+  /* width: 24%; */
+  /* left: 73%; */
+  /* top: 50%; */
   display: block; 
 
 }
@@ -780,13 +810,17 @@ width: 100%;
   animation: fade-in 2s ease-in 2s 1 forwards;
 }
 .avatar-holder {
-  top: 50%;
-  left: 57%;
+  
+  top: 0%;
+  left: 0%;
   /* border: 4px solid blue; */
   display: flex;
   justify-content: center;
-  z-index: 69;
-
+  z-index: 699;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  transform: scale(0.5);
 }
 
 .avatarholder {
@@ -844,20 +878,7 @@ position: fixed;
   z-index: 99;
 
 }
-@keyframes move-down {
-  0%{
-    top:0%;
 
-  }
-  50%{
-    top:0%;
-    
-  }
-  100%{
-    top:50%;
-    
-  }
-}
 @keyframes rainbow_animation {
   0%,100% {
       background-position: 0 0;
@@ -868,7 +889,7 @@ position: fixed;
   }
 }
 .lower-fields{
-animation: lower-fields 3s forwards;
+/* animation: lower-fields 3s forwards; */
 
 }
 .sparkles{
@@ -893,7 +914,7 @@ position: relative;
   border: 4px solid #9e9e9e;
   pointer-events: all;
 }
-
+  
 #mob-effect,
 #mob-text,
 #suggest-mobile {
@@ -908,7 +929,8 @@ position: relative;
 
 
 #toggle-settings-btn,
-#toggle-glass-btn {
+#toggle-glass-btn, #toggle-glass-btn2 {
+
   display: grid;
   justify-content: center;
   align-content: center;
@@ -918,7 +940,7 @@ position: relative;
   background-color: rgba(0, 0, 0, 0);
   
   left: 84%;
-  top: 40%;
+  top: 50%;
 
 
   z-index: 450;
@@ -930,7 +952,8 @@ position: relative;
 
 
 }
-
+ #toggle-glass-btn2 {
+  z-index: 455;}
 
 
 @media only screen and (min-width: 1024px) {
@@ -984,6 +1007,7 @@ position: relative;
     left: 0;
     top: 0;
     width: 100%;
+    border:4px solid orange;
     /* animation: fade-out 4s forwards; */
   }
 

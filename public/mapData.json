@@ -17,13 +17,19 @@
       "Suí an Róin"
     ],
     "locationsEng": [
-      "Cluain Ṁic Nóis",
-      "Éadan Doire",
-      "Biorra",
-      "Cionn Eitigh",
-      "Ráth Iomġáin",
-      "Suí an Róin"
-    ]
+
+     "Meadow of the Sons of Nós ( Clonmacnoise )",
+      "Hill-brow of the oak wood ( Edenderry ) ",
+
+      "plain of water ( Birr )",
+     
+      "The head of Princess Eitigh ( Kinnitty )",
+      
+      "Iomgháin's ring-fort ( Rathangan )",
+       
+      "Seat of the seal ( Shinrone )"
+
+     ]
   },
   {
     "emblem": "louth",
@@ -37,12 +43,16 @@
       "Baile an Ġearlánaigh"
     ],
     "locationsEng": [
-      "Dún Dealgan",
-      "An Grianfort",
-      "Ceann Ċloċair",
-      "Baile Átha Ḟirdia",
-      "Poll an Phúca",
-      "Baile an Ġearlánaigh"
+     
+      "The fort of Dealgan - a Fir Bolg Chieftain (Dundalk)",
+      "The sun fort (Greenore)",
+      
+      "Rocky headland (Clogherhead)", 
+      "The ford of Ferdia (Ardee)",
+      "Hole of the Pooka (Puckstown)",
+      "Gernon’s Town (Castlebellingham)"
+      
+
     ],
     "county": "Co. An Lú",
     "mapData": "[[3,3,3,2,2,2,2,1,1,1],[3,3,0,0,0,0,0,0,32,1],[3,3,0,0,0,0,0,0,0,1],[4,4,0,0,0,30,0,31,0,1],[4,4,0,0,0,0,1,1,1,1],[4,0,0,0,0,0,1,1,1,1],[4,0,0,0,34,0,35,1,1,1],[5,5,33,0,0,0,0,1,1,1],[5,5,0,0,0,0,0,1,1,1],[5,5,5,6,6,6,6,1,1,1]]",
@@ -63,12 +73,13 @@
       "Dún Ċormaic"
     ],
     "locationsEng": [
-      "Coill an Iarainn",
+
+      "Forest of Iron (Eng. Killinierin)",
       "Inis Córṫaidh",
-      "Poll an Phúca",
-      "Maolán na nGaḃar",
-      "An Abhainn Dubh",
-      "Dún Ċormaic"
+      "Hole of the Pooka (Pollaphuca)",
+      "The Grazing of Goats (Mullinagore)",
+      "    The Black River (Owenduff)",
+      "Cormac's fort (Duncormick)"
     ],
     "county": "Co. Loch Garman",
     "mapData": "[[3,3,3,2,2,2,2,9,9,1],[3,3,3,3,3,0,30,0,0,1],[3,3,3,3,0,0,0,0,0,1],[3,3,3,0,0,0,0,0,0,1],[4,4,0,0,32,0,31,0,1,1],[4,4,0,0,0,33,0,0,1,1],[4,4,0,0,0,0,0,0,1,1],[5,5,5,34,0,0,0,0,1,1],[5,5,1,0,0,0,35,0,1,1],[5,5,5,6,1,1,1,1,1,1]]",
@@ -89,12 +100,12 @@
       "Brú Rí"
     ],
     "locationsEng": [
-      "Pailis Ċaonraí",
-      "Poll an Phúca",
-      "Caisleán Uí Ċonaill",
-      "Áth na bḞuinseog",
+      "The palisaded Castle of Kenry (Pallaskenry)",
+      "The Pooka's hole (Poulaphouca)",
+      "O Connell's Castle (Castleconnell) ",
+      "  Ford of the Ash (Ashford)",
       "An Ḟeoṫanaċ",
-      "Brú Rí"
+      " Abode of kings (Bruree)"
     ],
     "county": "Co. Luimnach",
     "mapData": "[[1,1,1,1,1,1,2,2,9,9],[1,1,1,1,1,1,0,0,0,9],[1,1,1,30,0,31,0,0,0,9],[4,0,0,0,0,0,0,0,32,8],[4,0,0,0,0,0,0,0,0,8],[4,0,0,0,0,0,35,0,8,8],[4,0,33,0,34,0,0,0,0,8],[5,0,0,0,6,0,0,0,0,7],[5,5,5,6,6,6,6,7,7,7],[5,5,5,6,6,6,6,7,7,7]]",
@@ -115,12 +126,12 @@
       "Deilginis"
     ],
     "locationsEng": [
-      "Fionnġlas",
-      "Cluain Dolcáin",
-      "Cluain Tarbh",
-      "Binn Éadair",
-      "Dún Laoiġaire",
-      "Deilginis"
+      "Clear streamlet (Finglas)",
+      "Dolcan's meadow (Clondalkin)",
+      "Meadow of Bulls (Clontarf)",
+      "Éadar's peak (Howth)",
+      "Fort of High King Laoghaire Mac Néill (Dun Laoghaire)",
+      "Thorn Island (Dalkey)"
     ],
     "county": "Co. Baile Átha Ċliath",
     "mapData": "[[3,3,3,2,2,2,2,9,9,1],[3,3,0,0,0,0,0,0,1,1],[3,3,0,0,0,0,0,0,1,1],[4,4,0,0,30,0,0,0,1,1],[4,0,0,0,0,0,33,1,1,1],[4,0,0,0,31,32,0,1,1,1],[4,0,0,0,0,0,0,1,1,1],[5,5,0,0,0,0,34,1,1,1],[5,5,5,0,0,0,0,35,1,1],[5,5,5,6,6,6,7,1,1,1]]",
@@ -142,7 +153,7 @@
     ],
     "locationsEng": [
       "Gleann Éada",
-      "Garḃach",
+      "Rough land (Garbhach)",
       "Droim Seanḃó",
       "Aċaḋ na Síleann",
       "Fíonach",
@@ -245,10 +256,10 @@
       "An Sciobairín"
     ],
     "locationsEng": [
-      "Cill na Mallaċ",
+      "Church of the Summits (Buttevant)",
       "Sliabh an Nóglaigh",
       "Gleann an Ṗreaċáin",
-      "Beal na mḂláth",
+      "Mouth of the ford of the buttermilk (Bealnablath)",
       "Cionn tSáile",
       "An Sciobairín"
     ],

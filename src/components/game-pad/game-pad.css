@@ -61,12 +61,12 @@
 #btn-left{
 	border:5px solid blueviolet;
 	background-color: blueviolet;
-
+	
 	height:50px;
 	width:50px;
 	position:relative;
 	z-index: 50;
-
+	
 	background-color: rgb(83, 60, 90);
 	border-top: 3px solid rgba(170, 176, 177,0.5);
 	
@@ -115,14 +115,14 @@
 	position:relative;
 	z-index: 50;
 	top:14px;
-
+	
 	
 }
 
 
 
 #btn-txt {
-    margin-top: 9px;
+	margin-top: 9px;
     pointer-events: none;
     justify-content: center;
     text-align: center;

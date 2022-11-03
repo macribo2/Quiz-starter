@@ -1,78 +1,20 @@
 #silken{
 
-    transform: scale(0.25);  
+    transform: scale(0.5);  
 }
 .silken-holder{
-	z-index: 30;
+    pointer-events: none;
+	z-index: 930;
     position: fixed;
-    top: 35%;
-    left:26%;
+    top: 25%;
+    left:0%;
 }
 
 .enter-silken{
     
-    left: 26%;  
 	z-index: 3;
     position:fixed;
     top:27%;
-    animation:drop-down 1s forwards;
+    /* animation:drop-down 1s forwards; */
   }
-
-  #depart-silk{
-position:fixed;
-    animation:leap-away 4s forwards;
-
-  }
-
- 
-  @keyframes leap-away{
-  
-    0% {
-      top: 35%;
-      left:26%;
-      opacity: 1;
-      transform: scale(0.35);  
-
-    }
-
-20%{
-  top: -53%;
-
-
-}
-96% {
-      top: 16%;
-      left:0%;
-transform: scale(0.1);
-opacity: 1;
-
-
-
-    }
-    100%{
-      opacity: 0;
-transform: scale(0.1);
-
-
-    } 
-  } 
-  @keyframes drop-down {
-  
-    0% {
-      top: 27%;
-      z-index: 3;
-
-    }
-  
-     50%{top:15%;
-      z-index: 3;
-        
-}
-
-100% {
-      top: 35%;
-      left:26%;
-    z-index: 300 ;
-
-    } 
-  }
+#hidden{display: none;}

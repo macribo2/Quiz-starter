@@ -147,7 +147,7 @@
   justify-content: center;
   top: 0;
   left: -5%;
-  opacity: 1;
+  opacity: 0;
 }
 
 .under-stage-right {
@@ -157,8 +157,14 @@
   justify-content: center;
   top: 0;
   left: 77%;
+  opacity: 0;
 }
-
+#event-report{
+  z-index: 99;
+  position: fixed;
+  top:80%;
+  left:80%;
+}
 
 /* .under-stage-left-b {
 		  z-index: 31;
@@ -401,9 +407,9 @@ p {
   }
 
   100% {
-    transform: scale(1.0);
-    margin-left: -6%;
-    margin-top: -12%;
+    transform: scale(0.9);
+    margin-left: -16%;
+    margin-top: -5%;
   }
 
 }
