@@ -304,7 +304,7 @@ export default class Fortuna extends React.Component {
 				`The Hidden`,
 				`The Wave`,
 				`The Grunter`,
-				`High performance equipment`,
+				`with high performance equipment`,
 				`The Obelisk`,
 				`under candle light`,
 				`of the cats`,
@@ -499,7 +499,7 @@ export default class Fortuna extends React.Component {
 		return (
 			
 			<div className="fortuna">
-				<video id="fortuna-vid" autostart="true" autoPlay="true" loop="true" fluid="false" src={fortuna} type={this.props.type} onTouchEnd={function (){ forFunction() }}
+				<video id="fortuna-vid" autostart="true" autoPlay={true} loop={true} fluid="false" src={fortuna} type={this.props.type} onTouchEnd={function (){ forFunction() }}
 					
 				/>
 				<h1 id="pO"></h1>

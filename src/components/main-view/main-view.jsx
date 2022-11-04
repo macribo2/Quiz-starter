@@ -455,8 +455,8 @@ const[score, setScore] = useState(0)
 	const [showOverworld, toggleShowOverworld]= useState(false)
 	return (<>
 			<img src={distantTown} className="distant-town" alt="distant town large gif" />
-		{showOverworld === true ? <Overworld tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="westmeath" isOn={isOn} />:null}
-			{showOverworld===false? <div className='app' >
+		{showOverworld === false ? <Overworld tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} />:null}
+			{showOverworld===true? <div className='app' >
 		<Greeting isRaining={ currentQuestion >=13?true:false} />
 		
 			{/* <ReactAudioPlayer src={currentQuestion === 0 ? theme0 : null} autoPlay /> */}
