@@ -53,6 +53,7 @@ import wicklow from "../../images/counties/leinster/icons/wicklow.png"
 import $ from 'jquery';
 import empty from "../../images/empty.png"
 import shamrocks from "../../images/overworld/shamrock.png"
+import geaga from "../../images/geaga0.png"
 //empty image for geaga beceause they're just handlers for player triggering geaga event. Geaga image now in geagaSprite
 import blocked from '../../images/empty.png'
 import sea0 from '../../images/tonnta1.gif'
@@ -72,10 +73,15 @@ import avatar6 from '../../images/players/diamhraí0.gif';
 import avatar7 from '../../images/players/seanchaí0.png';
 import avatar8 from '../../images/players/pooka.png';
 import avatar9 from '../../images/players/poet.png';
+import geaga1 from '../../images/geaga.png';
 import mobile from '../../images/players/rógaire0.png'
 let whereAmI = 'Dublin';
 let whereAmIHolder = 'null';
 let avatar = ""
+function setGeagaIcon() { 
+return geaga1
+}
+
 function setPlayerIcon() {
     let overworldPortrait = localStorage.getItem('portrait');
     // alert(overworldPortrait)
@@ -3057,7 +3063,7 @@ export default class Overworld extends React.Component {
                 [1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
                 [1, 1, 0, 0, 0, 0, 0, 0, "G", 1],
                 [1, 1, 0, 0, 0, 0, 0, 0, "G", 1],
-                [1, 1, 0, 0, 0, 0, 0, 0, "G", 1],
+                [1, 1, 0, 0, 0, 0, 0, "C", "G", 1],
                 [1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
                 [1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -3068,8 +3074,8 @@ export default class Overworld extends React.Component {
         var gameObjects =
             [
                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, "G", 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, "C", 0, 0, 0, 0],
                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 [0, 0, 0, 0, "P", 0, 0, 0, 0, 0],
                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -3183,8 +3189,8 @@ export default class Overworld extends React.Component {
                     playerColumn = column;
                 }
                 if (gameObjects[row][column] === CONTACT) {
-                    // contactRow = row;
-                    // contactColumn = column;
+                    contactRow = row;
+                    contactColumn = column;
                 }
                 if (gameObjects[row][column] === GEAGA) {
                     geagaRow = row;
@@ -3311,11 +3317,13 @@ export default class Overworld extends React.Component {
             }
 
             gameObjects[playerRow][playerColumn] = PLAYER;
-            // gameObjects[geagaRow][geagaColumn] = GEAGA;
-            // gameObjects[contactRow][contactColumn] = CONTACT
-            // if (gameObjects[contactRow][contactColumn] === gameObjects[playerRow][playerColumn]) {
-            //     window.location.replace('http://167.172.184.73:1337/contact');
-            // }
+            gameObjects[geagaRow][geagaColumn] = GEAGA;
+            gameObjects[contactRow][contactColumn] = CONTACT
+            if (gameObjects[contactRow][contactColumn] === gameObjects[playerRow][playerColumn]) {
+                // window.location.replace('http://167.172.184.73:1337/contact');
+            
+            alert("miao")
+            }
 
         };
 
@@ -3617,7 +3625,8 @@ export default class Overworld extends React.Component {
 
                             break;
                         case GEAGA:
-                            cell.src = { shamrocks };
+                            cell.src =  setGeagaIcon() ;
+                            cell.id = 'geaga'
                             break;
                         case CONTACT:
                             cell.src = "../img/contact.png";

@@ -164,6 +164,7 @@
   position: fixed;
   top:80%;
   left:80%;
+  color: rgba(240, 248, 255, 0.461);
 }
 
 /* .under-stage-left-b {
@@ -257,6 +258,21 @@ p {
     transform: scale(1.1);
     margin-left: -20%;
     margin-top: -12%;
+  }
+
+}
+
+@keyframes zoom-to-geaga {
+
+  0% {
+    transform: scale(1.2)
+  }
+
+  100% {
+    transform: scale(1);
+    margin-left: -20%;
+    margin-top: -20%;
+    border-radius: 0%;
   }
 
 }

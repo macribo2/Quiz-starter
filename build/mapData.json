@@ -841,5 +841,33 @@
     "top": "76px",
     "left": "16px",
     "zoom": "scale(1.6)"
+  },
+
+  {
+    "emblem": "tyrone",
+    "co": "geaga",
+    "locations": [
+      "Caisleán na Deirge",
+      "Baile Mhic Gofraidh",
+      "An Ómaigh",
+      "Seisceann Siúil",
+      "An Ċorr Ċríochach",
+      "Dún Geanainn"
+    ],
+    "locationsEng": [
+      "Castlederg - Castle on the red river",
+      "Ballymagorry - MacGorry's townland Norse",
+      "Omagh - the virgin plain",
+      "Sheskinshule - the moving bog",
+      "Cookstown - The hollow hill/boundry ",
+      "Dungannon - Gannon's stronghold (Makers of glass since ancient times)"
+    ],
+    "county": "Fadó fadó...",
+    "mapData": "[[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]]",
+    "countyBG": "url('./countyMaps/geaga-1.png')",
+    "top": "76px",
+    "left": "16px",
+    "zoom": "scale(1.6)"
   }
 ]
+
