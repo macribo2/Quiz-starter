@@ -6,8 +6,8 @@
     pointer-events: none;
 	z-index: 930;
     position: fixed;
-    top: 25%;
-    left:0%;
+    top: -25%;
+    left:-10%;
 }
 
 .enter-silken{

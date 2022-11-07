@@ -18,6 +18,7 @@ top: 0;
 left: 0%;
 height: 150%;
 width: 100%;
+opacity:0.7;
 animation: waves 10s infinite alternate-reverse;}
 body {
 
@@ -76,7 +77,7 @@ width: 740px;
   width: 100%;
   top: 0%;
   left: 0%;
-  z-index: -1;
+  z-index: 0;
   opacity: 0;
   animation: fade-in 10s forwards;
 
@@ -697,7 +698,7 @@ button svg {
   top: 0%;
   left: 0%;
   /* animation: fade-to 20s alternate-reverse linear; */
-opacity: 0.2;
+opacity: 0.0;
 background-color: rgb(255, 255, 255);
 height: 100%;
 width: 100%;
@@ -706,7 +707,7 @@ width: 100%;
 .fog4{
 
   z-index: 999;
-  animation: fade-out 3s linear 1s 1 forwards;
+  animation: fade-out 6s linear 1s 1 forwards;
 
 }
 
@@ -766,7 +767,7 @@ width: 100%;
 .field-container, .stones-container{
   justify-content:end;
   align-items: flex-end;
-  top:0%;
+  top:-60%;
   /* animation:move-down 8s forwards; */
   z-index: 4;
   pointer-events: none;
@@ -854,6 +855,7 @@ width: 100%;
   text-align: center;
   left: 0%;
   top: -11%;
+  -webkit-text-stroke-color: black !important;
   width: 100%;
   background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
   -webkit-background-clip: text;
@@ -863,7 +865,6 @@ width: 100%;
   background-size: 400% 100%;
   font-family: aonchlo;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
 pointer-events: none;
 background-color: #000;}
 #pO{
@@ -950,7 +951,7 @@ position: relative;
   border: none;
   opacity:0.5;
 
-
+  padding: 23px;
 }
  #toggle-glass-btn2 {
   z-index: 455;}
@@ -1007,7 +1008,6 @@ position: relative;
     left: 0;
     top: 0;
     width: 100%;
-    border:4px solid orange;
     /* animation: fade-out 4s forwards; */
   }
 

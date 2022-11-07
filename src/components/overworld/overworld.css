@@ -3,7 +3,10 @@
   /* position:fixed; */
   /* z-index: 99999 !important; */
 }
-
+#ring{
+  border:4px solid blue;
+  display:none;
+}
 @font-face {
   font-family: aonchlo;
   src: url(.././../fonts/aonchlo.ttf);
@@ -47,15 +50,20 @@
 }
 
 .map-lens-container {
-  transform: scale(1.25);
+  transform: scale(1);
   position: fixed;
   z-index: 10;
-  top: 7px;
+  top: 0px;
   left: 0%;
-  display: grid;
+  display: flex;
   justify-content: center;
   width:100%;
 
+}
+.map-lens{
+  height: 100%;
+    width: 100%;
+    margin-top: -3%;
 }
 
 #geagaSprite {
@@ -65,7 +73,11 @@
   top: 4%;
   left: 50%;
 }
+#geaga{
 
+  /* border-radius: 50%; */
+  /* opacity:0.5; */
+}
 
 #prompt-hor {
   padding: 20%;
@@ -232,7 +244,9 @@ p {
   grid-template-columns: auto auto auto;
 
 }
-
+#silken{
+  display:none;
+}
 
 
 
@@ -270,8 +284,8 @@ p {
 
   100% {
     transform: scale(1);
-    margin-left: -20%;
-    margin-top: -20%;
+    margin-left: -10%;
+    margin-top: -10%;
     border-radius: 0%;
   }
 
@@ -889,14 +903,14 @@ p {
   left: 0%;
   position: fixed;
   font-size: 1.7em;
-  color: rgb(74, 165, 196);
+  /* color: rgb(74, 165, 196); */
   margin-bottom: 12px;
   z-index: 109;
   pointer-events: none;
   padding: 10px;
   text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
 
-  font-family: urchlo;
+  font-family: aonchlo;
 
 
 }
@@ -925,8 +939,17 @@ p {
   font-family: aonchlo;
   z-index: 10000;
   word-wrap: break-word;
-  margin-top:1%;
+  margin-top:-1%;
 
+}
+
+#output2{
+  z-index: 9999;
+  display:none;
+  position:fixed;
+  font-family: aonchlo;
+  top: 38%;
+  left: 4%;
 }
 
 .btn {
@@ -1052,28 +1075,38 @@ p {
   }
 }
 .emblem-img{
-  border:4px solid peru;
+  /* border:4px solid peru; */
   position:fixed;
-  display: block ;
-  z-index: 9000;
+  display:  block;
+  margin-top:8%;
+  z-index: 90;
+  opacity:1;
 }
-.emblem {
-  /* border:4px solid palegreen; */
-  justify-content: center;
-  width: 740px;
-  height: 360px;
+
+.emblem-container{
+
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  display: flexbox;
   pointer-events: none;
   /* border: 3px solid blue; */
-  position: fixed;
   transform: scale(1.5);
   z-index: 999;
   padding-top: 120px;
-  background-color: black;
+  /* background-color: black; */
+  align-content: center;
+  justify-content:center;
   top: 13%;
   left: 0;
-
+  background-color: #000;
+}
+.emblem {
+  /* border:4px solid palegreen; */
+  width: 740px;
+  height: 360px;
+position:relative
 }
 
 .animateEmblem {

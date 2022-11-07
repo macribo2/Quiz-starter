@@ -1,0 +1,105 @@
+@font-face {
+  font-family: aonchlo;
+  src: url(../../fonts/aonchlo.ttf);
+}
+
+
+.rings0,
+.rings1 {
+
+
+  pointer-events: none;
+  top: 0%;
+  left: 0%;
+  position: fixed;
+  font-size: 1.7em;
+  color: rgb(74, 165, 196);
+  margin-bottom: 12px;
+  z-index: 5658;
+  padding: 10px;
+  text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
+
+  width: 90%;
+  font-family: "urchlo";
+
+}
+
+.rings1 {
+  color: aliceblue;
+  left: 72%;
+  top: 69%;
+  font-family: 'aonchlo';
+
+}
+
+.hidden {
+  display: none;
+}
+
+#ring-glass-btn {
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  color: rgb(136, 132, 13);
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0);
+
+  left: 84%;
+  top: 40%;
+
+  z-index: 999;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 0% !important;
+  border: none;
+  opacity: 0.5;
+
+}
+
+.button-mash-ring-0 {
+  position: relative;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  opacity: 0;
+  background-color: rgba(0,0,0,0);
+  pointer-events: all;
+}
+
+.rings0Eng {
+  pointer-events: none;
+  font-size: 1.5em;
+  position: fixed;
+  top: 65%;
+  left: 5%;
+  color: rgb(255, 244, 224);
+  z-index: 2000;
+  padding: 10px;
+  width: 50%;
+  text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
+
+
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.input-elements-container2,
+.input-elements-container3 {
+  z-index: 99999;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  display: none;
+}
+
+.input-elements-container3 {
+	pointer-events: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}

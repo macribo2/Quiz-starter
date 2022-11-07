@@ -6,12 +6,12 @@ import SettingsMenu from '../../components/settings-menu/settings-menu'
 import glass from '../../images/big-glass.png';
 import dirpad from '../../images/dirpad.png';
 import lens from '../../images/ciorcal-glass.png';
-import portrait from '../../images/dunashee-vert.gif'
+import portrait from '../../images/vert-mode.png'
 import geagaFace from '../../images/geagaFace.png';
 import door from '../../images/runed_door.png';
 import gradient from '../../images/gradient2.png';
 import fog2 from '../../images/fog2.png';
-import fog3 from '../../images/fog2.png';
+import fog3 from '../../images/fog3.png';
 import avatar1 from '../../images/players/spéirbhean0.gif';
 import avatar2 from '../../images/players/douglas.png';
 import avatar3 from '../../images/players/fianna0.png';
@@ -49,7 +49,7 @@ import useScreenOrientation from 'react-hook-screen-orientation';
 import fairyRing from '../../images/question-backgrounds/fairy-ring0.gif';
 import hill from '../../images/rainy-hill1.png';
 import blank from '../../images/blank.png';
-import Fields from '../../images/newbg2.png';
+import Fields from '../../images/newbg3town.png';
 import Stones from '../../images/stones1.png';
 import ShadowFields from '../../images/fields-dusk.png';
 import ReactRain from 'react-rain-animation';
@@ -85,7 +85,7 @@ import EnterSilken from '../../components/silken/EnterSilken';
 import GamePad from '../../components/game-pad/game-pad.jsx'; 
 import AandB from '../../components/silken/silken.jsx';
 import Shadowhill from '../../images/shadow-hill.png';
-import distantTown from '../../images/newbg2.png';
+import distantTown from '../../images/newbg2town.png';
 import rave from '../../images/color-square.gif'
 
 
@@ -455,8 +455,8 @@ const[score, setScore] = useState(0)
 	const [showOverworld, toggleShowOverworld]= useState(false)
 	return (<>
 			<img src={distantTown} className="distant-town" alt="distant town large gif" />
-		{showOverworld === false ? <Overworld tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} />:null}
-			{showOverworld===true? <div className='app' >
+		{showOverworld === true ? <Overworld tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={ heroNames[localStorage.getItem('portrait')]} />:null}
+			{showOverworld===false? <div className='app' >
 		<Greeting isRaining={ currentQuestion >=13?true:false} />
 		
 			{/* <ReactAudioPlayer src={currentQuestion === 0 ? theme0 : null} autoPlay /> */}
@@ -480,11 +480,10 @@ const[score, setScore] = useState(0)
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="black bg." />		
 			{currentQuestion >= 1 ? <img id="sky" src={sky} className="question-img" alt="the sky" /> : null}		
 			
-			<img id="stars" src={stars} className={currentQuestion >= 3 ? "question-img" : "hidden"} alt="wheeling starfield" />		
 
 
-			<img src={door} className="door" alt="closed stronghold door." />
-			<div className="fog" alt="fog"></div>
+			{/* <img src={door} className="door" alt="closed stronghold door." /> */}
+			{/* <div className="fog" alt="fog"></div> */}
 			
 			{/* <img src={distantFortShadow} className={currentQuestion < 1 ? "index-distant-fort" : "index-distant-fort slow-fade"} alt="distant fort on peninsula " /> */}
 			<div className='field-container'>
@@ -522,7 +521,7 @@ const[score, setScore] = useState(0)
 					
 						<div className='question-count'> 		
 							</div>
-							<img src={ gradient} className="gradient"/>
+							{/* <img src={ gradient} className="gradient"/> */}
 							<div className='question-text'>{ questions[currentQuestion].questionText}</div>
 
 						</div>
@@ -648,7 +647,7 @@ const[score, setScore] = useState(0)
 			<div className='stones-container'>
 			
 				<img src={Stones} className="hill-stones" id="hill-stones" alt="a rough circle of stones and some fields" />
-				<img src={ fog3} className="fog3"alt="fog" />
+				{/* <img src={ fog3} className="fog3"alt="fog" /> */}
 				
 			</div>
 		</div>:null}
@@ -701,6 +700,7 @@ const[score, setScore] = useState(0)
 				</div>
 			</> : null}
 
+			<img id="stars" src={stars} className="question-img" alt="wheeling starfield" />		
 
 	</>
 	

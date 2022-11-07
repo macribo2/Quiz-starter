@@ -1,5 +1,6 @@
 import React from 'react';
 import './overworld.css';
+import '../Rings/rings1.css';
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
 import lens from '../../images/ciorcal-glass2.png';
@@ -16,7 +17,7 @@ import carlow from "../../images/counties/leinster/carlow.png"
 import dublin from "../../images/counties/leinster/icons/dublin.png"
 import kildare from "../../images/counties/leinster/kildare.png"
 import kilkenny from "../../images/counties/leinster/kilkenny.png"
-
+import Rings1 from '../Rings/Rings1'
 import laois from "../../images/counties/leinster/laois.png"
 import longford from "../../images/counties/leinster/longford.png"
 import louth from "../../images/counties/leinster/louth.png"
@@ -62,7 +63,7 @@ import sea0 from '../../images/tonnta1.gif'
 // import sea3 from '../../images/tonnta1.gif'
 import { Col, Row } from 'react-bootstrap'
 import town0 from '../../images/emerald.png'
-
+import Silken from '../silken/silken'
 
 import avatar1 from '../../images/players/spéirbhean0.gif';
 import avatar2 from '../../images/players/douglas.png';
@@ -73,15 +74,17 @@ import avatar6 from '../../images/players/diamhraí0.gif';
 import avatar7 from '../../images/players/seanchaí0.png';
 import avatar8 from '../../images/players/pooka.png';
 import avatar9 from '../../images/players/poet.png';
-import geaga1 from '../../images/geaga.png';
+import geaga1 from '../../images/agnes_new.png';
 import mobile from '../../images/players/rógaire0.png'
 let whereAmI = 'Dublin';
 let whereAmIHolder = 'null';
 let avatar = ""
-function setGeagaIcon() { 
-return geaga1
+function setGeagaIcon(icon) { 
+return icon
 }
-
+function setIcon(icon) { 
+    return icon
+}
 function setPlayerIcon() {
     let overworldPortrait = localStorage.getItem('portrait');
     // alert(overworldPortrait)
@@ -206,7 +209,7 @@ export default class Overworld extends React.Component {
         // let imreoirJSON = JSON.stringify(imreoir);
 
         function setMap() {
-            $('.emblem').removeClass('animateEmblem'); 
+            $('.emblem-container').removeClass('animateEmblem'); 
             console.log(gameObjects+"uuuuuuuuuuu")
             $('.countyMap').css('left', imreoir.whereAmI.left)
             $('.countyMap').css('top', imreoir.whereAmI.top)
@@ -214,17 +217,16 @@ export default class Overworld extends React.Component {
             
             $('#stage').fadeOut()
             $('.emblem-img').css("opacity",0)
-
-            setTimeout(function () { 
+                        setTimeout(function () {
                 $('#stage').fadeIn()
                 
             }, 2000)
             setTimeout(function () { 
                 
                 
-                $('.emblem').addClass('animateEmblem'); 
+                $('.emblem-container').addClass('animateEmblem'); 
                 $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
-            }, 500)
+            }, 1500)
             
 
 
@@ -234,6 +236,86 @@ export default class Overworld extends React.Component {
         //Load grids of connecting counties: 
         function loadMap(direction) {
             switch (imreoir.whereAmI) {
+
+                case 'geaga':
+
+                    if (direction === N) {
+                        localStorage.setItem("whereAmI", "westmeath");
+                        imreoir.whereAmI = localStorage.getItem("whereAmI");
+
+                        gameObjects[playerRow][playerColumn] = 0;
+
+                        playerRow = 8;
+                        playerColumn = 5;
+                        // animatePlayer();
+                        refresh();
+                        setMap()
+
+                    }
+
+
+                    if (direction === NE) {
+                        localStorage.setItem("whereAmI", "westmeath");
+                        imreoir.whereAmI = localStorage.getItem("whereAmI");
+
+                        gameObjects[playerRow][playerColumn] = 0;
+                        playerRow = 8;
+                        playerColumn = 6;
+                        refresh();
+                        setMap();
+
+
+
+                    };
+                    if (direction === E) {
+
+
+                    };
+                    if (direction === SE) {
+                    };
+                    if (direction === S) {
+
+                    };
+                    if (direction === SW) {
+                        localStorage.setItem("whereAmI", "westmeath");
+                        imreoir.whereAmI = localStorage.getItem("whereAmI");
+
+                        gameObjects[playerRow][playerColumn] = 0;
+                        playerRow = 7;
+                        playerColumn = 7;
+                        refresh();
+                        setMap();
+
+
+                    };
+                    if (direction === W) {
+                        localStorage.setItem("whereAmI", "westmeath");
+                        imreoir.whereAmI = localStorage.getItem("whereAmI");
+
+                        gameObjects[playerRow][playerColumn] = 0;
+                        playerRow = 4;
+                        playerColumn = 7;
+                        refresh();
+                        setMap();
+
+
+                    };
+                    if (direction === NW) {
+                        localStorage.setItem("whereAmI", "westmeath");
+                        imreoir.whereAmI = localStorage.getItem("whereAmI");
+
+                        gameObjects[playerRow][playerColumn] = 0;
+                        playerRow = 4;
+                        playerColumn = 6;
+                        animatePlayer();
+                        refresh();
+                        setMap();
+
+
+                    };
+
+                    break;
+
 
                 case 'wexford':
 
@@ -3301,6 +3383,7 @@ export default class Overworld extends React.Component {
                 refresh();
             }, 210);
             if (lastPressed === 'left') {
+
                 $('#hero').attr('src', setPlayerIcon())
                 $('#hero').animate({ left: playerColumn * cellWidth }, 200, 'linear');
 
@@ -3320,9 +3403,20 @@ export default class Overworld extends React.Component {
             gameObjects[geagaRow][geagaColumn] = GEAGA;
             gameObjects[contactRow][contactColumn] = CONTACT
             if (gameObjects[contactRow][contactColumn] === gameObjects[playerRow][playerColumn]) {
+                
+          
+                
                 // window.location.replace('http://167.172.184.73:1337/contact');
             
-            alert("miao")
+                $('#output2').fadeIn();
+                setTimeout(function(){ 
+                    $('.input-elements-container2').css('display', 'flex');
+                    $('.input-elements-container2').fadeIn();
+
+                },1000)
+
+                $('#silken').fadeIn();
+                $('#silken').css('display', 'block');
             }
 
         };
@@ -3625,11 +3719,13 @@ export default class Overworld extends React.Component {
 
                             break;
                         case GEAGA:
-                            cell.src =  setGeagaIcon() ;
+                            if(imreoir.whereAmI==="geaga")cell.src =  setGeagaIcon(geaga1) ;
+                            
                             cell.id = 'geaga'
                             break;
                         case CONTACT:
-                            cell.src = "../img/contact.png";
+                            cell.src = setIcon(empty);
+                            if(imreoir.whereAmI==="geaga")cell.id='contact'
                             break;
                         default: break;
                     }
@@ -3840,9 +3936,9 @@ export default class Overworld extends React.Component {
     conceptHandler() {
         window.location.replace('http://167.172.184.73:3000/history')
     }
-    
     render() {
 
+let        heroName = this.props.heroName
         avatar = this.props.avatar;
         whereAmIHolder = this.props.whereAmI;
         console.log(whereAmIHolder + 'whereAmIHolder');
@@ -3962,8 +4058,9 @@ export default class Overworld extends React.Component {
  
                     <img className="map-lens" src={lens} alt="" />
                </div>
-                    <div className="emblem">
+                    <div className="emblem-container">
                     {/* show emblem on enter new county */}
+                    {whereAmI === 'geaga' ? <img src={westmeath} alt="county pixelart emblem." className="emblem-img" /> : null}
                     {whereAmI === 'antrim' ? <img src={antrim} alt="county pixelart emblem." className="emblem-img" /> : null}
                     {whereAmI === 'armagh' ? <img src={armagh} alt="county pixelart emblem." className="emblem-img" /> :null}
                     {whereAmI === 'cavan' ? <img src="../../images/counties/ulster/icons/cavan.png" alt="county pixelart emblem." className="emblem-img" /> :null}
@@ -3995,7 +4092,7 @@ export default class Overworld extends React.Component {
                     {whereAmI === 'westmeath' ? <img src={westmeath} alt="county pixelart emblem." className="emblem-img" /> :null}
                     {whereAmI === 'wexford' ? <img src={wexford} alt="county pixelart emblem." className="emblem-img" /> :null}
                     {whereAmI === 'wicklow' ? <img src={wicklow} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'other' ? <img src={other} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'other' ? <img src={other} alt="county pixelart emblem." className="emblem-img" /> : null}
                     <p id="output"></p>
                 </div> 
                <button id="toggle-glass-btn2" onClick={()=>{
@@ -4022,8 +4119,12 @@ export default class Overworld extends React.Component {
  {this.state.isOn ? (<div id="glass">
 				
 < img  src={glass} className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />	
-			</div>) : null}
-			
+
+                </div>) : null}
+                <Silken id="silken"></Silken>
+                <h2 id="output2"> "{ heroName}!"</h2>
+            <Rings1/>
+
             </div>
 
         )
