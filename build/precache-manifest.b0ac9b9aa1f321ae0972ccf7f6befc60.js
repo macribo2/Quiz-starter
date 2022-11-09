@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "20955a7f66349c2e03e6",
-    "url": "/static/css/main.0ea50ee4.chunk.css"
+    "revision": "a556529835514a12464e",
+    "url": "/static/css/main.b341adfc.chunk.css"
   },
   {
-    "revision": "20955a7f66349c2e03e6",
-    "url": "/static/js/main.88558faa.chunk.js"
+    "revision": "a556529835514a12464e",
+    "url": "/static/js/main.3265010e.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "2baee7da5588d2df7ee9",
+    "revision": "b21cc0db530d02e7edb5",
     "url": "/static/css/2.7079e116.chunk.css"
   },
   {
-    "revision": "2baee7da5588d2df7ee9",
-    "url": "/static/js/2.70c807c7.chunk.js"
+    "revision": "b21cc0db530d02e7edb5",
+    "url": "/static/js/2.e8c108bc.chunk.js"
   },
   {
     "revision": "8f8a8b98c655870f6b0502069cc630bc",
@@ -168,12 +168,8 @@ self.__precacheManifest = [
     "url": "/static/media/dirpad.5a8e04ef.png"
   },
   {
-    "revision": "8b5eb61dfb00d1c9d6ec6aa4cabd1e23",
-    "url": "/static/media/vert-mode.8b5eb61d.png"
-  },
-  {
-    "revision": "c333671d8f2d260d886ac60c25366af3",
-    "url": "/static/media/runed_door.c333671d.png"
+    "revision": "6ea5cb263615b35bced3077f7b994735",
+    "url": "/static/media/vert-mode.6ea5cb26.png"
   },
   {
     "revision": "53c3f79c8abd566433975924c4182aa8",
@@ -184,8 +180,8 @@ self.__precacheManifest = [
     "url": "/static/media/sparkle-e.af1b8e54.wav"
   },
   {
-    "revision": "e8c4253de4d711785b68dabc6bf82a77",
-    "url": "/static/media/newbg3town.e8c4253d.png"
+    "revision": "27396188c1be3f837644b3a7590ba56b",
+    "url": "/static/media/newbg3town.27396188.png"
   },
   {
     "revision": "22451eb8c536faf4ec0b64c4120c7bc3",
@@ -304,8 +300,8 @@ self.__precacheManifest = [
     "url": "/static/media/geagabg1.1913f10c.png"
   },
   {
-    "revision": "459c0da195c0d0f125794f150381a3c7",
-    "url": "/static/media/newbg2town.459c0da1.png"
+    "revision": "db2c458d8684ffd29b90e1b069308375",
+    "url": "/static/media/newbg2town.db2c458d.png"
   },
   {
     "revision": "c860d557f7a5adc8e547fae0867f88b6",
@@ -376,7 +372,7 @@ self.__precacheManifest = [
     "url": "/static/media/click.e15794b2.wav"
   },
   {
-    "revision": "00d5b4e1e0812fd380b81756d3bd408f",
+    "revision": "ef8ebfe900fb9c97414907808cfb1f6e",
     "url": "/index.html"
   }
 ];

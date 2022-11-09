@@ -4,16 +4,18 @@
     pointer-events: all;
     display: none;
     position: relative;
-    z-index: 997;
-    border-radius: 60%;
-    transform: scale(0.5);
-    border:1px solid goldenrod;
+    z-index: 100;
+   
+    border-radius: 50%;
+    transform: scale(0.75);
+    border: 5px solid gold;
+
 }
 
 .team-icon-container{
     pointer-events: none;
     position:fixed;
-    z-index: 999;
+    z-index: 99;
     width: 100%;
     height: 100%;
     left:0%;

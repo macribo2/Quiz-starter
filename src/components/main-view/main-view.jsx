@@ -8,10 +8,7 @@ import dirpad from '../../images/dirpad.png';
 import lens from '../../images/ciorcal-glass.png';
 import portrait from '../../images/vert-mode.png'
 import geagaFace from '../../images/geagaFace.png';
-import door from '../../images/runed_door.png';
 import gradient from '../../images/gradient2.png';
-import fog2 from '../../images/fog2.png';
-import fog3 from '../../images/fog3.png';
 import avatar1 from '../../images/players/spéirbhean0.gif';
 import avatar2 from '../../images/players/douglas.png';
 import avatar3 from '../../images/players/fianna0.png';
@@ -488,9 +485,7 @@ const[score, setScore] = useState(0)
 			{/* <img src={distantFortShadow} className={currentQuestion < 1 ? "index-distant-fort" : "index-distant-fort slow-fade"} alt="distant fort on peninsula " /> */}
 			<div className='field-container'>
 				<img src={Fields} className="hill-fields" alt="a rough circle of stones and some fields" />
-				<div className="fog2holder" alt="fog">
-					<img src={ fog2} className="fog2"alt="fog" />
-			</div>
+			
 				
 			<ReactAudioPlayer src={currentQuestion === 9? theme0 : null} autoPlay />
 				</div>
@@ -587,17 +582,17 @@ const[score, setScore] = useState(0)
 			</div>) : null}
 			
 			<div className="avatar-holder" >
-					<img src={avatar1} className={value * 10 === 1 ? 'avatar' : 'hidden'} id={currentQuestion ===8? "leap-me":null } alt="a portrait of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null} />		
+					<img src={avatar1} className={value * 10 === 1 ? 'avatar' : 'hidden'} id={currentQuestion ===8? "leap-me":null } alt="a of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null} />		
 			
-			<img  src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } id={currentQuestion ===10? "leap-me":null } alt="a portrait of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>		
-			<img src={avatar3} id={currentQuestion ===10? "leap-me":null } className={value * 10 === 3 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
-			<img  src={avatar4}id={currentQuestion ===10? "leap-me":null } className={value *10=== 4 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
-			<img  src={avatar5}id={currentQuestion ===10? "leap-me":null } className={value *10=== 5 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
-			<img  src={avatar6}id={currentQuestion ===10? "leap-me":null } className={value *10=== 6 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
-			<img  src={avatar7}id={currentQuestion ===10? "leap-me":null } className={value *10=== 7 ? 'avatar':'hidden' } alt="a portrait of an rpg style playable character" />
+			<img  src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } id={currentQuestion ===10? "leap-me":null } alt="a  an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>		
+			<img src={avatar3} id={currentQuestion ===10? "leap-me":null } className={value * 10 === 3 ? 'avatar' : 'hidden'} alt="a of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
+			<img  src={avatar4}id={currentQuestion ===10? "leap-me":null } className={value *10=== 4 ? 'avatar':'hidden' } alt="a  of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
+			<img  src={avatar5}id={currentQuestion ===10? "leap-me":null } className={value *10=== 5 ? 'avatar':'hidden' } alt="a of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
+			<img  src={avatar6}id={currentQuestion ===10? "leap-me":null } className={value *10=== 6 ? 'avatar':'hidden' } alt="a of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
+			<img  src={avatar7}id={currentQuestion ===10? "leap-me":null } className={value *10=== 7 ? 'avatar':'hidden' } alt="a an rpg style playable character" />
 			
-			<img src={avatar8} id={currentQuestion === 10 ? "leap-me" : null} className={value * 10 === 8 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />
-			<img src={avatar9}id={currentQuestion ===10? "leap-me":null } className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="a portrait of an rpg style playable character" />
+			<img src={avatar8} id={currentQuestion === 10 ? "leap-me" : null} className={value * 10 === 8 ? 'avatar' : 'hidden'} alt="a  of an rpg style playable character" />
+			<img src={avatar9}id={currentQuestion ===10? "leap-me":null } className={value * 10 === 9 ? 'avatar' : 'hidden'} alt="a  of an rpg style playable character" />
 			</div>
 			
 
@@ -605,7 +600,7 @@ const[score, setScore] = useState(0)
 
 			{currentQuestion === 0 ? < GamePad handleAnswerButtonClick={runOnStart} /> : null}
 
-{ currentQuestion === 2 ? runOnName(10):null}
+{ currentQuestion === 2 ? runOnName(1):null}
 { currentQuestion === 3 ? runOnName(1500):null}
 { currentQuestion === 4 ? runOnName(1000):null}
 { currentQuestion === 5 ? runOnName(1000):null}
@@ -618,15 +613,15 @@ const[score, setScore] = useState(0)
 			
 			<div className={ currentQuestion ===2? "avatar":"faded-out"} >
 			
-			<img  src={avatar2} className={gotten === 2 ? 'avatar-land':'hidden' } alt="the selected character portrait" />		
-			<img src={avatar3} className={gotten === 3 ? 'avatar-land' : 'hidden'} alt="the selected character portrait" />
-			<img  src={avatar4} className={gotten=== 4 ? 'avatar-land':'hidden' } alt="the selected character portrait" />
-			<img  src={avatar5} className={gotten=== 5 ? 'avatar-land':'hidden' } alt="the selected character portrait" />
-			<img  src={avatar6} className={gotten=== 6 ? 'avatar-land':'hidden' } alt="the selected character portrait" />
-			<img  src={avatar7} className={gotten=== 7 ? 'avatar-land':'hidden' } alt="the selected character portrait" />
-			<img  src={avatar8} className={gotten === 8 ? 'avatar-land':'hidden' } alt="the selected character portrait" />
+			<img  src={avatar2} className={gotten === 2 ? 'avatar-land':'hidden' } alt="the selected character " />		
+			<img src={avatar3} className={gotten === 3 ? 'avatar-land' : 'hidden'} alt="the selected character " />
+			<img  src={avatar4} className={gotten=== 4 ? 'avatar-land':'hidden' } alt="the selected character " />
+			<img  src={avatar5} className={gotten=== 5 ? 'avatar-land':'hidden' } alt="the selected character " />
+			<img  src={avatar6} className={gotten=== 6 ? 'avatar-land':'hidden' } alt="the selected character " />
+			<img  src={avatar7} className={gotten=== 7 ? 'avatar-land':'hidden' } alt="the selected character " />
+			<img  src={avatar8} className={gotten === 8 ? 'avatar-land':'hidden' } alt="the selected character " />
 			<img src={avatar9} className={gotten === 9 ?
-			'avatar-land' : 'hidden'} alt="the selected character portrait" />
+			'avatar-land' : 'hidden'} alt="the selected character " />
 			</div>
 			
 			{currentQuestion === 12 ?  <Easca className="faded-in"/>  : null}
@@ -647,12 +642,10 @@ const[score, setScore] = useState(0)
 			<div className='stones-container'>
 			
 				<img src={Stones} className="hill-stones" id="hill-stones" alt="a rough circle of stones and some fields" />
-				{/* <img src={ fog3} className="fog3"alt="fog" /> */}
 				
 			</div>
 		</div>:null}
 
-		<img src={fog3} className="fog4" alt="" />
 		<img id="portrait"src={ portrait}></img>
 			<button id={currentQuestion===7|| currentQuestion=== 0 ? "hidden":"toggle-glass-btn" } onClick={toggleIsOn}	><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 

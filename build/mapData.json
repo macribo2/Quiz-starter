@@ -803,7 +803,7 @@
     ],
     "locationsEng": [
       "Doire na Criaḋ",
-      "An Cnoc Rua",
+      "The Red Hill",
       "Béal Tairbirt",
       "An Dromainn",
       "Dún an Rí",
@@ -862,7 +862,7 @@
       "Cookstown - The hollow hill/boundry ",
       "Dungannon - Gannon's stronghold (Makers of glass since ancient times)"
     ],
-    "county": "Tagann an scéal...",
+    "county": "ó 0 go 1 ",
     "mapData": "[[3,3,3,3,3,3,3,3,3,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,3,3,3,3,3,3,3,3,3]]",
     "countyBG": "url('./countyMaps/geaga-1.png')",
     "top": "76px",
