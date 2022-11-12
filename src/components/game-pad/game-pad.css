@@ -140,8 +140,9 @@ font-family:aonchlo;}
     margin-right: 0;
     border-radius: 50%;
     z-index: 999 !important;
-	margin-top: 34%;
-    left: 54%;
     transform: scale(0.8);
-    position: fixed;
+    position: relative;
+	margin-top: 294%;
+    left: 411%;
+	display:none;	
 }

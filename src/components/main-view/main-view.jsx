@@ -85,7 +85,7 @@ import Shadowhill from '../../images/shadow-hill.png';
 import distantTown from '../../images/newbg2town.png';
 import rave from '../../images/color-square.gif'
 
-
+window.scrollTo(0, 1);
 const ComponentWithScreenOrientation = () => {
 	const screenOrientation = useScreenOrientation()
 	
@@ -294,10 +294,11 @@ const[score, setScore] = useState(0)
 	
 
 	
-		const runOnStart = () => { 
+	const runOnStart = () => { 
+		localStorage.setItem("pucaEng", '');
 		setTimeout(function () {
 			setScore(score+1)	
-		
+
 		const nextQuestion = currentQuestion + 1;
 		setCurrentQuestion(nextQuestion);
 
@@ -356,8 +357,7 @@ const[score, setScore] = useState(0)
 
 			console.log(someVal)
 		
-		
-		// alert()
+	
 		gottenRing0 = localStorage.getItem('ring0');
 
 		const nextQuestion = currentQuestion + 1;
@@ -421,6 +421,9 @@ const[score, setScore] = useState(0)
 	]
 
 	
+
+let thePucaOf = localStorage.getItem('pucaEng')
+	
 	let choiceRing = [
 		`		`,
 		`Niamh Cinn-Óir`,
@@ -449,7 +452,8 @@ const[score, setScore] = useState(0)
 		toggleShowOverworld(true)
 	}
 	
-	const [showOverworld, toggleShowOverworld]= useState(false)
+	const [showOverworld, toggleShowOverworld] = useState(false)
+
 	return (<>
 			<img src={distantTown} className="distant-town" alt="distant town large gif" />
 		{showOverworld === true ? <Overworld tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={ heroNames[localStorage.getItem('portrait')]} />:null}
@@ -575,6 +579,7 @@ const[score, setScore] = useState(0)
 				{/* <p className="hints" id="hintsC">{hintsAnswersC[currentQuestion]}</p>
 				 */}
 				{/* <p className="hints" id="hintsD">{hintsAnswersD[currentQuestion] }</p> */}
+				<h2 id="pOf"> {thePucaOf}</h2> 
 
 				
 

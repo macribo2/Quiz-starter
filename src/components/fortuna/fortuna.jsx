@@ -77,7 +77,9 @@ export default class Fortuna extends React.Component {
 	}
 	jQueryCode = () => {
 		
+		let playerRollsA;
 			let fortunaPos = 0
+
 			function mode(whichMode){
 			
 				if(whichMode===3)
@@ -150,13 +152,17 @@ export default class Fortuna extends React.Component {
 	let	currentQuestion = this.props.currentQuestion
 		var ct;
 		
-
+		var playerRollsA;
 		
 		function forFunction() {
-
+			localStorage.setItem('touchedVid','true')
+			setTimeout(function () {
+				$('#pO').html(pucaNa);
+				$('#pOf').html(thePookaOf);
+			}, 2000)
 			let vid = document.getElementById('fortuna-vid');
 			
-				
+				$('#pO').html('')
 			
 
 
@@ -331,7 +337,7 @@ export default class Fortuna extends React.Component {
 				`of the Sea Warriors`,
 				`The Fury`,
 				`Péire Cladhaire`,
-				`of the Fae`,
+				`of kisses`,
 				`of the Druids`,
 				`The Rats`,
 				`Morrigin Worshipers`,
@@ -396,7 +402,7 @@ export default class Fortuna extends React.Component {
 				`Fiannaí Mara`,
 				`Ar an Daoraí`,
 				`Clunc y Dunc`,
-				`Na Fianna`,
+				`Na Póga`,
 				`Na Draoithe`,
 				`Na Raftáin`,
 				`Adhraightheora Morrígan`,
@@ -428,17 +434,26 @@ export default class Fortuna extends React.Component {
 			let teamImg;
 			let thePookaOf
 			
-			ct = Math.floor(vid.currentTime) + 1
-
-
+		
 			setTimeout(function () { document.getElementById('fortuna-vid').playbackRate = 0.5; }, 200)
 			setTimeout(function () { document.getElementById('fortuna-vid').playbackRate = 0.25; }, 400)
-			setTimeout(function () { document.getElementById('fortuna-vid').playbackRate = 0.2; }, 600)
+			setTimeout(function () {
+				document.getElementById('fortuna-vid').playbackRate = 0.2;
+				
+				
+			}, 600)
 			setTimeout(function () { document.getElementById('fortuna-vid').playbackRate = 0.1; }, 800)
-			setTimeout(function () { $('#fortuna-vid').trigger('pause') }, 1000)
+			setTimeout(function () {
+				$('#fortuna-vid').trigger('pause');
+				
+				ct = Math.floor(vid.currentTime) 
+				console.log(' fortunaTime '+fortunaTime[ct] + "ct "+ct)
+
+}, 1000)
 			setTimeout(function () {
 				$('#btn-a2').fadeIn()
 				let whichIcon = "#imgID" + ct;
+				console.log("whichIcon"+ whichIcon)
 				$(whichIcon).fadeIn().removeClass('hidden');
 				hasStopped = true;
 			}, 2000);
@@ -448,9 +463,9 @@ export default class Fortuna extends React.Component {
 			//escapistopian 
 			
 			for (let i = 0; i < fortunaTime.length; i++) {
+				ct = Math.floor(vid.currentTime) 
 
-				if (ct <= fortunaTime[i]) {
-					console.log('go to next fortunaTime...' + i + " " + ct)
+				if (ct <= fortunaTime[ct]) {
 				
 				}
 			
@@ -458,13 +473,10 @@ export default class Fortuna extends React.Component {
 					if (ct >= fortunaTime[i + 1]) {
 						pucaNa = fortunaTeams[i];
 						thePookaOf = fortunaTeamsEng[i];
-						console.log('this ft...' + i + "ct " + ct)
+						localStorage.setItem('pucaEng',thePookaOf )
+						console.log('this ft...' + fortunaTime[ct] + "   i "+i  )
 						console.log('this ft...' + pucaNa + " " + thePookaOf)
-					
-						setTimeout(function () {
-							$('#pO').html(pucaNa);
-							$('#pOf').html(thePookaOf);
-						}, 2000)
+						// ct = i;
 						
 					}
 					
@@ -472,9 +484,10 @@ export default class Fortuna extends React.Component {
 			
 			
 			// var currentTime = video.currentTime;
-			// alert(currentTime)
+			
 			
 			}
+			
 			
 			
 			if (localStorage.getItem("isPaused") === true) {
@@ -491,7 +504,11 @@ export default class Fortuna extends React.Component {
 		function restartFortuna() {
 			document.getElementById('fortuna-vid').play();
 			document.getElementById('fortuna-vid').playbackRate = 2;
-				$('.team-icon').fadeOut()
+			$('.team-icon').fadeOut()
+			setTimeout(function () {
+				$('#pO').html("");
+				$('#pOf').html("");
+			}, 2000)
 		 }
 		
 		
@@ -503,7 +520,6 @@ export default class Fortuna extends React.Component {
 					
 				/>
 				<h1 id="pO"></h1>
-				<h2 id="pOf"></h2>
 				<div className="team-icon-container">
 				<img id="imgID0" onTouchEnd={restartFortuna} className="team-icon" src={ft0} alt="" />
 				<img id= "imgID1"className="team-icon" src={ft1} alt="assorted icons from gameicons.net" />

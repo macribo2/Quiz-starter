@@ -11,7 +11,7 @@ export class BtnB extends React.Component {
 	render() {
 
 		return (
-				<button id="btn-b" onClick={this.props.onClick} onTouchStart={this.props.onTouchStart} onTouchEnd={this.props.onTouchEnd}><h2 id="btn-txt">B</h2></button>		
+				<button id="btn-b" onClick={this.props.onClick} onTouchStart={this.props.onTouchStart} onTouchEnd={this.props.onTouchEnd}><h2 id="btn-txt" className="btn-txt-b">B</h2></button>		
 		)
 	}
 

@@ -63,7 +63,6 @@
 .map-lens{
   height: 100%;
     width: 100%;
-    margin-top: -3%;
 }
 
 #geagaSprite {
@@ -113,9 +112,9 @@
   position: fixed;
   /* padding-top: 5%; */
   z-index: -3;
-  top: 6%;
+  top: 13%;
   /* z-index: 30; */
-  left: 4%;
+  left: 7%;
   width: 100%;
   height: 100%;
   /* background-color: black; */
@@ -324,9 +323,9 @@ p {
   }
 
   100% {
-    margin-top: -15%;
+    margin-top: -10%;
 
-    margin-left: -28%;
+    margin-left: -20%;
 
     transform: scale(1.1)
   }
@@ -522,7 +521,8 @@ p {
   }
 
   100% {
-    margin-left: -18%;
+    margin-left: -22%;
+    margin-top: -5;
 
     transform: scale(1.1);
 
@@ -580,7 +580,7 @@ p {
 
   100% {
     transform: scale(1.0);
-    margin-left: -6%;
+    margin-left: -10%;
     margin-top: -10%;
   }
 
@@ -1091,7 +1091,7 @@ p {
   height: 100%;
   text-align: center;
   pointer-events: none;
-  /* border: 3px solid blue; */
+  border: 3px solid blue;
   transform: scale(1.5);
   z-index: 999;
   padding-top: 120px;
@@ -1111,10 +1111,18 @@ position:relative
 
 .animateEmblem {
 
-  animation: emblemFade 3s forwards;
+  animation: emblemFade 4s forwards;
 
 }
 
+.animateEmblemIn {
+
+  animation: emblemFadeIn 1s forwards;
+
+}
+#eng-notes{
+  margin-left:5%;
+}
 @keyframes emblemFade {
   0% {
     opacity: 1
@@ -1126,6 +1134,20 @@ position:relative
 
   100% {
     opacity: 0
+  }
+
+}
+@keyframes emblemFadeIn {
+  0% {
+    opacity: 0
+  }
+
+  50% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
   }
 
 }
