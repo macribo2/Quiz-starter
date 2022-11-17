@@ -64,7 +64,7 @@ import sea0 from '../../images/tonnta1.gif'
 // import sea2 from '../../images/tonnta3.gif'
 // import sea3 from '../../images/tonnta1.gif'
 import { Col, Row } from 'react-bootstrap'
-import town0 from '../../images/emerald.png'
+import town0 from '../../images/shields.png'
 import Silken from '../silken/silken'
 
 import avatar1 from '../../images/players/spéirbhean0.gif';
@@ -81,13 +81,15 @@ import mobile from '../../images/players/rógaire0.png'
 let whereAmI = 'geaga';
 let whereAmIHolder = 'null';
 let avatar = "";
+
+let secondLocation = "Dún Laoghaire";
 function setGeagaIcon(icon) { 
 return icon
 }
 function setIcon(icon) { 
     return icon
 }
-let engNotes = ['from 0 to 1',''];
+let engNotes = ['Your Táiniste will meet you in '+secondLocation+' ',''];
 let NarrativeCode = 0;
 function setPlayerIcon() {
     let overworldPortrait = localStorage.getItem('portrait');
@@ -132,7 +134,120 @@ export default class Overworld extends React.Component {
     jQueryCode = () => {
         let playerOverLocation = false;
         localStorage.setItem('whereAmI', 'geaga');
-        
+        let eascaLocations = [
+
+            "Caisleán na Deirge",
+            "Baile Mhic Gofraidh",
+            "An Ómaigh",
+            "Seisceann Siúil",
+            "An Ċorr Ċríochach",
+            "Dún Geanainn",
+            "Doire na Criaḋ",
+            "An Cnoc Rua",
+            "Béal Tairbirt",
+            "An Dromainn",
+            "Dún an Rí",
+            "Lios Cré",
+            "Ceann Boirne",
+            "Fíoch Rua",
+            "An Tulach",
+            "Cill Rois",
+            "Leaba Ṡíoda",
+            "Bun Raite",
+            "Cairbre",
+            "Na Solláin",
+            "Fioḋ Alúine",
+            "Maigh Nuad",
+            "An Currach",
+            "Léim an Ḃradáin"
+            ,
+            "Poll an Phúca",
+            "Cill Cais",
+            "An Spidéal ",
+            "An Teach Dóite",
+            "An Ċeaṫrú Rua",
+            "Inis Meáin ",
+            "Scairbh na gCaorach",
+            "Cluain Eois",
+            "Einistir Ḃuithe",
+            "Teach an Scotaigh",
+            "Crícheán Rua",
+            "Carraig Ṁaċaire Rois",
+            "Cill Deirge",
+            "Baile Uí Ṁurċú",
+            "Baile Haicéid",
+            "An Ḃuiríos",
+            "Miseal",
+            "Cill Daṁáin",
+            "Sráid na nAlbanach",
+            "Craigavon",
+            "Port An Dúnáin",
+            "Baile Úr",
+            "Baile an Ṁuilinn",
+            "Lios Liath",
+            "An Lorgain",
+            "Lios na gCearrḃach",
+            "An Caisleán Riaḃach",
+            "An Ṁainistir Liath",
+            "Dún Pádraig",
+            "Cill Ċaoil",
+            "Cill Ala",
+            "Caisleán an Ḃarraiġ",
+            "Baile Ui Ḟiacáin",
+            "An Caoláire Rua",
+            "Lios an tSaṁaiḋ",
+            "An Éill",
+            "An Lios Breac",
+            "Meathais Troim",
+            "Gránard",
+            "Cluain Dá Ráth",
+            "Maiġ Duṁa",
+            "An Ċarraig Ḃuí",
+            "Cathair Saiḋḃín",
+            "An Daingean",
+            "Gleann na bPúcaí",
+            "Sliabh Mis",
+            "Na Cruaċa Duḃa",
+            "An tSnaidhm",
+            "An Uaimh",
+            "Ráth Ċairn",
+            "Cill Ḃríde",
+            "Teamhair",
+            "Buaile na Bréachṁaí ",
+            "Tigh na Sióg",
+            "Ġráinseaċ Ċuffe",
+            "Baile Ṁic Andáin",
+            "Bearna na Gaoiṫe",
+            "Dún Garḃáin",
+            "Baile an Ṗoill",
+            "Sliaḃ Rua",
+            "Sléiḃte an Ċomaraigh",
+            "An Baile Dubh",
+            "Tullach an Iarainn",
+            "Cluain Ḟia",
+            "Dún Garḃán",
+            "Cill Ṁíodáin",
+            "Eiréil ",
+            "Darú",
+            "An Baile Fionn",
+            "Baile Átha Í",
+            "Cúil an tSúdaire",
+            "Buiríos Mór Osraí",
+            "Ros Cré",
+            "Durlas",
+            "Faiċe Ró",
+            "Sliabh na mBan",
+            "Cluain Meala",
+            "Tigh na Naoi Míle",
+            "Béal Átha na gCarraigíní",
+            "An Mullach Mór",
+            "An Ċéis",
+            "Gob Reaċla",
+            "Baile Uí Ḋálaigh",
+            "Tobar an Ċoire"
+
+
+        ]
 
         $.getJSON('mapData.json', function (county) {
             
@@ -213,6 +328,8 @@ export default class Overworld extends React.Component {
         // let imreoirJSON = JSON.stringify(imreoir);
 
         function setMap() {
+
+            
             $('.emblem-container').removeClass('animateEmblem'); 
             $('.emblem-img').addClass('animateEmblemIn'); 
             // console.log(gameObjects+"uuuuuuuuuuu")
@@ -254,9 +371,10 @@ export default class Overworld extends React.Component {
 
                         playerRow = 8;
                         playerColumn = 5;
-                        // animatePlayer();
+                        
                         refresh();
-                        setMap()
+                        setTimeout(setMap(),  1000)
+                        
 
                     }
 
@@ -265,13 +383,12 @@ export default class Overworld extends React.Component {
                         localStorage.setItem("whereAmI", "westmeath");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
                         NarrativeCode++;
-
+                        alert("NEs");
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 8;
                         playerColumn = 6;
                         refresh();
-                        setMap();
-
+                        setTimeout(setMap(),  1000)
 
 
                     };
@@ -288,13 +405,13 @@ export default class Overworld extends React.Component {
                         localStorage.setItem("whereAmI", "westmeath");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
                         NarrativeCode++;
+                        alert("sw");
 
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 7;
                         playerColumn = 7;
                         refresh();
-                        setMap();
-
+                        setTimeout(setMap(),  1000)
 
                     };
                     if (direction === W) {
@@ -306,21 +423,24 @@ export default class Overworld extends React.Component {
                         playerRow = 4;
                         playerColumn = 7;
                         refresh();
-                        setMap();
-
+                        setTimeout(setMap(),  1000)
+                        alert("W");
 
                     };
                     if (direction === NW) {
-                        localStorage.setItem("whereAmI", "westmeath");
-                        imreoir.whereAmI = localStorage.getItem("whereAmI");
-                        NarrativeCode++;
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 4;
                         playerColumn = 6;
                         animatePlayer();
-                        refresh();
-                        setMap();
+                        
                         NarrativeCode++;
+                       
+                        localStorage.setItem("whereAmI", "westmeath");
+                        imreoir.whereAmI = localStorage.getItem("whereAmI");
+                        NarrativeCode++;
+                            refresh();
+                            setMap()
+
 
 
                     };
@@ -3148,9 +3268,9 @@ export default class Overworld extends React.Component {
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
                 [1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
-                [1, 1, 0, 0, 0, 0, 0, 0, "G", 1],
-                [1, 1, 0, 0, 0, 0, 0, 0, "G", 1],
-                [1, 1, 0, 0, 0, 0, 0, "C", "G", 1],
+                [1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
+                [1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
+                [1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
                 [1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
                 [1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -3823,8 +3943,10 @@ export default class Overworld extends React.Component {
             $('.canopy-right').fadeOut();
             $('#geagaSprite').fadeOut();
             console.log('whereAmI' + whereAmI)
-            localStorage.setItem('whereAmI', whereAmI)
-            alert('where am I '+ whereAmI)
+            localStorage.setItem('whereAmI', whereAmI);
+            let secondLocationId = localStorage.getItem('secondLocationId');
+            secondLocation = eascaLocations[secondLocationId]
+            alert('Tá do thánaiste ag feitheamh ort i ' + secondLocation)
             returnToCounty();
             refresh();
             $('.countyMap').fadeIn();
@@ -4000,7 +4122,7 @@ let        heroName = this.props.heroName
                 {/* registration resources */}
 
                 {/* {this.state.registerMenu ? <Register /> : null} */}
-                <ReactAudioPlayer src={whereAmI==="westmeath"?jam:null } autoPlay />
+           
 
 
 <div className="directional-pad">
@@ -4112,7 +4234,7 @@ let        heroName = this.props.heroName
  </div>
  
  {this.state.isOn ? (<div id="glass">
-				
+				<></>
                     < img src={glass} className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />
                     <br />
                     <br />
@@ -4132,7 +4254,7 @@ let        heroName = this.props.heroName
   
   }} ></BtnB>
 
-
+  <ReactAudioPlayer src={whereAmI==="westmeath"?jam:null } autoPlay />
             </div>
 
         )

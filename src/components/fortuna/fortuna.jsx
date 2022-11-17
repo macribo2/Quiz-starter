@@ -443,10 +443,10 @@ export default class Fortuna extends React.Component {
 				
 			}, 600)
 			setTimeout(function () { document.getElementById('fortuna-vid').playbackRate = 0.1; }, 800)
+			ct = Math.ceil(vid.currentTime) 
 			setTimeout(function () {
 				$('#fortuna-vid').trigger('pause');
 				
-				ct = Math.floor(vid.currentTime) 
 				console.log(' fortunaTime '+fortunaTime[ct] + "ct "+ct)
 
 }, 1000)
@@ -476,6 +476,7 @@ export default class Fortuna extends React.Component {
 						localStorage.setItem('pucaEng',thePookaOf )
 						console.log('this ft...' + fortunaTime[ct] + "   i "+i  )
 						console.log('this ft...' + pucaNa + " " + thePookaOf)
+						localStorage.setItem('secondLocationId',i)
 						// ct = i;
 						
 					}

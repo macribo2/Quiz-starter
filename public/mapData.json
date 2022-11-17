@@ -230,12 +230,12 @@
       "Inis Ceiṫleann"
     ],
     "locationsEng": [
-      "An Garastún",
-      "Paiteagó",
-      "Eadarnaiḋ",
-      "Lios na Daróg",
-      "Scriobaċ",
-      "Inis Ceiṫleann"
+      "Garrison",
+      "Picts: they spoke a language like the Welsh. The great test-word in place-names is Pet. Same as Gaelic 'Baile' which in-fact replaces it. - logainm.ie",
+      "Ederney - middle place/place between",
+      "Ringfort of the Oak",
+      "Scraping | Scribing",
+      "Isle of Cethleann the Prophet, wife of Balor the Smiter."
     ],
     "county": "Co. Ḟear Manaċ",
     "mapData": "[[3,3,3,2,2,2,2,9,9,9],[3,31,1,1,0,32,2,9,9,9],[3,0,0,1,0,0,0,0,9,9],[4,0,0,0,0,0,0,0,0,8],[4,30,0,0,0,0,33,0,0,8],[4,4,0,0,0,0,1,0,0,8],[4,4,4,34,0,0,1,0,0,8],[5,5,5,6,0,0,0,0,0,7],[5,5,5,6,0,0,35,0,0,7],[5,5,5,6,6,6,6,7,7,7]]",
@@ -354,16 +354,16 @@
     "locations": [
       "Béal Átha na gCarraigíní",
       "An Mullach Mór",
-      "An Ċéis",
-      "Gob Reaċla",
+      "Uaimheanna na Céise",
+      "Machaire Eabha",
       "Baile Uí Ḋálaigh",
       "Tobar an Ċoire"
     ],
     "locationsEng": [
-      "Béal Átha na gCarraigíní",
-      "An Mullach Mór",
-      "An Ċéis",
-      "Gob Reaċla",
+      "Bellanagarrigeeny - Ford of the flagstone",
+      "Mullaghmore - the great summit",
+      "Keshcorrn Caves",
+      "Eabha",
       "Baile Uí Ḋálaigh",
       "Tobar an Ċoire"
     ],
@@ -852,7 +852,7 @@
     ],
 
     "county": "ó náid go haon",
-    "mapData": "[[3,3,3,3,3,3,3,3,3,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,3,3,3,3,3,3,3,3,3]]",
+    "mapData": "[[3,3,3,3,3,3,3,3,3,3],[3,3,3,3,3,3,3,3,3,3],[3,3,3,3,3,3,3,3,3,3],[3,3,3,3,3,3,3,3,3,3],[3,3,3,3,3,3,3,3,3,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,3,3,3,3,3,3,3,3,3]]",
     "countyBG": "url('./countyMaps/geaga-1.png')",
     "top": "76px",
     "left": "16px",
