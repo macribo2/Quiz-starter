@@ -493,7 +493,7 @@
       "Navan - the cave",
       "Rathcairn -  ring-fort pile of rocks",
       "Kilbride - Church of St Bridget",
-      "Tara - proto-celtic sacred space τέμενος | templum",
+      "Tara - sacred space τέμενος | templum",
       "Ballinabrackey - Summer pasture of the wolf-plain",
       "Fairyhouse"
     ],
@@ -585,19 +585,19 @@
   {
     "emblem": "westmeath",
     "co": "westmeath",
-    "locations": [      "Baile na gCailleach","Ráth Ḟearna","An Teanga","Na Colúir", "Cill Ḃeagáin",
+    "locations": [      "Baile na gCailleach","Ráth Ḟearna","Tulaigh an Eallaigh","Na Colúir", "Cill Ḃeagáin",
       "An Muileann gCearr"
     ],
     "locationsEng": [
-      "Collinstown - 'town of the veiled women' or 'town of the hags'",
+      "Collinstown - town of the veiled women or town of the hags",
       "Raharney - Fearna's ringfort",
-      "Tang - the tongue",
+      "Tullynally - hillock of the swans",
       "Corlis - the pidgeons",
       "Kilbeggan - church of Bécán, distinguished Irish Saint",
       "Mullingar - the crooked mill"
     ],
     "county": "Co. Na hIarṁí",
-    "mapData": "[[3, 3, 3, 3, 3, 2, 2, 9, 9, 9],[3,3,3,0,0,0,30,9,9,9],[3,3,3,0,0,0,0,0,0,9],[4,4,0,0,0,0,0,31,0,8],[4,32,0,0,0,0,0,0,0,8],[4,0,33,0,0,0,0,0,0,8],[4,0,0,0,0,0,0,0,0,8],[5,0,0,0,0,0,35,0,7,7],[6,6,6,6,34,0,7,7,7,7],[6,6,6,6,6,6,6,7,7,7]]",
+    "mapData": "[[3, 3, 3, 3, 3, 2, 2, 9, 9, 9],[3,3,3,0,0,0,30,9,9,9],[3,3,3,0,0,0,0,0,0,9],[4,4,0,0,0,0,0,31,0,8],[4,0,0,0,0,0,0,0,0,8],[4,0,33,0,0,0,0,0,0,8],[4,0,0,0,32,0,0,0,0,8],[5,0,0,0,0,0,35,0,7,7],[6,6,6,6,34,0,7,7,7,7],[6,6,6,6,6,6,6,7,7,7]]",
     "countyBG": "url('./countyMaps/westmeath.png')",
     "top": "60px",
     "left": "1px",
@@ -852,7 +852,7 @@
     ],
 
     "county": "ó náid go haon",
-    "mapData": "[[3,3,3,3,3,3,3,3,3,3],[3,3,3,3,3,3,3,3,3,3],[3,3,3,3,3,3,3,3,3,3],[3,3,3,3,3,3,3,3,3,3],[3,3,3,3,3,3,3,3,3,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,3,3,3,3,3,3,3,3,3]]",
+    "mapData": "[[3,3,3,3,3,3,3,3,3,3],[3,3,3,3,3,3,3,3,3,3],[3,3,3,3,3,3,3,3,3,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,3,3,3,3,3,3,3,3,3]]",
     "countyBG": "url('./countyMaps/geaga-1.png')",
     "top": "76px",
     "left": "16px",

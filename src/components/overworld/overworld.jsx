@@ -4,14 +4,22 @@ import '../Rings/rings1.css';
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
 import lens from '../../images/ciorcal-glass2.png';
+import stats from '../../images/inv/char.png';
+import inv from '../../images/inv/backpack.png';
+import disk from '../../images/inv/diskette.png';
 import portrait from '../../images/portrait.gif'
 import { BtnB } from './../ui/btn-b';
 import promptVid from '../../vid/stars.mp4'
 import ciaroga from '../../images/players/rógaire0.png'
 import phone1 from '../../images/phone-0.png';
 import glass from '../../images/big-glass.png';
+import statsMenu from '../../images/fog3.png';
+import invMenu from '../../images/inv/inv-bg.png';
+import diskMenu from '../../images/blackripple.gif';
+import EascaLocation from '../easca-location/easca-location'
+
 import gigakoops from '../../audio/Gigakoops - Level 2 - High Clouds.mp3'
-import jam from '../../audio/HoliznaCC0 - Rising Hero.mp3'
+import jam from '../../audio/Azureflux - Pocket Mirror Main Theme.mp3'
 import ReactAudioPlayer from 'react-audio-player';
 // import county emblems
 
@@ -89,7 +97,7 @@ return icon
 function setIcon(icon) { 
     return icon
 }
-let engNotes = ['Your Táiniste will meet you in '+secondLocation+' ',''];
+let engNotes = ['From 0 to 1...'];
 let NarrativeCode = 0;
 function setPlayerIcon() {
     let overworldPortrait = localStorage.getItem('portrait');
@@ -119,6 +127,10 @@ export default class Overworld extends React.Component {
             mobileHor: true,
             whereAmI: 'geaga',
             isOn: false,
+            statsVisible: false,
+            diskVisible: false,
+            inventoryVisible: false,
+            showEascaLocation:true
             // whereAmI: localStorage.getItem('whereAmI')
         }
 
@@ -134,120 +146,6 @@ export default class Overworld extends React.Component {
     jQueryCode = () => {
         let playerOverLocation = false;
         localStorage.setItem('whereAmI', 'geaga');
-        let eascaLocations = [
-
-            "Caisleán na Deirge",
-            "Baile Mhic Gofraidh",
-            "An Ómaigh",
-            "Seisceann Siúil",
-            "An Ċorr Ċríochach",
-            "Dún Geanainn",
-            "Doire na Criaḋ",
-            "An Cnoc Rua",
-            "Béal Tairbirt",
-            "An Dromainn",
-            "Dún an Rí",
-            "Lios Cré",
-            "Ceann Boirne",
-            "Fíoch Rua",
-            "An Tulach",
-            "Cill Rois",
-            "Leaba Ṡíoda",
-            "Bun Raite",
-            "Cairbre",
-            "Na Solláin",
-            "Fioḋ Alúine",
-            "Maigh Nuad",
-            "An Currach",
-            "Léim an Ḃradáin"
-            ,
-            "Poll an Phúca",
-            "Cill Cais",
-            "An Spidéal ",
-            "An Teach Dóite",
-            "An Ċeaṫrú Rua",
-            "Inis Meáin ",
-            "Scairbh na gCaorach",
-            "Cluain Eois",
-            "Einistir Ḃuithe",
-            "Teach an Scotaigh",
-            "Crícheán Rua",
-            "Carraig Ṁaċaire Rois",
-            "Cill Deirge",
-            "Baile Uí Ṁurċú",
-            "Baile Haicéid",
-            "An Ḃuiríos",
-            "Miseal",
-            "Cill Daṁáin",
-            "Sráid na nAlbanach",
-            "Craigavon",
-            "Port An Dúnáin",
-            "Baile Úr",
-            "Baile an Ṁuilinn",
-            "Lios Liath",
-            "An Lorgain",
-            "Lios na gCearrḃach",
-            "An Caisleán Riaḃach",
-            "An Ṁainistir Liath",
-            "Dún Pádraig",
-            "Cill Ċaoil",
-            "Cill Ala",
-            "Caisleán an Ḃarraiġ",
-            "Baile Ui Ḟiacáin",
-            "An Caoláire Rua",
-            "Lios an tSaṁaiḋ",
-            "An Éill",
-            "An Lios Breac",
-            "Meathais Troim",
-            "Gránard",
-            "Cluain Dá Ráth",
-            "Maiġ Duṁa",
-            "An Ċarraig Ḃuí",
-            "Cathair Saiḋḃín",
-            "An Daingean",
-            "Gleann na bPúcaí",
-            "Sliabh Mis",
-            "Na Cruaċa Duḃa",
-            "An tSnaidhm",
-            "An Uaimh",
-            "Ráth Ċairn",
-            "Cill Ḃríde",
-            "Teamhair",
-            "Buaile na Bréachṁaí ",
-            "Tigh na Sióg",
-            "Ġráinseaċ Ċuffe",
-            "Baile Ṁic Andáin",
-            "Bearna na Gaoiṫe",
-            "Dún Garḃáin",
-            "Baile an Ṗoill",
-            "Sliaḃ Rua",
-            "Sléiḃte an Ċomaraigh",
-            "An Baile Dubh",
-            "Tullach an Iarainn",
-            "Cluain Ḟia",
-            "Dún Garḃán",
-            "Cill Ṁíodáin",
-            "Eiréil ",
-            "Darú",
-            "An Baile Fionn",
-            "Baile Átha Í",
-            "Cúil an tSúdaire",
-            "Buiríos Mór Osraí",
-            "Ros Cré",
-            "Durlas",
-            "Faiċe Ró",
-            "Sliabh na mBan",
-            "Cluain Meala",
-            "Tigh na Naoi Míle",
-            "Béal Átha na gCarraigíní",
-            "An Mullach Mór",
-            "An Ċéis",
-            "Gob Reaċla",
-            "Baile Uí Ḋálaigh",
-            "Tobar an Ċoire"
-
-
-        ]
 
         $.getJSON('mapData.json', function (county) {
             
@@ -438,6 +336,7 @@ export default class Overworld extends React.Component {
                         localStorage.setItem("whereAmI", "westmeath");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
                         NarrativeCode++;
+                        $('#eascaStage').fadeOut()
                             refresh();
                             setMap()
 
@@ -3945,8 +3844,8 @@ export default class Overworld extends React.Component {
             console.log('whereAmI' + whereAmI)
             localStorage.setItem('whereAmI', whereAmI);
             let secondLocationId = localStorage.getItem('secondLocationId');
-            secondLocation = eascaLocations[secondLocationId]
-            alert('Tá do thánaiste ag feitheamh ort i ' + secondLocation)
+            // secondLocation = eascaLocations[secondLocationId]
+            alert('Beidh muid ag siúl leat i '+  secondLocation +' anocht!')
             returnToCounty();
             refresh();
             $('.countyMap').fadeIn();
@@ -3993,8 +3892,8 @@ export default class Overworld extends React.Component {
             imreoir.whereAmI = localStorage.getItem("whereAmI");
 
             gameObjects[playerRow][playerColumn] = 0;
-            playerRow = 5;
-            playerColumn = 5;
+            playerRow = 3;
+            playerColumn = 4;
             animatePlayer();
             refresh();
             setMap();
@@ -4074,7 +3973,15 @@ let        heroName = this.props.heroName
         console.log(whereAmI + 'whereAmI');
         whereAmI = localStorage.getItem('whereAmI');
         
-
+        let runInventory = function() { 
+            alert('inv')
+        }
+        let runStats = function() { 
+            alert('stats')
+        }
+        let runDisk = function() { 
+            this.setState({diskVisible: true })
+        }
         return (
             <div >
     <div className="bg"></div>
@@ -4170,6 +4077,7 @@ let        heroName = this.props.heroName
 
 
                 </div>
+  { this.state.showEascaLocation? <EascaLocation/>:null}
 
  
                     <img className="map-lens" src={lens} alt="" />
@@ -4219,10 +4127,12 @@ let        heroName = this.props.heroName
                     
                     }
                     else {
-                        (this.setState({ isOn: true })
-                        )
+                        (this.setState({ isOn: true }))
+                        console.log("hi from toggle glass")
+                    
+                    
                     }
-                    setTimeout(()=> { this.setState({ isOn: false }) }, 3000)
+                    {/* setTimeout(()=> { this.setState({ isOn: false }) }, 3000) */}
                         
 
                 
@@ -4242,7 +4152,51 @@ let        heroName = this.props.heroName
                     <br />
                     <h2 id="eng-notes" > {engNotes[NarrativeCode]}</h2>
                     
-<div id="event-report"></div>
+                    <div id="event-report"></div>
+                    <div id="ui-container">
+
+                    <img src={stats} alt="" className="stats"onClick={() => {
+                            if (this.state.statsVisible) {
+                                this.setState({ statsVisible: false })
+				
+                    
+                            }
+                            else {
+                                (this.setState({ statsVisible: true }))
+                    
+                    
+                            }
+                        }}  />
+                        
+                        <img src={disk} alt="" className="disk" onClick={() => {
+                            if (this.state.diskVisible) {
+                                this.setState({ diskVisible: false })
+				
+                    
+                            }
+                            else {
+                                (this.setState({ diskVisible: true }))
+                    
+                    
+                            }
+                        }} />
+<img src={inv} alt="" className="inventory" onClick={() => {
+                            if (this.state.inventoryVisible) {
+                                this.setState({ inventoryVisible: false })
+				
+                    
+                            }
+                            else {
+                                (this.setState({ inventoryVisible: true }))
+                    
+                    
+                            }
+                        }}  />
+                    </div>
+ 
+                    <img src={ this.state.diskVisible? diskMenu: null} alt="" className="diskMenu" />                   
+                    <img src={ this.state.statsVisible? statsMenu: null} alt="" className="statsMenu" />                   
+                    <img src={this.state.inventoryVisible? invMenu: null } alt="" className="invMenu" />                   
                 </div>) : null}
                 <Silken id="silken"></Silken>
                 <h2 id="output2"> "{ heroName}!"</h2>
@@ -4250,11 +4204,12 @@ let        heroName = this.props.heroName
 
             <BtnB id="b-btn" onClick={() => {
   
-  alert(whereAmI);
+                    this.setState({showEascaLocation:true})
   
   }} ></BtnB>
 
   <ReactAudioPlayer src={whereAmI==="westmeath"?jam:null } autoPlay />
+           
             </div>
 
         )

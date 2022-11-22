@@ -119,8 +119,6 @@
 	
 }
 
-
-
 #btn-txt {
 	margin-top: 9px;
     pointer-events: none;
@@ -128,21 +126,36 @@
     text-align: center;
     font-size: 2em;
     margin-bottom: 3px;
-font-family:aonchlo;}
-
+	font-family:aonchlo;}
+	
+	
+	
 #btn-b{color: gainsboro;
     font-size: 1em;
     width: 63px;
     height: 63px;
     border: 2px solid rgba(170, 176, 177,0.5);
     background-color: rgb(83, 60, 90);
-    margin-left: 27%;
     margin-right: 0;
     border-radius: 50%;
     z-index: 999 !important;
     transform: scale(0.8);
-    position: relative;
-	margin-top: 294%;
-    left: 411%;
+    position: fixed;
+	margin-top: 23%;
+    margin-left: 82%;
+    left: 1%;
+    top: 1%;
 	display:none;	
 }
+
+#btn-txt, .btn-txt-b{
+	
+	pointer-events: none;
+	justify-content: center;
+	text-align: center;
+	font-size: 2em;
+	margin-bottom:4px;
+font-family:aonchlo;}
+.btn-txt-b	{
+	padding-bottom:3px;
+	}

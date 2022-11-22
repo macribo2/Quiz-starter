@@ -42,7 +42,6 @@ import MenuClick from '../../audio/171697__nenadsimic__menu-selection-click.wav'
 import Select from '../../audio/171697__nenadsimic__menu-selection-click.wav';
 // import jam from '../../audio/51241__rutgermuller__8-bit-gabber-piece.wav'
 import useScreenOrientation from 'react-hook-screen-orientation';
-
 import fairyRing from '../../images/question-backgrounds/fairy-ring0.gif';
 import hill from '../../images/rainy-hill1.png';
 import blank from '../../images/blank.png';
@@ -84,7 +83,6 @@ import AandB from '../../components/silken/silken.jsx';
 import Shadowhill from '../../images/shadow-hill.png';
 import distantTown from '../../images/newbg2town.png';
 import rave from '../../images/color-square.gif'
-
 window.scrollTo(0, 1);
 const ComponentWithScreenOrientation = () => {
 	const screenOrientation = useScreenOrientation()
@@ -333,7 +331,9 @@ const[score, setScore] = useState(0)
 			
 		)
 	}
-	const buttonMashClick= (isCorrect, someVal) => { 
+	const buttonMashClick = (isCorrect, someVal) => { 
+
+if(value!=0){
 		setIsFadedOut(false)
 		setIsFadedOut(true)
 
@@ -348,7 +348,7 @@ const[score, setScore] = useState(0)
 		} else { setShowScore(true)}
 		console.log("currentQuestion" + currentQuestion)
 		console.log("value:" + value)
-	
+	}
 	}
 
 	const buttonMash2Click= (isCorrect, someVal) => { 
@@ -699,6 +699,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			</> : null}
 
 			<img id="stars" src={stars} className="question-img" alt="wheeling starfield" />		
+
 
 	</>
 	

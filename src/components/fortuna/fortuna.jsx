@@ -159,7 +159,7 @@ export default class Fortuna extends React.Component {
 			setTimeout(function () {
 				$('#pO').html(pucaNa);
 				$('#pOf').html(thePookaOf);
-			}, 2000)
+			}, 500)
 			let vid = document.getElementById('fortuna-vid');
 			
 				$('#pO').html('')
