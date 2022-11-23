@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "05bfdf707940a1e139db",
-    "url": "/static/css/main.91d62301.chunk.css"
+    "revision": "6de73e7bea0876c93a76",
+    "url": "/static/css/main.f3f7d368.chunk.css"
   },
   {
-    "revision": "05bfdf707940a1e139db",
-    "url": "/static/js/main.787577c2.chunk.js"
+    "revision": "6de73e7bea0876c93a76",
+    "url": "/static/js/main.802f4d40.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "5c37f0584b5a5fb1046e",
+    "revision": "27aa275938555aecd566",
     "url": "/static/css/2.7079e116.chunk.css"
   },
   {
-    "revision": "5c37f0584b5a5fb1046e",
-    "url": "/static/js/2.3697d6eb.chunk.js"
+    "revision": "27aa275938555aecd566",
+    "url": "/static/js/2.a4a4fb7f.chunk.js"
   },
   {
     "revision": "8f8a8b98c655870f6b0502069cc630bc",
@@ -72,6 +72,10 @@ self.__precacheManifest = [
     "url": "/static/media/phone-0.9d35aff1.png"
   },
   {
+    "revision": "837ece981e981876d923234b852b5fc5",
+    "url": "/static/media/blackripple.837ece98.gif"
+  },
+  {
     "revision": "85645a6f5cd76972797cad12768b7391",
     "url": "/static/media/geagaFace.85645a6f.png"
   },
@@ -110,6 +114,18 @@ self.__precacheManifest = [
   {
     "revision": "fed5fdb082f8e250499ce7bbd2c20119",
     "url": "/static/media/stars.fed5fdb0.mp4"
+  },
+  {
+    "revision": "90c4b60aca9878a58070f16934ef005e",
+    "url": "/static/media/fog3.90c4b60a.png"
+  },
+  {
+    "revision": "31bc276f74ea9dead8211348c79f2bb9",
+    "url": "/static/media/inv-bg.31bc276f.png"
+  },
+  {
+    "revision": "a82cee8dcaf8584592166c959f9c9cf4",
+    "url": "/static/media/32.a82cee8d.png"
   },
   {
     "revision": "ab8aeb0ebc7b0039763da4347a0d9699",
@@ -272,8 +288,8 @@ self.__precacheManifest = [
     "url": "/static/media/geagabg1.1913f10c.png"
   },
   {
-    "revision": "db2c458d8684ffd29b90e1b069308375",
-    "url": "/static/media/newbg2town.db2c458d.png"
+    "revision": "91078483f7bec322371eca051d1b2167",
+    "url": "/static/media/newbg2town.91078483.png"
   },
   {
     "revision": "c860d557f7a5adc8e547fae0867f88b6",
@@ -288,12 +304,64 @@ self.__precacheManifest = [
     "url": "/static/media/tonnta3.134c2cfe.gif"
   },
   {
+    "revision": "076f3bffba01a16904bf9ba264c71954",
+    "url": "/static/media/deetsFrame.076f3bff.png"
+  },
+  {
     "revision": "1bd9b1cf1f14870b3b786486b40ba0c1",
     "url": "/static/media/geaga0.1bd9b1cf.png"
   },
   {
-    "revision": "076f3bffba01a16904bf9ba264c71954",
-    "url": "/static/media/deetsFrame.076f3bff.png"
+    "revision": "b37876409b1f45e1d8f535dabf4d30e3",
+    "url": "/static/media/ciorcal-glass-bg.b3787640.png"
+  },
+  {
+    "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
+    "url": "/static/media/fortuna-glass.4c08d21e.png"
+  },
+  {
+    "revision": "ee5004be8978604da5e223282c5bbe51",
+    "url": "/static/media/sea.ee5004be.png"
+  },
+  {
+    "revision": "c84c06495852ac730bd653c3aa9bff25",
+    "url": "/static/media/wren-code0.c84c0649.png"
+  },
+  {
+    "revision": "1417df0f3cdb8da0094f648a0f41b6ef",
+    "url": "/static/media/VT323-Regular.1417df0f.ttf"
+  },
+  {
+    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
+    "url": "/static/media/mapFrame4.0cdb344e.png"
+  },
+  {
+    "revision": "4159e8fdaa220a7666d4e619a3429f80",
+    "url": "/static/media/wren2b.4159e8fd.png"
+  },
+  {
+    "revision": "803e6e686778fd42d5b5ccb0059ef189",
+    "url": "/static/media/wren-hood.803e6e68.png"
+  },
+  {
+    "revision": "e489ff862837973ba8874fb98b06ef64",
+    "url": "/static/media/tonnta2.e489ff86.gif"
+  },
+  {
+    "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
+    "url": "/static/media/mapFrame2.915b9892.png"
+  },
+  {
+    "revision": "d0fa8e83c08e2f7d1ce2e1cbe8f2e8b6",
+    "url": "/static/media/fairy-ring-east-vert.d0fa8e83.png"
+  },
+  {
+    "revision": "a494b88cb098a9b5ea64adcc98a2c0a7",
+    "url": "/static/media/field.a494b88c.png"
+  },
+  {
+    "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
+    "url": "/static/media/fortuna-glass-lit.29cb5d03.png"
   },
   {
     "revision": "89b94d7b5fbe24bc213b0097236b0266",
@@ -332,10 +400,6 @@ self.__precacheManifest = [
     "url": "/static/media/phone-2.9c3b1e3d.png"
   },
   {
-    "revision": "837ece981e981876d923234b852b5fc5",
-    "url": "/static/media/blackripple.837ece98.gif"
-  },
-  {
     "revision": "f7c21a06fd73772cfc43f8f4f10afc28",
     "url": "/static/media/drone.f7c21a06.wav"
   },
@@ -344,7 +408,7 @@ self.__precacheManifest = [
     "url": "/static/media/click.e15794b2.wav"
   },
   {
-    "revision": "ff1c55dd785f4cb0fad17a4a90ee5d26",
+    "revision": "d24f8618c64c6cdbe6ecaf1d928dc649",
     "url": "/index.html"
   }
 ];

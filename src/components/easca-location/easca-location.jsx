@@ -1441,7 +1441,7 @@ var namesInIrish = [
 		jQueryCode();
 	});
 	return <div className="eascaStage-container" >
-			      {/* <div class="eascaStage-bg loopscroll"></div> */}
+			      {/* <div className="eascaStage-bg loopscroll"></div> */}
 
 	
 

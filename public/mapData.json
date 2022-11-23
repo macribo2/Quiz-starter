@@ -308,12 +308,12 @@
       "Corr na Fola"
     ],
     "locationsEng": [
-      "Cluain Fada",
+      "Cloodfad - long meadow",
       "Baile an Tobair",
-      "Loch Bó Finne",
+      "Lough Bofin - lake of the blonde cow",
       "Scramóg",
-      "Loch Bó Dearge",
-      "Corr na Fola"
+      "Lough Boderg - lake of the red cow",
+      "Cornafulla - hill of the blood"
     ],
     "county": "Co. Ros Comáin",
     "mapData": "[[3,3,3,2,2,2,2,9,9,9],[3,3,3,3,0,0,0,9,9,9],[3,3,0,0,0,0,0,9,9,9],[4,4,0,0,0,0,32,9,8,8],[4,4,0,31,0,0,0,0,8,8],[4,30,0,0,0,33,0,34,8,8],[4,4,4,4,0,0,0,8,8,8],[5,5,5,5,5,0,0,7,7,7],[5,5,5,5,5,35,0,7,7,7],[5,5,5,5,6,6,6,7,7,7]]",
@@ -334,11 +334,11 @@
       "Muine Mór"
     ],
     "locationsEng": [
-      "Doire",
-      "Léim an Ṁadaiḋ",
-      "Droichead Fíolta",
-      "Maċaire Ráṫa",
-      "An Seanṁullach",
+      "Derry - oak grove",
+      "Limavady - leap of the dog",
+      "Bridge of Fíolta (seeded?)",
+      "Maghera - plain of the ringfort",
+      "Shanmullagh - the old summit",
       "Muine Mór"
     ],
     "county": "Co. Ḋoire",
@@ -363,9 +363,9 @@
       "Bellanagarrigeeny - Ford of the flagstone",
       "Mullaghmore - the great summit",
       "Keshcorrn Caves",
-      "Eabha",
-      "Baile Uí Ḋálaigh",
-      "Tobar an Ċoire"
+      "Maugherow - the plain of Eabha",
+      "Ballydawley - home of the O Dalys",
+      "Tobercurry - well of the cauldron"
     ],
     "county": "Co. Ṡligiġ",
     "mapData": "[[1,1,1,1,1,1,2,9,9,9],[1,1,1,1,1,33,0,0,9,9],[4,0,0,1,1,0,30,0,9,9],[4,0,0,34,0,0,0,0,8,8],[4,0,0,0,0,31,0,0,0,8],[4,0,0,0,0,0,0,0,0,8],[5,0,0,0,0,0,0,0,0,8],[5,0,0,35,0,0,0,32,0,7],[5,1,0,0,6,0,0,0,7,7],[5,5,5,6,6,6,6,7,7,7]]",
@@ -386,12 +386,12 @@
       "Tigh na Naoi Míle"
     ],
     "locationsEng": [
-      "Ros Cré",
-      "Durlas",
-      "Faiċe Ró",
-      "Sliabh na mBan",
-      "Cluain Meala",
-      "Tigh na Naoi Míle"
+      "Roscrea - Crea's wood",
+      "Thurles - Durlas Éile - strong fort of the Eli people",
+      "Faiche Ro - Rosegreen",
+      "Slievenamo - The Women's mountain",
+      "Clonmel - honey meadow",
+      "Ninemilehouse - nine miles from Glenbower"
     ],
     "county": "Co. Tiobraid Árann",
     "mapData": "[[3,3,3,2,2,2,2,9,9,9],[3,3,3,0,0,0,2,9,9,9],[3,3,3,0,0,0,0,9,9,9],[4,4,4,0,0,0,30,9,8,8],[4,4,4,0,0,0,0,0,8,8],[4,4,4,4,0,0,0,0,8,8],[4,4,4,4,33,0,31,0,8,8],[5,5,5,0,0,0,0,32,0,7],[5,5,5,6,34,0,35,7,7,7],[5,5,5,6,6,6,6,7,7,7]]",
@@ -407,17 +407,17 @@
       "Eiréil ",
       "Darú",
       "An Baile Fionn",
-      "Baile Átha Í",
+      "Droichead Crom Abú",
       "Cúil an tSúdaire",
       "Buiríos Mór Osraí"
     ],
     "locationsEng": [
-      "Eiréil ",
-      "Darú",
-      "An Baile Fionn",
-      "Baile Átha Í",
-      "Cúil an tSúdaire",
-      "Buiríos Mór Osraí"
+      "Errill - bed or tomb",
+      "Durrow - the oak plain",
+      "Ballyfin - the town of finn",
+      "Crom-a-Boo Bridge - Castle Crom forever bridge",
+      "Portarlington - nook of the tanner'",
+      "Borris-in-Ossory - Borrough of the ancient Kingdom of Osraige"
     ],
     "county": "Co. Laoise",
     "mapData": "[[3,3,3,2,2,2,2,9,9,9],[3,0,0,0,0,0,0,0,0,9],[3,3,0,0,0,0,32,0,0,9],[4,30,0,31,0,0,0,0,0,8],[4,0,0,0,0,0,0,0,0,8],[4,0,0,0,0,0,0,0,0,8],[4,0,33,0,0,0,35,0,0,8],[5,0,0,0,0,0,0,0,0,7],[5,0,0,0,34,0,6,0,0,7],[5,5,5,6,6,6,6,6,7,7]]",
