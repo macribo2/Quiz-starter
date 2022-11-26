@@ -76,6 +76,9 @@ export default class Fortuna extends React.Component {
 		}
 	}
 	jQueryCode = () => {
+		//document.getElementById('fortuna-vid').setAttribute('currentTime',4000)
+		//$('#fortuna-vid').prop('currentTime');
+		document.getElementById('fortuna-vid').currentTime = Math.floor(Math.random() * 50);
 		
 		let playerRollsA;
 			let fortunaPos = 0
@@ -156,10 +159,7 @@ export default class Fortuna extends React.Component {
 		
 		function forFunction() {
 			localStorage.setItem('touchedVid','true')
-			setTimeout(function () {
-				$('#pO').html(pucaNa);
-				$('#pOf').html(thePookaOf);
-			}, 500)
+		
 			let vid = document.getElementById('fortuna-vid');
 			
 				$('#pO').html('')
@@ -329,14 +329,14 @@ export default class Fortuna extends React.Component {
 				`The Eagles`,
 				`The Stronghold`,
 				`of the Tricksters`,
-				`of the Goblins`,
-				`The flatterer`,
+				`of fanatics`,
+				`of the flatterer`,
 				`The Rogue`,
 				`branch of the Black Beetle`,
 				`The Kings`,
 				`of the Sea Warriors`,
 				`The Fury`,
-				`Péire Cladhaire`,
+				`of crops`,
 				`of kisses`,
 				`of the Druids`,
 				`The Rats`,
@@ -349,24 +349,26 @@ export default class Fortuna extends React.Component {
 				`The Returned`,
 				`The Fortunate`,
 				`Golden Axe Tribe`,
-				`the Sickle`,
+				`of the Sickle`,
 				`the Vigilant`,
 				`the Dragon`,
 				`Courage, Patience`,
 				`The Plunderer	`,
 				`Lancer-Fencers`,
-				`Wandering Fenians`,
+				`Wanderer`,
 				`The Swallows`,
-				`of the Stings`,
-				`of the Sciences`,
-				`the Wolf`,
+				`of the Swans | of the Sciences`,
 				`The Calm`,
-				`Of Mann`,
 				`The Steadfast`,
-				`Lily`,
+				`Of Mann`,
+				`Triquetra`,
+				`Prosperous`,
 				``,
+				`of the Stings`,
+				`the Wolf`,
 				`The Skiffs`,
-				`Coders`
+				`Coders`,
+				`of Herbalism`
 			]
 			
 			let fortunaTeams = [
@@ -394,14 +396,14 @@ export default class Fortuna extends React.Component {
 				`Na hIolair`,
 				`An Daingin`,
 				`Na Cleasaí`,
-				`Na Siabhaire`,
-				`Na Beadaidhthe`,
+				`na Siabhaire`,
+				`na Beadaidhthe`,
 				`Na Rogairí`,
 				`Craobh an Daol Dubh`,
 				`Na Ríthe`,
 				`Fiannaí Mara`,
 				`Ar an Daoraí`,
-				`Clunc y Dunc`,
+				`of crops`,
 				`Na Póga`,
 				`Na Draoithe`,
 				`Na Raftáin`,
@@ -422,28 +424,44 @@ export default class Fortuna extends React.Component {
 				`Lannairidhe`,
 				`Fánach`,
 				`Na Fáinleoga`,
-				`Na Spriochair`,
 				`Na hEalaí`,
-				`Na Mictíre`,
 				`Na Ciúine`,
+				`Na Dílseachta`,
 				`Na Manainnise`,
-				`Na Dílseachta`, `Lile`, ``, `Bárc`, `Códóir`
+				`Snaidhm Trí rinn`,
+				`Conách`,
+				``,
+				`Na Spriochair`,
+				`Na Mictíre`,
+				`Bárc`,
+				`Códóir`,
+				`luibheolaíocht`,
+
 			]
 			
 			var pucaNa = ' '
 			let teamImg;
 			let thePookaOf
 			
-		
+			ct = Math.floor(vid.currentTime) 
+			localStorage.setItem('ct',ct )
+
 			setTimeout(function () { document.getElementById('fortuna-vid').playbackRate = 0.5; }, 200)
 			setTimeout(function () { document.getElementById('fortuna-vid').playbackRate = 0.25; }, 400)
+			
+			setTimeout(function () {
+				$('#pO').html(pucaNa);
+				$('#pO').fadeIn();
+				$('#pOf').html(thePookaOf);
+				$('#pOf').fadeIn();
+			}, 500)
 			setTimeout(function () {
 				document.getElementById('fortuna-vid').playbackRate = 0.2;
 				
 				
 			}, 600)
 			setTimeout(function () { document.getElementById('fortuna-vid').playbackRate = 0.1; }, 800)
-			ct = Math.ceil(vid.currentTime) 
+			
 			setTimeout(function () {
 				$('#fortuna-vid').trigger('pause');
 				
@@ -452,7 +470,7 @@ export default class Fortuna extends React.Component {
 }, 1000)
 			setTimeout(function () {
 				$('#btn-a2').fadeIn()
-				let whichIcon = "#imgID" + ct;
+				let whichIcon = "#imgID" + localStorage.getItem('ct');
 				console.log("whichIcon"+ whichIcon)
 				$(whichIcon).fadeIn().removeClass('hidden');
 				hasStopped = true;
@@ -476,15 +494,12 @@ export default class Fortuna extends React.Component {
 						localStorage.setItem('pucaEng',thePookaOf )
 						console.log('this ft...' + fortunaTime[ct] + "   i "+i  )
 						console.log('this ft...' + pucaNa + " " + thePookaOf)
-						localStorage.setItem('secondLocationId',i)
 						// ct = i;
 						
 					}
 					
 				}
 			
-			
-			// var currentTime = video.currentTime;
 			
 			
 			}
@@ -517,8 +532,8 @@ export default class Fortuna extends React.Component {
 		return (
 			
 			<div className="fortuna">
-				<video id="fortuna-vid" autostart="true" autoPlay={true} loop={true} fluid="false" src={fortuna} type={this.props.type} onTouchEnd={function (){ forFunction() }}
-					
+				<video id="fortuna-vid"  autostart="true" autoPlay={true} loop={true} fluid="false" src={fortuna} type={this.props.type} onTouchEnd={function (){ forFunction() }}
+		
 				/>
 				<h1 id="pO"></h1>
 				<div className="team-icon-container">

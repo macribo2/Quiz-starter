@@ -257,11 +257,11 @@
     ],
     "locationsEng": [
       "Church of the Summits (Buttevant)",
-      "Sliabh an Nóglaigh",
-      "Gleann an Ṗreaċáin",
-      "Mouth of the ford of the buttermilk (Bealnablath)",
-      "Cionn tSáile",
-      "An Sciobairín"
+      "Nagles mountains - volunteers mountain",
+      "Glenville - glen of the crows",
+      "Bealnablath - Mouth of the ford of the buttermilk ",
+      "Kinsale - head of the brine",
+      "Skibbereen - little boat harbour"
     ],
     "county": "Co. Ċorcaí",
     "mapData": "[[3,3,3,2,2,2,2,9,9,9],[3,3,3,0,30,0,0,0,0,8],[3,3,3,0,0,0,31,0,0,8],[3,3,3,0,0,0,32,0,0,8],[4,4,4,0,0,0,0,0,0,8],[4,4,0,0,0,33,0,0,1,1],[4,0,0,0,0,0,34,1,1,1],[1,0,35,0,0,1,1,1,1,1],[1,1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1,1]]",
@@ -439,10 +439,10 @@
     ],
     "locationsEng": [
       "Sléiḃte an Ċomaraigh",
-      "An Baile Dubh",
+      "the black town",
       "Tullach an Iarainn",
       "Cluain Ḟia",
-      "Dún Garḃán",
+      "Dungarvan - Garbhann's Fort",
       "Cill Ṁíodáin"
     ],
     "county": "Co. Ṗort Láirge",

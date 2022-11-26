@@ -19,7 +19,7 @@ import diskMenu from '../../images/blackripple.gif';
 import EascaLocation from '../easca-location/easca-location'
 
 import gigakoops from '../../audio/Gigakoops - Level 2 - High Clouds.mp3'
-import jam from '../../audio/Azureflux - Pocket Mirror Main Theme.mp3'
+import jam from '../../audio/ultima-tone-long.wav'
 import ReactAudioPlayer from 'react-audio-player';
 // import county emblems
 
@@ -144,6 +144,9 @@ export default class Overworld extends React.Component {
         this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
     }
     jQueryCode = () => {
+        $("#btn-b").click(function(){
+            enterLocation('Baile na gCailleach')
+          });
         let playerOverLocation = false;
         localStorage.setItem('whereAmI', 'geaga');
 
@@ -3898,53 +3901,53 @@ export default class Overworld extends React.Component {
             refresh();
             setMap();
         }
-        // function enterLocation(location) {
-        //     whereAbouts = $('#loc').html()
-        //     // alert(whereAbouts);
+        
+        function enterLocation(location) {
+            whereAbouts = $('#loc').html()
+            alert(whereAbouts);
 
-        //     $.getJSON('whereAbouts.json', function (whereAbouts) {
+            $.getJSON('whereAbouts.json', function (whereAbouts) {
 
-        //         $.each(whereAbouts, function (key, val) {
+                $.each(whereAbouts, function (key, val) {
 
-        //             if ($('#loc').html() === val.whereAbouts) {
-
-
-        //                 // console.log("val " + val.co)
-        //                 // console.log("val.county " + val.county)
-        //                 $('.countyMap').css('background-image', val.background)
-        //                 // map = val.map;
-        //                 map =
-        //                     [
-        //                         ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
-        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-        //                         ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
-        //                     ];
-        //                 refresh();
-
-        //             }
-        //         });
+                    // if ($('#loc').html() === val.whereAbouts) {
 
 
-        //     })
-        // }
+                        console.log("val " + val.co)
+                        // console.log("val.county " + val.county)
+                        $('.countyMap').css('background-image', val.background)
+                        // map = val.map;
+                        map =
+                            [
+                                ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
+                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                                ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
+                            ];
+                        refresh();
+
+                    // }
+                });
+
+
+            })
+        }
 
     }
-
     toggleStartOptions() {
         $('.start-options').css('display', 'grid');
         setTimeout(function () {
             $('.start-options').css('display', 'none');
-
+            
         }, 2500)
     }
-
+    
     toggleSelectOptions() {
         $('.select-options').css('display', 'grid');
         setTimeout(function () {
@@ -3964,12 +3967,13 @@ export default class Overworld extends React.Component {
     conceptHandler() {
         window.location.replace('http://167.172.184.73:3000/history')
     }
+  
     render() {
 
 let        heroName = this.props.heroName
-        avatar = this.props.avatar;
-        whereAmIHolder = this.props.whereAmI;
-        console.log(whereAmIHolder + 'whereAmIHolder');
+avatar = this.props.avatar;
+whereAmIHolder = this.props.whereAmI;
+console.log(whereAmIHolder + 'whereAmIHolder');
         console.log(whereAmI + 'whereAmI');
         whereAmI = localStorage.getItem('whereAmI');
         
@@ -4155,7 +4159,7 @@ let        heroName = this.props.heroName
                     <div id="event-report"></div>
                     <div id="ui-container">
 
-                    <img src={stats} alt="" className="stats"onClick={() => {
+                    {/* <img src={stats} alt="" className="stats"onClick={() => {
                             if (this.state.statsVisible) {
                                 this.setState({ statsVisible: false })
 				
@@ -4167,7 +4171,7 @@ let        heroName = this.props.heroName
                     
                             }
                         }}  />
-                        
+                         */}
                         <img src={disk} alt="" className="disk" onClick={() => {
                             if (this.state.diskVisible) {
                                 this.setState({ diskVisible: false })
@@ -4202,11 +4206,7 @@ let        heroName = this.props.heroName
                 <h2 id="output2"> "{ heroName}!"</h2>
             <Rings1/>
 
-            <BtnB id="b-btn" onClick={() => {
-  
-                    this.setState({showEascaLocation:true})
-  
-  }} ></BtnB>
+            <BtnB id="b-btn" ></BtnB>
 
   <ReactAudioPlayer src={whereAmI==="westmeath"?jam:null } autoPlay />
            

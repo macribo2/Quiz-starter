@@ -709,8 +709,16 @@ var namesInIrish = [
 	var eascaStage = document.querySelector("#eascaStage");
 	
 	//The fgame map 
-	
-	var map =[
+		var map = [
+
+			[`.`,`.`,`.`,`.`,`.`,`.`,`.`,`.`,`.`,`.`,],
+
+			[`.`,`.`,`.`,`.`,`.`,`10`,`.`,`.`,`.`,`.`,`.`,],
+		
+			// [`.`,`.`,`.`,`.`,`.`]
+				
+		]
+	var map2 =[
 		[`59`,`3`,`52`,`49`,`28`,`7`,`23`,`47`,`22`,`.`,`36`,`.`,`37`,`.`,`16`,`19`,`.`,`56`,`55`,`.`,`53`,`6`,`27`,`.`,`.`,`33`,`10`,],
 		
 		[`57`,`54`,`50`,`9`,`12`,`.`,`15`,`.`,`.`,`4`,`.`,`.`,`2`,``,`1`,`.`,`29`,`.`,`.`,`30`,`13`,`.`,`21`,`43`,`18`,`.`,`20`,`.`]
@@ -799,8 +807,18 @@ var namesInIrish = [
 			let eascaStageTop=200;
 			var intervalId = window.setInterval(function(){
 				/// call your function here
-					$("#eascaStage").animate({left:"+=20px"},0)
-	// 
+				// alert(
+				// 	$("#eascaStage").css('left')
+
+				// )
+				let eascaStr = $("#eascaStage").css('left')
+				.substring(0, $("#eascaStage").css('left')
+					.length - 2);
+					
+				if (eascaStr <= -1160) { 
+				
+				$("#eascaStage").animate({left:"+=20px"},0)
+			} 
 	let eascaStagePos = $('#eascaStage').position()
 	console.log('position'+eascaStagePos.left)
 	if(eascaStagePos.left>=740){

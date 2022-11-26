@@ -233,7 +233,7 @@ p {
 }
 
 #hero {
-  transform: scale(1) rotateY(180deg);
+  transform: scale(1.5) rotateY(180deg);
 
 
   /* border-radius: 50%; */
@@ -1212,7 +1212,7 @@ position:relative
   height: 30%;
   justify-content:center;
   display: flex;
-  top:0%;
+  top:-9%;
   left:72%;
   transform: scale(0.5);
   z-index: 999;
