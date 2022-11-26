@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "6030fc4d421c46b2bc06",
-    "url": "/static/css/main.72b579e8.chunk.css"
+    "revision": "a1be86f1c846bff9ff3e",
+    "url": "/static/css/main.c11a4e98.chunk.css"
   },
   {
-    "revision": "6030fc4d421c46b2bc06",
-    "url": "/static/js/main.6a9b616c.chunk.js"
+    "revision": "a1be86f1c846bff9ff3e",
+    "url": "/static/js/main.71ce5ef6.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -304,12 +304,16 @@ self.__precacheManifest = [
     "url": "/static/media/tonnta3.134c2cfe.gif"
   },
   {
+    "revision": "076f3bffba01a16904bf9ba264c71954",
+    "url": "/static/media/deetsFrame.076f3bff.png"
+  },
+  {
     "revision": "1bd9b1cf1f14870b3b786486b40ba0c1",
     "url": "/static/media/geaga0.1bd9b1cf.png"
   },
   {
-    "revision": "076f3bffba01a16904bf9ba264c71954",
-    "url": "/static/media/deetsFrame.076f3bff.png"
+    "revision": "1417df0f3cdb8da0094f648a0f41b6ef",
+    "url": "/static/media/VT323-Regular.1417df0f.ttf"
   },
   {
     "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
@@ -320,10 +324,6 @@ self.__precacheManifest = [
     "url": "/static/media/ciorcal-glass-bg.b3787640.png"
   },
   {
-    "revision": "1417df0f3cdb8da0094f648a0f41b6ef",
-    "url": "/static/media/VT323-Regular.1417df0f.ttf"
-  },
-  {
     "revision": "ee5004be8978604da5e223282c5bbe51",
     "url": "/static/media/sea.ee5004be.png"
   },
@@ -332,16 +332,12 @@ self.__precacheManifest = [
     "url": "/static/media/mapFrame4.0cdb344e.png"
   },
   {
-    "revision": "c84c06495852ac730bd653c3aa9bff25",
-    "url": "/static/media/wren-code0.c84c0649.png"
-  },
-  {
     "revision": "4159e8fdaa220a7666d4e619a3429f80",
     "url": "/static/media/wren2b.4159e8fd.png"
   },
   {
-    "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
-    "url": "/static/media/mapFrame2.915b9892.png"
+    "revision": "c84c06495852ac730bd653c3aa9bff25",
+    "url": "/static/media/wren-code0.c84c0649.png"
   },
   {
     "revision": "803e6e686778fd42d5b5ccb0059ef189",
@@ -354,6 +350,10 @@ self.__precacheManifest = [
   {
     "revision": "e489ff862837973ba8874fb98b06ef64",
     "url": "/static/media/tonnta2.e489ff86.gif"
+  },
+  {
+    "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
+    "url": "/static/media/mapFrame2.915b9892.png"
   },
   {
     "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
@@ -408,7 +408,7 @@ self.__precacheManifest = [
     "url": "/static/media/click.e15794b2.wav"
   },
   {
-    "revision": "628de93e7780172b2d903aac8ac8cc08",
+    "revision": "d1f4fc9630973ba103b37970c6d88793",
     "url": "/index.html"
   }
 ];

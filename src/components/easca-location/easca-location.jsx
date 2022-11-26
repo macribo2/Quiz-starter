@@ -1,6 +1,8 @@
 import React, { useState, useEffect} from 'react';
 import './easca-location.css';
+import ring0 from "../Rings/Rings0"
 
+import ring1 from "../Rings/Rings1"
 import empty from "../../images/champions/empty.png";
 import aa1 from "../../images/champions/1.png";
 import aa2 from "../../images/champions/2.png";
@@ -61,6 +63,7 @@ import aa56 from "../../images/champions/56.png";
 import aa57 from "../../images/champions/57.png";
 import aa58 from "../../images/champions/58.png";
 import aa59 from "../../images/champions/59.png";
+import aa60 from "../../images/stone-soup/elf_old.png"
 
 
 
@@ -711,9 +714,9 @@ var namesInIrish = [
 	//The fgame map 
 		var map = [
 
-			[`.`,`.`,`.`,`.`,`.`,`.`,`.`,`.`,`.`,`.`,],
+			// [`.`,`.`,`.`,`.`,`.`,`.`,`.`,`.`,`.`,`.`,],
 
-			[`.`,`.`,`.`,`.`,`.`,`10`,`.`,`.`,`.`,`.`,`.`,],
+			[`.`,`.`,`.`,`.`,`.`,`.`,`.`,``,`.`,`.`,`60`],
 		
 			// [`.`,`.`,`.`,`.`,`.`]
 				
@@ -787,6 +790,7 @@ var namesInIrish = [
 		var a57= `57`;
 		var a58= `58`;
 		var a59= `59`;
+		var a60= `60`;
 	
 		
 		//The size of each cell 
@@ -802,7 +806,10 @@ var namesInIrish = [
 	render();
 	console.log(currentLocation+"********")
 		function render() {
-		
+
+			// if (this.whereAmI=== 'westmeath') { 
+			// 	alert();
+			// }
 			let eascaStageLeft=320;
 			let eascaStageTop=200;
 			var intervalId = window.setInterval(function(){
@@ -815,7 +822,7 @@ var namesInIrish = [
 				.substring(0, $("#eascaStage").css('left')
 					.length - 2);
 					
-				if (eascaStr <= -1160) { 
+				if (eascaStr <= -1180) { 
 				
 				$("#eascaStage").animate({left:"+=20px"},0)
 			} 
@@ -968,6 +975,7 @@ var namesInIrish = [
 				case a58: eascaCell.src = aa58;
 							break;
 				case a59: eascaCell.src = aa59;
+				case a60: eascaCell.src = aa60;
 								
 					}
 	
@@ -1373,7 +1381,7 @@ var namesInIrish = [
 	
 						$("#hero").fadeIn();
 					}, 300)
-	
+				
 					// $('#i-am-not-btn')
 					// .css('background-image', '../playerFrame6')
 	
@@ -1458,6 +1466,7 @@ var namesInIrish = [
 	
 		jQueryCode();
 	});
+	// let whereAmI = this.props.whereAmI
 	return <div className="eascaStage-container" >
 			      {/* <div className="eascaStage-bg loopscroll"></div> */}
 

@@ -4081,7 +4081,7 @@ console.log(whereAmIHolder + 'whereAmIHolder');
 
 
                 </div>
-  { this.state.showEascaLocation? <EascaLocation/>:null}
+                    {this.state.showEascaLocation ? <EascaLocation whereAmI= "geaga" />:null}
 
  
                     <img className="map-lens" src={lens} alt="" />

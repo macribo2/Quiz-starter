@@ -156,7 +156,11 @@
 	  display: none;
 	  opacity: 1;
 	}
-  
+  .eascaCell{
+	border: 1px solid rgba(255, 255, 255, 0.0);
+	height: 64px;
+	width: 64px;
+  }
 	#eascaStage {
 	  position: fixed;
 	  top: 165px;
@@ -170,7 +174,7 @@
 	  animation: slide-eascaStage 80s forwards;
 	  overflow: hidden;
 	}
-  
+
   
   
 	@keyframes fade-pulse {

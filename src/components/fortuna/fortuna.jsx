@@ -336,7 +336,7 @@ export default class Fortuna extends React.Component {
 				`The Kings`,
 				`of the Sea Warriors`,
 				`The Fury`,
-				`of crops`,
+				`sapling`,
 				`of kisses`,
 				`of the Druids`,
 				`The Rats`,
@@ -403,7 +403,7 @@ export default class Fortuna extends React.Component {
 				`Na Ríthe`,
 				`Fiannaí Mara`,
 				`Ar an Daoraí`,
-				`of crops`,
+				`buinneán`,
 				`Na Póga`,
 				`Na Draoithe`,
 				`Na Raftáin`,
@@ -444,7 +444,7 @@ export default class Fortuna extends React.Component {
 			let thePookaOf
 			
 			ct = Math.floor(vid.currentTime) 
-			localStorage.setItem('ct',ct )
+			localStorage.setItem('ct',ct + 1 )
 
 			setTimeout(function () { document.getElementById('fortuna-vid').playbackRate = 0.5; }, 200)
 			setTimeout(function () { document.getElementById('fortuna-vid').playbackRate = 0.25; }, 400)
