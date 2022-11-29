@@ -47,7 +47,7 @@
   border-radius: 50%;
   width: 51%;
   top: 0%;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .map-lens-container {
@@ -275,8 +275,8 @@ p {
 
   100% {
     transform: scale(1.1);
-    margin-left: -20%;
-    margin-top: -12%;
+    margin-left: -10%;
+    margin-top: -10%;
   }
 
 }
@@ -848,7 +848,7 @@ p {
 
 
 
-.countyMap {
+.countyMap, .layerMap {
 
   height: 400px;
   width: 400px;
@@ -864,7 +864,10 @@ p {
   /* border-radius: 50%; */
 
 }
-
+.layerMap {
+z-index: 4;
+position:fixed;
+}
 
 #btn-middle-baile {
   background-image: url('../../images/middle.png');
@@ -1194,6 +1197,28 @@ position:relative
     background-size: contain;
 
   }
+}
+
+.disk-options{
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content:space-between;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  padding:2%;
+  
+}
+
+.option-btn{
+  height: 80px;
+  background-color: rgba(20, 18, 15, 0.625);
+  /* border: 5px solid blue; */
+color: aliceblue;
+  text-align: center;
+display:table-cell;
+vertical-align:middle;
 }
 .inventory, .stats,.disk{
 

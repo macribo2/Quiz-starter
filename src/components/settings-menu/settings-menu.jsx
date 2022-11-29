@@ -1,34 +1,83 @@
 import './settings-menu.css';
 
-import bg0 from '../../images/zone-off.png';
-import React, { useState } from 'react';
+import bg0 from '../../images/bgAnim5.gif';
+import React, { useEffect } from 'react';
 import settingsBtnGamepad from '../../images/settings/gamepad.png';
 import settingsBtnTouchscreen from '../../images/settings/smartphone.png';
-
-
+import ironkey from '../../images/iron-key.png';
+import ironkeyClicks from '../../audio/iron-key.wav';
+import lIkey from '../../images/stone-soup/lord-iron-key.png'
+import ReactAudioPlayer from 'react-audio-player';
 import settingsBtnKeyboard from '../../images/settings/keyboard.png';
 
 
 
- export default function SettingsMenu(props){
+let lyricID = 0;
+export default function SettingsMenu(props) {
+	useEffect(() => {
+		for (let i = 0; i < 9; i++) {
+			setTimeout(() => {
+		
+				lyricID++;
+		   
+				console.log(tollDubh[lyricID])
+			}, 1000)
+
 	
+		}
+});
+	 let tollDubh = [
+	
+		 'Taobh cùl an doras',
+		 'ní bheidh griann',
+		 'ní beidh bórd, ní beidh fíonn ',
+		 'Taobh cùl an doras ',
+		 'ní bheidh griann',
+		 'ní beidh bórd, ní beidh fíonn ',
+		 'Thainig sé',
+		 'treasna tonn',
+		 'Ó Thainig sé ',
+		 'Le eachaibh luath is iochar throm',
+		 'Thainig sé',
+		 'treasna ton',
+		 `Le eachaibh luath is iochar throm`,
+		 `Ar eiginn ar n-eirigh as ar suain`,
+		 `Ar eiginn ar n-eirigh as ar suain`,
+		 `An Gaidheal 'sa leabaidh`,
+			 `An Gaidheal 'na shuain`,
+			 `Is ar eiginn ar n-eirigh`,
+		 'as ar suain',
+		 ' ',
+		 ' '];
 
+		 let runrig = document.getElementById('runrig')
+	
+	var lid = localStorage.getItem('lyricID');
+	return <>
+	<div className="holder">
+		</div>
+					<div className='setting-menu'	onClick={() => props.handleInputSelect('gamepad')}>
+		<img src={bg0} className="settings-bg" alt="low intensity background  graphic, expect this to change sometimes." />
+			<img src={lIkey} className="iron-key-portrait" alt="lord iron key and his banner." />
 
-return <>
-<img src={ bg0} className="settings-bg" alt="low intensity background image graphic, expect this to change sometimes."/>	
-				
-					<div className='setting-menu'>
-						{/* <button className="settings-button">.<img src={settingsBtnGamepad}/></button>
+		{/* <ReactAudioPlayer src={ironkeyClicks } autoPlay></ReactAudioPlayer> */}
+		
+		{/* <img id="iron-key-text" src={ ironkey} alt="ironkey calligraphy" /> */}
+		<img id="iron-key-text" src={ ironkey} alt="ironkey calligraphy" />
+			
+			 {/* <button className="settings-button">.<img src={settingsBtnGamepad}/></button>
 						<button className="settings-button">.<img src={settingsBtnTouchscreen}/></button>
 						<button className="settings-button">.<img src={settingsBtnKeyboard} /></button> */}
-						<div className="settings-button" id="sb0" 	onClick={() => props.handleInputSelect('gamepad')}><img src={settingsBtnGamepad} alt="button "onClick={() => props.handleInputSelect('gamepad')} /></div>
-					<div className="settings-button" id="sb1"
+						{/* <div className="settings-button" id="sb0" 	onClick={() => props.handleInputSelect('gamepad')}><img src={settingsBtnGamepad} alt="button "onClick={() => props.handleInputSelect('gamepad')} /></div> */}
+					{/* <div className="settings-button" id="sb1"
 						onClick={() => props.handleInputSelect('keyboard')}
 					> <img src={settingsBtnKeyboard} onClick={() => props.handleInputSelect('keyboard')} /></div>
-					<div className="settings-button" id="sb2"  onClick={() => props.handleInputSelect('touchscreen')}><img src={settingsBtnTouchscreen} onClick={() => props.handleInputSelect('touchscreen')}/></div>
+					<div className="settings-button" id="sb2"  onClick={() => props.handleInputSelect('touchscreen')}><img src={settingsBtnTouchscreen} onClick={() => props.handleInputSelect('touchscreen')}/></div> */}
 	</div>
+	{/* <p className="runrig" >{tollDubh[lyricID]}</p>	  */}
+		 
 	
-	<div id="prototype"><h2></h2> <p></p><p></p><br/><br/><br/><br/></div>
+		 <div id="prototype"><h2></h2> <p></p><br /><br /><br /><br /></div>
 					</>	
 
 }

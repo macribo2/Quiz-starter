@@ -17,6 +17,7 @@ import statsMenu from '../../images/fog3.png';
 import invMenu from '../../images/inv/inv-bg.png';
 import diskMenu from '../../images/blackripple.gif';
 import EascaLocation from '../easca-location/easca-location'
+import locationX from '../../images/locations/location1.png'
 
 import gigakoops from '../../audio/Gigakoops - Level 2 - High Clouds.mp3'
 import jam from '../../audio/ultima-tone-long.wav'
@@ -118,7 +119,211 @@ function setPlayerIcon() {
         default:  return avatar9;
     }
 }
+
+let eascaLocations = [
+
+    "Cluain Ṁic Nóis",
+    "Éadan Doire",
+    "Biorra",
+    "Cionn Eitigh",
+    "Ráth Iomġáin",
+    "Suí an Róin",
+    "Dún Dealgan",
+    "An Grianfort",
+    "Ceann Ċloċair",
+    "Baile Átha Ḟirdia",
+    "Poll an Phúca",
+    "Baile an Ġearlánaigh",
+    "Coill an Iarainn",
+    "Inis Córṫaidh",
+    "Poll an Phúca",
+    "Maolán na nGaḃar",
+    "An Abhainn Dubh",
+    "Dún Ċormaic",
+    "Pailis Ċaonraí",
+    "Poll an Phúca",
+    "Caisleán Uí Ċonaill",
+    "Áth na bḞuinseog",
+    "An Ḟeoṫanaċ",
+    "Brú Rí",      "Fionnġlas",
+    "Cluain Dolcáin",
+    "Cluain Tarbh",
+    "Binn Éadair",
+    "Dún Laoiġaire",
+    "Deilginis",
+    "Gleann Éada",
+    "Garḃach",
+    "Droim Seanḃó",
+    "Aċaḋ na Síleann",
+    "Fíonach",
+    "Dromad",
+    "Reaċlainn",
+    "Dearḃóg",
+    "Aċaḋ Eoċaille",
+    "Carn Ṁéaḃla",
+    "Carraig Ḟearġais",
+    "Béal Feiriste",
+    "Cionn Dhún Damh",
+    "Baile idir Dhá Abhainn",
+    "Sléiḃte Ḋoire Ḃeatha",
+    "Leitir Ceanainn",
+    "Bealach Féich",
+    "Na Cruacha Gorma",
+    "An Garastún",
+    "Paiteagó",
+    "Eadarnaiḋ",
+    "Lios na Daróg",
+    "Scriobaċ",
+    "Inis Ceiṫleann",
+    "Cill na Mallaċ",
+    "Sliabh an Nóglaigh",
+    "Gleann an Ṗreaċáin",
+    "Beal na mḂláth",
+    "Cionn tSáile",
+    "An Sciobairín",
+    "Poll an Ṗúca",
+    "Na Cloċa Liaṫa",
+    "Siol Éalaiġ",
+    "Dún Ard",
+    "An tInḃear Mór",
+    "Aḃóca",
+    "Cluain Fada",
+    "Baile an Tobair",
+    "Loch Bó Finne",
+    "Scramóg",
+    "Loch Bó Dearge",
+    "Corr na Fola",
+    "Doire",
+    "Léim an Ṁadaiḋ",
+    "Droichead Fíolta",
+    "Maċaire Ráṫa",
+    "An Seanṁullach",
+    "Muine Mór",
+    "Béal Átha na gCarraigíní",
+    "An Mullach Mór",
+    "Uaimheanna na Céise",
+    "Machaire Eabha",
+    "Baile Uí Ḋálaigh",
+    "Tobar an Ċoire",
+    "Ros Cré",
+    "Durlas",
+    "Faiċe Ró",
+    "Sliabh na mBan",
+    "Cluain Meala",
+    "Tigh na Naoi Míle",
+    "Eiréil ",
+    "Darú",
+    "An Baile Fionn",
+    "Droichead Crom Abú",
+    "Cúil an tSúdaire",
+    "Buiríos Mór Osraí",
+    "Sléiḃte an Ċomaraigh",
+    "An Baile Dubh",
+    "Tullach an Iarainn",
+    "Cluain Ḟia",
+    "Dún Garḃán",
+    "Cill Ṁíodáin",
+    "Ġráinseaċ Ċuffe",
+    "Baile Ṁic Andáin",
+    "Bearna na Gaoiṫe",
+    "Dún Garḃáin",
+    "Baile an Ṗoill",
+    "Sliaḃ Rua",
+    "An Uaimh",
+    "Ráth Ċairn",
+    "Cill Ḃríde",
+    "Teamhair",
+    "Buaile na Bréachṁaí ",
+    "Tigh na Sióg",
+    "Cathair Saiḋḃín",
+    "An Daingean",
+    "Gleann na bPúcaí",
+    "Sliabh Mis",
+    "Na Cruaċa Duḃa",
+    "An tSnaidhm",
+    "An Lios Breac",
+    "Meathais Troim",
+    "Gránard",
+    "Cluain Dá Ráth",
+    "Maiġ Duṁa",
+    "An Ċarraig Ḃuí",
+    "Cill Ala",
+    "Caisleán an Ḃarraiġ",
+    "Baile Ui Ḟiacáin",
+    "An Caoláire Rua",
+    "Lios an tSaṁaiḋ",
+    "An Éill",
+    "Baile na gCailleach","Ráth Ḟearna","Tulaigh an Eallaigh","Na Colúir", "Cill Ḃeagáin",
+    "An Muileann gCearr",
+    "An Lorgain",
+    "Lios na gCearrḃach",
+    "An Caisleán Riaḃach",
+    "An Ṁainistir Liath",
+    "Dún Pádraig",
+    "Cill Ċaoil",
+    "Sráid na nAlbanach",
+    "Craigavon",
+    "Port An Dúnáin",
+    "Baile Úr",
+    "Baile an Ṁuilinn",
+    "Lios Liath",
+    "Cill Deirge",
+      "Baile Uí Ṁurċú",
+      "Baile Haicéid",
+      "An Ḃuiríos",
+      "Miseal",
+    "Cill Daṁáin",
+    "Scairbh na gCaorach",
+    "Cluain Eois",
+    "Einistir Ḃuithe",
+    "Teach an Scotaigh",
+    "Crícheán Rua",
+    "Carraig Ṁaċaire Rois",
+    "Poll an Phúca",
+      "Cill Cais",
+      "An Spidéal ",
+      "An Teach Dóite",
+      "An Ċeaṫrú Rua",
+    "Inis Meáin ",
+    "Cairbre",
+    "Na Solláin",
+    "Fioḋ Alúine",
+    "Maigh Nuad",
+    "An Currach",
+    "Léim an Ḃradáin",
+    "Ceann Boirne",
+    "Fíoch Rua",
+    "An Tulach",
+    "Cill Rois",
+    "Leaba Ṡíoda",     "Doire na Criaḋ",
+    "An Cnoc Rua",
+    "Béal Tairbirt",
+    "An Dromainn",
+    "Dún an Rí",
+    "Lios Cré",
+    "Caisleán na Deirge",
+    "Baile Mhic Gofraidh",
+    "An Ómaigh",
+    "Seisceann Siúil",
+    "An Ċorr Ċríochach",
+    "Dún Geanainn"
+
+
+      
+
+
+      
+
+
+
+    
+
+
+
+]
+
 export default class Overworld extends React.Component {
+
     constructor() {
         super();
         this.state = {
@@ -130,7 +335,7 @@ export default class Overworld extends React.Component {
             statsVisible: false,
             diskVisible: false,
             inventoryVisible: false,
-            showEascaLocation:true
+            showEascaLocation:false
             // whereAmI: localStorage.getItem('whereAmI')
         }
 
@@ -143,6 +348,8 @@ export default class Overworld extends React.Component {
         this.setState({ mobile: window.innerWidth >= 760 });
         this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
     }
+
+
     jQueryCode = () => {
         $("#btn-b").click(function(){
             enterLocation('Baile na gCailleach')
@@ -3786,7 +3993,6 @@ export default class Overworld extends React.Component {
         }, 1300)
         //   document.getElementById('myVideo').addEventListener('ended',myHandler,false);
         // function myHandler(e) {
-        //     alert();
         //     //   document.querySelector("#myVideo > source").src = "./fís/map1.mp4"
         //     // What you want to do after the event
         // }
@@ -3825,7 +4031,6 @@ export default class Overworld extends React.Component {
         $('.item5').on('touchend', function () {
             if (playerOverLocation) {
                 // enterLocation(loc)
-                alert('')
             }
             else {
                 // toggleOverWorldMode()
@@ -3846,15 +4051,16 @@ export default class Overworld extends React.Component {
             $('#geagaSprite').fadeOut();
             console.log('whereAmI' + whereAmI)
             localStorage.setItem('whereAmI', whereAmI);
-            let secondLocationId = localStorage.getItem('secondLocationId');
-            // secondLocation = eascaLocations[secondLocationId]
-            alert('Beidh muid ag siúl leat i '+  secondLocation +' anocht!')
+            let secondLocationId = localStorage.getItem('ct');
+            secondLocation = eascaLocations[secondLocationId]
+            alert('Tá na fíanna ag bailú i ' + secondLocation)
+            localStorage.setItem('secondLocation', secondLocation)
             returnToCounty();
             refresh();
             $('.countyMap').fadeIn();
         }
         function returnToCounty() {
-
+$('.layerMap').attr('src',empty)
             $.getJSON('mapData.json', function (county) {
                 $.each(county, function (key, val) {
                     // console.log("val ************" + val.co)
@@ -3904,18 +4110,14 @@ export default class Overworld extends React.Component {
         
         function enterLocation(location) {
             whereAbouts = $('#loc').html()
-            alert(whereAbouts);
-
-            $.getJSON('whereAbouts.json', function (whereAbouts) {
-
-                $.each(whereAbouts, function (key, val) {
-
-                    // if ($('#loc').html() === val.whereAbouts) {
-
-
-                        console.log("val " + val.co)
-                        // console.log("val.county " + val.county)
-                        $('.countyMap').css('background-image', val.background)
+            // alert("whereAbout + loc.html"+whereAbouts);
+            // alert("localStorage secondLocation:"+localStorage.getItem('secondLocation'));
+            if (whereAbouts === localStorage.getItem('secondLocation')) {
+                
+                alert("ok")
+                
+            }
+                        $('.layerMap').attr('src', locationX)
                         // map = val.map;
                         map =
                             [
@@ -3932,11 +4134,8 @@ export default class Overworld extends React.Component {
                             ];
                         refresh();
 
-                    // }
-                });
 
-
-            })
+            
         }
 
     }
@@ -4071,10 +4270,13 @@ console.log(whereAmIHolder + 'whereAmIHolder');
  
                 <div className="sea"></div>
                 <div className="stage-container" id="kungfu">
-                    <div className="countyMap">
+                <div className="countyMap">
 
 
-                    </div>
+<img src= {empty} className="layerMap"/>
+
+
+</div>
 
                     <div id="stage" >
                     </div>
@@ -4184,7 +4386,7 @@ console.log(whereAmIHolder + 'whereAmIHolder');
                     
                             }
                         }} />
-<img src={inv} alt="" className="inventory" onClick={() => {
+<><img src={inv} alt="" className="inventory" onClick={() => {
                             if (this.state.inventoryVisible) {
                                 this.setState({ inventoryVisible: false })
 				
@@ -4196,11 +4398,26 @@ console.log(whereAmIHolder + 'whereAmIHolder');
                     
                             }
                         }}  />
+                          
+                        </>
                     </div>
- 
-                    <img src={ this.state.diskVisible? diskMenu: null} alt="" className="diskMenu" />                   
-                    <img src={ this.state.statsVisible? statsMenu: null} alt="" className="statsMenu" />                   
-                    <img src={this.state.inventoryVisible? invMenu: null } alt="" className="invMenu" />                   
+ {/* disk  menu */}
+                    <img src={this.state.diskVisible ? diskMenu : empty} alt="" className="diskMenu" /> 
+                    
+                    
+                    <div className={this.state.diskVisible ? "disk-options":"hidden"}>
+
+                    <button className="option-btn"onClick={function () { alert("") }}>profíl</button>
+<button className="option-btn">socruithe</button>
+<button className="option-btn">tuilleadh</button>
+
+                    </div>
+
+{/* game stats menu */}
+
+
+                    <img src={ this.state.statsVisible? statsMenu: empty} alt="" className="statsMenu" />                   
+                    <img src={this.state.inventoryVisible? invMenu: empty } alt="" className="invMenu" />                   
                 </div>) : null}
                 <Silken id="silken"></Silken>
                 <h2 id="output2"> "{ heroName}!"</h2>

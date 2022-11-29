@@ -31,8 +31,8 @@ import bodhran0 from '../../audio/bodhran0.wav';
 import jump from '../../audio/171697__nenadsimic__menu-selection-click.wav';
 import chat from '../../audio/171697__nenadsimic__menu-selection-click.wav';
 import chatShort from '../../audio/171697__nenadsimic__menu-selection-click.wav';
-import theme0 from '../../audio/171697__nenadsimic__menu-selection-click.wav';
-import spark0 from '../../audio/sparkle-a.wav';
+import theme0 from '../../audio/ultima-tone-long.wav';
+import spark0 from '../../audio/ui/ding0.wav';
 import spark1 from '../../audio/sparkle-b.wav';
 import spark2 from '../../audio/sparkle-c.wav';
 import spark3 from '../../audio/sparkle-d.wav';
@@ -84,6 +84,7 @@ import Shadowhill from '../../images/shadow-hill.png';
 import distantTown from '../../images/newbg2town.png';
 import rave from '../../images/color-square.gif'
 window.scrollTo(0, 1);
+
 const ComponentWithScreenOrientation = () => {
 	const screenOrientation = useScreenOrientation()
 	
@@ -107,11 +108,11 @@ export default function App() {
 	
 	const [gender, setGender] = useState('male');
 	const [musicPlay, playMusic] = useState("-")
-	const [currentQuestion, setCurrentQuestion] = useState(0);
+	const [currentQuestion, setCurrentQuestion] = useState(1);
 	const [showScore, setShowScore] = useState(false);
 	const [showGlass, setShowGlass] = useState(0);
 	const [isOn, toggleIsOn] = useToggle();
-	const [showSettings, setSettings] = useState(0);
+	const [showSettings, setSettings] = useState(1);
 	let hints = [``,
 		``, `It is you!`, ``, ``,``,``,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[gotten]+`, you’ll see fine fun.`,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[localStorage.getItem('portrait')]+`, you’ll see fine fun.`,``,``,``,]
 	let hintsAnswersA = [``,``,``,``,``,``,``,``];
@@ -167,8 +168,8 @@ export default function App() {
 			
 		},
 		{
-			questionText: 'Is tú!',
-			answerOptions: [
+			questionText: 'diúltach',
+			answerOptions: [ "0", "1"
 			]	},
 		{
 			questionText: '',
@@ -299,7 +300,6 @@ const[score, setScore] = useState(0)
 
 		const nextQuestion = currentQuestion + 1;
 		setCurrentQuestion(nextQuestion);
-
 		if (nextQuestion < questions.length) {
 			setCurrentQuestion(nextQuestion);
 		} else { setShowScore(true)}
@@ -456,7 +456,8 @@ let thePucaOf = localStorage.getItem('pucaEng')
 
 	return (<>
 			<img src={distantTown} className="distant-town" alt="distant town large gif" />
-		{showOverworld === true ? <Overworld tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={ heroNames[localStorage.getItem('portrait')]} />:null}
+		{showOverworld === true ? <Overworld tallyX={0} avatar={localStorage.getItem('portrait')} 
+		handleAnswerButtonClick={ this.handleAnswerButtonClick } whereAmI="geaga" isOn={isOn} heroName={ heroNames[localStorage.getItem('portrait')]} />:null}
 			{showOverworld===false? <div className='app' >
 		<Greeting isRaining={ currentQuestion >=13?true:false} />
 		
@@ -699,7 +700,6 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			</> : null}
 
 			<img id="stars" src={stars} className="question-img" alt="wheeling starfield" />		
-
 
 	</>
 	

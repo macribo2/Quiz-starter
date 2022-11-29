@@ -1,16 +1,46 @@
-
+.holder{
+	height: 100%;
+    width: 100%;
+	display: flex;
+    justify-content: center;
+    /* border: 3px solid blue; */
+    z-index: 6;
+    position: fixed;
+    left: 0;
+    top: 0;
+	
+}
   .setting-menu{
-    
+    /* pointer-events: none; */
     height: 100%;
     width: 100%;
-    /* justify-content: left; */
+	display: flex;
+    justify-content: center;
     /* border: 3px solid blue; */
     z-index: 6000;
     position: fixed;
     left: 0;
     top: 0;
-}
+	/* animation: fade-out-menu 20s forwards linear; */
 
+}
+@keyframes fade-out-menu {
+	0%{
+		opacity: 1;
+	}
+	30%{
+		opacity: 1;
+
+	}
+
+
+	100%{
+
+	opacity: 0;
+
+	}
+
+}
 	.settings-bg{
 		height:100%;
 		width:100%;
@@ -18,8 +48,26 @@
 		top:0;
 		left:0;
 		z-index:120;
-	  }
+	/* animation: fade-out-menu 20s forwards linear; */
 
+	  }
+#iron-key-text{
+	animation: fade-in 4s forwards;
+    margin-top: 0%;
+    top: 35%;
+    position: fixed;
+    transform: scale(0.5);
+    z-index: 9000;
+    margin-left: 1%;
+}
+
+.runrig{
+	position:fixed;
+	top:0%;
+	left:50%;
+	z-index:9555;
+	/* border:4px solid beige; */
+}
 	  #sb0,#sb1,#sb2,#sb3{
 		/* border:4px solid salmon; */
 	  position:fixed;
@@ -50,7 +98,17 @@
 		
 		/* border:4px solid red; */
 	}
+	.iron-key-portrait{
+		height:520px;
+		width:520px;
+		position: fixed;
+		top:-40%;
+		left:37%;
+		z-index:120;
+		transform: scale(0.4);
+	animation: fade-in-ik 12s forwards linear;
 
+	  }
 
 /* bigscreen style */
 @media only screen and (min-width: 1024px) {
@@ -104,6 +162,15 @@
 		100%{opacity: 0.3;}
 		}
 
+		@keyframes fade-in-ik{
+
+			0%{opacity: 0;}
+			20%{opacity: 0;}
+			50%{opacity: 0.6;}
+			80%{opacity: 0.6;}
+			100%{opacity: 0.3;}
+			}
+	
 		#prototype{
 
 			position:fixed;
