@@ -169,7 +169,7 @@
 	  /* border:4px solid orange; */
 	  height: 150px;
 	  width: 1877px;
-	  display: inline-block;
+	  display: none; /*inline-block;*/
 	  /* /* transform: scale(0.75); */
 	  animation: slide-eascaStage 80s forwards;
 	  overflow: hidden;

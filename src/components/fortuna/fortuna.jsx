@@ -165,6 +165,7 @@ export default class Fortuna extends React.Component {
 				$('#pO').html('')
 			
 
+				localStorage.setItem('ct',0  )
 
 			let fortunaTime = [
 
@@ -444,7 +445,7 @@ export default class Fortuna extends React.Component {
 			let thePookaOf
 			
 			ct = Math.floor(vid.currentTime) 
-			localStorage.setItem('ct',ct + 1 )
+			localStorage.setItem('ct',ct  )
 
 			setTimeout(function () { document.getElementById('fortuna-vid').playbackRate = 0.5; }, 200)
 			setTimeout(function () { document.getElementById('fortuna-vid').playbackRate = 0.25; }, 400)
@@ -483,12 +484,9 @@ export default class Fortuna extends React.Component {
 			for (let i = 0; i < fortunaTime.length; i++) {
 				ct = Math.floor(vid.currentTime) 
 
-				if (ct <= fortunaTime[ct]) {
-				
-				}
 			
 				if (ct >= fortunaTime[i]) {
-					if (ct >= fortunaTime[i + 1]) {
+					if (ct <= fortunaTime[i + 1]) {
 						pucaNa = fortunaTeams[i];
 						thePookaOf = fortunaTeamsEng[i];
 						localStorage.setItem('pucaEng',thePookaOf )
@@ -607,3 +605,4 @@ export default class Fortuna extends React.Component {
 	}
 
 }
+

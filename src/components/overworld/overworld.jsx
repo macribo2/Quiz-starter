@@ -9,10 +9,11 @@ import inv from '../../images/inv/backpack.png';
 import disk from '../../images/inv/diskette.png';
 import portrait from '../../images/portrait.gif'
 import { BtnB } from './../ui/btn-b';
-import promptVid from '../../vid/stars.mp4'
+import promptVid from '../../images/stars.gif'
 import ciaroga from '../../images/players/rógaire0.png'
 import phone1 from '../../images/phone-0.png';
 import glass from '../../images/big-glass.png';
+import defaultField from '../../images/localMaps/defaultField.png';
 import statsMenu from '../../images/fog3.png';
 import invMenu from '../../images/inv/inv-bg.png';
 import diskMenu from '../../images/blackripple.gif';
@@ -140,7 +141,7 @@ export default class Overworld extends React.Component {
     //     this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
     // }
     resize() {
-        this.setState({ mobile: window.innerWidth >= 760 });
+        this.setState({ mobile: window.innerWidth >= 1601 });
         this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
     }
     jQueryCode = () => {
@@ -230,7 +231,7 @@ export default class Overworld extends React.Component {
 
         function setMap() {
 
-            
+
             $('.emblem-container').removeClass('animateEmblem'); 
             $('.emblem-img').addClass('animateEmblemIn'); 
             // console.log(gameObjects+"uuuuuuuuuuu")
@@ -242,18 +243,18 @@ export default class Overworld extends React.Component {
             // $('.emblem-img').css("opacity",0)
                         setTimeout(function () {
                 $('#stage').fadeIn()
-                
-            }, 2000)
+                        }, 2000)
+            
+            
             setTimeout(function () { 
                 
-                
-                $('.emblem-container').addClass('animateEmblem'); 
-                $('.emblem-img').removeClass('animateEmblemIn'); 
+               $('.emblem-container').fadeOut();
+                // alert()
+                // $('.emblem-img').removeClass('animateEmblemIn'); 
+                // $('.emblem-container').addClass('animateEmblem'); 
                 $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
             }, 1500)
-            
-
-
+           
 
         }
 
@@ -3825,7 +3826,7 @@ export default class Overworld extends React.Component {
         $('.item5').on('touchend', function () {
             if (playerOverLocation) {
                 // enterLocation(loc)
-                alert('')
+                alert('it5')
             }
             else {
                 // toggleOverWorldMode()
@@ -3904,39 +3905,32 @@ export default class Overworld extends React.Component {
         
         function enterLocation(location) {
             whereAbouts = $('#loc').html()
-            alert(whereAbouts);
-
-            $.getJSON('whereAbouts.json', function (whereAbouts) {
-
-                $.each(whereAbouts, function (key, val) {
-
-                    // if ($('#loc').html() === val.whereAbouts) {
+       
+            if (whereAbouts === secondLocation) {
 
 
-                        console.log("val " + val.co)
-                        // console.log("val.county " + val.county)
-                        $('.countyMap').css('background-image', val.background)
-                        // map = val.map;
-                        map =
-                            [
-                                ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
-                            ];
-                        refresh();
+alert("Anseo")
 
-                    // }
-                });
+             }
+
+             map =
+             [
+                 ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
+                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                 ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
+             ];
+         refresh();
 
 
-            })
+
+
         }
 
     }
@@ -4084,45 +4078,47 @@ console.log(whereAmIHolder + 'whereAmIHolder');
                     {this.state.showEascaLocation ? <EascaLocation whereAmI= "geaga" />:null}
 
  
-                    <img className="map-lens" src={lens} alt="" />
+                    <img rel="preload" className="map-lens" src={lens} alt="" />
                </div>
                     <div className="emblem-container">
                     {/* show emblem on enter new county */}
-                    {whereAmI === 'geaga' ? <img src={geaga} alt="county pixelart emblem." className="emblem-img" /> : null}
-                    {whereAmI === 'antrim' ? <img src={antrim} alt="county pixelart emblem." className="emblem-img" /> : null}
-                    {whereAmI === 'armagh' ? <img src={armagh} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'cavan' ? <img src={cavan} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'clare' ? <img src={clare} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'cork' ? <img src={cork} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'derry' ? <img src={derry} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'donegal' ? <img src={donegal} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'down' ? <img src={down} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'dublin' ? <img src={dublin} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'fermanagh' ? <img src={fermanagh} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'galway' ? <img src={galway} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'kerry' ? <img src={kerry} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'kildare' ? <img src={kildare} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'kilkenny' ? <img src={kilkenny} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'laois' ? <img src={laois} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'leitrim' ? <img src={leitrim} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'limerick' ? <img src={limerick} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'longford' ? <img src={longford} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'louth' ? <img src={louth} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'mayo' ? <img src={mayo} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'meath' ? <img src={meath} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'monaghan' ? <img src={monaghan} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'offaly' ? <img src={offaly} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'roscommon' ? <img src={roscommon} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'sligo' ? <img src={sligo} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'tipperary' ? <img src={tipperary} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'tyrone' ? <img src={tyrone} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'waterford' ? <img src={waterford} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'westmeath' ? <img src={westmeath} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'wexford' ? <img src={wexford} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'wicklow' ? <img src={wicklow} alt="county pixelart emblem." className="emblem-img" /> :null}
-                    {whereAmI === 'other' ? <img src={other} alt="county pixelart emblem." className="emblem-img" /> : null}
+                    {whereAmI === 'geaga' ? <img src={geaga} rel="preload" alt="county pixelart emblem." className="emblem-img" /> : null}
+                    {whereAmI === 'antrim' ? <img src={antrim}rel="preload" alt="county pixelart emblem." className="emblem-img" /> : null}
+                    {whereAmI === 'armagh' ? <img src={armagh} rel="preload"alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'cavan' ? <img src={cavan} rel="preload"alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'clare' ? <img src={clare} rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'cork' ? <img src={cork}rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'derry' ? <img src={derry} rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'donegal' ? <img src={donegal}rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'down' ? <img src={down} rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'dublin' ? <img src={dublin} rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'fermanagh' ? <img src={fermanagh} rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'galway' ? <img src={galway}rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'kerry' ? <img src={kerry} rel="preload"alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'kildare' ? <img src={kildare} rel="preload"alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'kilkenny' ? <img src={kilkenny} rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'laois' ? <img src={laois}rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'leitrim' ? <img src={leitrim}rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'limerick' ? <img src={limerick}rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'longford' ? <img src={longford} rel="preload"alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'louth' ? <img src={louth} rel="preload"alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'mayo' ? <img src={mayo} rel="preload"alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'meath' ? <img src={meath} rel="preload"alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'monaghan' ? <img src={monaghan}rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'offaly' ? <img src={offaly}rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'roscommon' ? <img src={roscommon}rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'sligo' ? <img src={sligo}rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'tipperary' ? <img src={tipperary}rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'tyrone' ? <img src={tyrone}rel="preload" alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'waterford' ? <img src={waterford}rel="preload" alt="county pixelart emblem."rel="preload" className="emblem-img" /> :null}
+                    {whereAmI === 'westmeath' ? <img rel="preload"src={westmeath} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'wexford' ? <img rel="preload" src={wexford} alt="county pixelart emblem." rel="preload" className="emblem-img" /> :null}
+                    {whereAmI === 'wicklow' ? <img rel="preload" src={wicklow} alt="county pixelart emblem." className="emblem-img" /> :null}
+                    {whereAmI === 'other' ? <img rel="preload" src={other} alt="county pixelart emblem." className="emblem-img" /> : null}
                     <p id="output"></p>
+                    <img rel="preload" src={defaultField} alt="specific location background in a county. just a green field while in development" className="emblem-img" />
                 </div> 
+
                <button id="toggle-glass-btn2" onClick={()=>{
                     if (this.state.isOn) {
                         this.setState({ isOn: false })
@@ -4149,7 +4145,7 @@ console.log(whereAmIHolder + 'whereAmIHolder');
  
  {this.state.isOn ? (<div id="glass">
 				<></>
-                    < img src={glass} className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />
+                    < img src={glass} rel="preload"className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />
                     <br />
                     <br />
                     <br />
@@ -4184,7 +4180,7 @@ console.log(whereAmIHolder + 'whereAmIHolder');
                     
                             }
                         }} />
-<img src={inv} alt="" className="inventory" onClick={() => {
+<img src={inv} alt="" rel="preload" className="inventory" onClick={() => {
                             if (this.state.inventoryVisible) {
                                 this.setState({ inventoryVisible: false })
 				
@@ -4198,9 +4194,9 @@ console.log(whereAmIHolder + 'whereAmIHolder');
                         }}  />
                     </div>
  
-                    <img src={ this.state.diskVisible? diskMenu: null} alt="" className="diskMenu" />                   
-                    <img src={ this.state.statsVisible? statsMenu: null} alt="" className="statsMenu" />                   
-                    <img src={this.state.inventoryVisible? invMenu: null } alt="" className="invMenu" />                   
+                    <img rel="preload"src={ this.state.diskVisible? diskMenu: null} alt="" className="diskMenu" />                   
+                    <img rel="preload"src={ this.state.statsVisible? statsMenu: null} alt="" className="statsMenu" />                   
+                    <img rel="preload"src={this.state.inventoryVisible? invMenu: null } alt="" className="invMenu" />                   
                 </div>) : null}
                 <Silken id="silken"></Silken>
                 <h2 id="output2"> "{ heroName}!"</h2>

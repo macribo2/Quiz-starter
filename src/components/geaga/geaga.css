@@ -53,7 +53,7 @@ shadow-hill
 	animation: fade-in 4s forwards;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1601px) {
 	.geaga-holder  {
 		transform:scale(1.7);
 		top:45%;

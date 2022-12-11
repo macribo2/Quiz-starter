@@ -1129,20 +1129,31 @@ position:relative
 #eng-notes{
   margin-left:5%;
 }
-@keyframes emblemFade {
+
+@-webkit-keyframes emblemFade  {
+
   0% {
     opacity: 1
   }
 
-  50% {
-    opacity: 1
-  }
-
+  ,
   100% {
     opacity: 0
   }
-
 }
+
+@keyframes emblemFade  {
+
+  0% {
+    opacity: 1
+  }
+
+  ,
+  100% {
+    opacity: 0
+  }
+}
+
 @keyframes emblemFadeIn {
   0% {
     opacity: 0
