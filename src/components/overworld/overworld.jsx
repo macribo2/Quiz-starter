@@ -230,32 +230,36 @@ export default class Overworld extends React.Component {
         // let imreoirJSON = JSON.stringify(imreoir);
 
         function setMap() {
+$('.sea').css('display','none')
+            $('.emblem-container').fadeIn(1);
 
+            $('.countyMap').css('background-image', "url('../../images/counties/" + imreoir.whereAmI + ".png")
+            setTimeout(function () { 
+            $('#stage').fadeOut()
 
-            $('.emblem-container').removeClass('animateEmblem'); 
-            $('.emblem-img').addClass('animateEmblemIn'); 
-            // console.log(gameObjects+"uuuuuuuuuuu")
+            $('.emblem-container').fadeIn();
+            setTimeout(function () { 
             $('.countyMap').css('left', imreoir.whereAmI.left)
             $('.countyMap').css('top', imreoir.whereAmI.top)
-            $('.countyMap').css('background-image', "url('../../images/counties/" + imreoir.whereAmI + ".png")
             
-            $('#stage').fadeOut()
             // $('.emblem-img').css("opacity",0)
                         setTimeout(function () {
-                $('#stage').fadeIn()
-                        }, 2000)
+                            $('#stage').fadeIn()
+                            $('.sea').fadeIn();
+                            
+                        }, 1000)
             
             
-            setTimeout(function () { 
                 
-               $('.emblem-container').fadeOut();
-                // alert()
-                // $('.emblem-img').removeClass('animateEmblemIn'); 
-                // $('.emblem-container').addClass('animateEmblem'); 
+                $('.emblem-container').fadeOut();
                 $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
-            }, 1500)
+            }, 2000)
            
 
+
+
+            },1000)
+            
         }
 
         //Load grids of connecting counties: 

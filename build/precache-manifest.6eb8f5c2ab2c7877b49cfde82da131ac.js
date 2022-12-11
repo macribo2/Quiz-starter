@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "19fe7f46b75eec4882c0",
-    "url": "/static/css/main.6c3bd3f0.chunk.css"
+    "revision": "cc9e3ad098811571f9d4",
+    "url": "/static/css/main.2abccb9d.chunk.css"
   },
   {
-    "revision": "19fe7f46b75eec4882c0",
-    "url": "/static/js/main.9164500e.chunk.js"
+    "revision": "cc9e3ad098811571f9d4",
+    "url": "/static/js/main.2275c029.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -100,8 +100,8 @@ self.__precacheManifest = [
     "url": "/static/media/aonchlo.05a45ce9.ttf"
   },
   {
-    "revision": "d1c03e4a30db4fb0dc583704968bded3",
-    "url": "/static/media/ciorcal-glass2.d1c03e4a.png"
+    "revision": "5806c26333cbe025f26cf3eb74c82c94",
+    "url": "/static/media/ciorcal-glass2.5806c263.png"
   },
   {
     "revision": "a7a39d110d7ecea765c22da314f8f41f",
@@ -148,8 +148,8 @@ self.__precacheManifest = [
     "url": "/static/media/iron-key.1a2df9c2.wav"
   },
   {
-    "revision": "4e11965ec42288de0de6f0fc9e3b8677",
-    "url": "/static/media/lord-iron-key.4e11965e.png"
+    "revision": "70ef7c65cc135f001da43dea07693104",
+    "url": "/static/media/lord-iron-key.70ef7c65.png"
   },
   {
     "revision": "5a8e04ef51c46f8d4376dd2e788d9b24",
@@ -352,7 +352,7 @@ self.__precacheManifest = [
     "url": "/static/media/click.e15794b2.wav"
   },
   {
-    "revision": "eb59598ac26c85d861875b84893e4717",
+    "revision": "9e60e2566f406c81a1c1ecdd0c148958",
     "url": "/index.html"
   }
 ];

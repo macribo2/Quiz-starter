@@ -1357,16 +1357,30 @@ transform: scale(2);
 		
 		/* border:4px solid red; */
 	}
-	.iron-key-portrait{
+
+
+  .ironkeyportraitholder{
+    /* border: 4px solid orange; */
     position: fixed;
-    top: -31%;
-    left: 28%;
     z-index: 120;
+justify-content: center;  
+animation: bounce 3s 4;  
+  }
+	.iron-key-portrait{
+    /* left: 28%; */
+    margin-top:-90px; 
     transform: scale(0.3);
-    animation: fade-in-ik 16s forwards;
-
+    animation: fade-in-ik 26s forwards;
 	  }
-
+@keyframes bounce {
+  0%{margin-top:0 }
+  20%{margin-top:0 }
+  
+  50%{margin-top:-5px}
+  80%{margin-top:0 }
+  100%{margin-top:0 }
+  
+}
     .grey-bg{
       left:0;
     animation:fade-in 7s forwards;
@@ -1434,7 +1448,10 @@ transform: scale(2);
         transform: scale(0.3);
       
       }
-			
+			20%{opacity: 0;
+        transform: scale(0.3);
+      
+      }
 			80%{opacity: 0.6;
         transform: scale(0.5);}
 			100%{opacity: 0.6;
@@ -1449,3 +1466,6 @@ transform: scale(2);
 			top: 20%;
 			left:30%;
 		}
+
+
+ 

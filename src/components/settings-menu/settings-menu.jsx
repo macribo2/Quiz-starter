@@ -61,9 +61,9 @@ export default function SettingsMenu(props) {
 			<img rel="preload" src={bg0} className="settings-bg" alt="low intensity background  graphic, expect this to change sometimes." />
 			
 			<img rel="preload" src={greyBG} className="grey-bg" alt="gloomy pixel bg." />
-
+<div className="ironkeyportraitholder">
 			<img rel="preload" src={lordIronkey} className="iron-key-portrait" alt="lord iron key and his key." />
-
+			</div>
 		<ReactAudioPlayer src={ironkeyClicks } autoPlay></ReactAudioPlayer>
 		
 		{/* <img id="iron-key-text" src={ ironkey} alt="ironkey calligraphy" /> */}
