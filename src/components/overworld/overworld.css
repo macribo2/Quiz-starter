@@ -62,7 +62,9 @@
   height:100%;
   
   /* pointer-events: none; */
-
+}
+#walkies{
+  display: none;
 }
 .map-lens{pointer-events: none;
   height: 100%;
@@ -292,11 +294,17 @@ p {
 @keyframes zoom-to-geaga {
 
   0% {
-    transform: scale(1.2)
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
   }
 
   100% {
     transform: scale(1);
+    -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
     margin-left: -10%;
     margin-top: -10%;
     border-radius: 0%;
@@ -1112,7 +1120,7 @@ p {
   /* background-color: black; */
   align-content: center;
   justify-content:center;
-  top: 13%;
+  top: 0%;
   left: 0;
   background-color: #000;
 }
