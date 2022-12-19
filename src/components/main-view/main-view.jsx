@@ -7,7 +7,6 @@ import glass from '../../images/big-glass.png';
 import dirpad from '../../images/dirpad.png';
 import lens from '../../images/ciorcal-glass.png';
 import portrait from '../../images/vert-mode.png'
-import geagaFace from '../../images/geagaFace.png';
 import gradient from '../../images/gradient2.png';
 import avatar1 from '../../images/players/spéirbhean0.gif';
 import avatar2 from '../../images/players/douglas.png';
@@ -38,7 +37,7 @@ import Select from '../../audio/171697__nenadsimic__menu-selection-click.wav';
 // import jam from '../../audio/51241__rutgermuller__8-bit-gabber-piece.wav'
 import useScreenOrientation from 'react-hook-screen-orientation';
 import hill from '../../images/rainy-hill1.png';
-import Fields from '../../images/newbg3town.png';
+import hills from '../../images/newbg4town.png';
 import Stones from '../../images/stones1.png';
 import ReactRain from 'react-rain-animation';
 import "react-rain-animation/lib/style.css";
@@ -48,32 +47,32 @@ import {
 	CircularProgress,
 	CircularThumb
 } from 'react-circular-input'
-import sky from '../../images/long-sky.png';
-import boxes from '../../images/boxes.gif';
-import bg3 from '../../images/blinding-light-county.jpg';
-import phone3 from '../../images/phone-0.jpg';
 import phone1 from '../../images/phone-0.png';
-import phone2 from '../../images/wren0.gif';
-import blackripple from '../../images/blackripple.gif'
 import black from '../../images/black.png'
-import drone from "../../audio/drone.wav"
 import tinkle from "../../audio/tinkle.wav"
 import tinkle1 from "../../audio/dink.wav"
-import Fortuna from "./../fortuna/fortuna"; 
-import click from "../../audio/click.wav"
 import stars from '../../images/stars.gif';
 import ReactAudioPlayer from 'react-audio-player';
-import settingsBG from '../../images/fortuna-bg.png';
 import '../../fonts/Urchlo Romhanach.ttf';
-import Geaga from '../../components/geaga/geaga.jsx'; 
 import Silken from '../../components/silken/silken.jsx'; 
 import EnterSilken from '../../components/silken/EnterSilken'; 
 import GamePad from '../../components/game-pad/game-pad.jsx'; 
 import AandB from '../../components/silken/silken.jsx';
-import Shadowhill from '../../images/shadow-hill.png';
 import distantTown from '../../images/newbg2town.png';
 import rave from '../../images/color-square.gif'
 window.scrollTo(0, 1);
+
+
+let domReady = (cb) => {
+	document.readyState === 'interactive' || document.readyState === 'complete'
+	  ? cb()
+	  : document.addEventListener('DOMContentLoaded', cb);
+  };
+  
+  domReady(() => {
+	// Display body when DOM is loaded
+	document.body.style.visibility = 'visible';
+  });
 const ComponentWithScreenOrientation = () => {
 	const screenOrientation = useScreenOrientation()
 	
@@ -396,7 +395,7 @@ if(value!=0){
 	let choiceRing2Eng = [`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',]
 	let choiceRing2 = [``,`Fan nóméad`,`Las Solas`,`Iniúchadh féin`,`"Cá bhfuil mé?"`,`Siúl soir`, ,``,`Rith síar`,`Léim go Deilg Inis in aon preab amháin`,'rogha',`Las Solas`,`Imigh láithreach ó thuaidh`]
 	let choiceRingEng = [
-	`toggleEnglish()`,
+	`Press to show / hide translations`,
 		`Golden-headed Niamh`,
 		`
 		 The Pleasant Little Branch`,
@@ -437,16 +436,73 @@ let thePucaOf = localStorage.getItem('pucaEng')
 		localStorage.setItem('costume',costume)
 		
 	}
-	
+	function endAnimation() {
+	document.getElementById('toggle-glass-btn').style.animation="none"
+	}
 	let dirpadHandler = () => {
 		toggleShowOverworld(true)
+		endAnimation()
 	}
 	
 	const [showOverworld, toggleShowOverworld] = useState(false)
 
-	return (<>
+	return (<><div className="hesitate">
 			<img rel="preload" src={distantTown} className="distant-town" alt="distant town large gif" />
-		{showOverworld === true ? <Overworld tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={ heroNames[localStorage.getItem('portrait')]} />:null}
+		
+
+		<img id="portrait" rel="preload" src={ portrait}></img>
+		<button id={currentQuestion === 7 || currentQuestion === 0 ? "hidden" : "toggle-glass-btn"} onClick={toggleIsOn} onTouchEnd={ endAnimation}><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
+
+
+			{currentQuestion === 1 ? <>
+				
+				<div className="input-elements-container">
+				
+					<img rel="preload"src={lens} id="lens" alt="a glass 	" />
+				</div>
+				<div className="input-elements-container">
+
+				<CircularInput className="dial" value={value} onChange={v => setValue(stepValue(v))}>{ }
+						<CircularTrack />
+							<CircularProgress />
+						<CircularThumb />
+					</CircularInput>
+			</div>
+			
+				<img rel="preload" src = {gradient}className="gradient" alt="gradiate to black" />
+
+					<p className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]}{ value === 0 || value === 10? null:  <Sparkles className="sparkles"
+      color="yellow"
+      count={28}
+      minSize={5}
+      maxSize={14}
+      overflowPx={35}
+      fadeOutSpeed={10}
+					flicker={true}
+					
+				/>}</p>
+
+				<div className="input-elements-container">
+			
+				<div id="buttonmash" value={value} onClick={(value) => buttonMashClick(true, value)}>
+				
+					
+					</div>
+					
+				</div>
+				<div className="input-elements-container">
+{/* 					show wheel of fortune when puca selected
+				{value * 10 === 8 ? <Fortuna currentQuestion={ currentQuestion} handleAnswerButtonClick={handleAnswerButtonClick} /> : null}
+				 */}
+				</div>
+			</> : null}
+
+			<img id="stars" rel="preload" src={stars} className="question-img" alt="wheeling starfield" />		
+
+			{showSettings ? <SettingsMenu showSettings={showSettings} handleInputSelect={ handleInputSelect} />
+						
+						: null}
+						{showOverworld === true ? <Overworld tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={ heroNames[localStorage.getItem('portrait')]} />:null}
 			{showOverworld===false? <div className='app' >
 		<Greeting isRaining={ currentQuestion >=13?true:false} />
 		
@@ -469,7 +525,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			<ReactAudioPlayer src={isOn === false ? tinkle : null} autoPlay />
 			<ReactAudioPlayer src={isOn === true ? tinkle1: null} autoPlay />
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="black bg." />		
-			{currentQuestion >= 1 ? <img rel="preload" id="sky" src={sky} className="question-img" alt="the sky" /> : null}		
+				
 			
 
 
@@ -478,7 +534,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			
 			{/* <img src={distantFortShadow} className={currentQuestion < 1 ? "index-distant-fort" : "index-distant-fort slow-fade"} alt="distant fort on peninsula " /> */}
 			<div className='field-container'>
-				<img src={Fields} rel="preload" className="hill-fields" alt="a rough circle of stones and some fields" />
+				<img src={hills} rel="preload" className="hill-fields" alt="a rough circle of stones and some fields" />
 			
 				
 			<ReactAudioPlayer src={currentQuestion === 9? theme0 : null} autoPlay />
@@ -602,7 +658,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			
 			
 			
-			<img src={avatar1} rel="preload"className={gotten === 1 ? 'avatar-land' : 'hidden'} alt="the sky" />		
+			<img src={avatar1} rel="preload"className={gotten === 1 ? 'avatar-land' : 'hidden'} alt="an avatar" />		
 			
 			<div className={ currentQuestion ===2? "avatar":"faded-out"} >
 			
@@ -640,62 +696,8 @@ let thePucaOf = localStorage.getItem('pucaEng')
 				
 			</div>
 		</div>:null}
-
-		<img id="portrait" rel="preload" src={ portrait}></img>
-			<button id={currentQuestion===7|| currentQuestion=== 0 ? "hidden":"toggle-glass-btn" } onClick={toggleIsOn}	><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
-
-
-			{currentQuestion === 1 ? <>
-				
-				<div className="input-elements-container">
-				
-					<img rel="preload"src={lens} id="lens" alt="a glass 	" />
-				</div>
-				<div className="input-elements-container">
-
-				<CircularInput className="dial" value={value} onChange={v => setValue(stepValue(v))}>{ }
-						<CircularTrack />
-							<CircularProgress />
-						<CircularThumb />
-					</CircularInput>
-			</div>
-			
-				<img rel="preload" src = {gradient}className="gradient" alt="gradiate to black" />
-
-					<p className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]}{ value === 0 || value === 10? null:  <Sparkles className="sparkles"
-      color="yellow"
-      count={28}
-      minSize={5}
-      maxSize={14}
-      overflowPx={35}
-      fadeOutSpeed={10}
-					flicker={true}
-					
-				/>}</p>
-
-				<div className="input-elements-container">
-			
-				<div id="buttonmash" value={value} onClick={(value) => buttonMashClick(true, value)}>
-				
-					
-					</div>
-					
-				</div>
-				<div className="input-elements-container">
-					
-				{value * 10 === 8 ? <Fortuna currentQuestion={ currentQuestion} handleAnswerButtonClick={handleAnswerButtonClick} /> : null}
-				
-				</div>
-			</> : null}
-
-			<img id="stars" rel="preload" src={stars} className="question-img" alt="wheeling starfield" />		
-
-			{showSettings ? <SettingsMenu showSettings={showSettings} handleInputSelect={ handleInputSelect} />
-						
-						: null}
-
 						<img src={bgDark} className="black-bg" alt="black"/>
-	</>
+						</div></>
 	
 	);
 }

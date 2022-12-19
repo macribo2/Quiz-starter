@@ -1,8 +1,4 @@
-#kungfu {
-  /* border: 5px solid orange; */
-  /* position:fixed; */
-  /* z-index: 99999 !important; */
-}
+
 #ring{
   border:4px solid blue;
   display:none;
@@ -36,7 +32,7 @@
 }
 
 .sea {
-  background-image: url('../../images/tonnta3.gif');
+  background-image: url('../../images/tonnta1.gif');
 
   /* background-size: contain; */
   left: 26%;
@@ -44,7 +40,6 @@
   z-index: -3;
   background-repeat: repeat;
   height: 100%;
-  border-radius: 50%;
   width: 51%;
   top: 0%;
   opacity: 1;
@@ -58,14 +53,12 @@
   left: 0%;
   display: flex;
   justify-content: center;
-  width:100%;
+  /* width:100%; */
   height:100%;
   
   /* pointer-events: none; */
 }
-#walkies{
-  display: none;
-}
+
 .map-lens{pointer-events: none;
   height: 100%;
     z-index:15;
@@ -86,11 +79,7 @@
   top: 4%;
   left: 50%;
 }
-#geaga{
 
-  /* border-radius: 50%; */
-  /* opacity:0.5; */
-}
 
 #prompt-hor {
   padding: 20%;
@@ -111,7 +100,6 @@
   width: 200px;
   position: fixed;
   transform: scale(.4);
-  border-radius: 50%;
   top: 29%;
   left: -3%;
   z-index: 6000;
@@ -120,24 +108,29 @@
 }
 
 
-.stage-container {
-  justify-content: center;
-  display: grid;
-  position: fixed;
-  /* padding-top: 5%; */
-  z-index: -3;
-  top: 13%;
-  /* z-index: 30; */
-  left: 7%;
+.stage-container  {
+  /* border:4px solid orange; */
+left:0;
+
+ top:0;
   width: 100%;
   height: 100%;
-  /* background-color: black; */
-  /* background-image: url(../../images/bgAnim5.gif); */
-  background-size: contain;
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
+  position:fixed;
+  display: flex;
+  justify-content: center;
+  z-index: 12 !important;
 }
 
-
+.walkies-container{   
+  height: 100%;
+  width: 100%;
+  z-index: 6666;
+  position: fixed;
+  justify-content: center;
+  left: 0;
+  top: 0;
+}
 .directional-pad {
   left: 0%;
   position: fixed;
@@ -171,7 +164,6 @@
   display: grid;
   justify-content: center;
   top: 0;
-  left: -5%;
   opacity: 0;
 }
 
@@ -216,15 +208,12 @@
 
 #stage {
   /* border:4px solid red; */
-
-  margin-left: 14%;
-  top: -15%;
-  position: fixed;
+  /* margin-left: 14%; */
+  /* margin-top: -5%; */
+  /* position: fixed; */
   width: 400px;
   height: 400px;
   /* background-image: url("../../images/counties/leinster/westmeath.png"); */
-  /* border: 3px solid green; */
-  border-radius: 50%;
   z-index: 32;
   transform: scale(0.8);
 }
@@ -246,7 +235,6 @@ p {
   transform: scale(0.8) rotateY(180deg);
 
 
-  /* border-radius: 50%; */
 }
 
 
@@ -307,7 +295,6 @@ p {
   -o-transform: scale(1);
     margin-left: -10%;
     margin-top: -10%;
-    border-radius: 0%;
   }
 
 }
@@ -862,26 +849,24 @@ p {
   right: -2px;
 }
 
-
-
 .countyMap {
-
-  height: 400px;
+  /* height: 400px; */
   width: 400px;
-  background-size: cover;
-  /* border:4px solid rgba(18, 180, 255, 0.8); */
   background-repeat: no-repeat;
-  display: block;
-  /* border-radius: 50%; */
-
-  margin-left: -15%;
-  margin-top: -5%;
-  transform: scale(1.4);
-  /* border-radius: 50%; */
-
+  background-size: cover;
+/* border: 4px solid purple; */
 }
 
+#walkies{
+  position: fixed;
+  display: none;
+  height: 400px;
+  width: 400px;
+  /* border: 4px solid pink; */
+  z-index: 12;
 
+  bottom: 0;
+}
 #btn-middle-baile {
   background-image: url('../../images/middle.png');
   border: solid 3px rgba(83, 60, 90);
@@ -915,7 +900,7 @@ p {
 
   padding-left: 50px;
   padding-right: 50px;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
 }
 
 #loc,
@@ -927,13 +912,14 @@ p {
   font-size: 1.7em;
   /* color: rgb(74, 165, 196); */
   margin-bottom: 12px;
-  z-index: 109;
+  z-index: 1109;
   pointer-events: none;
   padding: 10px;
   text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
 
   font-family: aonchlo;
 
+  animation: fade-in 0.3s forwards;
 
 }
 
@@ -943,6 +929,7 @@ p {
   top: 20%;
 	display: block;
   width:76%;
+ animation: fade-in 0.3s forwards;
 }
 
 .locDown{
@@ -1104,8 +1091,7 @@ p {
   z-index: 90;
   opacity:1;
 }
-
-.emblem-container{
+.countyMap-container{
 
   display: flex;
   position: fixed;
@@ -1113,16 +1099,34 @@ p {
   height: 100%;
   text-align: center;
   pointer-events: none;
-  border: 3px solid blue;
-  transform: scale(1.5);
-  z-index: 999;
-  padding-top: 120px;
+  z-index: 19999;
+  /* background-color: black; */
+  align-content: center;
+  justify-content:center;
+  bottom: 0%;
+  left: 0;
+  /* background-color: #000; */
+  border: 4px solid;
+}
+.emblem-container{
+
+  display: flex;
+  position: fixed;
+  /* width: 100%; */
+  height: 100%;
+  text-align: center;
+  pointer-events: none;
+  z-index: 19999;
   /* background-color: black; */
   align-content: center;
   justify-content:center;
   top: 0%;
   left: 0;
   background-color: #000;
+
+transform:scale(1.4);
+  padding-top: 120px;
+
 }
 .emblem {
   /* border:4px solid palegreen; */
@@ -1143,7 +1147,11 @@ position:relative
 
 }
 #eng-notes{
-  margin-left:5%;
+  position: fixed;
+  margin-left: 12%;
+  top: 8%;
+  font-size:1.4em;
+  color:black;
 }
 
 @-webkit-keyframes emblemFade  {
@@ -1158,6 +1166,17 @@ position:relative
   }
 }
 
+@keyframes fade-in  {
+
+  0% {
+    opacity: 0
+  }
+
+  ,
+  100% {
+    opacity: 1
+  }
+}
 @keyframes emblemFade  {
 
   0% {
@@ -1204,13 +1223,17 @@ position:relative
   }
 }
 
-#portrait {
+#portrait, #inventory {
   display: none;
+}
+.portraitMode{
+  display: none;
+ 
 }
 
 @media screen and (orientation:portrait) {
 
-  #portrait {
+  #portrait, #inventory,.portraitMode {
     display: block;
     top: 0;
     left: 0;
@@ -1219,6 +1242,15 @@ position:relative
     z-index: 9999;
     position: fixed;
     background-size: contain;
+
+  }
+  #inventory {
+    z-index: 10000;
+
+
+  }
+  .portraitMode{
+    z-index: 10001;
 
   }
 }
@@ -1231,18 +1263,19 @@ position:relative
 
   
 }
-
-#ui-container{
+.reveal{
+  /* opacity: 0; */
+  /* animation: fade-in 1s forwards !important; */
   /* border:4px solid orange; */
-  position: fixed;
-  width: 30%;
-  height: 30%;
-  justify-content:center;
-  display: flex;
-  top:-9%;
-  left:72%;
-  transform: scale(0.5);
-  z-index: 999;
+}
+#ui-container{
+    position: fixed;
+    height: 30%;
+    justify-content: space-evenly;
+    display: block;
+    top: 68%;
+    left: 2%;
+    z-index: 999;
 }
 .diskMenu, .statsMenu, .invMenu{
   height:100%;
@@ -1252,3 +1285,23 @@ position:relative
   position:fixed;
 
 }
+
+
+@keyframes fade-in  {
+
+  0% {
+    opacity: 1
+  }
+
+  ,
+  100% {
+    opacity: 0
+  }
+}
+
+
+
+.countyMap-container{
+
+  z-index: 5;
+  }

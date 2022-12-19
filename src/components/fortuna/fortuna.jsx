@@ -488,7 +488,7 @@ export default class Fortuna extends React.Component {
 				if (ct >= fortunaTime[i]) {
 					if (ct <= fortunaTime[i + 1]) {
 						pucaNa = fortunaTeams[i];
-						thePookaOf = fortunaTeamsEng[i];
+						thePookaOf =  ""//fortunaTeamsEng[i];
 						localStorage.setItem('pucaEng',thePookaOf )
 						console.log('this ft...' + fortunaTime[ct] + "   i "+i  )
 						console.log('this ft...' + pucaNa + " " + thePookaOf)

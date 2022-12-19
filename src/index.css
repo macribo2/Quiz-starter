@@ -21,14 +21,37 @@
   /* margin-left: -26%; */
   position: fixed;
   z-index: 4;
-top: 0;
+top: 0%;
 left: 0%;
-height: 100%;
+height: 130%;
 width: 150%;
 opacity:1;
--webkit-animation: landscape-waves 30s infinite ;
+/* border:4px solid blue; */
+-webkit-animation: landscape-waves 30s infinite  ;
         animation: landscape-waves 30s infinite ;
 
+}
+
+
+
+@keyframes landscape-waves {
+  0% {
+   top:  -40%
+  }
+
+  50% {
+    top: 35%
+   }
+ 
+   
+  100% {
+    top:-40%;
+  }
+}
+
+.disappear{
+  animation: fade-out 1s forwards;
+  pointer-events: none;
 }
 body {
 
@@ -198,7 +221,7 @@ width: 740px;
   color: rgb(255, 244, 224);
   z-index: 92;
   padding: 10px;
-  width: 50%;
+  width: 75%;
   text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
   
   font-family: Arial, Helvetica, sans-serif;
@@ -233,7 +256,7 @@ width: 740px;
 .choice-ring-0-hint {
   left: 5%;
   top: 68%;
-  width: 54%;
+  width: 75%;
   color: lightslategray;
 }
 
@@ -245,6 +268,7 @@ width: 740px;
   height: 100%;
   width: 100%;
   z-index: 994;
+  /* animation: fade-in 0.3s forwards; */
 }
 
 .question-text {
@@ -321,7 +345,6 @@ width:90%;
   /* width:300px; */
   /* position:fixed; */
   /* border:4px solid red; */
-  /* border-radius:50%; */
 }
 
 @-webkit-keyframes fade-in {
@@ -340,6 +363,20 @@ width:90%;
     opacity: 0
   }
 
+  
+  100% {
+    opacity: 1
+  }
+}
+
+
+@keyframes hesitate {
+  0% {
+    opacity: 0
+  }
+  50% {
+    opacity: 0
+  }
   
   100% {
     opacity: 1
@@ -365,37 +402,6 @@ width:90%;
     left: 50%;
   }
 }
-
-@-webkit-keyframes landscape-waves {
-  0% {
-   top:  -35%
-  }
-
-  50% {
-    top: 75%
-   }
- 
-   
-  100% {
-    top:-35%;
-  }
-}
-
-@keyframes landscape-waves {
-  0% {
-   top:  -35%
-  }
-
-  50% {
-    top: 75%
-   }
- 
-   
-  100% {
-    top:-35%;
-  }
-}
-
 
 @-webkit-keyframes fade-to {
   0% {
@@ -706,6 +712,22 @@ button svg {
           animation: fade-in 50s forwards;
 }
 
+@keyframes highlight-glass {
+  30% {
+    border: 4px solid rgba(172, 255, 47, 0);
+  }
+  
+  50% {
+    border: 4px solid greenyellow;
+  }
+  
+  
+  
+  100% {
+    border: 4px solid rgba(172, 255, 47, 0);
+
+  }
+}
 @keyframes fade-in {
 
   0% {
@@ -1176,128 +1198,24 @@ position: relative;
   top: 80%;
 
 
-  z-index: 450;
+  z-index: 1450;
   width: 25px;
   height: 25px;
   margin-bottom: 0% !important;
-  border: none;
   opacity:0.5;
 
   padding: 23px;
+  border: 4px solid rgba(172, 255, 47, 0);
 }
  #toggle-glass-btn2 {
-  z-index: 455;}
-/* 
-
-@media only screen and (min-width: 1601px) {
-  #mob-effect,
-  #mob-effect1,#mob-effect2{
-
-    top: 0%;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: block;
-    position: fixed;
-
-    z-index: 450;
-
-
-  }
-
-  #mob-effect1{
-    z-index: 451;
-    animation: fade-out 4s linear 2s 1 forwards;
-
-  }
-
-#mob-effect2{
-  transform: scale(0.5);
-}
-  #mob-effect{
-    z-index: 452;
-    animation: fade-out 2s linear 2s 1 forwards;
-  }
-
-  #suggest-mobile {
-    position: fixed;
-    left: 20%;
-    z-index: 1;
-  }
-
-  .mob-text, .mob-text-2 {
-    font-size: 3em;
-    z-index: 5000;
-    top: -2%;
-    position: fixed;
-    left: 46%;
+  z-index: 1456;}
+  #toggle-glass-btn{
+    animation:highlight-glass 2s infinite;
+  border-radius: 50%;
   }
 
 
 
-  .index-distant-fort, #distant-fort{
-    position: fixed;
-    z-index: 3;
-    transform: scale(2);
-    left: 0;
-    top: 0;
-    width: 100%;
-    animation: fade-out 4s forwards;
-  }
-
-
-  #lens {
-    transform: scale(2);
-    animation: fade-in 3s forwards;
-    pointer-events: none;
-  opacity: 0.5;
-
-  }
-
-  .dial {
-    width: 400px;
-    height: 400px;
-    animation:fade-in 1s forwards;
-
-  }
-
-  #buttonmash {
-    height: 430px;
-    width: 430px;
-    z-index: 902;
-    top: 20%;
-    left: 70%;
-    border-radius: 50%;
-  }
-
- 
-
-  .index-shadow-fields {
-    position: fixed;
-    z-index: 4;
-    left: 23%;
-    top: 52%;
-    transform: scale(2.6);
-
-    animation: fade-out 4s forwards;
-  }
-
-  .question-text {
-
-    left: 12%;
-    font-size: 4.5em;
-    top: 10%;
-  }
-
-  #toggle-glass-btn {
-    left: 83%;
-    top: 51%;
-    transform: scale(2);
-  }
-
-
-
-} */
 #linucs-keyboard{
   z-index: 999;
   left: 14%;
@@ -1468,9 +1386,9 @@ position: relative;
   left:0;
   z-index:19920;
 
--webkit-animation: fade-out 3s forwards linear;
+-webkit-animation: fade-out 4s forwards linear;
 
-        animation: fade-out 3s forwards linear;
+        animation: fade-out 4s forwards linear;
 
   }
 
@@ -1494,4 +1412,9 @@ height:100%
   width:100%;
 padding:0;
 margin:0;
+}
+
+.hesitate{
+/* display:none; */
+  animation: hesitate 2.5s forwards;
 }

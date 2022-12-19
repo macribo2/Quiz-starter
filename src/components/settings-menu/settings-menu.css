@@ -20,7 +20,7 @@
     z-index: 6000;
     position: fixed;
     left: 0;
-    top: 0;#kungfu {
+    top: 0;
   /* border: 5px solid orange; */
   /* position:fixed; */
   /* z-index: 99999 !important; */
@@ -58,7 +58,7 @@
 }
 
 .sea {
-  background-image: url('../../images/tonnta3.gif');
+  background-image: url('../../images/tonnta1.gif');
 
   /* background-size: contain; */
   left: 26%;
@@ -87,7 +87,6 @@
 }
 .map-lens{pointer-events: none;
   height: 100%;
-    width: 100%;
     z-index:15;
 }
 
@@ -132,24 +131,6 @@
 }
 
 
-.stage-container {
-  justify-content: center;
-  display: grid;
-  position: fixed;
-  /* padding-top: 5%; */
-  z-index: -3;
-  top: 13%;
-  /* z-index: 30; */
-  left: 7%;
-  width: 100%;
-  height: 100%;
-  /* background-color: black; */
-  /* background-image: url(../../images/bgAnim5.gif); */
-  background-size: contain;
-  transform: scale(0.9);
-}
-
-
 .directional-pad {
   left: 0%;
   position: fixed;
@@ -159,43 +140,7 @@
   z-index: 60;
 }
 
-.underx-stage-left,
-.under-stage-right {
-  /* border:4px solid orange; */
-  z-index: 11;
-  width: 20%;
-  height: 100%;
-  justify-content: center;
-  /* border-size: 2px solid orange; */
-  position: fixed;
-  background-repeat: no-repeat;
-  background-position-y: center;
-  opacity: 100%;
-  background-size: contain;
-  right: 0;
-  background-color: black;
-  /* background-image: url('../../images/overworld/shamrock.png'); */
-}
 
-.underx-stage-left {
-  width: 26%;
-  height: 100%;
-  display: grid;
-  justify-content: center;
-  top: 0;
-  left: -5%;
-  opacity: 0;
-}
-
-.under-stage-right {
-  width: 26%;
-  height: 100%;
-  display: grid;
-  justify-content: center;
-  top: 0;
-  left: 77%;
-  opacity: 0;
-}
 #event-report{
   z-index: 99;
   position: fixed;
@@ -204,42 +149,6 @@
   color: rgba(240, 248, 255, 0.461);
 }
 
-/* .under-stage-left-b {
-		  z-index: 31;
-		  margin-top: 1%;
-		  width:20%;
-		  height: 100%;
-		  justify-content: center;
-		  position:fixed;
-		  background-repeat:no-repeat;
-		  background-position-y: center;
-		  opacity: 100%;
-		  background-size: cover;
-		  right: 20%;
-  
-		  background-image: url('../../img/ciorcal0.png');
-		  background-size: contain;
-			  z-index: 31;
-			  left: 20%;
-			  background-position-y: bottom;
-	  }
-	   */
-
-
-#stage {
-  /* border:4px solid red; */
-
-  margin-left: 14%;
-  top: -15%;
-  position: fixed;
-  width: 400px;
-  height: 400px;
-  /* background-image: url("../../images/counties/leinster/westmeath.png"); */
-  /* border: 3px solid green; */
-  border-radius: 50%;
-  z-index: 32;
-  transform: scale(0.8);
-}
 
 .cell {
   display: block;
@@ -870,7 +779,7 @@ p {
 
 
 
-.countyMap, .layerMap {
+.layerMap {
 
   height: 400px;
   width: 400px;
@@ -940,6 +849,7 @@ position:fixed;
   pointer-events: none;
   padding: 10px;
   text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
+  animation: fade-in 0.3s forwards;
 
   font-family: aonchlo;
 
@@ -1259,7 +1169,7 @@ vertical-align:middle;
   height: 30%;
   justify-content:center;
   display: flex;
-  top:-9%;
+  top:68%;
   left:72%;
   transform: scale(0.5);
   z-index: 999;
@@ -1272,7 +1182,26 @@ vertical-align:middle;
   position:fixed;
 
 }
-	/* animation: fade-out-menu 20s forwards linear; */
+	/* animation: fade-out-menu 20s forwards linear;
+
+} */
+
+
+@keyframes fade-out-puzzle-gif{
+	0%{
+		opacity: 1;
+	}
+	8%{
+		opacity: 1;
+
+	}
+
+
+	100%{
+
+	opacity: 0;
+
+	}
 
 }
 @keyframes fade-out-menu {
@@ -1302,7 +1231,7 @@ vertical-align:middle;
 		top:0;
 		left:0;
 		/* z-index:120; */
-	/* animation: fade-out-menu 20s forwards linear; */
+	animation: fade-out-puzzle-gif 20s forwards linear;
 /* border: 5px solid green;; */
 transform: scale(2);	 
 }
@@ -1310,12 +1239,12 @@ transform: scale(2);
 
       transform:scaleX(-1)
     }
+   
 #iron-key-text{
-	animation: fade-in 4s forwards;
+	animation: fade-in-ik 24s forwards;
     margin-top: 0%;
-    top: 12%;
+    top: 44%;
     position: fixed;
-    transform: scale(0.4);
     z-index: 9000;
     margin-left: 1%;
 }
@@ -1364,30 +1293,46 @@ transform: scale(2);
     position: fixed;
     z-index: 120;
 justify-content: center;  
-animation: bounce 3s 4;  
+animation: bounce 2s 15 steps(3);  
   }
 	.iron-key-portrait{
     /* left: 28%; */
-    margin-top:-90px; 
-    transform: scale(0.3);
-    animation: fade-in-ik 26s forwards;
+    /* margin-top:45%;  */
+    margin-top:47%;
+    animation: advance 30s forwards steps(15),
+    fade-in-ik 26s forwards ease-in;
 	  }
 @keyframes bounce {
   0%{margin-top:0 }
-  20%{margin-top:0 }
-  
-  50%{margin-top:-5px}
-  80%{margin-top:0 }
-  100%{margin-top:0 }
-  
+  79%{margin-top:0 }
+ 
+  80%{margin-top:-6px}
+  100%{margin-top:-6px} 
 }
     .grey-bg{
       left:0;
-    animation:fade-in 7s forwards;
+ animation:fade-in 14s forwards ;
       top:0;
       position:fixed;
       height:100%;
       width: 100%;
+
+    }
+
+
+    .distant-hills,.blurry-bg{
+      z-index: 500;
+      bottom:0%;
+      left:0%;
+      position:fixed;
+      width: 100%;
+    }
+    .blurry-bg{
+      z-index: -1;
+
+    }
+    .distant-hills{
+      opacity: 0.7;
     }
     /* bigscreen style */
 @media only screen and (min-width: 1601px) {
@@ -1434,30 +1379,27 @@ animation: bounce 3s 4;
 	100%{opacity: 1;}
 	}
 
+
+  
 	@keyframes fade-in-a-bit{
 
 		0%{opacity: 0;}
 		20%{opacity: 0;}
 		100%{opacity: 0.3;}
 		}
-
+@keyframes advance{
+  0%{ transform: scale(1);}
+  100%{ transform: scale(1.6);}
+}
 		@keyframes fade-in-ik{
 
 			0%{opacity: 0;}
-			20%{opacity: 0;
-        transform: scale(0.3);
-      
-      }
-			20%{opacity: 0;
-        transform: scale(0.3);
-      
-      }
-			80%{opacity: 0.6;
-        transform: scale(0.5);}
-			100%{opacity: 0.6;
-        transform: scale(0.5);}
-      
+			5%{opacity: 0;}
+			80%{opacity: 0.6;}
+			100%{opacity: 0.6;}
+       
 			}
+
 
 		#prototype{
 
@@ -1469,3 +1411,292 @@ animation: bounce 3s 4;
 
 
  
+    @keyframes fade-in-out{
+
+      0%{opacity: 0.0}
+      5%{opacity: 0.0}
+     14%{opacity: 0.0}
+      32%{opacity: 0.4   }
+      38%{opacity: 0.3    }
+
+      45%{opacity: .2}
+      70%{opacity: 0.3    }
+      72%{opacity: 0.4    }
+      80%{opacity: 0.5   }
+    
+      81%{opacity: 0.0    }
+      100%{opacity: 0.0    }
+      }
+    
+
+
+      @keyframes drift-around-1{
+
+         0%{left: 18%}
+         5%{left: 22%}
+         9%{left: 22%}
+        20%{left: 25%}
+        32%{left: 29%}
+        38%{left: 30%}
+        45%{left: 33%}
+        46%{left: 39%   }
+        72%{left: 45%    }
+        80%{left: 45%   }
+       
+        90%{left: 49%    }
+        95%{left: 47%   }
+        100%{left: 47%    }
+        }
+      
+        @keyframes drift-around-2{
+
+          0%{left: 50%}
+          5%{left: 42%}
+          9%{left: 52%}
+         20%{left: 59%}
+         32%{left: 54%}
+         38%{left: 50%}
+         45%{left: 53%}
+         46%{left: 53%   }
+         72%{left: 55%    }
+         80%{left: 53%   }
+         84%{left: 55%    }
+         90%{left: 49%    }
+         95%{left: 47%   }
+         100%{left: 47%    }
+         }
+       
+
+        @keyframes drift-around-3{
+
+          0%{left: 43%}
+          5%{left: 42%}
+          9%{left: 40%}
+         20%{left: 38%}
+         32%{left: 37%}
+         38%{left: 36%}
+         45%{left: 36%}
+         46%{left: 35%   }
+         72%{left: 35%    }
+         80%{left: 36%   }
+         84%{left: 35%    }
+         90%{left: 29%    }
+         100%{left: 27%    }
+         }
+       
+
+        @keyframes drift-around-4{
+
+          0%{left: 5%}
+          5%{left: 2%}
+          9%{left: 2%}
+         20%{left: 9%}
+         32%{left: 4%}
+         38%{left: 5%}
+         45%{left: 3%}
+         46%{left: 3%   }
+         72%{left: 5%    }
+         80%{left: 3%   }
+         84%{left: 5%    }
+         90%{left: 9%    }
+         95%{left: 4%   }
+         100%{left: 7%    }
+         }
+       
+
+        @keyframes drift-around-5{
+
+          0%{left: 50%}
+          5%{left: 42%}
+          9%{left: 2%}
+         20%{left: 5%}
+         32%{left: 4%}
+         38%{left: 5%}
+         45%{left: 8%}
+         46%{left: 9%   }
+         72%{left: 10%    }
+         84%{left: 15%    }
+         90%{left: 19%    }
+         95%{left: 16%   }
+         100%{left: 17%    }
+         }
+       
+
+        @keyframes drift-around-6{
+
+          0%{left: 70%}
+          5%{left: 68%}
+          9%{left: 72%}
+         20%{left: 74%}
+         32%{left: 75%}
+         38%{left: 75%}
+         46%{left: 73%   }
+         71%{left: 70%    }
+         80%{left: 75%   }
+         87%{left: 75%    }
+         92%{left: 79%    }
+         94%{left: 78%   }
+         100%{left: 77%    }
+         }
+ 
+        @keyframes drift-around-7{
+
+          0%{left: 30%}
+          5%{left: 32%}
+          9%{left: 32%}
+         20%{left: 39%}
+         32%{left: 34%}
+         38%{left: 34%}
+         45%{left: 34%}
+         46%{left: 33%   }
+         72%{left: 35%    }
+         80%{left: 33%   }
+         84%{left: 35%    }
+         90%{left: 39%    }
+         95%{left: 37%   }
+         100%{left: 36%    }
+         }
+       
+
+        @keyframes drift-around-8{
+
+          0%{left: 50%}
+          5%{left: 49%}
+          9%{left: 45%}
+         20%{left: 49%}
+         32%{left: 52%}
+         38%{left: 50%}
+         45%{left: 52%}
+         46%{left: 53%   }
+         72%{left: 55%    }
+         80%{left: 52%   }
+         84%{left: 55%    }
+         90%{left: 69%    }
+         95%{left: 67%   }
+         100%{left: 67%    }
+         }
+      
+ 
+
+      .light {
+        opacity:0;
+        height: 3px;
+        width: 3px;
+        background-color: rgba(255, 217, 0, 0.875);
+        margin: 2px;
+        border-radius: 50%;
+        z-index: 7501;
+        float: left;
+        position:fixed;
+        bottom:5%;
+        /* border: 10px solid rgba(218, 165, 32, 0.164); */
+      }
+
+       .light2, .light3, .light4, .light5, .light6 {
+
+        background-color: rgba(241, 225, 137, 0.8);
+
+        animation: drift-around-1 146s alternate-reverse infinite ease-in-out, 
+
+fade-in-out 20s alternate-reverse 2s infinite;
+
+bottom:4%;
+     
+}
+
+
+
+ .light3, .light4, .light5, .light6 {
+  animation: drift-around-1 346s alternate-reverse infinite ease-in-out,fade-in-out 48s alternate-reverse 27s infinite;
+  
+  bottom:3%;
+       
+  }
+
+  .light3 {
+    animation: drift-around-3 346s alternate-reverse infinite ease-in-out,fade-in-out 58s alternate-reverse infinite;
+    
+    bottom:3%;
+         
+    }
+  
+
+  .light4, .light5, .light6 {
+    animation: drift-around-1 346s alternate-reverse infinite ease-in-out, fade-in-out 38s alternate-reverse 33s infinite;
+
+    bottom:5%;
+         
+    }
+
+     .light5, .light6 {
+      animation: drift-around-2 348s alternate-reverse infinite ease-in-out,fade-in-out 25s alternate-reverse 42s infinite;
+
+      bottom:6%;
+           
+      }
+
+      .light5, {
+        animation: drift-around-7 308s alternate-reverse infinite ease-in-out,fade-in-out 47s alternate-reverse  infinite;
+  
+        bottom:6%;
+             
+        }
+  
+
+      .light4 {
+
+        animation: drift-around-8 296s alternate-reverse infinite ease-in-out,fade-in-out 30s alternate-reverse 2s infinite;
+
+        bottom:6%,;
+             
+        }
+
+
+       .light1, .light7, .light8, .light9, .light10 {
+        animation: drift-around-2 324s alternate-reverse infinite ease-in-out  
+        ,fade-in-out 34s alternate-reverse 2s infinite;
+bottom:3%;
+        
+      
+      }
+
+                      .light7, .light8, .light9, .light10 {
+        animation: drift-around-3 351s alternate-reverse infinite ease-in-out
+        
+        ,fade-in-out 65s alternate-reverse 22s infinite;
+bottom:5%;
+        
+      
+      }
+
+
+ .light8, .light9, .light10 {
+        
+bottom:2%;
+        background-color: rgba(240, 236, 116, 0.8);
+  
+  animation: drift-around-4 454s alternate-reverse infinite ease-in-out
+  ,fade-in-out 96s alternate-reverse  infinite;
+
+                       }
+ .light9, .light10 {
+bottom:1%;
+   
+  animation: drift-around-5 354s alternate-reverse infinite ease-in-out,fade-in-out 38s alternate-reverse  infinite;
+
+                }
+
+.light10 {
+animation: drift-around-6 314s alternate-reverse infinite ease-in-out,fade-in-out 27s alternate-reverse  infinite;
+
+ 
+bottom:5%;
+
+}
+
+.light6 {
+  animation: drift-around-9 346s alternate-reverse infinite ease-in-out,fade-in-out 28s alternate-reverse infinite;
+  
+  bottom:2%;
+       
+  }

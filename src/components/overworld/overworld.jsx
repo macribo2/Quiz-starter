@@ -8,13 +8,16 @@ import lens from '../../images/ciorcal-glass2.png';
 import stats from '../../images/inv/char.png';
 import inv from '../../images/inv/backpack.png';
 import disk from '../../images/inv/diskette.png';
-import portrait from '../../images/portrait.gif'
+import portrait from '../../images/empty.png'
 import { BtnB } from './../ui/btn-b';
 import promptVid from '../../images/stars.gif'
 import ciaroga from '../../images/players/rógaire0.png'
 import phone1 from '../../images/phone-0.png';
 import glass from '../../images/big-glass.png';
 import defaultField from '../../images/localMaps/defaultField.png';
+import collinstown from '../../images/localMaps/collinstown.png';
+
+import ferna from '../../images/localMaps/fearnasringfort.png';
 import statsMenu from '../../images/fog3.png';
 import invMenu from '../../images/inv/inv-bg.png';
 import diskMenu from '../../images/blackripple.gif';
@@ -89,6 +92,8 @@ import avatar9 from '../../images/players/poet.png';
 import geaga1 from '../../images/agnes_new.png';
 import mobile from '../../images/players/rógaire0.png'
 let whereAmI = 'geaga';
+ let secondLocationId = 3//localStorage.getItem('secondLocationId');
+
 let whereAmIHolder = 'null';
 let avatar = "";
 
@@ -99,8 +104,43 @@ return icon
 function setIcon(icon) { 
     return icon
 }
-let engNotes = ['From 0 to 1...'];
-let NarrativeCode = 0;
+let engNotes = ['From 0 to 1',
+"Antrim, Aontroim, lone dwelling",
+"Armagh, Ard Mhacha, Macha's height",
+"Carlow, Ceatharlach, place of cattle",
+"Cavan",
+"Clare",
+"Cork",
+"Derry",
+"Donegal",
+"Down",
+"Dublin",
+"Fermanagh",
+"Galway",
+"Kerry",
+"Kildare",
+"Kilkenny",
+"Laois",
+"Leitrim",
+"Limerick",
+"Longford",
+"Louth",
+"Mayo",
+"Meath",
+"Monaghan",
+"Offaly",
+"Roscommon",
+"Sligo",
+"Tipperary",
+"Tyrone",
+"Waterford",
+"Westmeath, An tIarmhí",
+"Wexford",
+    "Wicklow, meadow of the Vikings. Cill Mhantáin from Church of Mantan",
+""
+
+];
+let narrativeCode = 0;
 function setPlayerIcon() {
     let overworldPortrait = localStorage.getItem('portrait');
     
@@ -146,8 +186,11 @@ export default class Overworld extends React.Component {
         this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
     }
     jQueryCode = () => {
+
+        let overworldPlayerRow =3; let overworldPlayerColumn = 4;      
+
         $("#btn-b").click(function(){
-            enterLocation('Baile na gCailleach')
+            enterLocation()
           });
         let playerOverLocation = false;
         localStorage.setItem('whereAmI', 'geaga');
@@ -163,8 +206,8 @@ export default class Overworld extends React.Component {
                     console.log("line 112:" + val.county);
                     map = JSON.parse(val.mapData);
                     console.log(val.mapData);
-                    $('.countyMap').css('left', val.left)
-                    $('.countyMap').css('top', val.top)
+                    // $('.countyMap').animate({ 'left': val.left })
+                    // $('.countyMap').css({ 'top': val.top })
                     $('.countyMap').css('background-image', val.countyBG)
                     $('.countyMap').fadeIn();
                     $('.countyMap').css('background-image', town0)
@@ -230,10 +273,14 @@ export default class Overworld extends React.Component {
         // let imreoirJSON = JSON.stringify(imreoir);
 
         function setMap() {
+$("#loc").html("")
+$("#locEng").html("")
+$("#locEng").fadeOut()
+$('#btn-b').fadeOut();
 
 $('.sea').css('display','none')
             $('.emblem-container').fadeIn(1);
-            $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
+            // $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
 
             $('.countyMap').css('background-image', "url('../../images/counties/" + imreoir.whereAmI + ".png")
             setTimeout(function () { 
@@ -241,8 +288,8 @@ $('.sea').css('display','none')
 
             $('.emblem-container').fadeIn();
             setTimeout(function () { 
-            $('.countyMap').css('left', imreoir.whereAmI.left)
-            $('.countyMap').css('top', imreoir.whereAmI.top)
+            // $('.countyMap').css('left', imreoir.whereAmI.left)
+            // $('.countyMap').css('top', imreoir.whereAmI.top)
             
             // $('.emblem-img').css("opacity",0)
                         setTimeout(function () {
@@ -265,6 +312,11 @@ $('.sea').css('display','none')
 
         //Load grids of connecting counties: 
         function loadMap(direction) {
+           
+           //hiding unsightly flicker when emblems are updated. they fade in again after the giant directional switch statement:
+            $('.emblem-img').css('display', 'none')
+            $('#output').css('display','none')
+
             switch (imreoir.whereAmI) {
 
                 case 'geaga':
@@ -272,7 +324,7 @@ $('.sea').css('display','none')
                     if (direction === N) {
                         localStorage.setItem("whereAmI", "westmeath");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-                        NarrativeCode++;
+                        // narrativeCode++;
 
                         gameObjects[playerRow][playerColumn] = 0;
 
@@ -289,7 +341,7 @@ $('.sea').css('display','none')
                     if (direction === NE) {
                         localStorage.setItem("whereAmI", "westmeath");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-                        NarrativeCode++;
+                        // NarrativeCode++;
                         alert("NEs");
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 8;
@@ -311,7 +363,7 @@ $('.sea').css('display','none')
                     if (direction === SW) {
                         localStorage.setItem("whereAmI", "westmeath");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-                        NarrativeCode++;
+                        // NarrativeCode++;
                         alert("sw");
 
                         gameObjects[playerRow][playerColumn] = 0;
@@ -324,7 +376,7 @@ $('.sea').css('display','none')
                     if (direction === W) {
                         localStorage.setItem("whereAmI", "westmeath");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-                        NarrativeCode++;
+                        // NarrativeCode++;
 
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 4;
@@ -340,11 +392,11 @@ $('.sea').css('display','none')
                         playerColumn = 6;
                         animatePlayer();
                         
-                        NarrativeCode++;
+                        // NarrativeCode++;
                        
                         localStorage.setItem("whereAmI", "westmeath");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-                        NarrativeCode++;
+                        // NarrativeCode++;
                         $('#eascaStage').fadeOut()
                             refresh();
                             setMap()
@@ -2945,7 +2997,7 @@ $('.sea').css('display','none')
                 case 'tyrone': if (direction === N) {
                     localStorage.setItem("whereAmI", "derry");
                     imreoir.whereAmI = localStorage.getItem("whereAmI");
-
+                    
                     gameObjects[playerRow][playerColumn] = 0;
                     playerRow = 5;
                     playerColumn = 5;
@@ -2957,7 +3009,7 @@ $('.sea').css('display','none')
                     if (direction === NE) {
                         localStorage.setItem("whereAmI", "derry");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-
+                        
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 5;
                         playerColumn = 5;
@@ -3026,7 +3078,7 @@ $('.sea').css('display','none')
                     if (direction === NW) {
                         localStorage.setItem("whereAmI", "donegal");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-
+                        
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 5;
                         playerColumn = 5;
@@ -3048,16 +3100,20 @@ $('.sea').css('display','none')
                     if (val.co === imreoir.whereAmI) {
                         $('#output').html(val.county)
                         $('.emblem').attr("src","../../img/counties/icons/"+val.emblem+".png")
+                        setTimeout(function () { 
+                            $('.emblem-img').attr("src","./emblems/"+val.emblem+".png")
 
-                        $('.emblem-img').attr("src","./emblems/"+val.emblem+".png")
+                            $('.emblem-img').fadeIn()
+                            $('#output').fadeIn()
+                        },200)
                        
 
 
                         map = JSON.parse(val.mapData);
                         console.log(val.mapData);
 
-                        $('.countyMap').css('left', val.left)
-                        $('.countyMap').css('top', val.top)
+                        // $('.countyMap').css('left', val.left)
+                        // $('.countyMap').css('top', val.top)
                         $('.countyMap').css('background-image', val.countyBG)
                         console.log('imreoir where am I?' + imreoir.whereAmI)
 
@@ -3067,6 +3123,42 @@ $('.sea').css('display','none')
                         newLocationsEng = val.locationsEng
                         console.log(newLocations)
                         console.log(newLocationsEng)
+                        switch(val.co){
+                            case "antrim": narrativeCode = 1; break;
+                            case "armagh": narrativeCode = 2; break;
+                            case "carlow": narrativeCode = 3; break;
+                            case "cavan": narrativeCode = 4; break;
+                            case "clare": narrativeCode = 5; break;
+                            case "cork": narrativeCode = 6; break;
+                            case "derry": narrativeCode = 7; break;
+                            case "donegal": narrativeCode = 8; break;
+                            case "down": narrativeCode = 9; break;
+                            case "dublin": narrativeCode = 10; break;
+                            case "fermanagh": narrativeCode = 11; break;
+                            case "galway": narrativeCode = 12; break;
+                            case "kerry": narrativeCode = 13; break;
+                            case "kildare": narrativeCode = 14; break;
+                            case "lilkenny": narrativeCode = 15; break;
+                            case "laois": narrativeCode = 16; break;
+                            case "leitrim": narrativeCode = 17; break;
+                            case "limerick": narrativeCode = 18; break;
+                            case "longford": narrativeCode = 19; break;
+                            case "louth": narrativeCode = 20; break;
+                            case "mayo": narrativeCode = 21; break;
+                            case "meath": narrativeCode = 22; break;
+                            case "monaghan": narrativeCode = 23; break;
+                            case "offaly": narrativeCode = 24; break;
+                            case "roscommon": narrativeCode = 25; break;
+                            case "sligo": narrativeCode = 26; break;
+                            case "tipperary": narrativeCode = 27; break;
+                            case "tyrone": narrativeCode = 28; break;
+                            case "waterford": narrativeCode = 29; break;
+                            case "westmeath": narrativeCode = 30; break;
+                            case "wexford": narrativeCode = 31; break;
+                            case "wicklow": narrativeCode = 32; break;
+                            default :break
+                        }
+
                     }
                     else {
                         console.log("does > > > >" + imreoir.whereAmI + " match  error loading map.")
@@ -3093,8 +3185,8 @@ $('.sea').css('display','none')
                     console.log("OOOOOOO"+val.mapData);
                     console.log("OOOOOOO"+val.mapData);
 
-                    $('.countyMap').css('left', val.left)
-                    $('.countyMap').css('top', val.top)
+                    // $('.countyMap').css('left', val.left)
+                    // $('.countyMap').css('top', val.top)
                     $('.countyMap').css('background-image', val.countyBG)
                     console.log('imreoir where am I?' + imreoir.whereAmI)
                     // $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 2s forwards ease-in');
@@ -3207,8 +3299,11 @@ $('.sea').css('display','none')
         var stage = document.querySelector("#stage");
         var output = document.querySelector("#output");
         function readyLocationEng(locEng) { 
+$("#locEng").fadeOut()
             
             $('#locEng').html(newLocationsEng[locEng])
+$("#locEng").fadeIn()
+
             
         }
         function readyLocation(loc) {
@@ -3227,10 +3322,14 @@ $('.sea').css('display','none')
         function clearLocation() {
             $('#loc').html("")
             $('#locEng').html("")
+$("#locEng").fadeOut()
+
             $('.big-btn-img').fadeOut();
             playerOverLocation = false;
 
         }
+        //values for returing to county map after exploring map location
+
         //Add a keyboard listener
         window.addEventListener("keydown", keydownHandler, false);
         let mapMenuIsVisible = false;
@@ -3781,53 +3880,16 @@ $('.sea').css('display','none')
             }
 
 
+            setTimeout(function () {
+                // $('#stage').css('opacity', '0.6');
+                setPlayerIcon();
+                $('#stage').fadeIn();
+                $('.toolbar').fadeIn();
+    
+            }, 1300)
         }
 
-        setTimeout(function () {
-            // $('#stage').css('opacity', '0.6');
-            setPlayerIcon();
-            $('#stage').fadeIn();
-            $('.toolbar').fadeIn();
-
-        }, 1300)
-        //   document.getElementById('myVideo').addEventListener('ended',myHandler,false);
-        // function myHandler(e) {
-        //     alert();
-        //     //   document.querySelector("#myVideo > source").src = "./fís/map1.mp4"
-        //     // What you want to do after the event
-        // }
-
-
-
-
-        //item5 onclick toggle mode
-        // let overworldModeB, overworldModeA;
-        // overworldModeB = true; overworldModeA = false;
-        // function toggleOverWorldMode () {
-        //     if (overworldModeB) {
-        //         overworldModeA = true;
-        //         console.log('overworldmodeB = ' + overworldModeB)
-        //         console.log('overworldmodeA = ' + overworldModeA)
-        //         $('#shield-holder').fadeIn()
-        //         $('#stage').addClass('shiroi')
-        //         $('#stageBG').addClass('shiroi')
-
-
-        //         overworldModeB = false;
-        //     } else {
-        //         $('#stage').removeClass('shiroi')
-
-        //         overworldModeB = true;
-        //         overworldModeA = false;
-        //         console.log('overworldmodeA = ' + overworldModeA)
-        //         console.log('overworldmodeB = ' + overworldModeB)
-        //         $('#shield-holder').fadeOut()
-
-        //     }
-
-        // }
-
-
+      
         $('.item5').on('touchend', function () {
             if (playerOverLocation) {
                 // enterLocation(loc)
@@ -3852,7 +3914,6 @@ $('.sea').css('display','none')
             $('#geagaSprite').fadeOut();
             console.log('whereAmI' + whereAmI)
             localStorage.setItem('whereAmI', whereAmI);
-            let secondLocationId = localStorage.getItem('secondLocationId');
             // secondLocation = eascaLocations[secondLocationId]
             // alert('Beidh muid ag siúl leat i '+  secondLocation +' anocht!')
             returnToCounty();
@@ -3860,10 +3921,12 @@ $('.sea').css('display','none')
             $('.countyMap').fadeIn();
         }
         function returnToCounty() {
+
+            gameObjects[playerRow][playerColumn] = 0;
+                         
             $('#walkies').fadeOut();
             $.getJSON('mapData.json', function (county) {
                 $.each(county, function (key, val) {
-                    // console.log("val ************" + val.co)
                     // console.log("val.county " + val.county)
                     if (val.co === imreoir.whereAmI) {
                         $('#output').html(val.county)
@@ -3872,11 +3935,11 @@ $('.sea').css('display','none')
                         map = JSON.parse(val.mapData);
                         console.log(val.mapData);
 
-                        $('.countyMap').css('left', val.left)
-                        $('.countyMap').css('top', val.top)
+                        // $('.countyMap').css('left', val.left)
+                        // $('.countyMap').css('top', val.top)
                         $('.countyMap').css('background-image', val.countyBG)
                         console.log('imreoir where am I?' + imreoir.whereAmI)
-
+                        
 
 
                         console.log("line 123" + val.co)
@@ -3900,16 +3963,36 @@ $('.sea').css('display','none')
             imreoir.whereAmI = localStorage.getItem("whereAmI");
 
             gameObjects[playerRow][playerColumn] = 0;
-            playerRow = 3;
-            playerColumn = 4;
+            playerRow =overworldPlayerRow;
+            playerColumn = overworldPlayerColumn;
             animatePlayer();
             refresh();
             setMap();
         }
-        
         function enterLocation(location) {
+            narrativeCode = 34;
             whereAbouts = $('#loc').html()
+            overworldPlayerRow = playerRow;
+            overworldPlayerColumn = playerColumn;
+            if (whereAbouts === "Baile na gCailleach") { 
+                $("#walkies").attr("src",collinstown)
+                gameObjects[playerRow][playerColumn] = 0;
+    
+                playerRow = 8;
+                playerColumn = 5;
+            }
+
+            else if (whereAbouts === "Ráth Ḟearna") { 
+                $("#walkies").attr("src",ferna)
+                gameObjects[playerRow][playerColumn] = 0;
+    
+                playerRow = 8;
+                playerColumn = 5;
+            }
+            else $("#walkies").attr("src",defaultField)
             $('#walkies').fadeIn();
+            $('#stage').fadeIn()
+
             if (whereAbouts === secondLocation) {
 
 
@@ -3930,11 +4013,31 @@ alert("Anseo")
                  ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                  ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
              ];
+
+
+//setting specific walkabe area for locations with rivers walls etc. there's going to be at least 192 of these, not including dungeons castle interiors. Doing a few here to get started and then ship them out to a JSON like county maps.
+
+            if (whereAbouts === "Ráth Ḟearna") {
+            map =
+            [
+                ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
+                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                [  1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
+                [  1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
+                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
+            ];
+
+        }
          refresh();
-
-
-
-
+         
+         
+         
+         animatePlayer();
         }
 
     }
@@ -4061,29 +4164,36 @@ console.log(whereAmIHolder + 'whereAmIHolder');
 <img id="mob-effect" className="phonebg2"src={phone1} alt="" />
 
 <h2 id="loc" alt="holder for location names"></h2>
-                <h2 id="locEng" className={this.state.isOn? null:"locDown"} alt="holder for location names English"></h2>
+                <h2 id="locEng" className={this.state.isOn? "reveal":"locDown"} alt="holder for location names English"></h2>
 
-               
+                <div className="countyMap-container">
+                <div className="sea"></div>
+                    <div className="countyMap">
+                    </div>
+
+                
+                    </div>
                 <div className="map-lens-container">
  
  
-                <div className="sea"></div>
-                <div className="stage-container" id="kungfu">
-                    <div className="countyMap">
-                    <img src={defaultField} id="walkies"/>
+               
 
-                    </div>
+                        <img src={defaultField} alt="green field" id="walkies"/>
+                   
+                 
 
+                    <div className="stage-container" id="kungfu">
                     <div id="stage" >
                     </div>
-
-
                 </div>
+
                     {this.state.showEascaLocation ? <EascaLocation whereAmI= "geaga" />:null}
 
  
                     <img rel="preload" className="map-lens" src={lens} alt="" />
-               </div>
+                    
+                </div>
+                
                     <div className="emblem-container">
 
                     {<img src={geaga} rel="preload" alt="county pixelart emblem." className="emblem-img" /> }
@@ -4122,53 +4232,10 @@ console.log(whereAmIHolder + 'whereAmIHolder');
                     <br />
                     <br />
                     <br />
-                    <h2 id="eng-notes" > {engNotes[NarrativeCode]}</h2>
                     
                     <div id="event-report"></div>
-                    <div id="ui-container">
 
-                    {/* <img src={stats} alt="" className="stats"onClick={() => {
-                            if (this.state.statsVisible) {
-                                this.setState({ statsVisible: false })
-				
-                    
-                            }
-                            else {
-                                (this.setState({ statsVisible: true }))
-                    
-                    
-                            }
-                        }}  />
-                         */}
-                        <img src={disk} alt="" className="disk" onClick={() => {
-                            if (this.state.diskVisible) {
-                                this.setState({ diskVisible: false })
-				
-                    
-                            }
-                            else {
-                                (this.setState({ diskVisible: true }))
-                    
-                    
-                            }
-                        }} />
-<img src={inv} alt="" rel="preload" className="inventory" onClick={() => {
-                            if (this.state.inventoryVisible) {
-                                this.setState({ inventoryVisible: false })
-				
-                    
-                            }
-                            else {
-                                (this.setState({ inventoryVisible: true }))
-                    
-                    
-                            }
-                        }}  />
-                    </div>
- 
-                    <img rel="preload"src={ this.state.diskVisible? diskMenu: null} alt="" className="diskMenu" />                   
-                    <img rel="preload"src={ this.state.statsVisible? statsMenu: null} alt="" className="statsMenu" />                   
-                    <img rel="preload"src={this.state.inventoryVisible? invMenu: null } alt="" className="invMenu" />                   
+  
                 </div>) : null}
                 <Silken id="silken"></Silken>
                 <h2 id="output2"> "{ heroName}!"</h2>
@@ -4177,6 +4244,57 @@ console.log(whereAmIHolder + 'whereAmIHolder');
             <BtnB id="b-btn" ></BtnB>
 
   <ReactAudioPlayer src={whereAmI==="westmeath"?jam:null } autoPlay />
+  
+                <div className="portraitMode">
+                <p id="eng-notes" > {engNotes[narrativeCode]}</p>
+
+                <div id="ui-container">
+
+{/* <img src={stats} alt="" className="stats"onClick={() => {
+        if (this.state.statsVisible) {
+            this.setState({ statsVisible: false })
+
+
+        }
+        else {
+            (this.setState({ statsVisible: true }))
+
+
+        }
+    }}  />
+     */}
+    <img src={disk} alt="" className="disk" onClick={() => {
+        if (this.state.diskVisible) {
+            this.setState({ diskVisible: false })
+
+
+        }
+        else {
+            (this.setState({ diskVisible: true }))
+
+
+        }
+    }} />
+<img src={inv} alt="" rel="preload" className="inventory" onClick={() => {
+        if (this.state.inventoryVisible) {
+            this.setState({ inventoryVisible: false })
+
+
+        }
+        else {
+            (this.setState({ inventoryVisible: true }))
+
+
+        }
+    }}  />
+</div>
+
+<img rel="preload"src={ this.state.diskVisible? diskMenu: null} alt="" className="diskMenu" />                   
+<img rel="preload"src={ this.state.statsVisible? statsMenu: null} alt="" className="statsMenu" />                   
+<img rel="preload"src={this.state.inventoryVisible? invMenu: null } alt="" className="invMenu" />                 
+                </div>
+                
+                <img id="inventory" rel="preload" src={invMenu}></img>
            
             </div>
 

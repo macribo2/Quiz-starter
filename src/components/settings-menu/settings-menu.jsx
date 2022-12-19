@@ -10,11 +10,19 @@ import ironkeyClicks from '../../audio/iron-key.wav';
 import lordIronkey from '../../images/stone-soup/lord-iron-key.png'
 import ReactAudioPlayer from 'react-audio-player';
 import settingsBtnKeyboard from '../../images/settings/keyboard.png';
-
+import distantHills from '../../images/newbg4town.png';
+import blurryBG from '../../images/newbg2.png';
 
 
 let lyricID = 0;
+
 export default function SettingsMenu(props) {
+	let lightStartX = [3, 10, 44, 99, 12, 18, 77, 89, 46, 54]
+	function setLightStartX() {
+		for (let i = 0; i < lightStartX.length; i++) { 
+// $("").animate()
+		}
+	 }
 	useEffect(() => {
 		for (let i = 0; i < 9; i++) {
 			setTimeout(() => {
@@ -67,8 +75,9 @@ export default function SettingsMenu(props) {
 		<ReactAudioPlayer src={ironkeyClicks } autoPlay></ReactAudioPlayer>
 		
 		{/* <img id="iron-key-text" src={ ironkey} alt="ironkey calligraphy" /> */}
+			<img src={blurryBG} className = "blurry-bg" alt="hazy green grey" />
+			<img className="distant-hills" src={distantHills} alt="distant hills" />
 		<img rel="preload" id="iron-key-text" src={ ironkey} alt="ironkey calligraphy" />
-			
 			 {/* <button className="settings-button">.<img src={settingsBtnGamepad}/></button>
 						<button className="settings-button">.<img src={settingsBtnTouchscreen}/></button>
 						<button className="settings-button">.<img src={settingsBtnKeyboard} /></button> */}
@@ -81,7 +90,20 @@ export default function SettingsMenu(props) {
 	{/* <p className="runrig" >{tollDubh[lyricID]}</p>	  */}
 		 
 	
-		 <div id="prototype"><h2></h2> <p></p><br /><br /><br /><br /></div>
-					</>	
+		<div id="prototype"><h2></h2> <p></p><br /><br /><br /><br /></div>
+		<div id="light-holder">
+			<div class="light light1"></div>
+			<div class="light light2 "></div>
+			<div class="light light3"></div>
+			<div class="light light4"></div>
+			<div class="light light5"></div>
+			<div class="light light6"></div>
+			<div class="light light7"></div>
+			<div class="light light8"></div>
+			<div class="light light9"></div>
+			<div class="light light10"></div>
+		</div>
+		</>	
+		
 
 }
