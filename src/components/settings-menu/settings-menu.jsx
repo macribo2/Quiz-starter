@@ -1,4 +1,5 @@
 import './settings-menu.css';
+import './lights.css';
 
 import bg0 from '../../images/bgAnim5.gif';
 import React, { useEffect } from 'react';

@@ -678,11 +678,11 @@ let thePucaOf = localStorage.getItem('pucaEng')
 				
 				<p className="mob-text">don fónpóca i dtús báire. (brú f12)
 				</p>
+				<img id="mob-effect"rel="preload" className="phonebg2"src={phone1} alt="" />
 			
 			</div>
 			{/* <img rel="preload"id="mob-effect2" className="phonebg"src={phone2} alt="" /> */}
 
-				<img id="mob-effect"rel="preload" className="phonebg2"src={phone1} alt="" />
 				{/* <img id="mob-effect1" className="phonebg1"src={phone1} alt="" />
 				<img id="mob-effect2" className="phonebg"src={phone2} alt="" /> */}
 				{currentQuestion === 5 ? dirpadHandler(): null}
