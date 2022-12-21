@@ -676,8 +676,6 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			{currentQuestion === 12 ?  <Easca className="faded-in"/>  : null}
 			<div id="suggest-mobile">
 				
-				<p className="mob-text">don fónpóca i dtús báire. (brú f12)
-				</p>
 				<img id="mob-effect"rel="preload" className="phonebg2"src={phone1} alt="" />
 			
 			</div>

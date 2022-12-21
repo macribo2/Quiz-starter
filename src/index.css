@@ -1079,7 +1079,8 @@ width: 100%;
 }
 
 
-.dial-text, #pO {
+.dial-text, #pO,  {
+  
   position: fixed;
   z-index: 995;
   font-size: 3em;
@@ -1102,6 +1103,7 @@ width: 100%;
   -webkit-text-stroke-width: 2px;
 pointer-events: none;
 background-color: #000;}
+
 #pO{
 
   top: 4%;
