@@ -1,4 +1,9 @@
-
+#easca{
+  /* display:none; */
+  position: fixed;
+  z-index: 99999;
+  /* border:5px solid orange; */
+}
 #ring{
   border:4px solid blue;
   display:none;
@@ -31,7 +36,7 @@
   /* border:4px solid orange; */
 }
 
-.sea {
+.sea, .sea-east {
   background-image: url('../../images/tonnta1.gif');
 
   /* background-size: contain; */
@@ -43,6 +48,11 @@
   width: 51%;
   top: 0%;
   opacity: 1;
+}
+.sea-east{
+  background-image: url('../../images/tonnta2.gif');
+
+
 }
 
 .map-lens-container {
@@ -1099,7 +1109,7 @@ p {
   height: 100%;
   text-align: center;
   pointer-events: none;
-  z-index: 19999;
+  z-index: 5;
   /* background-color: black; */
   align-content: center;
   justify-content:center;
@@ -1262,19 +1272,26 @@ position:relative
 
   
 }
+.inventory{
+  position: relative;
+  top:-23%;
+}
 .reveal{
   /* opacity: 0; */
   /* animation: fade-in 1s forwards !important; */
   /* border:4px solid orange; */
 }
 #ui-container{
-    position: fixed;
-    height: 30%;
-    justify-content: space-evenly;
-    display: block;
-    top: 68%;
-    left: 2%;
-    z-index: 999;
+  /* border: 4px solid orange; */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+display: block;
+  top: 0;
+  left: 0;
+  padding-top:150%;
+  /* transform: scale(0.5); */
+  z-index: 999;
 }
 .diskMenu, .statsMenu, .invMenu{
   height:100%;
@@ -1300,7 +1317,13 @@ position:relative
 
 
 
-.countyMap-container{
 
-  z-index: 5;
-  }
+
+#chat{
+  position: fixed;
+  top: 48%;
+  z-index: 90;
+  left: -3%;
+  display:none;
+
+}

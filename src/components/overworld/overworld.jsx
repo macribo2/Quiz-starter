@@ -1,13 +1,13 @@
 import React from 'react';
 import './overworld.css';
-
+import Easca from '../easca/easca'
 import '../Rings/rings1.css';
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
 import lens from '../../images/ciorcal-glass2.png';
 import stats from '../../images/inv/char.png';
-import inv from '../../images/inv/backpack.png';
 import disk from '../../images/inv/diskette.png';
+import chat from '../../images/inv/chat.png';
 import portrait from '../../images/empty.png'
 import { BtnB } from './../ui/btn-b';
 import promptVid from '../../images/stars.gif'
@@ -28,41 +28,7 @@ import jam from '../../audio/ultima-tone-long.wav'
 import ReactAudioPlayer from 'react-audio-player';
 // import county emblems
 
-import carlow from "../../images/counties/leinster/icons/carlow.png"
-import dublin from "../../images/counties/leinster/icons/dublin.png"
-import kildare from "../../images/counties/leinster/icons/kildare.png"
-import kilkenny from "../../images/counties/leinster/icons/kilkenny.png"
 import Rings1 from '../Rings/Rings1'
-import laois from "../../images/counties/leinster/icons/laois.png"
-import longford from "../../images/counties/leinster/icons/longford.png"
-import louth from "../../images/counties/leinster/icons/louth.png"
-import meath from "../../images/counties/leinster/icons/meath.png"
-import offaly from "../../images/counties/leinster/icons/offaly.png"
-import westmeath from "../../images/counties/leinster/icons/westmeath.png"
-import antrim  from "../../images/counties/ulster/icons/antrim.png"
-import  armagh from "../../images/counties/ulster/icons/armagh.png"
-import cavan from "../../images/counties/ulster/icons/cavan.png"
-import  clare from "../../images/counties/munster/icons/clare.png"
-import cork from "../../images/counties/munster/icons/cork.png"
-import derry from "../../images/counties/ulster/icons/derry.png"
-import donegal from "../../images/counties/ulster/icons/donegal.png"
-import down from "../../images/counties//ulster/icons/down.png"
-import fermanagh from "../../images/counties/ulster/icons/fermanagh.png"
-import galway from "../../images/counties/connacht/icons/galway.png"
-import kerry from "../../images/counties/munster/icons/kerry.png"
-import leitrim from "../../images/counties/connacht/icons/leitrim.png"
-import limerick from "../../images/counties/munster/icons/limerick.png"
-import other from "../../images/counties/other/icons/other.png"
-import monaghan from "../../images/counties/ulster/icons/monaghan.png"
-import mayo from "../../images/counties/connacht/icons/mayo.png"
-import roscommon from "../../images/counties/connacht/icons/roscommon.png"
-import sligo from "../../images/counties/connacht/icons/sligo.png"
-
-import tipperary from "../../images/counties/munster/icons/tipperary.png"
-import tyrone from "../../images/counties/ulster/icons/tyrone.png"
-import waterford from "../../images/counties/munster/icons/waterford.png"
-import wexford from "../../images/counties/leinster/icons/wexford.png"
-import wicklow from "../../images/counties/leinster/icons/wicklow.png"
 
 
 // import { Register } from './../register/register'
@@ -104,7 +70,10 @@ return icon
 function setIcon(icon) { 
     return icon
 }
-let stillPressed;
+let stillPressedNorth;
+let stillPressedSouth;
+let stillPressedEast;
+let stillPressedWest;
 
 let engNotes = ['From 0 to 1',
 "Antrim, Aontroim, lone dwelling",
@@ -3431,6 +3400,7 @@ $("#locEng").fadeOut()
             },1500)
          }        $('#north').on('touchstart', function () {
             // playerFacing = imreoir.avatar;
+             stillPressedNorth = true;
              updateEventReport('ó thuaidh')
              
              
@@ -3445,27 +3415,45 @@ $("#locEng").fadeOut()
 
             }
 
-
+            setInterval(function () {
+               
+                if (stillPressedNorth) {
+                    if (keyboardActive) {
+                        if (playerRow < ROWS - 1) {
+        
+                            setTimeout(function () { 
+                            lastPressed = 'up';
+                            gameObjects[playerRow][playerColumn] = 0;
+                            playerRow--;
+                            animatePlayer();
+                            keydownHandler('up');
+        
+        
+                            }, 500)
+                        }   
+                        }
+            }
+            }, 500);
          });
         $('#south').on('touchend', function () {
-            stillPressed = false
+            stillPressedSouth = false
         })
         
         $('#west').on('touchend', function () {
-            stillPressed = false
+            stillPressedWest = false
         })
         
         $('#north').on('touchend', function () {
-            stillPressed = false
+            stillPressedNorth = false
         })
         
         $('#east').on('touchend', function () {
-            stillPressed = false
+            stillPressedEast = false
         })
         
 
         $('#south').on('touchstart', function () {
-            stillPressed = true
+            stillPressedSouth = true
 
             if (keyboardActive) {
                 if (playerRow < ROWS - 1) {
@@ -3475,15 +3463,12 @@ $("#locEng").fadeOut()
                     playerRow++;
                     animatePlayer();
                     keydownHandler('down');
-                    setTimeout(function () { 
-
-
-                    }, 500)
+                    
                 }   
                 }
             setInterval(function () {
                
-                if (stillPressed) {
+                if (stillPressedSouth) {
                     if (keyboardActive) {
                         if (playerRow < ROWS - 1) {
         
@@ -3495,11 +3480,11 @@ $("#locEng").fadeOut()
                             keydownHandler('down');
         
         
-                            }, 1200)
+                            }, 500)
                         }   
                         }
             }
-            }, 1200);
+            }, 500);
             // !keyboardActive;
             updateEventReport('ó dheas')
 
@@ -3507,7 +3492,7 @@ $("#locEng").fadeOut()
                 // keyboardActive;
                 $('#océ').css('visibility', 'visible');
             }
-            setTimeout(handleFirstDown, 2000);
+            setTimeout(handleFirstDown, 1000);
             //override bug where player moves south then turns to face south with this jq :
             $('#hero').attr('src', setPlayerIcon());
 
@@ -3525,7 +3510,7 @@ $("#locEng").fadeOut()
 
 
         $('#east').on('touchstart', function () {
-            stillPressed = true;
+            stillPressedEast = true;
             // playerFacing = imreoir.avatar;
             updateEventReport('soir')
 
@@ -3540,7 +3525,7 @@ $("#locEng").fadeOut()
             keydownHandler('right');
             setInterval(function () {
                
-                if (stillPressed) {
+                if (stillPressedEast) {
                     if (keyboardActive) {
                         if (playerRow < COLUMNS - 1) {
         
@@ -3552,15 +3537,15 @@ $("#locEng").fadeOut()
                             animatePlayer();
         
         
-                            }, 1200)
+                            }, 500)
                         }   
                         }
             }
-            }, 1200);
+            }, 500);
 
         });
         $('#west').on('touchstart', function () {
-            stillPressed = true;
+            stillPressedWest = true;
             updateEventReport('siar')
 
 
@@ -3577,7 +3562,7 @@ $("#locEng").fadeOut()
 
             setInterval(function () {
                
-                if (stillPressed) {
+                if (stillPressedWest) {
                     if (keyboardActive) {
                         if (playerRow < ROWS - 1) {
         
@@ -3589,11 +3574,11 @@ $("#locEng").fadeOut()
                             keydownHandler('left');
         
         
-                            }, 1200)
+                            }, 500)
                         }   
                         }
             }
-            }, 1200);
+            }, 500);
         });
 
 
@@ -4296,6 +4281,8 @@ console.log(whereAmIHolder + 'whereAmIHolder');
                     if (this.state.isOn) {
                         this.setState({ isOn: false })
                         console.log("hi from toggle glass")
+                        
+                      
 				
                     
                     }
@@ -4303,7 +4290,10 @@ console.log(whereAmIHolder + 'whereAmIHolder');
                         (this.setState({ isOn: true }))
                         console.log("hi from toggle glass")
                     
-                    
+                        setTimeout(function () { 
+
+$('#chat').fadeIn();
+},1000)
                     }
                     {/* setTimeout(()=> { this.setState({ isOn: false }) }, 3000) */}
                         
@@ -4317,15 +4307,14 @@ console.log(whereAmIHolder + 'whereAmIHolder');
  </div>
  
  {this.state.isOn ? (<div id="glass">
-				<></>
+				
                     < img src={glass} rel="preload"className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    
                     <div id="event-report"></div>
-
+                    <img src={chat} id="chat" alt="chat button" rel="preload" className="inventory" onClick={() => {
+                        $("#chat").fadeOut();
+     $('#easca').fadeIn() 
+    }}  />
+                    <Easca id="easca"/>    
   
                 </div>) : null}
                 <Silken id="silken"></Silken>
@@ -4366,18 +4355,7 @@ console.log(whereAmIHolder + 'whereAmIHolder');
 
         }
     }} />
-<img src={inv} alt="" rel="preload" className="inventory" onClick={() => {
-        if (this.state.inventoryVisible) {
-            this.setState({ inventoryVisible: false })
 
-
-        }
-        else {
-            (this.setState({ inventoryVisible: true }))
-
-
-        }
-    }}  />
 </div>
 
 <img rel="preload"src={ this.state.diskVisible? diskMenu: null} alt="" className="diskMenu" />                   
@@ -4386,7 +4364,7 @@ console.log(whereAmIHolder + 'whereAmIHolder');
                 </div>
                 
                 <img id="inventory" rel="preload" src={invMenu}></img>
-           
+       
             </div>
 
         )

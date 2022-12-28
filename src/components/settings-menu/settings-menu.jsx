@@ -1,6 +1,6 @@
 import './settings-menu.css';
 import './lights.css';
-
+import Easca from '../easca/easca';
 import bg0 from '../../images/bgAnim5.gif';
 import React, { useEffect } from 'react';
 import settingsBtnGamepad from '../../images/settings/gamepad.png';
@@ -93,7 +93,7 @@ export default function SettingsMenu(props) {
 	
 		
 		<div id="light-holder">
-			<div className="light light1"></div>
+			{/* <div className="light light1"></div>
 			<div className="light light2 "></div>
 			<div className="light light3"></div>
 			<div className="light light4"></div>
@@ -112,9 +112,10 @@ export default function SettingsMenu(props) {
 			<div className="light light7"></div>
 			<div className="light light8"></div>
 			<div className="light light9"></div>
-			<div className="light light10"></div>
+			<div className="light light10"></div> */}
 			
 		</div>
+		{/* <Easca></Easca> */}
 		</>	
 		
 

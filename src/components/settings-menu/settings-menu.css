@@ -1158,30 +1158,6 @@ vertical-align:middle;
   
 }
 
-#ui-container{
-  /* border:4px solid orange; */
-  position: fixed;
-  width: 30%;
-  height: 30%;
-  justify-content:center;
-  display: flex;
-  top:68%;
-  left:72%;
-  transform: scale(0.5);
-  z-index: 999;
-}
-.diskMenu, .statsMenu, .invMenu{
-  height:100%;
-  width:100%;
-  top:0;
-  left:0;
-  position:fixed;
-
-}
-	/* animation: fade-out-menu 20s forwards linear;
-
-} */
-
 
 @keyframes fade-out-puzzle-gif{
 	0%{
