@@ -104,6 +104,8 @@ return icon
 function setIcon(icon) { 
     return icon
 }
+let stillPressed;
+
 let engNotes = ['From 0 to 1',
 "Antrim, Aontroim, lone dwelling",
 "Armagh, Ard Mhacha, Macha's height",
@@ -235,10 +237,7 @@ export default class Overworld extends React.Component {
                             if (whichSea === 1) { $('.sea').css('background-image',  sea0) }
                             if (whichSea === 3) { $('.sea').css('background-image',  sea0) }
                         }
-                        setTimeout(function () {
 
-                            $('.sea').fadeIn();
-                        }, 100)
 
                         refresh()
 
@@ -297,11 +296,9 @@ $('.sea').css('display','none')
             // $('.countyMap').css('top', imreoir.whereAmI.top)
             
             // $('.emblem-img').css("opacity",0)
-                        setTimeout(function () {
                             $('#stage').fadeIn()
                             $('.sea').fadeIn();
                             
-                        }, 1000)
             
             
                 
@@ -3450,15 +3447,26 @@ $("#locEng").fadeOut()
 
 
          });
-        let stillPressed;
         $('#south').on('touchend', function () {
             stillPressed = false
-         })
+        })
+        
+        $('#west').on('touchend', function () {
+            stillPressed = false
+        })
+        
+        $('#north').on('touchend', function () {
+            stillPressed = false
+        })
+        
+        $('#east').on('touchend', function () {
+            stillPressed = false
+        })
+        
 
         $('#south').on('touchstart', function () {
             stillPressed = true
 
-            var start = Date.now();
             if (keyboardActive) {
                 if (playerRow < ROWS - 1) {
 
@@ -3475,38 +3483,23 @@ $("#locEng").fadeOut()
                 }
             setInterval(function () {
                
-                var delta = Date.now() - start; // milliseconds elapsed since start
                 if (stillPressed) {
                     if (keyboardActive) {
                         if (playerRow < ROWS - 1) {
         
+                            setTimeout(function () { 
                             lastPressed = 'down';
                             gameObjects[playerRow][playerColumn] = ROWS - 0;
                             playerRow++;
                             animatePlayer();
                             keydownHandler('down');
-                            setTimeout(function () { 
         
         
-                            }, 500)
+                            }, 1200)
                         }   
-                        }if (keyboardActive) {
-                if (playerRow < ROWS - 1) {
-
-                    lastPressed = 'down';
-                    gameObjects[playerRow][playerColumn] = ROWS - 0;
-                    playerRow++;
-                    animatePlayer();
-                    keydownHandler('down');
-                    setTimeout(function () { 
-
-
-                    }, 500)
-                }   
-                }
-                    console.log(Math.floor(delta/1000)) //seconds
+                        }
             }
-            }, 1000);
+            }, 1200);
             // !keyboardActive;
             updateEventReport('ó dheas')
 
@@ -3521,7 +3514,18 @@ $("#locEng").fadeOut()
             // playerFacing = imreoir.avatar;
 
         });
+
+
+
+
+
+
+
+
+
+
         $('#east').on('touchstart', function () {
+            stillPressed = true;
             // playerFacing = imreoir.avatar;
             updateEventReport('soir')
 
@@ -3534,9 +3538,29 @@ $("#locEng").fadeOut()
             }
 
             keydownHandler('right');
+            setInterval(function () {
+               
+                if (stillPressed) {
+                    if (keyboardActive) {
+                        if (playerRow < COLUMNS - 1) {
+        
+                            setTimeout(function () { 
+                            lastPressed = 'right';
+                            gameObjects[playerRow][playerColumn] =  0;
+                            playerColumn++;
+                            keydownHandler('right');
+                            animatePlayer();
+        
+        
+                            }, 1200)
+                        }   
+                        }
+            }
+            }, 1200);
 
         });
         $('#west').on('touchstart', function () {
+            stillPressed = true;
             updateEventReport('siar')
 
 
@@ -3551,7 +3575,25 @@ $("#locEng").fadeOut()
             }
             keydownHandler('left');
 
-
+            setInterval(function () {
+               
+                if (stillPressed) {
+                    if (keyboardActive) {
+                        if (playerRow < ROWS - 1) {
+        
+                            setTimeout(function () { 
+                            lastPressed = 'left';
+                            gameObjects[playerRow][playerColumn] = 0;
+                            playerColumn--;
+                            animatePlayer();
+                            keydownHandler('left');
+        
+        
+                            }, 1200)
+                        }   
+                        }
+            }
+            }, 1200);
         });
 
 
