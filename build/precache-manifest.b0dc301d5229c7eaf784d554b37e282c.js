@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "ef18876e3884d8a2825b",
+    "revision": "c22b19360016795059fa",
     "url": "/static/css/main.32ca8199.chunk.css"
   },
   {
-    "revision": "ef18876e3884d8a2825b",
-    "url": "/static/js/main.c80d08b2.chunk.js"
+    "revision": "c22b19360016795059fa",
+    "url": "/static/js/main.7ecf885a.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -224,7 +224,7 @@ self.__precacheManifest = [
     "url": "/static/media/keyboard.5888bc5f.png"
   },
   {
-    "revision": "b0d28cef501c0f9562953a90ed38018f",
+    "revision": "a72a07de1381c116fac6438a2fa1e224",
     "url": "/index.html"
   }
 ];

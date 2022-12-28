@@ -3455,7 +3455,10 @@ $("#locEng").fadeOut()
             stillPressed = false
          })
 
-        function runSouth() { 
+        $('#south').on('touchstart', function () {
+            stillPressed = true
+
+            var start = Date.now();
             if (keyboardActive) {
                 if (playerRow < ROWS - 1) {
 
@@ -3470,17 +3473,37 @@ $("#locEng").fadeOut()
                     }, 500)
                 }   
                 }
-               
-        }
-        $('#south').on('touchstart', function () {
-            stillPressed = true
-
-            var start = Date.now();
             setInterval(function () {
+               
                 var delta = Date.now() - start; // milliseconds elapsed since start
                 if (stillPressed) {
-                
+                    if (keyboardActive) {
+                        if (playerRow < ROWS - 1) {
+        
+                            lastPressed = 'down';
+                            gameObjects[playerRow][playerColumn] = ROWS - 0;
+                            playerRow++;
+                            animatePlayer();
+                            keydownHandler('down');
+                            setTimeout(function () { 
+        
+        
+                            }, 500)
+                        }   
+                        }if (keyboardActive) {
+                if (playerRow < ROWS - 1) {
 
+                    lastPressed = 'down';
+                    gameObjects[playerRow][playerColumn] = ROWS - 0;
+                    playerRow++;
+                    animatePlayer();
+                    keydownHandler('down');
+                    setTimeout(function () { 
+
+
+                    }, 500)
+                }   
+                }
                     console.log(Math.floor(delta/1000)) //seconds
             }
             }, 1000);
@@ -3497,10 +3520,6 @@ $("#locEng").fadeOut()
 
             // playerFacing = imreoir.avatar;
 
-            if(stillPressed){
-            runSouth()
-
-            }
         });
         $('#east').on('touchstart', function () {
             // playerFacing = imreoir.avatar;
@@ -3594,7 +3613,7 @@ $("#locEng").fadeOut()
         function keydownHandler(direction) {
             if (keyboardActive) {
                 // eslint-disable-next-line no-restricted-globals
-                switch (event.keyCode) {
+                switch (addEventListener.keyCode) {
                     case UP:
                         if (playerRow > 0) {
                             lastPressed = 'up';
