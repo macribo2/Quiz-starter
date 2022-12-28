@@ -141,6 +141,11 @@ let engNotes = ['From 0 to 1',
 
 ];
 let narrativeCode = 0;
+window.oncontextmenu = function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+};
 function setPlayerIcon() {
     let overworldPortrait = localStorage.getItem('portrait');
     
@@ -3444,9 +3449,41 @@ $("#locEng").fadeOut()
             }
 
 
-        });
+         });
+        let stillPressed;
+        $('#south').on('touchend', function () {
+            stillPressed = false
+         })
 
+        function runSouth() { 
+            if (keyboardActive) {
+                if (playerRow < ROWS - 1) {
+
+                    lastPressed = 'down';
+                    gameObjects[playerRow][playerColumn] = ROWS - 0;
+                    playerRow++;
+                    animatePlayer();
+                    keydownHandler('down');
+                    setTimeout(function () { 
+
+
+                    }, 500)
+                }   
+                }
+               
+        }
         $('#south').on('touchstart', function () {
+            stillPressed = true
+
+            var start = Date.now();
+            setInterval(function () {
+                var delta = Date.now() - start; // milliseconds elapsed since start
+                if (stillPressed) {
+                
+
+                    console.log(Math.floor(delta/1000)) //seconds
+            }
+            }, 1000);
             // !keyboardActive;
             updateEventReport('ó dheas')
 
@@ -3460,15 +3497,8 @@ $("#locEng").fadeOut()
 
             // playerFacing = imreoir.avatar;
 
-            if (keyboardActive) {
-                if (playerRow < ROWS - 1) {
-
-                    lastPressed = 'down';
-                    gameObjects[playerRow][playerColumn] = ROWS - 0;
-                    playerRow++;
-                    animatePlayer();
-                    keydownHandler('down');
-                }
+            if(stillPressed){
+            runSouth()
 
             }
         });

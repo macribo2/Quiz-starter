@@ -1116,7 +1116,7 @@ p {
   height: 100%;
   text-align: center;
   pointer-events: none;
-  z-index: 19999;
+  z-index: 1515;
   /* background-color: black; */
   align-content: center;
   justify-content:center;
@@ -1124,7 +1124,7 @@ p {
   left: 0;
   background-color: #000;
   transform:scale(1.4);
-  padding-top: 120px;
+  padding-top: 45px;
 
 }
 .emblem {

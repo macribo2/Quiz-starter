@@ -1,4 +1,5 @@
 import './settings-menu.css';
+import './lights.css';
 
 import bg0 from '../../images/bgAnim5.gif';
 import React, { useEffect } from 'react';
@@ -90,18 +91,29 @@ export default function SettingsMenu(props) {
 	{/* <p className="runrig" >{tollDubh[lyricID]}</p>	  */}
 		 
 	
-		<div id="prototype"><h2></h2> <p></p><br /><br /><br /><br /></div>
+		
 		<div id="light-holder">
-			<div class="light light1"></div>
-			<div class="light light2 "></div>
-			<div class="light light3"></div>
-			<div class="light light4"></div>
-			<div class="light light5"></div>
-			<div class="light light6"></div>
-			<div class="light light7"></div>
-			<div class="light light8"></div>
-			<div class="light light9"></div>
-			<div class="light light10"></div>
+			<div className="light light1"></div>
+			<div className="light light2 "></div>
+			<div className="light light3"></div>
+			<div className="light light4"></div>
+			<div className="light light5"></div>
+			<div className="light light6"></div>
+			<div className="light light7"></div>
+			<div className="light light8"></div>
+			<div className="light light9"></div>
+			<div className="light light10"></div>
+			<div className="light light1"></div>
+			<div className="light light2 "></div>
+			<div className="light light3"></div>
+			<div className="light light4"></div>
+			<div className="light light5"></div>
+			<div className="light light6"></div>
+			<div className="light light7"></div>
+			<div className="light light8"></div>
+			<div className="light light9"></div>
+			<div className="light light10"></div>
+			
 		</div>
 		</>	
 		

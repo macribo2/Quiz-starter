@@ -1420,3 +1420,67 @@ margin:0;
 /* display:none; */
   animation: hesitate 2.5s forwards;
 }
+
+
+
+
+.dial-text, #pO {
+  position: fixed;
+  z-index: 995;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  left: 0%;
+  top: -11%;
+  -webkit-text-stroke-color: black !important;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#6666ff), color-stop(#0099ff) , color-stop(#00ff00), color-stop(#ff3399), to(#6666ff));
+  background: -o-linear-gradient(left, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-animation: rainbow_animation 60s ease-in-out infinite;
+          animation: rainbow_animation 60s ease-in-out infinite;
+  background-size: 400% 100%;
+  font-family: aonchlo;
+  -webkit-text-stroke-width: 2px;
+pointer-events: none;
+background-color: #000;}
+#pO{
+
+  top: 4%;
+
+}
+#pOf{
+position: fixed;
+  top: 70%;
+  left: 66%;
+  z-index: 99;
+  height: 21%;
+  /* border: 5px solid blue; */
+  width: 32%;
+  opacity: 0.7;
+}
+
+@-webkit-keyframes rainbow_animation {
+  0%,100% {
+      background-position: 0 0;
+  }
+
+  50% {
+      background-position: 100% 0;
+  }
+}
+
+@keyframes rainbow_animation {
+  0%,100% {
+      background-position: 0 0;
+  }
+
+  50% {
+      background-position: 100% 0;
+  }
+}
+
+

@@ -20,7 +20,6 @@ import avatar9 from '../../images/stone-soup/poet.png';
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
 import Rings0 from '../../components/Rings/Rings0'
-
 import bgDark from '../../images/black.png';
 
 import jump from '../../audio/171697__nenadsimic__menu-selection-click.wav';
@@ -41,6 +40,7 @@ import hills from '../../images/newbg4town.png';
 import Stones from '../../images/stones1.png';
 import ReactRain from 'react-rain-animation';
 import "react-rain-animation/lib/style.css";
+
 import {
 	CircularInput,
 	CircularTrack,
@@ -446,7 +446,9 @@ let thePucaOf = localStorage.getItem('pucaEng')
 	
 	const [showOverworld, toggleShowOverworld] = useState(false)
 
-	return (<><div className="hesitate">
+	return (<>
+		<img src={bgDark} className="black-bg" alt="black"/>
+		<div className="hesitate">
 			<img rel="preload" src={distantTown} className="distant-town" alt="distant town large gif" />
 		
 
@@ -674,11 +676,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			</div>
 			
 			{currentQuestion === 12 ?  <Easca className="faded-in"/>  : null}
-			<div id="suggest-mobile">
-				
-				<img id="mob-effect"rel="preload" className="phonebg2"src={phone1} alt="" />
 			
-			</div>
 			{/* <img rel="preload"id="mob-effect2" className="phonebg"src={phone2} alt="" /> */}
 
 				{/* <img id="mob-effect1" className="phonebg1"src={phone1} alt="" />
@@ -694,8 +692,17 @@ let thePucaOf = localStorage.getItem('pucaEng')
 				
 			</div>
 		</div>:null}
-						<img src={bgDark} className="black-bg" alt="black"/>
-						</div></>
+						
+	</div>
+	
+	<div id="suggest-mobile">
+				
+				<img id="mob-effect"rel="preload" className="phonebg2"src={phone1} alt="" />
+			
+			</div>
+	
+	</>
 	
 	);
+	
 }
