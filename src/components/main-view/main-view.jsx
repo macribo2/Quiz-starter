@@ -156,13 +156,21 @@ export default function App() {
 			
 		},
 		{
-			questionText: 'Is tú!',
+			questionText: '',
+			answerOptions: [
+			]	},
+			{
+				questionText: '',
+				answerOptions: [
+				]	},
+			
+		{
+			questionText: '',
 			answerOptions: [
 			]	},
 		{
 			questionText: '',
-			answerOptions: [ 
-			]	
+			answerOptions: [ 	]	
 		},
 		{
 			questionText: '',
@@ -177,7 +185,7 @@ export default function App() {
 			],
 		},
 		{
-			questionText: '',
+			questionText: 'i',
 			answerOptions: [
 				
 			],
@@ -296,6 +304,7 @@ const[score, setScore] = useState(0)
 	}
 	const handleAnswerButtonClick = (isCorrect, storyPath) => {
 		setIsFadedOut(false)
+		// alert('handleAnswer')
 		setTimeout(function () {
 			setIsFadedOut(true)
 			
@@ -504,7 +513,31 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			{showSettings ? <SettingsMenu showSettings={showSettings} handleInputSelect={ handleInputSelect} />
 						
 						: null}
-						{showOverworld === true ? <Overworld tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={ heroNames[localStorage.getItem('portrait')]} />:null}
+			{showOverworld === true ? <><Overworld handleAnswerButtonClick={handleAnswerButtonClick} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} />
+			
+			{showScore ? (
+				<div className='score-section'>scór: { score } as {questions.length}</div>
+			) : (
+				<>
+						<div className='question-section'>
+					
+						<div className='question-count'> 		
+							</div>
+							{/* <img src={ gradient} className="gradient"/> */}
+							<div className='question-text'>{ questions[currentQuestion].questionText}</div>
+
+						</div>
+						
+						<div className={isFadedOut ? 'answer-section slow-fade-in' : 'answer-section fadedOut'} >
+							{questions[currentQuestion].answerOptions.map((answerOption, index) => (<button key={index}
+								onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}
+								
+							>{answerOption.answerText}</button>))}
+					</div>
+					<ReactAudioPlayer src={currentQuestion === 8 ? chatShort: null} autoPlay />
+				</>
+			)}
+			</> : null}
 			{showOverworld===false? <div className='app' >
 		<Greeting isRaining={ currentQuestion >=13?true:false} />
 		
@@ -560,28 +593,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			
 			{/* HINT: replace "false" with logic to display the
       score when the user has answered all the questions */}
-			{showScore ? (
-				<div className='score-section'>Tá muid ar comhintinn { score } as {questions.length}</div>
-			) : (
-				<>
-						<div className='question-section'>
-					
-						<div className='question-count'> 		
-							</div>
-							{/* <img src={ gradient} className="gradient"/> */}
-							<div className='question-text'>{ questions[currentQuestion].questionText}</div>
-
-						</div>
-						
-						<div className={isFadedOut ? 'answer-section slow-fade-in' : 'answer-section fadedOut'} >
-							{questions[currentQuestion].answerOptions.map((answerOption, index) => (<button key={index}
-								onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}
-								
-							>{answerOption.answerText}</button>))}
-					</div>
-					<ReactAudioPlayer src={currentQuestion === 8 ? chatShort: null} autoPlay />
-				</>
-			)}
+			
 
 			{/* <div className= "field-ringfort-menu">
 			<button id={currentQuestion === 2 ? "field" : "hidden"}onClick={() => handleFieldButtonClick()} > <img src={field} alt="a small grassy field"/></button >

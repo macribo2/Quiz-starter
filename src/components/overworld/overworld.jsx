@@ -112,6 +112,8 @@ let engNotes = ['From 0 to 1',
 
 ];
 let narrativeCode = 0;
+
+/*block android long click menu*/
 window.oncontextmenu = function(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -162,7 +164,16 @@ export default class Overworld extends React.Component {
         this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
     }
     jQueryCode = () => {
-
+        
+//        For a simple timer or clock, keep track of the time difference explicitly:
+        
+        var start = Date.now();
+        setInterval(function() {
+            var delta = Date.now() - start; // milliseconds elapsed since start
+              console.log(Math.floor(delta / 1000)); // in seconds
+            // alternatively just show wall clock time:
+            console.log(new Date().toUTCString());
+        }, 1000); // update about every second
         let overworldPlayerRow =3; let overworldPlayerColumn = 4;      
 
         $("#btn-b").click(function(){
@@ -4146,11 +4157,14 @@ alert("Anseo")
     }
   
     render() {
-
+//react functions here
 let        heroName = this.props.heroName
-avatar = this.props.avatar;
+        avatar = this.props.avatar;
+        let handleAnswerButtonClick=this.props.handleAnswerButtonClick
 whereAmIHolder = this.props.whereAmI;
-console.log(whereAmIHolder + 'whereAmIHolder');
+        console.log(whereAmIHolder + 'whereAmIHolder');
+        
+
         console.log(whereAmI + 'whereAmI');
         // whereAmI = localStorage.getItem('whereAmI');
         
@@ -4213,7 +4227,7 @@ console.log(whereAmIHolder + 'whereAmIHolder');
            
 
 
-<div className="directional-pad">
+<div className="directional-pad" onTouchEnd={handleAnswerButtonClick}>
     <div className='grid-container'>
 
         <div className="grid-item"></div>
@@ -4293,7 +4307,7 @@ console.log(whereAmIHolder + 'whereAmIHolder');
                         setTimeout(function () { 
 
 $('#chat').fadeIn();
-},1000)
+},250)
                     }
                     {/* setTimeout(()=> { this.setState({ isOn: false }) }, 3000) */}
                         

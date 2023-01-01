@@ -1,5 +1,5 @@
 #easca{
-  /* display:none; */
+  display:none;
   position: fixed;
   z-index: 99999;
   /* border:5px solid orange; */
@@ -947,19 +947,13 @@ p {
 }
 
 #output {
-  /* 
-	text-align: left;
-	position: fixed;
-	width: 30%;
-	height: 4%;
-	top: 12%;
-	left: 2%; */
+  
   color: white;
   font-family: aonchlo;
   z-index: 10000;
   word-wrap: break-word;
-  margin-top:-1%;
-
+  margin-top:0%;
+font-size: 1.8em;
 }
 
 #output2{

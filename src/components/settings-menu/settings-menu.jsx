@@ -111,8 +111,8 @@ export default function SettingsMenu(props) {
 			<div className="light light6"></div>
 			<div className="light light7"></div>
 			<div className="light light8"></div>
-			<div className="light light9"></div>
-			<div className="light light10"></div> */}
+			<div className="light light9"></div>*/}
+			<div className="light light10"></div> 
 			
 		</div>
 		{/* <Easca></Easca> */}

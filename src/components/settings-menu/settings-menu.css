@@ -1283,7 +1283,7 @@ animation: bounce 2s 15 steps(3);
 }
     .grey-bg{
       left:0;
- animation:fade-in 14s forwards ;
+ animation:fade-in-grey 14s forwards ;
       top:0;
       position:fixed;
       height:100%;
@@ -1353,6 +1353,14 @@ animation: bounce 2s 15 steps(3);
 	}
 
 
+  @keyframes fade-in-grey{
+
+    0%{opacity: 0;}
+    20%{opacity: 0;}
+    100%{opacity: 0.5;}
+    }
+  
+  
   
 	@keyframes fade-in-a-bit{
 
