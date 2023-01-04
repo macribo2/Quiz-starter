@@ -8,6 +8,8 @@ import lens from '../../images/ciorcal-glass2.png';
 import stats from '../../images/inv/char.png';
 import disk from '../../images/inv/diskette.png';
 import chat from '../../images/inv/chat.png';
+import {  Redirect, useLocation } from "react-router-dom";
+
 import portrait from '../../images/empty.png'
 import { BtnB } from './../ui/btn-b';
 import promptVid from '../../images/stars.gif'
@@ -4067,6 +4069,10 @@ $("#locEng").fadeOut()
     
                 playerRow = 8;
                 playerColumn = 5;
+
+                setTimeout(function () { 
+                    return <Redirect to="/login"  />
+                },500)
             }
 
             else if (whereAbouts === "Ráth Ḟearna") { 
@@ -4157,14 +4163,18 @@ alert("Anseo")
     }
   
     render() {
-//react functions here
+        //react functions here
+        let storyTimer=this.props.storyTimer
+        let incrementScore=this.props.incrementScore
+        
+        
 let        heroName = this.props.heroName
         avatar = this.props.avatar;
         let handleAnswerButtonClick=this.props.handleAnswerButtonClick
 whereAmIHolder = this.props.whereAmI;
         console.log(whereAmIHolder + 'whereAmIHolder');
         
-
+storyTimer()
         console.log(whereAmI + 'whereAmI');
         // whereAmI = localStorage.getItem('whereAmI');
         
@@ -4227,7 +4237,7 @@ whereAmIHolder = this.props.whereAmI;
            
 
 
-<div className="directional-pad" onTouchEnd={handleAnswerButtonClick}>
+<div className="directional-pad"  >
     <div className='grid-container'>
 
         <div className="grid-item"></div>
@@ -4378,7 +4388,9 @@ $('#chat').fadeIn();
                 </div>
                 
                 <img id="inventory" rel="preload" src={invMenu}></img>
-       
+       <EascaLocation/>
+       storyTimer={()=>storyTimer}
+
             </div>
 
         )

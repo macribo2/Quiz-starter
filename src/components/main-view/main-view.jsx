@@ -134,7 +134,6 @@ export default function App() {
 		}, []);
 		localStorage.setItem("isOn", isOn)
 		console.log(localStorage.getItem('isOn'))
-
 		return [value, toggle];
 	  }
 
@@ -158,6 +157,174 @@ export default function App() {
 		{
 			questionText: '',
 			answerOptions: [
+				
+			],
+			
+		},
+		{
+			questionText: '',
+			answerOptions: [
+				
+			],
+			
+		},		{
+			questionText: '',
+			answerOptions: [
+				
+			],
+			
+		},		{
+			questionText: '',
+			answerOptions: [
+				
+			],
+			
+		},
+		{
+			questionText: 'Fáilte ar ais, ' + heroNames[localStorage.getItem('portrait')]+'.',
+			answerOptions: [
+				
+			],
+			
+		},
+		{
+			questionText: 'Fáilte ar ais, ' + heroNames[localStorage.getItem('portrait')]+'.',
+			answerOptions: [
+				{ answerText: 'cá bhfuil mé?', isCorrect: false },
+				{ answerText: 'Cad é seo?', isCorrect: false },
+				{ answerText: '...', isCorrect: true },
+			],		
+				
+			
+		},
+		{
+			// tosníonn an scéal anseo. 
+			questionText: 'I dtearmaí ríomharachta, bíonn rud fíor, nó bréagach.',
+			answerOptions: [
+				
+			],
+			
+		},
+		{
+			questionText: 'Oscailte, nó dúnta.',
+			questionText: '',
+			answerOptions: [
+				
+			],
+			
+		},
+			{
+			questionText: 'Lán, nó folamh',
+			answerOptions: [
+				
+			],
+			
+		},
+		{
+			questionText: 'Dearfach, nó diúltach',
+			answerOptions: [
+				
+			],
+			
+		},
+
+
+		{
+			questionText: 'Sin é, an comhéad dénartha.',
+			answerOptions: [	
+			],
+		},
+		{
+			questionText:'Cé mhaith dom é, ní bheidh mé ann.',
+			answerOptions: [
+			]
+		},
+		{
+			questionText: '',
+			answerOptions: [
+			
+			],
+		},
+		{
+			questionText: 'Lorem Ach tá tír mhór chumasach i gcóngaracht di agus tá fhios ag na	',
+			answerOptions: [
+				// { answerText: 'Clé', isCorrect: false },
+				// { answerText: 'Deas', isCorrect: false },
+				// { answerText: 'Soir', isCorrect: false },
+				// { answerText: 'Síos', isCorrect: true },
+			],
+		},
+		{
+			questionText: ', tá sí bocht agus ní féidir léi postanna go leor a sholáthar dá muintir ar fad',
+			answerOptions: [
+				{ answerText: 'Clé', isCorrect: false },
+				{ answerText: 'Deas', isCorrect: false },
+				{ answerText: 'Soir', isCorrect: false },
+				{ answerText: 'Síos', isCorrect: true },
+			],
+		},
+		{
+			questionText: 'Lorem Seo chugaibh scéal faoi oileán iathghlas taithneamhach a chuireann?',
+			answerOptions: [ 
+				{ answerText: ' cumha agus croí trom', isCorrect: false },
+				{ answerText: ' ar a chlanna más gá dóibh ', isCorrect: false },
+				{ answerText: 'imeacht thar lear. ', isCorrect: false },
+				{ answerText: 'Cé gur breá álainn an tír í', isCorrect: true },
+			],
+		},
+		{
+			questionText: '',
+			answerOptions: [
+				
+			],
+			
+		},
+		{
+			questionText: '',
+			answerOptions: [
+				
+			],
+			
+		},
+		{
+			questionText: '',
+			answerOptions: [
+				
+			],
+			
+		},
+		{
+			questionText: '',
+			answerOptions: [
+				
+			],
+			
+		},
+		{
+			questionText: '',
+			answerOptions: [
+				
+			],
+			
+		},
+		{
+			questionText: '',
+			answerOptions: [
+				
+			],
+			
+		},
+		{
+			questionText: '',
+			answerOptions: [
+				
+			],
+			
+		},
+		
+		{
+			questionText: '',
+			answerOptions: ['cá bhfuil mé?','cad é seo?','"..."'
 			]	},
 			{
 				questionText: '',
@@ -179,58 +346,16 @@ export default function App() {
 			],
 		},
 		{
-			questionText: 'Hup!',
+			questionText: 'Beidh aonach amárach i gContae an Chláir.',
 			answerOptions: [
 				
+
 			],
 		},
 		{
-			questionText: 'i',
+			questionText: 'Beidh aonach amárach i gContae an Chláir.',
 			answerOptions: [
 				
-			],
-		},
-		{
-			questionText: 'Táim ag dul go Dún-na-sídh anocht, le ceól a sheinm do na daoine maithe. Má ṫagann tu liom '+heroNames[localStorage.getItem('portrait')]+', feicfidh tu greann breá.',
-			answerOptions: [	
-			],
-		},
-		{
-			questionText:'',
-			answerOptions: [
-			]
-		},
-		{
-			questionText: '',
-			answerOptions: [
-			
-			],
-		},
-		{
-			questionText: '',
-			answerOptions: [
-				// { answerText: 'Clé', isCorrect: false },
-				// { answerText: 'Deas', isCorrect: false },
-				// { answerText: 'Soir', isCorrect: false },
-				// { answerText: 'Síos', isCorrect: true },
-			],
-		},
-		{
-			questionText: '',
-			answerOptions: [
-				{ answerText: 'Clé', isCorrect: false },
-				{ answerText: 'Deas', isCorrect: false },
-				{ answerText: 'Soir', isCorrect: false },
-				{ answerText: 'Síos', isCorrect: true },
-			],
-		},
-		{
-			questionText: '',
-			answerOptions: [
-				{ answerText: 'Clé', isCorrect: false },
-				{ answerText: 'Deas', isCorrect: false },
-				{ answerText: 'Soir', isCorrect: false },
-				{ answerText: 'Síos', isCorrect: true },
 			],
 		},
 	];
@@ -302,6 +427,20 @@ const[score, setScore] = useState(0)
 		} else { setShowScore(true)}
 	}, 100)
 	}
+	const incrementScore = () => { 
+		setScore(score++)
+		console.log(score)
+	}
+	const storyTimer = () => {
+		
+		setInterval(function () {
+			// alert(score)
+if (score === 1){
+			const nextQuestion = currentQuestion + 1;
+			setCurrentQuestion(nextQuestion);
+		}
+		}, 3000)
+	}
 	const handleAnswerButtonClick = (isCorrect, storyPath) => {
 		setIsFadedOut(false)
 		// alert('handleAnswer')
@@ -315,12 +454,8 @@ const[score, setScore] = useState(0)
 
 			const nextQuestion = currentQuestion + 1;
 			setCurrentQuestion(nextQuestion);
-			if (nextQuestion < questions.length) {
-				setCurrentQuestion(nextQuestion);
-
 			
-			} else { setShowScore(true) }
-		}, 500)
+		}, 50)
 		console.log("currentQuestion" + currentQuestion)
 		console.log("value:" + value)
 		return (
@@ -330,7 +465,24 @@ const[score, setScore] = useState(0)
 		)
 	}
 	const buttonMashClick = (isCorrect, someVal) => { 
-
+		
+		function myMove() {
+			var id = null;
+			var elem = document.getElementById("holder");   
+			var pos = 0;
+			clearInterval(id);
+			id = setInterval(frame, 800);
+			function frame() {
+			  if (pos == 350) {
+				clearInterval(id);
+			  } else {
+				pos = pos+32; 
+				elem.style.top = pos + 'px'; 
+				// elem.style.left = pos + 'px'; 
+			  }
+			}
+		  }
+		myMove();  
 if(value!=0){
 		setIsFadedOut(false)
 		setIsFadedOut(true)
@@ -446,6 +598,9 @@ let thePucaOf = localStorage.getItem('pucaEng')
 		
 	}
 	function endAnimation() {
+		setTimeout(function () {
+			
+		 },200)
 	document.getElementById('toggle-glass-btn').style.animation="none"
 	}
 	let dirpadHandler = () => {
@@ -513,7 +668,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			{showSettings ? <SettingsMenu showSettings={showSettings} handleInputSelect={ handleInputSelect} />
 						
 						: null}
-			{showOverworld === true ? <><Overworld handleAnswerButtonClick={handleAnswerButtonClick} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} />
+			{showOverworld === true ? <><Overworld storyTimer={storyTimer} incrementScore={ incrementScore} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} />
 			
 			{showScore ? (
 				<div className='score-section'>scór: { score } as {questions.length}</div>
@@ -644,7 +799,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 < img  src={glass} className="question-img" rel="preload" id="glass-img" alt="glass bg for translucent overlay effect." />	
 			</div>) : null}
 			
-			<div className="avatar-holder" >
+			<div id="holder" className="avatar-holder" >
 					<img src={avatar1} className={value * 10 === 1 ? 'avatar' : 'hidden'} id={currentQuestion ===8? "leap-me":null } alt="a of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null} />		
 			
 			<img rel="preload" src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } id={currentQuestion ===10? "leap-me":null } alt="a  an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>		
@@ -711,7 +866,8 @@ let thePucaOf = localStorage.getItem('pucaEng')
 				
 				<img id="mob-effect"rel="preload" className="phonebg2"src={phone1} alt="" />
 			
-			</div>
+		</div>
+		{currentQuestion>=8?setIsFadedOut(true):null}
 	
 	</>
 	

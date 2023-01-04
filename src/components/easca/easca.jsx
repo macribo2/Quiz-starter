@@ -3,7 +3,6 @@ import React from 'react';
 import './easca.css'
 import $ from 'jquery';
 import pearl from '../../images/stone-soup/misc_crystal_old.png'
-// import { Navigate } from "react-router-dom";
 
 
 
@@ -234,9 +233,7 @@ export default class Easca extends React.Component {
 				if (id === 'undo') {
 					var temp = $('#hero-says').text();
 					temp.toString();
-					// alert(temp)
-					let str = temp.substring(0, temp.length - 1);
-					// alert(str)
+					let str = temp.substring(0, temp.length - 2);
 					$('#hero-says').text(str);
 				}
 				else if ($('#j-line').is(':hidden')) {
@@ -251,10 +248,11 @@ export default class Easca extends React.Component {
 		// 	alert(temp)
 		// }
 
+
 		}
         componentDidMount() {
             if (this.state.redirect) {
-                // return <Navigate to={this.state.redirect} />
+                // return <Redirect to="/login"  />
               }
         
               const h1 = $('h1')
@@ -264,19 +262,18 @@ export default class Easca extends React.Component {
     }
 
 
-    goCd= () =>{
-this.setState({redirect:'cd'})
-        
-    }
+ 
     appendToOutput(char) {
         return <p>hello</p>
      }
 	render(){
 		return(
             <>
-<div id="easca">
-            {/* {this.state.redirect === 'cd'? <Navigate to={this.state.redirect} />:null} */}
-          
+
+				{ 
+		}
+				<div id="easca">
+            
 
 
 
@@ -323,13 +320,13 @@ this.setState({redirect:'cd'})
                     <div className="btn-group btn-group-lg" id="shift-line" role="group" aria-label="...">
         
         <button type="button" id="undo" className="btn-right btn btn-outline-dark">
-          <i className="fa fa-undo"></i>
+		⌫
         </button>
         <button type="button" id="fada" className="btn-left btn btn-outline-dark"></button>
         <button type="button" className="space btn btn-outline-dark"> </button>
         <button type="button" className=" enter btn-right  btn btn-outline-dark"><i className="fa fa-arrow-right"></i></button>
         
-                            <button type="button" className="btn" id="pearl" onTouchStart={() => { $('#easca').fadeOut()}} > x
+                            <button type="button" className="btn" id="exit-easca" onTouchStart={() => { $('#easca').fadeOut()}} > x
           {/* <img src={pearl} /> */}
         </button>
       </div>
