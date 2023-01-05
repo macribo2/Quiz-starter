@@ -121,7 +121,7 @@
 	  height: 102%;
 	  width: 102%;
 	  position: fixed;
-	  z-index: -3;
+	  z-index: 5;
 	  background-image: url(../../images/sea.png);
 	  background-repeat: no-repeat;
 	  background-size: cover;
@@ -163,11 +163,11 @@
 	  position: fixed;
 	  top: 165px;
 	  left: -1500px;
-	  z-index: 7;
+	  z-index: 997;
 	  /* border:4px solid orange; */
 	  height: 150px;
 	  width: 1877px;
-	  display: none; /*inline-block;*/
+	  display:inline-block;
 	  /* /* transform: scale(0.75); */
 	  animation: slide-eascaStage 80s forwards;
 	  overflow: hidden;
@@ -526,7 +526,7 @@
 	background-image: url('../../images/tonnta1.gif');
 	height: 150px;
 	width: 150px;
-	z-index: -1;
+	z-index: 6;
 	/* position: fixed; */
 	top: 5%;
 	left: 0%;
@@ -541,14 +541,14 @@
 	height: 100%;
 	width: 200%;
 	top: 5%;
-	/* z-index: 90000 !important; */
+	z-index: 9 !important;
   
   }
   
   #sea1 {
 	left: 20%;
-	background-image: url('../../images/tonnta2.gif')
-  }
+	background-image: url('../../images/tonnta1.gif')
+  }.gif
   
   #sea2 {
 	left: 40%;
@@ -556,7 +556,7 @@
   
   #sea3 {
 	left: 60%;
-	background-image: url('../../images/tonnta3.gif')
+	background-image: url('../../images/tonnta1.gif')
   }
   
   #sea4 {
@@ -565,17 +565,17 @@
   
   #sea5 {
 	left: 100%;
-	background-image: url('../../images/tonnta3.gif')
+	background-image: url('../../images/tonnta1.gif')
   }
   
   #sea6 {
 	left: 120%;
-	background-image: url('../../images/tonnta2.gif')
+	background-image: url('../../images/tonnta1.gif')
   }
   
   #sea7 {
 	left: 140%;
-	background-image: url('../../images/tonnta2.gif')
+	background-image: url('../../images/tonnta1.gif')
   }
   
   #sea8 {
@@ -585,7 +585,7 @@
   
   #sea9 {
 	left: 180%;
-	background-image: url('../../images/tonnta3.gif')
+	background-image: url('../../images/tonnta1.gif')
   }
   
   #stat-text {
@@ -1030,20 +1030,32 @@
 	}
   
   }
+  #paralax-fields{
+
+    position: fixed;
+    z-index: 90;
+    right: 0%;
+    top: -21%;
+	animation: fields-down 7s forwards linear;
   
+  }
+
+  .sky-bg{
+	position: fixed;
+    z-index: 10;
+    top: -39%;
+    left: 0;
+  }
   .loopscroll {
 	height: 554px;
 	width: 2288px;
 	overflow: hidden;
 	/* background-repeat: repeat-x; */
 	background-position: 0 0;
-	animation-name: backgroundloop;
-	animation-iteration-count: infinite;
-	animation-duration: 30s;
-	animation-timing-function: linear;
+
+  /* animation: backgroundloop 17s forwards ease-out; */
   
-  
-	top: -29px;
+	top: -5%;
 	left: -115px;
 	position: fixed;
 	z-index: 4;
@@ -1124,6 +1136,16 @@
 	}
   
   }
+  @keyframes fields-down{
+	0% {
+		top:  -21%;
+	  }
+	
+	  100% {
+		top:  10%;
+	  }
+	}
+
   
   @keyframes backgroundloop {
 	0% {
