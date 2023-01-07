@@ -4262,9 +4262,6 @@ storyTimer()
 
 <img id="mob-effect" className="phonebg2"src={phone1} alt="" />
 
-<h2 id="loc" alt="holder for location names"></h2>
-                <h2 id="locEng" className={this.state.isOn? "reveal":"locDown"} alt="holder for location names English"></h2>
-
                 <div className="countyMap-container">
                 <div className="sea"></div>
                     <div className="countyMap">
@@ -4313,10 +4310,7 @@ storyTimer()
                         (this.setState({ isOn: true }))
                         console.log("hi from toggle glass")
                     
-                        setTimeout(function () { 
-
-$('#chat').fadeIn();
-},250)
+               
                     }
                     {/* setTimeout(()=> { this.setState({ isOn: false }) }, 3000) */}
                         
@@ -4333,10 +4327,7 @@ $('#chat').fadeIn();
 				
                     < img src={glass} rel="preload"className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />
                     <div id="event-report"></div>
-                    <img src={chat} id="chat" alt="chat button" rel="preload" className="inventory" onClick={() => {
-                        $("#chat").fadeOut();
-     $('#easca').fadeIn() 
-    }}  />
+                   
                     <Easca id="easca"/>    
   
                 </div>) : null}
@@ -4366,6 +4357,11 @@ $('#chat').fadeIn();
         }
     }}  />
      */}
+
+     <img src={chat} id="chat" alt="chat button" rel="preload" className="inventory" onClick={() => {
+                        $("#chat").fadeOut();
+     $('#easca').fadeIn() 
+    }}  />
     <img src={disk} alt="" className="disk" onClick={() => {
         if (this.state.diskVisible) {
             this.setState({ diskVisible: false })
@@ -4389,7 +4385,9 @@ $('#chat').fadeIn();
                 <img id="inventory" rel="preload" src={invMenu}></img>
                
        storyTimer={()=>storyTimer}
-
+       <h2 id="loc" alt="holder for location names"></h2>
+                <h2 id="locEng" className={this.state.isOn ? "reveal" : "locDown"} alt="holder for location names English">
+                </h2>
             </div>
 
         )
