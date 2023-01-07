@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "365d41eabb17777e55c4",
-    "url": "/static/css/main.643d5c40.chunk.css"
+    "revision": "02f9e94f68e1ad7ebea8",
+    "url": "/static/css/main.62cde9e2.chunk.css"
   },
   {
-    "revision": "365d41eabb17777e55c4",
-    "url": "/static/js/main.22482bb9.chunk.js"
+    "revision": "02f9e94f68e1ad7ebea8",
+    "url": "/static/js/main.81e6e16e.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "95ee8d08d99ad2c2819f",
+    "revision": "9c16f0590d79ea95ab10",
     "url": "/static/css/2.7079e116.chunk.css"
   },
   {
-    "revision": "95ee8d08d99ad2c2819f",
-    "url": "/static/js/2.b9e09de5.chunk.js"
+    "revision": "9c16f0590d79ea95ab10",
+    "url": "/static/js/2.a4c9be1d.chunk.js"
   },
   {
     "revision": "0f781983a29762c7ba7f9f9765b3daa8",
@@ -128,6 +128,18 @@ self.__precacheManifest = [
     "url": "/static/media/blackripple.837ece98.gif"
   },
   {
+    "revision": "a82cee8dcaf8584592166c959f9c9cf4",
+    "url": "/static/media/32.a82cee8d.png"
+  },
+  {
+    "revision": "47e968d24662155b894f8c13c749d255",
+    "url": "/static/media/blinding-light-county.47e968d2.jpg"
+  },
+  {
+    "revision": "f36c14540a6c425991adcf3604df038e",
+    "url": "/static/media/field2.f36c1454.png"
+  },
+  {
     "revision": "1df9bfe53527a34df0490d3889603595",
     "url": "/static/media/ultima-tone-long.1df9bfe5.wav"
   },
@@ -204,16 +216,72 @@ self.__precacheManifest = [
     "url": "/static/media/Urchlo Romhanach.e119faec.ttf"
   },
   {
-    "revision": "076f3bffba01a16904bf9ba264c71954",
-    "url": "/static/media/deetsFrame.076f3bff.png"
-  },
-  {
     "revision": "1bd9b1cf1f14870b3b786486b40ba0c1",
     "url": "/static/media/geaga0.1bd9b1cf.png"
   },
   {
+    "revision": "076f3bffba01a16904bf9ba264c71954",
+    "url": "/static/media/deetsFrame.076f3bff.png"
+  },
+  {
     "revision": "e489ff862837973ba8874fb98b06ef64",
     "url": "/static/media/tonnta2.e489ff86.gif"
+  },
+  {
+    "revision": "b37876409b1f45e1d8f535dabf4d30e3",
+    "url": "/static/media/ciorcal-glass-bg.b3787640.png"
+  },
+  {
+    "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
+    "url": "/static/media/fortuna-glass.4c08d21e.png"
+  },
+  {
+    "revision": "ee5004be8978604da5e223282c5bbe51",
+    "url": "/static/media/sea.ee5004be.png"
+  },
+  {
+    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
+    "url": "/static/media/mapFrame4.0cdb344e.png"
+  },
+  {
+    "revision": "c84c06495852ac730bd653c3aa9bff25",
+    "url": "/static/media/wren-code0.c84c0649.png"
+  },
+  {
+    "revision": "4159e8fdaa220a7666d4e619a3429f80",
+    "url": "/static/media/wren2b.4159e8fd.png"
+  },
+  {
+    "revision": "803e6e686778fd42d5b5ccb0059ef189",
+    "url": "/static/media/wren-hood.803e6e68.png"
+  },
+  {
+    "revision": "d0fa8e83c08e2f7d1ce2e1cbe8f2e8b6",
+    "url": "/static/media/fairy-ring-east-vert.d0fa8e83.png"
+  },
+  {
+    "revision": "b67d2f1bd5a2f4dad3e923b36f5038a0",
+    "url": "/static/media/suile0.b67d2f1b.gif"
+  },
+  {
+    "revision": "9bbe18cf6d054928f146dafcf058fcb1",
+    "url": "/static/media/suile3.9bbe18cf.gif"
+  },
+  {
+    "revision": "1417df0f3cdb8da0094f648a0f41b6ef",
+    "url": "/static/media/VT323-Regular.1417df0f.ttf"
+  },
+  {
+    "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
+    "url": "/static/media/fortuna-glass-lit.29cb5d03.png"
+  },
+  {
+    "revision": "fefaccef8a9d6893e3e1ed77e3170cff",
+    "url": "/static/media/field.fefaccef.png"
+  },
+  {
+    "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
+    "url": "/static/media/mapFrame2.915b9892.png"
   },
   {
     "revision": "89b94d7b5fbe24bc213b0097236b0266",
@@ -232,7 +300,7 @@ self.__precacheManifest = [
     "url": "/static/media/keyboard.5888bc5f.png"
   },
   {
-    "revision": "a8c77287714134a1cb062e77f7eebe20",
+    "revision": "067b2a45feea6f55260421b6521d6c59",
     "url": "/index.html"
   }
 ];

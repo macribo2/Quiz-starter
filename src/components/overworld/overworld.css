@@ -8,6 +8,7 @@
   border:4px solid blue;
   display:none;
 }
+.hidden{display:none;}
 @font-face {
   font-family: aonchlo;
   src: url(.././../fonts/aonchlo.ttf);

@@ -793,23 +793,24 @@ export default  class EascaLocation extends React.Component  {
 		
 			function render() {
 
-				let stageLeft=320;
-				let stageTop=200;
-				var intervalId = window.setInterval(function(){
-					/// call your function here
-						$("#eascaStage").animate({left:"+=20px"},0)
-		// 
-		let stagePos = $('#eascaStage').position()
-		console.log('position'+stagePos.left)
-		if(stagePos.left>=740){
-		
-			$('#eascaStage').css('left','-1890px')
-		}
-		
-		// } 
 				
-				},1600 	)
+		let stageLeft=320;
+		let stageTop=200;
+		var intervalId = window.setInterval(function(){
+			/// call your function here
+				$("#eascaStage").animate({left:"+=20px"},0)
+// 
+let stagePos = $('#eascaStage').position()
+console.log('position'+stagePos.left)
+if(stagePos.left>=740){
+
+	$('eascaStage').css('left','-1890px')
+}
+
+// } 
 		
+		},1600 	)
+
 		
 				//Render the game by looping through the map arrays
 				for (var row = 0; row < ROWS; row++) {
@@ -1425,9 +1426,8 @@ let		ls = ()=>{
 			
 			
 			}
-		
+	;
 render()
-
 
 
 		
@@ -1435,13 +1435,13 @@ render()
 	 render() {
 		{/*   ☘	 */}
 
+	
 		 return (
 
 			 <>
-				 <img class="sky-bg" src={skybg } />
+				 <img className="sky-bg" src={skybg } />
     
-				 
-				 <div className="eascaStage-container" >
+				 <div className="eascaStage-container">
 				
 				 <div className="eascaStage-bg loopscroll"></div>
 				<div id="eascaStage" >
@@ -1449,8 +1449,8 @@ render()
 			</div>
 
 
-	</div>
-			 </>
+	
+	</div>			 </>
 
 
 )

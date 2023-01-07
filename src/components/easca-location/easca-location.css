@@ -1,3 +1,7 @@
+.hidden{
+	display:none;
+}
+
 @font-face {
 	font-family: urchlo;
 	src: url('../../fonts/Urchlo\ Romhanach.ttf');
@@ -1035,8 +1039,8 @@
     position: fixed;
     z-index: 90;
     right: 0%;
-    top: -21%;
-	animation: fields-down 7s forwards linear;
+    top: -10%;
+	/* animation: fields-down 7s forwards linear; */
   
   }
 
@@ -1055,7 +1059,7 @@
 
   /* animation: backgroundloop 17s forwards ease-out; */
   
-	top: -5%;
+	top: -16%;
 	left: -115px;
 	position: fixed;
 	z-index: 4;
@@ -1342,3 +1346,4 @@
 	height:100%;
 	width:100%;
 }
+

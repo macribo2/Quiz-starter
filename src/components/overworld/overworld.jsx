@@ -309,7 +309,7 @@ $('.sea').css('display','none')
                         localStorage.setItem("whereAmI", "westmeath");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
                         // narrativeCode++;
-
+alert(localStorage.getItem("whereAmI"))
                         gameObjects[playerRow][playerColumn] = 0;
 
                         playerRow = 8;
@@ -4236,7 +4236,7 @@ storyTimer()
            
 
 
-<div className="directional-pad"  >
+                <div className="directional-pad" onTouchEnd={ localStorage.setItem('whereAmI', 'westmeath')}>
     <div className='grid-container'>
 
         <div className="grid-item"></div>
@@ -4387,7 +4387,7 @@ $('#chat').fadeIn();
                 </div>
                 
                 <img id="inventory" rel="preload" src={invMenu}></img>
-       <EascaLocation/>
+               
        storyTimer={()=>storyTimer}
 
             </div>
