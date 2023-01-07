@@ -935,15 +935,12 @@ p {
 }
 
 #locEng {
-  z-index: 9000;
   font-family: Arial, Helvetica, sans-serif;
-  color: rgb(54, 181, 0);
-  top: 9%;
-  display: block;
-  width: 100%;
-  text-align: center;
-
-  
+  color: aliceblue;
+  top: 20%;
+	display: block;
+  width:76%;
+ animation: fade-in 0.3s forwards;
 }
 
 .locDown{
@@ -1319,15 +1316,9 @@ display: block;
 
 #chat{
   position: fixed;
-  top: 63%;
+  top: 48%;
   z-index: 90;
   left: -3%;
-
-}
-
-#disk{
-  top: 63%;
-  position: fixed;
-  left: 32%;
+  display:none;
 
 }

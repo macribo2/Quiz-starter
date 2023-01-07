@@ -1260,6 +1260,10 @@ position: relative;
               animation:leap-h 2.5s forwards;
   
     }
+    #eng-notes{
+position: fixed;
+z-index: 0;
+    }
   
    
     @-webkit-keyframes leap-h {

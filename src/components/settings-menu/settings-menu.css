@@ -1159,7 +1159,11 @@ vertical-align:middle;
 
   
 }
-
+.disk{
+  top: 63%;
+  position: fixed;
+  left: 25%;
+}
 
 @keyframes fade-out-puzzle-gif{
 	0%{
