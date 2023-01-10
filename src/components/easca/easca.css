@@ -114,9 +114,8 @@ width:400px;
 		text-align: center;
 		height:50%;
 		left:0;
-		bottom:6%;
+		top:67%;
 		width:100%;
-		transform: scale(0.9);
 		z-index: 3500;
 	}
 	

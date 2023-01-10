@@ -4165,7 +4165,15 @@ alert("Anseo")
         //react functions here
         let storyTimer=this.props.storyTimer
         let incrementScore=this.props.incrementScore
-        
+        let readme = `
+        download the src at https://github.com/macribo2/Quiz-starter
+        music by:
+g     Stone Soup Net Hack graphics 
+       https://www.pngwing.com/en/free-png-zampg
+       additional art from https://game-icons.net/
+       video effects by Jamie Zawinski;
+      and digital artists at Ubuntu xscreensaver.
+               `
         
 let        heroName = this.props.heroName
         avatar = this.props.avatar;
@@ -4328,8 +4336,7 @@ storyTimer()
                     < img src={glass} rel="preload"className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />
                     <div id="event-report"></div>
                    
-                    <Easca id="easca"/>    
-  
+                    
                 </div>) : null}
                 <Silken id="silken"></Silken>
                 <h2 id="output2"> "{ heroName}!"</h2>
@@ -4359,9 +4366,10 @@ storyTimer()
      */}
 
      <img src={chat} id="chat" alt="chat button" rel="preload" className="inventory" onClick={() => {
-                        $("#chat").fadeOut();
+                        {/* $("#chat").fadeOut(); */}
      $('#easca').fadeIn() 
     }}  />
+
     <img src={disk} alt="" className="disk" onClick={() => {
         if (this.state.diskVisible) {
             this.setState({ diskVisible: false })
@@ -4376,8 +4384,18 @@ storyTimer()
     }} />
 
 </div>
+                   
+<div className={this.state.diskVisible ? "disk-menu":"hidden"}>
 
-<img rel="preload"src={ this.state.diskVisible? diskMenu: null} alt="" className="diskMenu" />                   
+<img rel="preload"src= {diskMenu}
+                            alt="slow low framerate scrolling white lines on black bg." 
+                            className="disk-bg"/>   
+
+                        
+                        <div>
+                            <p id="readme">{readme}</p>
+                        </div>
+                    </div>                    
 <img rel="preload"src={ this.state.statsVisible? statsMenu: null} alt="" className="statsMenu" />                   
 <img rel="preload"src={this.state.inventoryVisible? invMenu: null } alt="" className="invMenu" />                 
                 </div>
@@ -4388,6 +4406,9 @@ storyTimer()
        <h2 id="loc" alt="holder for location names"></h2>
                 <h2 id="locEng" className={this.state.isOn ? "reveal" : "locDown"} alt="holder for location names English">
                 </h2>
+
+                <Easca id="easca"/>
+                
             </div>
 
         )

@@ -31,7 +31,6 @@ import spark1 from '../../audio/sparkle-b.wav';
 import spark2 from '../../audio/sparkle-c.wav';
 import spark3 from '../../audio/sparkle-d.wav';
 import spark4 from '../../audio/sparkle-e.wav';
-import Easca from '../../components/easca/easca.jsx'	
 import Select from '../../audio/171697__nenadsimic__menu-selection-click.wav';
 // import jam from '../../audio/51241__rutgermuller__8-bit-gabber-piece.wav'
 import useScreenOrientation from 'react-hook-screen-orientation';
@@ -842,7 +841,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			'avatar-land' : 'hidden'} alt="the selected character " />
 			</div>
 			
-			{currentQuestion === 12 ?  <Easca className="faded-in"/>  : null}
+			{/* {currentQuestion === 12 ?  <Easca className="faded-in"/>  : null} */}
 			
 			{/* <img rel="preload"id="mob-effect2" className="phonebg"src={phone2} alt="" /> */}
 

@@ -1,8 +1,12 @@
 #easca{
   display:none;
+  /* border:5px solid orange; */
   position: fixed;
   z-index: 99999;
-  /* border:5px solid orange; */
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 #ring{
   border:4px solid blue;
@@ -1258,7 +1262,7 @@ position:relative
 
   }
 }
-.inventory, .stats,.disk{
+.inventory, .stats,.disk, .chat{
 
   pointer-events: all;
   /* border: 4px solid blue; */
@@ -1267,6 +1271,18 @@ position:relative
 
   
 }
+#chat{
+  top: 85%;
+  position: fixed;
+  left: 73%;
+  transform: scale(0.77);
+  z-index: 998;
+}
+
+.disk{
+  top: 85%;
+opacity:0.5;
+} 
 .inventory{
   position: relative;
   top:-23%;
@@ -1286,7 +1302,7 @@ display: block;
   left: 0;
   padding-top:150%;
   /* transform: scale(0.5); */
-  z-index: 999;
+  z-index: 1000;
 }
 .diskMenu, .statsMenu, .invMenu{
   height:100%;
@@ -1314,11 +1330,12 @@ display: block;
 
 
 
-#chat{
-  position: fixed;
-  top: 48%;
-  z-index: 90;
-  left: -3%;
-  display:none;
 
+.disk-bg{
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  position:fixed;
+  z-index: 999;
 }
