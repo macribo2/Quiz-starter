@@ -278,7 +278,7 @@ export default class Easca extends React.Component {
 
 
 
-            <h2 id="hero-says"> </h2>
+            <p id="hero-says"> </p>
 
     
     

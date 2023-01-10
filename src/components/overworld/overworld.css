@@ -1157,9 +1157,11 @@ position:relative
 #eng-notes{
   position: fixed;
   margin-left: 12%;
-  top: 8%;
+  top: 5%;
+  left: 5%;
   font-size:1.4em;
   color:black;
+
 }
 
 @-webkit-keyframes emblemFade  {
@@ -1274,7 +1276,7 @@ position:relative
 #chat{
   top: 85%;
   position: fixed;
-  left: 73%;
+  left: 75%;
   transform: scale(0.77);
   z-index: 998;
 }

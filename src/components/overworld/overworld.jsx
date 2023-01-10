@@ -4166,14 +4166,13 @@ alert("Anseo")
         let storyTimer=this.props.storyTimer
         let incrementScore=this.props.incrementScore
         let readme = `
-        download the src at https://github.com/macribo2/Quiz-starter
-        music by:
-g     Stone Soup Net Hack graphics 
+         cód foinse https://github.com/macribo2/Quiz-starter
+        Stone Soup Net Hack graphics 
        https://www.pngwing.com/en/free-png-zampg
-       additional art from https://game-icons.net/
-       video effects by Jamie Zawinski;
-      and digital artists at Ubuntu xscreensaver.
-               `
+       https://game-icons.net/
+       realta Jamie Zawinski;
+      7 Ubuntu xscreensaver
+              `
         
 let        heroName = this.props.heroName
         avatar = this.props.avatar;
@@ -4366,8 +4365,8 @@ storyTimer()
      */}
 
      <img src={chat} id="chat" alt="chat button" rel="preload" className="inventory" onClick={() => {
-                        {/* $("#chat").fadeOut(); */}
-     $('#easca').fadeIn() 
+                        $('#eng-notes').html('');
+                        $('#easca').fadeIn() 
     }}  />
 
     <img src={disk} alt="" className="disk" onClick={() => {
