@@ -4348,6 +4348,7 @@ storyTimer()
                 <div className="portraitMode">
                 <p id="eng-notes" > {engNotes[narrativeCode]}</p>
 
+                <Easca id="easca"/>
                 <div id="ui-container">
 
 {/* <img src={stats} alt="" className="stats"onClick={() => {
@@ -4406,7 +4407,6 @@ storyTimer()
                 <h2 id="locEng" className={this.state.isOn ? "reveal" : "locDown"} alt="holder for location names English">
                 </h2>
 
-                <Easca id="easca"/>
                 
             </div>
 
