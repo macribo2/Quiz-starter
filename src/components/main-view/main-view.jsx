@@ -37,8 +37,7 @@ import useScreenOrientation from 'react-hook-screen-orientation';
 import hill from '../../images/rainy-hill1.png';
 import hills from '../../images/newbg4town.png';
 import Stones from '../../images/stones1.png';
-import ReactRain from 'react-rain-animation';
-import "react-rain-animation/lib/style.css";
+
 
 import {
 	CircularInput,
@@ -108,16 +107,7 @@ export default function App() {
 	let hintsAnswersD = [``, ``, ``, ``, ``];
 	
 	
-	function Greeting(props) { 
-		const isRaining = props.isRaining;
-		if (isRaining) {
-			return <ReactRain className="react-rain" numDrops="200" />
-		}
-		else {
-			
-			return null
-		}
-	}
+	
 
 	const handleInputSelect = (UI) => { 
 		
@@ -693,7 +683,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			)}
 			</> : null}
 			{showOverworld===false? <div className='app' >
-		<Greeting isRaining={ currentQuestion >=13?true:false} />
+
 		
 			{/* <ReactAudioPlayer src={currentQuestion === 0 ? theme0 : null} autoPlay /> */}
 			

@@ -951,6 +951,27 @@ p {
   z-index: -90 !important;
 }
 
+#readme{
+  /* border:4px solid blue; */
+  bottom:20%;
+  position:fixed;
+  z-index: 99999;
+  background-color:black;
+  font-size: 1.3em;
+  width: 100%;
+  height:50%;
+  overflow-y: scroll;
+  pointer-events: all;
+}
+.readmore{
+  background-color:black;
+
+  /* border:4px solid blue; */
+  /* margin-top:20%; */
+  position:fixed;
+  pointer-events: none;
+
+}
 #output {
   
   color: white;
@@ -1157,7 +1178,7 @@ position:relative
 #eng-notes{
   position: fixed;
   margin-left: 12%;
-  top: 5%;
+    top: 5%;
   left: 5%;
   font-size:1.4em;
   color:black;
@@ -1264,6 +1285,22 @@ position:relative
 
   }
 }
+
+.daff-container{
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: -3%;
+  left:0;
+justify-content: center;
+z-index: 8;
+position: fixed;
+display: flex;
+}
+
+
+
+
 .inventory, .stats,.disk, .chat{
 
   pointer-events: all;
@@ -1272,6 +1309,11 @@ position:relative
   opacity:0.8
 
   
+}
+#cross-swords{
+  position: fixed;
+  top: 90%;
+  left: 52%;
 }
 #chat{
   top: 85%;

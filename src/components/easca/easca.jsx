@@ -322,11 +322,13 @@ export default class Easca extends React.Component {
         <button type="button" id="undo" className="btn-right btn btn-outline-dark">
 		⌫
         </button>
-        <button type="button" id="fada" className="btn-left btn btn-outline-dark"></button>
+        <button type="button" id="divs" className="btn-left btn btn-outline-dark">㉧</button>
         <button type="button" className="space btn btn-outline-dark"> </button>
         <button type="button" className=" enter btn-right  btn btn-outline-dark"><i className="fa fa-arrow-right"></i></button>
         
-                            <button type="button" className="btn" id="exit-easca" onTouchStart={() => { $('#easca').fadeOut()}} > x
+							<button type="button" className="btn" id="exit-easca" onTouchStart={() => {
+								$('#easca').fadeOut();
+								$('#hero-says').html('')}} > 
           {/* <img src={pearl} /> */}
         </button>
       </div>

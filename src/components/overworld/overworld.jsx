@@ -1,5 +1,7 @@
 import React from 'react';
 import './overworld.css';
+import ReactRain from 'react-rain-animation';
+import "react-rain-animation/lib/style.css";
 import Easca from '../easca/easca'
 import '../Rings/rings1.css';
 import emerald from '../../images/misc_crystal_new.png'
@@ -9,7 +11,7 @@ import stats from '../../images/inv/char.png';
 import disk from '../../images/inv/diskette.png';
 import chat from '../../images/inv/chat.png';
 import {  Redirect, useLocation } from "react-router-dom";
-
+import daff from '../../images/localMaps/daff.gif'
 import portrait from '../../images/empty.png'
 import { BtnB } from './../ui/btn-b';
 import promptVid from '../../images/stars.gif'
@@ -257,13 +259,18 @@ export default class Overworld extends React.Component {
 
         /*big function to handle where to position player after map change*/
         // let imreoirJSON = JSON.stringify(imreoir);
-
+        
+        //mapChanges is a little hack to make the daffodills disappear when player leaves location geaga:
+        let mapChanges = 0;
         function setMap() {
 $("#loc").html("")
 $("#locEng").html("")
 $("#locEng").fadeOut()
-$('#btn-b').fadeOut();
-
+            $('#btn-b').fadeOut();
+            mapChanges++;
+ if(mapChanges>1){           
+$('.daff-container').fadeOut();
+}
 $('.sea').css('display','none')
             $('.emblem-container').fadeIn(1);
             // $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
@@ -304,7 +311,6 @@ $('.sea').css('display','none')
             switch (imreoir.whereAmI) {
 
                 case 'geaga':
-
                     if (direction === N) {
                         localStorage.setItem("whereAmI", "westmeath");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
@@ -4166,13 +4172,54 @@ alert("Anseo")
         let storyTimer=this.props.storyTimer
         let incrementScore=this.props.incrementScore
         let readme = `
-         cód foinse https://github.com/macribo2/Quiz-starter
+        
+         cód foinse 
+   https://github.com/macribo2/Quiz-starter
         Stone Soup Net Hack graphics 
        https://www.pngwing.com/en/free-png-zampg
        https://game-icons.net/
-       realta Jamie Zawinski;
-      7 Ubuntu xscreensaver
-              `
+       vfx Jamie Zawinski;
+      7 Ubuntu xscreensaver;
+      WhirlWindWarp cláraithe ag Paul 'Joey' Clark; 2001
+      cód foinse 
+      https://github.com/macribo2/Quiz-starter
+           Stone Soup Net Hack graphics 
+          https://www.pngwing.com/en/free-png-zampg
+          https://game-icons.net/
+          vfx Jamie Zawinski;
+         7 Ubuntu xscreensaver;
+         WhirlWindWarp cláraithe ag Paul 'Joey' Clark; 2001
+   
+         cód foinse 
+   https://github.com/macribo2/Quiz-starter
+        Stone Soup Net Hack graphics 
+       https://www.pngwing.com/en/free-png-zampg
+       https://game-icons.net/
+       vfx Jamie Zawinski;
+      7 Ubuntu xscreensaver;
+      WhirlWindWarp cláraithe ag Paul 'Joey' Clark; 2001
+
+      cód foinse 
+      https://github.com/macribo2/Quiz-starter
+           Stone Soup Net Hack graphics 
+          https://www.pngwing.com/en/free-png-zampg
+          https://game-icons.net/
+          vfx Jamie Zawinski;
+         7 Ubuntu xscreensaver;
+         WhirlWindWarp cláraithe ag Paul 'Joey' Clark; 2001
+   
+         cód foinse 
+   https://github.com/macribo2/Quiz-starter
+        Stone Soup Net Hack graphics 
+       https://www.pngwing.com/en/free-png-zampg
+       https://game-icons.net/
+       vfx Jamie Zawinski;
+      7 Ubuntu xscreensaver;
+      WhirlWindWarp cláraithe ag Paul 'Joey' Clark; 2001
+
+      
+
+       `
         
 let        heroName = this.props.heroName
         avatar = this.props.avatar;
@@ -4369,7 +4416,7 @@ storyTimer()
                         $('#eng-notes').html('');
                         $('#easca').fadeIn() 
     }}  />
-
+<h1 id="cross-swords">⚔</h1>
     <img src={disk} alt="" className="disk" onClick={() => {
         if (this.state.diskVisible) {
             this.setState({ diskVisible: false })
@@ -4392,7 +4439,25 @@ storyTimer()
                             className="disk-bg"/>   
 
                         
-                        <div>
+                        <div><p className="readmore" id="schlussel">🗝</p>
+                            <p className="readmore">
+                                Oiche, lá.
+                                A náid, h-aon.
+                                Bréagach, fíor.
+
+                                Oscailte, dúnta.
+                                
+                                Lasta, múachta.
+                                Tógfaidh an dénarthacht sin go domhain ríomhairachta sin.
+
+                                tósnaigh arís.
+
+
+                            
+                            
+                            
+                            </p>
+
                             <p id="readme">{readme}</p>
                         </div>
                     </div>                    
@@ -4406,8 +4471,13 @@ storyTimer()
        <h2 id="loc" alt="holder for location names"></h2>
                 <h2 id="locEng" className={this.state.isOn ? "reveal" : "locDown"} alt="holder for location names English">
                 </h2>
+                {this.state.whereAmI==="geaga"?
+            <div className="daff-container" >
+                    <img src={ daff} alt="small yellow flowers stir in the breeze" />
+                {/* <ReactRain className="react-rain" numDrops="200" /> */}
+    
+                </div>:null}
 
-                
             </div>
 
         )
