@@ -1,6 +1,7 @@
 import React from 'react';
 import './overworld.css';
 import ReactRain from 'react-rain-animation';
+import bit from '../../images/gifs/bit.gif'
 import "react-rain-animation/lib/style.css";
 import Easca from '../easca/easca'
 import '../Rings/rings1.css';
@@ -4172,53 +4173,9 @@ alert("Anseo")
         let storyTimer=this.props.storyTimer
         let incrementScore=this.props.incrementScore
         let readme = `
+       
         
-         cód foinse 
-   https://github.com/macribo2/Quiz-starter
-        Stone Soup Net Hack graphics 
-       https://www.pngwing.com/en/free-png-zampg
-       https://game-icons.net/
-       vfx Jamie Zawinski;
-      7 Ubuntu xscreensaver;
-      WhirlWindWarp cláraithe ag Paul 'Joey' Clark; 2001
-      cód foinse 
-      https://github.com/macribo2/Quiz-starter
-           Stone Soup Net Hack graphics 
-          https://www.pngwing.com/en/free-png-zampg
-          https://game-icons.net/
-          vfx Jamie Zawinski;
-         7 Ubuntu xscreensaver;
-         WhirlWindWarp cláraithe ag Paul 'Joey' Clark; 2001
-   
-         cód foinse 
-   https://github.com/macribo2/Quiz-starter
-        Stone Soup Net Hack graphics 
-       https://www.pngwing.com/en/free-png-zampg
-       https://game-icons.net/
-       vfx Jamie Zawinski;
-      7 Ubuntu xscreensaver;
-      WhirlWindWarp cláraithe ag Paul 'Joey' Clark; 2001
-
-      cód foinse 
-      https://github.com/macribo2/Quiz-starter
-           Stone Soup Net Hack graphics 
-          https://www.pngwing.com/en/free-png-zampg
-          https://game-icons.net/
-          vfx Jamie Zawinski;
-         7 Ubuntu xscreensaver;
-         WhirlWindWarp cláraithe ag Paul 'Joey' Clark; 2001
-   
-         cód foinse 
-   https://github.com/macribo2/Quiz-starter
-        Stone Soup Net Hack graphics 
-       https://www.pngwing.com/en/free-png-zampg
-       https://game-icons.net/
-       vfx Jamie Zawinski;
-      7 Ubuntu xscreensaver;
-      WhirlWindWarp cláraithe ag Paul 'Joey' Clark; 2001
-
-      
-
+        
        `
         
 let        heroName = this.props.heroName
@@ -4415,6 +4372,10 @@ storyTimer()
      <img src={chat} id="chat" alt="chat button" rel="preload" className="inventory" onClick={() => {
                         $('#eng-notes').html('');
                         $('#easca').fadeIn() 
+
+                        if (this.state.diskVisible) {
+                        this.setState({ diskVisible: false })
+        }
     }}  />
 <h1 id="cross-swords">⚔</h1>
     <img src={disk} alt="" className="disk" onClick={() => {
@@ -4439,26 +4400,52 @@ storyTimer()
                             className="disk-bg"/>   
 
                         
-                        <div><p className="readmore" id="schlussel">🗝</p>
-                            <p className="readmore">
-                                Oiche, lá.
-                                A náid, h-aon.
-                                Bréagach, fíor.
+                        <div>
+            
+            
+                            <p className="readmore" id="schlussel"></p><div className="bit-container">
 
-                                Oscailte, dúnta.
+                            <img className="bit" src={ bit}/>
+                            </div>
+                            <p id="readme">
+                                 
+                                {readme}
+                                <br/>
+                                <br/>
+                                <br/>
+            <br/>
+            
+            <br/>
+            <br/>
+            <br/>
+            
+            
+            <br />
+            <br />
+            /*              */
+            <br />
+            <br />
+                
+        
+           
+<a href="https://www.pngwing.com/en/free-png-zampg"> Stone Soup Net Hack graphics </a>         
+       <a href="https://manpages.ubuntu.com/manpages/xenial/man1/xscreensaver.1.html">additional effects by Jamie Zawinski Paul 'Joey' Clark</a><br/>
+    
+additional graphics from <a href="https://game-icons.net/"> https://game-icons.net/
+                                </a>    <br/>
                                 
-                                Lasta, múachta.
-                                Tógfaidh an dénarthacht sin go domhain ríomhairachta sin.
-
-                                tósnaigh arís.
-
-
-                            
-                            
-                            
+       <a href="https://github.com/macribo2/Quiz-starter">iron-key is open source.</a>
+                                <br />
+                                more @ <a href="https://www.reddit.com/r/Banba/">/r/banba</a>
                             </p>
-
-                            <p id="readme">{readme}</p>
+                     
+                     <p className='readme'>
+                        
+ 
+       
+     
+    
+                                </p>
                         </div>
                     </div>                    
 <img rel="preload"src={ this.state.statsVisible? statsMenu: null} alt="" className="statsMenu" />                   

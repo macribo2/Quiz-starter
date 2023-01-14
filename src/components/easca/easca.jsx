@@ -183,10 +183,10 @@ export default class Easca extends React.Component {
 			}
 
 			$('#j-line').fadeIn();
-			let newLeft = $('#' + keyPressed).offset().left;
-			let newTop = $('#' + keyPressed).offset().top - 50;
-			$('#j-line').css({ "left": newLeft });
-			$('#j-line').css({ "top": newTop });
+			// let newLeft = $('#' + keyPressed).offset().left;
+			// let newTop = $('#' + keyPressed).offset().top - 50;
+			// $('#j-line').css({ "left": newLeft });
+			// $('#j-line').css({ "top": newTop });
 			$('.j-line-btn').on('touchstart', function () {
 				$('#hero-says').append(this.id)
 				setTimeout(function () { 
@@ -204,14 +204,15 @@ export default class Easca extends React.Component {
 			$('#j-line').empty();
 			keyPressed = (this.innerHTML);
 			keysToShow = [];
-			$('#hero-says').append(keyPressed)
 			showWhatKeys(keyPressed);
-
+	if ($('#j-line').is(':visible')) { 
+			$('#hero-says').append(keyPressed)
+		}
 			myVar = setTimeout(holdKeyDown, 600);
 	
 		})
 		$('.btn').on('touchend', function (e) {
-
+		
 			$(this).addClass('hl');
 			// alert()
 
@@ -328,7 +329,7 @@ export default class Easca extends React.Component {
         
 							<button type="button" className="btn" id="exit-easca" onTouchStart={() => {
 								$('#easca').fadeOut();
-								$('#hero-says').html('')}} > 
+								$('#hero-says').html('')}} > 🗙
           {/* <img src={pearl} /> */}
         </button>
       </div>

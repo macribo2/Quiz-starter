@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "27f9249cb7b4190e3a91",
-    "url": "/static/css/main.a08ff2f7.chunk.css"
+    "revision": "790ac71c55eeec8c6a61",
+    "url": "/static/css/main.bd1e95c0.chunk.css"
   },
   {
-    "revision": "27f9249cb7b4190e3a91",
-    "url": "/static/js/main.f0fe0943.chunk.js"
+    "revision": "790ac71c55eeec8c6a61",
+    "url": "/static/js/main.d4f4d32c.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "cd54ca350dfa66e9dc77",
+    "revision": "f3d22e2418e83a66056f",
     "url": "/static/css/2.7079e116.chunk.css"
   },
   {
-    "revision": "cd54ca350dfa66e9dc77",
-    "url": "/static/js/2.4d1af59c.chunk.js"
+    "revision": "f3d22e2418e83a66056f",
+    "url": "/static/js/2.e75a1a0b.chunk.js"
   },
   {
     "revision": "0f781983a29762c7ba7f9f9765b3daa8",
@@ -52,8 +52,8 @@ self.__precacheManifest = [
     "url": "/static/media/diamhraí0.b8c3b594.gif"
   },
   {
-    "revision": "b30dc425612e2dc81c6d395fc3c58b2e",
-    "url": "/static/media/pooka.b30dc425.png"
+    "revision": "ab4d72f9111114fa70908f80b564f3e2",
+    "url": "/static/media/pooka.ab4d72f9.png"
   },
   {
     "revision": "42cd5dea869ad664103bc269192ec366",
@@ -148,8 +148,8 @@ self.__precacheManifest = [
     "url": "/static/media/ultima-tone-long.1df9bfe5.wav"
   },
   {
-    "revision": "a3fe2cf8bb87f1f08524f37905bd3fc9",
-    "url": "/static/media/yin-yan.a3fe2cf8.png"
+    "revision": "01b6e87260352b10a539b0f93ecef84c",
+    "url": "/static/media/yin-yan.01b6e872.png"
   },
   {
     "revision": "5ba3bc4677b8d4a26d3304037490cdfb",
@@ -232,10 +232,6 @@ self.__precacheManifest = [
     "url": "/static/media/tonnta2.e489ff86.gif"
   },
   {
-    "revision": "b37876409b1f45e1d8f535dabf4d30e3",
-    "url": "/static/media/ciorcal-glass-bg.b3787640.png"
-  },
-  {
     "revision": "1417df0f3cdb8da0094f648a0f41b6ef",
     "url": "/static/media/VT323-Regular.1417df0f.ttf"
   },
@@ -248,12 +244,12 @@ self.__precacheManifest = [
     "url": "/static/media/sea.ee5004be.png"
   },
   {
-    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
-    "url": "/static/media/mapFrame4.0cdb344e.png"
+    "revision": "f00de7d9918169a9feeb00e77a9a2f56",
+    "url": "/static/media/ciorcal-glass-bg.f00de7d9.png"
   },
   {
-    "revision": "c84c06495852ac730bd653c3aa9bff25",
-    "url": "/static/media/wren-code0.c84c0649.png"
+    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
+    "url": "/static/media/mapFrame4.0cdb344e.png"
   },
   {
     "revision": "4159e8fdaa220a7666d4e619a3429f80",
@@ -262,6 +258,10 @@ self.__precacheManifest = [
   {
     "revision": "803e6e686778fd42d5b5ccb0059ef189",
     "url": "/static/media/wren-hood.803e6e68.png"
+  },
+  {
+    "revision": "c84c06495852ac730bd653c3aa9bff25",
+    "url": "/static/media/wren-code0.c84c0649.png"
   },
   {
     "revision": "d0fa8e83c08e2f7d1ce2e1cbe8f2e8b6",
@@ -304,7 +304,7 @@ self.__precacheManifest = [
     "url": "/static/media/keyboard.5888bc5f.png"
   },
   {
-    "revision": "767ac7780ed9d51f475ef652978a0813",
+    "revision": "e918ded988a31db23f1b975593076001",
     "url": "/index.html"
   }
 ];
