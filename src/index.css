@@ -286,7 +286,6 @@ width: 740px;
   pointer-events: none;
   padding: 10px;
   text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
-animation: fade-out 5s forwards 5s  linear;
 width:90%;
   font-family: "urchlo";
 }

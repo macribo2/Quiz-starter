@@ -270,7 +270,8 @@ $("#locEng").fadeOut()
             $('#btn-b').fadeOut();
             mapChanges++;
  if(mapChanges>1){           
-$('.daff-container').fadeOut();
+     $('.daff-container').fadeOut();
+     $('.question-text').fadeOut();
 }
 $('.sea').css('display','none')
             $('.emblem-container').fadeIn(1);
@@ -3781,6 +3782,7 @@ $("#locEng").fadeOut()
                         //   alert('Blocked' + lastPressed + Cookies.get('locationID'));
                         blockPath();
                         break;
+                    case CONTACT: helloFerna(); break;
                     case GEAGA: helloGeaga(); break;
                     case N: travel(N); break;
                     case NE: travel(NE); break;
@@ -3919,7 +3921,7 @@ $("#locEng").fadeOut()
                         case GEAGA:
                             cell.src = ""; break;
                         case CONTACT:
-                            cell.src = "../../img/contact.png";
+                            cell.src = "../../img/empty.png";
                             break;
                         case location0:
                             cell.src = town0
@@ -3958,10 +3960,10 @@ $("#locEng").fadeOut()
                             
                             cell.id = 'geaga'
                             break;
-                        // case CONTACT:
-                        //     cell.src = setIcon(empty);
-                        //     if(imreoir.whereAmI==="geaga")cell.id='contact'
-                        //     break;
+                        case CONTACT:
+                            cell.src = setIcon(empty);
+// alert('eh what')
+                            break;
                         default: break;
                     }
 
@@ -3996,17 +3998,19 @@ $("#locEng").fadeOut()
         })
 
         let whereAbouts;
+        function helloFerna() {
+            // secondLocation = eascaLocations[secondLocationId]
+            // alert('anocht!')
+        $(".question-text").fadeIn()
+        
+        }
         function helloGeaga() {
             // whereAmI = whereAmIHolder;
             imreoir.whereAmI = whereAmI;
             // $('#register').removeClass('hidden')
-            $('.geaga').fadeOut();
-
+         
        
-            $('.canopy-left').fadeOut();
-            $('.countyMap').fadeIn();
-            $('.canopy-right').fadeOut();
-            $('#geagaSprite').fadeOut();
+            
             console.log('whereAmI' + whereAmI)
             localStorage.setItem('whereAmI', whereAmI);
             // secondLocation = eascaLocations[secondLocationId]
@@ -4082,6 +4086,25 @@ $("#locEng").fadeOut()
             }
 
             else if (whereAbouts === "Ráth Ḟearna") { 
+
+
+                map =
+                [
+                    ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 1, 1, 1, 1, 1, 1, 1, 1, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
+                ];
+   
+
+
+
                 $("#walkies").attr("src",ferna)
                 gameObjects[playerRow][playerColumn] = 0;
     
@@ -4123,8 +4146,8 @@ alert("Anseo")
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                [  1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
-                [  1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
+                [  1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                [  1, 1, 1, 1, 1, "C", 1, 1, 1, 1],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
