@@ -100,7 +100,8 @@ export default function App() {
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(1);
 	let hints = [``,
-		``, `It is you!`, ``, ``,``,``,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[gotten]+`, you’ll see fine fun.`,`I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `+heroNamesEng[localStorage.getItem('portrait')]+`, you’ll see fine fun.`,``,``,``,]
+		``, `It is you!`, ``, ``, ``, ``, `I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `
+		+ heroNamesEng[gotten] + `, you’ll see fine fun.`, `I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me ` + heroNamesEng[localStorage.getItem('portrait')] + `, you’ll see fine fun.`, ``, ``, ``,]
 	let hintsAnswersA = [``,``,``,``,``,``,``,``];
 	let hintsAnswersB = [``,``,``,``,``,``,``,``,``];
 	let hintsAnswersC = [``,``,``,``,``,``,``];
@@ -174,7 +175,7 @@ export default function App() {
 			answerOptions: [
 				
 			],
-			
+			quesionTextEng:'Welcome back, '+ heroNames[localStorage.getItem('portrait')]+'.'
 		},
 		{
 			questionText: 'Fáilte ar ais, ' + heroNames[localStorage.getItem('portrait')]+'.',
@@ -417,7 +418,8 @@ const[score, setScore] = useState(0)
 	}, 100)
 	}
 	const incrementScore = () => { 
-		setScore(score++)
+		// setScore(score++)
+		setScore(score+1)
 		console.log(score)
 	}
 	const storyTimer = () => {
@@ -425,8 +427,7 @@ const[score, setScore] = useState(0)
 		setInterval(function () {
 			// alert(score)
 if (score === 1){
-			const nextQuestion = currentQuestion + 1;
-			setCurrentQuestion(nextQuestion);
+			
 		}
 		}, 3000)
 	}
@@ -586,6 +587,8 @@ let thePucaOf = localStorage.getItem('pucaEng')
 		localStorage.setItem('costume',costume)
 		
 	}
+
+
 	function endAnimation() {
 		setTimeout(function () {
 			
@@ -597,9 +600,17 @@ let thePucaOf = localStorage.getItem('pucaEng')
 		endAnimation()
 	}
 	
+
+	let checkFerna = () => {
+		alert(localStorage.getItem('visitedFerna'))
+		if (localStorage.getItem('visitedFerna') === "true") { alert() }
+		const [showOverworld, toggleShowOverworld] = useState(false)
+	}
 	const [showOverworld, toggleShowOverworld] = useState(false)
 
 	return (<>
+		{ checkFerna}
+		
 		<img src={bgDark} className="black-bg" alt="black"/>
 		<div className="hesitate">
 			<img rel="preload" src={distantTown} className="distant-town" alt="distant town large gif" />
@@ -657,7 +668,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			{showSettings ? <SettingsMenu showSettings={showSettings} handleInputSelect={ handleInputSelect} />
 						
 						: null}
-			{showOverworld === true ? <><Overworld storyTimer={storyTimer} incrementScore={ incrementScore} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} />
+			{showOverworld === true ? <><Overworld storyTimer={storyTimer} incrementScore={incrementScore} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} heroNameEng={ heroNamesEng[localStorage.getItem('portrait')]} />
 			
 			{showScore ? (
 				<div className='score-section'>scór: { score } as {questions.length}</div>
@@ -773,7 +784,8 @@ let thePucaOf = localStorage.getItem('pucaEng')
 
 			
 			 
-			{isOn ? (<div id="glass">
+				{isOn ? (<div id="glass">
+
 				<p className={currentQuestion === 1 ? "choice-ring-0-hint" : "hidden"}>{choiceRingEng[value * 10]}</p>
 				<p id="hints" className={isFadedOut ? 'fadedIn' : ' fadedOut'} >{hints[currentQuestion] }</p>
 				<p className={isFadedOut ? 'fadedIn hints' : ' fadedOut hints'}  id="hintsA">{hintsAnswersA[currentQuestion] }</p>
@@ -781,12 +793,14 @@ let thePucaOf = localStorage.getItem('pucaEng')
 				{/* <p className="hints" id="hintsC">{hintsAnswersC[currentQuestion]}</p>
 				 */}
 				{/* <p className="hints" id="hintsD">{hintsAnswersD[currentQuestion] }</p> */}
-				<h2 id="pOf"> {thePucaOf}</h2> 
+				{/* <h2 id="pOf"> {thePucaOf}</h2>  */}
 
-				
 
 < img  src={glass} className="question-img" rel="preload" id="glass-img" alt="glass bg for translucent overlay effect." />	
-			</div>) : null}
+
+
+		
+				</div>) : null}
 			
 			<div id="holder" className="avatar-holder" >
 					<img src={avatar1} className={value * 10 === 1 ? 'avatar' : 'hidden'} id={currentQuestion ===8? "leap-me":null } alt="a of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null} />		

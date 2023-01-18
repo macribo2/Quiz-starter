@@ -1,5 +1,8 @@
 import React from 'react';
 import './overworld.css';
+import river0 from '../../vid/river0.mp4';
+import river1 from '../../vid/river0.mp4';
+
 import ReactRain from 'react-rain-animation';
 import bit from '../../images/gifs/bit.gif'
 import "react-rain-animation/lib/style.css";
@@ -23,6 +26,7 @@ import defaultField from '../../images/localMaps/defaultField.png';
 import collinstown from '../../images/localMaps/collinstown.png';
 
 import ferna from '../../images/localMaps/fearnasringfort.png';
+import fernaRiver from '../../images/localMaps/fearnasringfort-river.png';
 import statsMenu from '../../images/fog3.png';
 import invMenu from '../../images/inv/inv-bg.png';
 import diskMenu from '../../images/blackripple.gif';
@@ -60,10 +64,11 @@ import avatar6 from '../../images/players/diamhraí0.gif';
 import avatar7 from '../../images/players/seanchaí0.png';
 import avatar8 from '../../images/players/pooka.png';
 import avatar9 from '../../images/players/poet.png';
-import geaga1 from '../../images/agnes_new.png';
+import aagnes from '../../images/agnes.png';
 import mobile from '../../images/players/rógaire0.png'
 let whereAmI = 'geaga';
- let secondLocationId = 3//localStorage.getItem('secondLocationId');
+let secondLocationId = 3//localStorage.getItem('secondLocationId');
+let mapChanges = 0;
 
 let whereAmIHolder = 'null';
 let avatar = "";
@@ -79,7 +84,7 @@ let stillPressedNorth;
 let stillPressedSouth;
 let stillPressedEast;
 let stillPressedWest;
-
+let whereAbouts;
 let engNotes = ['From 0 to 1',
 "Antrim, Aontroim, lone dwelling",
 "Armagh, Ard Mhacha, Macha's height",
@@ -128,7 +133,7 @@ function setPlayerIcon() {
     let overworldPortrait = localStorage.getItem('portrait');
     
     // { localStorage.setItem('portrait',"")}
-
+    
     switch (overworldPortrait) {
         case "0": return avatar1;
         case "1": return avatar1;
@@ -142,6 +147,13 @@ function setPlayerIcon() {
         case "9": return avatar9;
         default:  return avatar9;
     }
+}
+
+function setNPCIcon(npc) {
+    // let overworldPortrait = localStorage.getItem('portrait');
+    
+    // { localStorage.setItem('portrait',"")}
+return npc
 }
 export default class Overworld extends React.Component {
     constructor() {
@@ -262,7 +274,6 @@ export default class Overworld extends React.Component {
         // let imreoirJSON = JSON.stringify(imreoir);
         
         //mapChanges is a little hack to make the daffodills disappear when player leaves location geaga:
-        let mapChanges = 0;
         function setMap() {
 $("#loc").html("")
 $("#locEng").html("")
@@ -272,6 +283,9 @@ $("#locEng").fadeOut()
  if(mapChanges>1){           
      $('.daff-container').fadeOut();
      $('.question-text').fadeOut();
+     $('.eng-question-text').css('display','none');
+     $('.eng-question-text-holder').css('color','orange');
+ 
 }
 $('.sea').css('display','none')
             $('.emblem-container').fadeIn(1);
@@ -1322,7 +1336,9 @@ alert(localStorage.getItem("whereAmI"))
                         setMap();
 
                     }; break;
-                case 'westmeath': if (direction === N) {
+                case 'westmeath': 
+                  
+                    if (direction === N) {
                     localStorage.setItem("whereAmI", "cavan");
                     imreoir.whereAmI = localStorage.getItem("whereAmI");
 
@@ -3144,7 +3160,11 @@ alert(localStorage.getItem("whereAmI"))
                             case "tipperary": narrativeCode = 27; break;
                             case "tyrone": narrativeCode = 28; break;
                             case "waterford": narrativeCode = 29; break;
-                            case "westmeath": narrativeCode = 30; break;
+                            case "westmeath": 
+                            
+                            $('.eng-question-text').html('');
+                            $('.eng-question-text').css('border','6px solid green');
+                                narrativeCode = 30; break;
                             case "wexford": narrativeCode = 31; break;
                             case "wicklow": narrativeCode = 32; break;
                             default :break
@@ -3314,6 +3334,9 @@ $("#locEng").fadeIn()
             $('#loc').html("")
             $('#locEng').html("")
 $("#locEng").fadeOut()
+$('#river0').fadeOut();
+$('#river1').fadeOut();
+$('#walkies-overlay').fadeIn();
 
             $('.big-btn-img').fadeOut();
             playerOverLocation = false;
@@ -3345,8 +3368,10 @@ $("#locEng").fadeOut()
         var W = 4;
         var NW = 3;
         var PLAYER = "P";
+        var trap = "x"
         var GEAGA = "G";
         var CONTACT = "C"; //a
+        var AGNES= "N";
         var location0 = 30;
         var location1 = 31;
         var location2 = 32;
@@ -3510,6 +3535,12 @@ $("#locEng").fadeOut()
 
             function handleFirstDown() {
                 // keyboardActive;
+                $('#océ').css('visibility', 'visible');
+            }
+
+
+            function handleSwords() {
+alert("Chun troid!" )
                 $('#océ').css('visibility', 'visible');
             }
             setTimeout(handleFirstDown, 1000);
@@ -3782,6 +3813,7 @@ $("#locEng").fadeOut()
                         //   alert('Blocked' + lastPressed + Cookies.get('locationID'));
                         blockPath();
                         break;
+                        case trap: helloTrap();break;
                     case CONTACT: helloFerna(); break;
                     case GEAGA: helloGeaga(); break;
                     case N: travel(N); break;
@@ -3914,14 +3946,16 @@ $("#locEng").fadeOut()
                             break; case NW:
                             cell.src = empty;
 
-                            break; case N:
+                            break;
+                             case N:
                             cell.src = empty;
                             break;
-
+                        case trap: cell.src = aagnes; break;
+                        case AGNES: cell.src=aagnes
                         case GEAGA:
                             cell.src = ""; break;
                         case CONTACT:
-                            cell.src = "../../img/empty.png";
+                            cell.src = empty;
                             break;
                         case location0:
                             cell.src = town0
@@ -3955,6 +3989,10 @@ $("#locEng").fadeOut()
                             cell.id = 'hero';
 
                             break;
+                        case AGNES:
+                            cell.id = 'agnes'
+                            cell.src =aagnes ;
+                                break;
                         case GEAGA:
                             if(imreoir.whereAmI==="geaga")cell.src =  setGeagaIcon(empty) ;
                             
@@ -3997,11 +4035,46 @@ $("#locEng").fadeOut()
             }
         })
 
-        let whereAbouts;
+        /*a trap flings our hero into the river. 
+        button masher puzzle save vs game-over(score).
+    win === ar ais go contae, xp + 100 .
+    */
+   function helloTrap(){
+    alert();
+}
         function helloFerna() {
             // secondLocation = eascaLocations[secondLocationId]
             // alert('anocht!')
-        $(".question-text").fadeIn()
+            
+            $(".question-text").html('Ar aire!')
+            $("#locEng").html('en garde!')
+            $("#locEng").fadeIn();
+            $('#river0').fadeIn();
+            $('#river1').fadeIn();
+            $('#agnes').fadeIn();
+            $('#walkies-overlay').fadeOut();
+            map =
+            [
+                ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
+                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                ["*", 0, 0, 0, 0, "x", 0, 0, 0, "*"],
+                ["*", 1, 1, 1, 0, "C", 1, 1, 1, "*"],
+                ["*", 1, 1, 1, 1,"C", 1, 1, 1, "*"],
+                ["*", 0, 0, 0, 0,"C",0, 0, 0, "*"],
+                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
+            ];
+
+         refresh();
+        
+
+            $(".question-text").fadeIn()
+            setTimeout(function () { 
+localStorage.setItem('visitedFerna','true')
+
+            }, 3000)
         
         }
         function helloGeaga() {
@@ -4106,9 +4179,10 @@ $("#locEng").fadeOut()
 
 
                 $("#walkies").attr("src",ferna)
+                $("#walkies-overlay").attr("src",fernaRiver)
                 gameObjects[playerRow][playerColumn] = 0;
-    
-                playerRow = 8;
+                
+                playerRow = 7;
                 playerColumn = 5;
             }
             else $("#walkies").attr("src",defaultField)
@@ -4145,9 +4219,9 @@ alert("Anseo")
                 ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                [  1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-                [  1, 1, 1, 1, 1, "C", 1, 1, 1, 1],
+                ["*", 1, 1, 1, 0, 0, 1, 1, 1, "*"],
+                ["*", 1, 1, 1, 1,"C", 1, 1, 1, "*"],
+                ["*", 0, 0, 0, 0,"C",0, 0, 0, "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
@@ -4201,7 +4275,8 @@ alert("Anseo")
         
        `
         
-let        heroName = this.props.heroName
+        let heroNameEng = this.props.heroNameEng;
+       let heroName = this.props.heroName
         avatar = this.props.avatar;
         let handleAnswerButtonClick=this.props.handleAnswerButtonClick
 whereAmIHolder = this.props.whereAmI;
@@ -4220,24 +4295,15 @@ storyTimer()
         let runDisk = function() { 
             this.setState({diskVisible: true })
         }
+      
         return (
-            <div >
-    <div className="bg"></div>
-
-
-
-
-
-
-               
+            
+            <div >    <div className="bg"></div>
+           
+             
                
                 <div id="toolbar"></div>
-                
-
                 <div className="ui">
-
-
-
                 </div>
 
 
@@ -4270,7 +4336,8 @@ storyTimer()
            
 
 
-                <div className="directional-pad" onTouchEnd={ localStorage.setItem('whereAmI', 'westmeath')}>
+                <div className="directional-pad" onTouchStart={this.props.incrementScore} onTouchEnd={localStorage.setItem('whereAmI', 'westmeath')
+                }>
     <div className='grid-container'>
 
         <div className="grid-item"></div>
@@ -4309,7 +4376,7 @@ storyTimer()
                
 
                         <img src={defaultField} alt="green field" id="walkies"/>
-                   
+                        <img src={empty} alt="green field" id="walkies-overlay"/>
                  
 
                     <div className="stage-container" id="kungfu">
@@ -4361,7 +4428,8 @@ storyTimer()
 				
                     < img src={glass} rel="preload"className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />
                     <div id="event-report"></div>
-                   
+                   							
+                    <p className={mapChanges ===1 ? 'eng-question-text' : 'hidden'}>Welcome back, {heroNameEng }</p>
                     
                 </div>) : null}
                 <Silken id="silken"></Silken>
@@ -4400,7 +4468,7 @@ storyTimer()
                         this.setState({ diskVisible: false })
         }
     }}  />
-<h1 id="cross-swords">⚔</h1>
+<h1 id="cross-swords" onTouchStart={this.handleSwords}>⚔</h1>
     <img src={disk} alt="" className="disk" onClick={() => {
         if (this.state.diskVisible) {
             this.setState({ diskVisible: false })
@@ -4481,13 +4549,25 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
        <h2 id="loc" alt="holder for location names"></h2>
                 <h2 id="locEng" className={this.state.isOn ? "reveal" : "locDown"} alt="holder for location names English">
                 </h2>
-                {this.state.whereAmI==="geaga"?
+                {this.state.whereAmI === "geaga" ?
+                    
             <div className="daff-container" >
                     <img src={ daff} alt="small yellow flowers stir in the breeze" />
                 {/* <ReactRain className="react-rain" numDrops="200" /> */}
     
                 </div>:null}
+                <div className="river-container">
 
+                <video id="river0"  autostart="true" autoPlay={true} loop={true} fluid="false" src={river0} type={this.props.type} 
+                />
+
+                
+                <video id="river1"  autostart="true" autoPlay={true} loop={true} fluid="false" src={river1} type={this.props.type} 
+		
+				/>
+                </div>
+                
+		
             </div>
 
         )

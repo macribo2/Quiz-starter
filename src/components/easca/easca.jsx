@@ -212,7 +212,10 @@ export default class Easca extends React.Component {
 	
 		})
 		$('.btn').on('touchend', function (e) {
-		
+		if(	$('#j-line').is(':visible')){ 
+
+
+			}
 			$(this).addClass('hl');
 			// alert()
 

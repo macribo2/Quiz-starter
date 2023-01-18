@@ -8,6 +8,30 @@
   top: 0;
   left: 0;
 }
+
+.river-container{
+
+  position: fixed;
+  top: 0;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  /* pointer-events: none;
+  
+  /* pointer-events: none; */
+}
+#river0{
+
+    display: none;
+}
+
+#river1{
+  display: none;
+  transform: scaleX(-1);
+}
 #ring{
   border:4px solid blue;
   display:none;
@@ -127,7 +151,7 @@
   /* border:4px solid orange; */
 left:0;
 
- top:0;
+ bottom:0;
   width: 100%;
   height: 100%;
   /* transform: scale(0.9); */
@@ -145,6 +169,25 @@ left:0;
   justify-content: center;
   left: 0;
   top: 0;
+}
+.walkies-overlay-container{   
+  height: 100%;
+  width: 100%;
+  z-index: 6667;
+  position: fixed;
+  justify-content: center;
+  left: 0;
+  top: 0;
+}
+#walkies-overlay{
+  position:fixed;
+/* border:4px solid blue; */
+height: 400px;
+width: 400px;
+/* border: 4px solid pink; */
+z-index: 12;
+
+bottom: 0;
 }
 .directional-pad {
   left: 0%;
@@ -1136,11 +1179,23 @@ font-size: 1.8em;
 
   }
 }
+
+
+.eng-question-text{
+
+
+  color: forestgreen;
+  top: 10%;
+  left: 7%;
+  font-size: 1.4em;
+  
+}
+
 .emblem-img{
   /* border:4px solid peru; */
   position:fixed;
   display:  block;
-  margin-top:8%;
+  margin-top:4%;
   z-index: 90;
   opacity:1;
 }
@@ -1406,3 +1461,4 @@ display: block;
   position:fixed;
   z-index: 999;
 }
+

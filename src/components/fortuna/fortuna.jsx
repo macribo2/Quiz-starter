@@ -451,10 +451,10 @@ export default class Fortuna extends React.Component {
 			setTimeout(function () { document.getElementById('fortuna-vid').playbackRate = 0.25; }, 400)
 			
 			setTimeout(function () {
-				$('#pO').html(pucaNa);
-				$('#pO').fadeIn();
-				$('#pOf').html(thePookaOf);
-				$('#pOf').fadeIn();
+				// $('#pO').html(pucaNa);
+				// $('#pO').fadeIn();
+				// $('#pOf').html(thePookaOf);
+				// $('#pOf').fadeIn();
 			}, 500)
 			setTimeout(function () {
 				document.getElementById('fortuna-vid').playbackRate = 0.2;
@@ -487,7 +487,7 @@ export default class Fortuna extends React.Component {
 			
 				if (ct >= fortunaTime[i]) {
 					if (ct <= fortunaTime[i + 1]) {
-						pucaNa = fortunaTeams[i];
+						// pucaNa = fortunaTeams[i];
 						thePookaOf =  ""//fortunaTeamsEng[i];
 						localStorage.setItem('pucaEng',thePookaOf )
 						console.log('this ft...' + fortunaTime[ct] + "   i "+i  )
@@ -533,7 +533,7 @@ export default class Fortuna extends React.Component {
 				<video id="fortuna-vid"  autostart="true" autoPlay={true} loop={true} fluid="false" src={fortuna} type={this.props.type} onTouchEnd={function (){ forFunction() }}
 		
 				/>
-				<h1 id="pO"></h1>
+				{/* <h1 id="pO"></h1> */}
 				<div className="team-icon-container">
 				<img id="imgID0" onTouchEnd={restartFortuna} className="team-icon" src={ft0} alt="" />
 				<img id= "imgID1"className="team-icon" src={ft1} alt="assorted icons from gameicons.net" />
