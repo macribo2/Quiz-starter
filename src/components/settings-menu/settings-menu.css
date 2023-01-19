@@ -154,6 +154,7 @@
   position: absolute;
   width: 64px;
   height: 64px;
+  
   /* border:3px solid green;   */
 
 }
@@ -164,7 +165,6 @@ p {
 
 #hero {
   transform: scale(0.8) rotateY(180deg);
-
 
   /* border-radius: 50%; */
 }
@@ -857,7 +857,7 @@ position:fixed;
 }
 
 #locEng {
-  color: rgb(90, 160, 81);
+  color: rgb(45, 160, 30);
   z-index: 1000;
   font-family: Helvetica, Arial, sans-serif;
   top: 14%;
@@ -906,7 +906,9 @@ position:fixed;
 
 }
 
-
+.battle0{
+  display: none;
+}
 .btn-right {
   /* border:3px solid orange; */
   /* padding-right:8px !important;  */

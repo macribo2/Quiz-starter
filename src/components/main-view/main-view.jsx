@@ -80,6 +80,7 @@ const ComponentWithScreenOrientation = () => {
 }
 let heroNames = ['', 'a Níamh', 'a Ḋubhghlas', 'a Oisín', 'a mháistir', 'a rógaire', 'a Thaoiseach', 'Fionn', 'a chara', 'file'];
 let heroNamesEng = ['','o Níamh', 'Douglas', 'o Oisín','o master', 'you rogue','o Chieftain','Fionn','o friend','poet'];
+
 export default function App() {
 	//for rotary dial values:
 	

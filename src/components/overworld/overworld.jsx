@@ -30,6 +30,7 @@ import fernaRiver from '../../images/localMaps/fearnasringfort-river.png';
 import statsMenu from '../../images/fog3.png';
 import invMenu from '../../images/inv/inv-bg.png';
 import diskMenu from '../../images/blackripple.gif';
+import Battle from '../battle/battle0'
 import EascaLocation from '../easca-location/easca-location'
 
 import gigakoops from '../../audio/Gigakoops - Level 2 - High Clouds.mp3'
@@ -64,7 +65,7 @@ import avatar6 from '../../images/players/diamhraí0.gif';
 import avatar7 from '../../images/players/seanchaí0.png';
 import avatar8 from '../../images/players/pooka.png';
 import avatar9 from '../../images/players/poet.png';
-import aagnes from '../../images/agnes.png';
+import agnes2 from '../../images/agnes.png';
 import mobile from '../../images/players/rógaire0.png'
 let whereAmI = 'geaga';
 let secondLocationId = 3//localStorage.getItem('secondLocationId');
@@ -3945,13 +3946,13 @@ alert("Chun troid!" )
                             cell.src = empty;
                             break; case NW:
                             cell.src = empty;
-
+;
                             break;
                              case N:
                             cell.src = empty;
                             break;
-                        case trap: cell.src = aagnes; break;
-                        case AGNES: cell.src=aagnes
+                        case trap: cell.src = agnes2; break;
+                        case AGNES: cell.src = agnes2; break;
                         case GEAGA:
                             cell.src = ""; break;
                         case CONTACT:
@@ -3991,7 +3992,7 @@ alert("Chun troid!" )
                             break;
                         case AGNES:
                             cell.id = 'agnes'
-                            cell.src =aagnes ;
+                            cell.src =agnes2 ;
                                 break;
                         case GEAGA:
                             if(imreoir.whereAmI==="geaga")cell.src =  setGeagaIcon(empty) ;
@@ -4040,8 +4041,18 @@ alert("Chun troid!" )
     win === ar ais go contae, xp + 100 .
     */
    function helloTrap(){
-    alert();
-}
+       $('.river-container').css('transform', 'rotate(0deg)');
+       $("#walkies").fadeOut();
+       $(".battle0").fadeIn();
+   
+       $(".directional-pad").fadeOut();
+       $(".question-text").html('Troid!')
+       $("#locEng").html('Fight!')
+       $('#hero').fadeOut();
+    //    refresh();
+
+
+   }
         function helloFerna() {
             // secondLocation = eascaLocations[secondLocationId]
             // alert('anocht!')
@@ -4051,17 +4062,22 @@ alert("Chun troid!" )
             $("#locEng").fadeIn();
             $('#river0').fadeIn();
             $('#river1').fadeIn();
-            $('#agnes').fadeIn();
+            // $('#puck').fadeIn();
+            // setTimeout(function () { 
+            //     $('#puck').animate({ "top": "-10px;" });
+
+
+            // },250)
             $('#walkies-overlay').fadeOut();
             map =
             [
                 ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                ["*", 0, 0, 0, 0, "x", 0, 0, 0, "*"],
-                ["*", 1, 1, 1, 0, "C", 1, 1, 1, "*"],
+                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                ["*", 1, 1, 1, 0, "x", 1, 1, 1, "*"],
                 ["*", 1, 1, 1, 1,"C", 1, 1, 1, "*"],
                 ["*", 0, 0, 0, 0,"C",0, 0, 0, "*"],
-                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                ["*", 0, 0, 0, 0,"C", 0, 0, 0, "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                 ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
@@ -4218,8 +4234,8 @@ alert("Anseo")
             [
                 ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                ["*", 1, 1, 1, 0, 0, 1, 1, 1, "*"],
+                ["*", 0, 0, 0, 0, "x", 0, 0, 0, "*"],
+                ["*", 1, 1, 1, 0,"C", 1, 1, 1, "*"],
                 ["*", 1, 1, 1, 1,"C", 1, 1, 1, "*"],
                 ["*", 0, 0, 0, 0,"C",0, 0, 0, "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
@@ -4547,8 +4563,8 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                
        storyTimer={()=>storyTimer}
        <h2 id="loc" alt="holder for location names"></h2>
-                <h2 id="locEng" className={this.state.isOn ? "reveal" : "locDown"} alt="holder for location names English">
-                </h2>
+                <p id="locEng" className={this.state.isOn ? "reveal" : "locDown"} alt="holder for location names English">
+                </p>
                 {this.state.whereAmI === "geaga" ?
                     
             <div className="daff-container" >
@@ -4566,7 +4582,8 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
 		
 				/>
                 </div>
-                
+                <div id="puck"><img src={agnes2} alt="a strange creature" /></div>
+                <Battle className="battle0"/>
 		
             </div>
 
