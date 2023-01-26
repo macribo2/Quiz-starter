@@ -2,7 +2,7 @@ import './settings-menu.css';
 import './lights.css';
 import Easca from '../easca/easca';
 import bg0 from '../../images/bgAnim5.gif';
-import React, { useEffect } from 'react';
+import React, { useEffect,useState  } from 'react';
 import settingsBtnGamepad from '../../images/settings/gamepad.png';
 import settingsBtnTouchscreen from '../../images/settings/smartphone.png';
 import ironkey from '../../images/iron-key.png';
@@ -13,7 +13,7 @@ import ReactAudioPlayer from 'react-audio-player';
 import settingsBtnKeyboard from '../../images/settings/keyboard.png';
 import distantHills from '../../images/newbg4town.png';
 import blurryBG from '../../images/newbg2.png';
-
+import History from '../history/history'
 
 let lyricID = 0;
 
@@ -35,7 +35,10 @@ export default function SettingsMenu(props) {
 
 	
 		}
-});
+	});
+	const [showHistory, setShowHist] = useState(0);
+	
+	
 	 let tollDubh = [
 	
 		 'Taobh cùl an doras',
@@ -49,7 +52,7 @@ export default function SettingsMenu(props) {
 		 'Ó Thainig sé ',
 		 'Le eachaibh luath is iochar throm',
 		 'Thainig sé',
-		 'treasna tonn',
+		 'Thàinig seé, à Sasainn ann',
 		 `Le eachaibh luath is iochar throm`,
 		 `Ar eiginn ar n-eirigh as ar suain`,
 		 `Ar eiginn ar n-eirigh as ar suain`,
@@ -116,6 +119,15 @@ export default function SettingsMenu(props) {
 			
 		</div>
 		{/* <Easca></Easca> */}
+<div className='menu-container'>
+			<button className="menu"
+				onClick={() => setShowHist(true)}
+			>about</button>
+			<button className="menu"
+			onClick={() => props.handleInputSelect('gamepad')}
+			>begin</button>
+			{showHistory === true ? <History/>:null}
+</div>
 		</>	
 		
 

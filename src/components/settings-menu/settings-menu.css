@@ -31,7 +31,11 @@
 }
 @font-face {
   font-family: aonchlo;
-  src: url(.././../fonts/aonchlo.ttf);
+  src: url("../../fonts/aonchlo.ttf");
+}
+@font-face {
+  font-family: engf;
+  src: url(../../fonts/INFO56_0.ttf);
 }
 
 #mob-effect,
@@ -162,14 +166,35 @@
 p {
   /* width: 400px; */
 }
-
+.menu-container{
+  justify-content: space-between;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  left: 0;
+  top: 0%;
+  z-index: 9000;
+  position: fixed;
+}
 #hero {
   transform: scale(0.8) rotateY(180deg);
 
   /* border-radius: 50%; */
 }
 
+.menu{
+background-color: rgba(5, 12, 3, 0.833);
+color:thistle;
+padding: 20px;
+opacity: 0;
+width:31%;
+margin: 3%;
+animation: fade-in 8s ease-in 2s forwards;
+font-size: 3em;
+font-family: engf;
 
+}
 
 
 .grid-container {
@@ -183,472 +208,17 @@ p {
 
 
 
-@keyframes zoom-to-offaly {
+@keyframes ease-in {
 
   0% {
-    transform: scale(1.1)
+    opacity: 0;
   }
 
   100% {
-    transform: scale(1.2);
-    margin-top: -15%;
-    margin-left: -20%;
-
+    opacity: 1;
   }
 }
 
-@keyframes zoom-to-louth {
-
-  0% {
-    transform: scale(1.2)
-  }
-
-  100% {
-    transform: scale(1.1);
-    margin-left: -10%;
-    margin-top: -10%;
-  }
-
-}
-
-@keyframes zoom-to-geaga {
-
-  0% {
-    transform: scale(1.2)
-  }
-
-  100% {
-    transform: scale(1);
-    margin-left: -10%;
-    margin-top: -10%;
-    border-radius: 0%;
-  }
-
-}
-
-@keyframes zoom-to-wexford {
-
-  0% {
-    transform: scale(1.1)
-  }
-
-  100% {
-    transform: scale(1.0);
-    margin-left: -15%;
-
-  }
-
-}
-
-@keyframes zoom-to-limerick {
-
-  0% {
-    transform: scale(1.2)
-  }
-
-  100% {
-    transform: scale(1.0)
-  }
-
-}
-
-@keyframes zoom-to-dublin {
-
-  0% {
-    transform: scale(1.1)
-  }
-
-  100% {
-    margin-top: -10%;
-
-    margin-left: -20%;
-
-    transform: scale(1.1)
-  }
-
-}
-
-@keyframes zoom-to-leitrim {
-
-  0% {
-    transform: scale(0.9)
-  }
-
-  100% {
-    transform: scale(1.0)
-  }
-
-}
-
-@keyframes zoom-to-antrim {
-
-  0% {
-    transform: scale(0.8)
-  }
-
-  100% {
-    transform: scale(1.0)
-  }
-
-}
-
-@keyframes zoom-to-donegal {
-
-  0% {
-    transform: scale(1.2)
-  }
-
-  100% {
-    transform: scale(1.4);
-    margin-left: -16%;
-    margin-top: -12%;
-
-  }
-
-}
-
-@keyframes zoom-to-fermanagh {
-
-  0% {
-    transform: scale(0.9)
-  }
-
-  100% {
-    transform: scale(1.0);
-
-    margin-left: -22%;
-    margin-top: -20%;
-
-  }
-}
-
-@keyframes zoom-to-cork {
-
-  0% {
-    transform: scale(1.1)
-  }
-
-  100% {
-    transform: scale(1.0);
-    margin-left: -18%;
-    margin-top: -17%;
-  }
-
-}
-
-@keyframes zoom-to-wicklow {
-
-  0% {
-    transform: scale(1.1)
-  }
-
-  100% {
-    margin-left: -27%;
-    margin-top: -12%;
-    transform: scale(1.0)
-  }
-
-}
-
-@keyframes zoom-to-roscommon {
-
-  0% {
-    transform: scale(1.0);
-  }
-
-  100% {
-    transform: scale(1.4);
-
-    margin-left: -24%;
-    margin-top: -8%;
-  }
-
-}
-
-@keyframes zoom-to-derry {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    transform: scale(0.9);
-    margin-left: -16%;
-    margin-top: -16%;
-  }
-
-}
-
-@keyframes zoom-to-sligo {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    transform: scale(1.0);
-    margin-left: -6%;
-    margin-top: -12%;
-  }
-
-}
-
-@keyframes zoom-to-tipperary {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    transform: scale(1.0);
-    margin-top: -10%;
-    margin-left: -14%;
-
-  }
-
-}
-
-@keyframes zoom-to-laois {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    transform: scale(1.0);
-    margin-left: -18%;
-    margin-top: -10%;
-  }
-
-}
-
-@keyframes zoom-to-waterford {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    transform: scale(1.1);
-    margin-left: -24%;
-    margin-top: -12%;
-
-  }
-
-}
-
-@keyframes zoom-to-kilkenny {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    transform: scale(1.0);
-    margin-left: -22%;
-  }
-
-}
-
-@keyframes zoom-to-meath {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    margin-left: -22%;
-    margin-top: -5;
-
-    transform: scale(1.1);
-
-  }
-
-}
-
-@keyframes zoom-to-kerry {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    transform: scale(0.9);
-    margin-left: -10%;
-    margin-top: -12%;
-  }
-
-}
-
-@keyframes zoom-to-longford {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    transform: scale(1.2);
-    margin-left: -20%;
-    margin-top: -12%;
-  }
-
-}
-
-@keyframes zoom-to-mayo {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    transform: scale(1);
-    margin-left: -6%;
-    margin-top: -6%;
-  }
-
-}
-
-@keyframes zoom-to-westmeath {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    transform: scale(0.9);
-    margin-left: -15%;
-    margin-top: -15%;
-  }
-
-}
-
-@keyframes zoom-to-down {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    transform: scale(1.0);
-    margin-left: -6%;
-    margin-top: -12%;
-  }
-
-}
-
-@keyframes zoom-to-armagh {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    transform: scale(1.0);
-    margin-top: -15%;
-
-
-  }
-
-}
-
-@keyframes zoom-to-carlow {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    margin-left: -24%;
-    margin-top: -10%;
-    transform: scale(1.2)
-  }
-
-}
-
-@keyframes zoom-to-monaghan {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    transform: scale(1.1);
-    margin-left: -16%;
-    margin-top: -12%;
-  }
-
-}
-
-@keyframes zoom-to-galway {
-
-  0% {
-    transform: scale(1.0)
-  }
-
-  100% {
-    transform: scale(1.1);
-    margin-left: -10%;
-    margin-top: -14%;
-  }
-
-}
-
-@keyframes zoom-to-kildare {
-
-  0% {
-    transform: scale(1.2)
-  }
-
-  100% {
-    transform: scale(1.0);
-    margin-left: -6%;
-    margin-top: -12%;
-  }
-
-}
-
-@keyframes zoom-to-clare {
-
-  0% {
-    transform: scale(1.1)
-  }
-
-  100% {
-    transform: scale(1.0);
-    margin-left: -6%;
-    margin-top: -12%;
-  }
-
-}
-
-@keyframes zoom-to-cavan {
-
-  0% {
-    transform: scale(1.2)
-  }
-
-  100% {
-    transform: scale(1.0);
-    margin-left: -18%;
-    margin-top: -12%;
-  }
-
-}
-
-@keyframes zoom-to-tyrone {
-
-  0% {
-    transform: scale(1.1)
-  }
-
-  100% {
-    transform: scale(1.0);
-    margin-left: -13%;
-    margin-top: -12%;
-
-  }
-
-}
 
 #north {
 

@@ -57,8 +57,10 @@ import EnterSilken from '../../components/silken/EnterSilken';
 import GamePad from '../../components/game-pad/game-pad.jsx'; 
 import AandB from '../../components/silken/silken.jsx';
 import distantTown from '../../images/newbg2town.png';
+
 import rave from '../../images/color-square.gif'
 window.scrollTo(0, 1);
+
 
 
 let domReady = (cb) => {
@@ -115,6 +117,7 @@ export default function App() {
 		
 		console.log(UI);
 		setSettings(0)
+
 
 	}
 	function useToggle(initialValue = false) {

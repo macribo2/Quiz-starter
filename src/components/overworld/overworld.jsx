@@ -1,7 +1,5 @@
 import React from 'react';
 import './overworld.css';
-import river0 from '../../vid/river0.mp4';
-import river1 from '../../vid/river0.mp4';
 
 import ReactRain from 'react-rain-animation';
 import bit from '../../images/gifs/bit.gif'
@@ -25,8 +23,7 @@ import glass from '../../images/big-glass.png';
 import defaultField from '../../images/localMaps/defaultField.png';
 import collinstown from '../../images/localMaps/collinstown.png';
 
-import ferna from '../../images/localMaps/fearnasringfort.png';
-import fernaRiver from '../../images/localMaps/fearnasringfort-river.png';
+import ferna from '../../images/localMaps/dungeonfog.png';
 import statsMenu from '../../images/fog3.png';
 import invMenu from '../../images/inv/inv-bg.png';
 import diskMenu from '../../images/blackripple.gif';
@@ -3335,8 +3332,7 @@ $("#locEng").fadeIn()
             $('#loc').html("")
             $('#locEng').html("")
 $("#locEng").fadeOut()
-$('#river0').fadeOut();
-$('#river1').fadeOut();
+
 $('#walkies-overlay').fadeIn();
 
             $('.big-btn-img').fadeOut();
@@ -4042,13 +4038,16 @@ alert("Chun troid!" )
     */
    function helloTrap(){
        $('.river-container').css('transform', 'rotate(0deg)');
-       $("#walkies").fadeOut();
        $(".battle0").fadeIn();
-   
+   $('.cell').fadeOut()
        $(".directional-pad").fadeOut();
-       $(".question-text").html('Troid!')
-       $("#locEng").html('Fight!')
+       $(".question-text").html('Ficheall!')
+       $("#locEng").html('Chess!')
        $('#hero').fadeOut();
+       setTimeout(function () { 
+       $("#walkies").fadeOut();
+           
+       },300)
     //    refresh();
 
 
@@ -4060,8 +4059,7 @@ alert("Chun troid!" )
             $(".question-text").html('Ar aire!')
             $("#locEng").html('en garde!')
             $("#locEng").fadeIn();
-            $('#river0').fadeIn();
-            $('#river1').fadeIn();
+            
             // $('#puck').fadeIn();
             // setTimeout(function () { 
             //     $('#puck').animate({ "top": "-10px;" });
@@ -4195,7 +4193,7 @@ localStorage.setItem('visitedFerna','true')
 
 
                 $("#walkies").attr("src",ferna)
-                $("#walkies-overlay").attr("src",fernaRiver)
+                // $("#walkies-overlay").attr("src",fernaRiver)
                 gameObjects[playerRow][playerColumn] = 0;
                 
                 playerRow = 7;
@@ -4574,13 +4572,9 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                 </div>:null}
                 <div className="river-container">
 
-                <video id="river0"  autostart="true" autoPlay={true} loop={true} fluid="false" src={river0} type={this.props.type} 
-                />
 
                 
-                <video id="river1"  autostart="true" autoPlay={true} loop={true} fluid="false" src={river1} type={this.props.type} 
-		
-				/>
+           
                 </div>
                 <div id="puck"><img src={agnes2} alt="a strange creature" /></div>
                 <Battle className="battle0"/>
