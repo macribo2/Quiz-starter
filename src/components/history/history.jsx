@@ -2,6 +2,8 @@
 import React from 'react';
 import '../concept/concept.css'
 import './history.css';
+import Ring2 from '../Rings/Rings2'
+import bg from '../../images/blackripple.gif'
 import { BtnSelect } from '../ui/btn-select';
 import { BtnStart } from '../ui/btn-start';
 import { BtnA } from '../ui/btn-a';
@@ -16,7 +18,7 @@ import runLand from '../../images/stars.gif'
 import historyVid from '../../images/stars.gif';
 import desktopVid from '../../images/stars.gif';
 import blueRabbit from '../../images/stars.gif';
-import slide0 from '../../images/About1/unix.png';
+import slide0 from '../../images/empty.png';
 import slide1 from '../../images/About1/mouse-icons/mouse-arrow.png';
 import slide2 from '../../images/About1/cursor-folder.png';
 import slide3 from '../../images/About1/unix.png'
@@ -37,6 +39,14 @@ import slide19 from '../../images/About1/1798.png'
 import slide21 from '../../images/About1/gpo.png'
 import slide22 from '../../images/About1/feicimthu.png'
 
+let engTexts = // eslint-disable-next-line no-sparse-arrays
+['','','','','','','','','','','','',''
+];
+
+let storyTexts = [
+'','','','','','','','','','','',''
+    
+];
 
 
 let changeVid = () => {
@@ -98,14 +108,17 @@ export default class History extends React.Component {
 
     incrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story + 1 }) }
     decrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story - 1 }) }
+
+    
     render() {
 
 
         return (
             <>
-                <div id="music" ></div>
+                
                 <div id="history">
-                    <video autoPlay muted loop id={this.state.story===4?"history-vid":"hidden"}>
+                    <img className = "history-bg"src={ bg} alt="background image for exposition" />
+                    <video autoPlay muted loop id="history-vid">
                         <source id="history-vid" src={desktopVid} type="video/mp4" />
                     </video>
                     <video autoPlay muted loop id={this.state.story>=2?"history-vid":"hidden"}>
@@ -157,29 +170,8 @@ export default class History extends React.Component {
 
                     <div className="about about-soc">{this.state.story === 18 || this.state.story === 19 ? <img src={slide22} alt="social media icons" /> : null}</div>
 
-                    <div className="container" id="kungfu">
 
-                        <div id="top" className="row justify-content-center ">
-
-                            <div id="story-hoss">
-                                {
-                                    this.props.engMode === true ?
-                                        <>
-                                            <h2 id="storyTexts" className="the-craic">{this.props.engTexts[this.state.story]}</h2>
-                                        </>
-                                        :
-
-                                        null}
-                                {this.props.engMode === false ?
-
-                                    <>
-                                        <h2 id="story">{this.props.storyTexts[this.state.story]}</h2>
-
-                                    </>
-                                    : null}
-                            </div>
-
-                        </div>
+                       
 
                         <div id="middle" className="row justify-content-center">
 
@@ -189,8 +181,6 @@ export default class History extends React.Component {
                                 <div className="row">
                                 </div>
 
-
-                            </div>
 
 
 
@@ -222,7 +212,7 @@ export default class History extends React.Component {
 
 
                 </div>
-                <div className="directional-pad-hist">
+                {/* <div className="directional-pad-hist">
                     <div className='grid-container'>
 
                         <div className="grid-item"></div>
@@ -244,49 +234,22 @@ export default class History extends React.Component {
                         <div className="grid-item"></div>
                     </div>
                 </div>
+ */}
 
 
-                <div className="select-options">
+               
+ <div id="story-hoss">
+                                
+                                    
+                                            <h2 id="storyTexts" className="story-texts">{engTexts[this.state.story]}</h2>
+                                
+                                
+                                        <h2 id="story">{storyTexts[this.state.story]}</h2>
 
-                    <button className="start-options-button" onTouchStart={this.setGerman}>
-                        <img src="german" alt="German flag" /></button>
-
-                    <button className="start-options-button" onTouchStart={() => { this.setState({ german: true, english: false, polish: false }) }}> <img src="polish" alt="Polish flag" /></button>
-                    <button className="start-options-button" onTouchStart={() => { this.setState({ german: false, english: true, polish: false }) }}> <img src="english" alt="English flag" /></button>
-
-                </div>
-
-
-                {this.state.mobile ? <div id='prompt-hor'>
-							<video autoPlay muted loop id="prompt-vid"><source src={runLand} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
-							<div id="hills-overlay" />
-
-
-							{this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <div className="mobile-mode"><img alt="toggle mobile icon" src={mobile}></img></div>}<br />
-							{/* <img id="ciaroga" src={ciaroga} /> */}
-						</div> : null
-
-
-						}
-              {this.state.showFromMenu ?
-                <div className="fromLang">
-                        <button className="from-options-button fromEng" onTouchStart={this.handleFromLang}>E</button>
-                        <button className="from-options-button fromGae" onTouchStart={this.handleFromLang}>G</button>
-                        <button className="from-options-button fromPol" onTouchStart={this.fromPol}>P</button>
-
-                </div> :null}
-                {/* 
-                <div className="toLang">
-
-                <div className="to-options">
-                <button className="to-options-button fromEng" onTouchStart={this.handleFromLang}>E</button>
-                <button className="to-options-button fromGae" onTouchStart={this.handleFromLang}>G</button>
-                    <button className="to-options-button fromPol" onTouchStart={this.handleFromLang}>P</button>
-                </div>
-
-                </div> */}
-            
-            
+                                        <Ring2/>
+                                
+                            </div>
+               
             </>
 
         )

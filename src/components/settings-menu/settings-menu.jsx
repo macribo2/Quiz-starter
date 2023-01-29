@@ -63,6 +63,7 @@ export default function SettingsMenu(props) {
 		 ' ',
 		 ' '];
 
+
 		 let runrig = document.getElementById('runrig')
 	
 	var lid = localStorage.getItem('lyricID');
@@ -126,7 +127,7 @@ export default function SettingsMenu(props) {
 			<button className="menu"
 			onClick={() => props.handleInputSelect('gamepad')}
 			>begin</button>
-			{showHistory === true ? <History/>:null}
+			{showHistory === true ? <History  />:null}
 </div>
 		</>	
 		

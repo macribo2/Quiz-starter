@@ -51,7 +51,7 @@ import tinkle from "../../audio/tinkle.wav"
 import tinkle1 from "../../audio/dink.wav"
 import stars from '../../images/stars.gif';
 import ReactAudioPlayer from 'react-audio-player';
-import '../../fonts/Urchlo Romhanach.ttf';
+import '../../fonts/urchlo.ttf';
 import Silken from '../../components/silken/silken.jsx'; 
 import EnterSilken from '../../components/silken/EnterSilken'; 
 import GamePad from '../../components/game-pad/game-pad.jsx'; 

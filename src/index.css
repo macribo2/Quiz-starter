@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: urchlo;
-  src: url(./fonts/Urchlo\ Romhanach.ttf);
+  src: url(./fonts/urchlo.ttf);
 }
 
 @font-face {
@@ -287,7 +287,7 @@ width: 740px;
   padding: 10px;
   text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
 width:90%;
-  font-family: "urchlo";
+  font-family: urchlo;
 }
 
 .timer-text {
@@ -1082,7 +1082,7 @@ width: 100%;
 }
 
 
-.dial-text, #pO,  {
+.dial-text, #pO  {
   
   position: fixed;
   z-index: 995;

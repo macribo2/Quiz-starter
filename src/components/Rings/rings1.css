@@ -9,8 +9,7 @@
 
 
   pointer-events: none;
-  top: 0%;
-  left: 0%;
+  
   position: fixed;
   font-size: 1.7em;
   color: rgb(74, 165, 196);
@@ -26,8 +25,8 @@
 
 .rings1 {
   color: aliceblue;
-  left: 72%;
-  top: 69%;
+  left: auto;
+  top: auto;
   font-family: 'aonchlo';
 
 }
@@ -94,7 +93,7 @@
   top: 0;
   left: 0;
   justify-content: center;
-  display: none;
+  display: flex;
 }
 
 .input-elements-container3 {
