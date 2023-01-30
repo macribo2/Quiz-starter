@@ -9,7 +9,9 @@ import spark1 from '../../audio/ding1.wav';
 import spark2 from '../../audio/ding2.wav';
 import spark3 from '../../audio/ding0.wav';
 import spark4 from '../../audio/ding2.wav';
-
+import about0 from './../../images/About1/0.png'
+import about1 from './../../images/About1/pc.png'
+import about2 from './../../images/About1/pc.png'
 import {
 	CircularInput,
 	CircularTrack,
@@ -86,18 +88,23 @@ As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Appl
 	// 'Ó Thuaidh',	
 // 	'"Cé tú féin?"',
 // 		'"Cá bhfuil mé?"',
-		
-`Ón treabh Ibírach 'Míl Espáine'
-     a dtagann na Gael,
-     de réir na finscéalíochta. 
-    `,
-		
-		`
-	I 1607, briseadh ar daingeannacha na Gael.
-    Díbríodh na Taoisaigh, agus bin deireadh an ord ársa Gaelach.`,
 
-	`I 1969, sna SAM, scríobhadh eithne UNIX i saotharlann Bell`, `Tá UNIX faoi cosaint ceart coip,  ionntsamhla  Microsoft agus Apple.`	, `Samhlaigh `, `Tá tú i... (pwd)`,  `las solas? (ls)`,
- `lasann tú solas. Feiceann tú: Choill na Droithe,  Dún Jam, `, 
+		
+		
+		
+
+	
+		`Meafar usáideach is é an desktop.`,
+		`Ach tá bealach eile ríomhaire a usáid.`
+	,`Is feidir í a treoirú, le treoir ón treoir líne.`,
+		`Ní gá múrán a rá`,
+		`Cá bhfuil tú? (pwd)`,  `las solas? (ls)`,
+		`(cd) chun dul "isteach" sa chéad "áit" eile`, 
+		`(cd ..) chun dul síar.`,
+
+	``, 
+	``, 
+	``, 
 `
 Seo JSON:`,
 `{" ":" "}`,
@@ -135,6 +142,16 @@ Seo JSON:`,
 		<img src={lens} id="lens" alt="a glass lens" />
 			
 		<div className="input-elements-container">
+		
+					<div className="about-pics-container">
+
+					<img className={value*10 === 0 ? 'about-pics':'hidden'} src={about1} alt="illustration placeholder" />
+					<img className={value*10 === 3 ? 'about-pics':'hidden'} src={about0} alt="illustration placeholder" />
+					<img className={value*10 === 4 ? 'about-pics':'hidden'} src={about0} alt="illustration placeholder" />
+					<img className={value*10 === 5 ? 'about-pics':'hidden'} src={about0} alt="illustration placeholder" />
+					<img className={value*10 === 6 ? 'about-pics':'hidden'} src={about0} alt="illustration placeholder" />
+					<img className={value*10 === 7 ? 'about-pics':'hidden'} src={about0} alt="illustration placeholder" />
+					</div>
 			
 				<CircularInput className="dial" value={value}  onChange={v => setValue3(stepValue3(v))}>{}
 					<CircularTrack />
@@ -145,20 +162,10 @@ Seo JSON:`,
 				
 			</CircularInput>
 			</div>
-		<p className='rings1' >{Ring2Ans[value * 10]}</p>
-
-
-			<h1>{ props.isOn}</h1>
-			{props.isOn ? <p className="rings0Eng">{Ring2AnsEng[value * 10]}</p> : null}
-			{ localStorage.setItem('freagra1', value * 10)
-}
-			<button id="ring-glass-btn" onClick={props.toggleIsOn
-			}	><img src={props.isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
-			
-
+	
 				<div className="input-elements-container3">
 					
-			<button className="button-mash-ring-0" onClick={props.buttonMashClick}></button>
+			{/* <button className="button-mash-ring-0" onClick={props.buttonMashClick}></button> */}
 </div>
 			<ReactAudioPlayer src={value*10 === 1 ? spark0: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 2 ? spark1: null} autoPlay />
@@ -169,8 +176,19 @@ Seo JSON:`,
 			<ReactAudioPlayer src={value*10 === 7 ? spark4: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 8 ? spark0: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 9 ? spark0: null} autoPlay />
-			
 			</div>			
+
+			<p className='rings1' >{Ring2Ans[value * 10]}</p>
+
+
+<h1>{ props.isOn}</h1>
+{props.isOn ? <p className="rings0Eng">{Ring2AnsEng[value * 10]}</p> : null}
+{ localStorage.setItem('freagra1', value * 10)
+}
+<button id="ring-glass-btn" onClick={props.toggleIsOn
+}	><img src={props.isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
+
+
 		</>)
 };
 

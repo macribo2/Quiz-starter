@@ -3,7 +3,7 @@ import React from 'react';
 import '../concept/concept.css'
 import './history.css';
 import Ring2 from '../Rings/Rings2'
-import bg from '../../images/blackripple.gif'
+import bg from '../../images/fog3.png'
 import { BtnSelect } from '../ui/btn-select';
 import { BtnStart } from '../ui/btn-start';
 import { BtnA } from '../ui/btn-a';

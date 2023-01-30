@@ -576,7 +576,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 		`Donn Fírinne`,
 		`Liam Mac Cárthaigh`,
 		`Abhartach`,
-		`Fionn mac Cumhail`,
+		`Fionn Mac Cumhail`,
 		`Púca`,
 		`Fedelm an File`
 		

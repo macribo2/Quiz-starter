@@ -22,11 +22,21 @@
   font-family: "urchlo";
 
 }
-
+.about-pics-container{
+  align-content: center;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  /* border: 5px solid orange; */
+  top:0;
+  left:0;
+  display: grid;
+}
 .rings1 {
   color: aliceblue;
   left: auto;
-  top: auto;
+  top: 0% !important;
   font-family: 'aonchlo';
 
 }
@@ -90,10 +100,11 @@
   position: fixed;
   height: 100%;
   width: 100%;
-  top: 0;
+  bottom: 0;
   left: 0;
   justify-content: center;
   display: flex;
+  transform:scale(0.8)
 }
 
 .input-elements-container3 {
