@@ -37,8 +37,8 @@ export default function SettingsMenu(props) {
 		}
 	});
 	const [showHistory, setShowHist] = useState(0);
-	
-	
+	let toggleIsOn = props.toggleIsOn
+	let isOn = props.isOn
 	 let tollDubh = [
 	
 		 'Taobh cùl an doras',
@@ -127,7 +127,7 @@ export default function SettingsMenu(props) {
 			<button className="menu"
 			onClick={() => props.handleInputSelect('gamepad')}
 			>begin</button>
-			{showHistory === true ? <History  />:null}
+			{showHistory === true ? <History isOn={isOn} toggleIsOn={toggleIsOn} />:null}
 </div>
 		</>	
 		

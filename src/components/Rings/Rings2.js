@@ -11,7 +11,15 @@ import spark3 from '../../audio/ding0.wav';
 import spark4 from '../../audio/ding2.wav';
 import about0 from './../../images/About1/0.png'
 import about1 from './../../images/About1/pc.png'
-import about2 from './../../images/About1/pc.png'
+import about2 from './../../images/you-see.gif'
+import about3 from './../../images/blinding-light.jpg'
+import about4 from './../../images/About1/ceist2.png'  //frog.gif'
+import about5 from './../../images/field.png'
+import circuits from './../../images/About1/computing.png'
+import binary from './../../images/About1/computing.png'
+import about6 from './../../images/field.png'
+import passage from './../../images/overworld/passage.png'
+import circleBG from './../../images/ciorcal-glass-bg.png'
 import {
 	CircularInput,
 	CircularTrack,
@@ -28,11 +36,8 @@ export default function Rings2(props) {
 	const stepValue3 = v => Math.round(v * 10) / 10;
 	
 	localStorage.setItem('ring0', value * 10);
-	//	'I feel the smell of a melodious lying Irishman under my sod of country.'
-	//
-	
-	// Ní Eireannaċ binn breugaċ mise,
-// 	// /No melodious lying Irishman am I,
+
+
 	
 // 	“And what is the wages you’ll be looking for?”
 
@@ -42,8 +47,6 @@ export default function Rings2(props) {
 	
 	
 	/*
-	
-	“I’ll bring you away from her side without her knowing it, when you are both asleep together, and I’ll bring you back to her the same way,” said the little man.
 	
 	*/
 	function showHints() { 
@@ -63,7 +66,7 @@ export default function Rings2(props) {
 	let gottenRings0 = 0;
 	let Ring2AnsEng = [
 		
-`The desktop is a metaphor`,`Here is another metaphor:`,`Imagine your computer as a digital island.`,`Beneath the starweb`,`And where are you yourself? (pwd)`,`in a little field called home.`,`What's in the field? (ls)`,
+`desktop, is a useful metaphor`,`Imagine another metaphor`,`Imagine your computer as a digital island.`,`Beneath the starweb`,`And where are you yourself? (pwd)`,`in a little field called home.`,`What's in the field? (ls)`,
 `The UNIX code Kernel was written in 1969, in the USA.),`
 , `
 Unix is protected by copyright, similarly Windows or Apple`, `In 1991 Linus Torvaled, a person, released a kernel of UNIX-like code into the public domain.`, `
@@ -94,13 +97,15 @@ As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Appl
 		
 
 	
-		`Meafar usáideach is é an desktop.`,
-		`Ach tá bealach eile ríomhaire a usáid.`
-	,`Is feidir í a treoirú, le treoir ón treoir líne.`,
-		`Ní gá múrán a rá`,
-		`Cá bhfuil tú? (pwd)`,  `las solas? (ls)`,
-		`(cd) chun dul "isteach" sa chéad "áit" eile`, 
-		`(cd ..) chun dul síar.`,
+		`Meafar usáideach is éa, desktop.`,
+		`Shamhlaigh meafar eile`,
+		`leath-chéim idir an desktop agus`,
+`an treoir líne.`, 
+`Cá bhfuil mé? (pwd) `, //Tá tú i + Poll an Phúca. 
+		`las solas? (ls)`, //taispán an poll, 
+		`(cd) chun dul go `, 
+		`(cd ..) chun dul síar.`, //Cill mheantáin, close about
+		 
 
 	``, 
 	``, 
@@ -135,25 +140,68 @@ Seo JSON:`,
 		console.log("showTheGlass");
 
 	}
+	let isOn = props.isOn;
 	return (
 		<>
 			
 			<div className="input-elements-container2">
-		<img src={lens} id="lens" alt="a glass lens" />
+		<img src={circleBG} id="circleBG" alt="a glass lens" />
+
 			
 		<div className="input-elements-container">
-		
-					<div className="about-pics-container">
-
+				<div className="about-pics-container">
 					<img className={value*10 === 0 ? 'about-pics':'hidden'} src={about1} alt="illustration placeholder" />
-					<img className={value*10 === 3 ? 'about-pics':'hidden'} src={about0} alt="illustration placeholder" />
-					<img className={value*10 === 4 ? 'about-pics':'hidden'} src={about0} alt="illustration placeholder" />
-					<img className={value*10 === 5 ? 'about-pics':'hidden'} src={about0} alt="illustration placeholder" />
-					<img className={value*10 === 6 ? 'about-pics':'hidden'} src={about0} alt="illustration placeholder" />
+					<img className={value*10 === 2 ? 'about-pics':'hidden'} src={about5} id="about3b"alt="illustration placeholder" />
+					<img className={value*10 === 2 ? 'about-pics':'hidden'} src={about2} id="about3b"alt="illustration placeholder" />
+					<img className={value*10 === 3 ? 'about-pics':'hidden'} src={about5}  id="about4" alt="illustration placeholder" />
+					<img className={value*10 === 3 ? 'about-pics':'hidden'} src={about4}  id="about4" alt="illustration placeholder" />
+					<img className={value*10 === 4 ? 'about-pics':'hidden'} src={about6} alt="illustration placeholder" />
 					<img className={value*10 === 7 ? 'about-pics':'hidden'} src={about0} alt="illustration placeholder" />
-					</div>
-			
-				<CircularInput className="dial" value={value}  onChange={v => setValue3(stepValue3(v))}>{}
+				</div>
+				<div className="about-overlay-container">
+					<img className={value*10 === 1 ? 'field':'hidden'} src={field} alt="fields with stone walls." />
+					<img className={value*10 === 3 ? 'passage':'hidden'} src={passage} alt="Serpant dungeon passage enterance" />
+				</div>
+		
+		</div>
+	
+				<div className="input-elements-container3">
+					
+			{/* <button className="button-mash-ring-0" onClick={props.buttonMashClick}></button> */}
+</div>
+			<ReactAudioPlayer src={value*10 === 1 ? spark0: null} autoPlay />
+			{/* <ReactAudioPlayer src={value*10 === 2 ? spark1: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 3 ? spark2: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 4 ? spark3: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 5 ? spark2: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 6 ? spark1: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 7 ? spark4: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 8 ? spark0: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 9 ? spark0: null} autoPlay /> */}
+			</div>			
+
+			<p className='rings1' >{Ring2Ans[value * 10]}</p>
+
+
+<h1>{isOn}</h1>
+{isOn ? <p className="rings0Eng">{Ring2AnsEng[value * 10]}</p> : null}
+{ localStorage.setItem('freagra1', value * 10)
+}
+<button id="ring-glass-btn" onClick={props.toggleIsOn
+}	><img src={isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
+		<div className="lens-container">
+		<button className={value*10 === 4 ? 'easca-code_0':'hidden'}>pwd</button>
+		<button className={value*10 === 5 ? 'easca-code_1':'hidden'}>ls</button>
+		<button className={value*10 === 6 ? 'easca-code_2':'hidden'}>cd</button>
+
+
+<img src={lens} id="lens" alt="a glass lens" />
+
+		</div>
+
+<div className='dial-container'>
+
+<CircularInput className="dial" value={value}  onChange={v => setValue3(stepValue3(v))}>{}
 					<CircularTrack />
 			{/* <img  src={avatar} className={value === 0 ? 'hidden':'avatar' } alt="Caniuse battus tv charactéir" />		 */}
 				
@@ -161,33 +209,7 @@ Seo JSON:`,
 					<CircularThumb />
 				
 			</CircularInput>
-			</div>
-	
-				<div className="input-elements-container3">
-					
-			{/* <button className="button-mash-ring-0" onClick={props.buttonMashClick}></button> */}
 </div>
-			<ReactAudioPlayer src={value*10 === 1 ? spark0: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 2 ? spark1: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 3 ? spark2: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 4 ? spark3: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 5 ? spark2: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 6 ? spark1: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 7 ? spark4: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 8 ? spark0: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 9 ? spark0: null} autoPlay />
-			</div>			
-
-			<p className='rings1' >{Ring2Ans[value * 10]}</p>
-
-
-<h1>{ props.isOn}</h1>
-{props.isOn ? <p className="rings0Eng">{Ring2AnsEng[value * 10]}</p> : null}
-{ localStorage.setItem('freagra1', value * 10)
-}
-<button id="ring-glass-btn" onClick={props.toggleIsOn
-}	><img src={props.isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
-
 
 		</>)
 };

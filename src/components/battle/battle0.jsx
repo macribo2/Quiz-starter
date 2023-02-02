@@ -57,6 +57,10 @@ export default class Battle0 extends React.Component {
 					<div className='battle-lens-container'>
 							<img className="battleLens"src={battleLens } alt="a round frame." />
 					</div>
+					<>
+					<h1> </h1>
+
+					</>
 </div>
 				
 		</>

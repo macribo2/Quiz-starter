@@ -111,7 +111,8 @@ export default class History extends React.Component {
 
     
     render() {
-
+let isOn = this.props.isOn
+let toggleIsOn = this.props.toggleIsOn
 
         return (
             <>
@@ -246,7 +247,7 @@ export default class History extends React.Component {
                                 
                                         <h2 id="story">{storyTexts[this.state.story]}</h2>
 
-                                        <Ring2/>
+                                        <Ring2 isOn= {isOn} toggleIsOn = {toggleIsOn}/>
                                 
                             </div>
                

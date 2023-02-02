@@ -669,7 +669,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 
 			<img id="stars" rel="preload" src={stars} className="question-img" alt="wheeling starfield" />		
 
-			{showSettings ? <SettingsMenu showSettings={showSettings} handleInputSelect={ handleInputSelect} />
+			{showSettings ? <SettingsMenu toggleIsOn ={toggleIsOn} isOn = {isOn}showSettings={showSettings} handleInputSelect={ handleInputSelect} />
 						
 						: null}
 			{showOverworld === true ? <><Overworld storyTimer={storyTimer} incrementScore={incrementScore} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} heroNameEng={ heroNamesEng[localStorage.getItem('portrait')]} />
@@ -728,7 +728,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			
 			{/* <img src={distantFortShadow} className={currentQuestion < 1 ? "index-distant-fort" : "index-distant-fort slow-fade"} alt="distant fort on peninsula " /> */}
 			<div className='field-container'>
-				<img src={hills} rel="preload" className="hill-fields" alt="a rough circle of stones and some fields" />
+				<img src={hills} rel="preload" className="hill-fields" alt="a rough circle of stones where fadó fadó was a moment ago" />
 			
 				
 			<ReactAudioPlayer src={currentQuestion === 9? theme0 : null} autoPlay />
