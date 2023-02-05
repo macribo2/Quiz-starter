@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "c53965f57887c7de3d6c",
-    "url": "/static/css/main.d99a8b53.chunk.css"
+    "revision": "f084ba0fe9cfa974976e",
+    "url": "/static/css/main.42bca1a6.chunk.css"
   },
   {
-    "revision": "c53965f57887c7de3d6c",
-    "url": "/static/js/main.3155a97c.chunk.js"
+    "revision": "f084ba0fe9cfa974976e",
+    "url": "/static/js/main.c8a01490.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "93cda24ab1b35042ce3c",
+    "revision": "667e30b26a95b2e8fc42",
     "url": "/static/css/2.7079e116.chunk.css"
   },
   {
-    "revision": "93cda24ab1b35042ce3c",
-    "url": "/static/js/2.52fe849b.chunk.js"
+    "revision": "667e30b26a95b2e8fc42",
+    "url": "/static/js/2.d332059c.chunk.js"
   },
   {
     "revision": "0f781983a29762c7ba7f9f9765b3daa8",
@@ -44,6 +44,10 @@ self.__precacheManifest = [
     "url": "/static/media/ding1.7b781ef1.wav"
   },
   {
+    "revision": "c9107e2fe2b0893f496a1b86ea20e1b9",
+    "url": "/static/media/big-glass.c9107e2f.png"
+  },
+  {
     "revision": "937375660c0c8e6fd94c83f8e6130b19",
     "url": "/static/media/spéirbhean0.93737566.gif"
   },
@@ -68,16 +72,16 @@ self.__precacheManifest = [
     "url": "/static/media/pooka.ab4d72f9.png"
   },
   {
+    "revision": "fefaccef8a9d6893e3e1ed77e3170cff",
+    "url": "/static/media/field.fefaccef.png"
+  },
+  {
     "revision": "42cd5dea869ad664103bc269192ec366",
     "url": "/static/media/tonnta1.42cd5dea.gif"
   },
   {
     "revision": "3e0965eda50ff68c63e853367abc9302",
     "url": "/static/media/phone-0.3e0965ed.png"
-  },
-  {
-    "revision": "c9107e2fe2b0893f496a1b86ea20e1b9",
-    "url": "/static/media/big-glass.c9107e2f.png"
   },
   {
     "revision": "90c4b60aca9878a58070f16934ef005e",
@@ -92,16 +96,16 @@ self.__precacheManifest = [
     "url": "/static/media/newbg4town.60aa1f39.png"
   },
   {
+    "revision": "c860d557f7a5adc8e547fae0867f88b6",
+    "url": "/static/media/color-square.c860d557.gif"
+  },
+  {
     "revision": "05a45ce980afe0505ba6f7f8459bbcc7",
     "url": "/static/media/aonchlo.05a45ce9.ttf"
   },
   {
     "revision": "b25ad113f1f02825960a31011419dc41",
     "url": "/static/media/shadow-hill.b25ad113.png"
-  },
-  {
-    "revision": "cafa54fa93f0274e4891f7ee9258bbd3",
-    "url": "/static/media/pc.cafa54fa.png"
   },
   {
     "revision": "68e27c7af8c5b6afccc7577ac07e0019",
@@ -122,6 +126,10 @@ self.__precacheManifest = [
   {
     "revision": "c968625bfabe80e554e5d0f197fd2f4e",
     "url": "/static/media/sparkle-d.c968625b.wav"
+  },
+  {
+    "revision": "53840b4e21778337ff5527936fb5f379",
+    "url": "/static/media/computing.53840b4e.png"
   },
   {
     "revision": "cd6443eb8510d7bc794179576732ee43",
@@ -200,6 +208,26 @@ self.__precacheManifest = [
     "url": "/static/media/newbg2.6324fdf1.png"
   },
   {
+    "revision": "cafa54fa93f0274e4891f7ee9258bbd3",
+    "url": "/static/media/pc.cafa54fa.png"
+  },
+  {
+    "revision": "91f6dcb208d34b6683ff9ceb5e2f8d90",
+    "url": "/static/media/you-see.91f6dcb2.gif"
+  },
+  {
+    "revision": "a7134c06e5461b3ba746cb63444f3e37",
+    "url": "/static/media/ceist2.a7134c06.png"
+  },
+  {
+    "revision": "2627dce45f41e2645807a49db32e4025",
+    "url": "/static/media/ciorcal-field.2627dce4.png"
+  },
+  {
+    "revision": "f00de7d9918169a9feeb00e77a9a2f56",
+    "url": "/static/media/ciorcal-glass-bg.f00de7d9.png"
+  },
+  {
     "revision": "86266b1e439f7f33138ebca551e3a107",
     "url": "/static/media/unix.86266b1e.png"
   },
@@ -272,10 +300,6 @@ self.__precacheManifest = [
     "url": "/static/media/newbg2town.68f22ac1.png"
   },
   {
-    "revision": "c860d557f7a5adc8e547fae0867f88b6",
-    "url": "/static/media/color-square.c860d557.gif"
-  },
-  {
     "revision": "e119faecf6fca6b1bb2f01ce6689e645",
     "url": "/static/media/urchlo.e119faec.ttf"
   },
@@ -296,16 +320,12 @@ self.__precacheManifest = [
     "url": "/static/media/INFO56_0.8d8dbdd7.ttf"
   },
   {
-    "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
-    "url": "/static/media/fortuna-glass.4c08d21e.png"
-  },
-  {
-    "revision": "f00de7d9918169a9feeb00e77a9a2f56",
-    "url": "/static/media/ciorcal-glass-bg.f00de7d9.png"
-  },
-  {
     "revision": "ee5004be8978604da5e223282c5bbe51",
     "url": "/static/media/sea.ee5004be.png"
+  },
+  {
+    "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
+    "url": "/static/media/fortuna-glass.4c08d21e.png"
   },
   {
     "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
@@ -340,10 +360,6 @@ self.__precacheManifest = [
     "url": "/static/media/mapFrame2.915b9892.png"
   },
   {
-    "revision": "fefaccef8a9d6893e3e1ed77e3170cff",
-    "url": "/static/media/field.fefaccef.png"
-  },
-  {
     "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
     "url": "/static/media/fortuna-glass-lit.29cb5d03.png"
   },
@@ -364,6 +380,10 @@ self.__precacheManifest = [
     "url": "/static/media/keyboard.5888bc5f.png"
   },
   {
+    "revision": "87c54ae699f7290eaf330a8c0e0e4403",
+    "url": "/static/media/blinding-light.87c54ae6.jpg"
+  },
+  {
     "revision": "e7ccc23511641f268a97641c15f738ef",
     "url": "/static/media/apple-microsoft.e7ccc235.png"
   },
@@ -380,7 +400,7 @@ self.__precacheManifest = [
     "url": "/static/media/pale.04995f21.png"
   },
   {
-    "revision": "dc4897eaaae0a32fe7539b4fa81765f8",
+    "revision": "45ee967ae3ee06ff59c259f87ea87987",
     "url": "/index.html"
   }
 ];
