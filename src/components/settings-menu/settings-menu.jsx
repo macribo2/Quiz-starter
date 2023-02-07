@@ -36,6 +36,8 @@ export default function SettingsMenu(props) {
 	
 		}
 	});
+
+	
 	const [showHistory, setShowHist] = useState(0);
 	let toggleIsOn = props.toggleIsOn
 	let isOn = props.isOn

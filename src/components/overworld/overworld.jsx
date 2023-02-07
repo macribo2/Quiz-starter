@@ -4379,21 +4379,13 @@ storyTimer()
 
                 <div className="countyMap-container">
                 <div className="sea"></div>
-                    <div className="countyMap">
+                           <div className="countyMap">
+                        </div>
                     </div>
-
-                
-                    </div>
-                <div className="map-lens-container">
- 
- 
-               
-
+                    <div className="map-lens-container">
                         <img src={defaultField} alt="green field" id="walkies"/>
                         <img src={empty} alt="green field" id="walkies-overlay"/>
-                 
-
-                    <div className="stage-container" id="kungfu">
+                        <div className="stage-container" id="kungfu">
                     <div id="stage" >
                     </div>
                 </div>

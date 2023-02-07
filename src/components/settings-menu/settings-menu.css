@@ -173,7 +173,7 @@ p {
   align-items: center;
   width: 100%;
   left: 0;
-  top: 0%;
+  bottom: 0%;
   z-index: 9000;
   position: fixed;
 }
@@ -796,7 +796,7 @@ transform: scale(2);
 #iron-key-text{
 	animation: fade-in-ik 24s forwards;
     margin-top: 0%;
-    top: 44%;
+    top: 32%;
     position: fixed;
     z-index: 9000;
     margin-left: 1%;

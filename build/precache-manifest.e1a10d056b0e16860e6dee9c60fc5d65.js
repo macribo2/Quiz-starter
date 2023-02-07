@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "f084ba0fe9cfa974976e",
-    "url": "/static/css/main.42bca1a6.chunk.css"
+    "revision": "bd7d82e99679780bb8cd",
+    "url": "/static/css/main.2e66506a.chunk.css"
   },
   {
-    "revision": "f084ba0fe9cfa974976e",
-    "url": "/static/js/main.c8a01490.chunk.js"
+    "revision": "bd7d82e99679780bb8cd",
+    "url": "/static/js/main.5e04e417.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "667e30b26a95b2e8fc42",
+    "revision": "a1eb83116d3c0e4d1390",
     "url": "/static/css/2.7079e116.chunk.css"
   },
   {
-    "revision": "667e30b26a95b2e8fc42",
-    "url": "/static/js/2.d332059c.chunk.js"
+    "revision": "a1eb83116d3c0e4d1390",
+    "url": "/static/js/2.093c529f.chunk.js"
   },
   {
     "revision": "0f781983a29762c7ba7f9f9765b3daa8",
@@ -90,6 +90,10 @@ self.__precacheManifest = [
   {
     "revision": "d836b973cd74464ed7e0237060cf5bb5",
     "url": "/static/media/river0.d836b973.mp4"
+  },
+  {
+    "revision": "d1f3950116c0c9871aafe195e1f4c823",
+    "url": "/static/media/lord-iron-key.d1f39501.png"
   },
   {
     "revision": "60aa1f399cc0111e8c318ec457c19c87",
@@ -200,10 +204,6 @@ self.__precacheManifest = [
     "url": "/static/media/iron-key.1a2df9c2.wav"
   },
   {
-    "revision": "d1f3950116c0c9871aafe195e1f4c823",
-    "url": "/static/media/lord-iron-key.d1f39501.png"
-  },
-  {
     "revision": "6324fdf1c7a10ce616a9d60e0b6d4e62",
     "url": "/static/media/newbg2.6324fdf1.png"
   },
@@ -222,6 +222,10 @@ self.__precacheManifest = [
   {
     "revision": "2627dce45f41e2645807a49db32e4025",
     "url": "/static/media/ciorcal-field.2627dce4.png"
+  },
+  {
+    "revision": "a42b20f5cd824a265aae13b7b2898e4d",
+    "url": "/static/media/passage.a42b20f5.png"
   },
   {
     "revision": "f00de7d9918169a9feeb00e77a9a2f56",
@@ -320,20 +324,20 @@ self.__precacheManifest = [
     "url": "/static/media/INFO56_0.8d8dbdd7.ttf"
   },
   {
-    "revision": "ee5004be8978604da5e223282c5bbe51",
-    "url": "/static/media/sea.ee5004be.png"
-  },
-  {
     "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
     "url": "/static/media/fortuna-glass.4c08d21e.png"
   },
   {
-    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
-    "url": "/static/media/mapFrame4.0cdb344e.png"
+    "revision": "ee5004be8978604da5e223282c5bbe51",
+    "url": "/static/media/sea.ee5004be.png"
   },
   {
     "revision": "c84c06495852ac730bd653c3aa9bff25",
     "url": "/static/media/wren-code0.c84c0649.png"
+  },
+  {
+    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
+    "url": "/static/media/mapFrame4.0cdb344e.png"
   },
   {
     "revision": "4159e8fdaa220a7666d4e619a3429f80",
@@ -352,12 +356,12 @@ self.__precacheManifest = [
     "url": "/static/media/suile0.b67d2f1b.gif"
   },
   {
-    "revision": "9bbe18cf6d054928f146dafcf058fcb1",
-    "url": "/static/media/suile3.9bbe18cf.gif"
-  },
-  {
     "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
     "url": "/static/media/mapFrame2.915b9892.png"
+  },
+  {
+    "revision": "9bbe18cf6d054928f146dafcf058fcb1",
+    "url": "/static/media/suile3.9bbe18cf.gif"
   },
   {
     "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
@@ -400,7 +404,7 @@ self.__precacheManifest = [
     "url": "/static/media/pale.04995f21.png"
   },
   {
-    "revision": "45ee967ae3ee06ff59c259f87ea87987",
+    "revision": "81653c62af2f1f52da3a93bccef382a4",
     "url": "/index.html"
   }
 ];
