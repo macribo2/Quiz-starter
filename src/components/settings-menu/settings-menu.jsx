@@ -129,7 +129,7 @@ export default function SettingsMenu(props) {
 			<button className="menu"
 			onClick={() => props.handleInputSelect('gamepad')}
 			>begin</button>
-			{showHistory === true ? <History isOn={isOn} toggleIsOn={toggleIsOn} />:null}
+			{showHistory === true ? <History isOn={isOn} toggleIsOn={toggleIsOn} handleInputSelect={ props.handleInputSelect} />:null}
 </div>
 		</>	
 		

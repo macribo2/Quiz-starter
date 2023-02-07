@@ -99,11 +99,11 @@ As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Appl
 		`The desktop is a useful metaphor`, 
 		`Imagine a metaphor even more versatile`, 
 		`A half-step between a desktop,`,
-		 `and an island.`,		
-		`for Gaelic self-expression, is iron-key in development.`,
+		 `and island.`,		
+		`for Gaelic expression is iron-key in development.`,
 		`All are welcome.`,
 		
-		`In the Otherworld, a princess is disturbed by a vision`, `A closed door. An Iron Lord`,
+		`In the Otherworld, a princess is disturbed by a vision`, `A closed door. An Iron Lord.`,
 			`planning conquest.`, `She summons her champion...`,
 		 ``, ``,
 	]
@@ -120,7 +120,7 @@ As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Appl
 		`I gcomhair cuir in iúl Gaelach a bhfuil iron-key á forbairt.`,
 		 `Tá fáilte roimh chách.`,
 	`I dTír na nÓg, tá tromluí ar ban prionsa...`,
-'Doras dúnta. Tíarna íarann',	
+'Doras dúnta. Tíarna íarann.',	
  	'ag ulmhú conchas.',
 		`Lorgíonn sí cabhair...`,
 ``,
@@ -159,6 +159,11 @@ As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Appl
 		console.log("showTheGlass");
 
 	}
+
+	function openHeroSelect() { 
+		alert();
+
+	}
 	let isOn = props.isOn;
 	return (
 		<>
@@ -182,7 +187,7 @@ As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Appl
 					<img className={value*10 === 1 ? 'field':'hidden'} src={fieldCircle} alt="fields with stone walls." />
 					<img className={value*10 === 7 ? 'passage':'hidden'} src={passage} alt="Serpant dungeon passage enterance" />
 
-					<img className={value*10 === 8 ? 'about-pics':'hidden'} src={ironkey} id="about3b"alt="illustration placeholder" />
+					<img className={value*10 === 8 ? 'about-pics':'hidden'} src={ironkey} id="iron-key-linux"alt="illustration placeholder" />
 						
 				</div>
 		
@@ -240,7 +245,7 @@ As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Appl
 			</CircularInput>
 </div>
 			<div className="button-mash-container">
-<button className={value * 10 === 9 ? 'button-mash-ring-0' : 'hidden'} >
+				<button className={value * 10 === 9 ? 'button-mash-ring-0' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} >
 				
 						<img className={value * 10 === 9 ? 'wisp' : 'hidden'}src={wisp} alt="A dancing light that can lead people astray" />
 	

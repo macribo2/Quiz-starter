@@ -247,7 +247,7 @@ let toggleIsOn = this.props.toggleIsOn
                                 
                                         <h2 id="story">{storyTexts[this.state.story]}</h2>
 
-                    <Ring2 isOn={isOn} toggleIsOn = {toggleIsOn}/>
+                    <Ring2 handleInputSelect={ this.props.handleInputSelect}isOn={isOn} toggleIsOn = {toggleIsOn}/>
                                 
                             </div>
                
