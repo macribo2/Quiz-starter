@@ -160,6 +160,11 @@ z-index:100;
 animation: linux-land 5s steps(15) 1s forwards;
   /* border:4px solid orange; */
 }
+#linux-land-down{
+  animation: linux-land-down 5s steps(15) 1s forwards;
+
+
+}
 
 #about2{
   /* border:4px solid blue; */
@@ -227,11 +232,14 @@ transform:scale(1.2)
 z-index: 101;
 }
 #iron-key-linux{
-  animation: advance2 15s steps(15) 5s infinite;
+  animation: advance2 15s steps(15)  infinite;
 }
 @keyframes advance2{
   0%{ transform: scale(0.8);
   opacity: 1;}
+  90%{ transform: scale(1.2);
+  opacity: 0;}
+  
   100%{ transform: scale(1.3);
   opacity: 0;}
 }
@@ -242,7 +250,21 @@ z-index: 101;
   }
   
   100% {
-    margin-top:80%;
+    margin-top:60%;
+
+  }
+ }
+ @keyframes linux-land-down {
+  0% {
+    margin-top:0%;
+    opacity:1;
+  }
+ 
+ 
+  100% {
+    opacity:0;
+
+    margin-top:-120%;
 
   }
  }

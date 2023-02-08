@@ -776,10 +776,10 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			{currentQuestion === 9? < Silken currentQuestion={currentQuestion} /> : null}
 			{currentQuestion === 10 ? < Silken currentQuestion={currentQuestion} /> : null}
 			
-		
+		  
 			
 
-			{currentQuestion === 6 ? < Rings0 toggleIsOn={toggleIsOn} isOn={ isOn} isFadedOut={ isFadedOut}  buttonMashClick={buttonMash2Click} /> : null}
+			{/* {currentQuestion === 6 ? < Rings0 toggleIsOn={toggleIsOn} isOn={ isOn} isFadedOut={ isFadedOut}  buttonMashClick={buttonMash2Click} /> : null} */}
 
 			{/* <button id="toggle-settings-btn" onClick={setSettings}	><img src={blank} id="blank" alt="transparent square" /></button> */}
 

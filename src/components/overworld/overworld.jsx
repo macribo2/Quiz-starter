@@ -179,7 +179,7 @@ export default class Overworld extends React.Component {
         this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
     }
     jQueryCode = () => {
-        
+     
 //        For a simple timer or clock, keep track of the time difference explicitly:
         
         var start = Date.now();
@@ -4057,7 +4057,7 @@ alert("Chun troid!" )
             // alert('anocht!')
             
             $(".question-text").html('Ar aire!')
-            $("#locEng").html('en garde!')
+            $("#locEng").html('en garde! *rotate device!')
             $("#locEng").fadeIn();
             
             // $('#puck').fadeIn();
@@ -4440,7 +4440,7 @@ storyTimer()
                 </div>) : null}
                 <Silken id="silken"></Silken>
                 <h2 id="output2"> "{ heroName}!"</h2>
-            <Rings1/>
+            {/* <Rings1/> */}
 
             <BtnB id="b-btn" ></BtnB>
 

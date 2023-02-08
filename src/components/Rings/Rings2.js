@@ -187,7 +187,7 @@ As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Appl
 					<img className={value*10 === 1 ? 'field':'hidden'} src={fieldCircle} alt="fields with stone walls." />
 					<img className={value*10 === 7 ? 'passage':'hidden'} src={passage} alt="Serpant dungeon passage enterance" />
 
-					<img className={value*10 === 8 ? 'about-pics':'hidden'} src={ironkey} id="iron-key-linux"alt="illustration placeholder" />
+					<img className={value*10 === 8 ? 'about-pics':'hidden'} src={ironkey} id="iron-key-linux"alt="A figure entirely clad in armour." />
 						
 				</div>
 		
@@ -195,13 +195,19 @@ As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Appl
 	
 				<div className="linux-land-container">
 
+					<img className={value*10 === 5 ? 'about-pics':'hidden'} src={linucsLand}  id="linux-land-down" alt="illustration placeholder" />
 					<img className={value*10 === 4 ? 'about-pics':'hidden'} src={linucsLand}  id="linux-land" alt="illustration placeholder" />
 				</div>
 				<div className={value * 10 === 4 ? "linux-lens-container" : "hidden"}>
 					<img rel="preload" className={value * 10 === 4 ? "map-lens" : "hidden"} src={lensBG} alt="" />
-                    
+					
 				</div>
+				<div className={value * 10 === 5 ? "linux-lens-container" : "hidden"}>
 				
+
+				<img rel="preload" className={value * 10 === 5 ? "map-lens" : "hidden"} src={lensBG} alt="" />
+				</div>
+                    
 			<ReactAudioPlayer src={value*10 === 1 ? spark0: null} autoPlay />
 			{/* <ReactAudioPlayer src={value*10 === 2 ? spark1: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 3 ? spark2: null} autoPlay />
