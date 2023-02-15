@@ -3,7 +3,7 @@
 				
 					let Ring3AnsEng = [
 `The desktop is a useful metaphor`, 
-`Imagine a metaphor even more versatile`, 
+`Imagine a metaphor more versatile`, 
 `A half-step between a desktop,`,
  `and an island.`,		
 `Iron-key.online is structured for Gaelic self-expression.`,

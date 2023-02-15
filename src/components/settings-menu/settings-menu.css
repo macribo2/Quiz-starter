@@ -430,7 +430,7 @@ position:fixed;
   color: rgb(45, 160, 30);
   z-index: 1000;
   font-family: Helvetica, Arial, sans-serif;
-  top: 14%;
+  top: 50%;
   display: block;
   font-size: 1.8em;
   width: 100%;
@@ -849,8 +849,8 @@ justify-content: center;
 animation: bounce 2s 15 steps(3);  
   }
 	.iron-key-portrait{
-    /* left: 28%; */
-    /* margin-top:45%;  */
+    left: 28%;
+    margin-top:45%; 
     margin-top:47%;
     animation: advance 30s forwards steps(15),
     fade-in-ik 26s forwards ease-in;

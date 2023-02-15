@@ -1163,9 +1163,6 @@ font-size: 1.8em;
   /* background-image: url('../../img/geaga/canopy1.png'); */
 }
 
-.passage {
-
-
   .geaga {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -1184,7 +1181,7 @@ font-size: 1.8em;
     background-position: center;
     display: grid;
 
-  }
+
 }
 
 
@@ -1192,7 +1189,7 @@ font-size: 1.8em;
 
 
   color: forestgreen;
-  top: 10%;
+  bottom: 10%;
   left: 7%;
   font-size: 1.4em;
   

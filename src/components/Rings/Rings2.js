@@ -12,13 +12,15 @@ import spark1 from '../../audio/ding1.wav';
 import spark2 from '../../audio/ding2.wav';
 import spark3 from '../../audio/ding0.wav';
 import spark4 from '../../audio/ding2.wav';
-import about0 from './../../images/About1/0.png'
-import about1 from './../../images/About1/pc.png'
+import banba from './../../images/About1/ceist2.png'
+import about0 from './../../images/About1/adaptive-icon.png'
+import about1 from './../../images/About1/fi.png'
 import about2 from './../../images/you-see.gif'
 import wisp from './../../images/color-square.gif'
 import about3 from './../../images/blinding-light.jpg'
 import about4 from './../../images/About1/ceist2.png'  //frog.gif'
-import about5 from './../../images/field.png'
+import about5 from './../../images/About1/Daniel-Maclise.png'
+import about9 from './../../images/About1/computing.png'
 import circuits from './../../images/About1/computing.png'
 import binary from './../../images/About1/computing.png'
 import about6 from './../../images/field.png'
@@ -96,16 +98,16 @@ As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Appl
 
 	]
 	let Ring2AnsEng = [
-		`The desktop is a useful metaphor`, 
-		`Imagine a metaphor even more versatile`, 
-		`A half-step between a desktop,`,
-		 `and island.`,		
-		`for Gaelic expression is iron-key in development.`,
-		`All are welcome.`,
+		`What is this about?`, 
+		`Use Irish, to play a game.`, 
+		`That is, Iron-key.`,
+		 `More to follow.`,		
+		`Choose a player and create a legend. `,
+		`Easy Peasy.`,
 		
-		`In the Otherworld, a princess is disturbed by a vision`, `A closed door. An Iron Lord.`,
-			`planning conquest.`, `She summons her champion...`,
-		 ``, ``,
+		`That you may succeed...`,
+		`There is a heavy door in PollyPucka`,
+		 ``, ``, ``,
 	]
 
 
@@ -113,17 +115,20 @@ As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Appl
 	
 		]
 	let Ring2Ans = [
-		`Meafar usáideach is éa, desktop.`,
-		`Shamhlaigh meafar nios ilfheidhmeach`,
-		`leath-chéim idir desktop,`,
-		`agus oileán.`, 
-		`I gcomhair cuir in iúl Gaelach a bhfuil iron-key á forbairt.`,
-		 `Tá fáilte roimh chách.`,
-	`I dTír na nÓg, tá tromluí ar ban prionsa...`,
-'Doras dúnta. Tíarna íarann.',	
- 	'ag ulmhú conchas.',
-		`Lorgíonn sí cabhair...`,
-``,
+		`Cad faoi atá sé seo?`,
+		`Usáid an Gaeilge, chun cluiche a imirt.`,
+		`Sin é, iron-key.`,
+		`Beidh tuilleadh ar ball.`,	
+		'Roghnaigh imreoir agus cruthaigh finnsceal.',	
+		`Éasca péasca.`, 
+ 
+		`Go néirigh leat... `,
+		`Tá doras trom i Poll an Púca...`,
+
+		``,
+		``,
+		``,
+
 	
 			// `T .`
 
@@ -172,22 +177,37 @@ As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Appl
 		<img src={circleBG} id="circleBG" alt="a glass lens" />
 
 			
-		<div className="input-elements-container">
+		<div className="input-elements-container3">
+				
+				<img className={value * 10 === 2 ? 'about-pics' : 'hidden'} src={about5} id="about3c" alt="illustration placeholder" />
+			</div>
+
+				<div className="input-elements-container">
+					
 				<div className="about-pics-container">
-					<img className={value*10 === 0 ? 'about-pics':'hidden'} src={about1} alt="illustration placeholder" />
-					<img className={value*10 === 2 ? 'about-pics':'hidden'} src={about5} id="about3b"alt="illustration placeholder" />
-					<img className={value*10 === 2 ? 'about-pics':'hidden'} src={about2} id="about3b"alt="illustration placeholder" />
-						<img className={value * 10 === 3 ? 'about-pics' : 'hidden'} src={about5} id="about4" alt="illustration placeholder" />
+					<img className={value*10 === 0 ? 'about-pics':'hidden'} src={about1} alt="desktop folder and cursor" />
+					<img className={value*10 === 1 ? 'about-pics':'hidden'} src={about1} alt="desktop folder and cursor" />
+						
+						<img className={value * 10 === 2 ? 'about-pics' : 'hidden'} src={fieldCircle} id="about3b" alt="illustration placeholder" />
+						
+					
+						
+						
+					{/* <img className={value*10 === 2 ? 'about-pics':'hidden'} src={about5} id="about3b"alt="illustration placeholder" /> */}
+			
+						<img className={value * 10 === 3 ? 'about-pics' : 'hidden'} src={about9} id="about4" alt="illustration placeholder" />
 						
 					<img className={value*10 === 7 ? 'about-pics':'hidden'} src={about4}  id="about4" alt="illustration placeholder" />
 					<img className={value*10 === 4 ? 'about-pics':'hidden'} src={about6} alt="illustration placeholder" />
 					<img className={value*10 === 7 ? 'about-pics':'hidden'} src={about0} alt="illustration placeholder" />
 				</div>
 				<div className="about-overlay-container">
-					<img className={value*10 === 1 ? 'field':'hidden'} src={fieldCircle} alt="fields with stone walls." />
-					<img className={value*10 === 7 ? 'passage':'hidden'} src={passage} alt="Serpant dungeon passage enterance" />
+			
 
-					<img className={value*10 === 8 ? 'about-pics':'hidden'} src={ironkey} id="iron-key-linux"alt="A figure entirely clad in armour." />
+						<img className={value * 10 === 7 ? 'passage' : 'hidden'} src={passage} alt="Serpant dungeon passage enterance" />
+
+
+						<img className={value * 10 === 8 ? 'about-pics' : 'hidden'} src={ironkey} id="iron-key-linux" alt="A figure entirely clad in armour." />
 						
 				</div>
 		
@@ -203,9 +223,11 @@ As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Appl
 					
 				</div>
 				<div className={value * 10 === 5 ? "linux-lens-container" : "hidden"}>
-				
-
 				<img rel="preload" className={value * 10 === 5 ? "map-lens" : "hidden"} src={lensBG} alt="" />
+				</div>
+
+                <div className={value * 10 === 6 ? "linux-lens-container-fade" : "hidden"}>
+				<img rel="preload" className={value * 10 === 6 ? "map-lens" : "hidden"} src={lensBG} alt="" />
 				</div>
                     
 			<ReactAudioPlayer src={value*10 === 1 ? spark0: null} autoPlay />
@@ -258,9 +280,16 @@ As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Appl
 				</button>
 
 	</div>
+			<div className="input-elements-container2">
 						
+					<img className={value*10 === 6 ? 'banba':'hidden'} src={banba} alt="a digital peninsula" />
+					<img className={value*10 === 1 ? 'banba':'hidden'} src={fieldCircle} alt="fields with stone walls." />
 
-		</>)
+			</div>
+
+		
+	
+			</>)
 };
 
 

@@ -14,7 +14,7 @@ import settingsBtnKeyboard from '../../images/settings/keyboard.png';
 import distantHills from '../../images/newbg4town.png';
 import blurryBG from '../../images/newbg2.png';
 import History from '../history/history'
-
+import Chess from '../chess/chess'
 let lyricID = 0;
 
 export default function SettingsMenu(props) {
@@ -130,7 +130,7 @@ export default function SettingsMenu(props) {
 			onClick={() => props.handleInputSelect('gamepad')}
 			>begin</button>
 			{showHistory === true ? <History isOn={isOn} toggleIsOn={toggleIsOn} handleInputSelect={ props.handleInputSelect} />:null}
-</div>
+		</div>
 		</>	
 		
 

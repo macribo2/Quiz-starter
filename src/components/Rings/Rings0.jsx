@@ -26,16 +26,9 @@ export default function Rings0(props) {
 	const stepValue3 = v => Math.round(v * 10) / 10;
 	
 	localStorage.setItem('ring0', value * 10);
-	//	'I feel the smell of a melodious lying Irishman under my sod of country.'
-	//
-	
-	// Ní Eireannaċ binn breugaċ mise,
-// 	// /No melodious lying Irishman am I,
 	
 // 	“And what is the wages you’ll be looking for?”
-
 // “The place of a house and garden.”
-
 // “You’ll get that if my journey succeeds with me.”
 	
 	

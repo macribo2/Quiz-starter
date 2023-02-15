@@ -16,7 +16,7 @@ import avatar5 from '../../images/players/rógaire0.png'
 import avatar6 from '../../images/players/diamhraí0.gif';
 import avatar7 from '../../images/players/seanchaí0.png';
 import avatar8 from '../../images/players/pooka.png';
-import avatar9 from '../../images/stone-soup/poet.png';
+import avatar9 from '../../images/players/poet.png';
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
 import Rings0 from '../../components/Rings/Rings0'
@@ -58,7 +58,7 @@ import GamePad from '../../components/game-pad/game-pad.jsx';
 import AandB from '../../components/silken/silken.jsx';
 import distantTown from '../../images/newbg2town.png';
 
-import rave from '../../images/color-square.gif'
+import wisp from '../../images/color-square.gif'
 window.scrollTo(0, 1);
 
 
@@ -669,7 +669,10 @@ let thePucaOf = localStorage.getItem('pucaEng')
 
 			<img id="stars" rel="preload" src={stars} className="question-img" alt="wheeling starfield" />		
 
-			{showSettings ? <SettingsMenu toggleIsOn ={toggleIsOn} isOn = {isOn}showSettings={showSettings} handleInputSelect={ handleInputSelect} />
+				
+			{showSettings ? <SettingsMenu 
+				incrementScore={incrementScore} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} heroNameEng={ heroNamesEng[localStorage.getItem('portrait')]}
+				toggleIsOn={toggleIsOn}  showSettings={showSettings} handleInputSelect={handleInputSelect} />
 						
 						: null}
 			{showOverworld === true ? <><Overworld storyTimer={storyTimer} incrementScore={incrementScore} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} heroNameEng={ heroNamesEng[localStorage.getItem('portrait')]} />
@@ -779,7 +782,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 		  
 			
 
-			{/* {currentQuestion === 6 ? < Rings0 toggleIsOn={toggleIsOn} isOn={ isOn} isFadedOut={ isFadedOut}  buttonMashClick={buttonMash2Click} /> : null} */}
+			{currentQuestion === 6 ? < Rings0 toggleIsOn={toggleIsOn} isOn={ isOn} isFadedOut={ isFadedOut}  buttonMashClick={buttonMash2Click} /> : null}
 
 			{/* <button id="toggle-settings-btn" onClick={setSettings}	><img src={blank} id="blank" alt="transparent square" /></button> */}
 
@@ -806,11 +809,12 @@ let thePucaOf = localStorage.getItem('pucaEng')
 		
 				</div>) : null}
 			
-			<div id="holder" className="avatar-holder" >
-					<img src={avatar1} className={value * 10 === 1 ? 'avatar' : 'hidden'} id={currentQuestion ===8? "leap-me":null } alt="a of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null} />		
-			
-			<img rel="preload" src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } id={currentQuestion ===10? "leap-me":null } alt="a  an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>		
-			<img rel="preload" rel="preload" src={avatar3} id={currentQuestion ===10? "leap-me":null } className={value * 10 === 3 ? 'avatar' : 'hidden'} alt="a of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
+				<div id="holder" className="avatar-holder" >
+					
+						
+			<img rel="preload" src={avatar1} className={value*10 === 1 ? 'avatar':'hidden' } id={currentQuestion ===10? "avatar":null } alt="a  an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>		
+			<img rel="preload" src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } id={currentQuestion ===10? "avatar":null } alt="a  an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>		
+			<img rel="preload" src={avatar3} id={currentQuestion ===10? "leap-me":null } className={value * 10 === 3 ? 'avatar' : 'hidden'} alt="a of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
 			<img rel="preload" src={avatar4}id={currentQuestion ===10? "leap-me":null } className={value *10=== 4 ? 'avatar':'hidden' } alt="a  of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
 			<img rel="preload" src={avatar5}id={currentQuestion ===10? "leap-me":null } className={value *10=== 5 ? 'avatar':'hidden' } alt="a of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
 			<img rel="preload" src={avatar6}id={currentQuestion ===10? "leap-me":null } className={value *10=== 6 ? 'avatar':'hidden' } alt="a of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>
@@ -834,9 +838,9 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			
 			
 			
-			<img src={avatar1} rel="preload"className={gotten === 1 ? 'avatar-land' : 'hidden'} alt="an avatar" />		
 			
 			<div className={ currentQuestion ===2? "avatar":"faded-out"} >
+			<img src={avatar1} rel="preload"className={gotten === 1 ? 'avatar-land' : 'hidden'} alt="an avatar" />		
 			
 			<img rel="preload" src={avatar2} className={gotten === 2 ? 'avatar-land':'hidden' } alt="the selected character " />		
 			<img rel="preload"src={avatar3} className={gotten === 3 ? 'avatar-land' : 'hidden'} alt="the selected character " />
@@ -858,7 +862,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 				{currentQuestion === 5 ? dirpadHandler(): null}
 
 			{currentQuestion === 6? <img rel="preload"src={dirpad} onClick={ dirpadHandler} className="dirpad"alt="" />:null}
-			{currentQuestion === 9 ? <img rel="preload"src={rave} className="rave" alt="flashing lights in the castle window." /> : null}
+			{currentQuestion === 9 ? <img rel="preload"src={wisp} className="rave" alt="flashing lights in the castle window." /> : null}
 			
 			<div className='stones-container'>
 			
