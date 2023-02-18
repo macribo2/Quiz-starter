@@ -4390,7 +4390,7 @@ storyTimer()
                     </div>
                 </div>
 
-                    {/* {this.state.showEascaLocation ? <EascaLocation whereAmI= "geaga" />:null} */}
+                    {this.state.showEascaLocation ? <EascaLocation whereAmI= "geaga" />:null}
 
  
                     <img rel="preload" className="map-lens" src={lens} alt="" />

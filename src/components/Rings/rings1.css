@@ -95,6 +95,7 @@
   font-family: Arial, Helvetica, sans-serif;
 
 }
+.linux-lens-container-fade-in,
 .linux-lens-container-fade,
 .linux-lens-container,
 .linux-land-container,
@@ -102,7 +103,9 @@
 .about-overlay-container,
 .dial-container,
 .lens-container,
+.input-elements-container0,
 .input-elements-container2,
+.input-elements-container4,
 .input-elements-container3 {
   z-index: 99;
   position: fixed;
@@ -115,8 +118,22 @@
   align-items:center;
 
 }
+.input-elements-container{
+z-index: 3;
+
+ 
+}
+.dial-container{
+z-index: 888;
+
+}
+
 .linux-lens-container-fade{
   animation: fade-out 2s linear forwards;
+}
+.linux-lens-container-fade-in{
+  animation: fade-in 2s linear forwards;
+
 }
 .linux-lens-container{
  z-index: 999;
@@ -129,11 +146,7 @@
   z-index: 999;
   transform: scale(0.5);
  }
-.dial-container{
-z-index:100;
 
-
-}
 .button-mash-container{
   z-index: 102;
   pointer-events: none;

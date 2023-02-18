@@ -953,7 +953,7 @@ width: 100%;
 .dial {
   -webkit-animation: fade-in-dial 3s forwards;
           animation: fade-in-dial 3s forwards;
-  z-index: 126;
+  z-index: 800;
   height: 220px;
   width: 220px;
   /* position: relative; */
