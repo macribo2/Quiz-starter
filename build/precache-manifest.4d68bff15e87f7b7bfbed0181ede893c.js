@@ -1,55 +1,59 @@
 self.__precacheManifest = [
   {
-    "revision": "ba94e732b242ff6941c9",
-    "url": "/static/css/main.9db76b34.chunk.css"
+    "revision": "c522be8b93aca4a45c7d",
+    "url": "/static/css/main.8ce7a8ad.chunk.css"
   },
   {
-    "revision": "ba94e732b242ff6941c9",
-    "url": "/static/js/main.fec06fff.chunk.js"
+    "revision": "c522be8b93aca4a45c7d",
+    "url": "/static/js/main.72a6ca97.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "5868e71e161face16d45",
+    "revision": "ad423808454a55ea6172",
     "url": "/static/css/2.7079e116.chunk.css"
   },
   {
-    "revision": "5868e71e161face16d45",
-    "url": "/static/js/2.95932c12.chunk.js"
+    "revision": "ad423808454a55ea6172",
+    "url": "/static/js/2.246a95d6.chunk.js"
   },
   {
     "revision": "0f781983a29762c7ba7f9f9765b3daa8",
     "url": "/static/media/ding0.0f781983.wav"
   },
   {
-    "revision": "f0b2dbe94f318b5b426d26c1fd4105ff",
-    "url": "/static/media/ding2.f0b2dbe9.wav"
-  },
-  {
     "revision": "32847a0cf8dccc0f6821229383bbec0f",
     "url": "/static/media/stars.32847a0c.gif"
   },
   {
-    "revision": "8f8a8b98c655870f6b0502069cc630bc",
-    "url": "/static/media/171697__nenadsimic__menu-selection-click.8f8a8b98.wav"
+    "revision": "f0b2dbe94f318b5b426d26c1fd4105ff",
+    "url": "/static/media/ding2.f0b2dbe9.wav"
   },
   {
     "revision": "4c998e7444dd7492d1cab2fc0336adce",
     "url": "/static/media/ciorcal-glass.4c998e74.png"
   },
   {
-    "revision": "7b781ef10b1f8aa13d878d1931b273fe",
-    "url": "/static/media/ding1.7b781ef1.wav"
-  },
-  {
-    "revision": "c9107e2fe2b0893f496a1b86ea20e1b9",
-    "url": "/static/media/big-glass.c9107e2f.png"
+    "revision": "8f8a8b98c655870f6b0502069cc630bc",
+    "url": "/static/media/171697__nenadsimic__menu-selection-click.8f8a8b98.wav"
   },
   {
     "revision": "bc13bf3846af2f634bb1750c0e1222bb",
     "url": "/static/media/ciorcal-glass2.bc13bf38.png"
+  },
+  {
+    "revision": "7badc33ea294defc42de8c92c1a83ed6",
+    "url": "/static/media/ceist2.7badc33e.png"
+  },
+  {
+    "revision": "c860d557f7a5adc8e547fae0867f88b6",
+    "url": "/static/media/color-square.c860d557.gif"
+  },
+  {
+    "revision": "c9107e2fe2b0893f496a1b86ea20e1b9",
+    "url": "/static/media/big-glass.c9107e2f.png"
   },
   {
     "revision": "937375660c0c8e6fd94c83f8e6130b19",
@@ -62,6 +66,10 @@ self.__precacheManifest = [
   {
     "revision": "f86401116e22234bed1999521b37a26b",
     "url": "/static/media/rainy-hill1.f8640111.png"
+  },
+  {
+    "revision": "7b781ef10b1f8aa13d878d1931b273fe",
+    "url": "/static/media/ding1.7b781ef1.wav"
   },
   {
     "revision": "1e84bd359e1a150f5bffc41cb114e936",
@@ -92,14 +100,6 @@ self.__precacheManifest = [
     "url": "/static/media/newbg4town.60aa1f39.png"
   },
   {
-    "revision": "7badc33ea294defc42de8c92c1a83ed6",
-    "url": "/static/media/ceist2.7badc33e.png"
-  },
-  {
-    "revision": "c860d557f7a5adc8e547fae0867f88b6",
-    "url": "/static/media/color-square.c860d557.gif"
-  },
-  {
     "revision": "05a45ce980afe0505ba6f7f8459bbcc7",
     "url": "/static/media/aonchlo.05a45ce9.ttf"
   },
@@ -110,6 +110,10 @@ self.__precacheManifest = [
   {
     "revision": "53840b4e21778337ff5527936fb5f379",
     "url": "/static/media/computing.53840b4e.png"
+  },
+  {
+    "revision": "837ece981e981876d923234b852b5fc5",
+    "url": "/static/media/blackripple.837ece98.gif"
   },
   {
     "revision": "e3559141ae0477516726c63c361b1987",
@@ -124,20 +128,12 @@ self.__precacheManifest = [
     "url": "/static/media/inv-bg.93615cd7.png"
   },
   {
-    "revision": "18f5a9b798081bd8b4d8014b4c793a88",
-    "url": "/static/media/background_image.18f5a9b7.png"
+    "revision": "b5a987d31838ae08f694e1d208468bca",
+    "url": "/static/media/lasta.b5a987d3.png"
   },
   {
-    "revision": "a0f56fc4653b94ca7184673fb926b731",
-    "url": "/static/media/sparkle-b.a0f56fc4.wav"
-  },
-  {
-    "revision": "ee3367bb3892c0c9302dd78b035ba503",
-    "url": "/static/media/sparkle-c.ee3367bb.wav"
-  },
-  {
-    "revision": "c968625bfabe80e554e5d0f197fd2f4e",
-    "url": "/static/media/sparkle-d.c968625b.wav"
+    "revision": "d97f51ee6a3025b973f65002faf27fe3",
+    "url": "/static/media/background_image.d97f51ee.png"
   },
   {
     "revision": "cd6443eb8510d7bc794179576732ee43",
@@ -154,10 +150,6 @@ self.__precacheManifest = [
   {
     "revision": "44990c0b13de17f54dc57b08dea70181",
     "url": "/static/media/collinstown.44990c0b.png"
-  },
-  {
-    "revision": "837ece981e981876d923234b852b5fc5",
-    "url": "/static/media/blackripple.837ece98.gif"
   },
   {
     "revision": "0c95b2a3522de503e40584d46273b2db",
@@ -216,32 +208,12 @@ self.__precacheManifest = [
     "url": "/static/media/lord-iron-key2.d1ff1df9.png"
   },
   {
-    "revision": "42310c552c9786c6e4dafefae7aa121a",
-    "url": "/static/media/adaptive-icon.42310c55.png"
-  },
-  {
     "revision": "68be1a97791cdc8bf7fd02fb5708433b",
     "url": "/static/media/ceist3.68be1a97.png"
   },
   {
-    "revision": "71a6d65188bb9fc6034d537f35385f70",
-    "url": "/static/media/fi.71a6d651.png"
-  },
-  {
-    "revision": "b5a987d31838ae08f694e1d208468bca",
-    "url": "/static/media/lasta.b5a987d3.png"
-  },
-  {
     "revision": "fefaccef8a9d6893e3e1ed77e3170cff",
     "url": "/static/media/field.fefaccef.png"
-  },
-  {
-    "revision": "deb64aa64afcf77da2a7d7ff19e14b59",
-    "url": "/static/media/passage.deb64aa6.png"
-  },
-  {
-    "revision": "f00de7d9918169a9feeb00e77a9a2f56",
-    "url": "/static/media/ciorcal-glass-bg.f00de7d9.png"
   },
   {
     "revision": "86266b1e439f7f33138ebca551e3a107",
@@ -292,16 +264,8 @@ self.__precacheManifest = [
     "url": "/static/media/gradient2.53c3f79c.png"
   },
   {
-    "revision": "af1b8e54b63ec64cba11d401480f5ba4",
-    "url": "/static/media/sparkle-e.af1b8e54.wav"
-  },
-  {
     "revision": "22451eb8c536faf4ec0b64c4120c7bc3",
     "url": "/static/media/stones1.22451eb8.png"
-  },
-  {
-    "revision": "276a05fd93f281604295abcfd59eeffd",
-    "url": "/static/media/tinkle.276a05fd.wav"
   },
   {
     "revision": "6651d0913af95cdc7e411fa7ea663f08",
@@ -324,6 +288,10 @@ self.__precacheManifest = [
     "url": "/static/media/deetsFrame.076f3bff.png"
   },
   {
+    "revision": "deb64aa64afcf77da2a7d7ff19e14b59",
+    "url": "/static/media/passage.deb64aa6.png"
+  },
+  {
     "revision": "e489ff862837973ba8874fb98b06ef64",
     "url": "/static/media/tonnta2.e489ff86.gif"
   },
@@ -332,16 +300,16 @@ self.__precacheManifest = [
     "url": "/static/media/INFO56_0.8d8dbdd7.ttf"
   },
   {
+    "revision": "f00de7d9918169a9feeb00e77a9a2f56",
+    "url": "/static/media/ciorcal-glass-bg.f00de7d9.png"
+  },
+  {
     "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
     "url": "/static/media/fortuna-glass.4c08d21e.png"
   },
   {
     "revision": "ee5004be8978604da5e223282c5bbe51",
     "url": "/static/media/sea.ee5004be.png"
-  },
-  {
-    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
-    "url": "/static/media/mapFrame4.0cdb344e.png"
   },
   {
     "revision": "c84c06495852ac730bd653c3aa9bff25",
@@ -364,16 +332,20 @@ self.__precacheManifest = [
     "url": "/static/media/suile0.b67d2f1b.gif"
   },
   {
-    "revision": "9bbe18cf6d054928f146dafcf058fcb1",
-    "url": "/static/media/suile3.9bbe18cf.gif"
+    "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
+    "url": "/static/media/mapFrame2.915b9892.png"
   },
   {
     "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
     "url": "/static/media/fortuna-glass-lit.29cb5d03.png"
   },
   {
-    "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
-    "url": "/static/media/mapFrame2.915b9892.png"
+    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
+    "url": "/static/media/mapFrame4.0cdb344e.png"
+  },
+  {
+    "revision": "9bbe18cf6d054928f146dafcf058fcb1",
+    "url": "/static/media/suile3.9bbe18cf.gif"
   },
   {
     "revision": "89b94d7b5fbe24bc213b0097236b0266",
@@ -390,6 +362,14 @@ self.__precacheManifest = [
   {
     "revision": "5888bc5fc049dc72cc7f31fe7c32d8ea",
     "url": "/static/media/keyboard.5888bc5f.png"
+  },
+  {
+    "revision": "42310c552c9786c6e4dafefae7aa121a",
+    "url": "/static/media/adaptive-icon.42310c55.png"
+  },
+  {
+    "revision": "71a6d65188bb9fc6034d537f35385f70",
+    "url": "/static/media/fi.71a6d651.png"
   },
   {
     "revision": "91f6dcb208d34b6683ff9ceb5e2f8d90",
@@ -420,7 +400,27 @@ self.__precacheManifest = [
     "url": "/static/media/pale.04995f21.png"
   },
   {
-    "revision": "cd1d25f73427c504f59d96fb81b2873c",
+    "revision": "a0f56fc4653b94ca7184673fb926b731",
+    "url": "/static/media/sparkle-b.a0f56fc4.wav"
+  },
+  {
+    "revision": "ee3367bb3892c0c9302dd78b035ba503",
+    "url": "/static/media/sparkle-c.ee3367bb.wav"
+  },
+  {
+    "revision": "c968625bfabe80e554e5d0f197fd2f4e",
+    "url": "/static/media/sparkle-d.c968625b.wav"
+  },
+  {
+    "revision": "af1b8e54b63ec64cba11d401480f5ba4",
+    "url": "/static/media/sparkle-e.af1b8e54.wav"
+  },
+  {
+    "revision": "276a05fd93f281604295abcfd59eeffd",
+    "url": "/static/media/tinkle.276a05fd.wav"
+  },
+  {
+    "revision": "2aa21e405dd22bda88a94241b5af547d",
     "url": "/index.html"
   }
 ];

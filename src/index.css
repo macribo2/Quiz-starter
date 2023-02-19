@@ -1037,6 +1037,9 @@ width: 100%;
   -webkit-animation: fade-in 2s ease-in 2s 1 forwards;
           animation: fade-in 2s ease-in 2s 1 forwards;
 }
+.wisp{
+  border-radius:50%;
+}
 .wisp2{
   height:50px;
   /* animation:fade-out 2s linear 1s forwards; */

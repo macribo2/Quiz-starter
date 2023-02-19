@@ -120,7 +120,7 @@ export default function Rings0(props) {
 
 
 			<button className="button-mash-ring-0" onClick={props.buttonMashClick}></button>
-			<ReactAudioPlayer src={value*10 === 1 ? spark0: null} autoPlay />
+			{/* <ReactAudioPlayer src={value*10 === 1 ? spark0: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 2 ? spark1: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 3 ? spark2: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 4 ? spark3: null} autoPlay />
@@ -129,7 +129,7 @@ export default function Rings0(props) {
 			<ReactAudioPlayer src={value*10 === 7 ? spark4: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 8 ? spark0: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 9 ? spark0: null} autoPlay />
-			
+			 */}
 			
 		</>)
 };

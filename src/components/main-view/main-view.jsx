@@ -390,7 +390,7 @@ const[score, setScore] = useState(0)
 	const runEndPart1 = () => { 
 		return (
 	
-			<ReactAudioPlayer src={currentQuestion === 4 ? theme0 : null} autoPlay />
+			{/* <ReactAudioPlayer src={currentQuestion === 4 ? theme0 : null} autoPlay /> */}
 			
 )
 
@@ -550,7 +550,7 @@ if(value!=0){
 	let choiceRing2Eng = [`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',`Go immediatly North`,`Wait a minute`,`Walk East/right`, `Run West/back`, `Leave South`,`Leap to Dalky in a single bound`,'',]
 	let choiceRing2 = [``,`Fan nóméad`,`Las Solas`,`Iniúchadh féin`,`"Cá bhfuil mé?"`,`Siúl soir`, ,``,`Rith síar`,`Léim go Deilg Inis in aon preab amháin`,'rogha',`Las Solas`,`Imigh láithreach ó thuaidh`]
 	let choiceRingEng = [
-	`Press to show / hide translations`,
+	``,
 		`Golden-headed Niamh`,
 		`
 		 The Pleasant Little Branch`,
@@ -569,7 +569,7 @@ if(value!=0){
 let thePucaOf = localStorage.getItem('pucaEng')
 	
 	let choiceRing = [
-		`		`,
+		`	`,
 		`Niamh Cinn-Óir`,
 		`An Craoibhín Aoibhinn`,
 		`Oisín`,
@@ -707,19 +707,19 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			
 
 			<ReactAudioPlayer src={value*10 === 1 ? spark0: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 2 ? spark1: null} autoPlay />
+			{/* <ReactAudioPlayer src={value*10 === 2 ? spark1: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 3 ? spark2: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 4 ? spark3: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 5 ? spark4: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 6 ? spark1: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 7 ? spark2: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 8 ? spark3: null} autoPlay />
-			<ReactAudioPlayer src={value*10 === 9 ? spark0: null} autoPlay />
-			<ReactAudioPlayer src={currentQuestion === 2 ? Select: null} autoPlay />
+			<ReactAudioPlayer src={value*10 === 9 ? spark0: null} autoPlay /> */}
+			{/* <ReactAudioPlayer src={currentQuestion === 2 ? Select: null} autoPlay />
 			<ReactAudioPlayer src={currentQuestion === 4 ? jump : null} autoPlay />
 			<ReactAudioPlayer src={currentQuestion === 5 ? chat : null} autoPlay />
-			
-			<ReactAudioPlayer src={isOn === false ? tinkle : null} autoPlay />
+			 */}
+			{/* <ReactAudioPlayer src={isOn === false ? tinkle : null} autoPlay /> */}
 			<ReactAudioPlayer src={isOn === true ? tinkle1: null} autoPlay />
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="black bg." />		
 				

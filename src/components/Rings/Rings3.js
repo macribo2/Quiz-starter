@@ -17,6 +17,7 @@ import spark4 from '../../audio/ding2.wav';
 import banba from './../../images/About1/ceist2.png'
 import about0 from './../../images/About1/adaptive-icon.png'
 import brightland from './../../images/About1/ceist3.png'
+import gold from './../../images/gold.png'
 import about1 from './../../images/About1/fi.png'
 import about2 from './../../images/you-see.gif'
 import wisp from './../../images/color-square.gif'
@@ -82,12 +83,12 @@ export default function Rings3(props) {
 `which lights`,
 `which tells a story.`,
 		`You'll find such things, around the country.`,
-		 `Find 4 and gather them here,`,		
-		 `to return to Gaelic Ireland.`,
-		 `to return to Gaelic Ireland.`,
-		 `to return to Gaelic Ireland.`,
-		 `to return to Gaelic Ireland.`,
-		 `to return to Gaelic Ireland.`,
+		 `Gather rings here,`,		
+		 `to return to Ireland.`,
+		 `to return to Ireland.`,
+		 `to return to Ireland.`,
+		 `to return to Ireland.`,
+		 `to return to Ireland.`,
 		
 		``, ``, ``,
 	]
@@ -99,7 +100,7 @@ export default function Rings3(props) {
 		`a lasann`,
 		`a insíonn scéal.`,
 		`Aimseoidh tú a leithead, tímpeal na tíre.`,
-		`Aimsaigh 4 cínn agus bailigh anseo íad,`,
+		`Bailigh fáinní anseo,`,
 		`le filleadh go hÉireann.`,
 		`le filleadh go hÉireann.`,	
 		`le filleadh go hÉireann.`,	
@@ -143,9 +144,22 @@ export default function Rings3(props) {
 			</div>
 
 				<div className="input-elements-container">
+{/* 
+					<div className="about-gold-container"> 
+					<img className={value*10 === 0 ? 'about-pics':'hidden'} src={gold} alt="desktop folder and cursor" />
+					<img className={value*10 === 1 ? 'about-pics-spin':'hidden'} src={gold} alt="desktop folder and cursor" />
+					<img className={value*10 === 2 ? 'about-pics':'hidden'} src={gold} alt="desktop folder and cursor" />
+					<img className={value*10 === 3 ? 'about-pics':'hidden'} src={gold} alt="desktop folder and cursor" />
+				</div> */}
 					
-				<div className="about-pics-container">
-					{/* <img className={value*10 === 0 ? 'about-pics':'hidden'} src={about1} alt="desktop folder and cursor" /> */}
+					<div className="about-pics-container">
+
+				<img className={value*10 === 5 ? 'banba':'hidden'} src={banba} alt="a digital peninsula" />
+				<img className={value*10 === 6 ? '':'hidden'} src={banba} alt="a digital peninsula" />
+				<img className={value*10 === 7 ? '':'hidden'} src={banba} alt="a digital peninsula" />
+				<img className={value*10 === 8 ? '':'hidden'} src={banba} alt="a digital peninsula" />
+				<img className={value*10 === 9 ? '':'hidden'} src={banba} alt="a digital peninsula" />
+						
 					{/* <img className={value*10 === 1 ? 'about-pics':'hidden'} src={about1} alt="desktop folder and cursor" /> */}
 						
 						{/* <img className={value * 10 === 2 ? 'about-pics' : 'hidden'} src={fieldCircle} id="about3b" alt="illustration placeholder" />
@@ -158,14 +172,14 @@ export default function Rings3(props) {
 			
 						{/* <img className={value * 10 === 3 ? 'about-pics' : 'hidden'} src={about9} id="about4" alt="illustration placeholder" /> */}
 						
-					<img className={value*10 === 7 ? 'about-pics':'hidden'} src={about4}  id="about4" alt="illustration placeholder" />
+					{/* <img className={value*10 === 7 ? 'about-pics':'hidden'} src={about4}  id="about4" alt="illustration placeholder" /> */}
 					<img className={value*10 === 4 ? 'about-pics':'hidden'} src={about6} alt="illustration placeholder" />
-					<img className={value*10 === 7 ? 'about-pics':'hidden'} src={about0} alt="illustration placeholder" />
+					{/* <img className={value*10 === 7 ? 'about-pics':'hidden'} src={about0} alt="illustration placeholder" /> */}
 				</div>
 				<div className="about-overlay-container">
 			
 
-						<img className={value * 10 === 7 ? 'passage' : 'hidden'} src={passage} alt="Serpant dungeon passage enterance" />
+						{/* <img className={value * 10 === 7 ? 'passage' : 'hidden'} src={passage} alt="Serpant dungeon passage enterance" /> */}
 
 
 						<img className={value * 10 === 8 ? 'about-pics' : 'hidden'} src={ironkey} id="iron-key-linux" alt="A figure entirely clad in armour." />
@@ -183,6 +197,13 @@ export default function Rings3(props) {
 					<img rel="preload" className={value * 10 === 4 ? "map-lens" : "hidden"} src={lensBG} alt="" />
 					
 				</div>
+				
+				<div className={value * 10 === 3 ? "linux-lens-container-fade-in" : "hidden"}>
+					<img rel="preload" className={value * 10 === 3? "map-lens" : "hidden"} src={lensBG} alt="" />
+					
+				</div>
+				
+				
 				<div className={value * 10 === 5 ? "linux-lens-container" : "hidden"}>
 				<img rel="preload" className={value * 10 === 5 ? "map-lens" : "hidden"} src={lensBG} alt="" />
 				</div>
@@ -201,16 +222,13 @@ export default function Rings3(props) {
 			<ReactAudioPlayer src={value*10 === 8 ? spark0: null} autoPlay />
 			<ReactAudioPlayer src={value*10 === 9 ? spark0: null} autoPlay /> */}
 
-			<p className='rings1' >{Ring3Ans[value * 10]}</p>
 
 
-			<h1>{isOn}</h1>
-			{isOn ? <img className="bg-glass"src={ bigGlass} alt="tinted overlay to dim background"/>:null}
-{isOn ? <p className="rings0Eng">{Ring3AnsEng[value * 10]}</p> : null}
+			{/* <h1>{isOn}</h1> */}
+
 { localStorage.setItem('freagra1', value * 10)
 }
-<button id="ring-glass-btn" onClick={props.toggleIsOn
-}	><img src={isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
+
 		<div className="lens-container">
 		{/* <button className={value*10 === 99 ? 'easca-code_0':'hidden'}>pwd</button>
 		<button className={value*10 ===99 ? 'easca-code_1':'hidden'}>ls</button>
@@ -222,18 +240,10 @@ export default function Rings3(props) {
 
 		</div>
 
-			<div className="button-mash-container">
-				<button className={value * 10 === 9 ? 'button-mash-ring-0' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} >
-				
-						<img className={value * 10 === 9 ? 'wisp' : 'hidden'}src={wisp} alt="A dancing light that can lead people astray" />
-	
-				</button>
-
-			</div>
-			
+		
 			<div className="input-elements-container2">
 						
-					<img className={value*10 === 6 ? 'banba':'hidden'} src={banba} alt="a digital peninsula" />
+					
 					<img className={value * 10 === 2 ? 'bright' : 'hidden'} src={lasta}
 					alt="a circle of bright light." />
 					<img className={value * 10 === 3 ? 'banba2' : 'hidden'} src={brightland} alt="a bright land." />
@@ -248,7 +258,8 @@ export default function Rings3(props) {
 
 				{/* <img className={value*10 === 4 ? 'ripple':'hidden'} src={blackripple} alt="a digital peninsula" /> */}
 </div>		
-
+{isOn ? <img className="bg-glass"src={ bigGlass} alt="tinted overlay to dim background"/>:null}
+{isOn ? <p className="rings0Eng">{Ring3AnsEng[value * 10]}</p> : null}
 <div className='dial-container'>
 
 <CircularInput className="dial" value={value}  onChange={v => setValue3(stepValue3(v))}>{}
@@ -259,7 +270,41 @@ export default function Rings3(props) {
 					<CircularThumb />
 				
 			</CircularInput>
-</div>	
+			</div>	
+			
+			<button id="ring-glass-btn" onClick={props.toggleIsOn
+}	><img src={isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
+			
+<p className='rings1' >{Ring3Ans[value * 10]}</p>
+<div className="button-mash-container">
+				<button className={value * 10 === 9 ? 'button-mash-ring-0' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} >
+				
+						<img className={value * 10 === 9 ? 'wisp' : 'hidden'}src={wisp} alt="A dancing light that can lead people astray" />
+	
+				</button>
+
+				<button className={value * 10 === 8 ? 'button-mash-ring-0' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} >
+				
+				<img className={value * 10 === 8 ? 'wisp' : 'hidden'}src={wisp} alt="A dancing light that can lead people astray" />
+
+				</button>
+				<button className={value * 10 === 7 ? 'button-mash-ring-0' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} >
+				
+						<img className={value * 10 === 7 ? 'wisp' : 'hidden'}src={wisp} alt="A dancing light that can lead people astray" />
+	
+				</button>
+				<button className={value * 10 === 6 ? 'button-mash-ring-0' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} >
+				
+						<img className={value * 10 === 6 ? 'wisp' : 'hidden'}src={wisp} alt="A dancing light that can lead people astray" />
+	
+				</button>
+
+
+
+
+
+			</div>
+			
 			</>)
 };
 

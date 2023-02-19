@@ -4041,8 +4041,8 @@ alert("Chun troid!" )
        $(".battle0").fadeIn();
    $('.cell').fadeOut()
        $(".directional-pad").fadeOut();
-       $(".question-text").html('Ficheall!')
-       $("#locEng").html('Chess!')
+       $(".question-text").html('Combat!')
+       $("#locEng").html('Comhairc Aonar!')
        $('#hero').fadeOut();
        setTimeout(function () { 
        $("#walkies").fadeOut();
@@ -4057,7 +4057,7 @@ alert("Chun troid!" )
             // alert('anocht!')
             
             $(".question-text").html('Ar aire!')
-            $("#locEng").html('en garde! *rotate device!')
+            $("#locEng").html('en garde!')
             $("#locEng").fadeIn();
             
             // $('#puck').fadeIn();
@@ -4390,7 +4390,7 @@ storyTimer()
                     </div>
                 </div>
 
-                    {this.state.showEascaLocation ? <EascaLocation whereAmI= "geaga" />:null}
+                    {/* {this.state.showEascaLocation ? <EascaLocation whereAmI= "geaga" />:null} */}
 
  
                     <img rel="preload" className="map-lens" src={lens} alt="" />
