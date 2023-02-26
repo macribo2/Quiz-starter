@@ -175,11 +175,11 @@ export default function App() {
 			
 		},
 		{
-			questionText: 'Fáilte ar ais, ' + heroNames[localStorage.getItem('portrait')]+'.',
+			questionText: 'Fáilte, ' + heroNames[localStorage.getItem('portrait')]+'. Roghnaigh Tánaiste',
 			answerOptions: [
 				
 			],
-			quesionTextEng:'Welcome back, '+ heroNames[localStorage.getItem('portrait')]+'.'
+			quesionTextEng:'Welcome, '+ heroNames[localStorage.getItem('portrait')]+'. Select a lieutenant ( second in command )'
 		},
 		{
 			questionText: 'Fáilte ar ais, ' + heroNames[localStorage.getItem('portrait')]+'.',
@@ -593,15 +593,8 @@ let thePucaOf = localStorage.getItem('pucaEng')
 	}
 
 
-	function endAnimation() {
-		setTimeout(function () {
-			
-		 },200)
-	document.getElementById('toggle-glass-btn').style.animation="none"
-	}
 	let dirpadHandler = () => {
 		toggleShowOverworld(true)
-		endAnimation()
 	}
 	
 
@@ -621,7 +614,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 		
 
 		<img id="portrait" rel="preload" src={ portrait}></img>
-		<button id={currentQuestion === 7 || currentQuestion === 0 ? "hidden" : "toggle-glass-btn"} onClick={toggleIsOn} onTouchEnd={ endAnimation}><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
+		<button id={currentQuestion === 7 || currentQuestion === 0 ? "hidden" : "toggle-glass-btn"} onClick={toggleIsOn} ><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 
 
 			{currentQuestion === 1 ? <>

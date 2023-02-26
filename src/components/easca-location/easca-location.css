@@ -1046,7 +1046,7 @@
 
   .sky-bg{
 	position: fixed;
-    z-index: 10;
+    z-index: 5;
     top: -39%;
     left: 0;
   }
@@ -1339,7 +1339,7 @@
 
   .eascaStage-container{
 	/* border:9px solid red; */
-	z-index: 10;
+	z-index: 6;
 	position:fixed;
 	top:0;
 	left:0;

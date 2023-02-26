@@ -131,6 +131,13 @@ export default function Rings3(props) {
 	}
 	let isOn = props.isOn;
 
+	function endAnimation() {
+		setTimeout(function () {
+			
+		 },200)
+	document.getElementById('pearl').style.animation="none"
+	}
+
 
 	return (
 		<>
@@ -272,8 +279,8 @@ export default function Rings3(props) {
 			</CircularInput>
 			</div>	
 			
-			<button id="ring-glass-btn" onClick={props.toggleIsOn
-}	><img src={isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
+			<button id="pearl" onClick={props.toggleIsOn
+			} onTouchEnd={ endAnimation}	><img src={isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 			
 <p className='rings1' >{Ring3Ans[value * 10]}</p>
 <div className="button-mash-container">

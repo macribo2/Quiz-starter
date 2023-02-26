@@ -1222,7 +1222,6 @@ position: relative;
 
 }
   #toggle-glass-btn{
-    animation:highlight-glass 2s infinite;
   border-radius: 50%;
   z-index: 995;
   }

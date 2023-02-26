@@ -1,0 +1,14 @@
+#hero{
+	
+display:none;	
+}
+
+
+.one-ring{
+	position: fixed;
+z-index: 5;
+display: flex;
+justify-content: center;
+/* display: none; */
+/* border: 11px solid orange; */
+}

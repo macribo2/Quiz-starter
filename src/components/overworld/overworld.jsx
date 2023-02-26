@@ -1,6 +1,6 @@
 import React from 'react';
 import './overworld.css';
-
+import NumberOne from '../numberOne/numberOne' 
 import ReactRain from 'react-rain-animation';
 import bit from '../../images/gifs/bit.gif'
 import "react-rain-animation/lib/style.css";
@@ -8,7 +8,7 @@ import Easca from '../easca/easca'
 import '../Rings/rings1.css';
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
-import lens from '../../images/ciorcal-glass2.png';
+import lens from '../../images/tNa0.png';
 import stats from '../../images/inv/char.png';
 import disk from '../../images/inv/diskette.png';
 import chat from '../../images/inv/chat.png';
@@ -44,6 +44,7 @@ import empty from "../../images/empty.png"
 import shamrocks from "../../images/overworld/shamrock.png"
 import geaga from "../../images/yin-yan.png"
 //empty image for geaga beceause they're just handlers for player triggering geaga event. Geaga image now in geagaSprite
+import ringIcon from '../../images/gold.png'
 import blocked from '../../images/empty.png'
 import sea0 from '../../images/tonnta1.gif'
 // import sea1 from '../../images/tonnta2.gif'
@@ -325,6 +326,8 @@ $('.sea').css('display','none')
             switch (imreoir.whereAmI) {
 
                 case 'geaga':
+
+  
                     if (direction === N) {
                         localStorage.setItem("whereAmI", "westmeath");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
@@ -3353,6 +3356,7 @@ $('#walkies-overlay').fadeIn();
         //   var playerFacing='../img/characters/feitheamh1.gif'
 
         //Map code
+        var ring = "f"
         var EXIT = "*";
         var EMPTY = 0;
         var BLOCKED = 1;
@@ -3388,11 +3392,13 @@ $('#walkies-overlay').fadeIn();
         var RIGHT = 39;
         var LEFT = 37;
 
-        //An automatic way of setting the player's start position
+        //set start positions
         var geagaRow;
         var geagaColumn;
         var contactColumn;
         var contactRow;
+        var ringRow;
+        var ringColumn;
 
         for (var row = 0; row < ROWS; row++) {
             for (var column = 0; column < COLUMNS; column++) {
@@ -3406,7 +3412,10 @@ $('#walkies-overlay').fadeIn();
                     geagaRow = row;
                     geagaColumn = column;
                 }
-
+                if (gameObjects[row][column] === ring) {
+                    ringRow = row;
+                    ringColumn = column;
+                }
 
             }
             // gameObjects[playerRow][playerColumn] = '../../img/characters/feitheamh1.gif'
@@ -3421,10 +3430,10 @@ $('#walkies-overlay').fadeIn();
                     playerRow = row;
                     playerColumn = column;
                 }
-                // if (gameObjects[row][column] === CONTACT) {
-                //     contactRow = row;
-                //     contactColumn = column;
-                // }
+                if (gameObjects[row][column] === ring) {
+                    contactRow = row;
+                    contactColumn = column;
+                }
                 if (gameObjects[row][column] === GEAGA) {
                     geagaRow = row;
                     geagaColumn = column;
@@ -3661,6 +3670,7 @@ alert("Chun troid!" )
                 $('#hero').animate({ top: playerRow * cellHeight }, 200, 'linear');
             }
 
+            gameObjects[playerRow][playerColumn] = ring;
             gameObjects[playerRow][playerColumn] = PLAYER;
             gameObjects[geagaRow][geagaColumn] = GEAGA;
             /*Player makes contact with an npc - one of geaga's costumes, perhaps.*/
@@ -3947,6 +3957,8 @@ alert("Chun troid!" )
                              case N:
                             cell.src = empty;
                             break;
+                            case ring: cell.src = ringIcon; break;
+                        
                         case trap: cell.src = agnes2; break;
                         case AGNES: cell.src = agnes2; break;
                         case GEAGA:
@@ -3996,7 +4008,9 @@ alert("Chun troid!" )
                             cell.id = 'geaga'
                             break;
                         case CONTACT:
-                            cell.src = setIcon(empty);
+                            cell.src = setIcon(empty); break;
+                            case ring:
+                                cell.src = ringIcon;
 // alert('eh what')
                             break;
                         default: break;
@@ -4155,6 +4169,210 @@ localStorage.setItem('visitedFerna','true')
             refresh();
             setMap();
         }
+
+
+
+let placeNamesGaeilge = 
+[     "Cluain Ṁic Nóis",
+      "Éadan Doire",
+      "Biorra",
+      "Cionn Eitigh",
+      "Ráth Iomġáin",
+      "Suí an Róin",
+      "Dún Dealgan",
+      "An Grianfort",
+      "Ceann Ċloċair",
+      "Baile Átha Ḟirdia",
+      "Poll an Phúca",
+      "Baile an Ġearlánaigh",
+      "Coill an Iarainn",
+      "Inis Córṫaidh",
+      "Poll an Phúca",
+      "Maolán na nGaḃar",
+      "An Abhainn Dubh",
+      "Dún Ċormaic",
+      "Pailis Ċaonraí",
+      "Poll an Phúca",
+      "Caisleán Uí Ċonaill",
+      "Áth na bḞuinseog",
+      "An Ḟeoṫanaċ",
+      "Brú Rí",
+      "Fionnġlas",
+      "Cluain Dolcáin",
+      "Cluain Tarbh",
+      "Binn Éadair",
+      "Dún Laoiġaire",
+      "Deilginis",
+      "Gleann Éada",
+      "Garḃach",
+      "Droim Seanḃó",
+      "Aċaḋ na Síleann",
+      "Fíonach",
+      "Dromad",
+      "Reaċlainn",
+      "Dearḃóg",
+      "Aċaḋ Eoċaille",
+      "Carn Ṁéaḃla",
+      "Carraig Ḟearġais",
+      "Béal Feiriste",
+      "Cionn Dhún Damh",
+      "Baile idir Dhá Abhainn",
+      "Sléiḃte Ḋoire Ḃeatha",
+      "Leitir Ceanainn",
+      "Bealach Féich",
+      "Na Cruacha Gorma", 
+      "An Garastún",
+      "Paiteagó",
+      "Eadarnaiḋ",
+      "Lios na Daróg",
+      "Scriobaċ",
+      "Inis Ceiṫleann",
+      "Cill na Mallaċ",
+      "Sliabh an Nóglaigh",
+      "Gleann an Ṗreaċáin",
+      "Beal na mḂláth",
+      "Cionn tSáile",
+      "An Sciobairín",
+      "Poll an Ṗúca",
+      "Na Cloċa Liaṫa",
+      "Siol Éalaiġ",
+      "Dún Ard",
+      "An tInḃear Mór",
+      "Aḃóca",
+      "Cluain Fada",
+      "Baile an Tobair",
+      "Loch Bó Finne",
+      "Scramóg",
+      "Loch Bó Dearge",
+      "Corr na Fola",
+      "Doire",
+      "Léim an Ṁadaiḋ",
+      "Droichead Fíolta",
+      "Maċaire Ráṫa",
+      "An Seanṁullach",
+      "Muine Mór",
+      "Béal Átha na gCarraigíní",
+      "An Mullach Mór",
+      "Uaimheanna na Céise",
+      "Machaire Eabha",
+      "Baile Uí Ḋálaigh",
+      "Tobar an Ċoire",
+      "Ros Cré",
+      "Durlas",
+      "Faiċe Ró",
+      "Sliabh na mBan",
+      "Cluain Meala",
+      "Tigh na Naoi Míle",
+      "Eiréil ",
+      "Darú",
+      "An Baile Fionn",
+      "Droichead Crom Abú",
+      "Cúil an tSúdaire",
+      "Buiríos Mór Osraí",
+      "Sléiḃte an Ċomaraigh",
+      "An Baile Dubh",
+      "Tullach an Iarainn",
+      "Cluain Ḟia",
+      "Dún Garḃán",
+      "Cill Ṁíodáin",
+      "Sléiḃte an Ċomaraigh",
+      "the black town",
+      "Tullach an Iarainn",
+      "Cluain Ḟia",
+      "Dungarvan - Garbhann's Fort",
+      "Cill Ṁíodáin",
+      "Ġráinseaċ Ċuffe",
+      "Baile Ṁic Andáin",
+      "Bearna na Gaoiṫe",
+      "Dún Garḃáin",
+      "Baile an Ṗoill",
+      "Sliaḃ Rua",
+      "Ġráinseaċ Ċuffe",
+      "Baile Ṁic Andáin",
+      "Bearna na Gaoiṫe",
+      "Dún Garḃáin",
+      "Baile an Ṗoill",
+      "Sliaḃ Rua",
+      "An Uaimh",
+      "Ráth Ċairn",
+      "Cill Ḃríde",
+      "Teamhair",
+      "Buaile na Bréachṁaí ",
+      "Tigh na Sióg",
+      "Cathair Saiḋḃín",
+      "An Daingean",
+      "Gleann na bPúcaí",
+      "Sliabh Mis",
+      "Na Cruaċa Duḃa",
+      "An tSnaidhm",
+      "An Lios Breac",
+      "Meathais Troim",
+      "Gránard",
+      "Cluain Dá Ráth",
+      "Maiġ Duṁa",
+      "An Ċarraig Ḃuí",
+      "Cill Ala",
+      "Caisleán an Ḃarraiġ",
+      "Baile Ui Ḟiacáin",
+      "An Caoláire Rua",
+      "Lios an tSaṁaiḋ",
+      "An Éill",
+      "An Lorgain",
+      "Lios na gCearrḃach",
+      "An Caisleán Riaḃach",
+      "An Ṁainistir Liath",
+      "Dún Pádraig",
+      "Cill Ċaoil",
+      "Sráid na nAlbanach",
+      "Craigavon",
+      "Port An Dúnáin",
+      "Baile Úr",
+      "Baile an Ṁuilinn",
+      "Lios Liath",    
+      "Cill Deirge",
+      "Baile Uí Ṁurċú",
+      "Baile Haicéid",
+      "An Ḃuiríos",
+      "Miseal",
+      "Cill Daṁáin",
+      "Scairbh na gCaorach",
+      "Cluain Eois",
+      "Einistir Ḃuithe",
+      "Teach an Scotaigh",
+      "Crícheán Rua",
+      "Carraig Ṁaċaire Rois",
+      "Poll an Phúca",
+      "Cill Cais",
+      "An Spidéal ",
+      "An Teach Dóite",
+      "An Ċeaṫrú Rua",
+      "Inis Meáin ",
+      "Cairbre",
+      "Na Solláin",
+      "Fioḋ Alúine",
+      "Maigh Nuad",
+      "An Currach",
+      "Léim an Ḃradáin",
+      "Ceann Boirne",
+      "Fíoch Rua",
+      "An Tulach",
+      "Cill Rois",
+      "Leaba Ṡíoda",
+      "Bun Raite",
+      "Doire na Criaḋ",
+      "An Cnoc Rua",
+      "Béal Tairbirt",
+      "An Dromainn",
+      "Dún an Rí",
+      "Lios Cré",
+      "Caisleán na Deirge",
+      "Baile Mhic Gofraidh",
+      "An Ómaigh",
+      "Seisceann Siúil",
+      "An Ċorr Ċríochach"
+
+        ]
+
         function enterLocation(location) {
             narrativeCode = 34;
             whereAbouts = $('#loc').html()
@@ -4172,7 +4390,7 @@ localStorage.setItem('visitedFerna','true')
                 },500)
             }
 
-            else if (whereAbouts === "Ráth Ḟearna") { 
+            if (whereAbouts === "Ráth Ḟearna") { 
 
 
                 map =
@@ -4193,6 +4411,41 @@ localStorage.setItem('visitedFerna','true')
 
 
                 $("#walkies").attr("src",ferna)
+                // $("#walkies-overlay").attr("src",fernaRiver)
+                gameObjects[playerRow][playerColumn] = 0;
+                
+                playerRow = 7;
+                playerColumn = 5;
+            }
+
+
+
+
+
+
+  
+
+            else if (whereAbouts === "") { 
+
+
+                map =
+                [
+                    ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, "f", 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
+                ];
+   
+
+
+
+                // $("#walkies").attr("src",ferna)
                 // $("#walkies-overlay").attr("src",fernaRiver)
                 gameObjects[playerRow][playerColumn] = 0;
                 
@@ -4349,7 +4602,7 @@ storyTimer()
                 {/* {this.state.registerMenu ? <Register /> : null} */}
            
 
-
+{/* 
                 <div className="directional-pad" onTouchStart={this.props.incrementScore} onTouchEnd={localStorage.setItem('whereAmI', 'westmeath')
                 }>
     <div className='grid-container'>
@@ -4373,7 +4626,7 @@ storyTimer()
 
 
 
-</div>            
+                </div>             */}
 
 <img id="mob-effect" className="phonebg2"src={phone1} alt="" />
 
@@ -4557,21 +4810,21 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                 </p>
                 {this.state.whereAmI === "geaga" ?
                     
-            <div className="daff-container" >
-                    <img src={ daff} alt="small yellow flowers stir in the breeze" />
+                    <div className="daff-container" >
+                    {/* <img src={ daff} alt="small yellow flowers stir in the breeze" /> */}
                 {/* <ReactRain className="react-rain" numDrops="200" /> */}
     
-                </div>:null}
+                    </div>:null}
                 <div className="river-container">
-
-
-                
-           
                 </div>
                 <div id="puck"><img src={agnes2} alt="a strange creature" /></div>
                 <Battle className="battle0"/>
 		
-            </div>
+                
+                <NumberOne  />
+            </div> 
+
+            
 
         )
     }

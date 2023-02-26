@@ -1,4 +1,3 @@
-import aa3 from '../../images/champions/3.png'
 import React, { useState, useEffect} from 'react';
 import $ from 'jquery';
 import empty from '../../images/champions/empty.png'
@@ -61,9 +60,10 @@ import aa56 from '../../images/champions/56.png'
 import aa57 from '../../images/champions/57.png'
 import aa58 from '../../images/champions/58.png'
 import aa59 from '../../images/champions/59.png'
-import './easca-location.css';
+import './no-one.css';
 import skybg from '../../images/blinding-light-county.jpg'
 import fields2 from '../../images/field2.png'
+import { Rings4 } from '../Rings/Rings4'
 export default  class NumberOne extends React.Component  {
 	constructor() {
         super();
@@ -803,9 +803,10 @@ export default  class NumberOne extends React.Component  {
 // 
 let stagePos = $('#eascaStage').position()
 console.log('position'+stagePos.left)
-if(stagePos.left>=740){
+if(stagePos.left>=150){
 
-	$('eascaStage').css('left','-1890px')
+	$('#eascaStage').css('left', '-890px')
+	// alert();
 }
 
 // } 
@@ -1436,22 +1437,27 @@ render()
 	 render() {
 		{/*   ☘	 */}
 
-	
+		
 		 return (
 
 			 <>
-				 <img className="sky-bg" src={skybg } />
+				 <div className='one-ring'>
+				 <img className="sky-bg" src={skybg } alt="the sky" />
     
 				 <div className="eascaStage-container">
 				
 				 <div className="eascaStage-bg loopscroll"></div>
-				<div id="eascaStage" >
+						 <div id="eascaStage" >
+							 
 						 <img id="paralax-fields" src={ fields2 } />
 			</div>
 
 
+			</div>	
+				 </div>
 	
-	</div>			 </>
+				 <Rings4 />
+			 </>
 
 
 )
