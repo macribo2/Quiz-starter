@@ -78,7 +78,7 @@
   width: 130px;
   border-radius: 50%;
   opacity: 0;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0.4);
   pointer-events: all;
   display: grid;
   justify-content: center;
@@ -188,7 +188,7 @@ animation: linux-land 5s steps(15) forwards;
   /* border:4px solid orange; */
 }
 #linux-land-down{
-  animation: linux-land-down 5s steps(15) forwards;
+  /* animation: linux-land-down 5s steps(15) forwards; */
 
 
 }
@@ -353,6 +353,8 @@ position: fixed;
   color:yellowgreen;                                                                         
   font-size: 1.3em;
 
+  background-color: rgba(0,0,0,0.6);
+  padding: 5px;
 }
 
 
@@ -363,6 +365,35 @@ position: fixed;
       left: 4%;}
 
       .og-hero{
-        display:block !important;
-        border:4px solid red;
+        display: block !important;
+        height: 200px;
+        width: 200px;
+        position: fixed;
+        left: 75%;
+      }
+
+
+      .champion-portrait{
+top:5%;
+  left: 37%;
+  }
+      .lens-ring4{
+        transform:scale(1.2);
+        /* opacity:0.5 !important; */
+      }
+      .dial4{
+        transform:scale(1.2)
+      }
+      
+      .input-elements-container5{
+
+        height: 100%;
+        width:100%;
+        top:0;
+        left:0;
+        position:fixed;
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }

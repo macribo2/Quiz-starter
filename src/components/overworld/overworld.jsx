@@ -8,7 +8,7 @@ import Easca from '../easca/easca'
 import '../Rings/rings1.css';
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
-import lens from '../../images/tNa0.png';
+import lens from '../../images/ciorcal-glass4.png';
 import stats from '../../images/inv/char.png';
 import disk from '../../images/inv/diskette.png';
 import chat from '../../images/inv/chat.png';

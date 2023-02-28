@@ -8,6 +8,8 @@ import dirpad from '../../images/dirpad.png';
 import lens from '../../images/ciorcal-glass.png';
 import portrait from '../../images/vert-mode.png'
 import gradient from '../../images/gradient2.png';
+import darkGreenFields from '../../images/ciorcal-glass4.png';
+
 import avatar1 from '../../images/players/spéirbhean0.gif';
 import avatar2 from '../../images/players/douglas.png';
 import avatar3 from '../../images/players/fianna0.png';
@@ -780,7 +782,11 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			{/* <button id="toggle-settings-btn" onClick={setSettings}	><img src={blank} id="blank" alt="transparent square" /></button> */}
 
 			
-
+			{/* <div className="linux-lens-container" >
+					<img rel="preload" className="map-lens" src={darkGreenFields} alt="" />
+					
+				</div> */}
+			<img id="fields-lens" rel="preload" src={darkGreenFields} className="question-img" alt="dark green fields lens" />		
 
 			
 			 

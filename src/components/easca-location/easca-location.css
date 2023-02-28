@@ -1040,7 +1040,7 @@
     z-index: 90;
     right: 0%;
     top: -10%;
-	/* animation: fields-down 7s forwards linear; */
+	animation: fields-down 7s forwards linear;
   
   }
 
@@ -1057,7 +1057,7 @@
 	/* background-repeat: repeat-x; */
 	background-position: 0 0;
 
-  /* animation: backgroundloop 17s forwards ease-out; */
+  animation: backgroundloop 17s forwards ease-out;
   
 	top: -16%;
 	left: -115px;
