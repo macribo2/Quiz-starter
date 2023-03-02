@@ -72,18 +72,21 @@
 
 }
 
-.button-mash-ring-0 {
+.button-mash-ring-0,.button-mash-ring-5, .button-mash-ring-4 {
   position: relative;
-  height: 130px;
-  width: 130px;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
-  opacity: 0;
+  opacity: 1;
   background-color: rgba(0,0,0,0.4);
   pointer-events: all;
   display: grid;
   justify-content: center;
   align-items: center;
+  border: 2px solid seashell;
+  margin-bottom:0;
 }
+
 
 .rings0Eng {
   pointer-events: none;
@@ -188,7 +191,7 @@ animation: linux-land 5s steps(15) forwards;
   /* border:4px solid orange; */
 }
 #linux-land-down{
-  /* animation: linux-land-down 5s steps(15) forwards; */
+  animation: linux-land-down 5s steps(15) forwards;
 
 
 }
@@ -347,22 +350,20 @@ z-index: 101;
 }
 
 .names-e{
-position: fixed;
-    top: 83%;
-    left: 4%;
-  color:yellowgreen;                                                                         
-  font-size: 1.3em;
-
-  background-color: rgba(0,0,0,0.6);
+  position: fixed;
+  top: 83%;
+  left: 4%;
+  color:yellowgreen;               font-size: 1.3em;
   padding: 5px;
 }
 
 
 .names-i{
-  font-size: 1.5em;
+  font-size: 2em;
   position: fixed;
-      top: 15%;
-      left: 4%;}
+  font-family: 'aonchlo';
+  left:3%;
+      }
 
       .og-hero{
         display: block !important;
@@ -371,7 +372,11 @@ position: fixed;
         position: fixed;
         left: 75%;
       }
-
+      
+      
+      .input-elements-container-5{
+        pointer-events: none;
+      }
 
       .champion-portrait{
 top:5%;
@@ -385,15 +390,41 @@ top:5%;
         transform:scale(1.2)
       }
       
-      .input-elements-container5{
+      .input-elements-container-5, .input-elements-container-8{
 
         height: 100%;
         width:100%;
         top:0;
         left:0;
         position:fixed;
-        z-index: 999;
+        z-index: 105;
         display: flex;
         justify-content: center;
         align-items: center;
+        /* transform: scale(0.6); */
+        
+      }
+      .input-elements-container-8{
+        
+        z-index: 99;
+
+      }
+      .input-elements-container-7, .field-container{
+        pointer-events: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack:center;
+            -ms-flex-pack:center;
+                justify-content:center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height:100%;
+        width:100%;
+        left: 0;
+        top:0;
+        z-index: 28;
+        position: fixed;
+      
       }

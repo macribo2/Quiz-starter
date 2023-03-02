@@ -172,6 +172,7 @@ export default class Overworld extends React.Component {
 
     }
 
+
     //     this.setState({ mobile: window.innerWidth >= 760 });
     //     this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
     // }
@@ -4531,7 +4532,6 @@ alert("Anseo")
     conceptHandler() {
         window.location.replace('http://167.172.184.73:3000/history')
     }
-  
     render() {
         //react functions here
         let storyTimer=this.props.storyTimer
@@ -4540,7 +4540,7 @@ alert("Anseo")
        
         
         
-       `
+        `
         
         let heroNameEng = this.props.heroNameEng;
        let heroName = this.props.heroName
@@ -4563,6 +4563,7 @@ storyTimer()
             this.setState({diskVisible: true })
         }
       
+    let isOn = this.props.isOn;
         return (
             
             <div >    <div className="bg"></div>
@@ -4688,7 +4689,7 @@ storyTimer()
                     < img src={glass} rel="preload"className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />
                     <div id="event-report"></div>
                    							
-                    <p className={mapChanges ===1 ? 'eng-question-text' : 'hidden'}>Welcome back, {heroNameEng }</p>
+                    <p className={mapChanges ===1 ? 'eng-question-text' : 'hidden'}>Select a lieutenant, {heroNameEng }</p>
                     
                 </div>) : null}
                 <Silken id="silken"></Silken>
@@ -4821,7 +4822,7 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                 <Battle className="battle0"/>
 		
                 
-                <NumberOne  />
+                <NumberOne toggleIsOn={ this.props.toggleIsOn} isOn={ isOn} />
             </div> 
 
             

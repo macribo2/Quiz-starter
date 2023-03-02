@@ -270,11 +270,19 @@ export default function Rings3(props) {
 <div className='dial-container'>
 
 <CircularInput className="dial" value={value}  onChange={v => setValue3(stepValue3(v))}>{}
-					<CircularTrack />
+					<CircularTrack stroke="rgba(185,230,5,1)"
+					strokeWidth={'3px'}
+					/>
 			{/* <img  src={avatar} className={value === 0 ? 'hidden':'avatar' } alt="Caniuse battus tv charactéir" />		 */}
 				
-			<CircularProgress />
-					<CircularThumb />
+					<CircularProgress
+					border="rgba(255,250,5,0)"
+						stroke="rgba(195,150,5,0.8)"
+						
+						strokeWidth={'3px'}/>
+					<CircularThumb  fill="rgba(135,5,2)"
+					stroke="rgba(180,180,180,1)" 	
+							strokeWidth={'3px'}/>
 				
 			</CircularInput>
 			</div>	

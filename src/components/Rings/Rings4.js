@@ -1,6 +1,11 @@
-import * as React from "react";
+// import * as React from "react";
 import { render } from "react-dom";
+import React, { useState, useEffect } from 'react'
 import lens from '../../images/ciorcal-glass-light.png';
+import lensCap from '../../images/About1/ring2.png';
+import emerald from '../../images/misc_crystal_new.png'
+import pearl from '../../images/stone-soup/misc_crystal_old.png';
+
 import empty from '../../images/empty.png';
 import avatar1 from '../../images/players/spéirbhean0.gif';
 import avatar2 from '../../images/players/douglas.png';
@@ -118,7 +123,19 @@ import {
   CircularThumb,
 } from "react-circular-input";
 
-export function Rings4() {
+
+
+export function Rings4(props) {
+
+  // Similar to componentDidMount and componentDidUpdate:
+	useEffect(() => {
+
+	 })
+
+
+	function hideText() { 
+		alert();
+	}
 let ogHero = localStorage.getItem('portrait') 
 	var namesInIrish = [
 		`Abbán         `,
@@ -184,7 +201,6 @@ let ogHero = localStorage.getItem('portrait')
 		`Coinneach     `,
 		`Cuán          `,
 		`Cúmhaí        `,
-		`Curnán        `,
 		`Daigh         `,
 		`Daighre       `,
 		`Daimhín       `,
@@ -204,11 +220,9 @@ let ogHero = localStorage.getItem('portrait')
 		`Dubhaltach    `,
 		`Dubhgall      `,
 		`Dubhghlas     `,
-		`Eadan         `,
 		`Éabha`,
 		`Ealadha       `,
 		`Easnadh       `,
-		`Eibhear       `,
 		`Éamonn        `,
 		`Éanna         `,
 		`Earnán        `,
@@ -220,16 +234,12 @@ let ogHero = localStorage.getItem('portrait')
 		`Eoghan        `,
 		`Étaín         `,
 		`Fachtna       `,
-		`Fainche       `,
 		`Faolán        `,
 		`Fearchar      `,
 		`Feardorcha    `,
 		`Fearghal      `,
 		`Fearghus      `,
 		`Fechín        `,
-		`Feidhelm      `,
-		`Feidhlim      `,
-		`Feme          `,
 		`Fiachra       `,
 		`Fial  		   `,
 		`Fianait       `,
@@ -258,7 +268,6 @@ let ogHero = localStorage.getItem('portrait')
 		`Iarlugh       `,
 		`Íde           `,
 		`Iobhar        `,
-		`Iomchadh      `,
 		`Íonait        `,
 		`Irial         `,
 		`Labhraidh     `,
@@ -285,7 +294,6 @@ let ogHero = localStorage.getItem('portrait')
 		`Mac Táil      `,
 		`Maeleachlainn `,
 		`Mainchín      `,
-		`Maine         `,
 		`Mael Íosa     `,
 		`Maolán        `,
 		`Maol Mhuire   `,
@@ -301,7 +309,6 @@ let ogHero = localStorage.getItem('portrait')
 		`Molaisse      `,
 		`Moncha        `,
 		`Mór           `,
-		`Morann        `,
 		`Muadhnait     `,
 		`Muircheartach `,
 		`Muireann      `,
@@ -311,8 +318,6 @@ let ogHero = localStorage.getItem('portrait')
 		`Muirne        `,
 		`Murchadh      `,
 		`Murchú        `,
-		`Naithí        `,
-		`Naoise        `,
 		`Naomh         `,
 		`Naomhán       `,
 		`Nárbhflaith   `,
@@ -397,15 +402,12 @@ let ogHero = localStorage.getItem('portrait')
 		`Teimhnín      `,
 		`Tighearnach   `,
 		`Tighearnán    `,
-		`Tiobraide     `,
 		`Tíreachán     `,
-		`Toirdhealbhach`,
 		`Tóla          `,
 		`Tómmán	      `, 
 		`Torcán        `,
 		`Treasa        `,
 		`Treasach      `,
-		`Tuamnait      `,
 		`Tuathal       `,
 		`Tuathla       `,
 		`Tuileach      `,
@@ -488,7 +490,6 @@ let ogHero = localStorage.getItem('portrait')
 		`,`sorrowful
 		`,`diminutive of Cu, meaning hound
 		`,`hound of the plain
-		`,`Curnan
 		`,`flame
 		`,`flame, fire
 		`,`deer or ox
@@ -508,40 +509,34 @@ let ogHero = localStorage.getItem('portrait')
 		`,`dark-limbed, black-jointed
 		`,`dark foreigner
 		`,`blue black
-		`,`Etan
 		`,`Life
 		`,`art , craft
 		`,`musical sound
-		`,`Heber, Harry, Ivor	
 		`,`wealthy guardian
 		`,`birdlike
-		`,`Ernest iron
+		`,`iron
 		`,`beauty; radiance
 		`,`steed
-		`,`Evin; Aeveen; Éimíne	prompt; ready
+		`,`prompt; ready
 		`,`iron
 		`,`kernal or gorse
 		`,`born of the yew
 		`,`jealousy
 		`,`malicious, hostile
-		`,`Fanny
 		`,`wolf
 		`,`friendly
-		`,`Frederick, Ferdinand	dark man
+		`,`dark man
 		`,`manly or valorous
 		`,`strength of a man
 		`,`raven or battle
-		`,`Fidelma; Fedelm	
-		`,`Felix, Phillip	
-		`,`young woman; girl
 		`,`battle-king
 		`,`modest; honorable; generous
 		`,`wild creature; deer
-		`,`Finnian	fair
+		`,`fair
 		`,`blonde lady
 		`,`fair; white
 		`,`fair-haired; white
-		`,`Fionnabair	ghost, spirit
+		`,`ghost, spirit
 		`,`fair haired
 		`,`fair shouldered
 		`,`white ancient/fire
@@ -553,16 +548,15 @@ let ogHero = localStorage.getItem('portrait')
 		`,`grey, grey-blue
 		`,`smith
 		`,`smith
-		`,`Gorman dark; swarthy
+		`,`dark; swarthy
 		`,`grey servant
 		`,`blue/illustrious princess
-		`,`inspiring terror; grain
+		`,`inspiring terror
 		`,`sun-goddess
 		`,`western kingdom
 		`,`Iar + Lug (Celtic god names)
 		`,`act of eating
 		`,`yew tree
-		`,`Imchad	
 		`,`faithful; pure; sincere
 		`,`Irél	
 		`,`speaker
@@ -582,30 +576,28 @@ let ogHero = localStorage.getItem('portrait')
 		`,`a Viking
 		`,`bare
 		`,`blackbird
-		`,`Lorccán	cruel or fierce
-		`,`Aloysius, Lewy	light; brightness
-		`,`Luisech, Lucy	radiant girl
+		`,`cruel or fierce
+		`,`light; brightness
+		`,`radiant girl
 		`,`son of Ness (goddess name)
 		`,`son of adze
-		`,`servant || devotee of St. Seachnall
+		`,`servant, devotee of St. Seachnall
 		`,`monk
-		`,`Many
 		`,`servant of Jesus
-		`,`Mullen	warrior
+		`,`warrior
 		`,`servant or devotee of St. Mary
 		`,`silent
 		`,`steed
 		`,`she who intoxicates
 		`,`lightening
-		`,`Mella	lightening
+		`,`lightening
 		`,`honorable; proud
 		`,`great
 		`,`- ninne was the first word this saint spoke
-		`,`Maud	great
+		`,`great
 		`,`Molaise	pet from of Laisrén
 		`,`from a Celtic goddess name
 		`,`great
-		`,`Morand	
 		`,`noble, good
 		`,` sea battler
 		`,` sea fair
@@ -615,8 +607,6 @@ let ogHero = localStorage.getItem('portrait')
 		`,` high spirited; festive
 		`,`	sea battler
 		`,`hound of the sea
-		`,`Nathy
-		`,`Noah	bond?
 		`,`saint
 		`,`of Naomh (saint)
 		`,`noble princess
@@ -635,7 +625,7 @@ let ogHero = localStorage.getItem('portrait')
 		`,`sprite, elf
 		`,`sprite, elf
 		`,`little sprite, elf
-		`,`Oissíne	little deer
+		`,`little deer
 		`,`wolf
 		`,`lover of drink
 		`,`fierce hound
@@ -654,7 +644,7 @@ let ogHero = localStorage.getItem('portrait')
 		`,` Norse word for horse. Also means little rose.
 		`,` little seal
 		`,`seal
-		`,`rose | horse
+		`,`rose or horse
 		`,`	headland
 		`,`red haired
 		`,`red-haired
@@ -674,24 +664,24 @@ let ogHero = localStorage.getItem('portrait')
 		`,`town crier, scholar
 		`,`blossom, bloom
 		`,`blossom, bloom
-		`,`Shay, Shea	hawk-like, noble
-		`,`Seachnall	from Latin secondus
-		`,` Sidney	traveller; wayfarer
-		`,`	Ségnat	hawk
-		`,`	Senan	old, ancient
-		`,`	Shanahan	old, ancient
+		`,`hawk-like, noble
+		`,`from Latin secondus
+		`,`traveller; wayfarer
+		`,`hawk
+		`,`old, ancient
+		`,`old, ancient
 		`,`Love; affection
-		`,`SHANE	Séigíne	hawk
-		`,`Sheedy	possibly derived from the word for silk
-		`,`eeva, Síomhaith	good peace
-		`,`SLAWN ya	Slaney, Slanina	health, from a Celtic goddess name
-		`,`Slébíne, Slevin	mountain man
-		`,`Sorley, Samuel, Charles	from Norse, summer wanderer
-		`,`Sally bright, radiant
+		`,`hawk
+		`,`possibly derived from the word for silk
+		`,`good peace
+		`,`health, from a Celtic goddess name
+		`,`mountain man
+		`,`from Norse, summer wanderer
+		`,`bright, radiant
 		`,`gracious; kindly	
 		`,`drowsy
 		`,`well-going
-		`,`Tadc, Tadg, Tad, Thaddeus, Theodosius, Theophilus, Tim	poet
+		`,`Thaddeus, Theodosius, Theophilus, poet
 		`,`placating, peacemaking
 		`,`slender, subtle
 		`,`idle; inactive
@@ -701,33 +691,30 @@ let ogHero = localStorage.getItem('portrait')
 		`,`dark-haired one
 		`,`Lord
 		`,`Lord
-		`,`Tipraite	 
-		`,`Tírechán having land; wide-ruling
-		`,`a lakh	Turlough, Tairdelbach, Charles abettor
+		`,`having land; wide-ruling
 		`,`abundance, flood
 		`,`of Tuama
-		`,`Torccán	wild boar
-		`,`Teresa strength
-		`,`Tracy warlike; fierce
-		`,` fem. of Tómmán
-		`,` Tully	ruler of the people
-		`,` Tuala,	princess of the people
-		`,` prominent forehead
-		`,` Twilleliah,	lady of abundance of sovereignty
+		`,`wild boar
+		`,`strength
+		`,`warlike; fierce
+		`,`Tully, ruler of the people
+		`,`princess of the people
+		`,`prominent forehead
+		`,`lady of abundance of sovereignty
 		 `,`foam-white complexioned
 		`,` greenish, from a tribal name
 		`,`Noble`,
 		`greenish, from a tribal name
 		`,` proud; arrogant
-		`,` Hoolihan	little proud; arrogant one
-		`,` fierce pride
-		`,`	Ultan	Ulsterman
-		`,` Oona, Oonagh, Agnes, Winifred, Winnie, Juno	
+		`,`little proud; arrogant one
+		`,`fierce pride
+		`,`Ulsterman
+		`,`Juno	
 		`,` very tall`
 		 
 		];
 		
-	const [value, setValue] = React.useState(50);
+	const [value, setValue] = React.useState(.25);
   const prevValue = React.useRef(0);
   const diff = React.useRef(0);
   const dir = React.useRef(0);
@@ -776,7 +763,11 @@ let ogHero = localStorage.getItem('portrait')
   
   shuffle(namesInEnglish,namesInIrish);
 	function buttonMashClick() { 
-		alert();
+		
+
+
+
+		
 	}
   const updateValue = v => {
     diff.current = v - prevValue.current;
@@ -1094,12 +1085,26 @@ let ogHero = localStorage.getItem('portrait')
   };
 	let hname;
 	let hnameE;
+	// let fadeOutNoOne = this.props.fadeOutNoOne;
+	// let isOn = this.props.isOn
+
 	return (
-	  <div className="input-elements-container">
+
+<>
+		
+<div className="input-elements-container-7">
+<img src={lensCap} className="lens-cap" alt="a fantasy landscape a ring of stones, a haunted tree" />
+			</div>
+	  <div className="input-elements-container-8">
 	  <img src={lens} id="lens" className="lens-ring4" alt="a glass lens" />
-      <CircularInput value={value} className="dial dial4" onChange={tryValue}>
-        <CircularTrack />
-        <CircularThumb />
+			<CircularInput value={value} className="dial dial4" onChange={tryValue}>
+				<CircularTrack
+				stroke="rgba(185,230,5,1)"
+						strokeWidth={'3px'}
+				/>
+				<CircularThumb  fill="rgba(135,5,2)"
+					stroke="rgba(180,180,180,1)" 	
+							strokeWidth={'3px'}/>
 			</CircularInput>
 			
 
@@ -1125,17 +1130,24 @@ let ogHero = localStorage.getItem('portrait')
 			<img src={ogHero === "8" ? avatar8 :empty} className="og-hero"  alt="hero portrait"/>
 			<img src={ogHero === "9" ? avatar9 :empty} className="og-hero"  alt="hero portrait"/>
 			
+			</div>
 			
 			
-			<div className="input-elements-container5">
+			 <div className="input-elements-container-5">
 					
-				<button className="button-mash-ring-0" onClick={buttonMashClick}>
+				<button className="button-mash-ring-4" onClick={props.fadeOutNoOne}>
 					
 			<img src={champIcon} className="champion-portrait" alt="champion portrait" />
 			
-					</button>
-		</div>
+				</button>
+				
+			
+		
+
+		
 	  </div>
+
+</>
 			);
 }
 

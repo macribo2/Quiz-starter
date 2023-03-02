@@ -74,6 +74,16 @@ export default  class NumberOne extends React.Component  {
     componentDidMount() {
 		this.jQueryCode();
 	}
+	fadeOutNoOne() { 
+		$('.lens-cap').fadeOut();
+		$('.button-mash-ring-4').fadeOut();
+
+		$('.input-elements-container-8').fadeOut();
+		// $('.one-ring').addClass('one-ring-fade');
+		// alert();
+
+		
+	}
 	jQueryCode = () => {
 	
 		let champions;
@@ -1347,7 +1357,7 @@ let		ls = ()=>{
 						});
 		
 						// $('#hero-target').css('background-image', champ.targetCircle);
-						$('#i-am-btn').css("background-image", 'url(./img/playerFrame6.png)');
+						// $('#i-am-btn').css("background-image", 'url(./img/playerFrame6.png)');
 						// $('#i-am-btn').fadeTo(1, "slow");
 						// $('#i-am-not-btn').fadeIn()
 		
@@ -1425,38 +1435,42 @@ let		ls = ()=>{
 				}
 			
 			
-			
+				
 			
 			}
-	;
+		
+			
 render()
 
 
-		
-	 }
+
+;	
+	}
+	
+	
 	 render() {
 		{/*   ☘	 */}
 
-		
+		let isOn = this.props.isOn
 		 return (
 
 			 <>
 				 <div className='one-ring'>
-				 <img className="sky-bg" src={skybg } alt="the sky" />
+				 {/* <img className="sky-bg" src={skybg } alt="the sky" /> */}
     
 				 <div className="eascaStage-container">
 				
 				 <div className="eascaStage-bg loopscroll"></div>
 						 <div id="eascaStage" >
 							 
-						 <img id="paralax-fields" src={ fields2 } />
+						 {/* <img id="paralax-fields" src={ fields2 } /> */}
 			</div>
 
 
 			</div>	
 				 </div>
 	
-				 <Rings4 />
+				 <Rings4 className="rng-4" toggleIsOn={this.props.toggleIsOn} isOn={isOn} fadeOutNoOne={ this.fadeOutNoOne } />
 			 </>
 
 

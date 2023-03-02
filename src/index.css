@@ -1506,3 +1506,13 @@ position: fixed;
 .mosey-down{
   border:50px solid greenyellow;
 }
+
+#shine{
+  border:4px solid orange;
+  position:relative;
+  z-index: 9000;
+  top:0;
+  left:0;
+  height:50px;
+  width:50px;
+}

@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "8806d940c2545031f146",
-    "url": "/static/css/main.b8585979.chunk.css"
+    "revision": "5da20be96249aa79e98b",
+    "url": "/static/css/main.037d3400.chunk.css"
   },
   {
-    "revision": "8806d940c2545031f146",
-    "url": "/static/js/main.e6547e76.chunk.js"
+    "revision": "5da20be96249aa79e98b",
+    "url": "/static/js/main.d156e88f.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "531f740735c6ba81194f",
+    "revision": "c02c5ce859e0c3d6bf7b",
     "url": "/static/css/2.7079e116.chunk.css"
   },
   {
-    "revision": "531f740735c6ba81194f",
-    "url": "/static/js/2.00f0feb4.chunk.js"
+    "revision": "c02c5ce859e0c3d6bf7b",
+    "url": "/static/js/2.7fa630c3.chunk.js"
   },
   {
     "revision": "0f781983a29762c7ba7f9f9765b3daa8",
@@ -60,10 +60,6 @@ self.__precacheManifest = [
     "url": "/static/media/color-square.c860d557.gif"
   },
   {
-    "revision": "a82cee8dcaf8584592166c959f9c9cf4",
-    "url": "/static/media/32.a82cee8d.png"
-  },
-  {
     "revision": "c9107e2fe2b0893f496a1b86ea20e1b9",
     "url": "/static/media/big-glass.c9107e2f.png"
   },
@@ -92,12 +88,8 @@ self.__precacheManifest = [
     "url": "/static/media/blinding-light-county.47e968d2.jpg"
   },
   {
-    "revision": "f36c14540a6c425991adcf3604df038e",
-    "url": "/static/media/field2.f36c1454.png"
-  },
-  {
-    "revision": "7d07cc7197333d35a32224a3c47ab707",
-    "url": "/static/media/ciorcal-glass4.7d07cc71.png"
+    "revision": "23738f8d0fb5364a20a027bdb797b49e",
+    "url": "/static/media/ciorcal-glass4.23738f8d.png"
   },
   {
     "revision": "3e0965eda50ff68c63e853367abc9302",
@@ -164,8 +156,8 @@ self.__precacheManifest = [
     "url": "/static/media/ciorcal-glass-light.c5bad409.png"
   },
   {
-    "revision": "a82cee8dcaf8584592166c959f9c9cf4",
-    "url": "/static/media/88.a82cee8d.png"
+    "revision": "94d37a4a367e5544162ba2a0e47601f4",
+    "url": "/static/media/ring2.94d37a4a.png"
   },
   {
     "revision": "44990c0b13de17f54dc57b08dea70181",
@@ -174,6 +166,10 @@ self.__precacheManifest = [
   {
     "revision": "0c95b2a3522de503e40584d46273b2db",
     "url": "/static/media/ciorcal-glass3.0c95b2a3.png"
+  },
+  {
+    "revision": "f36c14540a6c425991adcf3604df038e",
+    "url": "/static/media/field2.f36c1454.png"
   },
   {
     "revision": "1df9bfe53527a34df0490d3889603595",
@@ -288,16 +284,16 @@ self.__precacheManifest = [
     "url": "/static/media/urchlo.e119faec.ttf"
   },
   {
-    "revision": "deb64aa64afcf77da2a7d7ff19e14b59",
-    "url": "/static/media/passage.deb64aa6.png"
-  },
-  {
     "revision": "1bd9b1cf1f14870b3b786486b40ba0c1",
     "url": "/static/media/geaga0.1bd9b1cf.png"
   },
   {
     "revision": "076f3bffba01a16904bf9ba264c71954",
     "url": "/static/media/deetsFrame.076f3bff.png"
+  },
+  {
+    "revision": "deb64aa64afcf77da2a7d7ff19e14b59",
+    "url": "/static/media/passage.deb64aa6.png"
   },
   {
     "revision": "e489ff862837973ba8874fb98b06ef64",
@@ -324,16 +320,12 @@ self.__precacheManifest = [
     "url": "/static/media/sea.ee5004be.png"
   },
   {
-    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
-    "url": "/static/media/mapFrame4.0cdb344e.png"
+    "revision": "4159e8fdaa220a7666d4e619a3429f80",
+    "url": "/static/media/wren2b.4159e8fd.png"
   },
   {
     "revision": "c84c06495852ac730bd653c3aa9bff25",
     "url": "/static/media/wren-code0.c84c0649.png"
-  },
-  {
-    "revision": "4159e8fdaa220a7666d4e619a3429f80",
-    "url": "/static/media/wren2b.4159e8fd.png"
   },
   {
     "revision": "803e6e686778fd42d5b5ccb0059ef189",
@@ -344,16 +336,20 @@ self.__precacheManifest = [
     "url": "/static/media/fairy-ring-east-vert.d0fa8e83.png"
   },
   {
-    "revision": "b67d2f1bd5a2f4dad3e923b36f5038a0",
-    "url": "/static/media/suile0.b67d2f1b.gif"
-  },
-  {
     "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
     "url": "/static/media/mapFrame2.915b9892.png"
   },
   {
     "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
     "url": "/static/media/fortuna-glass-lit.29cb5d03.png"
+  },
+  {
+    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
+    "url": "/static/media/mapFrame4.0cdb344e.png"
+  },
+  {
+    "revision": "b67d2f1bd5a2f4dad3e923b36f5038a0",
+    "url": "/static/media/suile0.b67d2f1b.gif"
   },
   {
     "revision": "9bbe18cf6d054928f146dafcf058fcb1",
@@ -432,7 +428,7 @@ self.__precacheManifest = [
     "url": "/static/media/tinkle.276a05fd.wav"
   },
   {
-    "revision": "3b2f754622dcf409ea15a6a35780c828",
+    "revision": "28dc89c134350686cac9d18535222ec0",
     "url": "/index.html"
   }
 ];

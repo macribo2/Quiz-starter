@@ -1,4 +1,5 @@
 import Overworld from '../../components/overworld/overworld';
+import shine from '../../images/a-btn.png'
 import React, { useState } from 'react';
 import Sparkles from 'react-sparkle'
 import ding3 from '../../audio/ding3.wav'
@@ -177,14 +178,14 @@ export default function App() {
 			
 		},
 		{
-			questionText: 'Fáilte, ' + heroNames[localStorage.getItem('portrait')]+'. Roghnaigh Tánaiste',
+			questionText: 'Roghnaigh Tánaiste, ' + heroNames[localStorage.getItem('portrait')]+'. ',
 			answerOptions: [
 				
 			],
-			quesionTextEng:'Welcome, '+ heroNames[localStorage.getItem('portrait')]+'. Select a lieutenant ( second in command )'
+			quesionTextEng:'//?, '+ heroNames[localStorage.getItem('portrait')]+'.'
 		},
 		{
-			questionText: 'Fáilte ar ais, ' + heroNames[localStorage.getItem('portrait')]+'.',
+			questionText: 'Fáilte, ' + heroNames[localStorage.getItem('portrait')]+'.',
 			answerOptions: [
 				{ answerText: 'cá bhfuil mé?', isCorrect: false },
 				{ answerText: 'Cad é seo?', isCorrect: false },
@@ -627,10 +628,23 @@ let thePucaOf = localStorage.getItem('pucaEng')
 				</div>
 				<div className="input-elements-container">
 
-				<CircularInput className="dial" value={value} onChange={v => setValue(stepValue(v))}>{ }
-						<CircularTrack />
-							<CircularProgress />
-						<CircularThumb />
+				<CircularInput className="dial" value={value} onChange={v => setValue(stepValue(v))} >{ }
+						<CircularTrack 
+						stroke="rgba(150,200,0)"
+						strokeWidth={'3px'}
+						/>
+						<CircularProgress
+							border="rgba(255,250,5,0)"
+							stroke="rgba(195,150,5,0.8)"
+						strokeWidth={'3px'}/>
+						<CircularThumb fill="rgba(135,5,2)"
+							
+						strokeWidth={'3px'}
+					stroke="rgba(180,180,180,1)" 
+							
+						>
+						
+						</CircularThumb>
 					</CircularInput>
 			</div>
 			
@@ -670,7 +684,8 @@ let thePucaOf = localStorage.getItem('pucaEng')
 				toggleIsOn={toggleIsOn}  showSettings={showSettings} handleInputSelect={handleInputSelect} />
 						
 						: null}
-			{showOverworld === true ? <><Overworld storyTimer={storyTimer} incrementScore={incrementScore} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} heroNameEng={ heroNamesEng[localStorage.getItem('portrait')]} />
+			{showOverworld === true ? <>
+				<Overworld toggleIsOn={toggleIsOn} storyTimer={storyTimer} incrementScore={incrementScore} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} heroNameEng={heroNamesEng[localStorage.getItem('portrait')]} />
 			
 			{showScore ? (
 				<div className='score-section'>scór: { score } as {questions.length}</div>
