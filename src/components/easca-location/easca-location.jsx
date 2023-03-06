@@ -74,7 +74,7 @@ export default  class EascaLocation extends React.Component  {
 		this.jQueryCode();
 	}
 	jQueryCode = () => {
-	
+		// alert('');
 		let champions;
 	//gaiscí show all champions stuff:
 	var namesInIrish = [

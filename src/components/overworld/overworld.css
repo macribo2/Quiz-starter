@@ -198,12 +198,13 @@ z-index: 12;
 bottom: 0;
 }
 .directional-pad {
-  left: 0%;
+  left: 4%;
   position: fixed;
-  top: 53%;
+  top: 31%;
   opacity: 1;
   transform: scale(0.8);
   z-index: 60;
+  display:none;
 }
 
 .underx-stage-left,

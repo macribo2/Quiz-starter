@@ -76,11 +76,13 @@ export default  class NumberOne extends React.Component  {
 	}
 	fadeOutNoOne() { 
 		$('.lens-cap').fadeOut();
+		$('#hero').fadeIn();
+		$('.directional-pad').fadeIn();
 		$('.button-mash-ring-4').fadeOut();
-
 		$('.input-elements-container-8').fadeOut();
-		// $('.one-ring').addClass('one-ring-fade');
-		// alert();
+		setTimeout(function () { 
+
+		},1000)
 
 		
 	}

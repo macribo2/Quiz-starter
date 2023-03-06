@@ -269,7 +269,6 @@ let ogHero = localStorage.getItem('portrait')
 		`Íde           `,
 		`Iobhar        `,
 		`Íonait        `,
-		`Irial         `,
 		`Labhraidh     `,
 		`Labhrás       `,
 		`Lachtna       `,
@@ -515,9 +514,9 @@ let ogHero = localStorage.getItem('portrait')
 		`,`wealthy guardian
 		`,`birdlike
 		`,`iron
-		`,`beauty; radiance
+		`,`beauty, radiance
 		`,`steed
-		`,`prompt; ready
+		`,`prompt, ready
 		`,`iron
 		`,`kernal or gorse
 		`,`born of the yew
@@ -530,12 +529,12 @@ let ogHero = localStorage.getItem('portrait')
 		`,`strength of a man
 		`,`raven or battle
 		`,`battle-king
-		`,`modest; honorable; generous
-		`,`wild creature; deer
+		`,`modest, honorable, generous
+		`,`wild creature, deer
 		`,`fair
 		`,`blonde lady
-		`,`fair; white
-		`,`fair-haired; white
+		`,`fair, white
+		`,`fair-haired, white
 		`,`ghost, spirit
 		`,`fair haired
 		`,`fair shouldered
@@ -557,14 +556,13 @@ let ogHero = localStorage.getItem('portrait')
 		`,`Iar + Lug (Celtic god names)
 		`,`act of eating
 		`,`yew tree
-		`,`faithful; pure; sincere
-		`,`Irél	
+		`,`faithful, pure, sincere
 		`,`speaker
 		`,`laurel bush
 		`,`milk-white, milk-like
 		`,`milk-white, milk-like
 		`,`flame
-		`,`songful; poetic
+		`,`songful, poetic
 		`,`calf-herd
 		`,`girl
 		`,`fire
@@ -577,7 +575,7 @@ let ogHero = localStorage.getItem('portrait')
 		`,`bare
 		`,`blackbird
 		`,`cruel or fierce
-		`,`light; brightness
+		`,`light, brightness
 		`,`radiant girl
 		`,`son of Ness (goddess name)
 		`,`son of adze
@@ -591,7 +589,7 @@ let ogHero = localStorage.getItem('portrait')
 		`,`she who intoxicates
 		`,`lightening
 		`,`lightening
-		`,`honorable; proud
+		`,`honorable, proud
 		`,`great
 		`,`- ninne was the first word this saint spoke
 		`,`great
@@ -601,22 +599,22 @@ let ogHero = localStorage.getItem('portrait')
 		`,`noble, good
 		`,` sea battler
 		`,` sea fair
-		`,` lord; master
+		`,` lord, master
 		`,` born of the sea
-		`,` sea-bright/ sea-white
-		`,` high spirited; festive
+		`,` sea-bright, sea-white
+		`,` high spirited, festive
 		`,`	sea battler
 		`,`hound of the sea
 		`,`saint
 		`,`of Naomh (saint)
 		`,`noble princess
 		`,`pure
-		`,`battle-fury; warlike frenzy: name of a Celtic war goddess
+		`,`battle-fury, warlike frenzy: name of a Celtic war goddess
 		`,`not gentle
 		`,`Stoat
-		`,`cloud or passionate; vehement
-		`,`cloud or passionate; vehement
-		`,`brightness; radiance
+		`,`cloud or passionate, vehement
+		`,`cloud or passionate, vehement
+		`,`brightness, radiance
 		`,`possibly, cloud-maker: Celtic god name
 		`,`short of Fionnuala (white shoulders)
 		`,`sallow
@@ -635,11 +633,11 @@ let ogHero = localStorage.getItem('portrait')
 		`,`little deer
 		`,`deer lover
 		`,`	deer
-		`,`grace; prosperity
+		`,`grace, prosperity
 		`,`little king
 		`,`queenly
 		`,`	royal poet
-		`,`	rushing; impetuous
+		`,`	rushing, impetuous
 		`,`seal
 		`,` Norse word for horse. Also means little rose.
 		`,` little seal
@@ -649,7 +647,7 @@ let ogHero = localStorage.getItem('portrait')
 		`,`red haired
 		`,`red-haired
 		`,`red king
-		`,`hero; champion
+		`,`hero, champion
 		`,`sweet, goodly
 		`,`summery person
 		`,`noble queen
@@ -666,19 +664,19 @@ let ogHero = localStorage.getItem('portrait')
 		`,`blossom, bloom
 		`,`hawk-like, noble
 		`,`from Latin secondus
-		`,`traveller; wayfarer
+		`,`traveller, wayfarer
 		`,`hawk
 		`,`old, ancient
 		`,`old, ancient
-		`,`Love; affection
+		`,`Love, affection
 		`,`hawk
-		`,`possibly derived from the word for silk
+		`,`silk
 		`,`good peace
 		`,`health, from a Celtic goddess name
 		`,`mountain man
 		`,`from Norse, summer wanderer
 		`,`bright, radiant
-		`,`gracious; kindly	
+		`,`gracious, kindly	
 		`,`drowsy
 		`,`well-going
 		`,`Thaddeus, Theodosius, Theophilus, poet
@@ -691,7 +689,7 @@ let ogHero = localStorage.getItem('portrait')
 		`,`dark-haired one
 		`,`Lord
 		`,`Lord
-		`,`having land; wide-ruling
+		`,`having land, wide-ruling
 		`,`abundance, flood
 		`,`of Tuama
 		`,`wild boar
@@ -706,7 +704,7 @@ let ogHero = localStorage.getItem('portrait')
 		`,`Noble`,
 		`greenish, from a tribal name
 		`,` proud; arrogant
-		`,`little proud; arrogant one
+		`,`little proud, arrogant one
 		`,`fierce pride
 		`,`Ulsterman
 		`,`Juno	
@@ -743,7 +741,15 @@ let ogHero = localStorage.getItem('portrait')
     if (requestedValue > max) return maxValue;
     else if (requestedValue < min) return minValue;
     else return v;
-  };
+};
+let champPortrait = document.getElementsByClassName('champion-portrait')
+
+	//when player turns dial to select champion:  show avatar in fairy ring; fade in eng and irish names, fade out question text.
+	if (value > 0.25 ||value < 0.25 ) { 
+	
+			document.querySelector(".champion-portrait").classList.add('fade-in-champ');
+			document.querySelector(".names-e").classList.add('fade-in-champ');document.querySelector(".names-i").classList.add('fade-in-champ');document.querySelector(".question-text").classList.add('fade-out-champ');
+	}
 
   function shuffle(obj1, obj2) {
 	var index = obj1.length;
@@ -778,6 +784,8 @@ let ogHero = localStorage.getItem('portrait')
   };
 	let champIcon = champion0;
 	let champID = Math.floor(value * 100);
+	localStorage.setItem('quest-portrait', champID);
+
 	if (champID === 100){
 		champIcon = champion0;
 	}

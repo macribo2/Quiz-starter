@@ -355,10 +355,13 @@ z-index: 101;
   left: 4%;
   color:yellowgreen;               font-size: 1.3em;
   padding: 5px;
+  opacity: 0;
 }
 
 
 .names-i{
+  opacity: 0;
+top:30  %;
   font-size: 2em;
   position: fixed;
   font-family: 'aonchlo';
@@ -381,6 +384,8 @@ z-index: 101;
       .champion-portrait{
 top:5%;
   left: 37%;
+  opacity: 0;
+  /* display:none; */
   }
       .lens-ring4{
         transform:scale(1.2);
@@ -428,3 +433,37 @@ top:5%;
         position: fixed;
       
       }
+      .fade-in-champ{
+        animation:fade-in 1s forwards;
+      }
+      .fade-out-champ{
+        animation:fade-out 1s forwards;
+      }
+
+
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  
+  100% {
+    opacity: 1;
+
+  }
+}
+
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  
+  100% {
+    opacity: 0;
+
+  }
+}
