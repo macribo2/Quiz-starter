@@ -3,6 +3,7 @@ import $ from 'jquery';
 import river2 from '../../vid/river0.mp4';
 import river3 from '../../vid/river0.mp4';
 import battleLens from '../../images/ciorcal-glass3.png'
+import {Rings5} from '../../components/Rings/Rings5'
 
 import React from 'react';
 import silken from '../../images/agnes_new.png';
@@ -43,7 +44,7 @@ export default class Battle0 extends React.Component {
 	render() {
 		return(
 		<>
-			<div className='battle0'>
+			{/* <div className='battle0'>
 
 			<div className="battle-river-container">
 
@@ -61,8 +62,8 @@ export default class Battle0 extends React.Component {
 					<h1> </h1>
 
 					</>
-</div>
-				
+</div> */}
+			<Rings5/>	
 		</>
 )	}
 }

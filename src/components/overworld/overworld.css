@@ -113,8 +113,8 @@ display: none;
     margin:0;
     padding:0;
     box-sizing: border-box;
-    border-left:120px solid #544954;
-    border-right:120px solid #544954;  
+    border-left:120px solid #2e292f;
+    border-right:120px solid #2e292f;  
 
     
 }
@@ -919,10 +919,13 @@ p {
 
 .countyMap {
   /* height: 400px; */
-  width: 400px;
+  /* width: 400px; */
   background-repeat: no-repeat;
   background-size: cover;
 /* border: 4px solid purple; */
+
+height: 100%;
+width: 60%;
 }
 
 #walkies{

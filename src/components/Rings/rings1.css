@@ -353,9 +353,11 @@ z-index: 101;
   position: fixed;
   top: 83%;
   left: 4%;
-  color:yellowgreen;               font-size: 1.3em;
+  color:yellowgreen;               
   padding: 5px;
   opacity: 0;
+
+  font-size:1.6em;
 }
 
 

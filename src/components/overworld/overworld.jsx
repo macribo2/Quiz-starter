@@ -22,7 +22,7 @@ import phone1 from '../../images/phone-0.png';
 import glass from '../../images/big-glass.png';
 import defaultField from '../../images/localMaps/defaultField.png';
 import collinstown from '../../images/localMaps/collinstown.png';
-
+import fernaRiver from '../../images/localMaps/dungeonfog.png';
 import ferna from '../../images/localMaps/dungeonfog.png';
 import statsMenu from '../../images/fog3.png';
 import invMenu from '../../images/inv/inv-bg.png';
@@ -63,7 +63,8 @@ import avatar6 from '../../images/players/diamhraí0.gif';
 import avatar7 from '../../images/players/seanchaí0.png';
 import avatar8 from '../../images/players/pooka.png';
 import avatar9 from '../../images/players/poet.png';
-import agnes2 from '../../images/agnes.png';
+import agnes2 from '../../images/stone-soup/expired_portal.png';
+import ringItem from '../../images/stone-soup/expired_portal.png';
 import mobile from '../../images/players/rógaire0.png'
 
 import champion1 from '../../images/champions/1.png'
@@ -4604,18 +4605,17 @@ let placeNamesGaeilge =
                     ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                     ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                     ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", 1, 1, 1, 1, 1, 1, 1, 1, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                     ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                     ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                     ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                     ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
                 ];
-   
 
 
 
                 $("#walkies").attr("src",ferna)
-                // $("#walkies-overlay").attr("src",fernaRiver)
+                $("#walkies-overlay").attr("src", fernaRiver)
                 gameObjects[playerRow][playerColumn] = 0;
                 
                 playerRow = 7;
