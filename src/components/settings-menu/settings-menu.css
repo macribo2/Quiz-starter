@@ -162,7 +162,7 @@ p {
   /* width: 400px; */
 }
 .menu-container{
-  justify-content: space-between;
+  justify-content: space-evenly;
   height: 50%;
   display: flex;
   align-items: center;
@@ -179,15 +179,17 @@ p {
 }
 
 .menu{
-background-color: rgba(5, 12, 3, 0.833);
-color:thistle;
-padding: 20px;
-opacity: 0;
-width:31%;
-margin: 3%;
-animation: fade-in 4s ease-in 2s forwards;
-font-size: 3em;
-font-family: engf;
+  background-color: rgba(5, 12, 3, 0.5);
+  border: 3px solid# rgba(5, 12, 3, 0.5);
+  color: darkgray;
+  padding: 12px;
+  opacity: 0;
+  width: 19%;
+  margin: 3%;
+  animation: fade-in 3s linear 1s forwards;
+  font-size: 2em;
+  font-family: 'Ubuntu';
+  border-radius: 0;
 
 }
 
@@ -425,10 +427,11 @@ position:fixed;
   color: rgb(45, 160, 30);
   z-index: 1000;
   font-family: Helvetica, Arial, sans-serif;
-  top: 50%;
+  top: 69%;
   display: block;
   font-size: 1.8em;
   width: 100%;
+  left: 10%;
 }
 
 .locDown{

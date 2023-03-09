@@ -3,23 +3,23 @@
 
 	pointer-events: none;
 		top: auto;
-		left: auto;
+		left: 3%;
+
 		position: fixed;
 		font-size: 1.7em;
-		color: rgb(74, 165, 196);
+		/* color: rgb(74, 165, 196); */
 		margin-bottom: 12px;
 		z-index: 5658;
 		padding: 10px;
 		text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
 	  
 	  width:90%;
-		font-family: "urchlo";
+		font-family: "aonchlo";
+font-size:2em;
+
 			
 }
-.rings1{
-	color: rgb(195, 195, 153);
 
-}
 .hidden{
 	display:none;
 }

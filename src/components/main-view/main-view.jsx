@@ -184,19 +184,10 @@ export default function App() {
 			],
 			quesionTextEng:'//?, '+ heroNames[localStorage.getItem('portrait')]+'.'
 		},
-		{
-			questionText: 'Fáilte, ' + heroNames[localStorage.getItem('portrait')]+'.',
-			answerOptions: [
-				{ answerText: 'cá bhfuil mé?', isCorrect: false },
-				{ answerText: 'Cad é seo?', isCorrect: false },
-				{ answerText: '...', isCorrect: true },
-			],		
-				
-			
-		},
+	
 		{
 			// tosníonn an scéal anseo. 
-			questionText: 'I dtearmaí ríomharachta, bíonn rud fíor, nó bréagach.',
+			questionText: 'Ar aghaidh ó '+ localStorage.getItem('champName')+'.',
 			answerOptions: [
 				
 			],
@@ -438,6 +429,12 @@ if (score === 1){
 		}
 		}, 3000)
 	}
+
+	const proceedThroughQuiz = (isCorrect)=>{ 
+
+		const nextQuestion = currentQuestion + 1;
+		setCurrentQuestion(nextQuestion);
+	} 
 	const handleAnswerButtonClick = (isCorrect, storyPath) => {
 		setIsFadedOut(false)
 		// alert('handleAnswer')
@@ -685,7 +682,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 						
 						: null}
 			{showOverworld === true ? <>
-				<Overworld toggleIsOn={toggleIsOn} storyTimer={storyTimer} incrementScore={incrementScore} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} heroNameEng={heroNamesEng[localStorage.getItem('portrait')]} />
+				<Overworld toggleIsOn={toggleIsOn} storyTimer={storyTimer} incrementScore={incrementScore} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} heroNameEng={heroNamesEng[localStorage.getItem('portrait')]} proceedThroughQuiz={ proceedThroughQuiz} />
 			
 			{showScore ? (
 				<div className='score-section'>scór: { score } as {questions.length}</div>

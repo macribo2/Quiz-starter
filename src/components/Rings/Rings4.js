@@ -5,7 +5,7 @@ import lens from '../../images/ciorcal-glass-light.png';
 import lensCap from '../../images/About1/ring2.png';
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
-
+import heroShadow from '../../images/stone-soup/hero-shadow-0.png'
 import empty from '../../images/empty.png';
 import avatar1 from '../../images/players/spéirbhean0.gif';
 import avatar2 from '../../images/players/douglas.png';
@@ -616,7 +616,7 @@ let ogHero = localStorage.getItem('portrait')
 		`,`cloud or passionate, vehement
 		`,`brightness, radiance
 		`,`possibly, cloud-maker: Celtic god name
-		`,`short of Fionnuala (white shoulders)
+		`,`Fionnuala (white shoulders)
 		`,`sallow
 		`,`lad
 		`,`pilgrim
@@ -1095,7 +1095,7 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	let hnameE;
 	// let fadeOutNoOne = this.props.fadeOutNoOne;
 	// let isOn = this.props.isOn
-
+	let proceedThroughQuiz = props.proceedThroughQuiz;
 	return (
 
 <>
@@ -1117,8 +1117,9 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 			
 
         <p x={100} y={100} className="names-i" textAnchor="middle" dy="0.3em" fontWeight="bold">
-        {  hname =  namesInIrish[ Math.floor(value * 100) + round.current * 100]}
+					{hname = namesInIrish[Math.floor(value * 100) + round.current * 100]}
 				</p>
+				{localStorage.setItem('champName', hname)}
 				
 			{<p className="names-e">
 				{ 
@@ -1143,15 +1144,17 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 			
 			 <div className="input-elements-container-5">
 					
-				<button className="button-mash-ring-4" onClick={props.fadeOutNoOne}>
+				<button className="button-mash-ring-4" onClick={props.fadeOutNoOne} onTouchEnd={ props.proceedThroughQuiz}>
 					
-			<img src={champIcon} className="champion-portrait" alt="champion portrait" />
+					<img src={champIcon} className="champion-portrait" alt="champion portrait" />
+							
 			
 				</button>
 				
 			
 		
 
+				<img src={heroShadow} className="hero-shadow" alt="champion portrait" />
 		
 	  </div>
 

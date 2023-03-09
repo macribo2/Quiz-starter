@@ -63,7 +63,7 @@ import avatar6 from '../../images/players/diamhraí0.gif';
 import avatar7 from '../../images/players/seanchaí0.png';
 import avatar8 from '../../images/players/pooka.png';
 import avatar9 from '../../images/players/poet.png';
-import agnes2 from '../../images/stone-soup/expired_portal.png';
+import agnes2 from '../../images/players/bodach0.gif';
 import ringItem from '../../images/stone-soup/expired_portal.png';
 import mobile from '../../images/players/rógaire0.png'
 
@@ -4738,6 +4738,7 @@ alert("Anseo")
 
     render() {
         //react functions here
+        let proceedThroughQuiz = this.props.proceedThroughQuiz
         let storyTimer=this.props.storyTimer
         let incrementScore=this.props.incrementScore
         let readme = `
@@ -5027,7 +5028,7 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                 <Battle className="battle0"/>
 		
                 
-                <NumberOne toggleIsOn={ this.props.toggleIsOn} isOn={ isOn} />
+                <NumberOne proceedThroughQuiz ={this.props.proceedThroughQuiz} toggleIsOn={ this.props.toggleIsOn} isOn={ isOn} />
             </div> 
 
             

@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "ce3c7e2f6d73e381bbb0",
-    "url": "/static/css/main.c3ebdbd8.chunk.css"
+    "revision": "1d5d1d3df332124d4f4a",
+    "url": "/static/css/main.eb3dfdc7.chunk.css"
   },
   {
-    "revision": "ce3c7e2f6d73e381bbb0",
-    "url": "/static/js/main.b5ed39eb.chunk.js"
+    "revision": "1d5d1d3df332124d4f4a",
+    "url": "/static/js/main.eaa78e8c.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "b035b44a41d2abea6743",
+    "revision": "27e63663b34b1ad8b1cb",
     "url": "/static/css/2.7079e116.chunk.css"
   },
   {
-    "revision": "b035b44a41d2abea6743",
-    "url": "/static/js/2.847fb076.chunk.js"
+    "revision": "27e63663b34b1ad8b1cb",
+    "url": "/static/js/2.1b0d57b6.chunk.js"
   },
   {
     "revision": "299be09d070071e76db3f12e3a6fb7c8",
@@ -64,8 +64,8 @@ self.__precacheManifest = [
     "url": "/static/media/diamhraí0.b8c3b594.gif"
   },
   {
-    "revision": "c9107e2fe2b0893f496a1b86ea20e1b9",
-    "url": "/static/media/big-glass.c9107e2f.png"
+    "revision": "8d8ede87f670598ee2d53ae5b4a407a8",
+    "url": "/static/media/big-glass.8d8ede87.png"
   },
   {
     "revision": "355ab836386a5c913cf5df328bf26beb",
@@ -84,6 +84,10 @@ self.__precacheManifest = [
     "url": "/static/media/tonnta1.42cd5dea.gif"
   },
   {
+    "revision": "56409365d3f9490a94af92c497c824ae",
+    "url": "/static/media/bodach0.56409365.gif"
+  },
+  {
     "revision": "1278f106adee3157db32128e7f8e2888",
     "url": "/static/media/ciorcal-glass2.1278f106.png"
   },
@@ -96,8 +100,8 @@ self.__precacheManifest = [
     "url": "/static/media/ring2.94d37a4a.png"
   },
   {
-    "revision": "398f640fe2a1e77895a404c596687163",
-    "url": "/static/media/ciorcal-glass4.398f640f.png"
+    "revision": "80cd43185ecb428eed1387c1486c7502",
+    "url": "/static/media/ciorcal-glass4.80cd4318.png"
   },
   {
     "revision": "3e0965eda50ff68c63e853367abc9302",
@@ -316,28 +320,36 @@ self.__precacheManifest = [
     "url": "/static/media/INFO56_0.8d8dbdd7.ttf"
   },
   {
-    "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
-    "url": "/static/media/fortuna-glass.4c08d21e.png"
-  },
-  {
     "revision": "f00de7d9918169a9feeb00e77a9a2f56",
     "url": "/static/media/ciorcal-glass-bg.f00de7d9.png"
   },
   {
-    "revision": "4159e8fdaa220a7666d4e619a3429f80",
-    "url": "/static/media/wren2b.4159e8fd.png"
+    "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
+    "url": "/static/media/fortuna-glass.4c08d21e.png"
+  },
+  {
+    "revision": "ee5004be8978604da5e223282c5bbe51",
+    "url": "/static/media/sea.ee5004be.png"
   },
   {
     "revision": "c84c06495852ac730bd653c3aa9bff25",
     "url": "/static/media/wren-code0.c84c0649.png"
   },
   {
+    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
+    "url": "/static/media/mapFrame4.0cdb344e.png"
+  },
+  {
+    "revision": "4159e8fdaa220a7666d4e619a3429f80",
+    "url": "/static/media/wren2b.4159e8fd.png"
+  },
+  {
     "revision": "803e6e686778fd42d5b5ccb0059ef189",
     "url": "/static/media/wren-hood.803e6e68.png"
   },
   {
-    "revision": "ee5004be8978604da5e223282c5bbe51",
-    "url": "/static/media/sea.ee5004be.png"
+    "revision": "d0fa8e83c08e2f7d1ce2e1cbe8f2e8b6",
+    "url": "/static/media/fairy-ring-east-vert.d0fa8e83.png"
   },
   {
     "revision": "b67d2f1bd5a2f4dad3e923b36f5038a0",
@@ -350,14 +362,6 @@ self.__precacheManifest = [
   {
     "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
     "url": "/static/media/fortuna-glass-lit.29cb5d03.png"
-  },
-  {
-    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
-    "url": "/static/media/mapFrame4.0cdb344e.png"
-  },
-  {
-    "revision": "d0fa8e83c08e2f7d1ce2e1cbe8f2e8b6",
-    "url": "/static/media/fairy-ring-east-vert.d0fa8e83.png"
   },
   {
     "revision": "9bbe18cf6d054928f146dafcf058fcb1",
@@ -436,7 +440,7 @@ self.__precacheManifest = [
     "url": "/static/media/tinkle.276a05fd.wav"
   },
   {
-    "revision": "1e6321267b49bb84cd2608f73cc1d607",
+    "revision": "b2a24a10f0b02e8e93b7da4f4791014c",
     "url": "/index.html"
   }
 ];
