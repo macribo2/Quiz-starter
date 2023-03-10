@@ -77,15 +77,19 @@ export default  class NumberOne extends React.Component  {
 	fadeOutNoOne() { 
 		$('.lens-cap').fadeOut();
 		$('#hero').fadeIn();
-		$('.directional-pad').fadeIn();
 		$('.button-mash-ring-4').fadeOut();
-		$('.input-elements-container-8').fadeOut();
-		$('.question-text').removeClass('fade-out-champ');
-		$('.question-text').fadeIn();
-		$('.hero-shadow').fadeIn();
+		$('.input-elements-container-8').fadeOut('slow');
+		$('.hero-shadow').fadeIn('slow');
+		$('#eqt-overworld').html('');
+		$('eng-question-text').html('Return here in 30 days, with a ring from each province. ')
+		
 		setTimeout(function () { 
+			$('.question-text').removeClass('fade-out-champ');
+			$('.question-text').fadeIn('slow');
+			$('.directional-pad').fadeIn();
 
-		},1000)
+
+		},2000)
 
 		
 	}

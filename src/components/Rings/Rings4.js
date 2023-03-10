@@ -1096,6 +1096,9 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	// let fadeOutNoOne = this.props.fadeOutNoOne;
 	// let isOn = this.props.isOn
 	let proceedThroughQuiz = props.proceedThroughQuiz;
+	
+	
+	{ const [champName, setChampName] = useState('Anseo'); }
 	return (
 
 <>
@@ -1119,14 +1122,11 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
         <p x={100} y={100} className="names-i" textAnchor="middle" dy="0.3em" fontWeight="bold">
 					{hname = namesInIrish[Math.floor(value * 100) + round.current * 100]}
 				</p>
-				{localStorage.setItem('champName', hname)}
 				
 			{<p className="names-e">
-				{ 
-					hname =  namesInEnglish[ Math.floor(value * 100) + round.current * 100]
-
-				}	
-			</p>}
+				{ namesInEnglish[ Math.floor(value * 100) + round.current * 100]}	
+				</p>}
+			
 
 			<img src={ogHero === "1" ?  avatar1  : empty} className="og-hero"  alt="hero portrait"/>
 			

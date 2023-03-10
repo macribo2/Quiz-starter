@@ -483,6 +483,10 @@ $("#locEng").html("")
 $("#locEng").fadeOut()
             $('#btn-b').fadeOut();
             mapChanges++;
+
+            if (mapChanges === 1) { 
+                $('eng-question-text').html('Select a lieutenant, ')
+            }
  if(mapChanges>1){           
      $('.daff-container').fadeOut();
      $('.question-text').fadeOut();
@@ -4895,7 +4899,7 @@ storyTimer()
                     < img src={glass} rel="preload"className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />
                     <div id="event-report"></div>
                    							
-                    <p className={mapChanges ===1 ? 'eng-question-text' : 'hidden'}>Select a lieutenant, {heroNameEng }</p>
+                    <p className='eng-question-text'></p>
                     
                 </div>) : null}
                 <Silken id="silken"></Silken>

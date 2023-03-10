@@ -187,7 +187,7 @@ export default function App() {
 	
 		{
 			// tosníonn an scéal anseo. 
-			questionText: 'Ar aghaidh ó '+ localStorage.getItem('champName')+'.',
+			questionText: 'Fill anseo, i gceann 30 lá, le fáinne ó gach cúige.',
 			answerOptions: [
 				
 			],
