@@ -2,7 +2,8 @@
 import React from 'react';
 import '../concept/concept.css'
 import './history.css';
-import Ring3 from '../Rings/Rings3'
+import Rings3 from '../Rings/Rings3'
+import { Rings5 } from '../Rings/Rings5'
 import bg from '../../images/fog3.png'
 import { BtnSelect } from '../ui/btn-select';
 import { BtnStart } from '../ui/btn-start';
@@ -247,7 +248,7 @@ let toggleIsOn = this.props.toggleIsOn
                                 
                                         <h2 id="story">{storyTexts[this.state.story]}</h2>
 
-                    <Ring3 handleInputSelect={ this.props.handleInputSelect}isOn={isOn} toggleIsOn = {toggleIsOn}/>
+                    <Rings3 handleInputSelect={ this.props.handleInputSelect}isOn={isOn} toggleIsOn = {toggleIsOn}/>
                                 
                             </div>
                

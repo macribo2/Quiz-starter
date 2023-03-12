@@ -2,8 +2,8 @@
 import { render } from "react-dom";
 import React, { useState, useEffect } from 'react'
 import lens from '../../images/ciorcal-glass-light.png';
-import lensCap from '../../images/About1/ring2.png';
 import empty from '../../images/empty.png';
+import lensCap from '../../images/About1/feicimthu.png'
 
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
@@ -148,18 +148,9 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
   };
 	let champIcon = pearl;
 	let champID = Math.floor(value * 100);
-	localStorage.setItem('quest-portrait', champID);
+	// localStorage.setItem('quest-portrait', champID);
 
-	if (champID === 0) {
-		return <img src= {fromZero} alt="binary bars and hup the yin-yan "/>
-	}
-	if (champID === 1){
-	}
-	if (champID === 2){
-	}
-	if (champID === 3){
-	}
-	
+
   const tryValue = v => {
     updateValue(valueWithinLimits(v));
   };
@@ -172,12 +163,13 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 
 <>
 		
-<div className="input-elements-container-7">
+<div className="ring-5-lens-cap-container">
 <img src={lensCap} className="lens-cap" alt="a fantasy landscape a ring of stones, a haunted tree" />
 			</div>
-	  <div className="input-elements-container-8">
-	  <img src={lens} id="lens" className="lens-ring4" alt="a glass lens" />
-			<CircularInput value={value} className="dial dial4" onChange={tryValue}>
+	 
+			
+			 <div className="ring-5-button-mash-container">
+			 <CircularInput value={value} className="dial dial5" onChange={tryValue}>
 				<CircularTrack
 				stroke="rgba(185,230,5,1)"
 						strokeWidth={'3px'}
@@ -186,6 +178,11 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 					stroke="rgba(180,180,180,1)" 	
 							strokeWidth={'3px'}/>
 			</CircularInput>
+			
+				{/* <button className="button-mash-ring-5" onClick={props.fadeOutNoOne}></button>
+				 */}
+			 </div>
+			 <div className="dial-container">
 			
 
         <p x={100} y={100} className="names-i" textAnchor="middle" dy="0.3em" fontWeight="bold">
@@ -199,28 +196,12 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 				}	
 			</p>}
 
-			<img src={ogHero === "1" ?  avatar1  : empty} className="og-hero"  alt="hero portrait"/>
-			
 
+			<img src={champIcon} className="champion-portrait" alt="champion portrait" />
 			{/* <img src={ogHero === "9" ? avatar9 :empty} className="og-hero"  alt="hero portrait"/> */}
 			
 			</div>
 			
-			
-			 <div className="input-elements-container-5">
-					
-				<button className="button-mash-ring-4" onClick={props.fadeOutNoOne}>
-					
-			<img src={champIcon} className="champion-portrait" alt="champion portrait" />
-			
-				</button>
-				
-			
-		
-
-		
-	  </div>
-
 </>
 			);
 }

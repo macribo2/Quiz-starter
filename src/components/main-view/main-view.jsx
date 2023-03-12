@@ -106,12 +106,12 @@ export default function App() {
 	const [isOn, toggleIsOn] = useToggle();
 	const [showSettings, setSettings] = useState(1);
 	let hints = [``,
-		``, `It is you!`, ``, ``, ``, ``, `I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `
+		``, `It is you!`, `a`, `b`, `c`, `d`, `I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `
 		+ heroNamesEng[gotten] + `, you’ll see fine fun.`, `I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me ` + heroNamesEng[localStorage.getItem('portrait')] + `, you’ll see fine fun.`, ``, ``, ``,]
-	let hintsAnswersA = [``,``,``,``,``,``,``,``];
-	let hintsAnswersB = [``,``,``,``,``,``,``,``,``];
-	let hintsAnswersC = [``,``,``,``,``,``,``];
-	let hintsAnswersD = [``, ``, ``, ``, ``];
+	let hintsAnswersA = [`a`,``,`a3`,`a4`,`a5`,`a6`,`a7`,`a8`];
+	let hintsAnswersB = [``,``,`b2`,`b3`,`b4`,`b5`,`b6`,`b7`,`b8`];
+	let hintsAnswersC = [`c`,`c1`,`c2`,`c3`,`c4`,`c5`,`c6`];
+	let hintsAnswersD = [`d`, `d`, `d`, `d`, `e`,`f`, `g`, `h`];
 	
 	
 	
@@ -187,7 +187,7 @@ export default function App() {
 	
 		{
 			// tosníonn an scéal anseo. 
-			questionText: 'Fill anseo, i gceann 30 lá, le fáinne ó gach cúige.',
+			questionText: 'Fill anseo, i gceann 3 lá, le fáinne ó gach cúige.',
 			answerOptions: [
 				
 			],
@@ -727,7 +727,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			<ReactAudioPlayer src={currentQuestion === 5 ? chat : null} autoPlay />
 			 */}
 			{/* <ReactAudioPlayer src={isOn === false ? tinkle : null} autoPlay /> */}
-			<ReactAudioPlayer src={isOn === true ? tinkle1: null} autoPlay />
+			{/* <ReactAudioPlayer src={isOn === true ? tinkle1: null} autoPlay /> */}
 			<img id="app-bg" src={black} className="question-img app-bg-blackripple" alt="black bg." />		
 				
 			

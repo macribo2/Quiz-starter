@@ -64,6 +64,7 @@ import './no-one.css';
 import skybg from '../../images/blinding-light-county.jpg'
 import fields2 from '../../images/empty.png'
 import { Rings4 } from '../Rings/Rings4'
+import { Rings5 } from '../Rings/Rings5';
 export default  class NumberOne extends React.Component  {
 	constructor() {
         super();
@@ -1479,7 +1480,7 @@ render()
 			</div>	
 				 </div>
 	
-				 <Rings4 className="rng-4" toggleIsOn={this.props.toggleIsOn} isOn={isOn} proceedThroughQuiz={this.props.proceedThroughQuiz } fadeOutNoOne={ this.fadeOutNoOne } />
+				 <Rings4  toggleIsOn={this.props.toggleIsOn} isOn={isOn} proceedThroughQuiz={this.props.proceedThroughQuiz } fadeOutNoOne={ this.fadeOutNoOne } />
 				 
 			 </>
 

@@ -63,7 +63,7 @@ export default class Battle0 extends React.Component {
 
 					</>
 </div> */}
-			<Rings5/>	
+			{/* <Rings5/>	 */}
 		</>
 )	}
 }

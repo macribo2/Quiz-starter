@@ -784,7 +784,7 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
   };
 	let champIcon = champion0;
 	let champID = Math.floor(value * 100);
-	localStorage.setItem('quest-portrait', champID);
+
 
 	if (champID === 100){
 		champIcon = champion0;
@@ -1087,7 +1087,7 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	if (champID === 99){
 		champIcon = champion99;
 	}
-	
+	localStorage.setItem('quest-portrait', champID);
   const tryValue = v => {
     updateValue(valueWithinLimits(v));
   };

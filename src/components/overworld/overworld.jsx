@@ -5,6 +5,7 @@ import ReactRain from 'react-rain-animation';
 import bit from '../../images/gifs/bit.gif'
 import "react-rain-animation/lib/style.css";
 import Easca from '../easca/easca'
+import {Rings5} from '../Rings/Rings5'
 import '../Rings/rings1.css';
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
@@ -29,6 +30,7 @@ import invMenu from '../../images/inv/inv-bg.png';
 import diskMenu from '../../images/blackripple.gif';
 import Battle from '../battle/battle0'
 import EascaLocation from '../easca-location/easca-location'
+import rocks from '../../images/rocks.png'
 
 import gigakoops from '../../audio/Gigakoops - Level 2 - High Clouds.mp3'
 import jam from '../../audio/ultima-tone-long.wav'
@@ -3659,7 +3661,7 @@ $('#walkies-overlay').fadeIn();
             },1500)
          }        $('#north').on('touchstart', function () {
             // playerFacing = imreoir.avatar;
-             stillPressedNorth = true;
+             stillPressedNorth = false;
              updateEventReport('ó thuaidh')
              
              
@@ -3712,7 +3714,7 @@ $('#walkies-overlay').fadeIn();
         
 
         $('#south').on('touchstart', function () {
-            stillPressedSouth = true
+            stillPressedSouth =false
 
             if (keyboardActive) {
                 if (playerRow < ROWS - 1) {
@@ -3775,7 +3777,7 @@ alert("Chun troid!" )
 
 
         $('#east').on('touchstart', function () {
-            stillPressedEast = true;
+            stillPressedEast = false;
             // playerFacing = imreoir.avatar;
             updateEventReport('soir')
 
@@ -3810,7 +3812,7 @@ alert("Chun troid!" )
 
         });
         $('#west').on('touchstart', function () {
-            stillPressedWest = true;
+            stillPressedWest = false;
             updateEventReport('siar')
 
 
@@ -4630,7 +4632,45 @@ let placeNamesGaeilge =
 
 
 
+            if (whereAbouts === "Tulaigh an Eallaigh") { 
 
+
+                map =
+                [
+                    ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
+                ];
+
+
+//rings in Tulaigh an eallaigh : counting in binary from 0 to 63.
+                //player has completed ring? player has tullyRing1; update quiz questions with tullyRing1 quiz content.
+                $("#walkies").attr("src",ferna)
+                $("#walkies-overlay").attr("src", fernaRiver)
+                gameObjects[playerRow][playerColumn] = 0;
+                playerRow = 3;
+                playerColumn = 3;
+                $('#hero').fadeOut();
+                $('.champion-portrait').fadeIn();
+                $('.ringOfTullyNally').css('display','flex');
+                $('.ringOfTullyNally').fadeIn();
+                $('#loc').fadeOut();
+                $('#locEng').fadeOut();
+            }
+
+
+
+
+
+
+  
   
 
             else if (whereAbouts === "") { 
@@ -4776,20 +4816,13 @@ storyTimer()
     let isOn = this.props.isOn;
         return (
             
-            <div >    <div className="bg"></div>
-           
-             
-               
+            <div>
+                <div className="bg"></div>
                 <div id="toolbar"></div>
-                <div className="ui">
-                </div>
-
-
-
+                <div className="ui"></div>
                 <div id="screen-blocker">
                     <div className="container screen-blocker">
-                        <div className="col-xs-4 gaeilge screen-blocker">
-                        </div>
+                        <div className="col-xs-4 gaeilge screen-blocker"></div>
                     </div>
                 </div>
                 <div className="start-options">
@@ -4816,43 +4849,36 @@ storyTimer()
  
                 <div className="directional-pad" onTouchStart={this.props.incrementScore} onTouchEnd={localStorage.setItem('whereAmI', 'westmeath')
                 }>
-    <div className='grid-container'>
+                    <div className='grid-container'>
 
-        <div className="grid-item"></div>
-        <div className="grid-item" id="north">
-        </div>
-        <div className="grid-item" ></div>
-        <div className="grid-item" id="west">
-        </div>
-        <div className="grid-item" id="btn-m"><div id="btn-middle-baile" /></div>
-        <div className="grid-item" id="east">
-        </div>
-        <div className="grid-item"></div>
-        <div className="grid-item" id="south">
-        </div>
-        <div className="grid-item"></div>
-    </div>
-
-
-
-
-
+                        <div className="grid-item"></div>
+                        <div className="grid-item" id="north">
+                        </div>
+                        <div className="grid-item" ></div>
+                        <div className="grid-item" id="west">
+                        </div>
+                        <div className="grid-item" id="btn-m"><div id="btn-middle-baile" /></div>
+                        <div className="grid-item" id="east">
+                        </div>
+                        <div className="grid-item"></div>
+                        <div className="grid-item" id="south">
+                        </div>
+                        <div className="grid-item"></div>
+                    </div>
                 </div>            
 
-<img id="mob-effect" className="phonebg2"src={phone1} alt="" />
+                <img id="mob-effect" className="phonebg2"src={phone1} alt="" />
 
                 <div className="countyMap-container">
-                <div className="sea"></div>
-                           <div className="countyMap">
-                        </div>
-                    </div>
-                    <div className="map-lens-container">
+                    <div className="sea"></div>
+                    <div className="countyMap"></div>
+                </div>
+                <div className="map-lens-container">
                         <img src={defaultField} alt="green field" id="walkies"/>
                         <img src={empty} alt="green field" id="walkies-overlay"/>
                         <div className="stage-container" id="kungfu">
-                    <div id="stage" >
-                    </div>
-                </div>
+                            <div id="stage"></div>
+                        </div>
 
                     {/* {this.state.showEascaLocation ? <EascaLocation whereAmI= "geaga" />:null} */}
 
@@ -5016,16 +5042,22 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                 <img id="inventory" rel="preload" src={invMenu}></img>
                
        storyTimer={()=>storyTimer}
-       <h2 id="loc" alt="holder for location names"></h2>
+       <p id="loc" alt="holder for location names"></p>
                 <p id="locEng" className={this.state.isOn ? "reveal" : "locDown"} alt="holder for location names English">
                 </p>
                 {this.state.whereAmI === "geaga" ?
                     
                     <div className="daff-container" >
-                    {/* <img src={ daff} alt="small yellow flowers stir in the breeze" /> */}
+                    {/* <img src={ rocks} className="rocks" alt="circle of rocks" /> */}
                 {/* <ReactRain className="react-rain" numDrops="200" /> */}
     
                     </div>:null}
+
+                    {
+                    <>
+                 
+                    </>}
+                
                 <div className="river-container">
                 </div>
                 <div id="puck"><img src={agnes2} alt="a strange creature" /></div>
@@ -5033,6 +5065,13 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
 		
                 
                 <NumberOne proceedThroughQuiz ={this.props.proceedThroughQuiz} toggleIsOn={ this.props.toggleIsOn} isOn={ isOn} />
+
+
+                <div className="ringOfTullyNally" >
+                    {/* <img src={ daff} className="daffs" alt="small yellow flowers stir in the breeze" /> */}
+    
+                    <Rings5 />
+                    </div>
             </div> 
 
             
