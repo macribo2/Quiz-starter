@@ -745,11 +745,7 @@ let ogHero = localStorage.getItem('portrait')
 let champPortrait = document.getElementsByClassName('champion-portrait')
 
 	//when player turns dial to select champion:  show avatar in fairy ring; fade in eng and irish names, fade out question text.
-	if (value > 0.25 ||value < 0.25 ) { 
 	
-			document.querySelector(".champion-portrait").classList.add('fade-in-champ');
-			document.querySelector(".names-e").classList.add('fade-in-champ');document.querySelector(".names-i").classList.add('fade-in-champ');document.querySelector(".question-text").classList.add('fade-out-champ');
-	}
 
   function shuffle(obj1, obj2) {
 	var index = obj1.length;
@@ -1089,7 +1085,8 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	}
 	localStorage.setItem('quest-portrait', champID);
   const tryValue = v => {
-    updateValue(valueWithinLimits(v));
+	  updateValue(valueWithinLimits(v));
+	  thumbStart();
   };
 	let hname;
 	let hnameE;
@@ -1099,6 +1096,19 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	
 	
 	{ const [champName, setChampName] = useState('Anseo'); }
+	
+
+	//thumbStart is a hack to prevent side effect of making question text fade out when player is at location 'geaga'.
+	function thumbStart() { 
+		// alert();
+		document.querySelector(".champion-portrait").classList.add('fade-in-champ');
+		document.querySelector(".names-e").classList.add('fade-in-champ'); document.querySelector(".names-i").classList.add('fade-in-champ');
+		document.querySelector(".question-text").classList.add('fade-out-champ');
+
+	} 
+
+
+	
 	return (
 
 <>
@@ -1106,16 +1116,16 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 <div className="input-elements-container-7">
 <img src={lensCap} className="lens-cap" alt="a fantasy landscape a ring of stones, a haunted tree" />
 			</div>
-	  <div className="input-elements-container-8">
+	  <div className="input-elements-container-8" >
 	  <img src={lens} id="lens" className="lens-ring4" alt="a glass lens" />
-			<CircularInput value={value} className="dial dial4" onChange={tryValue}>
+			<CircularInput  value={value} className="dial dial4" onChange={tryValue}  >
 				<CircularTrack
 				stroke="rgba(185,230,5,1)"
 						strokeWidth={'3px'}
 				/>
-				<CircularThumb  fill="rgba(135,5,2)"
-					stroke="rgba(180,180,180,1)" 	
-							strokeWidth={'3px'}/>
+					<CircularThumb fill="rgba(135,5,2)"
+						stroke="rgba(180,180,180,1)"
+						strokeWidth={'3px'} />
 			</CircularInput>
 			
 
@@ -1144,7 +1154,7 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 			
 			 <div className="input-elements-container-5">
 					
-				<button className="button-mash-ring-4" onClick={props.fadeOutNoOne} onTouchEnd={ props.proceedThroughQuiz}>
+				<button className="button-mash-ring-4"  onClick={props.fadeOutNoOne} onTouchEnd={ props.proceedThroughQuiz}>
 					
 					<img src={champIcon} className="champion-portrait" alt="champion portrait" />
 							
@@ -1158,7 +1168,8 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 		
 	  </div>
 
-</>
+			<p id="hints-ring-4" className={props.isOn?"hints":"hidden"}>{'Choose a champion, '+ props.heroNameEng}</p>
+		</>
 			);
 }
 

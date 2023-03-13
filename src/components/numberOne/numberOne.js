@@ -79,10 +79,12 @@ export default  class NumberOne extends React.Component  {
 		$('.lens-cap').fadeOut();
 		$('#hero').fadeIn();
 		$('.button-mash-ring-4').fadeOut();
-		$('.input-elements-container-8').fadeOut('slow');
+		$('.input-elements-container-8').css('display','none');
 		$('.hero-shadow').fadeIn('slow');
-		$('#eqt-overworld').html('');
-		$('eng-question-text').html('Return here in 30 days, with a ring from each province. ')
+		$('.answer-section').fadeIn();
+		$('#hints-ring-4').html('');
+		// $('#eqt-overworld').html('');
+		// $('eng-question-text').html('Return here in 30 days, with a ring from each province. ')
 		
 		setTimeout(function () { 
 			$('.question-text').removeClass('fade-out-champ');
@@ -1480,7 +1482,7 @@ render()
 			</div>	
 				 </div>
 	
-				 <Rings4  toggleIsOn={this.props.toggleIsOn} isOn={isOn} proceedThroughQuiz={this.props.proceedThroughQuiz } fadeOutNoOne={ this.fadeOutNoOne } />
+				 <Rings4 heroName={this.props.heroName} heroNameEng={ this.props.heroNameEng} toggleIsOn={this.props.toggleIsOn} isOn={this.props.isOn} proceedThroughQuiz={this.props.proceedThroughQuiz } fadeOutNoOne={ this.fadeOutNoOne } />
 				 
 			 </>
 

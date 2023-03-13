@@ -178,7 +178,7 @@ export default function App() {
 			
 		},
 		{
-			questionText: 'Roghnaigh Tánaiste, ' + heroNames[localStorage.getItem('portrait')]+'. ',
+			questionText: 'Roghnaigh féinnidh, ' + heroNames[localStorage.getItem('portrait')]+'. ',
 			answerOptions: [
 				
 			],
@@ -187,7 +187,7 @@ export default function App() {
 	
 		{
 			// tosníonn an scéal anseo. 
-			questionText: 'Fill anseo, i gceann 3 lá, le fáinne ó gach cúige.',
+			questionText: 'Fill anseo le fáinne ó gach cúige.',
 			answerOptions: [
 				
 			],
@@ -619,7 +619,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 
 			{currentQuestion === 1 ? <>
 				
-				<div className="input-elements-container">
+				<div className="input-elements-bg-container">
 				
 					<img rel="preload"src={lens} id="lens" alt="a glass 	" />
 				</div>
@@ -804,7 +804,6 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			 
 				{isOn ? (<div id="glass">
 
-				<p className={currentQuestion === 1 ? "choice-ring-0-hint" : "hidden"}>{choiceRingEng[value * 10]}</p>
 				<p id="hints" className={isFadedOut ? 'fadedIn' : ' fadedOut'} >{hints[currentQuestion] }</p>
 				<p className={isFadedOut ? 'fadedIn hints' : ' fadedOut hints'}  id="hintsA">{hintsAnswersA[currentQuestion] }</p>
 				<p className={isFadedOut ? 'fadedIn hints' : ' fadedOut hints'}id="hintsB" >{hintsAnswersB[currentQuestion] }</p>
@@ -816,6 +815,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 
 < img  src={glass} className="question-img" rel="preload" id="glass-img" alt="glass bg for translucent overlay effect." />	
 
+				<p className={currentQuestion === 1 ? "choice-ring-0-hint" : "hidden"}>{choiceRingEng[value * 10]}</p>
 
 		
 				</div>) : null}

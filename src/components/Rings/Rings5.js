@@ -129,7 +129,8 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	if (value > 0 ||value < 0 ) { 
 	
 			document.querySelector(".champion-portrait").classList.add('fade-in-champ');
-			document.querySelector(".names-e").classList.add('fade-in-champ');document.querySelector(".names-i").classList.add('fade-in-champ');document.querySelector(".question-text").classList.add('fade-out-champ');
+		document.querySelector(".names-e").classList.add('fade-in-champ'); document.querySelector(".names-i").classList.add('fade-in-champ');
+		// document.querySelector(".question-text").classList.add('fade-out-champ');
 	}
 
 	function buttonMashClick() { 

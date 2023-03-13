@@ -491,7 +491,7 @@ $("#locEng").fadeOut()
             }
  if(mapChanges>1){           
      $('.daff-container').fadeOut();
-     $('.question-text').fadeOut();
+    //  $('.question-text').fadeOut();
      $('.eng-question-text').css('display','none');
      $('.eng-question-text-holder').css('color','orange');
  
@@ -5064,7 +5064,7 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                 <Battle className="battle0"/>
 		
                 
-                <NumberOne proceedThroughQuiz ={this.props.proceedThroughQuiz} toggleIsOn={ this.props.toggleIsOn} isOn={ isOn} />
+                <NumberOne proceedThroughQuiz={this.props.proceedThroughQuiz} toggleIsOn={this.props.toggleIsOn} isOn={this.state.isOn} heroNameEng={ this.props.heroNameEng} heroName={ this.props.heroName} />
 
 
                 <div className="ringOfTullyNally" >
