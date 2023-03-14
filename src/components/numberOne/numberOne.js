@@ -83,6 +83,9 @@ export default  class NumberOne extends React.Component  {
 		$('.hero-shadow').fadeIn('slow');
 		$('.answer-section').fadeIn();
 		$('#hints-ring-4').html('');
+		
+		$('#hints-geaga').fadeIn();
+		
 		// $('#eqt-overworld').html('');
 		// $('eng-question-text').html('Return here in 30 days, with a ring from each province. ')
 		

@@ -180,7 +180,7 @@ export default function Rings3(props) {
 						{/* <img className={value * 10 === 3 ? 'about-pics' : 'hidden'} src={about9} id="about4" alt="illustration placeholder" /> */}
 						
 					{/* <img className={value*10 === 7 ? 'about-pics':'hidden'} src={about4}  id="about4" alt="illustration placeholder" /> */}
-					<img className={value*10 === 4 ? 'about-pics':'hidden'} src={about6} alt="illustration placeholder" />
+					{/* <img className={value*10 === 4 ? 'about-pics':'hidden'} src={about6} alt="illustration placeholder" /> */}
 					{/* <img className={value*10 === 7 ? 'about-pics':'hidden'} src={about0} alt="illustration placeholder" /> */}
 				</div>
 				<div className="about-overlay-container">
@@ -196,10 +196,15 @@ export default function Rings3(props) {
 		</div>
 	
 				<div className="linux-land-container">
+					<img className={value * 10 === 4 ? 'about-pics' : 'hidden'} src={linucsLand} id="linux-land" alt="illustration placeholder" />
+				</div>
+					
+					<div className="linux-land-container">
 
 					<img className={value*10 === 5 ? 'about-pics':'hidden'} src={linucsLand}  id="linux-land-down" alt="illustration placeholder" />
-					<img className={value*10 === 4 ? 'about-pics':'hidden'} src={linucsLand}  id="linux-land" alt="illustration placeholder" />
 				</div>
+
+
 				<div className={value * 10 === 4 ? "linux-lens-container" : "hidden"}>
 					<img rel="preload" className={value * 10 === 4 ? "map-lens" : "hidden"} src={lensBG} alt="" />
 					

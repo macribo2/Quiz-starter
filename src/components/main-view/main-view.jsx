@@ -108,8 +108,8 @@ export default function App() {
 	let hints = [``,
 		``, `It is you!`, `a`, `b`, `c`, `d`, `I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me `
 		+ heroNamesEng[gotten] + `, you’ll see fine fun.`, `I am going to Doon-na-shee (the fortress of the fairies) to-night, to play music for the good people. If you come with me ` + heroNamesEng[localStorage.getItem('portrait')] + `, you’ll see fine fun.`, ``, ``, ``,]
-	let hintsAnswersA = [`a`,``,`a3`,`a4`,`a5`,`a6`,`a7`,`a8`];
-	let hintsAnswersB = [``,``,`b2`,`b3`,`b4`,`b5`,`b6`,`b7`,`b8`];
+	let hintsAnswersA = [`a`,``,`a3`,`a4`,``,`a6`,`a7`,`a8`];
+	let hintsAnswersB = [``,``,`b2`,`b3`,``,`b5`,`b6`,`b7`,`b8`];
 	let hintsAnswersC = [`c`,`c1`,`c2`,`c3`,`c4`,`c5`,`c6`];
 	let hintsAnswersD = [`d`, `d`, `d`, `d`, `e`,`f`, `g`, `h`];
 	

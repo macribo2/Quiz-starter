@@ -532,7 +532,7 @@ $('.sea').css('display','none')
            //hiding unsightly flicker when emblems are updated. they fade in again after the giant directional switch statement:
             $('.emblem-img').css('display', 'none')
             $('#output').css('display','none')
-
+$('.question-text').fadeOut()
             switch (imreoir.whereAmI) {
 
                 case 'geaga':
@@ -4897,17 +4897,11 @@ storyTimer()
                <button id="toggle-glass-btn2" onClick={()=>{
                     if (this.state.isOn) {
                         this.setState({ isOn: false })
-                        console.log("hi from toggle glass")
-                        
-                      
-				
-                    
-                    }
+                        console.log("hi from toggle glass overworld")
+                         }
                     else {
                         (this.setState({ isOn: true }))
-                        console.log("hi from toggle glass")
-                    
-               
+                        console.log("hi from toggle glass  overworld")
                     }
                     {/* setTimeout(()=> { this.setState({ isOn: false }) }, 3000) */}
                         
@@ -5072,6 +5066,8 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
     
                     <Rings5 />
                     </div>
+
+                    <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'Return here with a ring from each Province.'}</p>
             </div> 
 
             
