@@ -517,6 +517,8 @@ $('.sea').css('display','none')
             
                 
                 $('.emblem-container').fadeOut();
+            $('#hints-geaga').fadeOut();
+
             }, 2000)
            
 
@@ -4634,7 +4636,7 @@ let placeNamesGaeilge =
 
             if (whereAbouts === "Tulaigh an Eallaigh") { 
 
-
+alert('Tully!')
                 map =
                 [
                     ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
