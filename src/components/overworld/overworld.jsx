@@ -390,9 +390,9 @@ export default class Overworld extends React.Component {
         var start = Date.now();
         setInterval(function() {
             var delta = Date.now() - start; // milliseconds elapsed since start
-              console.log(Math.floor(delta / 1000)); // in seconds
+            //   console.log(Math.floor(delta / 1000)); // in seconds
             // alternatively just show wall clock time:
-            console.log(new Date().toUTCString());
+            // console.log(new Date().toUTCString());
             overworldPortrait = localStorage.getItem('quest-portrait');
 $('#hero').attr('src', setPlayerIcon());
         }, 1000); // update about every second
@@ -4636,7 +4636,7 @@ let placeNamesGaeilge =
 
             if (whereAbouts === "Tulaigh an Eallaigh") { 
 
-alert('Tully!')
+// alert('Tully!')
                 map =
                 [
                     ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
@@ -4655,13 +4655,13 @@ alert('Tully!')
 //rings in Tulaigh an eallaigh : counting in binary from 0 to 63.
                 //player has completed ring? player has tullyRing1; update quiz questions with tullyRing1 quiz content.
                 $("#walkies").attr("src",ferna)
-                $("#walkies-overlay").attr("src", fernaRiver)
+                // $("#walkies-overlay").attr("src", fernaRiver)
                 gameObjects[playerRow][playerColumn] = 0;
-                playerRow = 3;
-                playerColumn = 3;
-                $('#hero').fadeOut();
+                playerRow = 0;
+                playerColumn = 0;
+                // $('#hero').fadeOut();
                 $('.champion-portrait').fadeIn();
-                $('.ringOfTullyNally').css('display','flex');
+                $('.ringOfTullyNally').css('display','grid');
                 $('.ringOfTullyNally').fadeIn();
                 $('#loc').fadeOut();
                 $('#locEng').fadeOut();
@@ -5063,13 +5063,16 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                 <NumberOne proceedThroughQuiz={this.props.proceedThroughQuiz} toggleIsOn={this.props.toggleIsOn} isOn={this.state.isOn} heroNameEng={ this.props.heroNameEng} heroName={ this.props.heroName} />
 
 
-                <div className="ringOfTullyNally" >
+
+                    <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'Return here with a ring from each Province.'}</p>
+
+
+
+                    <div className="ringOfTullyNally" >
                     {/* <img src={ daff} className="daffs" alt="small yellow flowers stir in the breeze" /> */}
     
                     <Rings5 />
                     </div>
-
-                    <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'Return here with a ring from each Province.'}</p>
             </div> 
 
             

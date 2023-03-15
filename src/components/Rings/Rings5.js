@@ -54,6 +54,8 @@ import {
 
 export function Rings5(props) {
 
+	// document.getElementByClassName('names-i').style.opacity ="1";
+	// document.getElementsByClassName('names-e').style.opacity="1";
   // Similar to componentDidMount and componentDidUpdate:
 	useEffect(() => {
 
@@ -64,7 +66,8 @@ export function Rings5(props) {
 		alert();
 	}
 let ogHero = localStorage.getItem('portrait') 
-	var namesInIrish = [
+	var irishNumbers = [
+		``,
 		`náid         `,
 		`aon         `,
 		`dó       `,
@@ -77,9 +80,9 @@ let ogHero = localStorage.getItem('portrait')
 		`naoí         `
 		];
 		
-	let	namesInEnglish = [
+	let	arabicNumbers = [
 		
-		
+		``,
 		`0
 		`,` 1
 		`,`2`,
@@ -128,9 +131,6 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	//when player turns dial to select champion:  show avatar in fairy ring; fade in eng and irish names, fade out question text.
 	if (value > 0 ||value < 0 ) { 
 	
-			document.querySelector(".champion-portrait").classList.add('fade-in-champ');
-		document.querySelector(".names-e").classList.add('fade-in-champ'); document.querySelector(".names-i").classList.add('fade-in-champ');
-		// document.querySelector(".question-text").classList.add('fade-out-champ');
 	}
 
 	function buttonMashClick() { 
@@ -153,23 +153,38 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 
 
   const tryValue = v => {
-    updateValue(valueWithinLimits(v));
+	  updateValue(valueWithinLimits(v));
+	  thumbStart()
   };
 	let hname;
 	let hnameE;
 	// let fadeOutNoOne = this.props.fadeOutNoOne;
 	// let isOn = this.props.isOn
 
+//thumbStart is a hack to prevent side effect of making question text fade out when player is at location 'geaga'.
+function thumbStart() { 
+	// alert();
+	document.querySelector(".champion-portrait").classList.add('fade-in-champ');
+	document.querySelector(".numbers-e").classList.add('fade-in-champ'); document.querySelector(".numbers-i").classList.add('fade-in-champ');
+	document.querySelector(".question-text").classList.add('fade-out-champ');
+
+} 
+
 	return (
 
 <>
 		
-<div className="ring-5-lens-cap-container">
-<img src={lensCap} className="lens-cap" alt="a fantasy landscape a ring of stones, a haunted tree" />
-			</div>
+{/* <div className="ring-5-lens-cap-container"> */}
+{/* <img src={lensCap} className="lens-cap" alt="a fantasy landscape a ring of stones, a haunted tree" /> */}
+			{/* </div> */}
 	 
 			
-			 <div className="ring-5-button-mash-container">
+			 {/* <div className="ring-5-button-mash-container"> */}
+			 
+				{/* <button className="button-mash-ring-5" onClick={props.fadeOutNoOne}></button>
+				 */}
+			 {/* </div> */}
+			 <div className="ring-5-dial-container">
 			 <CircularInput value={value} className="dial dial5" onChange={tryValue}>
 				<CircularTrack
 				stroke="rgba(185,230,5,1)"
@@ -180,29 +195,28 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 							strokeWidth={'3px'}/>
 			</CircularInput>
 			
-				{/* <button className="button-mash-ring-5" onClick={props.fadeOutNoOne}></button>
-				 */}
-			 </div>
-			 <div className="dial-container">
-			
-
-        <p x={100} y={100} className="names-i" textAnchor="middle" dy="0.3em" fontWeight="bold">
-        {  hname =  namesInIrish[ Math.floor(value * 100) + round.current * 100]}
-				</p>
-				
-			{<p className="names-e">
-				{ 
-					hname =  namesInEnglish[ Math.floor(value * 100) + round.current * 100]
-
-				}	
-			</p>}
 
 
-			<img src={champIcon} className="champion-portrait" alt="champion portrait" />
+
+			{/* <img src={champIcon} className="champion-portrait" alt="champion portrait" /> */}
 			{/* <img src={ogHero === "9" ? avatar9 :empty} className="og-hero"  alt="hero portrait"/> */}
 			
 			</div>
+
+			<div className="ring-text-container-5" >
 			
+			<p x={100} y={100} className="numbers-i" textAnchor="middle" dy="0.3em" fontWeight="bold">
+        {  irishNumbers[ Math.floor(value * 100) + round.current * 100]}
+				</p>
+				
+			{<p className="numbers-e">
+				{ 
+					  arabicNumbers[ Math.floor(value * 100) + round.current * 100]
+
+				}	
+				</p>}
+			</div>
+				
 </>
 			);
 }

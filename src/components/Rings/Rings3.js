@@ -295,7 +295,6 @@ export default function Rings3(props) {
 			<button id="pearl" onClick={props.toggleIsOn
 			} onTouchEnd={ endAnimation}	><img src={isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 			
-<p className='rings1' >{Ring3Ans[value * 10]}</p>
 <div className="button-mash-container">
 				<button className={value * 10 === 9 ? 'button-mash-ring-0' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} >
 				
@@ -324,6 +323,7 @@ export default function Rings3(props) {
 
 
 			</div>
+<p className='rings1' >{Ring3Ans[value * 10]}</p>
 			
 			</>)
 };

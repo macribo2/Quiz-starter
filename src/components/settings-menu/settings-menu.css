@@ -408,10 +408,10 @@ position:fixed;
   top: 0%;
   left: 0%;
   position: fixed;
-  font-size: 2.5em;
+  font-size: 2em;
   /* color: rgb(74, 165, 196); */
   margin-bottom: 12px;
-  z-index: 109;
+  /* z-index: 109; */
   pointer-events: none;
   padding: 10px;
   text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
@@ -424,7 +424,7 @@ position:fixed;
 }
 
 #locEng {
-  color: rgb(45, 160, 30);
+  /* color: rgb(45, 160, 30); */
   z-index: 1000;
   font-family: Helvetica, Arial, sans-serif;
   top: 69%;

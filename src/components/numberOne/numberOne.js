@@ -827,7 +827,7 @@ export default  class NumberOne extends React.Component  {
 				$("#eascaStage").animate({left:"+=20px"},0)
 // 
 let stagePos = $('#eascaStage').position()
-console.log('position'+stagePos.left)
+// console.log('position'+stagePos.left)
 if(stagePos.left>=150){
 
 	$('#eascaStage').css('left', '-890px')
@@ -1082,7 +1082,7 @@ let		ls = ()=>{
 		
 		`)
 		
-		console.log('hi ó Wren')
+		// console.log('hi ó Wren')
 		// $('#wrenfield').fadeIn();
 		// $('#wren-bg0').fadeIn();
 		$('#wren-hood').fadeIn();
@@ -1264,7 +1264,7 @@ let		ls = ()=>{
 		highlightIrish(currentSelect)
 		
 		})
-			console.log(currentSelect + "current select")	
+			// console.log(currentSelect + "current select")	
 		
 		$('#cd').on('touchend click', function () {
 		
@@ -1283,7 +1283,7 @@ let		ls = ()=>{
 		
 		});
 		$('#a').on('touchend click',function(){
-			console.log('a');
+			// console.log('a');
 			$('.prompt-box').fadeIn();
 		
 		
@@ -1408,7 +1408,7 @@ let		ls = ()=>{
 					$('#fortuna-lit').fadeOut(1000)
 						}, 50);
 							$('.cell').fadeIn()
-							console.log(this.src)
+							// console.log(this.src)
 		
 		
 							$(this).css("border","1px solid white");
@@ -1425,15 +1425,15 @@ let		ls = ()=>{
 						// $(this).fadeOut();
 						// $('#all-champions').fadeOut();
 						let touched = this.src;
-						console.log(this.id)
-						console.log(namesInIrish[this.id])
-						console.log(namesInEnglish[this.id])
+						// console.log(this.id)
+						// console.log(namesInIrish[this.id])
+						// console.log(namesInEnglish[this.id])
 					let	heroPortrait = this.src;
 				let		playerIconURL = `url('`+ heroPortrait +`')`
 				// $('#player-icon').css('backgroundImage',playerIconURL);
 		
 				// $('#player-icon').css('backgroundImage',"url('./images/champions/'+this.id	+'.png')");
-				console.log("hero"+heroPortrait)
+				// console.log("hero"+heroPortrait)
 				
 						
 						$('#nameInEng').html("");
