@@ -549,3 +549,28 @@ transform:scale(0.5)
   z-index: 9000;
   position: fixed;
 }
+#lo-vis{
+  opacity:0.01 
+}
+.numbers-e{
+  opacity:1;
+}
+#hi-vis{
+  opacity:1
+}
+.binary-portrait-container, .ring-5-binary-container{
+
+  pointer-events: none;
+  top:0;
+  left:0;
+  height:100%;
+  z-index: 900;
+  position: fixed;
+  justify-content: center;
+  align-items: center;  
+display: flex;
+}
+
+.binary-portrait{
+transform: scale(1.2);
+}

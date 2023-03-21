@@ -118,9 +118,11 @@ export default function App() {
 
 	const handleInputSelect = (UI) => { 
 		
-		console.log(UI);
-		setSettings(0)
-
+		if(UI === 'gamepad'){
+		window.location.reload(false);
+	}	// console.log(UI);
+	else{	setSettings(0)
+	}
 
 	}
 	function useToggle(initialValue = false) {

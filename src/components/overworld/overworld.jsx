@@ -4267,8 +4267,8 @@ alert("Chun troid!" )
        $(".battle0").fadeIn();
    $('.cell').fadeOut()
        $(".directional-pad").fadeOut();
-       $(".question-text").html('Combat!')
-       $("#locEng").html('Comhairc Aonar!')
+       $(".question-text").html('Comhairc Aonar!')
+       $("#locEng").html('Single Combat!')
        $('#hero').fadeOut();
        setTimeout(function () { 
        $("#walkies").fadeOut();
@@ -5071,7 +5071,7 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                     <div className="ringOfTullyNally" >
                     {/* <img src={ daff} className="daffs" alt="small yellow flowers stir in the breeze" /> */}
     
-                    <Rings5 />
+                    <Rings5 heroName={this.props.heroName} heroNameEng={ this.props.heroNameEng} toggleIsOn={this.props.toggleIsOn} isOn={this.props.isOn} proceedThroughQuiz={this.props.proceedThroughQuiz } fadeOutNoOne={ this.fadeOutNoOne } />
                     </div>
             </div> 
 

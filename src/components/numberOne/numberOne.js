@@ -88,10 +88,15 @@ export default  class NumberOne extends React.Component  {
 		
 		// $('#eqt-overworld').html('');
 		// $('eng-question-text').html('Return here in 30 days, with a ring from each province. ')
-		
 		setTimeout(function () { 
 			$('.question-text').removeClass('fade-out-champ');
 			$('.question-text').fadeIn('slow');
+
+
+		},1000)
+
+		
+		setTimeout(function () { 
 			$('.directional-pad').fadeIn();
 
 

@@ -236,7 +236,6 @@ export default function Rings3(props) {
 
 
 
-			{/* <h1>{isOn}</h1> */}
 
 { localStorage.setItem('freagra1', value * 10)
 }

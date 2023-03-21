@@ -7,42 +7,16 @@ import lensCap from '../../images/About1/feicimthu.png'
 
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
+import folamh from '../../images/about2/folamh.png'
 import fromZero from '../../images/about2/0.png'
 import fromOne from '../../images/about2/1.png'
-import fromTwo from '../../images/about2/1.png'
-import fromThree from '../../images/about2/1.png'
-import fromFour from '../../images/about2/1.png'
-import fromFive from '../../images/about2/1.png'
-import fromSix from '../../images/about2/1.png'
-import fromSeven from '../../images/about2/1.png'
-import fromEight from '../../images/about2/1.png'
-import fromNine from '../../images/about2/1.png'
-import fromTen from '../../images/about2/1.png'
-import fromEleven from '../../images/about2/1.png'
-import from from '../../images/about2/1.png'
-import from10 from '../../images/about2/1.png'
-import from11 from '../../images/about2/1.png'
-import from12 from '../../images/about2/1.png'
-import from13 from '../../images/about2/1.png'
-import from14 from '../../images/about2/1.png'
-import from15 from '../../images/about2/1.png'
-import from16 from '../../images/about2/1.png'
-import from17 from '../../images/about2/1.png'
-import from18 from '../../images/about2/1.png'
-import from19 from '../../images/about2/1.png'
-import from20 from '../../images/about2/1.png'
-import from21 from '../../images/about2/1.png'
-import from22 from '../../images/about2/1.png'
-import from23 from '../../images/about2/1.png'
-import from24 from '../../images/about2/1.png'
-import from25 from '../../images/about2/1.png'
-import from26 from '../../images/about2/1.png'
-import from27 from '../../images/about2/1.png'
-import from28 from '../../images/about2/1.png'
-import from29 from '../../images/about2/1.png'
-import from30 from '../../images/about2/1.png'
-import from31 from '../../images/about2/1.png'
-import avatar1 from '../../images/players/spéirbhean0.gif';
+import fromTwo from '../../images/about2/2.png'
+import fromThree from '../../images/about2/3.png'
+import fromFour from '../../images/about2/4.png'
+import fromFive from '../../images/about2/5.png'
+import fromSix from '../../images/about2/6.png'
+import fromSeven from '../../images/about2/7.png'
+
 
 import {
   CircularInput,
@@ -68,33 +42,30 @@ export function Rings5(props) {
 let ogHero = localStorage.getItem('portrait') 
 	var irishNumbers = [
 		``,
-		`náid         `,
-		`aon         `,
-		`dó       `,
-		`trí       `,
-		`ceathair     `,
-		`cúaig      `,
-		`sé         `,
-		`seacht           `,
-		`ocht         `,
-		`naoí         `
+		`náid
+		`,`aon
+		`,`dó
+		`,`trí
+		`,`ceathair
+		`,`cúig 
+		`,`sé 
+		`,`seacht`
+
+
+
 		];
 		
-	let	arabicNumbers = [
-		
-		``,
-		`0
-		`,` 1
-		`,`2`,
-		`3
-		`,` 4
-		`,`5
-		`,`6
-		`,`7
-		`,`8	
-		`,` 9`
-		 
-		];
+	let	arabicNumbers = [		``,
+	`0
+	`,`1
+	`,`2
+	`,`3
+	`,`4
+	`,`5 
+	`,`6 
+	`,`7`
+
+];
 		
 	const [value, setValue] = React.useState(0);
   const prevValue = React.useRef(0);
@@ -147,19 +118,54 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
     prevValue.current = v;
     setValue(v);
   };
-	let champIcon = pearl;
-	let champID = Math.floor(value * 100);
+	let binaryIcon = folamh;
+	let binaryID = Math.floor(value * 100);
 	// localStorage.setItem('quest-portrait', champID);
+	if (binaryID >= 0 && binaryID <= 10){
+		binaryIcon = folamh;
+	}
+	if (binaryID >= 11 && binaryID <= 20){
+
+		binaryIcon = fromZero;
+	}
+	if (binaryID >= 21 && binaryID <= 30){
+
+		binaryIcon = fromOne;
+	}
+	if (binaryID >= 31 && binaryID <= 40){
+
+		binaryIcon = fromTwo;
+	}
+	if (binaryID >= 41 && binaryID <= 50){
+
+		binaryIcon = fromThree;
+	}
+	if (binaryID >= 51 && binaryID <= 60){
+
+		binaryIcon = fromFour;
+	}
+	if (binaryID >= 61 && binaryID <= 70){
+
+		binaryIcon = fromFive;
+	}
+	if (binaryID >= 71 && binaryID <= 80){
+
+		binaryIcon = fromSix;
+	}
+	if (binaryID >= 81 && binaryID <= 90){
+
+		binaryIcon = fromSeven;
+	}
 
 
-  const tryValue = v => {
+
+	const tryValue = v => {
 	  updateValue(valueWithinLimits(v));
 	  thumbStart()
   };
 	let hname;
 	let hnameE;
 	// let fadeOutNoOne = this.props.fadeOutNoOne;
-	// let isOn = this.props.isOn
 
 //thumbStart is a hack to prevent side effect of making question text fade out when player is at location 'geaga'.
 function thumbStart() { 
@@ -172,9 +178,13 @@ function thumbStart() {
 
 	return (
 
-<>
-		
-{/* <div className="ring-5-lens-cap-container"> */}
+		<>
+		<div className="ring-5-binary-container">
+			
+<img src={binaryIcon} className="binary-portrait" alt="representation of binary numbers" />
+			  </div> 
+
+				{/* <div className="ring-5-lens-cap-container"> */}
 {/* <img src={lensCap} className="lens-cap" alt="a fantasy landscape a ring of stones, a haunted tree" /> */}
 			{/* </div> */}
 	 
@@ -195,7 +205,7 @@ function thumbStart() {
 							strokeWidth={'3px'}/>
 			</CircularInput>
 			
-
+			
 
 
 			{/* <img src={champIcon} className="champion-portrait" alt="champion portrait" /> */}
@@ -209,12 +219,18 @@ function thumbStart() {
         {  irishNumbers[ Math.floor(value * 100) + round.current * 100]}
 				</p>
 				
-			{<p className="numbers-e">
+				<p className="numbers-e" >
 				{ 
 					  arabicNumbers[ Math.floor(value * 100) + round.current * 100]
 
 				}	
-				</p>}
+				</p>
+				<div className="binary-portrait-container">
+					
+
+				
+							
+</div>
 			</div>
 				
 </>

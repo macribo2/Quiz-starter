@@ -1091,7 +1091,6 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	let hname;
 	let hnameE;
 	// let fadeOutNoOne = this.props.fadeOutNoOne;
-	// let isOn = this.props.isOn
 	let proceedThroughQuiz = props.proceedThroughQuiz;
 	
 	
@@ -1168,7 +1167,7 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 		
 	  </div>
 
-			<p id="hints-ring-4" className={props.isOn?"hints":"hidden"}>{'Choose a champion, '+ props.heroNameEng}</p>
+		<p id="hints-ring-4" className={props.isOn ? "hints" : "hidden"}>{'Choose a champion, ' + props.heroNameEng}</p>
 		</>
 			);
 }
