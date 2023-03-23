@@ -4,8 +4,7 @@
 }
 
 
-.rings0,
-.rings1 {
+.rings0,.rings1 {
 
 
   pointer-events: none;
@@ -29,6 +28,7 @@
   animation-timing-function: linear; 
 }
 .about-pics-container,
+.bg-container,
 .about-gold-container{
   align-content: center;
   justify-content: center;
@@ -569,8 +569,9 @@ transform:scale(0.5)
   justify-content: center;
   align-items: center;  
 display: flex;
+width:100%;
 }
 
-.binary-portrait{
+/* .binary-portrait{
 transform: scale(1.2);
-}
+} */

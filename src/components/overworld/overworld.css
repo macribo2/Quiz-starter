@@ -1058,6 +1058,9 @@ top:0%
   word-wrap: break-word;
   margin-top:0%;
 font-size: 1.8em;
+position: fixed;
+top:5%;
+transform: scale(1);
 }
 
 #output2{
@@ -1201,12 +1204,12 @@ font-size: 1.8em;
 }
 
 .emblem-img{
-  /* border:4px solid peru; */
-  position:fixed;
-  display:  block;
-  margin-top:4%;
-  z-index: 90;
+  /* position:fixed; */
+  /* display:  block; */
+  /* margin-top:4%; */
   opacity:1;
+  transform:scale(0.5)
+
 }
 .countyMap-container{
 
@@ -1225,11 +1228,11 @@ font-size: 1.8em;
   /* background-color: #000; */
   border: 4px solid;
 }
-.emblem-container{
+.emblem-container,.location-title-card-text-container{
 
   display: flex;
   position: fixed;
-  /* width: 100%; */
+  width: 100%;
   height: 100%;
   text-align: center;
   pointer-events: none;
@@ -1240,15 +1243,18 @@ font-size: 1.8em;
   top: 0%;
   left: 0;
   background-color: #000;
-  transform:scale(1.4);
-  padding-top: 45px;
+
+}
+.location-title-card-text-container{
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1516;
+  transform:scale(1);
 
 }
 .emblem {
   /* border:4px solid palegreen; */
   width: 740px;
   height: 360px;
-position:relative
 }
 
 .animateEmblem {

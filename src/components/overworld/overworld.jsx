@@ -496,13 +496,18 @@ $("#locEng").fadeOut()
      $('.eng-question-text-holder').css('color','orange');
  
 }
-$('.sea').css('display','none')
+            $('.sea').css('display', 'none')
+
+            $('.location-title-card-text-container').fadeIn(1);
+            
             $('.emblem-container').fadeIn(1);
+
             // $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
 
             $('.countyMap').css('background-image', "url('../../images/counties/" + imreoir.whereAmI + ".png")
             setTimeout(function () { 
             $('#stage').fadeOut()
+            $('.location-title-card-text-container').fadeIn();
 
             $('.emblem-container').fadeIn();
             setTimeout(function () { 
@@ -515,8 +520,9 @@ $('.sea').css('display','none')
                             
             
             
+            $('.location-title-card-text-container').fadeOut(3000,'linear');
                 
-                $('.emblem-container').fadeOut();
+                $('.emblem-container').fadeOut(4000,'linear');
             $('#hints-geaga').fadeOut();
 
             }, 2000)
@@ -4892,10 +4898,11 @@ storyTimer()
                     <div className="emblem-container">
 
                     {<img src={geaga} rel="preload" alt="county pixelart emblem." className="emblem-img" /> }
-                    <p id="output"></p>
              
                 </div> 
-
+                <div className="location-title-card-text-container">
+                    <p id="output"></p>
+                </div>
                <button id="toggle-glass-btn2" onClick={()=>{
                     if (this.state.isOn) {
                         this.setState({ isOn: false })
@@ -5064,7 +5071,7 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
 
 
 
-                    <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'Return here with a ring from each Province.'}</p>
+                    <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'Return  with rings.'}</p>
 
 
 

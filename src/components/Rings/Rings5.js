@@ -7,15 +7,16 @@ import lensCap from '../../images/About1/feicimthu.png'
 
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
-import folamh from '../../images/about2/folamh.png'
-import fromZero from '../../images/about2/0.png'
-import fromOne from '../../images/about2/1.png'
-import fromTwo from '../../images/about2/2.png'
-import fromThree from '../../images/about2/3.png'
-import fromFour from '../../images/about2/4.png'
-import fromFive from '../../images/about2/5.png'
-import fromSix from '../../images/about2/6.png'
-import fromSeven from '../../images/about2/7.png'
+import stoneBG from '../../images/about2/folamh.png'
+import folamh from '../../images/about2/stone-0.png'
+import fromZero from '../../images/about2/stone-0.png'
+import fromOne from '../../images/about2/stone-1.png'
+import fromTwo from '../../images/about2/stone-2.png'
+import fromThree from '../../images/about2/stone-3.png'
+import fromFour from '../../images/about2/stone-4.png'
+import fromFive from '../../images/about2/stone-5.png'
+import fromSix from '../../images/about2/stone-6.png'
+import fromSeven from '../../images/about2/stone-7.png'
 
 
 import {
@@ -41,33 +42,224 @@ export function Rings5(props) {
 	}
 let ogHero = localStorage.getItem('portrait') 
 	var irishNumbers = [
+		`
+		`,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
 		``,
 		`náid
+		`,`náid
+		`,`náid
+		`,`náid
+		`,`náid
+		`,`náid
+		`,`náid
+		`,`náid
+		`,`náid
+		`,`náid
+		`,`aon
+		`,`aon
+		`,`aon
+		`,`aon
+		`,`aon
+		`,`aon
+		`,`aon
+		`,`aon
+		`,`aon
 		`,`aon
 		`,`dó
+		`,`dó
+		`,`dó
+		`,`dó
+		`,`dó
+		`,`dó
+		`,`dó
+		`,`dó
+		`,`dó
+		`,`dó
+		`,`trí
+		`,`trí
+		`,`trí
+		`,`trí
+		`,`trí
+		`,`trí
+		`,`trí
+		`,`trí
+		`,`trí
 		`,`trí
 		`,`ceathair
+		`,`ceathair
+		`,`ceathair
+		`,`ceathair
+		`,`ceathair
+		`,`ceathair
+		`,`ceathair
+		`,`ceathair
+		`,`ceathair
+		`,`ceathair
+		`,`cúig 
+		`,`cúig 
+		`,`cúig 
+		`,`cúig 
+		`,`cúig 
+		`,`cúig 
+		`,`cúig 
+		`,`cúig 
+		`,`cúig 
 		`,`cúig 
 		`,`sé 
-		`,`seacht`
+		`,`sé 
+		`,`sé 
+		`,`sé 
+		`,`sé 
+		`,`sé 
+		`,`sé 
+		`,`sé 
+		`,`sé 
+		`,`sé 
+		`, `seacht
+		`, `seacht
+		`, `seacht
+		`, `seacht
+		`, `seacht
+		`, `seacht
+		`, `seacht
+		`, `seacht
+		`, `seacht
+		`, `seacht
+		`, `seacht
+		`, `seacht
+		`, `seacht
+		`, `seacht
+		`, `seacht
+		`, `seacht
+		`, `seacht
+		`
 
 
 
 		];
 		
-	let	arabicNumbers = [		``,
-	`0
+	let arabicNumbers = [
+		
+		
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
+		`0`,
+		`0`,
+		`0`,
+		`0`,
+		`0`,
+		`0`,
+		`0`,
+		`0`,
+		`0`,
+		`0`,
+	`1
+	`,`1
+	`,`1
+	`,`1
+	`,`1
+	`,`1
+	`,`1
+	`,`1
+	`,`1
 	`,`1
 	`,`2
+	`,`2
+	`,`2
+	`,`2
+	`,`2
+	`,`2
+	`,`2
+	`,`2
+	`,`2
+	`,`2
+	`,`3
+	`,`3
+	`,`3
+	`,`3
+	`,`3
+	`,`3
+	`,`3
+	`,`3
+	`,`3
+	`,`3
 	`,`3
 	`,`4
+	`,`4
+	`,`4
+	`,`4
+	`,`4
+	`,`4
+	`,`4
+	`,`4
+	`,`4
+	`,`4
+	`,`4
+	`,`5 
+	`,`5 
+	`,`5 
+	`,`5 
+	`,`5 
+	`,`5 
+	`,`5 
+	`,`5 
+	`,`5 
+	`,`5 
 	`,`5 
 	`,`6 
-	`,`7`
+	`,`6 
+	`,`6 
+	`,`6 
+	`,`6 
+	`,`6 
+	`,`6 
+	`,`6 
+	`,`6 
+	`,`6 
+	`,`6 
+	`, `7
+	`, `7
+	`, `7
+	`, `7
+	`, `7
+	`, `7
+	`, `7
+	`, `7
+	`, `7
+	`, `7
+	`, `7
+	`, `7
+	`, `7
+	`, `7
+	`, `7
+	`, `7
+	`, `7
+	`, `7
+	`
+		, ``
+	,
 
 ];
 		
-	const [value, setValue] = React.useState(0);
+	const [value, setValue] = React.useState(0.1);
   const prevValue = React.useRef(0);
   const diff = React.useRef(0);
   const dir = React.useRef(0);
@@ -122,42 +314,41 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	let binaryID = Math.floor(value * 100);
 	// localStorage.setItem('quest-portrait', champID);
 	if (binaryID >= 0 && binaryID <= 10){
-		binaryIcon = folamh;
 	}
 	if (binaryID >= 11 && binaryID <= 20){
+		binaryIcon = folamh;
 
-		binaryIcon = fromZero;
 	}
 	if (binaryID >= 21 && binaryID <= 30){
-
 		binaryIcon = fromOne;
+		
 	}
 	if (binaryID >= 31 && binaryID <= 40){
-
+		
 		binaryIcon = fromTwo;
 	}
 	if (binaryID >= 41 && binaryID <= 50){
-
 		binaryIcon = fromThree;
+		
 	}
 	if (binaryID >= 51 && binaryID <= 60){
-
 		binaryIcon = fromFour;
+
 	}
 	if (binaryID >= 61 && binaryID <= 70){
-
 		binaryIcon = fromFive;
+
 	}
 	if (binaryID >= 71 && binaryID <= 80){
-
 		binaryIcon = fromSix;
-	}
-	if (binaryID >= 81 && binaryID <= 90){
 
+	}
+	if (binaryID >= 81 && binaryID <= 100){
 		binaryIcon = fromSeven;
+		
 	}
-
-
+	
+	
 
 	const tryValue = v => {
 	  updateValue(valueWithinLimits(v));
@@ -179,6 +370,7 @@ function thumbStart() {
 	return (
 
 		<>
+			<div className="bg-container"><img src={ stoneBG} alt="yin yan in gold and black circle" /></div>
 		<div className="ring-5-binary-container">
 			
 <img src={binaryIcon} className="binary-portrait" alt="representation of binary numbers" />
@@ -200,8 +392,8 @@ function thumbStart() {
 				stroke="rgba(185,230,5,1)"
 						strokeWidth={'3px'}
 				/>
-				<CircularThumb  fill="rgba(135,5,2)"
-					stroke="rgba(180,180,180,1)" 	
+				<CircularThumb  fill="rgba(204, 255, 153,1)"
+					stroke="rgba(255, 195, 0 ,1)" 	
 							strokeWidth={'3px'}/>
 			</CircularInput>
 			

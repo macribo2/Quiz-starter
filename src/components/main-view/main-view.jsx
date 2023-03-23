@@ -83,8 +83,8 @@ const ComponentWithScreenOrientation = () => {
 		<p>Screen orientation is: {screenOrientation}</p>
 	)
 }
-let heroNames = ['', 'a Níamh', 'a Ḋubhghlas', 'a Oisín', 'a thíarna', 'a rógaire', 'a Thaoiseach', 'Fionn', 'a chara', 'file'];
-let heroNamesEng = ['','o Níamh', 'Douglas', 'o Oisín','o lord', 'you rogue','o Chieftain','Fionn','o friend','poet'];
+let heroNames = ['', 'a Níamh', 'a Ḋubhghlas', 'a Oisín', 'a diabhaltán', 'a rógaire', 'a Thaoiseach', 'Fionn', 'a chara', 'file'];
+let heroNamesEng = ['','o Níamh', 'Douglas', 'o Oisín','o devilry', 'you rogue','o Chieftain','Fionn','o friend','poet'];
 
 export default function App() {
 	//for rotary dial values:
@@ -189,7 +189,7 @@ export default function App() {
 	
 		{
 			// tosníonn an scéal anseo. 
-			questionText: 'Fill anseo le fáinne ó gach cúige.',
+			questionText: 'Fill le fáinní.',
 			answerOptions: [
 				
 			],
@@ -636,7 +636,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 							border="rgba(255,250,5,0)"
 							stroke="rgba(195,150,5,0.8)"
 						strokeWidth={'3px'}/>
-						<CircularThumb fill="rgba(135,5,2)"
+						<CircularThumb fill="rgba(167,174,158,0.99)"
 							
 						strokeWidth={'3px'}
 					stroke="rgba(180,180,180,1)" 

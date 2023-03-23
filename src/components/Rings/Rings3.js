@@ -284,7 +284,8 @@ export default function Rings3(props) {
 						stroke="rgba(195,150,5,0.8)"
 						
 						strokeWidth={'3px'}/>
-					<CircularThumb  fill="rgba(135,5,2)"
+					<CircularThumb  fill="rgba(255,255,255,1)"
+
 					stroke="rgba(180,180,180,1)" 	
 							strokeWidth={'3px'}/>
 				
