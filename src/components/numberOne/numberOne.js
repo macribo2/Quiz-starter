@@ -77,6 +77,7 @@ export default  class NumberOne extends React.Component  {
 	}
 	fadeOutNoOne() { 
 		$('.lens-cap').fadeOut();
+		$('.between-fields').fadeOut();
 		$('#hero').fadeIn();
 		$('.button-mash-ring-4').fadeOut();
 		$('.input-elements-container-8').css('display','none');
@@ -85,7 +86,8 @@ export default  class NumberOne extends React.Component  {
 		$('#hints-ring-4').html('');
 		
 		$('#hints-geaga').fadeIn();
-		
+		// let mise = document.getElementsByClassName('names-i').html();
+		// alert(mise)
 		// $('#eqt-overworld').html('');
 		// $('eng-question-text').html('Return here in 30 days, with a ring from each province. ')
 		setTimeout(function () { 

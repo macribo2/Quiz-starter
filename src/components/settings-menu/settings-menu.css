@@ -660,8 +660,19 @@ position:relative
 
 }
 
- @media only screen and (min-width: 1001px) {
+  .between-fields{
+  display:none;}
+@media only screen and (min-width: 1022px) {
+.iron-key-portrait{
+  margin-top:170%;
+}
+  .between-fields{
+    transform:scale(2.8);
+    display:block;
+  
+  }}
 
+ @media only screen and (min-width: 1181px) {
 
 #mob-effect,
 #mob-text,
@@ -876,6 +887,7 @@ animation: bounce 2s 15 steps(3);
     }
     .blurry-bg{
       z-index: -1;
+      height:100%;
 
     }
     .distant-hills{

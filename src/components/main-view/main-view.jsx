@@ -96,6 +96,7 @@ export default function App() {
 	let chosenPortrait = 0;	
 	let gotten = 0;
 	let gottenRing0 = 0;
+	let hn = localStorage.getItem('hname');
 	
 	
 	const [gender, setGender] = useState('male');
@@ -113,7 +114,7 @@ export default function App() {
 	let hintsAnswersC = [`c`,`c1`,`c2`,`c3`,`c4`,`c5`,`c6`];
 	let hintsAnswersD = [`d`, `d`, `d`, `d`, `e`,`f`, `g`, `h`];
 	
-	
+	// let nameMode = Math.random()
 	
 
 	const handleInputSelect = (UI) => { 
@@ -125,6 +126,23 @@ export default function App() {
 	}
 
 	}
+	
+	
+	let choiceRing = [
+		`	`,
+		`Niamh Cinn-Óir`,
+		`An Craoibhín Aoibhinn`,
+		`Oisín`,
+		`Donn Fírinne`,
+		`Liam Mac Cárthaigh`,
+		`Abhartach`,
+		`Fionn Mac Cumhail`,
+		`Púca`,
+		`Fedelm an File`
+		
+		
+	]
+	
 	function useToggle(initialValue = false) {
 		
 		const [value, setValue] = React.useState(initialValue);
@@ -189,7 +207,7 @@ export default function App() {
 	
 		{
 			// tosníonn an scéal anseo. 
-			questionText: 'Fill le fáinní.',
+			questionText:  'Arsa '+ choiceRing[localStorage.getItem('portrait')]+'<br/>"Fill le fáinní,".<br/>Fillfaidh '+heroNames[localStorage.getItem('portrait')] +',"<br/> arsa '+  hn+'.' ,
 			answerOptions: [
 				
 			],
@@ -371,7 +389,6 @@ const[score, setScore] = useState(0)
 			console.log("hello" + showGlass);
 		}
 	}
-
 
 	const handleMenuButtonClick = (showSettings) => {
 		if (showSettings === 0) {
@@ -570,20 +587,6 @@ if(value!=0){
 
 let thePucaOf = localStorage.getItem('pucaEng')
 	
-	let choiceRing = [
-		`	`,
-		`Niamh Cinn-Óir`,
-		`An Craoibhín Aoibhinn`,
-		`Oisín`,
-		`Donn Fírinne`,
-		`Liam Mac Cárthaigh`,
-		`Abhartach`,
-		`Fionn Mac Cumhail`,
-		`Púca`,
-		`Fedelm an File`
-		
-		
-	]
 	let costume;
 	let costumes = [
 		'silken', 'elf', 'ogre', 'faun'];
@@ -695,7 +698,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 						<div className='question-count'> 		
 							</div>
 							{/* <img src={ gradient} className="gradient"/> */}
-							<div className='question-text'>{ questions[currentQuestion].questionText}</div>
+							<div dangerouslySetInnerHTML={{__html:questions[currentQuestion].questionText}} className='question-text'></div>
 
 						</div>
 						

@@ -429,7 +429,7 @@ top:5%;
         z-index: 99;
 
       }
-      .input-elements-container-7, .field-container{
+      .input-elements-container-7, .field-container, .input-elements-container-7b{
         pointer-events: none;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -446,7 +446,13 @@ top:5%;
         top:0;
         z-index: 28;
         position: fixed;
+
       
+      }
+      .between-fields{
+        transform:scale(1.5);
+        border-radius:50%;
+        border:3px solid black;
       }
       .fade-in-champ{
         animation:fade-in 0.5s forwards;
@@ -575,3 +581,11 @@ width:100%;
 /* .binary-portrait{
 transform: scale(1.2);
 } */
+
+#tullynally-lens{
+  height: 100%;
+  width:100%;
+  transform: scale(1.1
+  );
+  /* border: 4px solid blue; */
+}

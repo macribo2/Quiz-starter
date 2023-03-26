@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import lens from '../../images/ciorcal-glass-light.png';
 import empty from '../../images/empty.png';
 import lensCap from '../../images/About1/feicimthu.png'
-
+import outerLocation from '../../images/ciorcal-glass6.png';
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
 import stoneBG from '../../images/about2/folamh.png'
@@ -347,7 +347,9 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 		binaryIcon = fromSeven;
 		
 	}
-	
+	if (binaryID === 100) {
+//show buttonmash with colors.gif.
+	}
 	
 
 	const tryValue = v => {
@@ -370,6 +372,8 @@ function thumbStart() {
 	return (
 
 		<>
+			
+		<img id="tullynally-lens" rel="preload" src={outerLocation} className="question-img" alt="dark green fields background" />	
 			<div className="bg-container"><img src={ stoneBG} alt="yin yan in gold and black circle" /></div>
 		<div className="ring-5-binary-container">
 			

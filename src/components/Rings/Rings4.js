@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import lens from '../../images/ciorcal-glass-light.png';
 import lensCap from '../../images/About1/ring2.png';
 import emerald from '../../images/misc_crystal_new.png'
+import betweenFields from '../../images/gifs/betweenFields.gif'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
 import heroShadow from '../../images/stone-soup/hero-shadow-0.png'
 import empty from '../../images/empty.png';
@@ -126,6 +127,7 @@ import {
 
 
 export function Rings4(props) {
+	let hname;
 
   // Similar to componentDidMount and componentDidUpdate:
 	useEffect(() => {
@@ -138,577 +140,578 @@ export function Rings4(props) {
 	}
 let ogHero = localStorage.getItem('portrait') 
 	var namesInIrish = [
-		`Abbán         `,
-		`Ádhamhnán     `,
-		`Ailbhe        `,
-		`Ailill        `,
-		`Aimhirghin    `,
-		`Ainbheartach  `,
-		`Áinle         `,
-		`Áine          `,
-		`Áinfean       `,
-		`Ámhra         `,
-		`Ana           `,
-		`Anamcha       `,
-		`Ánrothán      `,
-		`Aodh          `,
-		`Aodhán        `,
-		`Aodnait       `,
-		`Aoibheann     `,
-		`Aoibhegréine  `,
-		`Aoife         `,
-		`Aonghus       `,
-		`Báine         `,
-		`Bairrfhionn   `,
-		`Banbha        `,
-		`Bardán        `,
-		`Baoth         `,
-		`Beag          `,
-		`Beagán        `,
-		`Bébhinn       `,
-		`Bearach       `,
-		`Bláthnaid     `,
-		`Breacán       `,
-		`Breasal       `,
-		`Bríghid       `,
-		`Brion         `,
-		`Brocc         `,
-		`Brónach       `,
-		`Buadhach      `,
-		`Cairbre	      `,
-		`Caoilfhionn   `,
-		`Caoimhe       `,
-		`Caoimhín      `,
-		`Cassair       `,
-		`Cassán        `,
-		`Cathaír       `,
-		`Cathal        `,
-		`Cathán        `,
-		`Ceallach      `,
-		`Ceara         `,
-		`Cearbhall     `,
-		`Cian          `,
-		`Ciarán        `,
-		`Cillian       `,
-		`Colmán        `,
-		`Comhghall     `,
-		`Conall        `,
-		`Conán         `,
-		`Conchobhar    `,
-		`Conlaodh      `,
-		`Conn          `,
-		`Cormac        `,
-		`Coinneach     `,
-		`Cuán          `,
-		`Cúmhaí        `,
-		`Daigh         `,
-		`Daighre       `,
-		`Daimhín       `,
-		`Dáire         `,
-		`Dallán        `,
-		`Damhnait      `,
-		`Deaglán       `,
-		`Dearbhail     `,
-		`Deirbhile     `,
-		`Deirdre       `,
-		`Deasmumhnaċ  `,
-		`Diarmaid      `,
-		`Dairinn       `,
-		`Domhnall      `,
-		`Donnchadh     `,
-		`Dunfhlaith    `,
-		`Dubhaltach    `,
-		`Dubhgall      `,
-		`Dubhghlas     `,
-		`Éabha`,
-		`Ealadha       `,
-		`Easnadh       `,
-		`Éamonn        `,
-		`Éanna         `,
-		`Earnán        `,
-		`Éibhleann     `,
-		`Echna         `,
-		`Éimhín        `,
-		`Eirnín        `,
-		`Eithne        `,
-		`Eoghan        `,
-		`Étaín         `,
-		`Fachtna       `,
-		`Faolán        `,
-		`Fearchar      `,
-		`Feardorcha    `,
-		`Fearghal      `,
-		`Fearghus      `,
-		`Fechín        `,
-		`Fiachra       `,
-		`Fial  		   `,
-		`Fianait       `,
-		`Finnén        `,
-		`Finnseach     `,
-		`Fionn         `,
-		`Fionnait      `,
-		`Fionúir       `,
-		`Fionnbharr    `,
-		`Fionnghuala   `,
-		`Fionntán      `,
-		`Flann         `,
-		`Garbhán       `,
-		`Geiléis       `,
-		`Gilleagán     `,
-		`Giolla Chríst `,
-		`Glaisne       `,
-		`Gobán         `,
-		`Gobnait       `,
-		`Gormán        `,
-		`Gormghiolla   `,
-		`Gormlaith     `,
-		`Gráinne       `,
-		`Grian         `,
-		`Iarfhlaith    `,
-		`Iarlugh       `,
-		`Íde           `,
-		`Iobhar        `,
-		`Íonait        `,
-		`Labhraidh     `,
-		`Labhrás       `,
-		`Lachtna       `,
-		`Lachtnán      `,
-		`Laisrén       `,
-		`Laoidheach    `,
-		`Laoire        `,
-		`Laoise        `,
-		`Lasair        `,
-		`Lasairfhiona  `,
-		`Leannán       `,
-		`Líadan        `,
-		`Liamhain      `,
-		`Líobhan       `,
-		`Lochlann      `,
-		`Lomán         `,
-		`Lonán         `,
-		`Lorcán        `,
-		`Lughaidh      `,
-		`Luiseach      `,
-		`Mac Nisse     `,
-		`Mac Táil      `,
-		`Maeleachlainn `,
-		`Mainchín      `,
-		`Mael Íosa     `,
-		`Maolán        `,
-		`Maol Mhuire   `,
-		`Maon          `,
-		`Marcán        `,
-		`Meadhbh       `,
-		`Meallán       `,
-		`Meallá        `,
-		`Miach         `,
-		`Mochta        `,
-		`Moinnine      `,
-		`Móirne        `,
-		`Molaisse      `,
-		`Moncha        `,
-		`Mór           `,
-		`Muadhnait     `,
-		`Muircheartach `,
-		`Muireann      `,
-		`Muireadhach   `,
-		`Muirín        `,
-		`Muirgheal     `,
-		`Muirne        `,
-		`Murchadh      `,
-		`Murchú        `,
-		`Naomh         `,
-		`Naomhán       `,
-		`Nárbhflaith   `,
-		`Neacht        `,
-		`Neamhain      `,
-		`Neasa         `,
-		`Neasán        `,
-		`Niall         `,
-		`Niallán       `,
-		`Niamh         `,
-		`Nuadha        `,
-		`Nuala         `,
-		`Odhrán        `,
-		`Ógán		`,
-		`Oilithir      `,
-		`Oilleóg 	   `,
-		`Oillill 	   `,
-		`Oillín        `,
-		`Oisín         `,
-		`Olcán         `,
-		`Ólchobhar     `,
-		`Onchú         `,
-		`Órlaith       `,
-		`Órnait        `,
-		`Orthanach     `,
-		`Osán          `,
-		`Osgar         `,
-		`Osnait        `,
-		`Rathnait      `,
-		`Ríoghán       `,
-		`Ríona         `,
-		`Ríordán       `,
-		`Robhartach    `,
-		`Róinseach     `,
-		`Róisín        `,
-		`Rónán         `,
-		`Rónnad        `,
-		`Rós           `,
-		`Ross          `,
-		`Rúadhán       `,
-		`Rúadhnait     `,
-		`Ruaidhrí      `,
-		`Ruarc         `,
-		`Sadhbh        `,
-		`Samhradhán    `,
-		`Saorla        `,
-		`Saraid        `,
-		`Sárán         `,
-		`Sárnait       `,
-		`Scannal       `,
-		`Scannlán      `,
-		`Scáthach      `,
-		`Scoithín      `,
-		`Scoithniamh   `,
-		`Scolaí        `,
-		`Scoth         `,
-		`Scothnait     `,
-		`Sé            `,
-		`Seachlann     `,
-		`Séadhna       `,
-		`Séanait       `,
-		`Seanán        `,
-		`Seanchán      `,
-		`Searc         `,
-		`Séighín       `,
-		`Síoda         `,
-		`Síomha        `,
-		`Sláine        `,
-		`Sléibhín      `,
-		`Somhairle     `,
-		`Sorcha        `,
-		`Suaibhseach   `,
-		`Suanach       `,
-		`Suibhne       `,
-		`Tadhg         `,
-		`Taichleach    `,
-		`Tanaí         `,
-		`Tassach       `,
-		`Teafa         `,
-		`Teamhair      `,
-		`Téide         `,
-		`Teimhnín      `,
-		`Tighearnach   `,
-		`Tighearnán    `,
-		`Tíreachán     `,
-		`Tóla          `,
-		`Tómmán	      `, 
-		`Torcán        `,
-		`Treasa        `,
-		`Treasach      `,
-		`Tuathal       `,
-		`Tuathla       `,
-		`Tuileach      `,
-		`Tuilelaith    `,
-		`Uainionn      `,
-		`Uaine         `,
-		`Uasal         `,
-		`Uaithne       `,
-		`Uallach       `,
-		`Uallachán     `,
-		`Uallgarg      `,
-		`Ultán         `,
-		`Úna           `,
-		`Urard         `
+		'Tassach      ',
+		'Ádhamhnán    ',
+		'Fionn        ',
+		'Gormán       ',
+		'Conlaodh     ',
+		'Ciarán       ',
+		'Naomhán      ',
+		'Beag         ',
+		'Rós          ',
+		'Scothnait    ',
+		'Étaín        ',
+		'Sadhbh       ',
+		'Cairbre	  ',
+		'Áine         ',
+		'Ceara        ',
+		'Lomán        ',
+		'Aodnait      ',
+		'Rúadhnait    ',
+		'Gráinne      ',
+		'Áinle        ',
+		'Téide        ',
+		'Flann        ',
+		'Ana          ',
+		'Dearbhail    ',
+		'Éimhín       ',
+		'Fechín       ',
+		'Muadhnait    ',
+		'Breasal      ',
+		'Oisín        ',
+		'Bláthnaid    ',
+		'Ross         ',
+		'Orthanach    ',
+		'Ainbheartach ',
+		'Neamhain     ',
+		'Éibhleann    ',
+		'Tuathal      ',
+		'Ógán	       ',
+		'Odhrán       ',
+		'Onchú        ',
+		'Sláine       ',
+		'Saorla       ',
+		'Deasmumhnaċ  ',
+		'Tighearnán   ',
+		'Bearach      ',
+		'Lochlann     ',
+		'Seanchán     ',
+		'Marcán       ',
+		'Cuán         ',
+		'Móirne       ',
+		'Uallachán    ',
+		'Sléibhín     ',
+		'Conán        ',
+		'Breacán      ',
+		'Gilleagán    ',
+		'Dubhghlas    ',
+		'Faolán       ',
+		'Muirgheal    ',
+		'Conall       ',
+		'Niamh        ',
+		'Séighín      ',
+		'Meallán      ',
+		'Meadhbh      ',
+		'Donnchadh    ',
+		'Lorcán       ',
+		'Uasal        ',
+		'Moncha       ',
+		'Fial 	     ',
+		'Sé           ',
+		'Cathán       ',
+		'Fionnbharr   ',
+		'Suibhne      ',
+		'Brion        ',
+		'Nuala        ',
+		'Oillín       ',
+		'Oilithir     ',
+		'Cassán       ',
+		'Tómmán	      ',
+		'Bairrfhionn  ',
+		'Ealadha      ',
+		'Bébhinn      ',
+		'Sárán        ',
+		'Fionnghuala  ',
+		'Suaibhseach  ',
+		'Éamonn       ',
+		'Maol Mhuire  ',
+		'Brocc        ',
+		'Domhnall     ',
+		'Teimhnín     ',
+		'Daigh        ',
+		'Anamcha      ',
+		'Mac Nisse    ',
+		'Aimhirghin   ',
+		'Finnseach    ',
+		'Íde          ',
+		'Tíreachán    ',
+		'Grian        ',
+		'Robhartach   ',
+		'Muireadhach  ',
+		'Eoghan       ',
+		'Comhghall    ',
+		'Sorcha       ',
+		'Niallán      ',
+		'Mael Íosa    ',
+		'Treasach     ',
+		'Scannlán     ',
+		'Aoife        ',
+		'Osgar        ',
+		'Ceallach     ',
+		'Dunfhlaith   ',
+		'Uallach      ',
+		'Úna          ',
+		'Uainionn     ',
+		'Searc        ',
+		'Cúmhaí       ',
+		'Scáthach     ',
+		'Báine        ',
+		'Ríona        ',
+		'Osán         ',
+		'Lachtna      ',
+		'Gormghiolla  ',
+		'Mochta       ',
+		'Molaisse     ',
+		'Lachtnán     ',
+		'Ailbhe       ',
+		'Moinnine     ',
+		'Tóla         ',
+		'Diarmaid     ',
+		'Liamhain     ',
+		'Muircheartach',
+		'Lasair       ',
+		'Teafa        ',
+		'Banbha       ',
+		'Ánrothán     ',
+		'Meallá       ',
+		'Fionúir      ',
+		'Cassair      ',
+		'Fearghus     ',
+		'Cormac       ',
+		'Cathaír      ',
+		'Giolla Chríst',
+		'Seachlann    ',
+		'Laoidheach   ',
+		'Caoimhín     ',
+		'Murchú       ',
+		'Scannal      ',
+		'Oilleóg 	    ',
+		'Dairinn      ',
+		'Glaisne      ',
+		'Feardorcha   ',
+		'Beagán       ',
+		'Ríordán      ',
+		'Maeleachlainn',
+		'Dallán       ',
+		'Dubhgall     ',
+		'Tuileach     ',
+		'Garbhán      ',
+		'Dubhaltach   ',
+		'Dáire        ',
+		'Saraid       ',
+		'Aodhán       ',
+		'Síomha       ',
+		'Teamhair     ',
+		'Cian         ',
+		'Fiachra      ',
+		'Séadhna      ',
+		'Damhnait     ',
+		'Aodh         ',
+		'Naomh        ',
+		'Iarlugh      ',
+		'Scoithín     ',
+		'Scoithniamh  ',
+		'Ruarc        ',
+		'Bríghid      ',
+		'Scolaí       ',
+		'Tuathla      ',
+		'Baoth        ',
+		'Scoth        ',
+		'Neasán       ',
+		'Luiseach     ',
+		'Finnén       ',
+		'Ultán        ',
+		'Nárbhflaith  ',
+		'Éanna        ',
+		'Rónnad       ',
+		'Neasa        ',
+		'Cillian      ',
+		'Olcán        ',
+		'Lonán        ',
+		'Treasa       ',
+		'Sárnait      ',
+		'Osnait       ',
+		'Echna        ',
+		'Seanán       ',
+		'Easnadh      ',
+		'Oillill 	    ',
+		'Uaithne      ',
+		'Bardán       ',
+		'Síoda        ',
+		'Iarfhlaith   ',
+		'Eirnín       ',
+		'Daimhín      ',
+		'Fianait      ',
+		'Tanaí        ',
+		'Leannán      ',
+		'Urard        ',
+		'Lughaidh     ',
+		'Iobhar       ',
+		'Róisín       ',
+		'Conn         ',
+		'Cearbhall    ',
+		'Colmán       ',
+		'Íonait       ',
+		'Muireann     ',
+		'Eithne       ',
+		'Deaglán      ',
+		'Caoimhe      ',
+		'Róinseach    ',
+		'Ruaidhrí     ',
+		'Geiléis      ',
+		'Miach        ',
+		'Labhrás      ',
+		'Abbán        ',
+		'Uaine        ',
+		'Ólchobhar    ',
+		'Nuadha       ',
+		'Fearghal     ',
+		'Rathnait     ',
+		'Laoise       ',
+		'Ailill       ',
+		'Maolán       ',
+		'Líobhan      ',
+		'Laisrén      ',
+		'Fachtna      ',
+		'Maon         ',
+		'Somhairle    ',
+		'Neacht       ',
+		'Buadhach     ',
+		'Tadhg        ',
+		'Muirín       ',
+		'Niall        ',
+		'Mór          ',
+		'Aoibhegréine ',
+		'Conchobhar   ',
+		'Mac Táil     ',
+		'Rúadhán      ',
+		'Mainchín     ',
+		'Órlaith      ',
+		'Éabha        ',
+		'Deirdre      ',
+		'Fionnait     ',
+		'Labhraidh    ',
+		'Brónach      ',
+		'Suanach      ',
+		'Taichleach   ',
+		'Rónán        ',
+		'Murchadh     ',
+		'Laoire       ',
+		'Ríoghán      ',
+		'Tuilelaith   ',
+		'Gobnait      ',
+		'Fionntán     ',
+		'Aonghus      ',
+		'Áinfean      ',
+		'Coinneach    ',
+		'Torcán       ',
+		'Earnán       ',
+		'Cathal       ',
+		'Gobán        ',
+		'Deirbhile    ',
+		'Caoilfhionn  ',
+		'Gormlaith    ',
+		'Fearchar     ',
+		'Lasairfhiona ',
+		'Daighre      ',
+		'Ámhra        ',
+		'Séanait      ',
+		'Samhradhán   ',
+		'Tighearnach  ',
+		'Uallgarg     ',
+		'Aoibheann    ',
+		'Muirne       ',
+		'Líadan       ',
+		'Órnait       '
+			 
+		
 		];
 		
 	let	namesInEnglish = [
-		
-		
-		`little abbot
-		`,`the timorous one
-		`,`rock,  white, Gaulish World King.
-		`,`elf
-		`,`born of song
-		`,`doer of evil deeds
-		`,`hero, champion, warrior
-		`,`delight, pleasure
-		`,`storm, fury, violence
-		`,`very wonderful
-		`,`wealth or abundance
-		`,`ambrose spirited
-		`,`sun-traveller, nobleman second to the king
-		`,`fire
-		`,`the God of fire whose names means fire.
-		`,`God of Fire
-		`,`beautiful radiance
-		`,`radiance of the sun
-		`,`beautiful, radiant
-		`,`sole strength or true choice
-		`,`paleness; whiteness
-		`,`fair-haired
-		`,`an early goddess, also Ireland
-		`,`poet, bard
-		`,`vain, reckless, foolish
-		`,`small
-		`,`little lad
-		`,`fair lady
-		`,`pointed
-		`,`little flower
-		`,`freckled, speckled
-		`,`brave or strong in conflict
-		`,`high goddess
-		`,`noble or high
-		`,`sharp-faced
-		`,`sorrowful
-		`,`Victorious
-		`,`charioteer or bearer
-		`,`fair and slender
-		`,`beauty or grace
-		`,`beautiful birth
-		`,`curly-haired
-		`,`little curly-haired one
-		`,`battle lord
-		`,`strong in battle
-		`,`battler
-		`,`bright headed
-		`,`fiery red
-		`,`brave in sword-fighting, valorous
-		`,`ancient
-		`,`black
-		`,`church
-		`,`from Latin 'dove'
-		`,`fellow hostage
-		`,`strong as a wolf
-		`,`wolf
-		`,`lover of hounds
-		`,`prudent fire
-		`,`wisdom, chief
-		`,`the charioteer
-		`,`sorrowful
-		`,`diminutive of Cu, meaning hound
-		`,`hound of the plain
-		`,`flame
-		`,`flame, fire
-		`,`deer or ox
-		`,`erinn daughter of Fionn
-		`,`blind
-		`,`fawn
-		`,`full of goodness
-		`,`Daughter of Fál (Ireland)
-		`,`daughter of a poet
-		`,`chatterer or daughter
-		`,`man from Desmond (Co. Cork)
-		`,`without injunction or envy
-		`,`daughter of Fionn
-		`,`world mighty
-		`,`Dionysus	brown lord
-		`,`brown princess
-		`,`dark-limbed, black-jointed
-		`,`dark foreigner
-		`,`blue black
-		`,`Life
-		`,`art , craft
-		`,`musical sound
-		`,`wealthy guardian
-		`,`birdlike
-		`,`iron
-		`,`beauty, radiance
-		`,`steed
-		`,`prompt, ready
-		`,`iron
-		`,`kernal or gorse
-		`,`born of the yew
-		`,`jealousy
-		`,`malicious, hostile
-		`,`wolf
-		`,`friendly
-		`,`dark man
-		`,`manly or valorous
-		`,`strength of a man
-		`,`raven or battle
-		`,`battle-king
-		`,`modest, honorable, generous
-		`,`wild creature, deer
-		`,`fair
-		`,`blonde lady
-		`,`fair, white
-		`,`fair-haired, white
-		`,`ghost, spirit
-		`,`fair haired
-		`,`fair shouldered
-		`,`white ancient/fire
-		`,`fiery red
-		`,`rough
-		`,`bright swan
-		`,`little lad
-		`,`servant of Christ
-		`,`grey, grey-blue
-		`,`smith
-		`,`smith
-		`,`dark; swarthy
-		`,`grey servant
-		`,`blue/illustrious princess
-		`,`inspiring terror
-		`,`sun-goddess
-		`,`western kingdom
-		`,`Iar + Lug (Celtic god names)
-		`,`act of eating
-		`,`yew tree
-		`,`faithful, pure, sincere
-		`,`speaker
-		`,`laurel bush
-		`,`milk-white, milk-like
-		`,`milk-white, milk-like
-		`,`flame
-		`,`songful, poetic
-		`,`calf-herd
-		`,`girl
-		`,`fire
-		`,`flame wine
-		`,`sweetheart
-		`,`grey lady
-		`,`comely, beautiful
-		`,`beauty of women
-		`,`a Viking
-		`,`bare
-		`,`blackbird
-		`,`cruel or fierce
-		`,`light, brightness
-		`,`radiant girl
-		`,`son of Ness (goddess name)
-		`,`son of adze
-		`,`servant, devotee of St. Seachnall
-		`,`monk
-		`,`servant of Jesus
-		`,`warrior
-		`,`servant or devotee of St. Mary
-		`,`silent
-		`,`steed
-		`,`she who intoxicates
-		`,`lightening
-		`,`lightening
-		`,`honorable, proud
-		`,`great
-		`,`- ninne was the first word this saint spoke
-		`,`great
-		`,`Molaise	pet from of Laisrén
-		`,`from a Celtic goddess name
-		`,`great
-		`,`noble, good
-		`,` sea battler
-		`,` sea fair
-		`,` lord, master
-		`,` born of the sea
-		`,` sea-bright, sea-white
-		`,` high spirited, festive
-		`,`	sea battler
-		`,`hound of the sea
-		`,`saint
-		`,`of Naomh (saint)
-		`,`noble princess
-		`,`pure
-		`,`battle-fury, warlike frenzy: name of a Celtic war goddess
-		`,`not gentle
-		`,`Stoat
-		`,`cloud or passionate, vehement
-		`,`cloud or passionate, vehement
-		`,`brightness, radiance
-		`,`possibly, cloud-maker: Celtic god name
-		`,`Fionnuala (white shoulders)
-		`,`sallow
-		`,`lad
-		`,`pilgrim
-		`,`sprite, elf
-		`,`sprite, elf
-		`,`little sprite, elf
-		`,`little deer
-		`,`wolf
-		`,`lover of drink
-		`,`fierce hound
-		`,`golden princess
-		`,`sallow
-		`,`potent in prayers or charms
-		`,`little deer
-		`,`deer lover
-		`,`	deer
-		`,`grace, prosperity
-		`,`little king
-		`,`queenly
-		`,`	royal poet
-		`,`	rushing, impetuous
-		`,`seal
-		`,` Norse word for horse. Also means little rose.
-		`,` little seal
-		`,`seal
-		`,`rose or horse
-		`,`	headland
-		`,`red haired
-		`,`red-haired
-		`,`red king
-		`,`hero, champion
-		`,`sweet, goodly
-		`,`summery person
-		`,`noble queen
-		`,`excellent, best
-		`,`chief, noble, best
-		`,`chief, noble, best
-		`,`quarrel, argue
-		`,`diminutive of Scannal
-		`,`ghostly frightening
-		`,`blossom, bloom
-		`,`radiant blossom
-		`,`town crier, scholar
-		`,`blossom, bloom
-		`,`blossom, bloom
-		`,`hawk-like, noble
-		`,`from Latin secondus
-		`,`traveller, wayfarer
-		`,`hawk
-		`,`old, ancient
-		`,`old, ancient
-		`,`Love, affection
-		`,`hawk
-		`,`silk
-		`,`good peace
-		`,`health, from a Celtic goddess name
-		`,`mountain man
-		`,`from Norse, summer wanderer
-		`,`bright, radiant
-		`,`gracious, kindly	
-		`,`drowsy
-		`,`well-going
-		`,`Thaddeus, Theodosius, Theophilus, poet
-		`,`placating, peacemaking
-		`,`slender, subtle
-		`,`idle; inactive
-		`,`a place name in Co. Longford
-		`,`elevated place
-		`,`wantonness
-		`,`dark-haired one
-		`,`Lord
-		`,`Lord
-		`,`having land, wide-ruling
-		`,`abundance, flood
-		`,`of Tuama
-		`,`wild boar
-		`,`strength
-		`,`warlike; fierce
-		`,`Tully, ruler of the people
-		`,`princess of the people
-		`,`prominent forehead
-		`,`lady of abundance of sovereignty
-		 `,`foam-white complexioned
-		`,` greenish, from a tribal name
-		`,`Noble`,
-		`greenish, from a tribal name
-		`,` proud; arrogant
-		`,`little proud, arrogant one
-		`,`fierce pride
-		`,`Ulsterman
-		`,`Juno	
-		`,` very tall`
+		'idle; inactive',
+'the timorous one',
+'fair, white',
+'dark; swarthy',
+'prudent fire',
+'black',
+'of Naomh (saint)',
+'small',
+'rose or horse',
+'blossom, bloom',
+'jealousy',
+'sweet, goodly',
+'charioteer or bearer',
+'delight, pleasure',
+'fiery red',
+'bare',
+'God of Fire',
+'red-haired',
+'inspiring terror',
+'hero, champion, warrior',
+'wantonness',
+'fiery red',
+'wealth or abundance',
+'Daughter of Fál (Ireland)',
+'prompt, ready',
+'raven or battle',
+'noble, good',
+'brave or strong in conflict',
+'little deer',
+'little flower',
+'headland',
+'potent in prayers or charms',
+'doer of evil deeds',
+'battle-fury, warlike frenzy, Celtic war goddess',
+'beauty, radiance',
+'Tully, ruler of the people',
+'Lad',
+'sallow',
+'fierce hound',
+'health, from a Celtic goddess name',
+'noble queen',
+'man from Desmond (Co. Cork)',
+'Lord',
+'pointed',
+'a Viking',
+'old, ancient',
+'steed',
+'diminutive of Cu, meaning hound',
+'great',
+'little proud, arrogant one',
+'mountain man',
+'wolf',
+'freckled, speckled',
+'little lad',
+'blue black',
+'wolf',
+' sea-bright, sea-white',
+'strong as a wolf',
+'brightness, radiance',
+'hawk',
+'lightening',
+'she who intoxicates',
+'Dionysus	brown lord',
+'cruel or fierce',
+'Noble',
+'from a Celtic goddess name',
+'modest, honorable, generous',
+'hawk-like, noble',
+'battler',
+'fair haired',
+'well-going',
+'noble or high',
+'Fionnuala (white shoulders)',
+'little sprite, elf',
+'pilgrim',
+'little curly-haired one',
+'of Tuama',
+'fair-haired',
+'art , craft',
+'fair lady',
+'chief, noble, best',
+'fair shouldered',
+'gracious, kindly	',
+'wealthy guardian',
+'servant or devotee of St. Mary',
+'sharp-faced',
+'world mighty',
+'dark-haired one',
+'flame',
+'ambrose spirited',
+'son of Ness (goddess name)',
+'born of song',
+'blonde lady',
+'act of eating',
+'having land, wide-ruling',
+'sun-goddess',
+'rushing, impetuous',
+'lord, master',
+'born of the yew',
+'fellow hostage',
+'bright, radiant',
+'cloud or passionate, vehement',
+'servant of Jesus',
+'warlike; fierce',
+'diminutive of Scannal',
+'beautiful, radiant',
+'deer lover',
+'bright headed',
+'brown princess',
+'proud; arrogant',
+'Juno	',
+'foam-white complexioned',
+'Love, affection',
+'hound of the plain',
+'ghostly frightening',
+'paleness; whiteness',
+'queenly',
+'little deer',
+'milk-white, milk-like',
+'grey servant',
+'great',
+'Molaise	pet from of Laisrén',
+'milk-white, milk-like',
+'rock,  white, Gaulish World King.',
+'ninne was the first word this saint spoke',
+'abundance, flood',
+'without injunction or envy',
+'comely, beautiful',
+' sea battler',
+'fire',
+'a place name in Co. Longford',
+'an early goddess, also Ireland',
+'sun-traveller, nobleman second to the king',
+'lightening',
+'ghost, spirit',
+'curly-haired',
+'strength of a man',
+'the charioteer',
+'battle lord',
+'servant of Christ',
+'from Latin secondus',
+'songful, poetic',
+'beautiful birth',
+'hound of the sea',
+'quarrel, argue',
+'sprite, elf',
+'daughter of Fionn',
+'grey, grey-blue',
+'dark man',
+'little lad',
+'royal poet',
+'servant, devotee of St. Seachnall',
+'blind',
+'dark foreigner',
+'prominent forehead',
+'rough',
+'dark-limbed, black-jointed',
+'erinn daughter of Fionn',
+'excellent, best',
+'the God of fire whose names means fire.',
+'good peace',
+'elevated place',
+'ancient',
+'battle-king',
+'traveller, wayfarer',
+'fawn',
+'fire',
+'saint',
+'Iar + Lug (Celtic god names)',
+'blossom, bloom',
+'radiant blossom',
+'hero, champion',
+'high goddess',
+'town crier, scholar',
+'princess of the people',
+'vain, reckless, foolish',
+'blossom, bloom',
+'Stoat',
+'radiant girl',
+'fair',
+'Ulsterman',
+'noble princess',
+'birdlike',
+'seal',
+'not gentle',
+'church',
+'wolf',
+'blackbird',
+'strength',
+'chief, noble, best',
+'deer',
+'steed',
+'old, ancient',
+'musical sound',
+'sprite, elf',
+'greenish, from a tribal name',
+'poet, bard',
+'silk',
+'western kingdom',
+'iron',
+'deer or ox',
+'wild creature, deer',
+'slender, subtle',
+'sweetheart',
+'very tall',
+'light, brightness',
+'yew tree',
+'Norse word for horse. Also means little rose.',
+'wisdom, chief',
+'brave in sword-fighting, valorous',
+'from Latin \'dove\'',
+'faithful, pure, sincere',
+'sea fair',
+'kernal or gorse',
+'full of goodness',
+'beauty or grace',
+'seal',
+'red king',
+'bright swan',
+'honorable, proud',
+'laurel bush',
+'little abbot',
+'greenish, from a tribal name',
+'lover of drink',
+'possibly, cloud-maker: Celtic god name',
+'manly or valorous',
+'grace, prosperity',
+'girl',
+'elf',
+'warrior',
+'beauty of women',
+'flame',
+'malicious, hostile',
+'silent',
+'from Norse, summer wanderer',
+'pure',
+'Victorious',
+'Thaddeus, Theodosius, Theophilus, poet',
+'born of the sea',
+'cloud or passionate, vehement',
+'great',
+'radiance of the sun',
+'lover of hounds',
+'son of adze',
+'red haired',
+'monk',
+'golden princess',
+'Life',
+'chatterer or daughter',
+'fair-haired, white',
+'speaker',
+'sorrowful',
+'drowsy',
+'placating, peacemaking',
+'little seal',
+'sea battler',
+'calf-herd',
+'little king',
+'lady of abundance of sovereignty',
+'smith',
+'white ancient/fire',
+'sole strength or true choice',
+'storm, fury, violence',
+'sorrowful',
+'wild boar',
+'iron',
+'strong in battle',
+'smith',
+'daughter of a poet',
+'fair and slender',
+'blue/illustrious princess',
+'friendly',
+'flame wine',
+'flame, fire',
+'very wonderful',
+'hawk',
+'summery person',
+'Lord',
+'fierce pride',
+'beautiful radiance',
+'high spirited, festive',
+'grey lady',
+'sallow',
+
 		 
 		];
 		
@@ -763,8 +766,13 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	}
   }
   
-  shuffle(namesInEnglish,namesInIrish);
-	function buttonMashClick() { 
+//   shuffle(namesInEnglish,namesInIrish);
+	// for (let i = 0; i < namesInIrish.length; i++) {
+	// 	console.log(namesInIrish[i]+ '    ' +namesInEnglish[i]);
+		
+	// }
+	// console.log("<<<<<>>>>>");
+		function buttonMashClick() { 
 		
 
 
@@ -776,7 +784,8 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
     if (diff.current > 0.8) round.current--;
     if (diff.current < -0.8) round.current++;
     prevValue.current = v;
-    setValue(v);
+	  setValue(v);
+	  localStorage.setItem('hname', hname)
   };
 	let champIcon = champion0;
 	let champID = Math.floor(value * 100);
@@ -1083,35 +1092,36 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	if (champID === 99){
 		champIcon = champion99;
 	}
+
 	localStorage.setItem('quest-portrait', champID);
   const tryValue = v => {
 	  updateValue(valueWithinLimits(v));
 	  thumbStart();
   };
-	let hname;
 	let hnameE;
 	// let fadeOutNoOne = this.props.fadeOutNoOne;
 	let proceedThroughQuiz = props.proceedThroughQuiz;
+	let namesi;
 	
 	
 	{ const [champName, setChampName] = useState('Anseo'); }
 	
 
 	//thumbStart is a hack to prevent side effect of making question text fade out when player is at location 'geaga'.
-	function thumbStart() { 
-		// alert();
+	function thumbStart() {
 		document.querySelector(".champion-portrait").classList.add('fade-in-champ');
 		document.querySelector(".names-e").classList.add('fade-in-champ'); document.querySelector(".names-i").classList.add('fade-in-champ');
 		document.querySelector(".question-text").classList.add('fade-out-champ');
-
 	} 
 
 
-	
 	return (
 
 <>
-		
+			<div className="input-elements-container-7b">
+<img src={betweenFields} className="between-fields" alt="a wheeling space between worlds" />
+				
+		</div>
 <div className="input-elements-container-7">
 <img src={lensCap} className="lens-cap" alt="a fantasy landscape a ring of stones, a haunted tree" />
 			</div>
@@ -1153,7 +1163,8 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 			
 			 <div className="input-elements-container-5">
 					
-				<button className="button-mash-ring-4"  onClick={props.fadeOutNoOne} onTouchEnd={ props.proceedThroughQuiz}>
+				<button className="button-mash-ring-4" 
+					onClick={props.fadeOutNoOne} onTouchEnd={props.proceedThroughQuiz}>
 					
 					<img src={champIcon} className="champion-portrait" alt="champion portrait" />
 							
