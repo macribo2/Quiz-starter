@@ -666,7 +666,11 @@ position:relative
 .iron-key-portrait{
   margin-top:170%;
 }
-  .between-fields{
+.dial-text{
+  /* top:5%; */
+}
+
+.between-fields{
     transform:scale(2.8);
     display:block;
   

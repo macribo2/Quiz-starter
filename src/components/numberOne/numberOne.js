@@ -80,8 +80,7 @@ export default  class NumberOne extends React.Component  {
 		$('.between-fields').fadeOut();
 		$('#hero').fadeIn();
 		$('.button-mash-ring-4').fadeOut();
-		$('.input-elements-container-8').css('display','none');
-		$('.hero-shadow').fadeIn('slow');
+		$('.input-elements-container-8').fadeOut(2000)//css('display','none');
 		$('.answer-section').fadeIn();
 		$('#hints-ring-4').html('');
 		
@@ -93,6 +92,7 @@ export default  class NumberOne extends React.Component  {
 		setTimeout(function () { 
 			$('.question-text').removeClass('fade-out-champ');
 			$('.question-text').fadeIn('slow');
+			$('.hero-shadow').fadeIn('5000','linear');
 
 
 		},1000)

@@ -142,6 +142,16 @@ export default function Rings3(props) {
 	return (
 		<>
 			
+		<div className="linux-land-container">
+					<img className={value * 10 === 4 ? 'about-pics' : 'hidden'} src={linucsLand} id="linux-land" alt="illustration placeholder" />
+				</div>
+
+					<div className="linux-land-container">
+
+					<img className={value*10 === 5 ? 'about-pics':'hidden'} src={linucsLand}  id="linux-land-down" alt="illustration placeholder" />
+				</div>
+
+
 			 <div className="input-elements-container0">
 
 			
@@ -195,20 +205,12 @@ export default function Rings3(props) {
 		
 		</div>
 	
-				<div className="linux-land-container">
-					<img className={value * 10 === 4 ? 'about-pics' : 'hidden'} src={linucsLand} id="linux-land" alt="illustration placeholder" />
-				</div>
-					
-					<div className="linux-land-container">
-
-					<img className={value*10 === 5 ? 'about-pics':'hidden'} src={linucsLand}  id="linux-land-down" alt="illustration placeholder" />
-				</div>
-
 
 				<div className={value * 10 === 4 ? "linux-lens-container" : "hidden"}>
 					<img rel="preload" className={value * 10 === 4 ? "map-lens" : "hidden"} src={lensBG} alt="" />
 					
 				</div>
+				
 				
 				<div className={value * 10 === 3 ? "linux-lens-container-fade-in" : "hidden"}>
 					<img rel="preload" className={value * 10 === 3? "map-lens" : "hidden"} src={lensBG} alt="" />

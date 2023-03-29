@@ -5071,7 +5071,7 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
 
 
 
-                    <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'Return  with rings.'+localStorage.getItem('HeroZero')+'. '}</p>
+                    <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'Says '+this.props.choiceRingEng+' "Return  with rings." "I will '+this.props.heroNameEng+'", says '+localStorage.getItem('hname')+'.'}</p>
 
 
 

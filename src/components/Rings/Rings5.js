@@ -372,7 +372,7 @@ function thumbStart() {
 	return (
 
 		<>
-			
+			<div className="tullynally-ring">
 		<img id="tullynally-lens" rel="preload" src={outerLocation} className="question-img" alt="dark green fields background" />	
 			<div className="bg-container"><img src={ stoneBG} alt="yin yan in gold and black circle" /></div>
 		<div className="ring-5-binary-container">
@@ -428,7 +428,7 @@ function thumbStart() {
 							
 </div>
 			</div>
-				
+			</div>				
 </>
 			);
 }

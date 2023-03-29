@@ -1,4 +1,11 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*
 * Prefixed by:
 * PostCSS: v7.0.29,
 * Autoprefixer: v9.7.6
@@ -34,6 +41,23 @@ opacity:1;
 
 
 
+@-webkit-keyframes landscape-waves {
+  0% {
+   top:  -40%
+  }
+
+  50% {
+    top: 35%
+   }
+ 
+   
+  100% {
+    top:-40%;
+  }
+}
+
+
+
 @keyframes landscape-waves {
   0% {
    top:  -40%
@@ -50,7 +74,8 @@ opacity:1;
 }
 
 .disappear{
-  animation: fade-out 1s forwards;
+  -webkit-animation: fade-out 1s forwards;
+          animation: fade-out 1s forwards;
   pointer-events: none;
 }
 body {
@@ -293,9 +318,13 @@ width: 740px;
   width: 100%;
   font-family: aonchlo;
   /* background-color: rgba(0,0,0,0.5); */
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   /* -webkit-text-stroke: 1px #000000; */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  background-image: -o-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
   background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
  
 }
@@ -376,6 +405,20 @@ width: 740px;
     opacity: 0
   }
 
+  
+  100% {
+    opacity: 1
+  }
+}
+
+
+@-webkit-keyframes hesitate {
+  0% {
+    opacity: 0
+  }
+  50% {
+    opacity: 0
+  }
   
   100% {
     opacity: 1
@@ -725,6 +768,23 @@ button svg {
           animation: fade-in 50s forwards;
 }
 
+@-webkit-keyframes highlight-glass {
+  30% {
+    border: 4px solid rgba(172, 255, 47, 0);
+  }
+  
+  50% {
+    border: 4px solid greenyellow;
+  }
+  
+  
+  
+  100% {
+    border: 4px solid rgba(172, 255, 47, 0);
+
+  }
+}
+
 @keyframes highlight-glass {
   30% {
     border: 4px solid rgba(172, 255, 47, 0);
@@ -1058,7 +1118,9 @@ width: 100%;
   /* animation:fade-out 2s linear 1s forwards; */
 }
 .avatar-holder {
-  align-items:center;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
   top: 0%;
   left: 0%;
   /* border: 4px solid blue; */
@@ -1106,14 +1168,14 @@ width: 100%;
   position: fixed;
   z-index: 995;
   font-size: 3em;
-  font-weight: bold;
+  /* font-weight: bold; */
   text-align: center;
   left: 0%;
   top: 0%;
-  -webkit-text-stroke-color: black !important;
+  -webkit-text-stroke-color: rgba(242, 144, 255, 0.437)!important;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#6666ff), color-stop(#0099ff) , color-stop(#00ff00), color-stop(#ff3399), to(#6666ff));
   background: -o-linear-gradient(left, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  background: -webkit-gradient(linear, left top, right top, from(#6666ff), color-stop(#0099ff) , color-stop(#00ff00), color-stop(#ff3399), to(#6666ff));
   background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
   -webkit-background-clip: text;
   background-clip: text;
@@ -1122,7 +1184,7 @@ width: 100%;
           animation: rainbow_animation 60s ease-in-out infinite;
   background-size: 400% 100%;
   font-family: aonchlo;
-  -webkit-text-stroke-width: 2px;
+  /* -webkit-text-stroke-width: 2px; */
 pointer-events: none;
 background-color: rgba(32,34,45,1);}
 
@@ -1445,7 +1507,8 @@ margin:0;
 
 .hesitate{
 /* display:none; */
-  animation: hesitate 2.5s forwards;
+  -webkit-animation: hesitate 2.5s forwards;
+          animation: hesitate 2.5s forwards;
 }
 
 
@@ -1455,14 +1518,13 @@ margin:0;
   position: fixed;
   z-index: 1595;
   font-size: 3em;
-  font-weight: bold;
+  /* font-weight: bold; */
   text-align: center;
   left: 0%;
   top: 0%;
-  -webkit-text-stroke-color: black !important;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#6666ff), color-stop(#0099ff) , color-stop(#00ff00), color-stop(#ff3399), to(#6666ff));
   background: -o-linear-gradient(left, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  background: -webkit-gradient(linear, left top, right top, from(#6666ff), color-stop(#0099ff) , color-stop(#00ff00), color-stop(#ff3399), to(#6666ff));
   background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
   -webkit-background-clip: text;
   background-clip: text;

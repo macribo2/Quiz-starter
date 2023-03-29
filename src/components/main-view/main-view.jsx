@@ -207,7 +207,7 @@ export default function App() {
 	
 		{
 			// tosníonn an scéal anseo. 
-			questionText:  'Arsa '+ choiceRing[localStorage.getItem('portrait')]+'<br/>"Fill le fáinní,".<br/>Fillfaidh '+heroNames[localStorage.getItem('portrait')] +',"<br/> arsa '+  hn+'.' ,
+			questionText:  'Arsa '+ choiceRing[localStorage.getItem('portrait')]+' <br/>"Fill le fáinní."<br/>"Fillfaidh '+heroNames[localStorage.getItem('portrait')] +'" <br/>arsa '+  hn+'.' ,
 			answerOptions: [
 				
 			],
@@ -687,7 +687,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 						
 						: null}
 			{showOverworld === true ? <>
-				<Overworld toggleIsOn={toggleIsOn} storyTimer={storyTimer} incrementScore={incrementScore} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} heroNameEng={heroNamesEng[localStorage.getItem('portrait')]} proceedThroughQuiz={ proceedThroughQuiz} />
+				<Overworld toggleIsOn={toggleIsOn} storyTimer={storyTimer} incrementScore={incrementScore} choiceRingEng={ choiceRingEng[value * 10]} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} heroNameEng={heroNamesEng[localStorage.getItem('portrait')]} proceedThroughQuiz={ proceedThroughQuiz} />
 			
 			{showScore ? (
 				<div className='score-section'>scór: { score } as {questions.length}</div>
