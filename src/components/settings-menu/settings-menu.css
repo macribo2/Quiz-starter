@@ -662,19 +662,6 @@ position:relative
 
   .between-fields{
   display:none;}
-@media only screen and (min-width: 1022px) {
-.iron-key-portrait{
-  margin-top:170%;
-}
-.dial-text{
-  /* top:5%; */
-}
-
-.between-fields{
-    transform:scale(2.8);
-    display:block;
-  
-  }}
 
  @media only screen and (min-width: 1181px) {
 
@@ -979,3 +966,29 @@ animation: bounce 2s 15 steps(3);
 			top: 20%;
 			left:30%;
 		}
+    @media only screen and (min-width: 1022px) {
+      .linux-land-container{
+        transform: scale(1);
+      }
+    .iron-key-portrait{
+      margin-top:170%;
+    }
+    .dial-text{
+      /* top:5%; */
+    }
+    
+    .between-fields{
+        transform:scale(2.8);
+        display:block;
+      
+      }
+    }
+
+
+    @media only screen and (max-width: 1022px) {
+      .linux-land-container{
+        transform: scale(0.5);
+      }
+
+    }
+    

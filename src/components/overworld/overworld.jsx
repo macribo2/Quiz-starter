@@ -4,7 +4,7 @@ import NumberOne from '../numberOne/numberOne'
 import ReactRain from 'react-rain-animation';
 import bit from '../../images/gifs/bit.gif'
 import "react-rain-animation/lib/style.css";
-import Easca from '../easca/easca'
+import Easca from '../easca/easca2'
 import {Rings5} from '../Rings/Rings5'
 import '../Rings/rings1.css';
 import emerald from '../../images/misc_crystal_new.png'
@@ -18,7 +18,7 @@ import daff from '../../images/localMaps/daff.gif'
 import portrait from '../../images/empty.png'
 import { BtnB } from './../ui/btn-b';
 import promptVid from '../../images/stars.gif'
-import ciaroga from '../../images/players/rógaire0.png'
+import ciaroga from '../../images/players/agnes_new.png'
 import phone1 from '../../images/phone-0.png';
 import glass from '../../images/big-glass.png';
 import defaultField from '../../images/localMaps/defaultField.png';
@@ -4935,7 +4935,6 @@ storyTimer()
                 <h2 id="output2"> "{ heroName}!"</h2>
             {/* <Rings1/> */}
 
-            <BtnB id="b-btn" ></BtnB>
 
   <ReactAudioPlayer src={whereAmI==="westmeath"?jam:null } autoPlay />
   
@@ -5071,7 +5070,7 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
 
 
 
-                    <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'Says '+this.props.choiceRingEng+' "Return  with rings." "I will '+this.props.heroNameEng+'", says '+localStorage.getItem('hname')+'.'}</p>
+                    <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'Said '+this.props.choiceRingEng+' "Return  with rings." "I will '+this.props.heroNameEng+'", said '+localStorage.getItem('hname')+'.'}</p>
 
 
 
@@ -5080,6 +5079,9 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
     
                     <Rings5 heroName={this.props.heroName} heroNameEng={ this.props.heroNameEng} toggleIsOn={this.props.toggleIsOn} isOn={this.props.isOn} proceedThroughQuiz={this.props.proceedThroughQuiz } fadeOutNoOne={ this.fadeOutNoOne } />
                     </div>
+ 
+                    <BtnB id="b-btn" ></BtnB>
+ 
             </div> 
 
             

@@ -12,7 +12,7 @@ import avatar1 from '../../images/players/spéirbhean0.gif';
 import avatar2 from '../../images/players/douglas.png';
 import avatar3 from '../../images/players/fianna0.png';
 import avatar4 from '../../images/players/gotach0.png';
-import avatar5 from '../../images/players/rógaire0.png'
+import avatar5 from '../../images/players/agnes_new.png'
 import avatar6 from '../../images/players/diamhraí0.gif';
 import avatar7 from '../../images/players/seanchaí0.png';
 import avatar8 from '../../images/players/pooka.png';
@@ -493,7 +493,7 @@ let ogHero = localStorage.getItem('portrait')
 'Dionysus	brown lord',
 'cruel or fierce',
 'Noble',
-'from a Celtic goddess name',
+'after Macha, goddess of Sovereignty',
 'modest, honorable, generous',
 'hawk-like, noble',
 'battler',

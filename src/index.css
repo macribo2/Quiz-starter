@@ -1253,7 +1253,8 @@ position: relative;
   
 #mob-effect,
 #mob-text,
-#suggest-mobile {
+#suggest-mobile,
+#mob-effect2 {
 
   left: 0;
   height: 100%;
@@ -1263,7 +1264,10 @@ position: relative;
   z-index: -9;
 }
 
-
+#mob-effect2{
+  z-index: 99;
+  border:333px solid blue;
+}
 #toggle-settings-btn,
 #toggle-glass-btn, #toggle-glass-btn2 {
 
@@ -1423,7 +1427,11 @@ z-index: 0;
       position: fixed;
     }
 
-
+#delay-in{
+  font-family: aonchlo;
+  opacity: 0;
+  animation: delay-fade-in 4s forwards linear;
+}
 
     ul {
       list-style-type: none;
@@ -1552,6 +1560,38 @@ position: fixed;
   opacity: 0.7;
 }
 
+
+@-webkit-keyframes delay-fade-in {
+  0% {
+     opacity: 0;
+  }
+
+  70% {
+    opacity: 0;
+
+  }
+  100% {
+    opacity: 1;
+
+  }
+  
+}
+@keyframes delay-fade-in {
+  0% {
+     opacity: 0;
+  }
+
+  70% {
+    opacity: 0;
+
+  }
+  100% {
+    opacity: 1;
+
+  }
+  
+}
+
 @-webkit-keyframes rainbow_animation {
   0%,100% {
       background-position: 0 0;
@@ -1561,7 +1601,6 @@ position: fixed;
       background-position: 100% 0;
   }
 }
-
 @keyframes rainbow_animation {
   0%,100% {
       background-position: 0 0;

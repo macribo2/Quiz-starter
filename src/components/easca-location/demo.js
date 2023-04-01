@@ -818,7 +818,7 @@ namesInEnglish = [
 `,`ninne- ninne was the first word this saint spoke
 `,`Maud	great
 `,`Molaise	pet from of Laisrén
-`,`from a Celtic goddess name
+`,`after Macha, goddess of Sovereignty
 `,`Agatha	great
 `,`Morand	
 `,`noble, good

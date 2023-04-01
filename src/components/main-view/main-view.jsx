@@ -1,6 +1,7 @@
 import Overworld from '../../components/overworld/overworld';
+
 import shine from '../../images/a-btn.png'
-import React, { useState } from 'react';
+import React, { useState, Component } from 'react';
 import Sparkles from 'react-sparkle'
 import ding3 from '../../audio/ding3.wav'
 import SettingsMenu from '../../components/settings-menu/settings-menu'
@@ -15,7 +16,7 @@ import avatar1 from '../../images/players/spéirbhean0.gif';
 import avatar2 from '../../images/players/douglas.png';
 import avatar3 from '../../images/players/fianna0.png';
 import avatar4 from '../../images/players/gotach0.png';
-import avatar5 from '../../images/players/rógaire0.png'
+import avatar5 from '../../images/players/agnes_new.png'
 import avatar6 from '../../images/players/diamhraí0.gif';
 import avatar7 from '../../images/players/seanchaí0.png';
 import avatar8 from '../../images/players/pooka.png';
@@ -83,8 +84,8 @@ const ComponentWithScreenOrientation = () => {
 		<p>Screen orientation is: {screenOrientation}</p>
 	)
 }
-let heroNames = ['', 'a Níamh', 'a Ḋubhghlas', 'a Oisín', 'a diabhaltán', 'a rógaire', 'a Thaoiseach', 'Fionn', 'a chara', 'file'];
-let heroNamesEng = ['','o Níamh', 'Douglas', 'o Oisín','o devilry', 'you rogue','o Chieftain','Fionn','o friend','poet'];
+let heroNames = ['', 'a Níamh', 'a Ḋubhghlas', 'a Oisín', 'a ḋiabhaltán', 'a craythur', 'a Thaoiseach', 'Fionn', 'a chara', 'file'];
+let heroNamesEng = ['','o Níamh', 'Douglas', 'o Oisín','o devilry', 'o beloved devil','o Chieftain','Fionn','o friend','poet'];
 
 export default function App() {
 	//for rotary dial values:
@@ -134,7 +135,7 @@ export default function App() {
 		`An Craoibhín Aoibhinn`,
 		`Oisín`,
 		`Donn Fírinne`,
-		`Liam Mac Cárthaigh`,
+		`Mug Ruith`,
 		`Abhartach`,
 		`Fionn Mac Cumhail`,
 		`Púca`,
@@ -207,7 +208,7 @@ export default function App() {
 	
 		{
 			// tosníonn an scéal anseo. 
-			questionText:  'Arsa '+ choiceRing[localStorage.getItem('portrait')]+' <br/>"Fill le fáinní."<br/>"Fillfaidh '+heroNames[localStorage.getItem('portrait')] +'" <br/>arsa '+  hn+'.' ,
+			questionText:  'Arsa '+ choiceRing[localStorage.getItem('portrait')]+' <br/>"Fill le fáinní."<br/><div id="delay-in">"Fillfaidh '+heroNames[localStorage.getItem('portrait')] +'" <br/>arsa '+  hn+'.</div>' ,
 			answerOptions: [
 				
 			],
@@ -575,10 +576,10 @@ if(value!=0){
 		 The Pleasant Little Branch`,
 		`"Young Deer", greatest poet of Ireland, warrior of the Fianna`,
 		`The Dark One`,
-		`Billy the Kid`,
+		`The Pagan Champion of Valentia`,
 		`The Vampire Chieftain`,
-		`Legendary warrior, a seer and a poet`,
-		`A "pooka," a fairy, a sprite, a hobgoblin`,
+		`The Legendary warrior, seer, poet`,
+		`one of the Fair Folk `,
 		`Fedelm the poet`,
 		``
 	]
@@ -628,6 +629,8 @@ let thePucaOf = localStorage.getItem('pucaEng')
 				
 					<img rel="preload"src={lens} id="lens" alt="a glass 	" />
 				</div>
+
+				
 				<div className="input-elements-container">
 
 				<CircularInput className="dial" value={value} onChange={v => setValue(stepValue(v))} >{ }
@@ -890,11 +893,19 @@ let thePucaOf = localStorage.getItem('pucaEng')
 	</div>
 	
 	<div id="suggest-mobile">
+
 				
 				<img id="mob-effect"rel="preload" className="phonebg2"src={phone1} alt="" />
 			
+			<div>
+{/* 				
+	<video id="mob-effect2"rel="preload" width="750" height="500" autoPlay >
+      <source src="../../vid/suggest-mobile.mp4" type="video/mp4"/>
+</video> */}
+</div>
 		</div>
 		{currentQuestion>=8?setIsFadedOut(true):null}
+	
 	
 	</>
 	

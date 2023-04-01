@@ -1,5 +1,12 @@
 
 
+
+
+@font-face {
+	font-family: aonchlo;
+	src: url(../../fonts/aonchlo.ttf);
+  }
+  
 /* *{
 	background-color:black;} */
 	.button-group{
@@ -143,3 +150,29 @@ top: 60%;
 }
 
 /* developing an algorithm generator? */
+
+.hg-theme-default{
+    background-color: black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'aonchlo';
+    overflow: hidden;
+    padding: 5px;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+    width: 100%;
+    top: 61%;
+    position: fixed;
+	z-index: 9000;
+}
+.react-simple-keyboard, .hg-theme-default, .hg-layout-easca{
+	background-color: rgba(0, 0, 0, 0.283);
+
+}
+ .hg-button, .hg-layout-easca.hg-rows,
+.hg-theme-default,.hg-standardBtn{
+	background-color: rgba(39, 29, 29, 1) !important;
+	color:aliceblue !important;
+
+}
