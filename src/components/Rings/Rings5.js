@@ -18,7 +18,7 @@ import fromFive from '../../images/about2/stone-5.png'
 import fromSix from '../../images/about2/stone-6.png'
 import fromSeven from '../../images/about2/stone-7.png'
 
-
+import './tully-nally-style.css';
 import {
   CircularInput,
   CircularTrack,
@@ -385,11 +385,10 @@ function thumbStart() {
 			{/* </div> */}
 	 
 			
-			 {/* <div className="ring-5-button-mash-container"> */}
+			  <div className="ring-5-button-mash-container"> 
 			 
-				{/* <button className="button-mash-ring-5" onClick={props.fadeOutNoOne}></button>
-				 */}
-			 {/* </div> */}
+					<button className={ binaryID >=99? "button-mash-ring-5":"hidden" } onClick={props.fadeOutNoOne}></button>
+			 </div>
 			 <div className="ring-5-dial-container">
 			 <CircularInput value={value} className="dial dial5" onChange={tryValue}>
 				<CircularTrack
@@ -426,9 +425,9 @@ function thumbStart() {
 
 				
 							
-</div>
+					</div>
 			</div>
-			</div>				
+	</div>				
 </>
 			);
 }

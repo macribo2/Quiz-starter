@@ -361,8 +361,8 @@ z-index: 101;
 
 .names-e,.numbers-e{
   position: fixed;
-  top: 83%;
-  left: 4%;
+ top:80%;
+  left: 2%;
                 
   padding: 5px;
   opacity: 0;
@@ -560,6 +560,8 @@ transform:scale(0.5)
 }
 .numbers-e{
   opacity:1;
+  top: 60%;
+  left: 11%;
 }
 #hi-vis{
   opacity:1

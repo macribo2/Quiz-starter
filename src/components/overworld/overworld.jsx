@@ -4854,7 +4854,7 @@ storyTimer()
                 {/* {this.state.registerMenu ? <Register /> : null} */}
            
 
- 
+ <div className='ui-container_directional-pad'>
                 <div className="directional-pad" onTouchStart={this.props.incrementScore} onTouchEnd={localStorage.setItem('whereAmI', 'westmeath')
                 }>
                     <div className='grid-container'>
@@ -4874,7 +4874,7 @@ storyTimer()
                         <div className="grid-item"></div>
                     </div>
                 </div>            
-
+                </div>
                 <img id="mob-effect" className="phonebg2"src={phone1} alt="" />
 
                 <div className="countyMap-container">
@@ -5079,9 +5079,9 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
     
                     <Rings5 heroName={this.props.heroName} heroNameEng={ this.props.heroNameEng} toggleIsOn={this.props.toggleIsOn} isOn={this.props.isOn} proceedThroughQuiz={this.props.proceedThroughQuiz } fadeOutNoOne={ this.fadeOutNoOne } />
                     </div>
- 
+          <div className="ui-container_b-btn">
                     <BtnB id="b-btn" ></BtnB>
- 
+ </div>
             </div> 
 
             

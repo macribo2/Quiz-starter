@@ -344,40 +344,24 @@ self.__precacheManifest = [
     "url": "/static/media/INFO56_0.8d8dbdd7.ttf"
   },
   {
-    "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
-    "url": "/static/media/fortuna-glass.4c08d21e.png"
-  },
-  {
     "revision": "f00de7d9918169a9feeb00e77a9a2f56",
     "url": "/static/media/ciorcal-glass-bg.f00de7d9.png"
+  },
+  {
+    "revision": "fefaccef8a9d6893e3e1ed77e3170cff",
+    "url": "/static/media/field.fefaccef.png"
+  },
+  {
+    "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
+    "url": "/static/media/fortuna-glass.4c08d21e.png"
   },
   {
     "revision": "ee5004be8978604da5e223282c5bbe51",
     "url": "/static/media/sea.ee5004be.png"
   },
   {
-    "revision": "803e6e686778fd42d5b5ccb0059ef189",
-    "url": "/static/media/wren-hood.803e6e68.png"
-  },
-  {
-    "revision": "d0fa8e83c08e2f7d1ce2e1cbe8f2e8b6",
-    "url": "/static/media/fairy-ring-east-vert.d0fa8e83.png"
-  },
-  {
-    "revision": "b67d2f1bd5a2f4dad3e923b36f5038a0",
-    "url": "/static/media/suile0.b67d2f1b.gif"
-  },
-  {
     "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
     "url": "/static/media/mapFrame4.0cdb344e.png"
-  },
-  {
-    "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
-    "url": "/static/media/mapFrame2.915b9892.png"
-  },
-  {
-    "revision": "fefaccef8a9d6893e3e1ed77e3170cff",
-    "url": "/static/media/field.fefaccef.png"
   },
   {
     "revision": "c84c06495852ac730bd653c3aa9bff25",
@@ -388,8 +372,24 @@ self.__precacheManifest = [
     "url": "/static/media/wren2b.4159e8fd.png"
   },
   {
+    "revision": "803e6e686778fd42d5b5ccb0059ef189",
+    "url": "/static/media/wren-hood.803e6e68.png"
+  },
+  {
+    "revision": "d0fa8e83c08e2f7d1ce2e1cbe8f2e8b6",
+    "url": "/static/media/fairy-ring-east-vert.d0fa8e83.png"
+  },
+  {
     "revision": "9bbe18cf6d054928f146dafcf058fcb1",
     "url": "/static/media/suile3.9bbe18cf.gif"
+  },
+  {
+    "revision": "b67d2f1bd5a2f4dad3e923b36f5038a0",
+    "url": "/static/media/suile0.b67d2f1b.gif"
+  },
+  {
+    "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
+    "url": "/static/media/mapFrame2.915b9892.png"
   },
   {
     "revision": "29cb5d03956b7ce387a59b240a2fbf1e",

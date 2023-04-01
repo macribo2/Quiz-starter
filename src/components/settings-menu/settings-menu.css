@@ -131,9 +131,8 @@
 
 .directional-pad {
   left: 0%;
-  position: fixed;
-  bottom: 19%;
-  opacity: 1;
+  /* bottom: 19%; */
+  /* opacity: 1; */
   transform: scale(0.8);
   z-index: 60;
 }
