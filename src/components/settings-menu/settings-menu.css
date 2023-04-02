@@ -425,12 +425,13 @@ position:fixed;
 #locEng {
   /* color: rgb(45, 160, 30); */
   z-index: 1000;
-  font-family: Helvetica, Arial, sans-serif;
   top: 69%;
   display: block;
   font-size: 1.8em;
   width: 100%;
   left: 10%;
+  font-family: 'anaphora';
+
 }
 
 .locDown{

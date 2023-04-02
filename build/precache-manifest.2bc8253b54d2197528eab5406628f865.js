@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "41aca24a14f497e24b37",
-    "url": "/static/css/main.2a2fb2ff.chunk.css"
+    "revision": "e29246a48a80afe7f5b1",
+    "url": "/static/css/main.7a68882b.chunk.css"
   },
   {
-    "revision": "41aca24a14f497e24b37",
+    "revision": "e29246a48a80afe7f5b1",
     "url": "/static/js/main.5c73c204.chunk.js"
   },
   {
@@ -348,12 +348,16 @@ self.__precacheManifest = [
     "url": "/static/media/INFO56_0.8d8dbdd7.ttf"
   },
   {
-    "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
-    "url": "/static/media/fortuna-glass.4c08d21e.png"
-  },
-  {
     "revision": "f00de7d9918169a9feeb00e77a9a2f56",
     "url": "/static/media/ciorcal-glass-bg.f00de7d9.png"
+  },
+  {
+    "revision": "fefaccef8a9d6893e3e1ed77e3170cff",
+    "url": "/static/media/field.fefaccef.png"
+  },
+  {
+    "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
+    "url": "/static/media/fortuna-glass.4c08d21e.png"
   },
   {
     "revision": "ee5004be8978604da5e223282c5bbe51",
@@ -386,10 +390,6 @@ self.__precacheManifest = [
   {
     "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
     "url": "/static/media/mapFrame2.915b9892.png"
-  },
-  {
-    "revision": "fefaccef8a9d6893e3e1ed77e3170cff",
-    "url": "/static/media/field.fefaccef.png"
   },
   {
     "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
@@ -480,7 +480,7 @@ self.__precacheManifest = [
     "url": "/static/media/dink.6651d091.wav"
   },
   {
-    "revision": "d68479e3d61fdeac29cd77aa0d4744b4",
+    "revision": "56f351ae4d0848a4d545abc355a66ae8",
     "url": "/index.html"
   }
 ];
