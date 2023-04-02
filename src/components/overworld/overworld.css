@@ -818,6 +818,8 @@ p {
   width: 50px;
   position: relative;
   z-index: 50;
+  border-radius: 50%;
+
 }
 
 #toolbar {
@@ -843,7 +845,7 @@ p {
   border-left: 3px solid rgba(170, 176, 177, 0.5);
   border-bottom: 3px solid rgba(170, 176, 177, 0.5);
   right: 0px;
-
+border-radius: 50%;
 }
 
 #dir-pad {
@@ -904,6 +906,8 @@ p {
   width: 50px;
   position: relative;
   z-index: 40;
+border-radius: 50%;
+
 }
 
 #origin {
@@ -915,6 +919,7 @@ p {
   width: 50px;
   position: relative;
   z-index: 45;
+
 }
 
 #east {
@@ -930,6 +935,8 @@ p {
   position: relative;
   z-index: 50;
   right: -2px;
+  border-radius: 50%;
+
 }
 
 .countyMap {
