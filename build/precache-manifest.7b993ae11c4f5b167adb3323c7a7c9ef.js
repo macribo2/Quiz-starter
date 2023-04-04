@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "e29246a48a80afe7f5b1",
-    "url": "/static/css/main.7a68882b.chunk.css"
+    "revision": "5a4d892eaef5339fa813",
+    "url": "/static/css/main.98329881.chunk.css"
   },
   {
-    "revision": "e29246a48a80afe7f5b1",
+    "revision": "5a4d892eaef5339fa813",
     "url": "/static/js/main.5c73c204.chunk.js"
   },
   {
@@ -364,12 +364,12 @@ self.__precacheManifest = [
     "url": "/static/media/sea.ee5004be.png"
   },
   {
-    "revision": "c84c06495852ac730bd653c3aa9bff25",
-    "url": "/static/media/wren-code0.c84c0649.png"
-  },
-  {
     "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
     "url": "/static/media/mapFrame4.0cdb344e.png"
+  },
+  {
+    "revision": "c84c06495852ac730bd653c3aa9bff25",
+    "url": "/static/media/wren-code0.c84c0649.png"
   },
   {
     "revision": "4159e8fdaa220a7666d4e619a3429f80",
@@ -388,16 +388,16 @@ self.__precacheManifest = [
     "url": "/static/media/suile0.b67d2f1b.gif"
   },
   {
+    "revision": "9bbe18cf6d054928f146dafcf058fcb1",
+    "url": "/static/media/suile3.9bbe18cf.gif"
+  },
+  {
     "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
     "url": "/static/media/mapFrame2.915b9892.png"
   },
   {
     "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
     "url": "/static/media/fortuna-glass-lit.29cb5d03.png"
-  },
-  {
-    "revision": "9bbe18cf6d054928f146dafcf058fcb1",
-    "url": "/static/media/suile3.9bbe18cf.gif"
   },
   {
     "revision": "cfabbdb47b5376a44c3f8bd99fe2f968",
@@ -480,7 +480,7 @@ self.__precacheManifest = [
     "url": "/static/media/dink.6651d091.wav"
   },
   {
-    "revision": "56f351ae4d0848a4d545abc355a66ae8",
+    "revision": "927e81f12744f39336a49e78ffc033f1",
     "url": "/index.html"
   }
 ];

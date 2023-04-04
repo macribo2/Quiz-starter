@@ -1179,6 +1179,8 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	  </div>
 
 		<p id="hints-ring-4" className={props.isOn ? "hints" : "hidden"}>{'Choose a champion, ' + props.heroNameEng}</p>
+
+		
 		</>
 			);
 }

@@ -66,6 +66,7 @@ import avatar7 from '../../images/players/seanchaí0.png';
 import avatar8 from '../../images/players/pooka.png';
 import avatar9 from '../../images/players/poet.png';
 import agnes2 from '../../images/players/bodach0.gif';
+import og from '../../images/a-btn.png'
 import ringItem from '../../images/stone-soup/expired_portal.png';
 import mobile from '../../images/players/rógaire0.png'
 
@@ -4176,7 +4177,7 @@ alert("Chun troid!" )
                             cell.src = empty;
                             break;
                             case ring: cell.src = ringIcon; break;
-                        
+                        case og: cell.src = og; break;
                         case trap: cell.src = agnes2; break;
                         case AGNES: cell.src = agnes2; break;
                         case GEAGA:
@@ -4216,6 +4217,8 @@ alert("Chun troid!" )
                             cell.id = 'hero';
 
                             break;
+                        case og: cell.src = og;
+                            cell.id = 'og'; break;
                         case AGNES:
                             cell.id = 'agnes'
                             cell.src =agnes2 ;
@@ -4648,7 +4651,7 @@ let placeNamesGaeilge =
                     ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
                     ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                     ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+                    ["*", 0, 0, 0, "og", 0, 0, 0, 0, "*"],
                     ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                     ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                     ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
@@ -4663,8 +4666,8 @@ let placeNamesGaeilge =
                 $("#walkies").attr("src",ferna)
                 // $("#walkies-overlay").attr("src", fernaRiver)
                 gameObjects[playerRow][playerColumn] = 0;
-                playerRow = 0;
-                playerColumn = 0;
+                playerRow = 5;
+                playerColumn = 4;
                 // $('#hero').fadeOut();
                 $('.champion-portrait').fadeIn();
                 $('.ringOfTullyNally').css('display','grid');

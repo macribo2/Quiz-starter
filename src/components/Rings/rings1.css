@@ -369,7 +369,7 @@ z-index: 101;
   opacity: 0;
 
   font-size:1.5em;
-  font-family:''
+  font-family:'anaphora'
 }
 
 
@@ -529,7 +529,8 @@ transform:scale(0.5)
 
 }
 .ringOfTullyNally{
-  display: none;
+  /* display: none; */
+  pointer-events: none;
 }
 
 .ring-5-dial-container{
