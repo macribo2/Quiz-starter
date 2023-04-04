@@ -80,7 +80,7 @@ export default function Rings3(props) {
 		`
 		This is a ring`, 
 		`which turns | which sings`, 
-`which lights`,
+`which shines`,
 `which tells a story.`,
 		`You'll find such things, around the country.`,
 		 `Gather rings here,`,		

@@ -1271,7 +1271,7 @@ position: relative;
   border:333px solid blue;
 }
 #toggle-settings-btn,
-#toggle-glass-btn, #toggle-glass-btn2 {
+#toggle-glass-btn {
 
   display: -ms-grid;
 
@@ -1285,9 +1285,9 @@ position: relative;
   color: rgb(136, 132, 13);
   position: fixed;
   background-color: rgba(0, 0, 0, 0);
-  
-  right: 1%;
-  top: 80%;
+  right: 9%;
+  top: 75%;
+
 
 
   width: 25px;
@@ -1300,7 +1300,17 @@ position: relative;
 }
  #toggle-glass-btn2 {
   z-index: 995;
+  /* border: 4px solid blueviolet; */
+  justify-content: center;
 
+
+  display: grid;
+  align-items: center;
+
+  height: 50px;
+  width: 50px;
+  transform:scale(1.2);
+opacity:1;
 }
   #toggle-glass-btn{
   border-radius: 50%;

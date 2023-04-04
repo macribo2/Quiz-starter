@@ -93,6 +93,10 @@ export default  class NumberOne extends React.Component  {
 			$('.question-text').removeClass('fade-out-champ');
 			$('.question-text').fadeIn('slow');
 			$('.hero-shadow').fadeIn('5000','linear');
+			$('.grid-item').css('opacity','1');
+			$('#toggle-glass-btn2').css('border', '6px solid rgb(83, 60, 90)');
+			$('#toggle-glass-btn2').css('background-color','rgb(83, 60, 90)');
+				$('.grid-item').fadeIn('5000','linear');
 
 
 		},1000)

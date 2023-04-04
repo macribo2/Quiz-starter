@@ -1,27 +1,31 @@
 self.__precacheManifest = [
   {
-    "revision": "5a4d892eaef5339fa813",
-    "url": "/static/css/main.98329881.chunk.css"
+    "revision": "7658b745dac6501a4596",
+    "url": "/static/css/main.8d7ddba3.chunk.css"
   },
   {
-    "revision": "5a4d892eaef5339fa813",
-    "url": "/static/js/main.5c73c204.chunk.js"
+    "revision": "7658b745dac6501a4596",
+    "url": "/static/js/main.158872ab.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "fb872861b9af383727cf",
+    "revision": "2beaab0bdfc56fbeab0c",
     "url": "/static/css/2.bb1d6663.chunk.css"
   },
   {
-    "revision": "fb872861b9af383727cf",
-    "url": "/static/js/2.be5560d9.chunk.js"
+    "revision": "2beaab0bdfc56fbeab0c",
+    "url": "/static/js/2.c24a6a33.chunk.js"
   },
   {
     "revision": "0f781983a29762c7ba7f9f9765b3daa8",
     "url": "/static/media/ding0.0f781983.wav"
+  },
+  {
+    "revision": "2782548bec1f334955555242df1cab01",
+    "url": "/static/media/misc_crystal_new.2782548b.png"
   },
   {
     "revision": "32847a0cf8dccc0f6821229383bbec0f",
@@ -368,12 +372,12 @@ self.__precacheManifest = [
     "url": "/static/media/mapFrame4.0cdb344e.png"
   },
   {
-    "revision": "c84c06495852ac730bd653c3aa9bff25",
-    "url": "/static/media/wren-code0.c84c0649.png"
-  },
-  {
     "revision": "4159e8fdaa220a7666d4e619a3429f80",
     "url": "/static/media/wren2b.4159e8fd.png"
+  },
+  {
+    "revision": "c84c06495852ac730bd653c3aa9bff25",
+    "url": "/static/media/wren-code0.c84c0649.png"
   },
   {
     "revision": "803e6e686778fd42d5b5ccb0059ef189",
@@ -388,16 +392,16 @@ self.__precacheManifest = [
     "url": "/static/media/suile0.b67d2f1b.gif"
   },
   {
-    "revision": "9bbe18cf6d054928f146dafcf058fcb1",
-    "url": "/static/media/suile3.9bbe18cf.gif"
-  },
-  {
     "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
     "url": "/static/media/mapFrame2.915b9892.png"
   },
   {
     "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
     "url": "/static/media/fortuna-glass-lit.29cb5d03.png"
+  },
+  {
+    "revision": "9bbe18cf6d054928f146dafcf058fcb1",
+    "url": "/static/media/suile3.9bbe18cf.gif"
   },
   {
     "revision": "cfabbdb47b5376a44c3f8bd99fe2f968",
@@ -480,7 +484,7 @@ self.__precacheManifest = [
     "url": "/static/media/dink.6651d091.wav"
   },
   {
-    "revision": "927e81f12744f39336a49e78ffc033f1",
+    "revision": "462de0d7f4227dc6e91249c6e6e0e639",
     "url": "/index.html"
   }
 ];

@@ -216,10 +216,9 @@
   transform: scale(0.8);
   z-index: 60;
   border-radius: 50%;
-display: none;
+/* display: none; */
 pointer-events:all;
 }
-
 .underx-stage-left,
 .under-stage-right {
   /* border:4px solid orange; */
@@ -872,7 +871,10 @@ border-radius: 50%;
 
 
 }
+.grid-item{
+opacity:0;
 
+}
 .jq-grid-container {
   position: relative;
   right: 0%;
@@ -1207,7 +1209,7 @@ border-radius: 50%;
   overflow: hidden;
   background-image: url('../../images/overworld/passage.png');
   background-size: cover;
-  border: 4px solid blue;
+  /* border: 4px solid blue; */
   width: 100%;
   left: -5%;
   top: 0%;
@@ -1539,14 +1541,34 @@ top: 80%;
 
 .ui-container_directional-pad{
   /* border:5px solid blue; */
-  z-index:11;
+  /* z-index:121;
   position:fixed;
-  top: 0%;
-  left: 1%;
+  top: 80%;
+  left: 75%;
   width: 100%;
   height:100%;
   display: flex;
   justify-content:start;
   align-items: start;
+  pointer-events: none; */
+
+
+  /* border: 5px solid blue; */
+  z-index: 1121;
+  position: fixed;
+  bottom: 0;
+  left: -4%;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: right;
+  align-items: start;
   pointer-events: none;
+  top: 45%;
+
+}
+#glass-btn-img{
+border-radius: 50%;
+transform: scale(0.8);
+  /* border:4px solid blue; */
 }

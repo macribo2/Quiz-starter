@@ -1112,9 +1112,10 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 		document.querySelector(".champion-portrait").classList.add('fade-in-champ');
 		document.querySelector(".names-e").classList.add('fade-in-champ'); document.querySelector(".names-i").classList.add('fade-in-champ');
 		document.querySelector(".question-text").classList.add('fade-out-champ');
+		
 	} 
-
-
+	var elementExists = document.getElementById("toggle-glass-btn");
+if(elementExists){	document.querySelector("#toggle-glass-btn").classList.add('fade-out-champ');}
 	return (
 
 <>

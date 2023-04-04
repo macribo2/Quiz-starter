@@ -4857,27 +4857,6 @@ storyTimer()
                 {/* {this.state.registerMenu ? <Register /> : null} */}
            
 
- <div className='ui-container_directional-pad'>
-                <div className="directional-pad" onTouchStart={this.props.incrementScore} onTouchEnd={localStorage.setItem('whereAmI', 'westmeath')
-                }>
-                    <div className='grid-container'>
-
-                        <div className="grid-item"></div>
-                        <div className="grid-item" id="north">
-                        </div>
-                        <div className="grid-item" ></div>
-                        <div className="grid-item" id="west">
-                        </div>
-                        <div className="grid-item" id="btn-m"><div id="btn-middle-baile" /></div>
-                        <div className="grid-item" id="east">
-                        </div>
-                        <div className="grid-item"></div>
-                        <div className="grid-item" id="south">
-                        </div>
-                        <div className="grid-item"></div>
-                    </div>
-                </div>            
-                </div>
                 <img id="mob-effect" className="phonebg2"src={phone1} alt="" />
 
                 <div className="countyMap-container">
@@ -4906,20 +4885,7 @@ storyTimer()
                 <div className="location-title-card-text-container">
                     <p id="output"></p>
                 </div>
-               <button id="toggle-glass-btn2" onClick={()=>{
-                    if (this.state.isOn) {
-                        this.setState({ isOn: false })
-                        console.log("hi from toggle glass overworld")
-                         }
-                    else {
-                        (this.setState({ isOn: true }))
-                        console.log("hi from toggle glass  overworld")
-                    }
-                    {/* setTimeout(()=> { this.setState({ isOn: false }) }, 3000) */}
-                        
-
-                
-                }}	><img src={this.state.isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
+              
 
                 <div ><img id="portrait" src={portrait}></img>
                 
@@ -5085,7 +5051,51 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
           <div className="ui-container_b-btn">
                     <BtnB id="b-btn" ></BtnB>
  </div>
-            </div> 
+
+
+
+ <div className='ui-container_directional-pad'>
+                <div className="directional-pad" onTouchStart={this.props.incrementScore} onTouchEnd={localStorage.setItem('whereAmI', 'westmeath')
+                }>
+
+
+                <div className='grid-container'>
+    
+    <div className="grid-item"></div>
+    <div className="grid-item" id="north">
+    </div>
+    <div className="grid-item" ></div>
+    <div className="grid-item" id="west">
+    </div>
+    <div className="grid-item" id="toggle-glass-btn2"><img src={this.state.isOn ? pearl : emerald} id="glass-btn-img" alt="a crystal or precious stone toggle on off button"   onClick={()=>{
+            if (this.state.isOn) {
+                this.setState({ isOn: false })
+                console.log("hi from toggle glass overworld")
+                 }
+            else {
+                (this.setState({ isOn: true }))
+                console.log("hi from toggle glass  overworld")
+            }
+            {/* setTimeout(()=> { this.setState({ isOn: false }) }, 3000) */}
+                
+
+        
+        }}	 /></div>
+    <div className="grid-item" id="east">
+    </div>
+    <div className="grid-item"></div>
+    <div className="grid-item" id="south">
+    </div>
+            <div className="grid-item"></div>
+         
+</div>
+
+
+
+                </div>            
+                </div>
+
+                           </div> 
 
             
 
