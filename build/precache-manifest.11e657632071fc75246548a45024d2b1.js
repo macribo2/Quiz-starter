@@ -372,24 +372,24 @@ self.__precacheManifest = [
     "url": "/static/media/mapFrame4.0cdb344e.png"
   },
   {
-    "revision": "4159e8fdaa220a7666d4e619a3429f80",
-    "url": "/static/media/wren2b.4159e8fd.png"
-  },
-  {
     "revision": "c84c06495852ac730bd653c3aa9bff25",
     "url": "/static/media/wren-code0.c84c0649.png"
+  },
+  {
+    "revision": "4159e8fdaa220a7666d4e619a3429f80",
+    "url": "/static/media/wren2b.4159e8fd.png"
   },
   {
     "revision": "803e6e686778fd42d5b5ccb0059ef189",
     "url": "/static/media/wren-hood.803e6e68.png"
   },
   {
-    "revision": "d0fa8e83c08e2f7d1ce2e1cbe8f2e8b6",
-    "url": "/static/media/fairy-ring-east-vert.d0fa8e83.png"
-  },
-  {
     "revision": "b67d2f1bd5a2f4dad3e923b36f5038a0",
     "url": "/static/media/suile0.b67d2f1b.gif"
+  },
+  {
+    "revision": "d0fa8e83c08e2f7d1ce2e1cbe8f2e8b6",
+    "url": "/static/media/fairy-ring-east-vert.d0fa8e83.png"
   },
   {
     "revision": "915b9892e08123110f3e6b4ab5a3fb6e",

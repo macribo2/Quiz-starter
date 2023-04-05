@@ -10,6 +10,7 @@ import ReactAudioPlayer from 'react-audio-player';
 import spark0 from '../../audio/ding0.wav';
 import spark1 from '../../audio/ding1.wav';
 import blackripple from '../../images/blackripple.gif';
+import tutorial0 from '../../images/tutorials/tutorial0.png';
 
 import spark2 from '../../audio/ding2.wav';
 import spark3 from '../../audio/ding0.wav';
@@ -152,6 +153,7 @@ export default function Rings3(props) {
 				</div>
 
 
+
 			 <div className="input-elements-container0">
 
 			
@@ -171,6 +173,9 @@ export default function Rings3(props) {
 					
 					<div className="about-pics-container">
 
+					<div className='fader'>
+			<img rel="preload" src={tutorial0} className={value*10 === 0 ? 'avatar':'hidden' } id="tutorial0" alt="a spinning arrow circle inviing user input" />
+			</div>
 				<img className={value*10 === 5 ? 'banba':'hidden'} src={banba} alt="a digital peninsula" />
 				<img className={value*10 === 6 ? '':'hidden'} src={banba} alt="a digital peninsula" />
 				<img className={value*10 === 7 ? '':'hidden'} src={banba} alt="a digital peninsula" />

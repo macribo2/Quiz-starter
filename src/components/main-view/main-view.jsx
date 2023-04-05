@@ -12,6 +12,7 @@ import portrait from '../../images/vert-mode.png'
 import gradient from '../../images/gradient2.png';
 import darkGreenFields from '../../images/ciorcal-glass4.png';
 
+import tutorial0 from '../../images/tutorials/tutorial0.png';
 import avatar1 from '../../images/players/spéirbhean0.gif';
 import avatar2 from '../../images/players/douglas.png';
 import avatar3 from '../../images/players/fianna0.png';
@@ -829,8 +830,9 @@ let thePucaOf = localStorage.getItem('pucaEng')
 				</div>) : null}
 			
 				<div id="holder" className="avatar-holder" >
-					
-						
+								<div className='fader'>
+			<img rel="preload" src={tutorial0} className={value*10 === 0 ? 'avatar':'hidden' } id="tutorial0" alt="a spinning arrow circle inviing user input" />
+			</div>
 			<img rel="preload" src={avatar1} className={value*10 === 1 ? 'avatar':'hidden' } id={currentQuestion ===10? "avatar":null } alt="a  an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>		
 			<img rel="preload" src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } id={currentQuestion ===10? "avatar":null } alt="a  an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>		
 			<img rel="preload" src={avatar3} id={currentQuestion ===10? "leap-me":null } className={value * 10 === 3 ? 'avatar' : 'hidden'} alt="a of an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>

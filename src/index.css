@@ -1644,3 +1644,29 @@ position: fixed;
 #hints-geaga{
   display:none;
 }
+
+#tutorial0{
+  height:270px;
+  width:auto;
+  animation: spin 15s linear infinite;
+  position: relative;
+  margin-top: 0%;
+     
+}
+.fader{
+  animation: fade-in 5s infinite 4s alternate-reverse;
+
+}
+ 
+@keyframes tutorial0 {
+  0% {
+  
+   
+   transform : rotate(360deg) ;
+  }
+  100% {
+  
+    
+    transform: rotate(0deg);  
+  }
+}
