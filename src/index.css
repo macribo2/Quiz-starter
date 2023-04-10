@@ -249,11 +249,11 @@ width: 740px;
   font-size: 1.5em;
   position: fixed;
   top: 52%;
-  left: 5%;
+  left: 10%;
   color: rgb(255, 244, 224);
   z-index: 1016;
   padding: 10px;
-  width: 75%;
+  width: 66%;
   text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
   
   font-family: 'anaphora'
@@ -412,6 +412,10 @@ width: 740px;
     opacity: 1
   }
 }
+
+
+
+
 
 
 @-webkit-keyframes hesitate {
@@ -1249,7 +1253,7 @@ position: relative;
   width: 130px;
   z-index: 9902;
   border-radius: 50%;
-  border: 4px solid #9e9e9e;
+  /* border: 2px solid rgb(207,181,59); */
   pointer-events: all;
 }
   
@@ -1306,11 +1310,12 @@ position: relative;
 
   display: grid;
   align-items: center;
-
+border-radius: 50%;
   height: 50px;
   width: 50px;
-  transform:scale(1.2);
+  /* transform:scale(1.2); */
 opacity:1;
+/* background-color: rgb(32, 21, 28); */
 }
   #toggle-glass-btn{
   border-radius: 50%;
@@ -1648,13 +1653,13 @@ position: fixed;
 #tutorial0{
   height:270px;
   width:auto;
-  animation: spin 15s linear infinite;
+  animation: spin 60s steps(128) infinite;
   position: relative;
   margin-top: 0%;
      
 }
 .fader{
-  animation: fade-in 5s infinite 4s alternate-reverse;
+  animation: fade-in 3s  steps(5) forwards;
 
 }
  
@@ -1669,4 +1674,34 @@ position: fixed;
     
     transform: rotate(0deg);  
   }
+}
+
+
+@keyframes fade-arrow {
+  0% {
+  
+   
+  opacity : 0.0 ;
+  }
+
+  100% {
+  
+    
+    opacity: 1;  
+  }
+}
+
+.tutorial-container{
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+justify-content: center;
+align-items: center;
+display:flex;
+}
+
+.tutorial0-container{
+  transform:scale(0.9)
 }

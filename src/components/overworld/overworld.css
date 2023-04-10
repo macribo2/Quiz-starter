@@ -259,7 +259,7 @@ pointer-events:all;
 #event-report {
   z-index: 99;
   position: fixed;
-  top: 80%;
+  top: 40%;
   left: 80%;
   color: rgba(240, 248, 255, 0.461);
 }
@@ -806,8 +806,8 @@ p {
 }
 
 #north {
+  background-color: rgb(32, 21, 28);
 
-  background-color: rgb(83, 60, 90);
   border-top: 3px solid rgba(170, 176, 177, 0.5);
 
   border-right: 3px solid rgba(170, 176, 177, 0.5);
@@ -818,6 +818,24 @@ p {
   position: relative;
   z-index: 50;
   border-radius: 50%;
+
+}
+
+.prompt-north{
+  animation:prompt-dir 4s infinite linear
+}
+@keyframes prompt-dir {
+  0%{
+    background-color: rgb(32, 21, 28);
+    
+  }
+  
+50%{  background-color:rgb(90,6,92)}
+
+100%{
+  background-color: rgb(32, 21, 28);
+  
+}
 
 }
 
@@ -835,9 +853,9 @@ p {
   height: 50px;
   width: 50px;
   position: relative;
-  z-index: 50;
+  z-index: 950;
+  background-color: rgb(32, 21, 28);
 
-  background-color: rgb(83, 60, 90);
   border-top: 3px solid rgba(170, 176, 177, 0.5);
 
   border-right: 0px solid rgba(83, 60, 90, 1);
@@ -873,6 +891,7 @@ border-radius: 50%;
 }
 .grid-item{
 opacity:0;
+/* background-color: rgb(32, 21, 28); */
 
 }
 .jq-grid-container {
@@ -899,7 +918,8 @@ opacity:0;
 }
 
 #south {
-  background-color: rgb(83, 60, 90);
+  background-color: rgb(32, 21, 28);
+
   border-top: 0px solid rgba(83, 60, 90, 1);
   border-right: 3px solid rgba(170, 176, 177, 0.5);
   border-left: 3px solid rgba(170, 176, 177, 0.5);
@@ -907,7 +927,7 @@ opacity:0;
   height: 50px;
   width: 50px;
   position: relative;
-  z-index: 40;
+  z-index: 940;
 border-radius: 50%;
 
 }
@@ -925,7 +945,8 @@ border-radius: 50%;
 }
 
 #east {
-  background-color: rgb(83, 60, 90);
+  background-color: rgb(32, 21, 28);
+
   border-top: 3px solid rgba(170, 176, 177, 0.5);
   border-bottom: 3px solid rgba(170, 176, 177, 0.5);
 
@@ -935,7 +956,7 @@ border-radius: 50%;
   height: 50px;
   width: 50px;
   position: relative;
-  z-index: 50;
+  z-index: 951;
   right: -2px;
   border-radius: 50%;
 
@@ -949,7 +970,7 @@ border-radius: 50%;
   /* border: 4px solid purple; */
 
   height: 100%;
-  width: 100%;
+  width: 60%;
 }
 
 #walkies {

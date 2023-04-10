@@ -86,12 +86,12 @@
   width: 150px;
   border-radius: 50%;
   opacity: 1;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.0);
   pointer-events: all;
   display: grid;
   justify-content: center;
   align-items: center;
-  border: 2px solid seashell;
+  /* border: 1px solid rgb(207,181,59); */
   margin-bottom:0;
 }
 
@@ -332,7 +332,7 @@ z-index: 101;
 
 
 #pearl{
-  animation:highlight-glass 2s infinite;
+  /* animation:highlight-glass 2s infinite; */
   border-radius: 50%;
   z-index: 995;
   margin:2%;
@@ -371,7 +371,7 @@ z-index: 101;
   opacity: 0;
 
   font-size:1.5em;
-  font-family:'anaphora'
+  /* font-family:'anaphora' */
 }
 
 
@@ -404,6 +404,7 @@ z-index: 101;
 top:5%;
   left: 37%;
   opacity: 0;
+  transform: scale(1.5);
   /* display:none; */
   }
       .lens-ring4,.lens-ring5{
@@ -566,7 +567,8 @@ transform:scale(0.5)
 .numbers-e{
   opacity:1;
   top: 60%;
-  left: 11%;
+  left: 20%;
+  width:54%;
 }
 #hi-vis{
   opacity:1
@@ -579,12 +581,17 @@ transform:scale(0.5)
   height:100%;
   z-index: 900;
   position: fixed;
-  justify-content: center;
-  align-items: center;  
+  justify-content: left;
+  align-items: left;  
 display: flex;
 width:100%;
 }
+.ring-5-binary-container{
+justify-content: left;
+align-items: left;
+/* transform:scale(0.5) */
 
+}
 /* .binary-portrait{
 transform: scale(1.2);
 } */
@@ -599,3 +606,125 @@ transform: scale(1.2);
   height:100%;
 /* display:none; */
 }
+
+
+#tutorial0{
+  height:246px;
+  width:auto;
+  animation: spin 60s steps(128) infinite;
+  position: relative;
+  margin-top: 0%;
+     
+}
+
+#tutorial0r{
+  height:332px;
+  width:auto;
+  animation: tutorial0r 60s steps(128) infinite;
+  position: relative;
+  margin-top: 0%;
+     
+}
+
+.fader{
+  animation: fade-in 2s  steps(5) forwards;
+
+}
+ 
+@keyframes tutorial0r {
+  100% {
+  
+   
+   transform : rotate(0deg) ;
+  }
+  0% {
+  
+    
+    transform: rotate(360deg);  
+  }
+}
+
+
+@keyframes fade-arrow {
+  0% {
+  
+   
+  opacity : 0.0 ;
+  }
+
+  100% {
+  
+    
+    opacity: 1;  
+  }
+}
+
+.tutorial-container{
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+justify-content: center;
+align-items: center;
+display:flex;
+z-index: 33;
+}
+
+
+/* Circle */
+.circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  /* background-color: #ff4343; */
+  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle:before,
+.circle:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  border: 1px solid rgb(207,181,59);
+  border-radius: 50%;
+}
+
+
+.circle:before {
+  animation: ripple 4s linear infinite;
+}
+
+.circle:after {
+  animation: ripple 4s linear 1s infinite;
+}
+
+@keyframes ripple{
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); opacity:1; }
+  100% { transform: scale(1.6); opacity:0; }
+}
+.tully-smaller{
+  /* transform:scale(0.5) */
+}
+.tut-ring-5-container{
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+justify-content: center;
+align-items: center;
+display:flex;
+z-index: 33;
+animation: spin 60s steps(128) infinite;
+}
+

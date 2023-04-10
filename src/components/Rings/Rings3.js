@@ -173,9 +173,6 @@ export default function Rings3(props) {
 					
 					<div className="about-pics-container">
 
-					<div className='fader'>
-			<img rel="preload" src={tutorial0} className={value*10 === 0 ? 'avatar':'hidden' } id="tutorial0" alt="a spinning arrow circle inviing user input" />
-			</div>
 				<img className={value*10 === 5 ? 'banba':'hidden'} src={banba} alt="a digital peninsula" />
 				<img className={value*10 === 6 ? '':'hidden'} src={banba} alt="a digital peninsula" />
 				<img className={value*10 === 7 ? '':'hidden'} src={banba} alt="a digital peninsula" />
@@ -197,7 +194,11 @@ export default function Rings3(props) {
 					{/* <img className={value*10 === 7 ? 'about-pics':'hidden'} src={about4}  id="about4" alt="illustration placeholder" /> */}
 					{/* <img className={value*10 === 4 ? 'about-pics':'hidden'} src={about6} alt="illustration placeholder" /> */}
 					{/* <img className={value*10 === 7 ? 'about-pics':'hidden'} src={about0} alt="illustration placeholder" /> */}
-				</div>
+				
+					<div className='fader'>
+			<img rel="preload" src={tutorial0} className={value*10 === 0 ? 'avatar':'hidden' } id="tutorial0" alt="a spinning arrow circle inviing user input" />
+			</div>
+					</div>
 				<div className="about-overlay-container">
 			
 
@@ -281,7 +282,7 @@ export default function Rings3(props) {
 <div className='dial-container'>
 
 <CircularInput className="dial" value={value}  onChange={v => setValue3(stepValue3(v))}>{}
-					<CircularTrack stroke="rgba(185,230,5,1)"
+					<CircularTrack stroke="rgb(130,110,0)"
 					strokeWidth={'3px'}
 					/>
 			{/* <img  src={avatar} className={value === 0 ? 'hidden':'avatar' } alt="Caniuse battus tv charactéir" />		 */}
@@ -299,29 +300,29 @@ export default function Rings3(props) {
 			</CircularInput>
 			</div>	
 			
-			<button id="pearl" onClick={props.toggleIsOn
+			<button id="pearl"  onClick={props.toggleIsOn
 			} onTouchEnd={ endAnimation}	><img src={isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 			
 <div className="button-mash-container">
-				<button className={value * 10 === 9 ? 'button-mash-ring-0' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} >
+				<button className={value * 10 === 9 ? 'button-mash-ring-0 circle' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} >
 				
-						<img className={value * 10 === 9 ? 'wisp' : 'hidden'}src={wisp} alt="A dancing light that can lead people astray" />
-	
+						{/* <img className={value * 10 === 9 ? 'wisp' : 'hidden'}src={wisp} alt="A dancing light that can lead people astray" />
+	 */}
 				</button>
 
-				<button className={value * 10 === 8 ? 'button-mash-ring-0' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} >
+				<button className={value * 10 === 8 ? 'button-mash-ring-0 circle' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} >
 				
-				<img className={value * 10 === 8 ? 'wisp' : 'hidden'}src={wisp} alt="A dancing light that can lead people astray" />
+				{/* <img className={value * 10 === 8 ? 'wisp' : 'hidden'}src={wisp} alt="A dancing light that can lead people astray" /> */}
 
 				</button>
-				<button className={value * 10 === 7 ? 'button-mash-ring-0' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} >
+				<button className={value * 10 === 7 ? 'button-mash-ring-0 circle' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} >
 				
-						<img className={value * 10 === 7 ? 'wisp' : 'hidden'}src={wisp} alt="A dancing light that can lead people astray" />
+						{/* <img className={value * 10 === 7 ? 'wisp' : 'hidden'}srcn={wisp} alt="A dancing light that can lead people astray" /> */}
 	
 				</button>
-				<button className={value * 10 === 6 ? 'button-mash-ring-0' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} >
+				<button className={value * 10 === 6 ? 'button-mash-ring-0 circle' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} >
 				
-						<img className={value * 10 === 6 ? 'wisp' : 'hidden'}src={wisp} alt="A dancing light that can lead people astray" />
+						{/* <img className={value * 10 === 6 ? 'wisp' : 'hidden'}src={wisp} alt="A dancing light that can lead people astray" /> */}
 	
 				</button>
 

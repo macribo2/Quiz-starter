@@ -1,7 +1,7 @@
 import './settings-menu.css';
 import './lights.css';
 import Easca from '../easca/easca';
-import bg0 from '../../images/bgAnim5.gif';
+import bg0 from '../../images/fog3.png';
 import React, { useEffect,useState  } from 'react';
 import settingsBtnGamepad from '../../images/settings/gamepad.png';
 import settingsBtnTouchscreen from '../../images/settings/smartphone.png';

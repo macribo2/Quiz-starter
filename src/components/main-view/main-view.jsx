@@ -1,5 +1,4 @@
 import Overworld from '../../components/overworld/overworld';
-
 import shine from '../../images/a-btn.png'
 import React, { useState, Component } from 'react';
 import Sparkles from 'react-sparkle'
@@ -13,7 +12,7 @@ import gradient from '../../images/gradient2.png';
 import darkGreenFields from '../../images/ciorcal-glass4.png';
 
 import tutorial0 from '../../images/tutorials/tutorial0.png';
-import avatar1 from '../../images/players/spéirbhean0.gif';
+import avatar1 from '../../images/players/spéirbhean0.png';
 import avatar2 from '../../images/players/douglas.png';
 import avatar3 from '../../images/players/fianna0.png';
 import avatar4 from '../../images/players/gotach0.png';
@@ -482,6 +481,7 @@ if (score === 1){
 	const buttonMashClick = (isCorrect, someVal) => { 
 		
 		function myMove() {
+			if (value * 10 !== 0) { 
 			var id = null;
 			var elem = document.getElementById("holder");   
 			var pos = 0;
@@ -494,11 +494,11 @@ if (score === 1){
 				pos = pos+32; 
 				elem.style.top = pos + 'px'; 
 				// elem.style.left = pos + 'px'; 
-			  }
+			  }}
 			}
 		  }
 		myMove();  
-if(value!=0){
+if(value*10 !== 0 ){
 		setIsFadedOut(false)
 		setIsFadedOut(true)
 
@@ -611,7 +611,11 @@ let thePucaOf = localStorage.getItem('pucaEng')
 		const [showOverworld, toggleShowOverworld] = useState(false)
 	}
 	const [showOverworld, toggleShowOverworld] = useState(false)
-
+	window.oncontextmenu = function(event) {
+		event.preventDefault();
+		event.stopPropagation();
+		return false;
+   };
 	return (<>
 		{ checkFerna}
 		
@@ -636,7 +640,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 
 				<CircularInput className="dial" value={value} onChange={v => setValue(stepValue(v))} >{ }
 						<CircularTrack 
-						stroke="rgba(150,200,0)"
+						stroke="rgb(155,130,0)"
 						strokeWidth={'3px'}
 						/>
 						<CircularProgress
@@ -671,7 +675,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			
 				<div id="buttonmash" value={value} onClick={(value) => buttonMashClick(true, value)}>
 				
-					
+						{ value>0?<div className = "circle"></div>:null}
 					</div>
 					
 				</div>
@@ -691,7 +695,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 						
 						: null}
 			{showOverworld === true ? <>
-				<Overworld toggleIsOn={toggleIsOn} storyTimer={storyTimer} incrementScore={incrementScore} choiceRingEng={ choiceRingEng[value * 10]} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} heroNameEng={heroNamesEng[localStorage.getItem('portrait')]} proceedThroughQuiz={ proceedThroughQuiz} />
+				<Overworld handleInputSelect={handleInputSelect} toggleIsOn={toggleIsOn} storyTimer={storyTimer} incrementScore={incrementScore} choiceRingEng={ choiceRingEng[value * 10]} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} heroNameEng={heroNamesEng[localStorage.getItem('portrait')]} proceedThroughQuiz={ proceedThroughQuiz} />
 			
 			{showScore ? (
 				<div className='score-section'>scór: { score } as {questions.length}</div>

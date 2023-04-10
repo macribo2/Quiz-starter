@@ -83,7 +83,7 @@ export default  class NumberOne extends React.Component  {
 		$('.input-elements-container-8').fadeOut(2000)//css('display','none');
 		$('.answer-section').fadeIn();
 		$('#hints-ring-4').html('');
-		
+		$('#north').addClass('prompt-north')
 		$('#hints-geaga').fadeIn();
 		// let mise = document.getElementsByClassName('names-i').html();
 		// alert(mise)
@@ -94,10 +94,9 @@ export default  class NumberOne extends React.Component  {
 			$('.question-text').fadeIn('slow');
 			$('.hero-shadow').fadeIn('5000','linear');
 			$('.grid-item').css('opacity','1');
-			$('#toggle-glass-btn2').css('border', '6px solid rgb(83, 60, 90)');
-			$('#toggle-glass-btn2').css('background-color','rgb(83, 60, 90)');
+			$('#toggle-glass-btn2').css('border', '6px solid rgb(32, 21, 28)');
+			$('#toggle-glass-btn2').css('background-color','rgb(32, 21, 28)');
 				$('.grid-item').fadeIn('5000','linear');
-
 
 		},1000)
 

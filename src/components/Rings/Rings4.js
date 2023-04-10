@@ -1,13 +1,17 @@
+
 // import * as React from "react";
+
 import { render } from "react-dom";
 import React, { useState, useEffect } from 'react'
 import lens from '../../images/ciorcal-glass-light.png';
 import lensCap from '../../images/About1/ring2.png';
 import emerald from '../../images/misc_crystal_new.png'
 import betweenFields from '../../images/gifs/betweenFields.gif'
+import tutorial0r from '../../images/tutorials/tutorial0r.png';
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
 import heroShadow from '../../images/stone-soup/hero-shadow-0.png'
 import empty from '../../images/empty.png';
+import './rings1.css'
 import avatar1 from '../../images/players/spéirbhean0.gif';
 import avatar2 from '../../images/players/douglas.png';
 import avatar3 from '../../images/players/fianna0.png';
@@ -773,11 +777,7 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	// }
 	// console.log("<<<<<>>>>>");
 		function buttonMashClick() { 
-		
-
-
-
-		
+				
 	}
   const updateValue = v => {
     diff.current = v - prevValue.current;
@@ -1112,7 +1112,8 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 		document.querySelector(".champion-portrait").classList.add('fade-in-champ');
 		document.querySelector(".names-e").classList.add('fade-in-champ'); document.querySelector(".names-i").classList.add('fade-in-champ');
 		document.querySelector(".question-text").classList.add('fade-out-champ');
-		
+		document.querySelector(".tutorial0-container").classList.add('fade-out-champ');
+		document.querySelector(".button-mash-ring-4").classList.add('circle');	
 	} 
 	var elementExists = document.getElementById("toggle-glass-btn");
 if(elementExists){	document.querySelector("#toggle-glass-btn").classList.add('fade-out-champ');}
@@ -1124,13 +1125,18 @@ if(elementExists){	document.querySelector("#toggle-glass-btn").classList.add('fa
 				
 		</div>
 <div className="input-elements-container-7">
-<img src={lensCap} className="lens-cap" alt="a fantasy landscape a ring of stones, a haunted tree" />
+				<img src={lensCap} className="lens-cap" alt="a fantasy landscape a ring of stones, a haunted tree" />
+				<div className='tutorial-container'>
+		
+		<div className="tutorial0-container">
+					<img rel="preload" src={tutorial0r} className='tutorial' id="tutorial0r" alt="a spinning arrow circle inviting user input" /></div>
+		</div>
 			</div>
 	  <div className="input-elements-container-8" >
 	  <img src={lens} id="lens" className="lens-ring4" alt="a glass lens" />
 			<CircularInput  value={value} className="dial dial4" onChange={tryValue}  >
 				<CircularTrack
-				stroke="rgba(185,230,5,1)"
+				stroke="rgba(171,144,0,0)"
 						strokeWidth={'3px'}
 				/>
 					<CircularThumb fill="rgba(135,5,2)"
@@ -1167,7 +1173,7 @@ if(elementExists){	document.querySelector("#toggle-glass-btn").classList.add('fa
 				<button className="button-mash-ring-4" 
 					onClick={props.fadeOutNoOne} onTouchEnd={props.proceedThroughQuiz}>
 					
-					<img src={champIcon} className="champion-portrait" alt="champion portrait" />
+					<img src={champIcon} className="champion-portrait " alt="champion portrait" />
 							
 			
 				</button>
@@ -1181,8 +1187,7 @@ if(elementExists){	document.querySelector("#toggle-glass-btn").classList.add('fa
 
 		<p id="hints-ring-4" className={props.isOn ? "hints" : "hidden"}>{'Choose a champion, ' + props.heroNameEng}</p>
 
-		
-		</>
+			</>
 			);
 }
 

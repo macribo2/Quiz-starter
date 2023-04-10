@@ -481,6 +481,8 @@ $('#hero').attr('src', setPlayerIcon());
         
         //mapChanges is a little hack to make the daffodills disappear when player leaves location geaga:
         function setMap() {
+            $("#tully-challenge-bg").fadeOut()
+            
 $("#loc").html("")
 $("#locEng").html("")
 $("#locEng").fadeOut()
@@ -3672,7 +3674,7 @@ $('#walkies-overlay').fadeIn();
             // playerFacing = imreoir.avatar;
              stillPressedNorth = false;
              updateEventReport('ó thuaidh')
-             
+             $('#north').removeClass('prompt-north')
              
             if (playerRow > 0) {
                 lastPressed = 'up';
@@ -4281,11 +4283,8 @@ alert("Chun troid!" )
        $('#hero').fadeOut();
        setTimeout(function () { 
        $("#walkies").fadeOut();
-           
        },300)
     //    refresh();
-
-
    }
         function helloFerna() {
             // secondLocation = eascaLocations[secondLocationId]
@@ -4666,7 +4665,7 @@ let placeNamesGaeilge =
                 $("#walkies").attr("src",ferna)
                 // $("#walkies-overlay").attr("src", fernaRiver)
                 gameObjects[playerRow][playerColumn] = 0;
-                playerRow = 5;
+                playerRow = 3;
                 playerColumn = 4;
                 // $('#hero').fadeOut();
                 $('.champion-portrait').fadeIn();
@@ -4674,6 +4673,7 @@ let placeNamesGaeilge =
                 $('.ringOfTullyNally').fadeIn();
                 $('#loc').fadeOut();
                 $('#locEng').fadeOut();
+                $('.tullynally-ring').fadeIn();
             }
 
 
@@ -4792,6 +4792,10 @@ alert("Anseo")
     }
 
     render() {
+
+        //just in case the player hasn't already dismissed the flashing purple light on btn #north.
+        $('#north').removeClass('prompt-north')
+
         //react functions here
         let proceedThroughQuiz = this.props.proceedThroughQuiz
         let storyTimer=this.props.storyTimer
@@ -4802,7 +4806,9 @@ alert("Anseo")
         
         `
         
-        
+        function restartApp() { 
+            window.location.reload(false)
+        }
         let heroNameEng = this.props.heroNameEng;
        let heroName = this.props.heroName
         avatar = this.props.avatar;
@@ -4985,7 +4991,7 @@ storyTimer()
             <br />
                 
         
-           
+                                <button onClick={ 	restartApp }>baile | home</button>
 <a href="https://www.pngwing.com/en/free-png-zampg"> Stone Soup Net Hack graphics </a>         
        <a href="https://manpages.ubuntu.com/manpages/xenial/man1/xscreensaver.1.html">additional effects by Jamie Zawinski Paul 'Joey' Clark</a><br/>
     

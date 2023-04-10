@@ -141,7 +141,7 @@
 #event-report{
   z-index: 99;
   position: fixed;
-  top:80%;
+  top:40%;
   left:80%;
   color: rgba(240, 248, 255, 0.461);
 }
@@ -218,7 +218,7 @@ p {
 
 #north {
 
-  background-color: rgb(83, 60, 90);
+  background-color: rgb(32, 21, 28);
   border-top: 3px solid rgba(170, 176, 177, 0.5);
 
   border-right: 3px solid rgba(170, 176, 177, 0.5);
@@ -245,8 +245,7 @@ p {
   width: 50px;
   position: relative;
   z-index: 50;
-
-  background-color: rgb(83, 60, 90);
+  background-color: rgb(32, 21, 28);
   border-top: 3px solid rgba(170, 176, 177, 0.5);
 
   border-right: 0px solid rgba(83, 60, 90, 1);
@@ -305,7 +304,7 @@ p {
 }
 
 #south {
-  background-color: rgb(83, 60, 90);
+  background-color: rgb(32, 21, 28);
   border-top: 0px solid rgba(83, 60, 90, 1);
   border-right: 3px solid rgba(170, 176, 177, 0.5);
   border-left: 3px solid rgba(170, 176, 177, 0.5);
@@ -328,7 +327,9 @@ p {
 }
 
 #east {
-  background-color: rgb(83, 60, 90);
+  background-color: rgb(32, 21, 28);
+;
+
   border-top: 3px solid rgba(170, 176, 177, 0.5);
   border-bottom: 3px solid rgba(170, 176, 177, 0.5);
 
@@ -967,6 +968,11 @@ animation: bounce 2s 15 steps(3);
 			left:30%;
 		}
     @media only screen and (min-width: 1022px) {
+/*      
+     .directional-pad{
+      top:72%;
+      
+     } */
       .linux-land-container{
         transform: scale(1);
       }
@@ -981,6 +987,9 @@ animation: bounce 2s 15 steps(3);
         transform:scale(2.8);
         display:block;
       
+      }
+      .countyMap{
+        width:100%;
       }
     }
 
