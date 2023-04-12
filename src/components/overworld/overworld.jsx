@@ -482,6 +482,7 @@ $('#hero').attr('src', setPlayerIcon());
         //mapChanges is a little hack to make the daffodills disappear when player leaves location geaga:
         function setMap() {
             $("#tully-challenge-bg").fadeOut()
+            $("#tullynally-lens").fadeOut()
             
 $("#loc").html("")
 $("#locEng").html("")

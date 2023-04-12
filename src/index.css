@@ -1705,3 +1705,22 @@ display:flex;
 .tutorial0-container{
   transform:scale(0.9)
 }
+
+@media only screen and (min-width: 1026px) {
+
+  #mob-effect,
+  #mob-effect1,
+  #mob-effect2 {
+
+    top: 0%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: fixed;
+
+    z-index: 9950;
+
+
+  }
+}

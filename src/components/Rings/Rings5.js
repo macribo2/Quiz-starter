@@ -230,17 +230,23 @@ let ogHero = localStorage.getItem('portrait')
 		`,`sé 
 		`,`sé 
 		`,
-		`agus a seacht. Bin ocht giotán, sa comhéad dénartha. Lorg fáinne Tulaigh an Eallaigh?
+		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
 		`,
-		`agus a seacht. Bin ocht giotán, sa comhéad dénartha. Lorg fáinne Tulaigh an Eallaigh?
-		`,`agus a seacht. Bin ocht giotán, sa comhéad dénartha. Lorg fáinne Tulaigh an Eallaigh?
-		`,`agus a seacht. Bin ocht giotán, sa comhéad dénartha. Lorg fáinne Tulaigh an Eallaigh?
-		`,`agus a seacht. Bin ocht giotán, sa comhéad dénartha. Lorg fáinne Tulaigh an Eallaigh?
-		`,`agus a seacht. Bin ocht giotán, sa comhéad dénartha. Lorg fáinne Tulaigh an Eallaigh?
-		`,`agus a seacht. Bin ocht giotán, sa comhéad dénartha. Lorg fáinne Tulaigh an Eallaigh?
-		`,`agus a seacht. Bin ocht giotán, sa comhéad dénartha. Lorg fáinne Tulaigh an Eallaigh?
-		`,`agus a seacht. Bin ocht giotán, sa comhéad dénartha. Lorg fáinne Tulaigh an Eallaigh?
-		`,`agus a seacht. Bin ocht giotán, sa comhéad dénartha. Lorg fáinne Tulaigh an Eallaigh?
+		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
+		`,
+		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
+		`,
+		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
+		`,
+		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
+		`,
+		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
+		`,
+		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
+		`,
+		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
+		`,
+		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
 		`,
  
 		];
@@ -330,15 +336,8 @@ let ogHero = localStorage.getItem('portrait')
 	`,`6 
 	`,`6` 
 	
-		, `and 7. that is 8 bits, in binary code. Seek the ring of Tullynally?`
-		, `and 7. that is 8 bits, in binary code. Seek the ring of Tullynally?`
-		, `and 7. that is 8 bits, in binary code. Seek the ring of Tullynally?`
-		, `and 7. that is 8 bits, in binary code. Seek the ring of Tullynally?`
-		, `and 7. that is 8 bits, in binary code. Seek the ring of Tullynally?`
-		, `and 7. that is 8 bits, in binary code. Seek the ring of Tullynally?`
-		, `and 7. that is 8 bits, in binary code. Seek the ring of Tullynally?`
-		, `and 7. that is 8 bits, in binary code. Seek the ring of Tullynally?`
-	,
+		, `...and seven. that is binary code. Seek ring?`
+		,
 
 ];
 	function tullyChallenge() { 
@@ -619,6 +618,7 @@ function thumbStart() {
 
 } 
 
+	
 	return (
 
 		<>
