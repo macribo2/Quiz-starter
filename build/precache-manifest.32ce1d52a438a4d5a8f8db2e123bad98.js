@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "fed4e8d019e039c6e5e0",
-    "url": "/static/css/main.61ef4baf.chunk.css"
+    "revision": "3a3d4a4d25b2c2bdd3f3",
+    "url": "/static/css/main.73e49320.chunk.css"
   },
   {
-    "revision": "fed4e8d019e039c6e5e0",
-    "url": "/static/js/main.11e604d1.chunk.js"
+    "revision": "3a3d4a4d25b2c2bdd3f3",
+    "url": "/static/js/main.0ecc1b3d.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "12b71253d7e226edb0b8",
+    "revision": "14746c13792dc578959b",
     "url": "/static/css/2.bb1d6663.chunk.css"
   },
   {
-    "revision": "12b71253d7e226edb0b8",
-    "url": "/static/js/2.a1df2065.chunk.js"
+    "revision": "14746c13792dc578959b",
+    "url": "/static/js/2.537e13c2.chunk.js"
   },
   {
     "revision": "36e3a42bf28892f043628cf58081368f",
@@ -100,6 +100,10 @@ self.__precacheManifest = [
     "url": "/static/media/aonchlo.05a45ce9.ttf"
   },
   {
+    "revision": "3428dddb09d227a25c9e44a066087a18",
+    "url": "/static/media/stone-0.3428dddb.png"
+  },
+  {
     "revision": "80cd43185ecb428eed1387c1486c7502",
     "url": "/static/media/ciorcal-glass4.80cd4318.png"
   },
@@ -136,10 +140,6 @@ self.__precacheManifest = [
     "url": "/static/media/feicimthu.ed03f220.png"
   },
   {
-    "revision": "3428dddb09d227a25c9e44a066087a18",
-    "url": "/static/media/stone-0.3428dddb.png"
-  },
-  {
     "revision": "837ece981e981876d923234b852b5fc5",
     "url": "/static/media/blackripple.837ece98.gif"
   },
@@ -164,8 +164,8 @@ self.__precacheManifest = [
     "url": "/static/media/lasta.223c544e.png"
   },
   {
-    "revision": "a138209ea8eb39f9ed42c7af35096e7b",
-    "url": "/static/media/background_image.a138209e.png"
+    "revision": "85109b17ed4620c5197dbd775db31edf",
+    "url": "/static/media/background_image.85109b17.png"
   },
   {
     "revision": "e119faecf6fca6b1bb2f01ce6689e645",
@@ -196,16 +196,16 @@ self.__precacheManifest = [
     "url": "/static/media/tutorial0r.462f5dbe.png"
   },
   {
-    "revision": "b68019a59eed3b9ed04a32369daa4b19",
-    "url": "/static/media/01.b68019a5.png"
+    "revision": "34422b8a007ae6f6d1072ada3f4771bf",
+    "url": "/static/media/01.34422b8a.png"
   },
   {
     "revision": "ad5ed074916ebd5c0aa5425d5eb895ad",
     "url": "/static/media/ciorcal-glass6.ad5ed074.png"
   },
   {
-    "revision": "75a1b6a6a32d0810cc9a7eeaa3b54937",
-    "url": "/static/media/folamh.75a1b6a6.png"
+    "revision": "e0c8214b569dd485e3ee0cdb1af9d71c",
+    "url": "/static/media/folamh.e0c8214b.png"
   },
   {
     "revision": "7062aff4f2787bc90d4ee1a151125511",
@@ -280,8 +280,8 @@ self.__precacheManifest = [
     "url": "/static/media/lord-iron-key2.d1ff1df9.png"
   },
   {
-    "revision": "68be1a97791cdc8bf7fd02fb5708433b",
-    "url": "/static/media/ceist3.68be1a97.png"
+    "revision": "14c7dd10c9205b5ee669ee38860c215f",
+    "url": "/static/media/ceist3.14c7dd10.png"
   },
   {
     "revision": "86266b1e439f7f33138ebca551e3a107",
@@ -344,12 +344,12 @@ self.__precacheManifest = [
     "url": "/static/media/geaga0.1bd9b1cf.png"
   },
   {
-    "revision": "076f3bffba01a16904bf9ba264c71954",
-    "url": "/static/media/deetsFrame.076f3bff.png"
-  },
-  {
     "revision": "deb64aa64afcf77da2a7d7ff19e14b59",
     "url": "/static/media/passage.deb64aa6.png"
+  },
+  {
+    "revision": "076f3bffba01a16904bf9ba264c71954",
+    "url": "/static/media/deetsFrame.076f3bff.png"
   },
   {
     "revision": "e489ff862837973ba8874fb98b06ef64",
@@ -364,24 +364,16 @@ self.__precacheManifest = [
     "url": "/static/media/INFO56_0.8d8dbdd7.ttf"
   },
   {
-    "revision": "f00de7d9918169a9feeb00e77a9a2f56",
-    "url": "/static/media/ciorcal-glass-bg.f00de7d9.png"
-  },
-  {
-    "revision": "fefaccef8a9d6893e3e1ed77e3170cff",
-    "url": "/static/media/field.fefaccef.png"
-  },
-  {
     "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
     "url": "/static/media/fortuna-glass.4c08d21e.png"
   },
   {
-    "revision": "ee5004be8978604da5e223282c5bbe51",
-    "url": "/static/media/sea.ee5004be.png"
+    "revision": "f00de7d9918169a9feeb00e77a9a2f56",
+    "url": "/static/media/ciorcal-glass-bg.f00de7d9.png"
   },
   {
-    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
-    "url": "/static/media/mapFrame4.0cdb344e.png"
+    "revision": "ee5004be8978604da5e223282c5bbe51",
+    "url": "/static/media/sea.ee5004be.png"
   },
   {
     "revision": "c84c06495852ac730bd653c3aa9bff25",
@@ -404,16 +396,24 @@ self.__precacheManifest = [
     "url": "/static/media/suile0.b67d2f1b.gif"
   },
   {
-    "revision": "9bbe18cf6d054928f146dafcf058fcb1",
-    "url": "/static/media/suile3.9bbe18cf.gif"
-  },
-  {
     "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
     "url": "/static/media/mapFrame2.915b9892.png"
   },
   {
+    "revision": "fefaccef8a9d6893e3e1ed77e3170cff",
+    "url": "/static/media/field.fefaccef.png"
+  },
+  {
     "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
     "url": "/static/media/fortuna-glass-lit.29cb5d03.png"
+  },
+  {
+    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
+    "url": "/static/media/mapFrame4.0cdb344e.png"
+  },
+  {
+    "revision": "9bbe18cf6d054928f146dafcf058fcb1",
+    "url": "/static/media/suile3.9bbe18cf.gif"
   },
   {
     "revision": "cfabbdb47b5376a44c3f8bd99fe2f968",
@@ -496,7 +496,7 @@ self.__precacheManifest = [
     "url": "/static/media/dink.6651d091.wav"
   },
   {
-    "revision": "5b3cdbef56625e49c4da665caac86eec",
+    "revision": "01b0ee05ce03c44762067acb3356631c",
     "url": "/index.html"
   }
 ];

@@ -1,4 +1,5 @@
 // import * as React from "react";
+import darkFields from '../../images/about2/stone-0.png'
 import { render } from "react-dom";
 import React, { useState, useEffect } from 'react'
 import lens from '../../images/ciorcal-glass-light.png';
@@ -230,23 +231,37 @@ let ogHero = localStorage.getItem('portrait')
 		`,`sé 
 		`,`sé 
 		`,
-		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
+		`seacht
 		`,
-		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
+		`seacht
+		`,`seacht
 		`,
-		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
+		`seacht
 		`,
-		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
+		`seacht
 		`,
-		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
+		`seacht
 		`,
-		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
+		`seacht`,
+		`seacht`,
+		`seacht`,
+		`seacht`,
+		
+		
+		`Lorg fáinne?
 		`,
-		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
-		`,
-		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
-		`,
-		`...agus a seacht. Sin é, cód dénártha. Lorg fáinne?
+		`Lorg fáinne?
+		`,`Lorg fáinne?
+		`,`Lorg fáinne?
+		`,`Lorg fáinne?
+		`,`Lorg fáinne?
+		`,`Lorg fáinne?
+		`,`Lorg fáinne?
+		`,`Lorg fáinne?
+		`,`Lorg fáinne?
+		`,`Lorg fáinne?
+		`,`Lorg fáinne?
+		`,`Lorg fáinne?
 		`,
  
 		];
@@ -305,7 +320,6 @@ let ogHero = localStorage.getItem('portrait')
 	`,`3
 	`,`3
 	`,`3
-	`,`3
 	`,`4
 	`,`4
 	`,`4
@@ -313,8 +327,7 @@ let ogHero = localStorage.getItem('portrait')
 	`,`4
 	`,`4
 	`,`4
-	`,`4
-	`,`4
+	`,`4		
 	`,`4
 	`,`4
 	`,`5 
@@ -327,7 +340,9 @@ let ogHero = localStorage.getItem('portrait')
 	`,`5 
 	`,`5 
 	`,`5 
-	`,`5 
+	`,`6 
+	`,`6 
+	`,`6 
 	`,`6 
 	`,`6 
 	`,`6 
@@ -336,21 +351,56 @@ let ogHero = localStorage.getItem('portrait')
 	`,`6 
 	`,`6` 
 	
-		, `...and seven. that is binary code. Seek ring?`
+		, `7`,
+		`7`	,
+		`7`	,
+		`7`		,
+		`7`		,
+		`7`		,
+		`7`		,
+		`7`		,
+		`7`		,
+		`7`
 		,
+
+
+`seek ring?`
+		,
+
+		`seek ring?`
+		,
+		`seek ring?`
+		,
+		`seek ring?`
+		,
+		`seek ring?`
+		,
+		`seek ring?`
+		,
+		`seek ring?`
+		,
+		`seek ring?`
+		,
+		`seek ring?`
+		,
+		`seek ring`
+		,
+
 
 ];
 	function tullyChallenge() { 
-		
-		
+		document.getElementById('dir-pad').style.opacity='1'
 
 		document.getElementById('ring-dial-5').style.display='none'
 		document.getElementById('tully-p').style.display='none'
 		document.getElementById('binary-portrait').style.display='none'
 		document.getElementById('tully-challenge-bg').style.display='block'
 		document.getElementById('tully-challenge-bg').classList.add('fade-in-champ')	
+		document.getElementById('n-id').innerHTML='Churdaigh sa chuaigú choill é.';
+		document.getElementById('e-id').innerHTML='Search in the fifth field for it';
 
-		document.getElementById('bg-container-rings-5').style.display='none'
+		document.getElementById('bg-container-rings-5').style.opacity='0.5'
+		// document.getElementById('bg-container-rings-5').setAttribute.src = {darkFields}
 		document.getElementById('mash-5').style.display='none'	}
 	const [value, setValue] = React.useState(0.1);
   const prevValue = React.useRef(0);
@@ -533,37 +583,47 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	
 	}
 	if (binaryID >= 11 && binaryID <= 20){
-		// tullyP.style.top = '20%'
+		tullyP.style.top = '10%'
+		tullyP.style.left = '60%'
+		
+		
 		document.getElementById('tut-5').classList.add('fade-out-champ')
 	}
 	if (binaryID >= 21 && binaryID <= 30){
-		// tullyP.style.transform = 'scaleX(-1)';
+		tullyP.style.transform = 'rotate(0deg)'
 		binaryIcon = fromOne;
-		// tullyP.style.top = '30%'
-		// tullyP.style.left = '50%'
+		tullyP.style.top = '30%'
+		tullyP.style.left = '60%'
 		document.getElementById('tut-5').classList.add('fade-out-champ')
 	}
 	if (binaryID >= 31 && binaryID <= 40){
+		tullyP.style.transform = 'rotate(90deg)'
 		document.getElementById('tut-5').classList.add('fade-out-champ')
+
 		binaryIcon = fromTwo;
 
-		// tullyP.style.top = '45%'
-		// tullyP.style.left = '54%'
+		tullyP.style.top = '50%'
+
+		tullyP.style.left = '60%'
+		// tullyP.style.transform = 'scaleX(1)';
+		// tullyP.style.transform = 'scaleY(-1)';
+
 	}
 	if (binaryID >= 41 && binaryID <= 50){
 		binaryIcon = fromThree;
-		// tullyP.style('left','50%')
 	
-		// tullyP.style.top = '49%'
-		// tullyP.style.left = '47%'	
+		tullyP.style.top = '60%'
+		tullyP.style.left = '60%'	
+		tullyP.style.transform = 'rotate(118deg)';
 		
 	}
 	if (binaryID >= 51 && binaryID <= 60){
 		binaryIcon = fromFour;
+tullyP.style.transform = 'rotate(180deg)'
 
-		// tullyP.style.top = '33%'
-		// tullyP.style.left = '38%'	
-		// tullyP.style.zIndex = '9000'
+
+		tullyP.style.top = '70%'
+		tullyP.style.left = '43%'	
 		
 
 	}
@@ -571,26 +631,28 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 		binaryIcon = fromFive;
 
 
-		// tullyP.style.top = '25%'
-		// tullyP.style.left = '45%'
-		// tullyP.style.zIndex = '4'
+		tullyP.style.top = '45%'
+		tullyP.style.left = '30%'
+		tullyP.style.zIndex = '4'
 		
+		tullyP.style.transform = 'rotate(270deg)';
 		
 	}
 	if (binaryID >= 71 && binaryID <= 80){
 		binaryIcon = fromSix;
 
 
-		// tullyP.style.top = '20%'
-		// tullyP.style.left = '51%'	
+		tullyP.style.top = '30%'
+		tullyP.style.left = '32%'	
+		tullyP.style.transform = 'rotate(0deg)';
 		
 		// document.getElementById('bg-container-rings-5').classList.remove('circle')
 	}
 	if (binaryID >= 81 && binaryID <= 100){
 		binaryIcon = fromSeven;
 
-		// tullyP.style.top = '35%'
-		// tullyP.style.left = '8%'	
+		tullyP.style.top = '21%'
+		tullyP.style.left = '38%'	
 		
 		// document.getElementById('bg-container-rings-5').classList.add('circle')
 		
@@ -657,11 +719,11 @@ function thumbStart() {
 
 			<div className="ring-text-container-5" >
 			
-			<p x={100} y={100} className="numbers-i" textAnchor="middle" dy="0.3em" fontWeight="bold">
+			<p x={100} y={100} id="n-id" className="numbers-i" textAnchor="middle" dy="0.3em" fontWeight="bold">
         {  irishNumbers[ Math.floor(value * 100) + round.current * 100]}
 				</p>
 				
-				<p className="numbers-e" >
+				<p id="e-id" className="numbers-e" >
 				{ 
 					  arabicNumbers[ Math.floor(value * 100) + round.current * 100]
 
@@ -680,7 +742,7 @@ function thumbStart() {
 	</div>				
 	<div className="ring-5-button-mash-container"> 
 			 
-			 <button  id="mash-5"className={ binaryID >=81? "button-mash-ring-5 circle":"hidden" } onClick={tullyChallenge} ></button>
+			 <button  id="mash-5"className={ binaryID >=91? "button-mash-ring-5 circle":"hidden" } onClick={tullyChallenge} ></button>
 			</div>
 			<div className="challenge-container">
 				<img id="tully-challenge-bg" src={tullyChallengeBG} alt="" />

@@ -83,7 +83,7 @@ export default  class NumberOne extends React.Component  {
 		$('.input-elements-container-8').fadeOut(2000)//css('display','none');
 		$('.answer-section').fadeIn();
 		$('#hints-ring-4').html('');
-		$('#north').addClass('prompt-north')
+		$('#north').addClass('circle')
 		$('#hints-geaga').fadeIn();
 		// let mise = document.getElementsByClassName('names-i').html();
 		// alert(mise)

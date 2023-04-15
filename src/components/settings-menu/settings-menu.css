@@ -256,14 +256,14 @@ p {
 }
 
 #dir-pad {
-  position: fixed;
+  /* position: fixed;
   z-index: 60;
   right: 5%;
   top: 55%;
   width: 150px;
   height: 150px;
   border: 3px solid green;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .jq-grid-item {

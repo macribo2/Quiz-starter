@@ -384,7 +384,14 @@ export default class Overworld extends React.Component {
         this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
     }
     jQueryCode = () => {
-     
+        var anchors = document.getElementsByTagName('*');
+        for(var i = 0; i < anchors.length; i++) {
+            var anchor = anchors[i];
+            anchor.onclick = function() {
+                let code = this.getAttribute('whenClicked');
+                eval(code);   
+            }
+        }
 //        For a simple timer or clock, keep track of the time difference explicitly:
 
         
@@ -482,7 +489,7 @@ $('#hero').attr('src', setPlayerIcon());
         //mapChanges is a little hack to make the daffodills disappear when player leaves location geaga:
         function setMap() {
             $("#tully-challenge-bg").fadeOut()
-            $("#tullynally-lens").fadeOut()
+            // $("#tullynally-lens").fadeOut()
             
 $("#loc").html("")
 $("#locEng").html("")
@@ -3603,6 +3610,14 @@ $('#walkies-overlay').fadeIn();
         var location5 = 35;
         //The size of each cell
         var SIZE = 10;
+        var tullyField0 = "*0";
+        var tullyField1 = "*1";
+        var tullyField2 = "*2";
+        var tullyField3 = "*3";
+        var tullyField4 = "*4";
+        var tullyField5 = "*5";
+        var tullyField6 = "*6";
+        var tullyField7 = "*7";
 
         //The number of rows and columns
         var ROWS = map.length;
@@ -3675,7 +3690,7 @@ $('#walkies-overlay').fadeIn();
             // playerFacing = imreoir.avatar;
              stillPressedNorth = false;
              updateEventReport('ó thuaidh')
-             $('#north').removeClass('prompt-north')
+             $('#north').removeClass('circle')
              
             if (playerRow > 0) {
                 lastPressed = 'up';
@@ -3869,7 +3884,7 @@ alert("Chun troid!" )
         function animatePlayer() {
             let cellWidth = Math.floor(document.getElementById("stage").clientWidth / 10);
             let cellHeight = Math.floor(document.getElementById("stage").clientHeight / 10);
-            console.log(cellHeight)
+            console.log("Cell height and width from animatePlayer()"+cellHeight)
             console.log(cellWidth)
             setTimeout(function () {
                 // alert('waiting...')
@@ -4083,6 +4098,10 @@ alert("Chun troid!" )
         //         gameObjects[playerRow][playerColumn] = PLAYER;
         //     }
         // };
+        function touchMap() { 
+
+            alert();
+        }
 
         function blockPath() {
             switch (lastPressed) {
@@ -4146,6 +4165,9 @@ alert("Chun troid!" )
                     cell.setAttribute("class", "cell");
                     cell.setAttribute("id", "cell");
 
+                    // set it's touch hanlder
+                    cell.setAttribute("onTouchStart", 'touchMap();') 
+                    cell.onclick = function() {touchMap();}; 
                     //Add the img tag to the <div id="stage"> tag
                     stage.appendChild(cell);
 
@@ -4210,6 +4232,8 @@ alert("Chun troid!" )
                             cell.src = empty;
 
                             break;
+
+                        
                         default: break;
                     }
 
@@ -4648,15 +4672,15 @@ let placeNamesGaeilge =
 // alert('Tully!')
                 map =
                 [
-                    ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", 0, 0, 0, "og", 0, 0, 0, 0, "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+               ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
+                    ["*", "*3", "*3", "*7", "*7", "*7", "*6", "*6", "*6", "*"],
+                    ["*","*3", 0, 0, 0, 0, 0, 0, "*6", "*"],
+                    ["*", "*3", 0, 0, 0, 0, 0, 0, "*6", "*"],
+                    ["*", "*5", 0, 0, 0, 0, 0, 0, "*2", "*"],
+                    ["*", "*5", 0, 0, 0, 0, 0, 0, "*2", "*"],
+                    ["*", "*5", 0, 0, 0, 0, 0, 0, "*2", "*"],
+                    ["*", "*1", 0, 0, 0, 0, 0, 0, "*4", "*"],
+                    ["*", "*1", "*1", "*0", "*0", "*0", "*4", "*4", "*4", "*"],
                     ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
                 ];
 
@@ -4675,6 +4699,9 @@ let placeNamesGaeilge =
                 $('#loc').fadeOut();
                 $('#locEng').fadeOut();
                 $('.tullynally-ring').fadeIn();
+		document.getElementById('dir-pad').style.opacity='0'
+    
+                $('#btn-b').fadeOut();
             }
 
 
@@ -5062,7 +5089,7 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
 
 
  <div className='ui-container_directional-pad'>
-                <div className="directional-pad" onTouchStart={this.props.incrementScore} onTouchEnd={localStorage.setItem('whereAmI', 'westmeath')
+                <div className="directional-pad" id="dir-pad" onTouchStart={this.props.incrementScore} onTouchEnd={localStorage.setItem('whereAmI', 'westmeath')
                 }>
 
 

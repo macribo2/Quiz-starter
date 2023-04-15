@@ -82,14 +82,14 @@ export default function Rings3(props) {
 		This is a ring`, 
 		`which turns | which sings`, 
 `which shines`,
-`which tells a story.`,
+`which tells a story`,
 		`You'll find such things, around the country.`,
-		 `Gather rings here,`,		
-		 `to return to Ireland.`,
-		 `to return to Ireland.`,
-		 `to return to Ireland.`,
-		 `to return to Ireland.`,
-		 `to return to Ireland.`,
+		 `Gather rings here`,		
+		 `to return to Ireland`,
+		 `to return to Ireland`,	
+		 `to return to Ireland`,
+		 `to return to Ireland`,
+		 `to return to Ireland`,
 		
 		``, ``, ``,
 	]
@@ -99,16 +99,15 @@ export default function Rings3(props) {
 		`Seo fáinne`,
 		`a chasann`,
 		`a lasann`,
-		`a insíonn scéal.`,
-		`Aimseoidh tú a leithead, tímpeal na tíre.`,
-		`Bailigh fáinní anseo,`,
-		`le filleadh go hÉireann.`,
-		`le filleadh go hÉireann.`,	
-		`le filleadh go hÉireann.`,	
-		`le filleadh go hÉireann.`,	
-		`le filleadh go hÉireann.`,	
-		
- 
+		`a insíonn scéal`,
+		`Aimseoidh tú a leithead timpeall na tíre.`,
+		`Bailigh fáinní anseo`,
+		`le filleadh go hÉireann`,
+		`le filleadh go hÉireann`,	
+		`le filleadh go hÉireann`,	
+		`le filleadh go hÉireann`,	
+		`le filleadh go hÉireann`,	
+		 
 		``,
 		``,
 		``,
@@ -173,7 +172,7 @@ export default function Rings3(props) {
 					
 					<div className="about-pics-container">
 
-				<img className={value*10 === 5 ? 'banba':'hidden'} src={banba} alt="a digital peninsula" />
+				<img className={value*10 === 5 ? 'fade-in-slow':'hidden'} src={banba} alt="a digital peninsula" />
 				<img className={value*10 === 6 ? '':'hidden'} src={banba} alt="a digital peninsula" />
 				<img className={value*10 === 7 ? '':'hidden'} src={banba} alt="a digital peninsula" />
 				<img className={value*10 === 8 ? '':'hidden'} src={banba} alt="a digital peninsula" />
