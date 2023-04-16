@@ -685,14 +685,14 @@ function thumbStart() {
 
 		<>
 			<div className="tullynally-ring">
-		<img id="tullynally-lens" rel="preload" src={outerLocation} className="question-img" alt="dark green fields background" />	
-			<div id="bg-container-rings-5" className="bg-container"><img src={ stoneBG} alt="yin yan in gold and black circle" /></div>
+		<img id="tullynally-lens" rel="preload" src={outerLocation} className="question-img tullynally-zoom" alt="dark green fields background" />	
+			<div id="bg-container-rings-5" className="bg-container tullynally-zoom"><img src={ stoneBG} alt="geometric 8bit forest in a stone ring." /></div>
 			<div className="ring-5-binary-container">
 			
-			<img src={binaryIcon} id='binary-portrait' className="binary-portrait" alt="representation of binary numbers in stone" />
+			<img src={binaryIcon} id='binary-portrait' className="binary-portrait tullynally-zoom" alt="representation of binary numbers in stone" />
 	  </div> 
 
-<img src={tullyPortrait} id="tully-p" className="champion-portrait tully-portrait" alt="champion portrait" />
+<img src={tullyPortrait} id="tully-p" className="champion-portrait tully-portrait tullynally-zoom" alt="champion portrait" />
 				{/* <div className="ring-5-lens-cap-container"> */}
 {/* <img src={lensCap} className="lens-cap" alt="a fantasy landscape a ring of stones, a haunted tree" /> */}
 			{/* </div> */}
@@ -738,7 +738,7 @@ function thumbStart() {
 				</div>
 
 				<div className="tut-ring-5-container">
-				<img id="tut-5" src={tutorial0} className="tutorial0 tut-ring5 spin"alt="spinning arrow" /></div>
+				<img id="tut-5" src={tutorial0} className="tutorial0 tut-ring5 spin tullynally-zoom"alt="spinning arrow" /></div>
 	</div>				
 	<div className="ring-5-button-mash-container"> 
 			 

@@ -735,3 +735,8 @@ z-index: 33;
 animation: spin 60s steps(128) infinite;
 }
 
+@media only screen and (min-width: 1022px) {
+  .tullynally-zoom{
+    transform:scale(2.3)
+  }
+}

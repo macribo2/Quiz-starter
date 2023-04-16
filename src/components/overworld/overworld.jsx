@@ -4098,9 +4098,11 @@ alert("Chun troid!" )
         //         gameObjects[playerRow][playerColumn] = PLAYER;
         //     }
         // };
-        function touchMap() { 
+        function touchMap(e) { 
+            let indOf = e.indexOf()
+            alert(indOf
 
-            alert();
+            );
         }
 
         function blockPath() {
@@ -4166,7 +4168,7 @@ alert("Chun troid!" )
                     cell.setAttribute("id", "cell");
 
                     // set it's touch hanlder
-                    cell.setAttribute("onTouchStart", 'touchMap();') 
+                    cell.setAttribute("onTouchStart", 'touchMap(e);') 
                     cell.onclick = function() {touchMap();}; 
                     //Add the img tag to the <div id="stage"> tag
                     stage.appendChild(cell);
