@@ -4098,11 +4098,35 @@ alert("Chun troid!" )
         //         gameObjects[playerRow][playerColumn] = PLAYER;
         //     }
         // };
-        function touchMap(e) { 
-            let indOf = e.indexOf()
-            alert(indOf
 
-            );
+        // Target all clicks on any element
+document.addEventListener('click',(e) =>
+{
+  // Get element class(es)
+  let elementClass = e.target.className;
+  // If element has class(es)
+  if (elementClass !== '') {
+    console.log(elementClass);
+  }
+  if (elementClass === '') {
+    console.log(elementClass);
+  }
+    if (elementClass.includes('Row4') && elementClass.includes('Col4')) { 
+        lastPressed = 'down';
+        gameObjects[playerRow][playerColumn] = 0;
+        playerRow = 4;
+        playerColumn = 4
+        refresh();
+        animatePlayer();
+    }
+  // If element has no classes
+  else {
+    console.log('An element without a class was clicked');
+  }
+}
+);
+        function touchMap() { 
+    //  alert()
         }
 
         function blockPath() {
@@ -4165,10 +4189,12 @@ alert("Chun troid!" )
 
                     //Set it's CSS class to "cell"
                     cell.setAttribute("class", "cell");
+                    cell.classList.add("class", "cellCol" + column);
+                    cell.classList.add("class", "cellRow" + row);
                     cell.setAttribute("id", "cell");
 
                     // set it's touch hanlder
-                    cell.setAttribute("onTouchStart", 'touchMap(e);') 
+                    cell.setAttribute("onTouchStart", 'touchMap();') 
                     cell.onclick = function() {touchMap();}; 
                     //Add the img tag to the <div id="stage"> tag
                     stage.appendChild(cell);
