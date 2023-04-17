@@ -4111,14 +4111,32 @@ document.addEventListener('click',(e) =>
   if (elementClass === '') {
     console.log(elementClass);
   }
-    if (elementClass.includes('Row4') && elementClass.includes('Col4')) { 
-        lastPressed = 'down';
-        gameObjects[playerRow][playerColumn] = 0;
-        playerRow = 4;
-        playerColumn = 4
-        refresh();
-        animatePlayer();
-    }
+
+    //making each square of a 10x10 grid of squares a button that moves the player there, on touch.
+
+    
+    if (elementClass.includes('cell')) {
+        for (let i = 0; i < 10; i++) { 
+
+            for (let j = 0; j < 10; j++) { 
+        if (elementClass.includes('Row'+i) && elementClass.includes('Col'+j)) { 
+            lastPressed = 'down';
+            gameObjects[playerRow][playerColumn] = 0;
+            playerRow = i;
+            playerColumn = j
+            refresh();
+            animatePlayer();
+            keydownHandler()
+        }
+
+
+    
+                
+            }
+        }
+
+     }
+    
   // If element has no classes
   else {
     console.log('An element without a class was clicked');

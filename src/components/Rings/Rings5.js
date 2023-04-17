@@ -396,8 +396,8 @@ let ogHero = localStorage.getItem('portrait')
 		document.getElementById('binary-portrait').style.display='none'
 		document.getElementById('tully-challenge-bg').style.display='block'
 		document.getElementById('tully-challenge-bg').classList.add('fade-in-champ')	
-		document.getElementById('n-id').innerHTML='Churdaigh sa chuaigú choill é.';
-		document.getElementById('e-id').innerHTML='Search in the fifth field for it';
+		document.getElementById('n-id').innerHTML='Gheobhaidh tú an fáinne i bpáirc uimhir a cúig';
+		document.getElementById('e-id').innerHTML='You will find the ring in park number five';
 
 		document.getElementById('bg-container-rings-5').style.opacity='0.5'
 		// document.getElementById('bg-container-rings-5').setAttribute.src = {darkFields}
@@ -593,7 +593,7 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 		tullyP.style.transform = 'rotate(0deg)'
 		binaryIcon = fromOne;
 		tullyP.style.top = '30%'
-		tullyP.style.left = '60%'
+		tullyP.style.left = '56%'
 		document.getElementById('tut-5').classList.add('fade-out-champ')
 	}
 	if (binaryID >= 31 && binaryID <= 40){
@@ -611,9 +611,9 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	}
 	if (binaryID >= 41 && binaryID <= 50){
 		binaryIcon = fromThree;
-	
-		tullyP.style.top = '60%'
-		tullyP.style.left = '60%'	
+		tullyP.style.top = '64%'
+
+		tullyP.style.left = '55%'	
 		tullyP.style.transform = 'rotate(118deg)';
 		
 	}
@@ -624,6 +624,7 @@ tullyP.style.transform = 'rotate(180deg)'
 
 		tullyP.style.top = '70%'
 		tullyP.style.left = '43%'	
+		tullyP.style.zIndex = '4000'
 		
 
 	}
