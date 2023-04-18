@@ -53,7 +53,7 @@ import phone1 from '../../images/phone-0.png';
 import black from '../../images/black.png'
 import tinkle from "../../audio/tinkle.wav"
 import tinkle1 from "../../audio/dink.wav"
-import stars from '../../images/stars.gif';
+import stars from '../../images/cut-scenes/spr_stars01.png';
 import ReactAudioPlayer from 'react-audio-player';
 import '../../fonts/urchlo.ttf';
 import Silken from '../../components/silken/silken.jsx'; 
@@ -704,9 +704,9 @@ let thePucaOf = localStorage.getItem('pucaEng')
 				 */}
 				</div>
 			</> : null}
-
+			<div className='stars-container'>
 			<img id="stars" rel="preload" src={stars} className="question-img" alt="wheeling starfield" />		
-
+			</div>
 				
 			{showSettings ? <SettingsMenu 
 				incrementScore={incrementScore} tallyX={0} avatar={localStorage.getItem('portrait')} whereAmI="geaga" isOn={isOn} heroName={heroNames[localStorage.getItem('portrait')]} heroNameEng={ heroNamesEng[localStorage.getItem('portrait')]}

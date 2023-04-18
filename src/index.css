@@ -172,16 +172,22 @@ width: 740px;
           animation: fade-in 12s linear forwards, scroll-sky 470s infinite linear;
 
 }
-
-#stars {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+.stars-container{
   top:0;
   left:0;
-  position:fixed;
- height: 100%;
- width:100%;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  display:flex;
+  align-items: center;
+}
+#stars {
+border: 4px solid orange;
+  height: 250%;
+  width:auto;
+  animation: spin 800s  infinite;
+  /* transform: scale(1.7); */
 }
 
 #rainy-hill {
