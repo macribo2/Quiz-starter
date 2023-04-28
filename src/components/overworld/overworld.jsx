@@ -67,6 +67,7 @@ import avatar7 from '../../images/players/seanchaí0.png';
 import avatar8 from '../../images/players/pooka.png';
 import avatar9 from '../../images/players/poet.png';
 import agnes2 from '../../images/players/bodach0.gif';
+import hint3 from '../../images/gifs/hint3.gif';
 import og from '../../images/a-btn.png'
 import ringItem from '../../images/stone-soup/expired_portal.png';
 import mobile from '../../images/players/rógaire0.png'
@@ -3603,6 +3604,7 @@ $('#walkies-overlay').fadeIn();
         var GEAGA = "G";
         var CONTACT = "C"; //a
         var AGNES= "N";
+        var HINT0 = 99;
         var location0 = 30;
         var location1 = 31;
         var location2 = 32;
@@ -4058,6 +4060,7 @@ alert("Chun troid!" )
                         //   alert('Blocked' + lastPressed + Cookies.get('locationID'));
                         blockPath();
                         break;
+                    case HINT0: helloHint0(); break;
                         case trap: helloTrap();break;
                     case CONTACT: helloFerna(); break;
                     case GEAGA: helloGeaga(); break;
@@ -4262,8 +4265,11 @@ document.addEventListener('click',(e) =>
                         case tullyField7 :cell.src = empty; break;
                         case trap: cell.src = agnes2; break;
                         case AGNES: cell.src = agnes2; break;
+                        case HINT0: cell.src = hint3; break;
                         case GEAGA:
                             cell.src = ""; break;
+                        
+                        
                         case CONTACT:
                             cell.src = empty;
                             break;
@@ -4367,7 +4373,12 @@ document.addEventListener('click',(e) =>
             $('#btn-b').fadeIn();
 
             returnToCounty();
-                }
+        }
+        function helloHint0(){ 
+        
+    
+        }
+        
    function helloTrap(){
     alert('trap!')
        $('.river-container').css('transform', 'rotate(0deg)');
