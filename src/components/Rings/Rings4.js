@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react'
 import lens from '../../images/ciorcal-glass-light.png';
 import lensCap from '../../images/About1/ring2.png';
 import emerald from '../../images/misc_crystal_new.png'
-import betweenFields from '../../images/gifs/betweenFields.gif'
+import betweenFields from '../../images/realta.fdef7a42.gif'
 import tutorial0r from '../../images/tutorials/tutorial0r.png';
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
 import heroShadow from '../../images/stone-soup/hero-shadow-0.png'

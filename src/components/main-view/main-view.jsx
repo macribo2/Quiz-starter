@@ -680,12 +680,12 @@ let thePucaOf = localStorage.getItem('pucaEng')
 				<img rel="preload" src = {gradient}className="gradient" alt="gradiate to black" />
 
 					<p className='dial-text' x={100} y={100} textAnchor="middle" dy="0.3em" fontWeight="bold"> {choiceRing[value * 10]}{ value === 0 || value === 10? null:  <Sparkles className="sparkles"
-      color="yellow"
-      count={28}
-      minSize={5}
-      maxSize={14}
-      overflowPx={35}
-      fadeOutSpeed={10}
+      color="white"
+      count={1}
+      minSize={3}
+      maxSize={8}
+      overflowPx={55}
+      fadeOutSpeed={35}
 					flicker={true}
 					
 				/>}</p>

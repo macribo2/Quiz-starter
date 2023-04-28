@@ -982,10 +982,14 @@ animation: bounce 2s 15 steps(3);
     .dial-text{
       /* top:5%; */
     }
-    
+    .stars-container{
+      transform: scale(1.5);
+    }
     .between-fields{
-        transform:scale(2.8);
+        transform:scale(1.8);
         display:block;
+        height:400px;
+        width:400px;
       
       }
       .countyMap{

@@ -182,11 +182,13 @@ width: 740px;
   display:flex;
   align-items: center;
 }
+
+
 #stars {
-border: 4px solid orange;
-  height: 250%;
-  width:auto;
-  animation: spin 800s  infinite;
+/* border: 4px solid orange; */
+  height: auto;
+  width:120%;
+  animation: spin 500s  infinite;
   /* transform: scale(1.7); */
 }
 
@@ -1240,7 +1242,7 @@ position: fixed;
 
 }
 .sparkles{
-  z-index: 50;
+  z-index: 10;
 }
 #lens {
 position: relative;

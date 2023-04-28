@@ -396,8 +396,8 @@ let ogHero = localStorage.getItem('portrait')
 		document.getElementById('binary-portrait').style.display='none'
 		document.getElementById('tully-challenge-bg').style.display='block'
 		document.getElementById('tully-challenge-bg').classList.add('fade-in-champ')	
-		document.getElementById('n-id').innerHTML='Gheobhaidh tú an fáinne i bpáirc uimhir a cúig';
-		document.getElementById('e-id').innerHTML='You will find the ring in park number five';
+		document.getElementById('n-id').innerHTML='Lorg an fáinne i bpáirc a cúig';
+		document.getElementById('e-id').innerHTML='Seek the ring in park five';
 
 		document.getElementById('bg-container-rings-5').style.opacity='0.5'
 		// document.getElementById('bg-container-rings-5').setAttribute.src = {darkFields}

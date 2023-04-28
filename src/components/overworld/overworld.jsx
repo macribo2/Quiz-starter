@@ -6,6 +6,7 @@ import bit from '../../images/gifs/bit.gif'
 import "react-rain-animation/lib/style.css";
 import Easca from '../easca/easca2'
 import {Rings5} from '../Rings/Rings5'
+import  Rings6  from '../Rings/Rings6'
 import '../Rings/rings1.css';
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
@@ -3655,7 +3656,6 @@ $('#walkies-overlay').fadeIn();
                 }
 
             }
-            // gameObjects[playerRow][playerColumn] = '../../img/characters/feitheamh1.gif'
             // gameObjects[geagaRow][geagaColumn] = '../../img/geaga.png'
             // console.log("geaga xy" + gameObjects[geagaRow][geagaColumn])
         }
@@ -4042,15 +4042,16 @@ alert("Chun troid!" )
                         break;
                     case EXIT:
                         returnToCounty(); break
+                        case tullyField5: helloTullyField5(); break;
                     default: break;
                 }
 
-                //Find out if the ship is touching the monster
+                //Find out if the player is standing on the same square as another object
 
             }
             if (!mapMenuIsVisible) {
                 switch (map[playerRow][playerColumn]) {
-
+                    case tullyField5: helloTullyField5(); break;
                     case BLOCKED:
                         //Undo last key press
                         //   alert('blocked!');
@@ -4249,6 +4250,16 @@ document.addEventListener('click',(e) =>
                             break;
                             case ring: cell.src = ringIcon; break;
                         case og: cell.src = og; break;
+                        // case tullyField5: alert('tá an ceart agat!');
+                            break;
+                        case tullyField0 :cell.src = empty; break;
+                        case tullyField1 :cell.src = empty; break;
+                        case tullyField2 :cell.src = empty; break;
+                        case tullyField3 :cell.src = empty; break;
+                        case tullyField4 :cell.src = empty; break;
+                        case tullyField5 :cell.src = empty; break;
+                        case tullyField6 :cell.src = empty; break;
+                        case tullyField7 :cell.src = empty; break;
                         case trap: cell.src = agnes2; break;
                         case AGNES: cell.src = agnes2; break;
                         case GEAGA:
@@ -4344,7 +4355,21 @@ document.addEventListener('click',(e) =>
         button masher puzzle save vs game-over(score).
     win === ar ais go contae, xp + 100 .
     */
+
+
+        function helloTullyField5() { 
+            alert('✓')
+            $('#tully-challenge-bg').fadeOut();
+            $('#bg-container-rings-5').fadeOut();
+            
+            $('.numbers-e').html('')
+            $('.numbers-i').html('')
+            $('#btn-b').fadeIn();
+
+            returnToCounty();
+                }
    function helloTrap(){
+    alert('trap!')
        $('.river-container').css('transform', 'rotate(0deg)');
        $(".battle0").fadeIn();
    $('.cell').fadeOut()
@@ -4670,6 +4695,7 @@ let placeNamesGaeilge =
             whereAbouts = $('#loc').html()
             overworldPlayerRow = playerRow;
             overworldPlayerColumn = playerColumn;
+           
             if (whereAbouts === "Baile na gCailleach") { 
                 $("#walkies").attr("src",collinstown)
                 gameObjects[playerRow][playerColumn] = 0;
@@ -4682,83 +4708,28 @@ let placeNamesGaeilge =
                 },500)
             }
 
-            if (whereAbouts === "Ráth Ḟearna") { 
+            // if (whereAbouts === "Ráth Ḟearna") { 
 
 
-                map =
-                [
-                    ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                    ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
-                ];
+        
 
 
 
-                $("#walkies").attr("src",ferna)
-                $("#walkies-overlay").attr("src", fernaRiver)
-                gameObjects[playerRow][playerColumn] = 0;
+            //     $("#walkies").attr("src",ferna)
+            //     $("#walkies-overlay").attr("src", fernaRiver)
+            //     gameObjects[playerRow][playerColumn] = 0;
                 
-                playerRow = 7;
-                playerColumn = 5;
-            }
+            //     playerRow = 7;
+            //     playerColumn = 5;
+            // }
 
-
-
-
-
-            if (whereAbouts === "Tulaigh an Eallaigh") { 
-
-// alert('Tully!')
-                map =
-                [
-               ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
-                    ["*", "*3", "*3", "*7", "*7", "*7", "*6", "*6", "*6", "*"],
-                    ["*","*3", 0, 0, 0, 0, 0, 0, "*6", "*"],
-                    ["*", "*3", 0, 0, 0, 0, 0, 0, "*6", "*"],
-                    ["*", "*5", 0, 0, 0, 0, 0, 0, "*2", "*"],
-                    ["*", "*5", 0, 0, 0, 0, 0, 0, "*2", "*"],
-                    ["*", "*5", 0, 0, 0, 0, 0, 0, "*2", "*"],
-                    ["*", "*1", 0, 0, 0, 0, 0, 0, "*4", "*"],
-                    ["*", "*1", "*1", "*0", "*0", "*0", "*4", "*4", "*4", "*"],
-                    ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
-                ];
-
-
-//rings in Tulaigh an eallaigh : counting in binary from 0 to 63.
-                //player has completed ring? player has tullyRing1; update quiz questions with tullyRing1 quiz content.
-                $("#walkies").attr("src",ferna)
-                // $("#walkies-overlay").attr("src", fernaRiver)
-                gameObjects[playerRow][playerColumn] = 0;
-                playerRow = 3;
-                playerColumn = 4;
-                // $('#hero').fadeOut();
-                $('.champion-portrait').fadeIn();
-                $('.ringOfTullyNally').css('display','grid');
-                $('.ringOfTullyNally').fadeIn();
-                $('#loc').fadeOut();
-                $('#locEng').fadeOut();
-                $('.tullynally-ring').fadeIn();
-		document.getElementById('dir-pad').style.opacity='0'
-    
-                $('#btn-b').fadeOut();
-            }
-
-
-
-
+   
 
 
   
   
 
-            else if (whereAbouts === "") { 
+            if (whereAbouts === "") { 
 
 
                 map =
@@ -4785,9 +4756,9 @@ let placeNamesGaeilge =
                 playerRow = 7;
                 playerColumn = 5;
             }
-            else $("#walkies").attr("src",defaultField)
-            $('#walkies').fadeIn();
-            $('#stage').fadeIn()
+            // else $("#walkies").attr("src",defaultField)
+            // $('#walkies').fadeIn();
+            // $('#stage').fadeIn()
 
             if (whereAbouts === secondLocation) {
 
@@ -4796,19 +4767,7 @@ alert("Anseo")
 
              }
 
-             map =
-             [
-                 ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
-                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                 ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
-             ];
+        
 
 
 //setting specific walkabe area for locations with rivers walls etc. there's going to be at least 192 of these, not including dungeons castle interiors. Doing a few here to get started and then ship them out to a JSON like county maps.
@@ -4828,7 +4787,45 @@ alert("Anseo")
                 ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
             ];
 
-        }
+            }
+            
+
+            if (whereAbouts === "Tulaigh an Eallaigh") { 
+
+                // alert('Tully!')
+                                map =
+                                [
+                               ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
+                                    ["*", "*3", "*3", "*7", "*7", "*7", "*6", "*6", "*6", "*"],
+                                    ["*","*3", 0, 0, 0, 0, 0, 0, "*6", "*"],
+                                    ["*", "*5", 0, 0, 0, 0, 0, 0, "*6", "*"],
+                                    ["*", "*5", 0, 0, 0, 0, 0, 0, "*2", "*"],
+                                    ["*", "*5", 0, 0, 0, 0, 0, 0, "*2", "*"],
+                                    ["*", "*1", 0, 0, 0, 0, 0, 0, "*2", "*"],
+                                    ["*", "*1", 0, 0, 0, 0, 0, 0, "*4", "*"],
+                                    ["*", "*1", "*1", "*0", "*0", "*0", "*4", "*4", "*4", "*"],
+                                    ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
+                                ];
+                   refresh();
+                
+                //rings in Tulaigh an eallaigh : counting in binary from 0 to 63.
+                                //player has completed ring? player has tullyRing1; update quiz questions with tullyRing1 quiz content.
+                                $("#walkies").attr("src",ferna)
+                                // $("#walkies-overlay").attr("src", fernaRiver)
+                                gameObjects[playerRow][playerColumn] = 0;
+                                playerRow = 3;
+                                playerColumn = 4;
+                                // $('#hero').fadeOut();
+                                $('.champion-portrait').fadeIn();
+                                $('.ringOfTullyNally').css('display','grid');
+                                $('.ringOfTullyNally').fadeIn();
+                                $('#loc').fadeOut();
+                                $('#locEng').fadeOut();
+                                $('.tullynally-ring').fadeIn();
+                        document.getElementById('dir-pad').style.opacity='0'
+                    
+                                $('#btn-b').fadeOut();
+                            }
          refresh();
          
          
@@ -4905,6 +4902,10 @@ storyTimer()
         }
       
     let isOn = this.props.isOn;
+
+
+
+
         return (
             
             <div>
@@ -5125,8 +5126,9 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
 
                     <div className="ringOfTullyNally" >
                     {/* <img src={ daff} className="daffs" alt="small yellow flowers stir in the breeze" /> */}
-    
-                    <Rings5 heroName={this.props.heroName} heroNameEng={ this.props.heroNameEng} toggleIsOn={this.props.toggleIsOn} isOn={this.props.isOn} proceedThroughQuiz={this.props.proceedThroughQuiz } fadeOutNoOne={ this.fadeOutNoOne } />
+    <Rings5/>
+                    
+                    {/* <Rings5 heroName={this.props.heroName} heroNameEng={ this.props.heroNameEng} toggleIsOn={this.props.toggleIsOn} isOn={this.props.isOn} proceedThroughQuiz={this.props.proceedThroughQuiz } fadeOutNoOne={ this.fadeOutNoOne } /> */}
                     </div>
           <div className="ui-container_b-btn">
                     <BtnB id="b-btn" ></BtnB>

@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "27c397852a59ca0143cd",
-    "url": "/static/css/main.9106d937.chunk.css"
+    "revision": "e4f68e6e99edf881a2fb",
+    "url": "/static/css/main.3b0b565c.chunk.css"
   },
   {
-    "revision": "27c397852a59ca0143cd",
-    "url": "/static/js/main.a08dba0d.chunk.js"
+    "revision": "e4f68e6e99edf881a2fb",
+    "url": "/static/js/main.f0494db3.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "1e557b626a23356a0c72",
+    "revision": "2bbd00bbab7d9875b58c",
     "url": "/static/css/2.bb1d6663.chunk.css"
   },
   {
-    "revision": "1e557b626a23356a0c72",
-    "url": "/static/js/2.75a26914.chunk.js"
+    "revision": "2bbd00bbab7d9875b58c",
+    "url": "/static/js/2.b58076bf.chunk.js"
   },
   {
     "revision": "36e3a42bf28892f043628cf58081368f",
@@ -152,10 +152,6 @@ self.__precacheManifest = [
     "url": "/static/media/Daniel-Maclise.e3559141.png"
   },
   {
-    "revision": "68e27c7af8c5b6afccc7577ac07e0019",
-    "url": "/static/media/defaultField.68e27c7a.png"
-  },
-  {
     "revision": "93615cd75f90b821adc01034aaac07e0",
     "url": "/static/media/inv-bg.93615cd7.png"
   },
@@ -234,6 +230,10 @@ self.__precacheManifest = [
   {
     "revision": "e1016d30185577e93c54a869c05d56ca",
     "url": "/static/media/stone-7.e1016d30.png"
+  },
+  {
+    "revision": "68e27c7af8c5b6afccc7577ac07e0019",
+    "url": "/static/media/defaultField.68e27c7a.png"
   },
   {
     "revision": "44990c0b13de17f54dc57b08dea70181",
@@ -332,6 +332,10 @@ self.__precacheManifest = [
     "url": "/static/media/stones1.22451eb8.png"
   },
   {
+    "revision": "3d93761a50d01b977644d2e0e147a0d8",
+    "url": "/static/media/spr_stars01.3d93761a.png"
+  },
+  {
     "revision": "68f22ac16dd65590b6f6c20d2f67bffe",
     "url": "/static/media/newbg2town.68f22ac1.png"
   },
@@ -344,12 +348,12 @@ self.__precacheManifest = [
     "url": "/static/media/geaga0.1bd9b1cf.png"
   },
   {
-    "revision": "deb64aa64afcf77da2a7d7ff19e14b59",
-    "url": "/static/media/passage.deb64aa6.png"
-  },
-  {
     "revision": "076f3bffba01a16904bf9ba264c71954",
     "url": "/static/media/deetsFrame.076f3bff.png"
+  },
+  {
+    "revision": "deb64aa64afcf77da2a7d7ff19e14b59",
+    "url": "/static/media/passage.deb64aa6.png"
   },
   {
     "revision": "e489ff862837973ba8874fb98b06ef64",
@@ -376,6 +380,10 @@ self.__precacheManifest = [
     "url": "/static/media/sea.ee5004be.png"
   },
   {
+    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
+    "url": "/static/media/mapFrame4.0cdb344e.png"
+  },
+  {
     "revision": "c84c06495852ac730bd653c3aa9bff25",
     "url": "/static/media/wren-code0.c84c0649.png"
   },
@@ -388,12 +396,16 @@ self.__precacheManifest = [
     "url": "/static/media/wren-hood.803e6e68.png"
   },
   {
-    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
-    "url": "/static/media/mapFrame4.0cdb344e.png"
-  },
-  {
     "revision": "d0fa8e83c08e2f7d1ce2e1cbe8f2e8b6",
     "url": "/static/media/fairy-ring-east-vert.d0fa8e83.png"
+  },
+  {
+    "revision": "b67d2f1bd5a2f4dad3e923b36f5038a0",
+    "url": "/static/media/suile0.b67d2f1b.gif"
+  },
+  {
+    "revision": "9bbe18cf6d054928f146dafcf058fcb1",
+    "url": "/static/media/suile3.9bbe18cf.gif"
   },
   {
     "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
@@ -406,14 +418,6 @@ self.__precacheManifest = [
   {
     "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
     "url": "/static/media/fortuna-glass-lit.29cb5d03.png"
-  },
-  {
-    "revision": "b67d2f1bd5a2f4dad3e923b36f5038a0",
-    "url": "/static/media/suile0.b67d2f1b.gif"
-  },
-  {
-    "revision": "9bbe18cf6d054928f146dafcf058fcb1",
-    "url": "/static/media/suile3.9bbe18cf.gif"
   },
   {
     "revision": "cfabbdb47b5376a44c3f8bd99fe2f968",
@@ -496,7 +500,7 @@ self.__precacheManifest = [
     "url": "/static/media/dink.6651d091.wav"
   },
   {
-    "revision": "0436849265cd499b298c8972fcdb9bb1",
+    "revision": "4e0e6d29b4ec775d688e43d381aa706b",
     "url": "/index.html"
   }
 ];
