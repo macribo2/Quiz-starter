@@ -1,23 +1,27 @@
 self.__precacheManifest = [
   {
-    "revision": "e4f68e6e99edf881a2fb",
-    "url": "/static/css/main.3b0b565c.chunk.css"
+    "revision": "a8b11eab3ab49f4f5eca",
+    "url": "/static/css/main.24e15078.chunk.css"
   },
   {
-    "revision": "e4f68e6e99edf881a2fb",
-    "url": "/static/js/main.f0494db3.chunk.js"
+    "revision": "a8b11eab3ab49f4f5eca",
+    "url": "/static/js/main.701150ba.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "2bbd00bbab7d9875b58c",
+    "revision": "b423e4423d6d409e59e4",
     "url": "/static/css/2.bb1d6663.chunk.css"
   },
   {
-    "revision": "2bbd00bbab7d9875b58c",
-    "url": "/static/js/2.b58076bf.chunk.js"
+    "revision": "b423e4423d6d409e59e4",
+    "url": "/static/js/2.b5ee9305.chunk.js"
+  },
+  {
+    "revision": "32847a0cf8dccc0f6821229383bbec0f",
+    "url": "/static/media/stars.32847a0c.gif"
   },
   {
     "revision": "36e3a42bf28892f043628cf58081368f",
@@ -32,8 +36,8 @@ self.__precacheManifest = [
     "url": "/static/media/misc_crystal_new.2782548b.png"
   },
   {
-    "revision": "32847a0cf8dccc0f6821229383bbec0f",
-    "url": "/static/media/stars.32847a0c.gif"
+    "revision": "355ab836386a5c913cf5df328bf26beb",
+    "url": "/static/media/linux2.355ab836.png"
   },
   {
     "revision": "f0b2dbe94f318b5b426d26c1fd4105ff",
@@ -42,6 +46,10 @@ self.__precacheManifest = [
   {
     "revision": "4c998e7444dd7492d1cab2fc0336adce",
     "url": "/static/media/ciorcal-glass.4c998e74.png"
+  },
+  {
+    "revision": "90c4b60aca9878a58070f16934ef005e",
+    "url": "/static/media/fog3.90c4b60a.png"
   },
   {
     "revision": "8f8a8b98c655870f6b0502069cc630bc",
@@ -68,20 +76,20 @@ self.__precacheManifest = [
     "url": "/static/media/big-glass.a82b17d1.png"
   },
   {
-    "revision": "90c4b60aca9878a58070f16934ef005e",
-    "url": "/static/media/fog3.90c4b60a.png"
-  },
-  {
     "revision": "d51d1c382599341f2c1a54f1781b3663",
     "url": "/static/media/ciorcal-glass3.d51d1c38.png"
   },
   {
-    "revision": "355ab836386a5c913cf5df328bf26beb",
-    "url": "/static/media/linux2.355ab836.png"
-  },
-  {
     "revision": "f86401116e22234bed1999521b37a26b",
     "url": "/static/media/rainy-hill1.f8640111.png"
+  },
+  {
+    "revision": "ed03f2203ef1974fab34f354dbfd257a",
+    "url": "/static/media/feicimthu.ed03f220.png"
+  },
+  {
+    "revision": "e3559141ae0477516726c63c361b1987",
+    "url": "/static/media/Daniel-Maclise.e3559141.png"
   },
   {
     "revision": "7b781ef10b1f8aa13d878d1931b273fe",
@@ -100,8 +108,48 @@ self.__precacheManifest = [
     "url": "/static/media/aonchlo.05a45ce9.ttf"
   },
   {
+    "revision": "cd6443eb8510d7bc794179576732ee43",
+    "url": "/static/media/closer.cd6443eb.mp3"
+  },
+  {
+    "revision": "4947e5c5a5c09ce7782171fa1aa27fe9",
+    "url": "/static/media/linux.4947e5c5.png"
+  },
+  {
     "revision": "3428dddb09d227a25c9e44a066087a18",
     "url": "/static/media/stone-0.3428dddb.png"
+  },
+  {
+    "revision": "86266b1e439f7f33138ebca551e3a107",
+    "url": "/static/media/unix.86266b1e.png"
+  },
+  {
+    "revision": "c1104c07e430bf86827b94eb5502e4c9",
+    "url": "/static/media/distros.c1104c07.gif"
+  },
+  {
+    "revision": "3e72d5903d033e18c9a00cae250bf644",
+    "url": "/static/media/king.3e72d590.gif"
+  },
+  {
+    "revision": "5e07dbd742bd225ae50d08803d5c4d19",
+    "url": "/static/media/ard.5e07dbd7.png"
+  },
+  {
+    "revision": "0c14f318e016a8dd30ed1e4d9ac11848",
+    "url": "/static/media/spencer.0c14f318.png"
+  },
+  {
+    "revision": "6bcf0737540d4e3c91c8a0e6ffbdd7c4",
+    "url": "/static/media/chief.6bcf0737.png"
+  },
+  {
+    "revision": "df14a2a4021551f5c69734c2edf8dec5",
+    "url": "/static/media/1798.df14a2a4.png"
+  },
+  {
+    "revision": "34983aa97562a23dc15382b4bf60b1ed",
+    "url": "/static/media/gpo.34983aa9.png"
   },
   {
     "revision": "80cd43185ecb428eed1387c1486c7502",
@@ -136,20 +184,12 @@ self.__precacheManifest = [
     "url": "/static/media/spéirbhean0.93737566.gif"
   },
   {
-    "revision": "ed03f2203ef1974fab34f354dbfd257a",
-    "url": "/static/media/feicimthu.ed03f220.png"
-  },
-  {
     "revision": "837ece981e981876d923234b852b5fc5",
     "url": "/static/media/blackripple.837ece98.gif"
   },
   {
     "revision": "c860d557f7a5adc8e547fae0867f88b6",
     "url": "/static/media/color-square.c860d557.gif"
-  },
-  {
-    "revision": "e3559141ae0477516726c63c361b1987",
-    "url": "/static/media/Daniel-Maclise.e3559141.png"
   },
   {
     "revision": "93615cd75f90b821adc01034aaac07e0",
@@ -168,24 +208,32 @@ self.__precacheManifest = [
     "url": "/static/media/urchlo.e119faec.ttf"
   },
   {
+    "revision": "8d8dbdd71fd8f9a42f0f5dd4af8f7db6",
+    "url": "/static/media/INFO56_0.8d8dbdd7.ttf"
+  },
+  {
+    "revision": "e7ccc23511641f268a97641c15f738ef",
+    "url": "/static/media/apple-microsoft.e7ccc235.png"
+  },
+  {
+    "revision": "ea0f6043a8cb29bf4bc295101dc98044",
+    "url": "/static/media/ubuntu.ea0f6043.png"
+  },
+  {
+    "revision": "376a2f2d8cb87c873dc96ac9b9651486",
+    "url": "/static/media/banba_poster-0.376a2f2d.png"
+  },
+  {
+    "revision": "04995f21b0f8c0794957df9874f94f09",
+    "url": "/static/media/pale.04995f21.png"
+  },
+  {
     "revision": "d836b973cd74464ed7e0237060cf5bb5",
     "url": "/static/media/river0.d836b973.mp4"
   },
   {
-    "revision": "cd6443eb8510d7bc794179576732ee43",
-    "url": "/static/media/closer.cd6443eb.mp3"
-  },
-  {
-    "revision": "4947e5c5a5c09ce7782171fa1aa27fe9",
-    "url": "/static/media/linux.4947e5c5.png"
-  },
-  {
     "revision": "e4c34b7d3fc84b79ea9a6682082e3bed",
     "url": "/static/media/ring2.e4c34b7d.png"
-  },
-  {
-    "revision": "c875ea8032974ac6ea79a40290b34317",
-    "url": "/static/media/betweenFields.c875ea80.gif"
   },
   {
     "revision": "462f5dbe091a0d69b1bd20fcc509fbbd",
@@ -252,6 +300,10 @@ self.__precacheManifest = [
     "url": "/static/media/yin-yan.304d27a0.png"
   },
   {
+    "revision": "90beabbfdbf81dcbf61af6a9fc5d0891",
+    "url": "/static/media/hint3.90beabbf.gif"
+  },
+  {
     "revision": "5ba3bc4677b8d4a26d3304037490cdfb",
     "url": "/static/media/ding3.5ba3bc46.wav"
   },
@@ -282,38 +334,6 @@ self.__precacheManifest = [
   {
     "revision": "14c7dd10c9205b5ee669ee38860c215f",
     "url": "/static/media/ceist3.14c7dd10.png"
-  },
-  {
-    "revision": "86266b1e439f7f33138ebca551e3a107",
-    "url": "/static/media/unix.86266b1e.png"
-  },
-  {
-    "revision": "c1104c07e430bf86827b94eb5502e4c9",
-    "url": "/static/media/distros.c1104c07.gif"
-  },
-  {
-    "revision": "3e72d5903d033e18c9a00cae250bf644",
-    "url": "/static/media/king.3e72d590.gif"
-  },
-  {
-    "revision": "5e07dbd742bd225ae50d08803d5c4d19",
-    "url": "/static/media/ard.5e07dbd7.png"
-  },
-  {
-    "revision": "0c14f318e016a8dd30ed1e4d9ac11848",
-    "url": "/static/media/spencer.0c14f318.png"
-  },
-  {
-    "revision": "6bcf0737540d4e3c91c8a0e6ffbdd7c4",
-    "url": "/static/media/chief.6bcf0737.png"
-  },
-  {
-    "revision": "df14a2a4021551f5c69734c2edf8dec5",
-    "url": "/static/media/1798.df14a2a4.png"
-  },
-  {
-    "revision": "34983aa97562a23dc15382b4bf60b1ed",
-    "url": "/static/media/gpo.34983aa9.png"
   },
   {
     "revision": "5a8e04ef51c46f8d4376dd2e788d9b24",
@@ -348,12 +368,12 @@ self.__precacheManifest = [
     "url": "/static/media/geaga0.1bd9b1cf.png"
   },
   {
-    "revision": "076f3bffba01a16904bf9ba264c71954",
-    "url": "/static/media/deetsFrame.076f3bff.png"
-  },
-  {
     "revision": "deb64aa64afcf77da2a7d7ff19e14b59",
     "url": "/static/media/passage.deb64aa6.png"
+  },
+  {
+    "revision": "076f3bffba01a16904bf9ba264c71954",
+    "url": "/static/media/deetsFrame.076f3bff.png"
   },
   {
     "revision": "e489ff862837973ba8874fb98b06ef64",
@@ -362,10 +382,6 @@ self.__precacheManifest = [
   {
     "revision": "522db4f243fa6c459bf82c41a4bdf00e",
     "url": "/static/media/daff.522db4f2.gif"
-  },
-  {
-    "revision": "8d8dbdd71fd8f9a42f0f5dd4af8f7db6",
-    "url": "/static/media/INFO56_0.8d8dbdd7.ttf"
   },
   {
     "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
@@ -392,32 +408,32 @@ self.__precacheManifest = [
     "url": "/static/media/wren2b.4159e8fd.png"
   },
   {
-    "revision": "803e6e686778fd42d5b5ccb0059ef189",
-    "url": "/static/media/wren-hood.803e6e68.png"
-  },
-  {
-    "revision": "d0fa8e83c08e2f7d1ce2e1cbe8f2e8b6",
-    "url": "/static/media/fairy-ring-east-vert.d0fa8e83.png"
-  },
-  {
-    "revision": "b67d2f1bd5a2f4dad3e923b36f5038a0",
-    "url": "/static/media/suile0.b67d2f1b.gif"
+    "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
+    "url": "/static/media/mapFrame2.915b9892.png"
   },
   {
     "revision": "9bbe18cf6d054928f146dafcf058fcb1",
     "url": "/static/media/suile3.9bbe18cf.gif"
   },
   {
-    "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
-    "url": "/static/media/mapFrame2.915b9892.png"
+    "revision": "d0fa8e83c08e2f7d1ce2e1cbe8f2e8b6",
+    "url": "/static/media/fairy-ring-east-vert.d0fa8e83.png"
   },
   {
     "revision": "fefaccef8a9d6893e3e1ed77e3170cff",
     "url": "/static/media/field.fefaccef.png"
   },
   {
+    "revision": "b67d2f1bd5a2f4dad3e923b36f5038a0",
+    "url": "/static/media/suile0.b67d2f1b.gif"
+  },
+  {
     "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
     "url": "/static/media/fortuna-glass-lit.29cb5d03.png"
+  },
+  {
+    "revision": "803e6e686778fd42d5b5ccb0059ef189",
+    "url": "/static/media/wren-hood.803e6e68.png"
   },
   {
     "revision": "cfabbdb47b5376a44c3f8bd99fe2f968",
@@ -426,14 +442,6 @@ self.__precacheManifest = [
   {
     "revision": "89b94d7b5fbe24bc213b0097236b0266",
     "url": "/static/media/Gigakoops - Level 2 - High Clouds.89b94d7b.mp3"
-  },
-  {
-    "revision": "e1601369a5928e8db190be7aaf8f0146",
-    "url": "/static/media/gamepad.e1601369.png"
-  },
-  {
-    "revision": "804fe491be313efc355e82716803ea1c",
-    "url": "/static/media/smartphone.804fe491.png"
   },
   {
     "revision": "5888bc5fc049dc72cc7f31fe7c32d8ea",
@@ -460,22 +468,6 @@ self.__precacheManifest = [
     "url": "/static/media/ciorcal-field.0695af79.png"
   },
   {
-    "revision": "e7ccc23511641f268a97641c15f738ef",
-    "url": "/static/media/apple-microsoft.e7ccc235.png"
-  },
-  {
-    "revision": "ea0f6043a8cb29bf4bc295101dc98044",
-    "url": "/static/media/ubuntu.ea0f6043.png"
-  },
-  {
-    "revision": "376a2f2d8cb87c873dc96ac9b9651486",
-    "url": "/static/media/banba_poster-0.376a2f2d.png"
-  },
-  {
-    "revision": "04995f21b0f8c0794957df9874f94f09",
-    "url": "/static/media/pale.04995f21.png"
-  },
-  {
     "revision": "a0f56fc4653b94ca7184673fb926b731",
     "url": "/static/media/sparkle-b.a0f56fc4.wav"
   },
@@ -500,7 +492,7 @@ self.__precacheManifest = [
     "url": "/static/media/dink.6651d091.wav"
   },
   {
-    "revision": "4e0e6d29b4ec775d688e43d381aa706b",
+    "revision": "e7b6a93fa844707bae4b8dcb87f9b4d7",
     "url": "/index.html"
   }
 ];

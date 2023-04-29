@@ -177,6 +177,7 @@ let mapChanges = 0;
 let overworldPortrait;
 let whereAmIHolder = 'null';
 let avatar = "";
+let showHint3 = false;
 
 let secondLocation = "Dún Laoghaire";
 function setGeagaIcon(icon) { 
@@ -534,10 +535,11 @@ $("#locEng").fadeOut()
             
             
             $('.location-title-card-text-container').fadeOut(3000,'linear');
-                
                 $('.emblem-container').fadeOut(4000,'linear');
             $('#hints-geaga').fadeOut();
-
+                if (showHint3 === true) { 
+                    $('.touch-hint-3-container').css('display', 'flex')
+                }
             }, 2000)
            
 
@@ -3393,7 +3395,8 @@ alert(localStorage.getItem("whereAmI"))
                             case "tyrone": narrativeCode = 28; break;
                             case "waterford": narrativeCode = 29; break;
                             case "westmeath": 
-                            
+                            //when to show hint3 - first time entering wmeath?
+                                showHint3 = true;
                             $('.eng-question-text').html('');
                             $('.eng-question-text').css('border','6px solid green');
                                 narrativeCode = 30; break;
@@ -4060,7 +4063,7 @@ alert("Chun troid!" )
                         //   alert('Blocked' + lastPressed + Cookies.get('locationID'));
                         blockPath();
                         break;
-                    case HINT0: helloHint0(); break;
+                    // case HINT0: helloHint0(); break;
                         case trap: helloTrap();break;
                     case CONTACT: helloFerna(); break;
                     case GEAGA: helloGeaga(); break;
@@ -4102,12 +4105,13 @@ alert("Chun troid!" )
         //         gameObjects[playerRow][playerColumn] = PLAYER;
         //     }
         // };
-
+        let elementClass;
         // Target all clicks on any element
 document.addEventListener('click',(e) =>
 {
   // Get element class(es)
-  let elementClass = e.target.className;
+    elementClass = e.target.className;
+    
   // If element has class(es)
   if (elementClass !== '') {
     console.log(elementClass);
@@ -4120,6 +4124,8 @@ document.addEventListener('click',(e) =>
 
     
     if (elementClass.includes('cell')) {
+    
+    
         for (let i = 0; i < 10; i++) { 
 
             for (let j = 0; j < 10; j++) { 
@@ -4132,11 +4138,11 @@ document.addEventListener('click',(e) =>
             animatePlayer();
             keydownHandler()
         }
-
-
-    
+  
                 
             }
+
+            
         }
 
      }
@@ -4374,10 +4380,7 @@ document.addEventListener('click',(e) =>
 
             returnToCounty();
         }
-        function helloHint0(){ 
-        
-    
-        }
+      
         
    function helloTrap(){
     alert('trap!')
@@ -4872,7 +4875,11 @@ alert("Anseo")
     conceptHandler() {
         window.location.replace('http://167.172.184.73:3000/history')
     }
-
+    helloHint0() {
+        // alert()        
+        $('.touch-hint-3-container').css('display', 'none')
+        showHint3 = false
+    }
     render() {
 
         //just in case the player hasn't already dismissed the flashing purple light on btn #north.
@@ -5188,6 +5195,11 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                 </div>            
                 </div>
 
+               <div id ="touch-hint-3-container" className="touch-hint-3-container">
+<div className='touch-hint-3 circle' onTouchEnd={    this.helloHint0}></div>
+                    
+               </div>
+                
                            </div> 
 
             

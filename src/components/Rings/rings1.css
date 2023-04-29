@@ -577,6 +577,19 @@ transform:scale(0.5)
   width:75%;
   animation:fade-in 3s forwards;
 }
+.touch-hint-3-container{
+  position: fixed;
+  z-index: 9000;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  transform:translate(-1%,32%);
+  /* pointer-events:none; */
+}
 #hi-vis{
   opacity:1
 }
@@ -685,7 +698,6 @@ z-index: 33;
   width: 100px;
   border-radius: 50%;
   /* background-color: #ff4343; */
-  
   position: fixed;
   top: 50%;
   left: 50%;
