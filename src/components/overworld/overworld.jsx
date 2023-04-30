@@ -491,6 +491,9 @@ $('#hero').attr('src', setPlayerIcon());
         
         //mapChanges is a little hack to make the daffodills disappear when player leaves location geaga:
         function setMap() {
+            
+            $(".tullynally-ring").fadeOut()
+            
             $("#tully-challenge-bg").fadeOut()
             // $("#tullynally-lens").fadeOut()
             
@@ -538,7 +541,12 @@ $("#locEng").fadeOut()
                 $('.emblem-container').fadeOut(4000,'linear');
             $('#hints-geaga').fadeOut();
                 if (showHint3 === true) { 
-                    $('.touch-hint-3-container').css('display', 'flex')
+                    setTimeout(function () { 
+
+                        $('.touch-hint-3-container').css('display', 'flex')
+                        $('.touch-hint-3-container').fadeIn()
+
+                    },3700)
                 }
             }, 2000)
            
@@ -3397,6 +3405,8 @@ alert(localStorage.getItem("whereAmI"))
                             case "westmeath": 
                             //when to show hint3 - first time entering wmeath?
                                 showHint3 = true;
+             $('#north').removeClass('circle')
+
                             $('.eng-question-text').html('');
                             $('.eng-question-text').css('border','6px solid green');
                                 narrativeCode = 30; break;
@@ -4371,13 +4381,7 @@ document.addEventListener('click',(e) =>
 
         function helloTullyField5() { 
             alert('✓')
-            $('#tully-challenge-bg').fadeOut();
-            $('#bg-container-rings-5').fadeOut();
-            
-            $('.numbers-e').html('')
-            $('.numbers-i').html('')
-            $('#btn-b').fadeIn();
-
+        
             returnToCounty();
         }
       
@@ -4451,7 +4455,15 @@ localStorage.setItem('visitedFerna','true')
             $('.countyMap').fadeIn();
         }
         function returnToCounty() {
-
+            $('#tully-challenge-bg').fadeOut();
+            $('#bg-container-rings-5').fadeOut();
+            
+            $('.numbers-e').html('')
+            $('.numbers-i').html('')
+            $('#btn-b').fadeIn();
+            $('.challenge-container').fadeOut();
+            
+$('#loc').fadeIn()
             gameObjects[playerRow][playerColumn] = 0;
                          
             $('#walkies').fadeOut();
@@ -4833,10 +4845,13 @@ alert("Anseo")
                                 $('.champion-portrait').fadeIn();
                                 $('.ringOfTullyNally').css('display','grid');
                                 $('.ringOfTullyNally').fadeIn();
-                                $('#loc').fadeOut();
+                $('#loc').fadeOut();
+            $('#bg-container-rings-5').fadeIn();
+                
                                 $('#locEng').fadeOut();
                                 $('.tullynally-ring').fadeIn();
                         document.getElementById('dir-pad').style.opacity='0'
+            $('.challenge-container').fadeIn();
                     
                                 $('#btn-b').fadeOut();
                             }
@@ -4878,7 +4893,7 @@ alert("Anseo")
     helloHint0() {
         // alert()        
         $('.touch-hint-3-container').css('display', 'none')
-        showHint3 = false
+        showHint3 = false;
     }
     render() {
 

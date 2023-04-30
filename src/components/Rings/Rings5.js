@@ -396,8 +396,8 @@ let ogHero = localStorage.getItem('portrait')
 		document.getElementById('binary-portrait').style.display='none'
 		document.getElementById('tully-challenge-bg').style.display='block'
 		document.getElementById('tully-challenge-bg').classList.add('fade-in-champ')	
-		document.getElementById('n-id').innerHTML='Lorg an fáinne i bpáirc a cúig';
-		document.getElementById('e-id').innerHTML='Seek the ring in park five';
+		document.getElementById('n-id').innerHTML='Curdaigh gort a cúig';
+		document.getElementById('e-id').innerHTML='Search field five';
 
 		document.getElementById('bg-container-rings-5').style.opacity='0.5'
 		// document.getElementById('bg-container-rings-5').setAttribute.src = {darkFields}
@@ -674,7 +674,6 @@ tullyP.style.transform = 'rotate(180deg)'
 
 //thumbStart is a hack to prevent side effect of making question text fade out when player is at location 'geaga'.
 function thumbStart() { 
-	// alert();
 	document.querySelector(".champion-portrait").classList.add('fade-in-champ');
 	document.querySelector(".numbers-e").classList.add('fade-in-champ'); document.querySelector(".numbers-i").classList.add('fade-in-champ');
 	document.querySelector(".question-text").classList.add('fade-out-champ');
