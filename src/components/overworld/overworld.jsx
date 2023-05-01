@@ -9,6 +9,7 @@ import {Rings5} from '../Rings/Rings5'
 import  Rings6  from '../Rings/Rings6'
 import '../Rings/rings1.css';
 import emerald from '../../images/misc_crystal_new.png'
+import { Score } from '../score/score'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
 import lens from '../../images/ciorcal-glass4.png';
 import stats from '../../images/inv/char.png';
@@ -4381,8 +4382,9 @@ document.addEventListener('click',(e) =>
 
         function helloTullyField5() { 
             alert('✓')
-        
-            returnToCounty();
+            
+            // returnToCounty();
+     $('.score-container').fadeIn()
         }
       
         
@@ -5214,7 +5216,7 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
 <div className='touch-hint-3 circle' onTouchEnd={    this.helloHint0}></div>
                     
                </div>
-                
+               <Score  />                
                            </div> 
 
             

@@ -641,6 +641,26 @@ const [rng, setRng] = useState(Math.floor(Math.random()*3))
 		'Ealadha',
 		'Bébhinn',
 		'Sárán',
+		`Saoirse`,
+		`Ciara`,
+		`Laoise `,
+		`Clíona`,
+		`Úna`,
+		`Eithne`,
+		`Pádraig`,
+		`Líam`,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
+		``,
 	
 	
 	]
@@ -665,7 +685,7 @@ const [rng, setRng] = useState(Math.floor(Math.random()*3))
 		'bare',
 		'God of Fire',
 		'red-haired',
-		'inspiring terror',
+		'of the Sun',
 		'hero, champion, warrior',
 		'wantonness',
 		'fiery red',
@@ -728,6 +748,14 @@ const [rng, setRng] = useState(Math.floor(Math.random()*3))
 		'art , craft',
 		'fair lady',
 		'chief, noble, best',
+		'freedom',
+		'dark',
+		'radience, light',
+		'goddess of love and beauty, patron of County Cork.Also, queen of the banshees.',
+		'There were at least nine Saint Eithnes',
+'from the Latin Patricius, meaning "of the patrician class',
+'strong-willed warrior '
+
 	]
 }
 
@@ -746,7 +774,7 @@ if (rng === 1) {
 		'son of Ness (goddess name)',
 		'born of song',
 		'blonde lady',
-		'act of eating',
+		'thirsts for knowledge and goodness',
 		'having land, wide-ruling',
 		'sun-goddess',
 		'rushing, impetuous',
@@ -1120,7 +1148,7 @@ if (rng === 2) {
 		'monk',
 		'golden princess',
 		'Life',
-		'chatterer or daughter',
+		'chatterer or daughter. In legend Deirdre was the daughter of the royal storyteller Fedlimid mac Daill, at the court of the king of Ulster',
 		'fair-haired, white',
 		'speaker',
 		'sorrowful',

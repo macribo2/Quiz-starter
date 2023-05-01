@@ -60,10 +60,10 @@ import aa56 from '../../images/champions/56.png'
 import aa57 from '../../images/champions/57.png'
 import aa58 from '../../images/champions/58.png'
 import aa59 from '../../images/champions/59.png'
+import { Rings4 } from '../Rings/Rings4'
 import './no-one.css';
 import skybg from '../../images/blinding-light-county.jpg'
 import fields2 from '../../images/empty.png'
-import { Rings4 } from '../Rings/Rings4'
 import { Rings5 } from '../Rings/Rings5';
 export default  class NumberOne extends React.Component  {
 	constructor() {
