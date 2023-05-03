@@ -9,7 +9,7 @@ import {Rings5} from '../Rings/Rings5'
 import  Rings6  from '../Rings/Rings6'
 import '../Rings/rings1.css';
 import emerald from '../../images/misc_crystal_new.png'
-import  Score  from '../score/score'
+import { Score }  from '../score/score'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
 import lens from '../../images/ciorcal-glass4.png';
 import stats from '../../images/inv/char.png';
@@ -4458,11 +4458,9 @@ localStorage.setItem('visitedFerna','true')
             $('.countyMap').fadeIn();
         }
         function returnToCounty() {
-            alert();
             $('#tully-challenge-bg').fadeOut();
             $('#bg-container-rings-5').fadeOut();
             $('.score-container').fadeOut();
-            
             $('.numbers-e').html('')
             $('.numbers-i').html('')
             $('#btn-b').fadeIn();
@@ -4942,7 +4940,7 @@ storyTimer()
     let isOn = this.props.isOn;
 
 
-
+  
 
         return (
             

@@ -744,7 +744,7 @@ function thumbStart() {
 			 
 			 <button  id="mash-5"className={ binaryID >=91? "button-mash-ring-5 circle":"hidden" } onClick={tullyChallenge} ></button>
 			</div>
-			<div className="challenge-container">
+			<div id="ring-5-challenge-container"className="challenge-container">
 				<img id="tully-challenge-bg" src={tullyChallengeBG} alt="" />
 			</div>
 		</>
