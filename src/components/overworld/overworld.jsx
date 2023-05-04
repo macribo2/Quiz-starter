@@ -4516,8 +4516,9 @@ $('#loc').fadeIn()
 
         }
 
-
-
+        $('.round-btn').on( "click", function() {
+            // alert( "Handler for `click` called." );
+        returnToCounty()  } );
 let placeNamesGaeilge = 
 [     "Cluain Ṁic Nóis",
       "Éadan Doire",

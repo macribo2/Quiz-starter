@@ -23,7 +23,7 @@ export function Score(props)  {
                      
 		// document.getElementsById('walkies').css.display="none"
      
-		alert('GRMA for playing! Back for more next week @ r/banba lang lebe die Revolution')
+		// alert('GRMA for playing! Back for more next week @ r/banba lang lebe die Revolution')
         // localStorage.setItem("whereAmI","Dublin")
 
     }
@@ -43,7 +43,7 @@ return (
 
 			</div>
 
-			<div className="score-text-container" onClick={returnToCounty} >
+			<div className="score-text-container"  >
 			<h1 className="storyteller">
 				Tá fáinne búite ag {localStorage.getItem('hname')+'.'}
 			</h1>
