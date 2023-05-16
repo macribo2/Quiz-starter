@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "88b57b5c4949e7f79047",
-    "url": "/static/css/main.bbb4ad6b.chunk.css"
+    "revision": "06dc5b8f4567df4c4a1a",
+    "url": "/static/css/main.fbfab529.chunk.css"
   },
   {
-    "revision": "88b57b5c4949e7f79047",
-    "url": "/static/js/main.273389dc.chunk.js"
+    "revision": "06dc5b8f4567df4c4a1a",
+    "url": "/static/js/main.c35df5c7.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "cf30247a9b0fbedb03ca",
+    "revision": "fa18e7b3a2c099e13e55",
     "url": "/static/css/2.bb1d6663.chunk.css"
   },
   {
-    "revision": "cf30247a9b0fbedb03ca",
-    "url": "/static/js/2.6e25bce3.chunk.js"
+    "revision": "fa18e7b3a2c099e13e55",
+    "url": "/static/js/2.6d3c950c.chunk.js"
   },
   {
     "revision": "32847a0cf8dccc0f6821229383bbec0f",
@@ -28,12 +28,16 @@ self.__precacheManifest = [
     "url": "/static/media/misc_crystal_old.36e3a42b.png"
   },
   {
-    "revision": "0f781983a29762c7ba7f9f9765b3daa8",
-    "url": "/static/media/ding0.0f781983.wav"
+    "revision": "42f19d6adadcaf443c94690ab0b43503",
+    "url": "/static/media/draoi0.42f19d6a.gif"
   },
   {
     "revision": "2782548bec1f334955555242df1cab01",
     "url": "/static/media/misc_crystal_new.2782548b.png"
+  },
+  {
+    "revision": "0f781983a29762c7ba7f9f9765b3daa8",
+    "url": "/static/media/ding0.0f781983.wav"
   },
   {
     "revision": "355ab836386a5c913cf5df328bf26beb",
@@ -48,6 +52,10 @@ self.__precacheManifest = [
     "url": "/static/media/ciorcal-glass.4c998e74.png"
   },
   {
+    "revision": "6421c055a35ef3a64aea4eef73558869",
+    "url": "/static/media/tutorial0.6421c055.png"
+  },
+  {
     "revision": "90c4b60aca9878a58070f16934ef005e",
     "url": "/static/media/fog3.90c4b60a.png"
   },
@@ -60,16 +68,20 @@ self.__precacheManifest = [
     "url": "/static/media/ceist2.7badc33e.png"
   },
   {
+    "revision": "3428dddb09d227a25c9e44a066087a18",
+    "url": "/static/media/stone-0.3428dddb.png"
+  },
+  {
+    "revision": "ed03f2203ef1974fab34f354dbfd257a",
+    "url": "/static/media/feicimthu.ed03f220.png"
+  },
+  {
     "revision": "1e84bd359e1a150f5bffc41cb114e936",
     "url": "/static/media/douglas.1e84bd35.png"
   },
   {
     "revision": "b8c3b5948f8ec53bba8367d1ca0f13fc",
     "url": "/static/media/diamhraí0.b8c3b594.gif"
-  },
-  {
-    "revision": "6421c055a35ef3a64aea4eef73558869",
-    "url": "/static/media/tutorial0.6421c055.png"
   },
   {
     "revision": "80cd43185ecb428eed1387c1486c7502",
@@ -86,10 +98,6 @@ self.__precacheManifest = [
   {
     "revision": "f86401116e22234bed1999521b37a26b",
     "url": "/static/media/rainy-hill1.f8640111.png"
-  },
-  {
-    "revision": "ed03f2203ef1974fab34f354dbfd257a",
-    "url": "/static/media/feicimthu.ed03f220.png"
   },
   {
     "revision": "e3559141ae0477516726c63c361b1987",
@@ -120,8 +128,16 @@ self.__precacheManifest = [
     "url": "/static/media/linux.4947e5c5.png"
   },
   {
-    "revision": "3428dddb09d227a25c9e44a066087a18",
-    "url": "/static/media/stone-0.3428dddb.png"
+    "revision": "c5bad409fe9c3b574a1d50689a0c7fec",
+    "url": "/static/media/ciorcal-glass-light.c5bad409.png"
+  },
+  {
+    "revision": "ad5ed074916ebd5c0aa5425d5eb895ad",
+    "url": "/static/media/ciorcal-glass6.ad5ed074.png"
+  },
+  {
+    "revision": "f9c00333ba0152d14c9cbaffb9815086",
+    "url": "/static/media/shelter.f9c00333.png"
   },
   {
     "revision": "86266b1e439f7f33138ebca551e3a107",
@@ -172,10 +188,6 @@ self.__precacheManifest = [
     "url": "/static/media/computing.53840b4e.png"
   },
   {
-    "revision": "c5bad409fe9c3b574a1d50689a0c7fec",
-    "url": "/static/media/ciorcal-glass-light.c5bad409.png"
-  },
-  {
     "revision": "937375660c0c8e6fd94c83f8e6130b19",
     "url": "/static/media/spéirbhean0.93737566.gif"
   },
@@ -190,6 +202,10 @@ self.__precacheManifest = [
   {
     "revision": "c860d557f7a5adc8e547fae0867f88b6",
     "url": "/static/media/color-square.c860d557.gif"
+  },
+  {
+    "revision": "b277348d8816b6093e164d652ec71e97",
+    "url": "/static/media/fearnasringfort.b277348d.png"
   },
   {
     "revision": "93615cd75f90b821adc01034aaac07e0",
@@ -248,10 +264,6 @@ self.__precacheManifest = [
     "url": "/static/media/01.34422b8a.png"
   },
   {
-    "revision": "ad5ed074916ebd5c0aa5425d5eb895ad",
-    "url": "/static/media/ciorcal-glass6.ad5ed074.png"
-  },
-  {
     "revision": "e0c8214b569dd485e3ee0cdb1af9d71c",
     "url": "/static/media/folamh.e0c8214b.png"
   },
@@ -298,10 +310,6 @@ self.__precacheManifest = [
   {
     "revision": "f36c14540a6c425991adcf3604df038e",
     "url": "/static/media/field2.f36c1454.png"
-  },
-  {
-    "revision": "1df9bfe53527a34df0490d3889603595",
-    "url": "/static/media/ultima-tone-long.1df9bfe5.wav"
   },
   {
     "revision": "304d27a0d452d17c42767c1b89724c4c",
@@ -372,16 +380,16 @@ self.__precacheManifest = [
     "url": "/static/media/Anaphora-Light-trial.b44fc35e.ttf"
   },
   {
+    "revision": "deb64aa64afcf77da2a7d7ff19e14b59",
+    "url": "/static/media/passage.deb64aa6.png"
+  },
+  {
     "revision": "1bd9b1cf1f14870b3b786486b40ba0c1",
     "url": "/static/media/geaga0.1bd9b1cf.png"
   },
   {
     "revision": "076f3bffba01a16904bf9ba264c71954",
     "url": "/static/media/deetsFrame.076f3bff.png"
-  },
-  {
-    "revision": "deb64aa64afcf77da2a7d7ff19e14b59",
-    "url": "/static/media/passage.deb64aa6.png"
   },
   {
     "revision": "e489ff862837973ba8874fb98b06ef64",
@@ -392,28 +400,24 @@ self.__precacheManifest = [
     "url": "/static/media/daff.522db4f2.gif"
   },
   {
-    "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
-    "url": "/static/media/fortuna-glass.4c08d21e.png"
-  },
-  {
     "revision": "f00de7d9918169a9feeb00e77a9a2f56",
     "url": "/static/media/ciorcal-glass-bg.f00de7d9.png"
   },
   {
-    "revision": "ee5004be8978604da5e223282c5bbe51",
-    "url": "/static/media/sea.ee5004be.png"
+    "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
+    "url": "/static/media/fortuna-glass.4c08d21e.png"
   },
   {
     "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
     "url": "/static/media/mapFrame4.0cdb344e.png"
   },
   {
-    "revision": "c84c06495852ac730bd653c3aa9bff25",
-    "url": "/static/media/wren-code0.c84c0649.png"
-  },
-  {
     "revision": "4159e8fdaa220a7666d4e619a3429f80",
     "url": "/static/media/wren2b.4159e8fd.png"
+  },
+  {
+    "revision": "c84c06495852ac730bd653c3aa9bff25",
+    "url": "/static/media/wren-code0.c84c0649.png"
   },
   {
     "revision": "803e6e686778fd42d5b5ccb0059ef189",
@@ -444,12 +448,20 @@ self.__precacheManifest = [
     "url": "/static/media/fortuna-glass-lit.29cb5d03.png"
   },
   {
+    "revision": "ee5004be8978604da5e223282c5bbe51",
+    "url": "/static/media/sea.ee5004be.png"
+  },
+  {
     "revision": "cfabbdb47b5376a44c3f8bd99fe2f968",
     "url": "/static/media/rocks.cfabbdb4.png"
   },
   {
     "revision": "89b94d7b5fbe24bc213b0097236b0266",
     "url": "/static/media/Gigakoops - Level 2 - High Clouds.89b94d7b.mp3"
+  },
+  {
+    "revision": "1df9bfe53527a34df0490d3889603595",
+    "url": "/static/media/ultima-tone-long.1df9bfe5.wav"
   },
   {
     "revision": "5888bc5fc049dc72cc7f31fe7c32d8ea",
@@ -500,7 +512,7 @@ self.__precacheManifest = [
     "url": "/static/media/dink.6651d091.wav"
   },
   {
-    "revision": "31e1e7576367f10740f4cfd7b7922c6d",
+    "revision": "b77bf46d92df8e5a0dbe085b78f7db87",
     "url": "/index.html"
   }
 ];

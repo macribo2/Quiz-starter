@@ -13,25 +13,62 @@ import 'react-simple-keyboard/build/css/index.css';
 
 
 export default class Easca extends React.Component {
+  onChange = input => {
+    this.setState({
+      input: input
+    });
+    console.log("Input changed", input);
+  };
 
-    onChange = (input) => {
-        console.log("Input changed", input);
-      }
-    
       onKeyPress = (button) => {
         console.log("Button pressed", button);
+
+        if (button === "{shift}") this.handleShift();
+       else if (button === "{alt}") this.handleAlt();
+        else { this.restoreDefaultKeyboard()}
+
       }
     constructor() {
         super();
         this.state = {
-    layoutName:'easca'
+          layoutName: 'easca',
+          input: "",
+          display: {
+            '{space}': ' ',
+            '{backspace}': '⬅',
+            '{enter}': '↵',
+            '{alt}': 'ᵹ',
+            '{shift}':'⇧'
+          }
+          
         }
     }
     
     // componentDidMount() {
      
     // }
+  
+    handleShift = () => {
+      let layoutName = this.state.layoutName;
+  
+      this.setState({
+        layoutName: layoutName === "shift" ? "easca" : "shift"
+      });
+    };
 
+    restoreDefaultKeyboard = () => {
+  
+      this.setState({
+        layoutName:  "easca"
+      });
+    };
+    handleAlt = () => {
+      let layoutName = this.state.layoutName;
+  
+      this.setState({
+        layoutName: layoutName === "alt" ? "easca" : "alt"
+      });
+    };
 	render(){
 
 
@@ -39,27 +76,43 @@ export default class Easca extends React.Component {
             
             
             <>
-
-            <Keyboard
+            <textarea maxLength="162" className="easca-input"
+          value={this.state.input}
+          placeholder={"..."}
+          onChange={e => this.onChangeInput(e)}
+        />
+            <Keyboard 
+              display={ this.state.display}
         onChange={this.onChange}
         onKeyPress={this.onKeyPress}
         
           layoutName={this.state.layoutName}
           layout={{
             easca: [
-              "e r t u i o p",
+              "e r t u i o p {backspace}",
               "a s d f g h l",
-              "c b n m . ? {shift}",
-              "{alt} {space} {enter}"
+              "c b n m . ? {alt}",
+              "{shift} {space} {enter}"
             ],
             shift: [
-              "! @ # $ % ^ & * ( ) _ + {bksp}",
-              "é E R T ú U í I ó O P",
-              "á A S D F G H L",
-              "{shift}",
-              "{alt} {space} {enter}"
+              "E R T U I O P {backspace}",
+              "A S D F G H L",
+              "C B N M , ! {alt}",
+              "{shift} {space} {enter}"
             ]
-          }}
+            ,
+            alt: [
+              "é ɼ ṫ ú í ó ṗ {backspace}",
+              "á ṡ ḋ ḟ ġ Á É",
+              "ċ ḃ ṁ Ó Ú Í {alt}",
+              "{shift} {space} {enter}"
+            ]
+
+
+          }
+          }
+              
+              
           buttonTheme={[
             {
               class: "hg-red",

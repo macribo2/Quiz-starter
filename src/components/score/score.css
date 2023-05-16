@@ -36,10 +36,10 @@ transform:scale(1);
 	z-index: 1899;
 	display:none;
 } 
-.score-text-container{z-index:2002;
+.score-text-container{
+	z-index:2002;
 	pointer-events:none;
 	transform:scale(1);
-	
 } 
 .arcadia{
 	

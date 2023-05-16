@@ -5,6 +5,7 @@ import ReactRain from 'react-rain-animation';
 import bit from '../../images/gifs/bit.gif'
 import "react-rain-animation/lib/style.css";
 import Easca from '../easca/easca2'
+import {Rings7} from '../Rings/Rings7'
 import {Rings5} from '../Rings/Rings5'
 import  Rings6  from '../Rings/Rings6'
 import '../Rings/rings1.css';
@@ -26,7 +27,7 @@ import glass from '../../images/big-glass.png';
 import defaultField from '../../images/localMaps/defaultField.png';
 import collinstown from '../../images/localMaps/collinstown.png';
 import fernaRiver from '../../images/localMaps/dungeonfog.png';
-import ferna from '../../images/localMaps/dungeonfog.png';
+import ferna from '../../images/localMaps/fearnasringfort.png';
 import statsMenu from '../../images/fog3.png';
 import invMenu from '../../images/inv/inv-bg.png';
 import diskMenu from '../../images/blackripple.gif';
@@ -4721,7 +4722,10 @@ let placeNamesGaeilge =
         ]
 
         function enterLocation(location) {
+           //refresh spiel mit neues Bilder und Text.
+//engNotes "from 0 to 1". 34=""
             narrativeCode = 34;
+           
             whereAbouts = $('#loc').html()
             overworldPlayerRow = playerRow;
             overworldPlayerColumn = playerColumn;
@@ -4737,26 +4741,6 @@ let placeNamesGaeilge =
                     return <Redirect to="/login"  />
                 },500)
             }
-
-            // if (whereAbouts === "Ráth Ḟearna") { 
-
-
-        
-
-
-
-            //     $("#walkies").attr("src",ferna)
-            //     $("#walkies-overlay").attr("src", fernaRiver)
-            //     gameObjects[playerRow][playerColumn] = 0;
-                
-            //     playerRow = 7;
-            //     playerColumn = 5;
-            // }
-
-   
-
-
-  
   
 
             if (whereAbouts === "") { 
@@ -4783,8 +4767,8 @@ let placeNamesGaeilge =
                 // $("#walkies-overlay").attr("src",fernaRiver)
                 gameObjects[playerRow][playerColumn] = 0;
                 
-                playerRow = 7;
-                playerColumn = 5;
+                playerRow = 6;
+                playerColumn = 4;
             }
             // else $("#walkies").attr("src",defaultField)
             // $('#walkies').fadeIn();
@@ -4803,8 +4787,16 @@ alert("Anseo")
 //setting specific walkabe area for locations with rivers walls etc. there's going to be at least 192 of these, not including dungeons castle interiors. Doing a few here to get started and then ship them out to a JSON like county maps.
 
             if (whereAbouts === "Ráth Ḟearna") {
-            map =
-            [
+                setTimeout(function () { 
+                    $('#loc').fadeOut();
+                
+                    $('.ringOfFerna').css('display','grid');
+                    $('.ringOfFerna').fadeIn();
+                }, 2000)
+                map =
+                    [
+                
+
                 ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                 ["*", 0, 0, 0, 0, "x", 0, 0, 0, "*"],
@@ -4815,8 +4807,17 @@ alert("Anseo")
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                 ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
                 ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
-            ];
-
+                ];
+                
+                $("#walkies").attr("src",ferna)
+                $("#walkies").fadeIn();
+                // $("#walkies-overlay").attr("src", fernaRiver)
+                gameObjects[playerRow][playerColumn] = 0;
+                
+                playerRow = 6;
+                playerColumn = 5;
+                narrativeCode = 34;
+                
             }
             
 
@@ -4981,19 +4982,7 @@ storyTimer()
                     <div className="sea"></div>
                     <div className="countyMap"></div>
                 </div>
-                <div className="map-lens-container">
-                        <img src={defaultField} alt="green field" id="walkies"/>
-                        <img src={empty} alt="green field" id="walkies-overlay"/>
-                        <div className="stage-container" id="kungfu">
-                            <div id="stage"></div>
-                        </div>
-
-                    {/* {this.state.showEascaLocation ? <EascaLocation whereAmI= "geaga" />:null} */}
-
- 
-                    <img rel="preload" className="map-lens" src={lens} alt="" />
-                    
-                </div>
+             
                 
                     <div className="emblem-container">
 
@@ -5009,7 +4998,23 @@ storyTimer()
                 
 
  </div>
+ <div className="map-lens-container">
+                        <img src={defaultField} alt="green field" id="walkies"/>
+                        <img src={empty} alt="green field" id="walkies-overlay"/>
+                        <div className="stage-container" id="kungfu">
+                            <div id="stage"></div>
+                        </div>
+
+                    {/* {this.state.showEascaLocation ? <EascaLocation whereAmI= "geaga" />:null} */}
+
+                    <div id ="touch-hint-3-container" className="touch-hint-3-container">
+<div className='touch-hint-3 circle' onTouchEnd={    this.helloHint0}></div>
+                    
+               </div>
  
+                    <img rel="preload" className="map-lens" src={lens} alt="" />
+                    
+                </div>
  {this.state.isOn ? (<div id="glass">
 				
                     < img src={glass} rel="preload"className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />
@@ -5023,7 +5028,6 @@ storyTimer()
             {/* <Rings1/> */}
 
 
-  <ReactAudioPlayer src={whereAmI==="westmeath"?jam:null } autoPlay />
   
                 <div className="portraitMode">
                 <p id="eng-notes" > {engNotes[narrativeCode]}</p>
@@ -5159,7 +5163,9 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
 
                     <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'Said '+this.props.choiceRingEng+' "Return  with rings." "I will '+this.props.heroNameEng+'", said '+localStorage.getItem('hname')+'.'}</p>
 
-
+                <div className="ringOfFerna">
+                    {/* <Rings7/> */}
+</div>
 
                     <div className="ringOfTullyNally" >
                     {/* <img src={ daff} className="daffs" alt="small yellow flowers stir in the breeze" /> */}
@@ -5214,10 +5220,6 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                 </div>            
                 </div>
 
-               <div id ="touch-hint-3-container" className="touch-hint-3-container">
-<div className='touch-hint-3 circle' onTouchEnd={    this.helloHint0}></div>
-                    
-               </div>
                 <Score returnToCounty={ this.returnToCounty} />                
                            </div> 
 

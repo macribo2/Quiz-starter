@@ -504,7 +504,7 @@ top:5%;
 transform:scale(0.5)
 
 }
-.ringOfTullyNally{
+.ringOfTullyNally, .ringOfFernia{
   height:100%;
   width: 100%;
   top:0;
@@ -516,7 +516,18 @@ transform:scale(0.5)
   align-items: center;
   display: flex;
   /* transform: scale(0.8); */
-  /* display: none; */
+  
+}
+.history{
+  pointer-events: none;
+}
+.history-bg{
+  /* display:none; */
+  pointer-events: none;
+}
+.ringOfFernia{
+  
+  display: none;
 
 }
 .ring-5-button-mash-container{
@@ -579,7 +590,7 @@ transform:scale(0.5)
 }
 .touch-hint-3-container{
   position: fixed;
-  z-index: 9000;
+  z-index: 15;
   height: 100%;
   width: 100%;
   top: 0;
@@ -587,7 +598,7 @@ transform:scale(0.5)
   justify-content: center;
   align-items: center;
   display: none;
-  transform:translate(-1%,32%);
+  transform:translate(-1%,31%);
   /* pointer-events:none; */
 }
 #hi-vis{

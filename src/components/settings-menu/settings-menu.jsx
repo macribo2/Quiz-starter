@@ -1,6 +1,6 @@
 import './settings-menu.css';
 import './lights.css';
-import Easca from '../easca/easca';
+import Easca from '../easca/easca2';
 import bg0 from '../../images/fog3.png';
 import React, { useEffect,useState  } from 'react';
 import ironkey from '../../images/iron-key.png';
@@ -61,11 +61,38 @@ export default function SettingsMenu(props) {
 		 'as ar suain',
 		 ' ',
 		 ' '];
-
+		 let elementClass;
+	
+let randLights = Math.floor(Math.random * 8)
 
 		 let runrig = document.getElementById('runrig')
 	
 	var lid = localStorage.getItem('lyricID');
+	document.addEventListener('click',(e) =>
+	{
+	  // Get element class(es)
+		elementClass = e.target.className;
+		
+	  // If element has class(es)
+	  if (elementClass !== '') {
+		console.log(elementClass);
+	  }
+	  if (elementClass === '') {
+		console.log(elementClass);
+	  }
+	
+		//making each square of a 10x10 grid of squares a button that moves the player there, on touch.
+	
+		
+		
+	  // If element has no classes
+	  else {
+		console.log('An element without a class was clicked');
+	  }
+	}
+	);
+
+
 	return <>
 	<div className="holder">
 		</div>
@@ -88,11 +115,11 @@ export default function SettingsMenu(props) {
 		
 		<div id="light-holder">
 			<div className="light light8"></div>
+			<div className="light light1"></div>
 			<div className="light light9"></div>
 			<div className="light light10"></div> 
 			
 		</div>
-		{/* <Easca></Easca> */}
 <div className='menu-container'>
 			<button className="menu"
 				onClick={() => setShowHist(true)}
@@ -102,6 +129,7 @@ export default function SettingsMenu(props) {
 			>begin</button>
 			{showHistory === true ? <History isOn={isOn} toggleIsOn={toggleIsOn} handleInputSelect={ props.handleInputSelect} />:null}
 		</div>
+	
 
 		</>	
 		
