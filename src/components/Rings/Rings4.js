@@ -785,7 +785,7 @@ if (rng === 1) {
 		'cloud or passionate, vehement',
 		'servant of Jesus',
 		'warlike; fierce',
-		'diminutive of Scannal',
+		'little trapper',
 		'beautiful, radiant',
 		'deer lover',
 		'bright headed',

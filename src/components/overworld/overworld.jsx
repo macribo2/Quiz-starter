@@ -374,8 +374,9 @@ export default class Overworld extends React.Component {
             statsVisible: false,
             diskVisible: false,
             inventoryVisible: false,
-            showEascaLocation:true
+            showEascaLocation:true,
             // whereAmI: localStorage.getItem('whereAmI')
+            data:""
         }
 
     }
@@ -3915,7 +3916,7 @@ alert("Chun troid!" )
             } else if (lastPressed === 'right') {
                 $('#hero').attr('src', setPlayerIcon())
 
-                $('#hero').animate({ left: playerColumn * cellWidth }, 200, 'linear');
+                $('#hero').animate({ left: playerColumn * cellWidth }, 200, 'linear)');
             } else if (lastPressed === 'up') {
                 $('#hero').attr('src', setPlayerIcon())
 
@@ -4888,7 +4889,26 @@ alert("Anseo")
         this.jQueryCode();
         window.addEventListener("resize", this.resize.bind(this));
         this.resize();
+    
+        this.callBackendAPI()
+        .then(res => this.setState({ data: res.express }))
+        .catch(err => console.log(err));
+    
     }
+
+   // fetching the GET route from the Express server which matches the GET route from server.js
+   callBackendAPI = async () => {
+    const response = await fetch('/express_backend');
+    const body = await response.json();
+
+    if (response.status !== 200) {
+      throw Error(body.message) 
+    }
+    return body;
+  };
+
+
+
     componentWillUnmount() {
         window.removeEventListener("resize", this.resize.bind(this));
     }
@@ -4941,6 +4961,18 @@ storyTimer()
       
     let isOn = this.props.isOn;
 
+    let crossSwords = function() {
+     
+        // alert("Chun troid!" )
+            $('#océ').css('visibility', 'visible');
+
+        // setTimeout(handleFirstDown, 1000);
+        //override bug where player moves south then turns to face south with this jq :
+        $('#hero').attr('src', setPlayerIcon());
+
+        // playerFacing = imreoir.avatar;
+
+}
 
   
 
@@ -5048,6 +5080,7 @@ storyTimer()
         }
     }}  />
      */}
+                <p className="App-intro">{this.state.data}</p>
 
      <img src={chat} id="chat" alt="chat button" rel="preload" className="inventory" onClick={() => {
                         $('#eng-notes').html('');
@@ -5056,8 +5089,23 @@ storyTimer()
                         if (this.state.diskVisible) {
                         this.setState({ diskVisible: false })
         }
+                        }} />
+                        <img src={chat} onTouchStart={()=>{
+    this.setState({data: "true yo" })
+                        }}id="cross-swords" alt="cross swords button" rel="preload" className="cross-swords" onClick={() => {
+                            crossSwords();
+                        {/* $('#eng-notes').html(''); */}
+                            setTimeout(function () {
+
+                            $('#easca').fadeIn() 
+
+                             },1000)
+
+                        if (this.state.diskVisible) {
+                        this.setState({ diskVisible: false })
+        }
     }}  />
-<h1 id="cross-swords" onTouchStart={this.handleSwords}>⚔</h1>
+{/* <h1 id="" >⚔</h1> */}
     <img src={disk} alt="" className="disk" onClick={() => {
         if (this.state.diskVisible) {
             this.setState({ diskVisible: false })
@@ -5220,7 +5268,9 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                 </div>            
                 </div>
 
-                <Score returnToCounty={ this.returnToCounty} />                
+                <Score returnToCounty={this.returnToCounty} />   
+                
+
                            </div> 
 
             

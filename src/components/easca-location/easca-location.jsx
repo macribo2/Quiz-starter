@@ -646,7 +646,7 @@ export default  class EascaLocation extends React.Component  {
 		`,`chief, noble, best
 		`,`chief, noble, best
 		`,`quarrel, argue
-		`,`diminutive of Scannal
+		`,`little trapper
 		`,`ghostly frightening
 		`,`blossom, bloom
 		`,`radiant blossom
