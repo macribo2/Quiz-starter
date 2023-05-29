@@ -1,3 +1,4 @@
+.react-simple-keyboard{display:none;}
 #easca {
   display: none;
   /* border:5px solid orange; */
@@ -7,6 +8,24 @@
   width: 100%;
   top: 0;
   left: 0;
+}
+.rotate-phone-img{
+  transform:translate(0%,50%);
+  height:50%;
+}
+.rotate-phone-container{
+  position:fixed;
+  height:100%;
+  width:100%;
+  display:none;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  pointer-events: none;
+
+  animation:rotate-90 7s steps(15) forwards 
+
 }
 
 .river-container ,.ui-container_b-btn{
@@ -332,6 +351,29 @@ p {
 }
 
 
+@keyframes rotate-90 {
+
+  0% {
+    transform: rotate(0deg);
+    opacity:0;
+  
+  }
+  10% {
+    transform: rotate(0deg);
+    opacity:1;
+  
+  }
+  80% {
+    transform: rotate(90deg);
+    opacity:1;
+  }
+
+  100% {
+    transform: rotate(90deg);
+    opacity:0;
+
+  }
+}
 
 @keyframes zoom-to-offaly {
 
@@ -1324,7 +1366,7 @@ border-radius: 50%;
   left: 5%;
   font-size: 1.4em;
   color: black;
-
+width:85%;
 }
 
 @-webkit-keyframes emblemFade {
@@ -1586,3 +1628,7 @@ border-radius: 50%;
 transform: scale(0.8);
   /* border:4px solid blue; */
 }
+
+.person{
+  top: 3%;
+  left: 43.5%;}

@@ -35,11 +35,11 @@ return (
 			
  			<img src={outerRing} className="arcadia" alt="arcadia" />
 		<div className="score-bg-container">
-		<img src={ ringFound} alt="" />
+		<img className="ring-found-bg"src={ ringFound} alt="" />
 
 			</div>
 			<div className="ring-shine-container">
-		<img src={ringShine } alt="a sparkle" />
+		<img className="ring-shine" src={ringShine } alt="a sparkle" />
 
 			</div>
 

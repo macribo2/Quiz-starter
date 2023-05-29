@@ -424,12 +424,12 @@ position:fixed;
 }
 
 #locEng {
+  width:60%;
   /* color: rgb(45, 160, 30); */
   z-index: 1000;
-  top: 69%;
+  top: 62%;
   display: block;
-  font-size: 1.8em;
-  width: 100%;
+  font-size: 1.5em;
   left: 10%;
   font-family: 'anaphora';
 
@@ -631,7 +631,20 @@ position:relative
 }
 #eng-notes{
   margin-left:5%;
+  margin-top:51%;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+color:rgb(13, 10, 8);
+
 }
+#gae-notes{
+  margin-left:9%;
+  margin-top:6%;
+
+  font-family:'aonchlo';
+  font-size:1.7em;
+  color:rgb(13, 10, 8);
+}
+
 @keyframes emblemFade {
   0% {
     opacity: 1

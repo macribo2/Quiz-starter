@@ -13,7 +13,7 @@ import emerald from '../../images/misc_crystal_new.png'
 import { Score }  from '../score/score'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
 import lens from '../../images/ciorcal-glass4.png';
-import stats from '../../images/inv/char.png';
+import stats from '../../images/inv/stats.png';
 import disk from '../../images/inv/diskette.png';
 import chat from '../../images/inv/chat.png';
 import {  Redirect, useLocation } from "react-router-dom";
@@ -173,6 +173,8 @@ import champion96 from '../../images/champions/96.png'
 import champion97 from '../../images/champions/97.png'
 import champion98 from '../../images/champions/98.png'
 import champion99 from '../../images/champions/99.png'
+
+import rotatePhone from '../../images/gifs/hint-4-rotate.gif'
 let whereAmI = 'geaga';
 let secondLocationId = 3//localStorage.getItem('secondLocationId');
 let mapChanges = 0;
@@ -193,10 +195,54 @@ let stillPressedSouth;
 let stillPressedEast;
 let stillPressedWest;
 let whereAbouts;
-let engNotes = ['From 0 to 1',
-"Antrim, Aontroim, lone dwelling",
-"Armagh, Ard Mhacha, Macha's height",
-"Carlow, Ceatharlach, place of cattle",
+let irishNotes = [
+    ''
+]
+let gaeNotes = [
+    'ó 0 go 1',
+    "Aontroim",
+    "Ard Mhacha",
+    "Ceatharlach",
+    "Cavan",
+    "Clare",
+    "Cork",
+    "Derry",
+    "Donegal",
+    "Down",
+    "Dublin",
+    "Fermanagh",
+    "Galway",
+    "Kerry",
+    "Kildare",
+    "Kilkenny",
+    "Laois",
+    "Leitrim",
+    "Limerick",
+    "Longford",
+    "Louth",
+    "Mayo",
+    "Meath",
+    "Monaghan",
+    "Offaly",
+    "Roscommon",
+    "Sligo",
+    "Tipperary",
+    "Tyrone",
+    "Waterford",
+    "An tIarmhí",
+    "Wexford",
+    "Cill Mhantáin",
+    "",
+    
+"Fáinne faighte! Fill laithreach go Dún na Sídh? Nó, ar aghaidh treasna na tíre, ar thóir nios mó fáinní..."
+
+
+];
+let engNotes = [
+    'From 0 to 1',
+"Antrim, lone dwelling",
+"Armagh, Macha's height",
+"Carlow, place of cattle",
 "Cavan",
 "Clare",
 "Cork",
@@ -223,10 +269,11 @@ let engNotes = ['From 0 to 1',
 "Tipperary",
 "Tyrone",
 "Waterford",
-"Westmeath, An tIarmhí",
+"Westmeath",
 "Wexford",
     "Wicklow, meadow of the Vikings. Cill Mhantáin from Church of Mantan",
-""
+    "",
+    "Ring gotten! Return immediately to DoonaShee? Or onward across the land, in pursuit of more rings..."
 
 ];
 let narrativeCode = 0;
@@ -549,7 +596,11 @@ $("#locEng").fadeOut()
                         $('.touch-hint-3-container').css('display', 'flex')
                         $('.touch-hint-3-container').fadeIn()
 
-                    },3700)
+                    },2700)
+                    setTimeout(function () {
+                        $('.touch-hint-3-container').fadeOut()
+                    
+                    }, 5000)
                 }
             }, 2000)
            
@@ -4384,6 +4435,14 @@ document.addEventListener('click',(e) =>
 
         function helloTullyField5() { 
             // alert('✓')
+
+/*we want to alert player that they have completed a quest, collected a ring. Also, inform them that they can rotate phone for new ui elements: Rings can be spent like in a pachinko- among the faries of dunnyshee: the prize being the return to Ireland of the avatar initially selected; As a reward, the player would be granted login password and credentials to be the author of their own ring/fort location. api includes input fields for ringfort name in english and Irish, 8 text strings and spaces for translation, and slots for 8 images; and a quiz questions + answers api for winning the ring of + location name.*/
+            narrativeCode = 34
+            setTimeout(function () { 
+                $('.rotate-phone-container').css('display', 'flex')
+                $('.rotate-phone-container').fadeIn()
+
+            },3000)
             
             // returnToCounty();
      $('.score-container').fadeIn()
@@ -4724,8 +4783,8 @@ let placeNamesGaeilge =
 
         function enterLocation(location) {
            //refresh spiel mit neues Bilder und Text.
-//engNotes "from 0 to 1". 34=""
-            narrativeCode = 34;
+//engNotes "from 0 to 1". 33=""
+            narrativeCode = 33;
            
             whereAbouts = $('#loc').html()
             overworldPlayerRow = playerRow;
@@ -4930,10 +4989,24 @@ alert("Anseo")
         let storyTimer=this.props.storyTimer
         let incrementScore=this.props.incrementScore
         let readme = `
+      
+      	 Taobh cùl an doras
+		 ní bheidh griann
+		 ní beidh bórd, ní beidh fíonn
+		 Taobh cùl an doras
+		 ní bheidh griann
+		 ní beidh bórd, ní beidh fíonn 
+		 Ar eiginn ar n-eirigh as ar suain
+		 Ar eiginn ar n-eirigh as ar suain
+		 An Gaidheal 'sa leabaidh
+		 An Gaidheal 'na shuain
+		 Is ar eiginn ar n-eirigh
+		 as ar suain
+	
+         - Runrig
+         `;
        
-        
-        
-        `
+    
         
         function restartApp() { 
             window.location.reload(false)
@@ -5062,6 +5135,7 @@ storyTimer()
 
   
                 <div className="portraitMode">
+                <p id="gae-notes" > {gaeNotes[narrativeCode]}</p>
                 <p id="eng-notes" > {engNotes[narrativeCode]}</p>
 
                 <Easca id="easca"/>
@@ -5085,14 +5159,15 @@ storyTimer()
      <img src={chat} id="chat" alt="chat button" rel="preload" className="inventory" onClick={() => {
                         $('#eng-notes').html('');
                         $('#easca').fadeIn() 
+                        $('.react-simple-keyboard').fadeIn() 
 
                         if (this.state.diskVisible) {
                         this.setState({ diskVisible: false })
         }
                         }} />
-                        <img src={chat} onTouchStart={()=>{
+                        <img src={stats} onTouchStart={()=>{
     this.setState({data: "true yo" })
-                        }}id="cross-swords" alt="cross swords button" rel="preload" className="cross-swords" onClick={() => {
+                        }}id="stats" alt="person button" rel="preload" className="person inventory" onClick={() => {
                             crossSwords();
                         {/* $('#eng-notes').html(''); */}
                             setTimeout(function () {
@@ -5138,24 +5213,10 @@ storyTimer()
                             <p id="readme">
                                  
                                 {readme}
-                                <br/>
-                                <br/>
-                                <br/>
-            <br/>
-            
-            <br/>
-            <br/>
-            <br/>
-            
-            
-            <br />
-            <br />
-            /*              */
-            <br />
-            <br />
-                
+              
         
-                                <button onClick={ 	restartApp }>baile | home</button>
+                                <button onClick={restartApp}>baile | home</button>
+                                Thanks to Norah at http://www.namenerds.com/irish/
 <a href="https://www.pngwing.com/en/free-png-zampg"> Stone Soup Net Hack graphics </a>         
        <a href="https://manpages.ubuntu.com/manpages/xenial/man1/xscreensaver.1.html">additional effects by Jamie Zawinski Paul 'Joey' Clark</a><br/>
     
@@ -5269,9 +5330,9 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                 </div>
 
                 <Score returnToCounty={this.returnToCounty} />   
-                
-
-                           </div> 
+                <div className="rotate-phone-container">
+                    <img className="rotate-phone-img"src={ rotatePhone } alt="rotate phone icon" />
+                           </div> </div>
 
             
 

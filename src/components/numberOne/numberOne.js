@@ -838,11 +838,11 @@ export default  class NumberOne extends React.Component  {
 // 
 let stagePos = $('#eascaStage').position()
 // console.log('position'+stagePos.left)
-if(stagePos.left>=150){
+// if(stagePos.left>=150){
 
-	$('#eascaStage').css('left', '-890px')
+	// $('#eascaStage').css('left', '-890px')
 	// alert();
-}
+// }
 
 // } 
 		

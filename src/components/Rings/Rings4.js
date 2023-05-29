@@ -751,7 +751,9 @@ const [rng, setRng] = useState(Math.floor(Math.random()*3))
 		'freedom',
 		'dark',
 		'radience, light',
-		'goddess of love and beauty, patron of County Cork.Also, queen of the banshees.',
+		'goddess of love and beauty, patron of County Cork. Also, queen of the banshees',
+		' from uan \'lamb\' . Of truth, beauty, and unity',
+
 		'There were at least nine Saint Eithnes',
 'from the Latin Patricius, meaning "of the patrician class',
 'strong-willed warrior '

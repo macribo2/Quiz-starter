@@ -41,6 +41,7 @@ export default class Easca extends React.Component {
             '{shift}':'⇧'
           }
           
+          
         }
     }
     
@@ -87,7 +88,8 @@ export default class Easca extends React.Component {
         onKeyPress={this.onKeyPress}
         
           layoutName={this.state.layoutName}
-          layout={{
+              layout={{
+  
             easca: [
               "e r t u i o p {backspace}",
               "a s d f g h l",
@@ -101,11 +103,12 @@ export default class Easca extends React.Component {
               "{shift} {space} {enter}"
             ]
             ,
-            alt: [
-              "é ɼ ṫ ú í ó ṗ {backspace}",
-              "á ṡ ḋ ḟ ġ Á É",
-              "ċ ḃ ṁ Ó Ú Í {alt}",
-              "{shift} {space} {enter}"
+                alt: [
+              "é ꞃ ṫ ú í ó ṗ {backspace}",
+              "á ꞅ ḋ ḟ ġ Ꞅ ⁊",
+              "ċ ḃ ṁ Á Í É {alt}",
+              "{shift} {space} Ó Ú {enter}"
+              
             ]
 
 

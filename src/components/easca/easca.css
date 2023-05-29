@@ -167,12 +167,18 @@ top: 60%;
 
  .hg-button, .hg-layout-easca.hg-rows,
 .hg-theme-default,.hg-standardBtn{
-	background-color: rgb(25, 10, 23) !important;
+	background-color: rgb(4, 4, 4) !important;
+	background-image: '../../images/fog3.png';
+
+}
+.hg-button{
+	background-color: rgb(28, 27, 29) !important;
+
 
 }
 
 .react-simple-keyboard{
-	top: 40%;
+	top: 61%;
     left: 0px;
 
 }
@@ -186,7 +192,7 @@ top: 60%;
 	left:0;
 	text-align: center;
     font-size: 2em;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0);
 	font-family:aonchlo;
 
 }
