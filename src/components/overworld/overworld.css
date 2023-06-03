@@ -1135,7 +1135,9 @@ border-radius: 50%;
   pointer-events: none;
 
 }
-
+.stage-narrative-mode{
+  /* border: 5px solid purple; */
+}
 #output {
 
   color: white;

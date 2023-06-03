@@ -234,7 +234,7 @@ let gaeNotes = [
     "Cill Mhantáin",
     "",
     
-"Fáinne faighte! Fill laithreach go Dún na Sídh? Nó, ar aghaidh treasna na tíre, ar thóir nios mó fáinní..."
+"Is feidir fileadh anois go Dún Sí."
 
 
 ];
@@ -273,7 +273,7 @@ let engNotes = [
 "Wexford",
     "Wicklow, meadow of the Vikings. Cill Mhantáin from Church of Mantan",
     "",
-    "Ring gotten! Return immediately to DoonaShee? Or onward across the land, in pursuit of more rings..."
+    "One could now return to Dunshee"
 
 ];
 let narrativeCode = 0;
@@ -3962,18 +3962,18 @@ alert("Chun troid!" )
             if (lastPressed === 'left') {
 
                 $('#hero').attr('src', setPlayerIcon())
-                $('#hero').animate({ left: playerColumn * cellWidth }, 200, 'linear');
+                // $('#hero').animate({ left: playerColumn * cellWidth }, 200, 'linear');
 
             } else if (lastPressed === 'right') {
                 $('#hero').attr('src', setPlayerIcon())
 
-                $('#hero').animate({ left: playerColumn * cellWidth }, 200, 'linear)');
+                // $('#hero').animate({ left: playerColumn * cellWidth }, 200, 'linear)');
             } else if (lastPressed === 'up') {
                 $('#hero').attr('src', setPlayerIcon())
 
-                $('#hero').animate({ top: playerRow * cellHeight }, 200, 'linear');
+                // $('#hero').animate({ top: playerRow * cellHeight }, 200, 'linear');
             } else if (lastPressed === 'down') {
-                $('#hero').animate({ top: playerRow * cellHeight }, 200, 'linear');
+                // $('#hero').animate({ top: playerRow * cellHeight }, 200, 'linear');
             }
 
             gameObjects[playerRow][playerColumn] = ring;
@@ -4990,20 +4990,7 @@ alert("Anseo")
         let incrementScore=this.props.incrementScore
         let readme = `
       
-      	 Taobh cùl an doras
-		 ní bheidh griann
-		 ní beidh bórd, ní beidh fíonn
-		 Taobh cùl an doras
-		 ní bheidh griann
-		 ní beidh bórd, ní beidh fíonn 
-		 Ar eiginn ar n-eirigh as ar suain
-		 Ar eiginn ar n-eirigh as ar suain
-		 An Gaidheal 'sa leabaidh
-		 An Gaidheal 'na shuain
-		 Is ar eiginn ar n-eirigh
-		 as ar suain
-	
-         - Runrig
+      	 
          `;
        
     
@@ -5135,6 +5122,9 @@ storyTimer()
 
   
                 <div className="portraitMode">
+                     <div className="stage-container" id="kungfu">
+                            <div id="stage" className="stage-narrative-mode"></div>
+                        </div>
                 <p id="gae-notes" > {gaeNotes[narrativeCode]}</p>
                 <p id="eng-notes" > {engNotes[narrativeCode]}</p>
 
@@ -5213,17 +5203,17 @@ storyTimer()
                             <p id="readme">
                                  
                                 {readme}
-              
+              <a>This project is a fork of https://www.freecodecamp.org/news/how-to-build-a-quiz-app-using-react/</a>
         
                                 <button onClick={restartApp}>baile | home</button>
-                                Thanks to Norah at http://www.namenerds.com/irish/
+                               Tógadh an app le React.js. Foinsí: http://www.namenerds.com/irish/
 <a href="https://www.pngwing.com/en/free-png-zampg"> Stone Soup Net Hack graphics </a>         
-       <a href="https://manpages.ubuntu.com/manpages/xenial/man1/xscreensaver.1.html">additional effects by Jamie Zawinski Paul 'Joey' Clark</a><br/>
+       <a href="https://manpages.ubuntu.com/manpages/xenial/man1/xscreensaver.1.html">screensaver effects by Jamie Zawinski Paul 'Joey' Clark</a><br/>
     
 additional graphics from <a href="https://game-icons.net/"> https://game-icons.net/
                                 </a>    <br/>
                                 
-       <a href="https://github.com/macribo2/Quiz-starter">iron-key is open source.</a>
+       <a href="https://github.com/macribo2/Quiz-starter">git repo</a>
                                 <br />
                                 more @ <a href="https://www.reddit.com/r/Banba/">/r/banba</a>
                             </p>
