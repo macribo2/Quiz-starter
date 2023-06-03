@@ -273,7 +273,7 @@ let engNotes = [
 "Wexford",
     "Wicklow, meadow of the Vikings. Cill Mhantáin from Church of Mantan",
     "",
-    "One could now return to Dunshee"
+    "One might now return to Dunshee"
 
 ];
 let narrativeCode = 0;
@@ -4880,7 +4880,36 @@ alert("Anseo")
                 
             }
             
+            if (whereAbouts === "Dún Sí") {
 
+
+                // alert('dún sí!')
+                map =
+                [
+               ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
+                    ["*", "*3", "*3", "*7", "*7", "*7", "*6", "*6", "*6", "*"],
+                    ["*","*3", 0, 0, 0, 0, 0, 0, "*6", "*"],
+                    ["*", "*5", 0, 0, 0, 0, 0, 0, "*6", "*"],
+                    ["*", "*5", 0, 0, 0, 0, 0, 0, "*2", "*"],
+                    ["*", "*5", 0, 0, 0, 0, 0, 0, "*2", "*"],
+                    ["*", "*1", 0, 0, 0, 0, 0, 0, "*2", "*"],
+                    ["*", "*1", 0, 0, 0, 0, 0, 0, "*4", "*"],
+                    ["*", "*1", "*1", "*0", "*0", "*0", "*4", "*4", "*4", "*"],
+                    ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
+                ];
+   refresh();
+
+   $("#walkies").attr("src",ferna)
+   $("#walkies").fadeIn();
+                gameObjects[playerRow][playerColumn] = 0;
+                playerRow = 3;
+                playerColumn = 4;
+$('#loc').fadeOut();
+
+                $('#locEng').fadeOut();
+        // document.getElementById('dir-pad').style.opacity='0'
+                $('#btn-b').fadeOut();
+            }
             if (whereAbouts === "Tulaigh an Eallaigh") { 
 
                 // alert('Tully!')
@@ -5100,7 +5129,7 @@ storyTimer()
                     {/* {this.state.showEascaLocation ? <EascaLocation whereAmI= "geaga" />:null} */}
 
                     <div id ="touch-hint-3-container" className="touch-hint-3-container">
-<div className='touch-hint-3 circle' onTouchEnd={    this.helloHint0}></div>
+                        <div className='touch-hint-3 circle' onTouchEnd={this.helloHint0}></div>
                     
                </div>
  
@@ -5122,15 +5151,14 @@ storyTimer()
 
   
                 <div className="portraitMode">
-                     <div className="stage-container" id="kungfu">
-                            <div id="stage" className="stage-narrative-mode"></div>
-                        </div>
+                   
                 <p id="gae-notes" > {gaeNotes[narrativeCode]}</p>
                 <p id="eng-notes" > {engNotes[narrativeCode]}</p>
 
                 <Easca id="easca"/>
                 <div id="ui-container">
 
+cleite000
 {/* <img src={stats} alt="" className="stats"onClick={() => {
         if (this.state.statsVisible) {
             this.setState({ statsVisible: false })

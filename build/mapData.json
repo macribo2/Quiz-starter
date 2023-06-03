@@ -585,19 +585,19 @@
   {
     "emblem": "westmeath",
     "co": "westmeath",
-    "locations": [      "Baile na gCailleach","Ráth Ḟearna","Tulaigh an Eallaigh","Na Colúir", "Cill Ḃeagáin",
+    "locations": [      "Baile na gCailleach","Dún Sí","Tulaigh an Eallaigh","Na Colúir", "Cill Ḃeagáin",
       "An Muileann gCearr"
     ],
     "locationsEng": [
       "Collinstown - town of the veiled women or town of the hags",
-      "Raharney - Fearna's ringfort",
+      "Dunshee - stronghold of the faries",
       "Tullynally - hillock of the swans",
       "Corlis - the pidgeons",
       "Kilbeggan - church of Bécán, distinguished Irish Saint",
       "Mullingar - the crooked mill"
     ],
     "county": "Co. Na hIarṁí",
-    "mapData": "[[3, 3, 3, 3, 3, 2, 2, 9, 9, 9],[3,3,3,0,0,0,30,9,9,9],[3,3,3,0,0,0,0,0,0,9],[4,4,0,0,0,0,0,31,0,8],[4,0,0,0,0,0,0,0,0,8],[4,0,33,0,0,0,0,0,0,8],[4,0,0,0,32,0,0,0,0,8],[5,0,0,0,0,0,35,0,7,7],[6,6,6,6,34,0,7,7,7,7],[6,6,6,6,6,6,6,7,7,7]]",
+    "mapData": "[[3, 3, 3, 3, 3, 2, 2, 9, 9, 9],[3,3,3,0,0,0,30,9,9,9],[3,3,3,0,0,0,0,0,0,9],[4,4,0,0,0,0,0,0,0,8],[4,0,0,0,0,0,31,0,0,8],[4,0,33,0,0,0,0,0,0,8],[4,0,0,0,32,0,0,0,0,8],[5,0,0,0,0,0,35,0,7,7],[6,6,6,6,34,0,7,7,7,7],[6,6,6,6,6,6,6,7,7,7]]",
     "countyBG": "url('./countyMaps/westmeath.png')",
     "top": "60px",
     "left": "1px",
