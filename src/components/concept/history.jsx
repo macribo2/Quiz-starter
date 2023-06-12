@@ -158,8 +158,8 @@ the tonge speaketh"<br/>
     agus bin an ord ársa Gaelach 
    briste ar deireadh.`,
 
-    `Tá rogha Gaelach aisghabhtha againn ar bhonn prionsabal oideachas agus dlí`,
-    `But what of the heart when the tongue is Gaelic?`
+    `In aineoin dearcadh Spencer, mhaireann craoithe Gaelach, agus Bearla acú.`,
+    `Cad a deirfaidh an chraoí, le teanga Gaelach?`
 
 ];
 let topTeacs1 = [
@@ -455,7 +455,7 @@ the tonge speaketh"<br/>
     The heart can be Irish, whilst the tongue speaks English. 
 
     `,
-    `When the tongue is Gaelic, what speaketh the heart ?
+    `But when the tongue is Gaelic, what sayeth the heart ?
     
    
     </p> </span>`,

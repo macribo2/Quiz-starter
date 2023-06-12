@@ -234,7 +234,7 @@ let gaeNotes = [
     "Cill Mhantáin",
     "",
     
-"Is feidir fileadh anois go Dún Sí."
+"fill anois go Dún Sí"
 
 
 ];
@@ -273,7 +273,7 @@ let engNotes = [
 "Wexford",
     "Wicklow, meadow of the Vikings. Cill Mhantáin from Church of Mantan",
     "",
-    "One might now return to Dunshee"
+    "return to Dunshee"
 
 ];
 let narrativeCode = 0;
@@ -5174,8 +5174,11 @@ cleite000
      */}
                 <p className="App-intro">{this.state.data}</p>
 
-     <img src={chat} id="chat" alt="chat button" rel="preload" className="inventory" onClick={() => {
+                        <img src={chat} id="chat" alt="chat button" rel="preload" className="inventory" onClick={() => {
+                           
                         $('#eng-notes').html('');
+                            
+                            $('#gae-notes').html('');
                         $('#easca').fadeIn() 
                         $('.react-simple-keyboard').fadeIn() 
 

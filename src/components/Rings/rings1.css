@@ -583,10 +583,11 @@ transform:scale(0.5)
 }
 .numbers-e{
   opacity:1;
-  top: 85%;
-  left: 10%;
-  width:75%;
   animation:fade-in 3s forwards;
+
+  top: 59%;
+    left: 4%;
+    width: 86%;
 }
 .touch-hint-3-container{
   position: fixed;
