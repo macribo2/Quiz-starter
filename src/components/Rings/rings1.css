@@ -376,7 +376,7 @@ z-index: 101;
 
 
 .names-i, .numbers-i, .history-i{
-  opacity: 0;
+  /* opacity: 0; */
 /* top:5%; */
   font-size: 2em;
   position: fixed;
@@ -583,7 +583,7 @@ transform:scale(0.5)
 }
 .numbers-e,.history-e{
   opacity:1;
-  animation:fade-in 3s forwards;
+  animation:fade-in 0.25s forwards;
 
   top: 59%;
     left: 4%;

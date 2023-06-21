@@ -21,6 +21,7 @@ import fromFour from '../../images/about2/stone-4.png'
 import fromFive from '../../images/about2/stone-5.png'
 import fromSix from '../../images/about2/stone-6.png'
 import fromSeven from '../../images/about2/stone-7.png'
+import glass from '../../images/big-glass.png';
 
 import champion99 from '../../images/champions/99.png'
 
@@ -71,27 +72,28 @@ let ogHero = localStorage.getItem('portrait')
 
 		`d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.`,
 		
-		`Bhí trí banríonn in árd-fhlaitheas`,
+		`Bhí trí banríonn ann in árd-fhlaitheas:`,
 			`Éirú, Banba, Fóladh.`,
 		
 			
-			`Chas a dhraoithe stoirm i gcoinne forsaí naimhead taingaire. `,`D'freagair Amergín dríocht na hóileánn le filíocht na nGael`,
-			`<span style="font-family:aonchlo;font-weight: 900;">Am gaeth i m-muir <br/>
-		Am tond trethan<br/>
-		Am fuaim mara...</span>
+			`Chas a draoithe stoirm i gcoinne naimhead fad taingaire. `,`D'freagair Amergín dríocht na hóileánn le filíocht na nGael`,
+			`<br/><span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am gaeth i m-muir <br/>
+			&nbsp; &nbsp; &nbsp; &nbsp;Am tond trethan<br/>
+			&nbsp; &nbsp; &nbsp; &nbsp;Am fuaim mara...</span>
 		`,
-			`<span style="font-family:aonchlo;font-weight: 900;">Am dam seċt ndirend <br/>
-		Am séig i n-aill<br/>
-		Am dér gréne<br/>
-		Am cain lubai...</span>
+			`<br/><span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am dam seċt ndirend <br/>
+			&nbsp; &nbsp; &nbsp; &nbsp;Am séig i n-aill<br/>
+			&nbsp; &nbsp; &nbsp; &nbsp;Am dér gréne<br/>
+			&nbsp; &nbsp; &nbsp; &nbsp;Am cain lubai...</span>
 		`,
 		
-			`<span style=" font-family:aonchlo;font-weight: 900;">Am bri danae<br/>
-		Am bri i fodb fras feoċtu<br/>
-		Am dé delbas do ċind codnu...</span>
+			`<br/><span style=" animation:fade-in 0.5s forwards;font-family:aonchlo;">&nbsp; &nbsp; &nbsp; &nbsp;Am bri danae<br/>
+			&nbsp; &nbsp; &nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
+			&nbsp; &nbsp; &nbsp; &nbsp;Am dé delbas <br/>
+			&nbsp; &nbsp; &nbsp; &nbsp;do ċind codnu...</span>
 		`,
-			`<span style=" font-family:aonchlo;font-weight: 900;">...Cáinte im gai<br/> 
-		cainte gaiṫe.</span>
+			`<br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
+			&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span>
 		`,
 		
 			`
@@ -146,12 +148,12 @@ let ogHero = localStorage.getItem('portrait')
 		`Three queens ruled there`,		
 		`Éiru, Banba, Fóladh.`,
 	
-		`Their Druids hurled a tempest against the ships of the prophesized enemy.`,`
+		`Their Druids hurled a tempest against the ships of their long prophesized enemy.`,`
 		Amergín responded to island magic with Gaelic verse`,
 	
-		`I am the wind which breaths upon the sea<br/>
-		 I am the wave of the ocean<br/>
-		 I am the murmur of the billows`,
+		` I am the wind which breaths upon the sea<br/>
+		  I am the wave of the ocean<br/>
+		  I am the murmur of the billows</div>`,
 	
 		`I am Stag of Seven Tines<br/>
 	  I am a Hawk on a Cliff<br/>
@@ -181,7 +183,7 @@ let ogHero = localStorage.getItem('portrait')
 		`For centuries the laws were English within the Pale.`
 		,
 			`
-	In 1580 CE, Surrendered Gaelic Italian and Spanish forces were slaughtered at Ard na Caithne in Corca Dhuibhne, by lord Grey de Wilton.`
+	In <span style="color:white">1580 </span>CE, Surrendered Gaelic Italian and Spanish forces were slaughtered at Ard na Caithne in Corca Dhuibhne, by lord Grey de Wilton.`
 		,
 		`Poet Edmund Spencer, aide to Lord Grey, wrote to their Queen, regarding Irish:`
 		,
@@ -189,12 +191,12 @@ let ogHero = localStorage.getItem('portrait')
 		``
 		,
 
-		`By the middle of the 17th century, Gaelic Ireland's final strongholds had fallen. The Ulster chieftains were exiled, the Gaelic order ended.`,
+		`By the middle of the <span style="color:white">17</span>th century, Gaelic Ireland's final strongholds had fallen. The Ulster chieftains were exiled, the Gaelic order ended.`,
 	
-		`In the 19th century, Gaelic ways faced extinction. Those who stayed and survived spoke English. They rebelled again.`,
-		`There is not a thing wrong with speaking English.`,
-		`But when Irish is spoken,`,
-		`The whim | one's nature changes, to draw sense from the tongue.`,
+		`In the <span style="color:white">19</span>th century, Gaelic ways faced extinction. Those who stayed and survived spoke English. They rebelled again.`,
+		`Language isn't how we speak, it's how we think.`,
+		`But, `,
+		`The whim | one's nature need change, to draw sense from the tongue.`,
 		`An Irish future is in our hands now`,
 		`Let the risin people play`,
 		`.`,
@@ -376,7 +378,7 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 //thumbStart is a hack to prevent side effect of making question text fade out when player is at location 'geaga'.
 function thumbStart() { 
 	// document.querySelector(".champion-portrait").classList.add('fade-in-champ');
-	document.querySelector(".history-e").classList.add('fade-in-champ'); document.querySelector(".history-i").classList.add('fade-in-champ');
+	// document.querySelector(".history-e").classList.add('fade-in-champ'); document.querySelector(".history-i").classList.add('fade-in-champ');
 	// document.querySelector(".question-text").classList.add('fade-out-champ');
 
 } 
@@ -423,32 +425,37 @@ function thumbStart() {
 					
 
 <div  dangerouslySetInnerHTML= {{__html:irishText[ Math.floor(value * 100) + round.current * 100]}} x={100} y={100} id="n-id" className="history-i" textAnchor="middle" dy="0.3em" fontWeight="bold" ></div>
+</div>
+			
+{isOn ? (<div id="glass">
+< img  src={glass} className="question-img" rel="preload" id="glass-img" alt="glass bg for translucent overlay effect." />	
+			<div dangerouslySetInnerHTML={{ __html: engText[Math.floor(value * 100) + round.current * 100] }} x={100} y={100} id="e-id" className="history-e" style={{ opacity: isOn ? 1: 0}}></div>
 			
 
-<div  dangerouslySetInnerHTML= {{__html:engText[ Math.floor(value * 100) + round.current * 100]}} x={100} y={100} id="e-id" className="history-e" ></div>
-			
-					
-					
-				
-				<div className="binary-portrait-container">
-					
+
+
+
+{/* <p className={currentQuestion === 1 ? "choice-ring-0-hint" : "hidden"}>{choiceRingEng[value * 10]}</p> */}
+
+
+</div>) : null}
 
 				
-							
-					</div>
-				</div>
+					
+					
+{/* 	 */}
 
 				<div className="tut-ring-5-container">
 				<img id="tut-5" src={tutorial0} className="tutorial0 tut-ring5" alt="spinning arrow" /></div>
 	</div>				
 	<div className="ring-5-button-mash-container"> 
 			 
-			 <button  id="mash-5"className={ binaryID >=91? "button-mash-ring-5 circle":"hidden" } onClick={gaelChallenge} ></button>
+			 <button  id="mash-5"className={ binaryID >=91? "button-mash-ring-5 circle":"hidden" } onClick={() => props.handleInputSelect('gamepad')}></button>
 			</div>
 			<div id="ring-5-challenge-container"className="challenge-container">
 				<img id="gael-challenge-bg" src={gaelChallengeBG} alt="" />
 			</div>
-
+		
 			<button id="toggle-glass-btn" onClick={toggleIsOn} ><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 
 
