@@ -36,6 +36,19 @@ import {
 
 
 export default function Rings3(props) {
+
+	const [isOn, toggleIsOn] = useToggle();
+	function useToggle(initialValue = false) {
+		
+		const [value, setValue] = React.useState(initialValue);
+		const toggle = React.useCallback(() => {
+		  setValue(v => !v);
+		}, []);
+		localStorage.setItem("isOn", isOn)
+		console.log(localStorage.getItem('isOn'))
+		return [value, toggle];
+	  }
+
 	// let tullyP = document.getElementById('tully-p')
 
 	// document.getElementByClassName('names-i').style.opacity ="1";
@@ -53,13 +66,16 @@ let ogHero = localStorage.getItem('portrait')
 	var irishText = [
 		``,
 		``,
+
 		`Fadó fado...`,
 
-			`Bhí óileán foirísach, faoí Éirú Banba Fóladh`,
-			
-			`Aistir saighduirí Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.`,
+		`d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.`,
 		
-			`Chas draoithe Dé Danann stoirmacha i gcoinne na mBáid. <br/>D'freagra Amergín an dríocht le filíocht na Gael.`,
+		`Bhí trí banríonn in árd-fhlaitheas`,
+			`Éirú, Banba, Fóladh.`,
+		
+			
+			`Chas a dhraoithe stoirm i gcoinne forsaí naimhead taingaire. `,`D'freagair Amergín dríocht na hóileánn le filíocht na nGael`,
 			`<span style="font-family:aonchlo;font-weight: 900;">Am gaeth i m-muir <br/>
 		Am tond trethan<br/>
 		Am fuaim mara...</span>
@@ -79,41 +95,42 @@ let ogHero = localStorage.getItem('portrait')
 		`,
 		
 			`
-		Chiúnaigh an stoirm.
-		Bris na Míl Espáinaigh 
-		ar forsaí Dé Dannan.
-		`,
-			`Cúlaigh na Túithe 
-		agus lonnaigh na Mílaoisigh in Éireann.
+		Bhriseadh ar Ríthe na Tuaithe Dé Dannan.`,`
 		Bin tús cíannta Gaelach, de réir an finscéalíocht.`,
 		
 			`I <span style="color:palegoldenrod">1169 AD</span>, Lorg Rí theistithe Diarmait Mac Murchada cabhair galamhas Normánach chun éirí amach Laighean a chuir faoi chois.`
 			,
-			`Tapaidh Anraí II an deis úinéireacht a maíomh ar na ionnaíthe treascartha. Sin mar a thosnaigh 800 blíain Sasannachas in Éireann.`
+			`Maíomh Anraí II úinéireacht ar na bailte briste. Sin mar a thosnaigh Ríal Sasannach in Éireann.`
 			,
 		
-			`In aineoinn fachtasíocht mílata na cheadta blíana,
-		Faoí 1500AD, Ní raibh ríal Sassana ach i bheidhm tímpeal caisleán Átha Cliath.`
+			`Faoí 1500AD, Bhí ríal Sassana i bheidhm tímpeal caisleán Átha Cliath.`
 			,
 		
 			`
 		<span style="color:palegoldenrod">1580AD</span> <br/>
 		Slad Tiarna Grey de Wilton forsaí Gaelach Idálach agus Spánach i Ard na Caithne in Corca Dhuibhne.`
 			,
-			`Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá Bhanríonn  :`
+			`Bhí an file Edmund Spencer i láthar. Scríobh sé chuig a bhanríon i leith an Gaeilge:`
 			,
 		
-			`<h6>Soe that the speach being Irish,<br/> 
+			`<p style="font-family:anaphora">Soe that the speach being Irish,<br/> 
 		the hart must needes be Irishe; <br/>
 		for out of the aboundance of the hart,<br/> 
-		the tonge speaketh"</h6><br/>
-		<h6>A Veue of The Present State of Ireland</h6>`
+		the tonge speaketh"<br/>
+		A Veue of The Present State of Ireland</p>`
 			,
 			`Briseadh ar daingeannacha na Gael i <span style="color:goldenrod">1607AD</span>.
 			Díbríodh na Taoisaigh, 
 			agus bin an ord ársa Gaelach 
 		   briste ar deireadh.`,
-					
+		`Sa 19ú Aois, Bhí an Gaelachas ar imeal an bháis. Bhí Bearla acú siúd a d'fan agus a mhair. D'eirídar amach aríṡ.`,
+		`Níl rud ar bith mí cheart le Bearla a leabhairt`,
+		`Ach nuair leabhartar Gaeilge`	
+		, `Aithrítar an meoin, le cíal a bhainnt as an teanga.`,
+		
+		`Tá todhchaí an Gaeilge in ár lámha innú`,
+		`Éirímís 7 Imrímís`,
+					``
 		];
 	// let tullyPortrait = setPlayerIcon();
 	let engText = [
@@ -121,17 +138,16 @@ let ogHero = localStorage.getItem('portrait')
 		``,
 
 		`Long long ago...`,
-
-		`There was an island rainforest, Ruled by Éiru, Banba and Fóladh.`,
-	
 		` Amergin <br/>
 		 of the Bright Knees | Birth of Song <br/>
 		 Soldier of Spain <br/>
-		 Led his soldiers to the island.`, 
+		 adventured to a forest island`, 
 		 
+		`Three queens ruled there`,		
+		`Éiru, Banba, Fóladh.`,
 	
-		`Druids of Dannan hurled spells upon Amergín's ships.
-		His responded to their incantations is the origin of Gaelic verse`,
+		`Their Druids hurled a tempest against the ships of the prophesized enemy.`,`
+		Amergín responded to island magic with Gaelic verse`,
 	
 		`I am the wind which breaths upon the sea<br/>
 		 I am the wave of the ocean<br/>
@@ -149,34 +165,42 @@ let ogHero = localStorage.getItem('portrait')
 	   an Enchantment of Winds.`
 		,
 		`The kings of Dé Danann 
-	fell in single combat
-	 to the sons of Míl Espáine,
-	 and the fair folk
-	retreated into the Earth.`
+	fell with their forces
+	to the Milesians.`
+		,
+
+		`So began centuries of Gaelic civilization<br/>
+		So the legend goes.`,
+		
+	 
+		`In <span style="color:white">1169 CE</span>, deposed King Diarmait Mac Murchada solicited Norman Mercenaries to quell rebellion in Leinster.`
+		,
+		`King Henry II of England declared the quelled cities crown-land. So began English rule in Ireland.`
 		,
 	
-		`
-	Beseiged Gaelic Italian and Spanish forces were slaughtered at Ard na Caithne in Corca Dhuibhne, by lord Grey de Wilton.`
+		`For centuries the laws were English within the Pale.`
 		,
-		`After the massacre, Edmund Spencer wrote to his Queen, and explained Irish resistance to English rule:`
+			`
+	In 1580 CE, Surrendered Gaelic Italian and Spanish forces were slaughtered at Ard na Caithne in Corca Dhuibhne, by lord Grey de Wilton.`
+		,
+		`Poet Edmund Spencer, aide to Lord Grey, wrote to their Queen, regarding Irish:`
 		,
 	
-		`"Soe that the speach being Irish, 
-	the hart must needes be Irishe; 
-	for out of the aboundance of the hart, 
-	the tonge speaketh"<br/>
-	<h6>A Veue of The Present State of Ireland</h6>`
+		``
 		,
-		`By 1500 AD, despite centuries of military campaigning,
-		English law existed only around Dublin Castle.`
-		,
+
 		`By the middle of the 17th century, Gaelic Ireland's final strongholds had fallen. The Ulster chieftains were exiled, the Gaelic order ended.`,
 	
-	
-		`The struggle against the Forces of the English Crown continued in English, in a century of Gaelic extinction.`,
-		`When the tongue is Gaelic, what sayeth the heart ? `,
-	
-	`Continue revival`
+		`In the 19th century, Gaelic ways faced extinction. Those who stayed and survived spoke English. They rebelled again.`,
+		`There is not a thing wrong with speaking English.`,
+		`But when Irish is spoken,`,
+		`The whim | one's nature changes, to draw sense from the tongue.`,
+		`An Irish future is in our hands now`,
+		`Let the risin people play`,
+		`.`,
+
+
+
 ];
 	function gaelChallenge() { 
 		document.getElementById('dir-pad').style.opacity='1'
@@ -191,7 +215,7 @@ let ogHero = localStorage.getItem('portrait')
 		document.getElementById('bg-container-rings-5').style.opacity='0.5'
 		// document.getElementById('bg-container-rings-5').setAttribute.src = {darkFields}
 		document.getElementById('mash-5').style.display='none'	}
-	const [value, setValue] = React.useState(0.1);
+	const [value, setValue] = React.useState(0.01);
   const prevValue = React.useRef(0);
   const diff = React.useRef(0);
   const dir = React.useRef(0);
@@ -352,7 +376,7 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 //thumbStart is a hack to prevent side effect of making question text fade out when player is at location 'geaga'.
 function thumbStart() { 
 	// document.querySelector(".champion-portrait").classList.add('fade-in-champ');
-	document.querySelector(".numbers-e").classList.add('fade-in-champ'); document.querySelector(".numbers-i").classList.add('fade-in-champ');
+	document.querySelector(".history-e").classList.add('fade-in-champ'); document.querySelector(".history-i").classList.add('fade-in-champ');
 	// document.querySelector(".question-text").classList.add('fade-out-champ');
 
 } 
@@ -398,10 +422,10 @@ function thumbStart() {
 			
 					
 
-<div  dangerouslySetInnerHTML= {{__html:irishText[ Math.floor(value * 100) + round.current * 100]}} x={100} y={100} id="n-id" className="numbers-i" textAnchor="middle" dy="0.3em" fontWeight="bold" ></div>
+<div  dangerouslySetInnerHTML= {{__html:irishText[ Math.floor(value * 100) + round.current * 100]}} x={100} y={100} id="n-id" className="history-i" textAnchor="middle" dy="0.3em" fontWeight="bold" ></div>
 			
 
-<div  dangerouslySetInnerHTML= {{__html:engText[ Math.floor(value * 100) + round.current * 100]}} x={100} y={100} id="e-id" className="numbers-e" ></div>
+<div  dangerouslySetInnerHTML= {{__html:engText[ Math.floor(value * 100) + round.current * 100]}} x={100} y={100} id="e-id" className="history-e" ></div>
 			
 					
 					
@@ -424,6 +448,10 @@ function thumbStart() {
 			<div id="ring-5-challenge-container"className="challenge-container">
 				<img id="gael-challenge-bg" src={gaelChallengeBG} alt="" />
 			</div>
+
+			<button id="toggle-glass-btn" onClick={toggleIsOn} ><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
+
+
 		</>
 			);
 }

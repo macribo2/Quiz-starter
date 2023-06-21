@@ -362,7 +362,7 @@ z-index: 101;
   }
 }
 
-.names-e,.numbers-e{
+.names-e,.numbers-e, .history-e{
   position: fixed;
  top:80%;
   left: 2%;
@@ -375,7 +375,7 @@ z-index: 101;
 }
 
 
-.names-i, .numbers-i{
+.names-i, .numbers-i, .history-i{
   opacity: 0;
 /* top:5%; */
   font-size: 2em;
@@ -581,7 +581,7 @@ transform:scale(0.5)
 #lo-vis{
   opacity:0.01 
 }
-.numbers-e{
+.numbers-e,.history-e{
   opacity:1;
   animation:fade-in 3s forwards;
 
