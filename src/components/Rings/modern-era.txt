@@ -1,0 +1,60 @@
+
+			`I <span style="color:palegoldenrod">1169 AD</span>, Lorg Rí theistithe Diarmait Mac Murchada cabhair galamhas Normánach chun éirí amach Laighean a chuir faoi chois.`
+			,
+			`Maíomh Anraí II úinéireacht ar na bailte briste. Sin mar a thosnaigh Ríal Sasannach in Éireann.`
+			,
+		
+			`Faoí 1500AD, Bhí ríal Sassana i bheidhm tímpeal caisleán Átha Cliath.`
+			,
+		
+			`
+		<span style="color:palegoldenrod">1580AD</span> <br/>
+		Slad Tiarna Grey de Wilton forsaí Gaelach Idálach agus Spánach i Ard na Caithne in Corca Dhuibhne.`
+			,
+			`Bhí an file Edmund Spencer i láthar. Scríobh sé chuig a bhanríon i leith an Gaeilge:`
+			,
+		
+			`<p style="font-family:anaphora">Soe that the speach being Irish,<br/> 
+		the hart must needes be Irishe; <br/>
+		for out of the aboundance of the hart,<br/> 
+		the tonge speaketh"<br/>
+		A Veue of The Present State of Ireland</p>`
+			,
+			`Briseadh ar daingeannacha na Gael i <span style="color:goldenrod">1607AD</span>.
+			Díbríodh na Taoisaigh, 
+			agus bin an ord ársa Gaelach 
+		   briste ar deireadh.`,
+		`Sa 19ú Aois, Bhí an Gaelachas ar imeal an bháis. Bearla a bhí acú siúd a d'fan agus a mhair. D'eirídar amach arís.`,
+		``,
+		`Ach nuair leabhartar Gaeilge`	
+		, `Aithrítar an meoin, le cíal a bhainnt as an teanga.`,
+		
+		`Tá todhchaí an Gaeilge in ár lámha innú`,
+		`Éirímís 7 Imrímís`,
+
+				
+		`In <span style="color:white">1169 CE</span>, deposed King Diarmait Mac Murchada solicited Norman Mercenaries to quell rebellion in Leinster.`
+		,
+		`King Henry II of England declared the quelled cities crown-land. So began English rule in Ireland.`
+		,
+	
+		`For centuries the laws were English within the Pale.`
+		,
+			`
+	In <span style="color:white">1580 </span>CE, Surrendered Gaelic Italian and Spanish forces were slaughtered at Ard na Caithne in Corca Dhuibhne, by lord Grey de Wilton.`
+		,
+		`Poet Edmund Spencer, aide to Lord Grey, wrote to their Queen, regarding Irish:`
+		,
+	
+		``
+		,
+
+		`By the middle of the <span style="color:white">17</span>th century, Gaelic Ireland's final strongholds had fallen. The Ulster chieftains were exiled, the Gaelic order ended.`,
+	
+		`Famine all but silenced the Gaelic civilization <span style="color:white">19</span>th century, and those who survived spoke English.  They rebelled again.`,
+		`Language isn't how we speak, it's how we think.`,
+		`But, `,
+		`The whim | one's nature need change, to draw sense from the tongue.`,
+		`An Irish future is in our hands now`,
+		`Let the risin people play`,
+		`.`,

@@ -558,13 +558,13 @@ transform:scale(0.5)
   position: fixed;
   height: 100%;
   width: 100%;
-  top: 0;
-  left: 0;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  /* border: 14px solid orange; */
-
+  transform: scale(0.5);
+    top: 27%;
+    left: 36%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    /* border: 14px solid orange; */
 }
 
 .ring-text-container-5{
@@ -639,13 +639,18 @@ transform: scale(1.2);
 /* display:none; */
 }
 
+#tut-5{
+  transform:scale(0.5) 
 
+  /* position:fixed; */
+}
 #tutorial0{
   height:246px;
   width:auto;
   animation: spin 60s steps(128) infinite;
   position: relative;
   margin-top: 0%;
+
      
 }
 
@@ -757,6 +762,7 @@ align-items: center;
 display:flex;
 z-index: 33;
 animation: spin 60s steps(128) infinite;
+
 }
 
 @media only screen and (min-width: 1022px) {

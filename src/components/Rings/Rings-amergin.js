@@ -68,70 +68,226 @@ let ogHero = localStorage.getItem('portrait')
 		``,
 		``,
 
-		`Fadó fado...`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >Fadó fado...</span>`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >Fadó fado...</span>`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >Fadó fado...</span>`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >Fadó fado...</span>`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >Fadó fado...</span>`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >Fadó fado...</span>`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >Fadó fado...</span>`,
 
-		`d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.`,
+
+
+
+
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.</span>`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.</span>`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.</span>`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.</span>`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.</span>`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.</span>`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.</span>`,
 		
-		`Bhí trí banríonn ann in árd-fhlaitheas:`,
-			`Éirú, Banba, Fóladh.`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Bhí trí banríonn ann in árd-fhlaitheas:`,
+
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Bhí trí banríonn ann in árd-fhlaitheas:`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Bhí trí banríonn ann in árd-fhlaitheas:`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Bhí trí banríonn ann in árd-fhlaitheas:`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Bhí trí banríonn ann in árd-fhlaitheas:`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Bhí trí banríonn ann in árd-fhlaitheas:`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Bhí trí banríonn ann in árd-fhlaitheas:`,
+			`Éirú, Banba, Fóladh.</span>`,
+			`Éirú, Banba, Fóladh.</span>`,
+			`Éirú, Banba, Fóladh.</span>`,
+			`Éirú, Banba, Fóladh.</span>`,
+			`Éirú, Banba, Fóladh.</span>`,
+			`Éirú, Banba, Fóladh.</span>`,
+			`Éirú, Banba, Fóladh.</span>`,
 		
 			
-			`Chas a draoithe stoirm i gcoinne naimhead fad taingaire. `,`D'freagair Amergín dríocht na hóileánn le filíocht na nGael`,
-			`<br/><span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am gaeth i m-muir <br/>
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Chas a draoithe stoirm i gcoinne naimhead fad taingaire. </span>`, `D'freagair Amergín dríocht na hóileánn le filíocht na nGael</span>`,
+				
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Chas a draoithe stoirm i gcoinne naimhead fad taingaire. </span>`,`D'freagair Amergín dríocht na hóileánn le filíocht na nGael</span>`,	
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Chas a draoithe stoirm i gcoinne naimhead fad taingaire. </span>`,`D'freagair Amergín dríocht na hóileánn le filíocht na nGael</span>`,	
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Chas a draoithe stoirm i gcoinne naimhead fad taingaire. </span>`,`D'freagair Amergín dríocht na hóileánn le filíocht na nGael</span>`,	
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Chas a draoithe stoirm i gcoinne naimhead fad taingaire. </span>`,`D'freagair Amergín dríocht na hóileánn le filíocht na nGael</span>`,	
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Chas a draoithe stoirm i gcoinne naimhead fad taingaire. </span>`,`D'freagair Amergín dríocht na hóileánn le filíocht na nGael</span>`,	
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Chas a draoithe stoirm i gcoinne naimhead fad taingaire. </span>`, `D'freagair Amergín dríocht na hóileánn le filíocht na nGael</span>`,
+		
+
+			`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am gaeth i m-muir <br/>
 			&nbsp; &nbsp; &nbsp; &nbsp;Am tond trethan<br/>
 			&nbsp; &nbsp; &nbsp; &nbsp;Am fuaim mara...</span>
 		`,
-			`<br/><span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am dam seċt ndirend <br/>
+			
+		`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am gaeth i m-muir <br/>
+		&nbsp; &nbsp; &nbsp; &nbsp;Am tond trethan<br/>
+		&nbsp; &nbsp; &nbsp; &nbsp;Am fuaim mara...</span>
+	`,	`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am gaeth i m-muir <br/>
+	&nbsp; &nbsp; &nbsp; &nbsp;Am tond trethan<br/>
+	&nbsp; &nbsp; &nbsp; &nbsp;Am fuaim mara...</span>
+`,	`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am gaeth i m-muir <br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am tond trethan<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am fuaim mara...</span>
+`,	`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am gaeth i m-muir <br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am tond trethan<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am fuaim mara...</span>
+`,	`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am gaeth i m-muir <br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am tond trethan<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am fuaim mara...</span>
+`,	`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am gaeth i m-muir <br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am tond trethan<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am fuaim mara...</span>
+`,
+			
+			
+			
+			
+
+			
+`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am dam seċt ndirend <br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am séig i n-aill<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am dér gréne<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am cain lubai...</span>
+`,			
+
+			
+			`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am dam seċt ndirend <br/>
 			&nbsp; &nbsp; &nbsp; &nbsp;Am séig i n-aill<br/>
 			&nbsp; &nbsp; &nbsp; &nbsp;Am dér gréne<br/>
 			&nbsp; &nbsp; &nbsp; &nbsp;Am cain lubai...</span>
 		`,
+						
+
+			
+		`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am dam seċt ndirend <br/>
+		&nbsp; &nbsp; &nbsp; &nbsp;Am séig i n-aill<br/>
+		&nbsp; &nbsp; &nbsp; &nbsp;Am dér gréne<br/>
+		&nbsp; &nbsp; &nbsp; &nbsp;Am cain lubai...</span>
+	`,
+					
+
+			
+	`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am dam seċt ndirend <br/>
+	&nbsp; &nbsp; &nbsp; &nbsp;Am séig i n-aill<br/>
+	&nbsp; &nbsp; &nbsp; &nbsp;Am dér gréne<br/>
+	&nbsp; &nbsp; &nbsp; &nbsp;Am cain lubai...</span>
+`,
+				
+
+			
+`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am dam seċt ndirend <br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am séig i n-aill<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am dér gréne<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am cain lubai...</span>
+`,
+			
+
+			
+`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am dam seċt ndirend <br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am séig i n-aill<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am dér gréne<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am cain lubai...</span>
+`,
+			
+
+			
+`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am dam seċt ndirend <br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am séig i n-aill<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am dér gréne<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am cain lubai...</span>
+`,
 		
-			`<br/><span style=" animation:fade-in 0.5s forwards;font-family:aonchlo;">&nbsp; &nbsp; &nbsp; &nbsp;Am bri danae<br/>
+			`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" animation:fade-in 0.5s forwards;font-family:aonchlo;">&nbsp; &nbsp; &nbsp; &nbsp;Am bri danae<br/>
 			&nbsp; &nbsp; &nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
 			&nbsp; &nbsp; &nbsp; &nbsp;Am dé delbas <br/>
 			&nbsp; &nbsp; &nbsp; &nbsp;do ċind codnu...</span>
 		`,
-			`<br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
+					
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" animation:fade-in 0.5s forwards;font-family:aonchlo;">&nbsp; &nbsp; &nbsp; &nbsp;Am bri danae<br/>
+		&nbsp; &nbsp; &nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
+		&nbsp; &nbsp; &nbsp; &nbsp;Am dé delbas <br/>
+		&nbsp; &nbsp; &nbsp; &nbsp;do ċind codnu...</span>
+	`,		
+	`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" animation:fade-in 0.5s forwards;font-family:aonchlo;">&nbsp; &nbsp; &nbsp; &nbsp;Am bri danae<br/>
+	&nbsp; &nbsp; &nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
+	&nbsp; &nbsp; &nbsp; &nbsp;Am dé delbas <br/>
+	&nbsp; &nbsp; &nbsp; &nbsp;do ċind codnu...</span>
+`,		
+`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" animation:fade-in 0.5s forwards;font-family:aonchlo;">&nbsp; &nbsp; &nbsp; &nbsp;Am bri danae<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am dé delbas <br/>
+&nbsp; &nbsp; &nbsp; &nbsp;do ċind codnu...</span>
+`,		
+`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" animation:fade-in 0.5s forwards;font-family:aonchlo;">&nbsp; &nbsp; &nbsp; &nbsp;Am bri danae<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am dé delbas <br/>
+&nbsp; &nbsp; &nbsp; &nbsp;do ċind codnu...</span>
+`,		
+`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" animation:fade-in 0.5s forwards;font-family:aonchlo;">&nbsp; &nbsp; &nbsp; &nbsp;Am bri danae<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am dé delbas <br/>
+&nbsp; &nbsp; &nbsp; &nbsp;do ċind codnu...</span>
+`,		
+`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" animation:fade-in 0.5s forwards;font-family:aonchlo;">&nbsp; &nbsp; &nbsp; &nbsp;Am bri danae<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
+&nbsp; &nbsp; &nbsp; &nbsp;Am dé delbas <br/>
+&nbsp; &nbsp; &nbsp; &nbsp;do ċind codnu...</span>
+`,
+			`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
 			&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span>
 		`,
-		
-			`
-		Bhriseadh ar Ríthe na Tuaithe Dé Dannan.`,`
-		Bin tús cíannta Gaelach, de réir an finscéalíocht.`,
-		
-			`I <span style="color:palegoldenrod">1169 AD</span>, Lorg Rí theistithe Diarmait Mac Murchada cabhair galamhas Normánach chun éirí amach Laighean a chuir faoi chois.`
-			,
-			`Maíomh Anraí II úinéireacht ar na bailte briste. Sin mar a thosnaigh Ríal Sasannach in Éireann.`
-			,
-		
-			`Faoí 1500AD, Bhí ríal Sassana i bheidhm tímpeal caisleán Átha Cliath.`
-			,
-		
-			`
-		<span style="color:palegoldenrod">1580AD</span> <br/>
-		Slad Tiarna Grey de Wilton forsaí Gaelach Idálach agus Spánach i Ard na Caithne in Corca Dhuibhne.`
-			,
-			`Bhí an file Edmund Spencer i láthar. Scríobh sé chuig a bhanríon i leith an Gaeilge:`
-			,
-		
-			`<p style="font-family:anaphora">Soe that the speach being Irish,<br/> 
-		the hart must needes be Irishe; <br/>
-		for out of the aboundance of the hart,<br/> 
-		the tonge speaketh"<br/>
-		A Veue of The Present State of Ireland</p>`
-			,
-			`Briseadh ar daingeannacha na Gael i <span style="color:goldenrod">1607AD</span>.
-			Díbríodh na Taoisaigh, 
-			agus bin an ord ársa Gaelach 
-		   briste ar deireadh.`,
-		`Sa 19ú Aois, Bhí an Gaelachas ar imeal an bháis. Bhí Bearla acú siúd a d'fan agus a mhair. D'eirídar amach aríṡ.`,
-		`Níl rud ar bith mí cheart le Bearla a leabhairt`,
-		`Ach nuair leabhartar Gaeilge`	
-		, `Aithrítar an meoin, le cíal a bhainnt as an teanga.`,
-		
-		`Tá todhchaí an Gaeilge in ár lámha innú`,
-		`Éirímís 7 Imrímís`,
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
+		&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span>
+	`,
+	`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
+	&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span>
+`,			`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
+&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span>
+`,			`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
+&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span>
+`,			`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
+&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span>
+`,
+		`
+		<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Bhriseadh ar Ríthe na Tuaithe Dé Dannan.</span>`,
+		`
+		<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Bhriseadh ar Ríthe na Tuaithe Dé Dannan.</span>`,
+		`
+		<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Bhriseadh ar Ríthe na Tuaithe Dé Dannan.</span>`,
+		`
+		<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Bhriseadh ar Ríthe na Tuaithe Dé Dannan.</span>`,
+		`
+		<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Bhriseadh ar Ríthe na Tuaithe Dé Dannan.</span>`,
+		`
+		<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Bhriseadh ar Ríthe na Tuaithe Dé Dannan.</span>`,
+		`
+		<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;">Bhriseadh ar Ríthe na Tuaithe Dé Dannan.</span>`,
+
+		`<span style="font-family:aonchlo; animation:fade-in 0.5s forwards;">
+		Bin tús na cíannta Gaelach, de réir an finscéalíocht.</span>`,
+
+		`<span style="font-family:aonchlo; animation:fade-in 0.5s forwards;">
+		Bin tús na cíannta Gaelach, de réir an finscéalíocht.</span>`,
+
+		`<span style="font-family:aonchlo; animation:fade-in 0.5s forwards;">
+		Bin tús na cíannta Gaelach, de réir an finscéalíocht.</span>`,
+
+		`<span style="font-family:aonchlo; animation:fade-in 0.5s forwards;">
+		Bin tús na cíannta Gaelach, de réir an finscéalíocht.</span>`,
+
+		`<span style="font-family:aonchlo; animation:fade-in 0.5s forwards;">
+		Bin tús na cíannta Gaelach, de réir an finscéalíocht.</span>`,
+
+		`<span style="font-family:aonchlo; animation:fade-in 0.5s forwards;">
+		Bin tús na cíannta Gaelach, de réir an finscéalíocht.</span>`,
+
+		`<span style="font-family:aonchlo; animation:fade-in 0.5s forwards;">
+		Bin tús na cíannta Gaelach, de réir an finscéalíocht.</span>`,
+
+		`<span style="font-family:aonchlo; animation:fade-in 0.5s forwards;">
+		Bin tús na cíannta Gaelach, de réir an finscéalíocht.</span>`,
+	
 					``
 		];
 	// let tullyPortrait = setPlayerIcon();
@@ -148,7 +304,7 @@ let ogHero = localStorage.getItem('portrait')
 		`Three queens ruled there`,		
 		`Éiru, Banba, Fóladh.`,
 	
-		`Their Druids hurled a tempest against the ships of their long prophesized enemy.`,`
+		`Their Druids hurled a tempest against their long prophesized enemy.`,`
 		Amergín responded to island magic with Gaelic verse`,
 	
 		` I am the wind which breaths upon the sea<br/>
@@ -174,33 +330,7 @@ let ogHero = localStorage.getItem('portrait')
 		`So began centuries of Gaelic civilization<br/>
 		So the legend goes.`,
 		
-	 
-		`In <span style="color:white">1169 CE</span>, deposed King Diarmait Mac Murchada solicited Norman Mercenaries to quell rebellion in Leinster.`
-		,
-		`King Henry II of England declared the quelled cities crown-land. So began English rule in Ireland.`
-		,
-	
-		`For centuries the laws were English within the Pale.`
-		,
-			`
-	In <span style="color:white">1580 </span>CE, Surrendered Gaelic Italian and Spanish forces were slaughtered at Ard na Caithne in Corca Dhuibhne, by lord Grey de Wilton.`
-		,
-		`Poet Edmund Spencer, aide to Lord Grey, wrote to their Queen, regarding Irish:`
-		,
-	
-		``
-		,
-
-		`By the middle of the <span style="color:white">17</span>th century, Gaelic Ireland's final strongholds had fallen. The Ulster chieftains were exiled, the Gaelic order ended.`,
-	
-		`In the <span style="color:white">19</span>th century, Gaelic ways faced extinction. Those who stayed and survived spoke English. They rebelled again.`,
-		`Language isn't how we speak, it's how we think.`,
-		`But, `,
-		`The whim | one's nature need change, to draw sense from the tongue.`,
-		`An Irish future is in our hands now`,
-		`Let the risin people play`,
-		`.`,
-
+	 ``
 
 
 ];
@@ -217,7 +347,7 @@ let ogHero = localStorage.getItem('portrait')
 		document.getElementById('bg-container-rings-5').style.opacity='0.5'
 		// document.getElementById('bg-container-rings-5').setAttribute.src = {darkFields}
 		document.getElementById('mash-5').style.display='none'	}
-	const [value, setValue] = React.useState(0.01);
+	const [value, setValue] = React.useState(0.02);
   const prevValue = React.useRef(0);
   const diff = React.useRef(0);
   const dir = React.useRef(0);
@@ -388,7 +518,7 @@ function thumbStart() {
 
 		<>
 			<div className="gael-ring-0">
-		<img id="gael-ring-lens" rel="preload" src={outerLocation} className="question-img tullynally-zoom" alt="dark green fields background" />	
+		{/* <img id="gael-ring-lens" rel="preload" src={outerLocation} className="question-img tullynally-zoom" alt="dark green fields background" />	 */}
 			<div id="bg-container-rings-5" className="bg-container tullynally-zoom"><img src={ stoneBG} alt="geometric 8bit forest in a stone ring." /></div>
 			<div className="ring-5-binary-container">
 			
@@ -400,34 +530,10 @@ function thumbStart() {
 {/* <img src={lensCap} className="lens-cap" alt="a fantasy landscape a ring of stones, a haunted tree" /> */}
 			{/* </div> */}
 	 
-		
-			 
-			 <div id="ring-dial-5" className="ring-5-dial-container">
-			 <CircularInput value={value} className="dial dial5" onChange={tryValue}>
-				<CircularTrack
-				stroke="rgba(185,230,5,1)"
-						strokeWidth={'3px'}
-				/>
-				<CircularThumb  fill="rgba(204, 255, 153,1)"
-					stroke="rgba(255, 195, 0 ,1)" 	
-							strokeWidth={'3px'}/>
-			</CircularInput>
-			
-			
-
-
-			{/* <img src={ogHero === "9" ? avatar9 :empty} className="og-hero"  alt="hero portrait"/> */}
-			
-			</div>
-
-			<div className="ring-text-container-5" >
-			
-					
-
-<div  dangerouslySetInnerHTML= {{__html:irishText[ Math.floor(value * 100) + round.current * 100]}} x={100} y={100} id="n-id" className="history-i" textAnchor="middle" dy="0.3em" fontWeight="bold" ></div>
-</div>
-			
-{isOn ? (<div id="glass">
+			<div className="tut-ring-5-container">
+				<img id="tut-5" src={tutorial0} className="tutorial0 tut-ring5" alt="spinning arrow" />
+				</div>
+				{isOn ? (<div id="glass">
 < img  src={glass} className="question-img" rel="preload" id="glass-img" alt="glass bg for translucent overlay effect." />	
 			<div dangerouslySetInnerHTML={{ __html: engText[Math.floor(value * 100) + round.current * 100] }} x={100} y={100} id="e-id" className="history-e" style={{ opacity: isOn ? 1: 0}}></div>
 			
@@ -442,12 +548,43 @@ function thumbStart() {
 
 				
 					
+			 
+			 <div id="ring-dial-5" className="ring-5-dial-container">
+			 <CircularInput value={value} className="dial dial5" onChange={tryValue}>
+				<CircularTrack
+				stroke="rgba(185,230,5,1)"
+						strokeWidth={'3px'}
+				/>
+				<CircularThumb  fill="rgba(204, 255, 153,1)"
+					stroke="rgba(255, 195, 0 ,1)" 	
+							strokeWidth={'3px'}/>
+			</CircularInput>
+			
+			
+			<div className='toggle-glass-btn-container'>
+			<button id="toggle-glass-btn-history" onClick={toggleIsOn} ><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button></div>
+			</div>		
+
+
+			{/* <img src={ogHero === "9" ? avatar9 :empty} className="og-hero"  alt="hero portrait"/> */}
+			
+
+			</div>
+
+			<div className="ring-text-container-5" >
+			
+					
+
+<div  dangerouslySetInnerHTML= {{__html:irishText[ Math.floor(value * 100) + round.current * 100]}} x={100} y={100} id="n-id" className="history-i" textAnchor="middle" dy="0.3em" fontWeight="bold" ></div>
+</div>
+			
+
 					
 {/* 	 */}
 
-				<div className="tut-ring-5-container">
-				<img id="tut-5" src={tutorial0} className="tutorial0 tut-ring5" alt="spinning arrow" /></div>
-	</div>				
+				
+	
+			
 	<div className="ring-5-button-mash-container"> 
 			 
 			 <button  id="mash-5"className={ binaryID >=91? "button-mash-ring-5 circle":"hidden" } onClick={() => props.handleInputSelect('gamepad')}></button>
@@ -455,10 +592,7 @@ function thumbStart() {
 			<div id="ring-5-challenge-container"className="challenge-container">
 				<img id="gael-challenge-bg" src={gaelChallengeBG} alt="" />
 			</div>
-		
-			<button id="toggle-glass-btn" onClick={toggleIsOn} ><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
-
-
+	
 		</>
 			);
 }
