@@ -78,9 +78,7 @@ export default function Rings3(props) {
 
 	
 	let Ring3AnsEng = [
-		`
-		This is a ring`, 
-		`which turns | which sings`, 
+``,``,
 `which shines`,
 `which tells a story`,
 		`You'll find such things, around the country.`,
@@ -96,6 +94,7 @@ export default function Rings3(props) {
 
 
 	let Ring3Ans = [
+	
 		`Seo fáinne`,
 		`a chasann`,
 		`a lasann`,
@@ -277,7 +276,8 @@ export default function Rings3(props) {
 				{/* <img className={value*10 === 4 ? 'ripple':'hidden'} src={blackripple} alt="a digital peninsula" /> */}
 </div>		
 {isOn ? <img className="bg-glass"src={ bigGlass} alt="tinted overlay to dim background"/>:null}
-{isOn ? <p className="rings0Eng">{Ring3AnsEng[value * 10]}</p> : null}
+			{isOn ? <p className="rings0Eng"  dangerouslySetInnerHTML={{ __html: Ring3AnsEng[value * 10] }}></p> : null}
+			
 <div className='dial-container'>
 
 <CircularInput className="dial" value={value}  onChange={v => setValue3(stepValue3(v))}>{}
@@ -330,7 +330,7 @@ export default function Rings3(props) {
 
 
 			</div>
-<p className='rings1' >{Ring3Ans[value * 10]}</p>
+<p className='rings1'  dangerouslySetInnerHTML={{ __html: Ring3Ans[value * 10] }}></p>
 			
 			</>)
 };

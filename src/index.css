@@ -1037,8 +1037,8 @@ width: 100%;
   -webkit-animation: fade-in-dial 3s forwards;
           animation: fade-in-dial 3s forwards;
   z-index: 800;
-  height: 220px;
-  width: 220px;
+  height: 266px;
+  width: 266px;
   /* position: relative; */
   pointer-events: all;
 

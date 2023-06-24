@@ -41,7 +41,7 @@ font-family: 'anaphora';
 .tut-ring-5-container, .bg-container{
 	top: 27%;
     left: 36%;
-  transform: scale(0.5);
+  /* transform: scale(0.5); */
 
 }
 .bg-container{

@@ -211,9 +211,7 @@ animation: linux-land 5s steps(15) forwards;
   z-index: 9;
   margin-left:6%;
 }
-.dial{
-  /* transform:scale(1.2) */
-}
+
 
 .about-pics-container{
   /* transform:scale(0.8) */
@@ -411,9 +409,6 @@ top:5%;
         transform:scale(1.2);
         /* opacity:0.5 !important; */
       }
-      .dial4, .dial5{
-        transform:scale(1.2)
-      }
       
       .input-elements-container-5, .input-elements-container-8{
 
@@ -558,7 +553,6 @@ transform:scale(0.5)
   position: fixed;
   height: 100%;
   width: 100%;
-  transform: scale(0.5);
     top: 27%;
     left: 36%;
     justify-content: center;
@@ -640,7 +634,7 @@ transform: scale(1.2);
 }
 
 #tut-5{
-  transform:scale(0.5) 
+  /* transform:scale(0.5)  */
 
   /* position:fixed; */
 }
