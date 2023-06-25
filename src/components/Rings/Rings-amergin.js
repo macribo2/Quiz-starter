@@ -24,7 +24,18 @@ import fromSeven from '../../images/about2/stone-7.png'
 import glass from '../../images/big-glass.png';
 
 import champion99 from '../../images/champions/99.png'
+import slide0 from '../../images/about2/stone-0.png'
 
+import slide1 from '../../images/About1/storm.png'
+import slide2 from '../../images/About1/fi.png'
+import slide3 from '../../images/About1/0.png'
+import slide4 from '../../images/About1/1798.png'
+import slide5 from '../../images/About1/2.gif'
+import slide6 from '../../images/About1/2b.png'
+import slide7 from '../../images/About1/aisling-agus-aoife.png'
+import slide8 from '../../images/About1/4.gif'
+import slide9 from '../../images/About1/ceist2.png'
+import slide10 from '../../images/about2/stone-0.png'
 
 import './tully-nally-style.css';
 import './gael-ring.css';
@@ -38,6 +49,8 @@ import {
 
 export default function Rings3(props) {
 
+	const stepValue = v => Math.round(v * 10) / 10
+
 	const [isOn, toggleIsOn] = useToggle();
 	function useToggle(initialValue = false) {
 		
@@ -45,6 +58,7 @@ export default function Rings3(props) {
 		const toggle = React.useCallback(() => {
 		  setValue(v => !v);
 		}, []);
+		
 		localStorage.setItem("isOn", isOn)
 		console.log(localStorage.getItem('isOn'))
 		return [value, toggle];
@@ -65,348 +79,84 @@ export default function Rings3(props) {
 	}
 let ogHero = localStorage.getItem('portrait') 
 	var irishText = [
-		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >Fadó fado...</span>`,
-		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >Fadó fado...</span>`,
-		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >Fadó fado...</span>`,
-
-
-		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >Fadó fado...</span>`,
-		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >Fadó fado...</span>`,
-
+		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >&nbsp; &nbsp;Fadó fadó...</span>`,
+	
 
 		`<span style="font-family:aonchlo;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.</span>`,
-		`<span style="font-family:aonchlo;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.</span>`,
-		`<span style="font-family:aonchlo;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.</span>`,
-		`<span style="font-family:aonchlo;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.</span>`,
-		`<span style="font-family:aonchlo;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.</span>`,
-		
-		`<span style="font-family:aonchlo;">Bhí trí banríonn ann in árd-fhlaitheas:`,
-		`<span style="font-family:aonchlo;">Bhí trí banríonn ann in árd-fhlaitheas:`,
-		`<span style="font-family:aonchlo;">Bhí trí banríonn ann in árd-fhlaitheas:`,
-
-		`<span style="font-family:aonchlo;">Bhí trí banríonn ann in árd-fhlaitheas:`,
-		`<span style="font-family:aonchlo;">Bhí trí banríonn ann in árd-fhlaitheas:`,
-
-			`Éirú, Banba, Fóladh.</span>`,
-			`Éirú, Banba, Fóladh.</span>`,
-			`Éirú, Banba, Fóladh.</span>`,
-			`Éirú, Banba, Fóladh.</span>`,
-			`Éirú, Banba, Fóladh.</span>`,
-		
+	
+		`<span style="font-family:aonchlo;">Bhí trí banríonn ann in árd-fhlaitheas:<br/>
+		Éirú, Banba, Fóladh.</span>`,
+			
 			`<span style="font-family:aonchlo;">Chas a draoithe stoirm i gcoinne naimhead fad taingaire. </span>`,
-		`<span style="font-family:aonchlo;">Chas a draoithe stoirm i gcoinne naimhead fad taingaire. </span>`,
-		`<span style="font-family:aonchlo;">Chas a draoithe stoirm i gcoinne naimhead fad taingaire. </span>`,
-		`<span style="font-family:aonchlo;">Chas a draoithe stoirm i gcoinne naimhead fad taingaire. </span>`,
-		`<span style="font-family:aonchlo;">Chas a draoithe stoirm i gcoinne naimhead fad taingaire. </span>`,
-		
+
 		
 		`D'freagair Amergín dríocht na hóileánn le filíocht na nGael</span>`,
-		`D'freagair Amergín dríocht na hóileánn le filíocht na nGael</span>`,
-		`D'freagair Amergín dríocht na hóileánn le filíocht na nGael</span>`,
-		`D'freagair Amergín dríocht na hóileánn le filíocht na nGael</span>`,
-		`D'freagair Amergín dríocht na hóileánn le filíocht na nGael</span>`,
-		
+	
 `<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;"> &nbsp; &nbsp;Am gaeth i m-muir <br/>
  &nbsp; &nbsp;Am tond trethan<br/>
  &nbsp; &nbsp;Am fuaim mara...</span>
 `,	
-`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am gaeth i m-muir <br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am tond trethan<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am fuaim mara...</span>
-`,
-	`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am gaeth i m-muir <br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am tond trethan<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am fuaim mara...</span>
-`,
-	
-`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am gaeth i m-muir <br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am tond trethan<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am fuaim mara...</span>`
-,`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am gaeth i m-muir <br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am tond trethan<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am fuaim mara...</span>
-`,
 
-			
-`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am dam seċt ndirend <br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am séig i n-aill<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am dér gréne<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am cain lubai...</span>
+	`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp;Am dam seċt ndirend <br/>
+ &nbsp; &nbsp;Am séig i n-aill<br/>
+&nbsp; &nbsp;Am dér gréne<br/>
+&nbsp; &nbsp;Am cain lubai...</span>
 `,
 			
 
-			
-`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am dam seċt ndirend <br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am séig i n-aill<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am dér gréne<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am cain lubai...</span>
-`,
-			
 
-			
-`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am dam seċt ndirend <br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am séig i n-aill<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am dér gréne<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am cain lubai...</span>
-`,
-		
-`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" animation:fade-in 0.5s forwards;font-family:aonchlo;">&nbsp; &nbsp; &nbsp; &nbsp;Am bri danae<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am dé delbas <br/>
-&nbsp; &nbsp; &nbsp; &nbsp;do ċind codnu...</span>
-`,			
-`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;Am dam seċt ndirend <br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am séig i n-aill<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am dér gréne<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am cain lubai...</span>
-`,
-		
-`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" animation:fade-in 0.5s forwards;font-family:aonchlo;">&nbsp; &nbsp; &nbsp; &nbsp;Am bri danae<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am dé delbas <br/>
-&nbsp; &nbsp; &nbsp; &nbsp;do ċind codnu...</span>
+`<br/><span style="font-family:aonchlo;">&nbsp; &nbsp;Am bri danae<br/>
+&nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
+&nbsp; &nbsp;Am dé delbas <br/>
+&nbsp; &nbsp;do ċind codnu...</span>
+<span style="font-family:aonchlo;animation:fade-in 1.5s forwards;"><br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
+&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span>
 `,	
-
-
-`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" animation:fade-in 0.5s forwards;font-family:aonchlo;">&nbsp; &nbsp; &nbsp; &nbsp;Am bri danae<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am dé delbas <br/>
-&nbsp; &nbsp; &nbsp; &nbsp;do ċind codnu...</span>
-`,		
-`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" animation:fade-in 0.5s forwards;font-family:aonchlo;">&nbsp; &nbsp; &nbsp; &nbsp;Am bri danae<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am dé delbas <br/>
-&nbsp; &nbsp; &nbsp; &nbsp;do ċind codnu...</span>
-
-`,		
-
-`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" animation:fade-in 0.5s forwards;font-family:aonchlo;">&nbsp; &nbsp; &nbsp; &nbsp;Am bri danae<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am dé delbas <br/>
-&nbsp; &nbsp; &nbsp; &nbsp;do ċind codnu...</span>
-`,		
-`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" animation:fade-in 0.5s forwards;font-family:aonchlo;">&nbsp; &nbsp; &nbsp; &nbsp;Am bri danae<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
-&nbsp; &nbsp; &nbsp; &nbsp;Am dé delbas <br/>
-&nbsp; &nbsp; &nbsp; &nbsp;do ċind codnu...</span>
-
-`,	
-`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
-&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span>
-`,			`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
-&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span>
-`,			`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
-&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span>
-`,
-`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
-&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span>
-`,			`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;"><br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
-&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span>
-`,
 		`<span style="font-family:aonchlo;">Bhriseadh ar Ríthe na Tuaithe Dé Dannan.</span>`,
-		`
-		<span style="font-family:aonchlo;">Bhriseadh ar Ríthe na Tuaithe Dé Dannan.</span>`,
-		`
-		<span style="font-family:aonchlo;">Bhriseadh ar Ríthe na Tuaithe Dé Dannan.</span>`,
-
-		`
-		<span style="font-family:aonchlo;">Bhriseadh ar Ríthe na Tuaithe Dé Dannan.</span>`,
-		`
-		<span style="font-family:aonchlo;">Bhriseadh ar Ríthe na Tuaithe Dé Dannan.</span>`,
-
-
-		`<span style="font-family:aonchlo; ">
-		Bin tús na cíannta Gaelach, de réir an finscéalíocht.</span>`,
-
-		`<span style="font-family:aonchlo; ">
-		Bin tús na cíannta Gaelach, de réir an finscéalíocht.</span>`,
-
-		`<span style="font-family:aonchlo; ">
-		Bin tús na cíannta Gaelach, de réir an finscéalíocht.</span>`,
-
-		`<span style="font-family:aonchlo; ">
-		Bin tús na cíannta Gaelach, de réir an finscéalíocht.</span>`,
 
 		`<span style="font-family:aonchlo; ">
 		Bin tús na cíannta Gaelach, de réir an finscéalíocht.</span>`,
 		
-			``,``,``,``,``,``,``,``,``,
 		];
 	// let tullyPortrait = setPlayerIcon();
 	let engText = [
-		``,
-		``,
-		``,
+		
+		`&nbsp; Long long ago...`,
 
-
-
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-
-
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-
-		`Long long ago...`,
-		`Long long ago...`,
-		`Long long ago...`,
-
-		` Amergin of the Bright Knees | Birth of Song <br/>
+		
+		 ` Amergin of the Bright Knees <br/> Birth of Song <br/>
 		 Soldier of Spain <br/>
 		 adventured to a forest island`, 
-		 ` Amergin of the Bright Knees | Birth of Song <br/>
-		 Soldier of Spain <br/>
-		 adventured to a forest island`, 
-		 ` Amergin of the Bright Knees | Birth of Song <br/>
-		 Soldier of Spain <br/>
-		 adventured to a forest island`, 
-		 
-		`Three queens ruled there`,		
-		`Three queens ruled there`,		
-		`Three queens ruled there`,		
-		`Éiru, Banba, Fóladh.`,
-		 
-		`Éiru, Banba, Fóladh.`,
-		 
-		`Éiru, Banba, Fóladh.`,
+		 `Where three queens ruled <br/>
+		 Éiru, Banba, Fóladh.`,
 
-		`Their Druids hurled a tempest against their long prophesized enemy.`, `Their Druids hurled a tempest against their long prophesized enemy.`,
+	
 		`Their Druids hurled a tempest against their long prophesized enemy.`,`
 		Amergín responded to island magic with Gaelic verse`,
-		`
-		Amergín responded to island magic with Gaelic verse`,
-		`
-		Amergín responded to island magic with Gaelic verse`,
+				
 		` I am the wind which breaths upon the sea<br/>
 		  I am the wave of the ocean<br/>
 		  I am the murmur of the billows</div>`,
 		
-		  ` I am the wind which breaths upon the sea<br/>
-		  I am the wave of the ocean<br/>
-		  I am the murmur of the billows</div>`,
-		
-		  ` I am the wind which breaths upon the sea<br/>
-		  I am the wave of the ocean<br/>
-		  I am the murmur of the billows</div>`,
-		
-	
-		`I am Stag of Seven Tines<br/>
-	  I am a Hawk on a Cliff<br/>
-	  I am a beam of the sun<br/>
-	  I am the fairest of plants`,
-	  
-	  `I am Stag of Seven Tines<br/>
-	  I am a Hawk on a Cliff<br/>
-	  I am a beam of the sun<br/>
-	  I am the fairest of plants`,
-	 
+
 	  `I am Stag of Seven Tines<br/>
 	  I am a Hawk on a Cliff<br/>
 	  I am a beam of the sun<br/>
 	  I am the fairest of plants`,
 	  
-	  
+
 		`I am a word of science<br/>
-	   I am the point of the lance of battle`,
-		`...(I am) a Song on a Spear<br/>
-	   an Enchantment of Winds.`
-		,
-		  
-		`I am a word of science<br/>
-	   I am the point of the lance of battle`,
-		`...(I am) a Song on a Spear<br/>
+	   I am the point of the lance of battle<br/>
+	   ...(I am) a Song on a Spear<br/>
 	   an Enchantment of Winds.`
 		,  
-		`I am a word of science<br/>
-	   I am the point of the lance of battle`,
-		`...(I am) a Song on a Spear<br/>
-	   an Enchantment of Winds.`
-		,  
-		
-		`The kings of Dé Danann 
-	fell with their forces
-	to the Milesians.`
-		,
-		`The kings of Dé Danann 
-		fell with their forces
-		to the Milesians.`
-			,
-			`The kings of Dé Danann 
+					`The kings of Dé Danann 
 			fell with their forces
 			to the Milesians.`
 				,
-																					
-		`So began centuries of Gaelic civilization<br/>
-		So the legend goes.`,
-		`So began centuries of Gaelic civilization<br/>
-		So the legend goes.`,
-		`So began centuries of Gaelic civilization<br/>
-		So the legend goes.`,
 
-
-		``,``,``,``,``,``,``,``,``,
+		`So began centuries of Gaelic civilization<br/>
+		So the legend goes.`
 
 ];
 	function gaelChallenge() { 
@@ -430,7 +180,8 @@ let ogHero = localStorage.getItem('portrait')
 
   const max = 0.99;
   const min = 0;
-
+// if (stepValue > 10) { stepValue = 10 }
+// 		if (stepValue< 0 ){stepValue= 0}
   const valueWithinLimits = rv => {
     const v = Math.floor(rv * 100) / 100;
     console.log("v", v);
@@ -479,7 +230,9 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
     if (diff.current > 0.8) round.current--;
     if (diff.current < -0.8) round.current++;
     prevValue.current = v;
-    setValue(v);
+	  setValue(v);
+	  
+	  
   };
 	let binaryIcon = folamh;
 	let binaryID = Math.floor(value * 100);
@@ -608,13 +361,35 @@ function thumbStart() {
 			<div className="tut-ring-g-container">
 				<img id="tut-g" src={tutorial0} className="tutorial0 tut-ring5" alt="spinning arrow" />
 				</div>
+
+
+				<div  dangerouslySetInnerHTML= {{__html:irishText[ Math.floor(value* 10) + round.current * 100]}} x={100} y={100} id="n-id" className="history-i" textAnchor="middle" dy="0.3em" fontWeight="bold" ></div>
+
+
 				{isOn ? (<div id="glass">
 < img  src={glass} className="question-img" rel="preload" id="glass-img" alt="glass bg for translucent overlay effect." />	
-			<div dangerouslySetInnerHTML={{ __html: engText[Math.floor(value * 100) + round.current * 100] }} x={100} y={100} id="e-id" className="history-e" style={{ opacity: isOn ? 1: 0}}></div>
+			<div dangerouslySetInnerHTML={{ __html: engText[Math.floor(value * 10) + round.current * 100] }} x={100} y={100} id="e-id" className="history-e" style={{ opacity: isOn ? 1: 0}}></div>
 			
+			<div className="about-hist">{stepValue*10 === 0 ? <img src={slide0} alt="unix logo" /> : null}
+                    </div>
+                    <div className="about-hist">{stepValue*10=== 1 ? <img src={slide1} alt="unix logo" /> : null}
+                    </div>
+                    <div className="about-hist">{stepValue*10=== 2 ? <img className="slide" src={slide2} alt="linux logo" /> : null}
+                    </div>
+                    <div className="about-hist">{stepValue*10 === 3 ? <img src={slide3} alt="linux logo" /> : null}
+                    </div>
+                    <div className="about-hist">{stepValue*10=== 4 ? <img src={slide4} alt="slide illustritative of text." /> : null}
+                    </div>
+                    <div className="about-hist">{stepValue*10 === 5 ? <img src={slide5} alt="slide illustritative of text." /> : null}
+                    </div>
+                    <div className="about-hist">{stepValue*10 === 6 ? <img src={slide6} alt="slide illustritative of text." /> : null}
+                    </div>
 
-
-
+                    <div className="about-hist">{stepValue*10 === 7? <img src={slide7} alt="" /> : null}
+					</div>
+					<div className="about-hist">{stepValue*10 === 8? <img src={slide8} alt="" /> : null}
+                    </div>                    <div className="about-hist">{stepValue*10 === 9? <img src={slide9} alt="" /> : null}
+                    </div>
 
 {/* <p className={currentQuestion === 1 ? "choice-ring-0-hint" : "hidden"}>{choiceRingEng[value * 10]}</p> */}
 
@@ -624,8 +399,8 @@ function thumbStart() {
 				
 					
 			 
-			 <div id="ring-gael" className="ring-gael-dial-container">
-			 <CircularInput value={value} className="dial dial-gael" onChange={tryValue}>
+			 <div id="ring-gael" className="ring-gael-dial-container">			 <CircularInput value={stepValue(value)}
+		onChange={v => setValue(stepValue(v))}  className="dial dial-gael" >
 				<CircularTrack
 				stroke="#523f0d"
 						strokeWidth={'3px'}
@@ -633,7 +408,7 @@ function thumbStart() {
 				<CircularThumb  fill="#58511b"
 				/>
 			</CircularInput>
-			
+	
 			
 					<div className='toggle-glass-btn-container'>
 						{/* className={ value>=0.68 && value<= 1 || value>=0 && value<= 0.02 ?'tog-glass':'hidden'} */}
@@ -651,9 +426,6 @@ function thumbStart() {
 			<div className="ring-text-container-gael" >
 			
 					
-
-<div  dangerouslySetInnerHTML= {{__html:irishText[ Math.floor(value * 100) + round.current * 100]}} x={100} y={100} id="n-id" className="history-i" textAnchor="middle" dy="0.3em" fontWeight="bold" ></div>
-
 			
 			</div>
 			
