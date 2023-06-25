@@ -1,13 +1,4 @@
-@font-face {
-	font-family: urchlo;
-	src: url(../../fonts/urchlo.ttf);
-  }
-  @font-face {
-	font-family: aonchlo;
-	src: url(../../fonts/aonchlo.ttf);
-  }
 .gael-ring-0{
-	/* border:4px solid green; */
 	top:0;
 	position:fixed;
 	left: 0;
@@ -16,8 +7,8 @@ width: 100%;
 display: flex;
 padding:0;
 margin:0;
-justify-content: center;
-align-items:center;
+justify-content: left;
+align-items:left;
 
 }
 #gael-challenge-bg{
@@ -32,50 +23,74 @@ width: 100%;
 }
 .history-e{
 font-family: 'anaphora';
-	/* border: 4px solid green; */
-	/* display:none; */
-	z-index: 9;
-	width: 76%;
+z-index: 99;
+margin-left: 30%;
+margin-top:5%;	/* border: 4px solid green; */
+}
+#toggle-glass-btn-history{
+	height: 50px;
+    width: 50px;
+    /* border: 5px solid orange; */
+    position: fixed;
+    z-index: 9000;
+	bottom: 0%;
+    right: 5%;
+	background-color: rgba(0,0,0,0);
+	border-radius: 50%;
 }
 
-.tut-ring-5-container, .bg-container{
-	top: 27%;
-    left: 36%;
-  /* transform: scale(0.5); */
+.ring-text-container-gael{
 
-}
-.bg-container{
-	opacity:0.5
-}
-.history-i{
-	padding-top: 5%;
-    padding-left: 5%;
-/* font-family: 'urchlo'; */
-color:honeydew;	
-}
-.toggle-glass-btn-container{
 	pointer-events: none;
+    top: 5%;
+    left: 39%;
+    height: 100%;
+    width: 59%;
+    z-index: 9000;
+    position: fixed;
+}
+.ring-gael-dial-container, #bg-container-gael{
+
+	z-index: 1999;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	  top: 10%;
+	  left: 0%;
+	  justify-content:left;
+	  display: flex;
+	  align-items: left;
+	  /* border: 14px solid orange; */
+  }
+  #bg-container-gael{
+	opacity: 0;
+
+  }
+
+  .dial-gael{
+	animation: fade-in-dial 3s forwards;
+    z-index: 800;
+    height: 266px;
+    width: 315px;
+    /* position: relative; */
+    pointer-events: all;
+  }
+
+  .tut-ring-g-container{
+	position:fixed;
+	top:0;
+	left:0;
 	height:100%;
 	width:100%;
-	z-index: 50000;
-	position:fixed;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  justify-content: left;
+  align-items: center;
+  display:flex;
+  z-index: 998
+  
+  
+  }
 
-}
-
-	#toggle-glass-btn-history{
-
-	background-color: rgba(0, 0, 0, 0);
-	display: flex;
-	align-items: center;
-  justify-content: center;
-	width: 20%;
-	height: 20%;
-	/* border: 1px solid beige; */
-	/* opacity:0.5; */
-  margin:0;
-	padding: 0;
-	pointer-events: all;
-}
+  #tut-g{
+	/* animation: spin 60s steps(128) infinite; */
+display: none;
+  }

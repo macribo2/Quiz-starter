@@ -65,83 +65,6 @@ export default function Rings3(props) {
 	}
 let ogHero = localStorage.getItem('portrait') 
 	var irishText = [
-		``,
-		``,
-		``,
-
-
-
-
-
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-
-
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-
 		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >Fadó fado...</span>`,
 		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >Fadó fado...</span>`,
 		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >Fadó fado...</span>`,
@@ -489,17 +412,17 @@ let ogHero = localStorage.getItem('portrait')
 	function gaelChallenge() { 
 		document.getElementById('dir-pad').style.opacity='1'
 
-		document.getElementById('ring-dial-5').style.display='none'
+		document.getElementById('ring-gael').style.display='none'
 		document.getElementById('binary-portrait').style.display='none'
 		document.getElementById('gael-challenge-bg').style.display='block'
 		document.getElementById('gael-challenge-bg').classList.add('fade-in-champ')	
 		document.getElementById('n-id').innerHTML='Curdaigh gort a cúig';
 		document.getElementById('e-id').innerHTML='Search field five';
 
-		document.getElementById('bg-container-rings-5').style.opacity='0.5'
+		document.getElementById('bg-container-gael').style.opacity='0.5'
 		// document.getElementById('bg-container-rings-5').setAttribute.src = {darkFields}
 		document.getElementById('mash-5').style.display='none'	}
-	const [value, setValue] = React.useState(0.68);
+	const [value, setValue] = React.useState(0);
   const prevValue = React.useRef(0);
   const diff = React.useRef(0);
   const dir = React.useRef(0);
@@ -572,18 +495,18 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 		// tullyP.style.left = '60%'
 		
 		
-		document.getElementById('tut-5').classList.add('fade-out-champ')
+		document.getElementById('tut-g').classList.add('fade-out-champ')
 	}
 	if (binaryID >= 21 && binaryID <= 30){
 		// tullyP.style.transform = 'rotate(0deg)'
 		binaryIcon = fromOne;
 		// tullyP.style.top = '30%'
 		// tullyP.style.left = '56%'
-		document.getElementById('tut-5').classList.add('fade-out-champ')
+		document.getElementById('tut-g').classList.add('fade-out-champ')
 	}
 	if (binaryID >= 31 && binaryID <= 40){
 		// tullyP.style.transform = 'rotate(90deg)'
-		document.getElementById('tut-5').classList.add('fade-out-champ')
+		document.getElementById('tut-g').classList.add('fade-out-champ')
 
 		binaryIcon = fromTwo;
 
@@ -671,7 +594,7 @@ function thumbStart() {
 		<>
 			<div className="gael-ring-0">
 		{/* <img id="gael-ring-lens" rel="preload" src={outerLocation} className="question-img tullynally-zoom" alt="dark green fields background" />	 */}
-			<div id="bg-container-rings-5" className="bg-container tullynally-zoom"><img src={ stoneBG} alt="geometric 8bit forest in a stone ring." /></div>
+			<div id="bg-container-gael" className="bg-container tullynally-zoom"><img src={ stoneBG} alt="geometric 8bit forest in a stone ring." /></div>
 			<div className="ring-5-binary-container">
 			
 			{/* <img src={binaryIcon} id='binary-portrait' className="binary-portrait tullynally-zoom" alt="representation of binary numbers in stone" /> */}
@@ -682,8 +605,8 @@ function thumbStart() {
 {/* <img src={lensCap} className="lens-cap" alt="a fantasy landscape a ring of stones, a haunted tree" /> */}
 			{/* </div> */}
 	 
-			<div className="tut-ring-5-container">
-				<img id="tut-5" src={tutorial0} className="tutorial0 tut-ring5" alt="spinning arrow" />
+			<div className="tut-ring-g-container">
+				<img id="tut-g" src={tutorial0} className="tutorial0 tut-ring5" alt="spinning arrow" />
 				</div>
 				{isOn ? (<div id="glass">
 < img  src={glass} className="question-img" rel="preload" id="glass-img" alt="glass bg for translucent overlay effect." />	
@@ -701,8 +624,8 @@ function thumbStart() {
 				
 					
 			 
-			 <div id="ring-dial-5" className="ring-5-dial-container">
-			 <CircularInput value={value} className="dial dial5" onChange={tryValue}>
+			 <div id="ring-gael" className="ring-gael-dial-container">
+			 <CircularInput value={value} className="dial dial-gael" onChange={tryValue}>
 				<CircularTrack
 				stroke="#523f0d"
 						strokeWidth={'3px'}
@@ -712,8 +635,9 @@ function thumbStart() {
 			</CircularInput>
 			
 			
-			<div className='toggle-glass-btn-container'>
-						<button id="toggle-glass-btn-history" className={ value>=0.68 && value<= 1 || value>=0 && value<= 0.02 ?'tog-glass':'hidden'} onClick={toggleIsOn} ><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button></div>
+					<div className='toggle-glass-btn-container'>
+						{/* className={ value>=0.68 && value<= 1 || value>=0 && value<= 0.02 ?'tog-glass':'hidden'} */}
+						<button id="toggle-glass-btn-history"  onClick={toggleIsOn} ><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button></div>
 			
 				
 				</div>		
@@ -724,7 +648,7 @@ function thumbStart() {
 
 			</div>
 
-			<div className="ring-text-container-5" >
+			<div className="ring-text-container-gael" >
 			
 					
 
