@@ -5158,7 +5158,7 @@ storyTimer()
                 <Easca id="easca"/>
                 <div id="ui-container">
 
-cleite000
+
 {/* <img src={stats} alt="" className="stats"onClick={() => {
         if (this.state.statsVisible) {
             this.setState({ statsVisible: false })

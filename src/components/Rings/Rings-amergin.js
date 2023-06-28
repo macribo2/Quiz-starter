@@ -2,6 +2,7 @@
 import darkFields from '../../images/about2/stone-0.png'
 import { render } from "react-dom";
 import './gael-ring.css';
+import seas1 from '../../images/gael-ring/seas.gif'
 import React, { useState, useEffect } from 'react'
 import lens from '../../images/ciorcal-glass-light.png';
 import empty from '../../images/empty.png';
@@ -13,7 +14,6 @@ import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
 import stoneBG from '../../images/About1/ceist.png'
 import folamh from '../../images/about2/stone-0.png'
-import fromZero from '../../images/about2/stone-0.png'
 import fromOne from '../../images/about2/stone-1.png'
 import fromTwo from '../../images/about2/stone-2.png'
 import fromThree from '../../images/about2/stone-3.png'
@@ -21,17 +21,23 @@ import fromFour from '../../images/about2/stone-4.png'
 import fromFive from '../../images/about2/stone-5.png'
 import fromSix from '../../images/about2/stone-6.png'
 import fromSeven from '../../images/about2/stone-7.png'
+import boat from '../../images/gael-ring/boat.png'
 import glass from '../../images/big-glass.png';
 
 import champion99 from '../../images/champions/99.png'
-import slide0 from '../../images/about2/stone-0.png'
 
-import slide1 from '../../images/About1/storm.png'
-import slide2 from '../../images/About1/fi.png'
-import slide3 from '../../images/About1/0.png'
-import slide4 from '../../images/About1/1798.png'
-import slide5 from '../../images/About1/2.gif'
-import slide6 from '../../images/About1/2b.png'
+
+
+
+
+
+import slide0 from '../../images/gael-ring/fado.png'
+import slide1 from '../../images/gael-ring/tonnta3.gif'
+import slide2 from '../../images/gael-ring/queens.png'
+import slide3 from '../../images/gael-ring/storm.png'
+import slide4 from '../../images/gael-ring/storm.png'
+import slide5 from '../../images/gael-ring/storm.png'
+import slide6 from '../../images/gael-ring/ceist2.png'
 import slide7 from '../../images/About1/aisling-agus-aoife.png'
 import slide8 from '../../images/About1/4.gif'
 import slide9 from '../../images/About1/ceist2.png'
@@ -84,7 +90,7 @@ let ogHero = localStorage.getItem('portrait')
 
 		`<span style="font-family:aonchlo;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.</span>`,
 	
-		`<span style="font-family:aonchlo;">Bhí trí banríonn ann in árd-fhlaitheas:<br/>
+		`<span style="font-family:aonchlo;">Trí banríonn a bhí in árd-fhlaitheas ánn<br/>
 		Éirú, Banba, Fóladh.</span>`,
 			
 			`<span style="font-family:aonchlo;">Chas a draoithe stoirm i gcoinne naimhead fad taingaire. </span>`,
@@ -124,14 +130,14 @@ let ogHero = localStorage.getItem('portrait')
 		`&nbsp; Long long ago...`,
 
 		
-		 ` Amergin of the Bright Knees <br/> Birth of Song <br/>
+		 `Amergin of the Bright Knees <br/> Birth of Song,
 		 Soldier of Spain <br/>
-		 adventured to a forest island`, 
-		 `Where three queens ruled <br/>
+		 adventured to the island of Dé Dannan.`, 
+		 `Three queens were worshiped there<br/>
 		 Éiru, Banba, Fóladh.`,
 
 	
-		`Their Druids hurled a tempest against their long prophesized enemy.`,`
+		`Their Druids hurled a tempest against a long prophesized enemy.`,`
 		Amergín responded to island magic with Gaelic verse`,
 				
 		` I am the wind which breaths upon the sea<br/>
@@ -151,8 +157,7 @@ let ogHero = localStorage.getItem('portrait')
 	   an Enchantment of Winds.`
 		,  
 					`The kings of Dé Danann 
-			fell with their forces
-			to the Milesians.`
+			fell in battle.`
 				,
 
 		`So began centuries of Gaelic civilization<br/>
@@ -345,9 +350,30 @@ function thumbStart() {
 	return (
 
 		<>
+			
+
+		<div className={value * 10 === 5 ? "gael-bg" : "hidden"}>
+					<img rel="preload" className={value * 10 === 5 ? "sea-wave" : "hidden"} src={seas1} alt="" />
+					
+				</div>
+
+		<div className={value * 10 === 4 || value * 10 === 5 || value * 10 === 6 || value * 10 === 7  ? "gael-bg" : "hidden"}>
+					<img rel="preload" className= "sea-wave"  src={seas1} alt="" />
+					
+				</div>
 			<div className="gael-ring-0">
 		{/* <img id="gael-ring-lens" rel="preload" src={outerLocation} className="question-img tullynally-zoom" alt="dark green fields background" />	 */}
-			<div id="bg-container-gael" className="bg-container tullynally-zoom"><img src={ stoneBG} alt="geometric 8bit forest in a stone ring." /></div>
+		
+		
+		
+		{/* <div className={value * 10 === 4 ? "linux-lens-container" : "hidden"}>
+					<img rel="preload" className={value * 10 === 4 ? "map-lens" : "hidden"} src={storm1} alt="" />
+					
+				</div> */}
+				
+				
+		
+				<div id="bg-container-gael" className="bg-container tullynally-zoom"><img src={stoneBG} alt="geometric 8bit forest in a stone ring." /></div>
 			<div className="ring-5-binary-container">
 			
 			{/* <img src={binaryIcon} id='binary-portrait' className="binary-portrait tullynally-zoom" alt="representation of binary numbers in stone" /> */}
@@ -370,22 +396,24 @@ function thumbStart() {
 < img  src={glass} className="question-img" rel="preload" id="glass-img" alt="glass bg for translucent overlay effect." />	
 			<div dangerouslySetInnerHTML={{ __html: engText[Math.floor(value * 10) + round.current * 100] }} x={100} y={100} id="e-id" className="history-e" style={{ opacity: isOn ? 1: 0}}></div>
 			
-			<div className="about-hist">{stepValue*10 === 0 ? <img src={slide0} alt="unix logo" /> : null}
+			<div className="about-hist">{value*10 === 0 ? <img src={slide0} className="slide"alt="enegized stonet" /> : null}
                     </div>
-                    <div className="about-hist">{stepValue*10=== 1 ? <img src={slide1} alt="unix logo" /> : null}
+                    <div className="about-hist">{value*10=== 1 ? <img className="slide slide1"src={slide1} alt="waves" /> : null}
+					</div>
+					<div className="about-hist">{value*10=== 1 ? <img className="slide slide1b"src={boat} alt="waves" /> : null}
                     </div>
-                    <div className="about-hist">{stepValue*10=== 2 ? <img className="slide" src={slide2} alt="linux logo" /> : null}
+                    <div className="about-hist">{value*10=== 2 ? <img className="slide" src={slide2} alt="linux logo" /> : null}
                     </div>
-                    <div className="about-hist">{stepValue*10 === 3 ? <img src={slide3} alt="linux logo" /> : null}
+                    <div className="about-hist">{value*10 === 3 ? <img src={slide3} className="slide"alt="linux logo" /> : null}
                     </div>
-                    <div className="about-hist">{stepValue*10=== 4 ? <img src={slide4} alt="slide illustritative of text." /> : null}
+                    <div className="about-hist">{value*10=== 4 ? <img src={slide4} className="slide" alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about-hist">{stepValue*10 === 5 ? <img src={slide5} alt="slide illustritative of text." /> : null}
+                    <div className="about-hist">{value*10 === 5 ? <img src={slide5} className="slide"alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about-hist">{stepValue*10 === 6 ? <img src={slide6} alt="slide illustritative of text." /> : null}
+                    <div className="about-hist">{value*10 === 6 ? <img src={slide6} className="slide" alt="slide illustritative of text." /> : null}
                     </div>
 
-                    <div className="about-hist">{stepValue*10 === 7? <img src={slide7} alt="" /> : null}
+                    <div className="about-hist">{value*10 === 7? <img src={slide7} className="slide"alt="" /> : null}
 					</div>
 					<div className="about-hist">{stepValue*10 === 8? <img src={slide8} alt="" /> : null}
                     </div>                    <div className="about-hist">{stepValue*10 === 9? <img src={slide9} alt="" /> : null}

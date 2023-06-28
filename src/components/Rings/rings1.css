@@ -122,7 +122,7 @@
 .input-elements-container0,
 .input-elements-container2,
 .input-elements-container4,
-.input-elements-container3 {
+.input-elements-container3, .gael-bg {
   z-index: 99;
   position: fixed;
   height: 100%;

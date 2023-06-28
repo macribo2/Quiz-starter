@@ -23,12 +23,12 @@ width: 100%;
 } 
 .history-e{
 font-family: 'anaphora';
-margin-left: 26%;
+margin-left: 20%;
 margin-top: 4%;
 /* border: 4px solid green; */
-top: 22%;
-left: 24%;
-width: 43%;
+top: 2%;
+left: 22%;
+width: 55%;
 z-index: 99;
 }
 #toggle-glass-btn-history{
@@ -61,7 +61,7 @@ left:39%;}
 	position: fixed;
 	height: 100%;
 	width: 100%;
-    top: 20%;
+    top: 5%;
     left: 0%;
 	  justify-content:left;
 	  display: flex;
@@ -77,9 +77,11 @@ left:39%;}
 	animation: fade-in-dial 3s forwards;
     z-index: 800;
     height: 266px;
-    width: 315px;
-    /* position: relative; */
+    width: 266px;
+    position: fixed;
     pointer-events: all;
+  bottom:7%;
+  left:4%;
   }
 
   .tut-ring-g-container{
@@ -100,3 +102,38 @@ left:39%;}
 	/* animation: spin 60s steps(128) infinite; */
 display: none;
   }
+  .slide1{padding-top: 1%;
+  border-radius: 50%;
+  transform: scaleX(-1)
+   
+  }
+  .slide1b{
+    transform: scale(0.3);
+    position:relative;
+    /* border: 5px solid blue; */
+    top:10%;
+     animation: bobbing 2.5s steps(3) infinite alternate-reverse;
+  }
+
+    @keyframes bobbing{
+
+      0%{margin-top: 2%;}
+  
+      100%{margin-top:-2%}
+    }
+
+    .sea-wave{
+      /* border: 10px solid orange; */
+    z-index: 1;
+    position: fixed;
+      pointer-events: none;
+      height: 100%;
+ width: 100%;
+      /* border-left: 120px solid #2e292f; */
+      /* border-right: 120px solid #2e292f; */
+    
+    
+    }
+    .gael-bg {z-index: -1;
+      animation: fade-in 1s linear forwards;
+    }
