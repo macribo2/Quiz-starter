@@ -44,7 +44,7 @@ z-index: 99;
 }
 .history-i{width:63%;
   top:5%;
-left:39%;}
+left:37%;}
 .ring-text-container-gael{
 
 	pointer-events: none;
@@ -136,4 +136,44 @@ display: none;
     }
     .gael-bg {z-index: -1;
       animation: fade-in 1s linear forwards;
+    }
+    .button-mash-container-gael{
+      pointer-events: none;
+        z-index: 99;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        justify-content: left;
+        display: flex;
+        align-items:center;
+       /* border: 14px solid orange; */
+      
+      
+      
+    }
+    .button-mash-gael{
+
+      position: fixed;
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      opacity: 1;
+      background-color: rgba(0,0,0,0.0);
+      pointer-events: all;
+      left: 22%;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* border: 1px solid rgb(207,181,59); */
+    top: 56%;
+    }
+
+    .druids{
+      pointer-events: none;
+      height: 50%;
+      bottom: 0%;
+      position: fixed;
+      left: -6%;
+
     }

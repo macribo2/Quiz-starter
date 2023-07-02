@@ -208,7 +208,7 @@ export default function App() {
 	
 		{
 			// tosníonn an scéal anseo. 
-			questionText:  'Arsa '+ choiceRing[localStorage.getItem('portrait')]+' <br/>"Fill le fáinní."<br/><div id="delay-in">"Fillfaidh '+heroNames[localStorage.getItem('portrait')] +'" <br/>arsa '+  hn+'.</div>' ,
+			questionText:  'Arsa '+ choiceRing[localStorage.getItem('portrait')]+' <br/>"Fill le fáinne."<br/><div id="delay-in">"Fillfaidh '+heroNames[localStorage.getItem('portrait')] +'" <br/>arsa '+  hn+'.</div>' ,
 			answerOptions: [
 				
 			],

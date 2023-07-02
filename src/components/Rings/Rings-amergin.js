@@ -22,6 +22,10 @@ import fromFive from '../../images/about2/stone-5.png'
 import fromSix from '../../images/about2/stone-6.png'
 import fromSeven from '../../images/about2/stone-7.png'
 import boat from '../../images/gael-ring/boat.png'
+import druids from '../../images/gael-ring/druids.png'
+import deer from '../../images/gael-ring/deer.gif'
+import science from '../../images/gael-ring/science.gif'
+import wind from '../../images/gael-ring//wind.gif'
 import glass from '../../images/big-glass.png';
 
 import champion99 from '../../images/champions/99.png'
@@ -35,10 +39,10 @@ import slide0 from '../../images/gael-ring/fado.png'
 import slide1 from '../../images/gael-ring/tonnta3.gif'
 import slide2 from '../../images/gael-ring/queens.png'
 import slide3 from '../../images/gael-ring/storm.png'
-import slide4 from '../../images/gael-ring/storm.png'
-import slide5 from '../../images/gael-ring/storm.png'
-import slide6 from '../../images/gael-ring/ceist2.png'
-import slide7 from '../../images/About1/aisling-agus-aoife.png'
+import slide4 from '../../images/gael-ring/adaptive-icon.png'
+import slide5 from '../../images/gael-ring/adaptive-icon.png'
+import slide6 from '../../images/gael-ring/adaptive-icon.png'
+import slide7 from '../../images/gael-ring/adaptive-icon.png'
 import slide8 from '../../images/About1/4.gif'
 import slide9 from '../../images/About1/ceist2.png'
 import slide10 from '../../images/about2/stone-0.png'
@@ -138,7 +142,7 @@ let ogHero = localStorage.getItem('portrait')
 
 	
 		`Their Druids hurled a tempest against a long prophesized enemy.`,`
-		Amergín responded to island magic with Gaelic verse`,
+		Amergín answered island magic with Gaelic verse`,
 				
 		` I am the wind which breaths upon the sea<br/>
 		  I am the wave of the ocean<br/>
@@ -402,18 +406,19 @@ function thumbStart() {
 					</div>
 					<div className="about-hist">{value*10=== 1 ? <img className="slide slide1b"src={boat} alt="waves" /> : null}
                     </div>
-                    <div className="about-hist">{value*10=== 2 ? <img className="slide" src={slide2} alt="linux logo" /> : null}
+                    <div className="about-hist">{value*10=== 2 ? <img className="slide" src={slide2} alt="queen" /> : null}
                     </div>
-                    <div className="about-hist">{value*10 === 3 ? <img src={slide3} className="slide"alt="linux logo" /> : null}
-                    </div>
+                    <div className="about-hist">{value*10 === 3 ? <img src={slide3} className="slide"alt="storm" /> : null}
+					</div>
+					
                     <div className="about-hist">{value*10=== 4 ? <img src={slide4} className="slide" alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about-hist">{value*10 === 5 ? <img src={slide5} className="slide"alt="slide illustritative of text." /> : null}
+                    <div className="about-hist">{value*10 === 5 ? <img src={wind} className="slide"alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about-hist">{value*10 === 6 ? <img src={slide6} className="slide" alt="slide illustritative of text." /> : null}
+                    <div className="about-hist">{value*10 === 6 ? <img src={deer} className="slide" alt="slide illustritative of text." /> : null}
                     </div>
 
-                    <div className="about-hist">{value*10 === 7? <img src={slide7} className="slide"alt="" /> : null}
+                    <div className="about-hist">{value*10 === 7? <img src={science} className="slide"alt="" /> : null}
 					</div>
 					<div className="about-hist">{stepValue*10 === 8? <img src={slide8} alt="" /> : null}
                     </div>                    <div className="about-hist">{stepValue*10 === 9? <img src={slide9} alt="" /> : null}
@@ -461,13 +466,17 @@ function thumbStart() {
 					
 {/* 	 */}
 
-				
+{/* 				
 	
 			
 			<div id="ring-5-challenge-container"className="challenge-container">
 				<img id="gael-challenge-bg" src={gaelChallengeBG} alt="" />
-			</div>
-	
+			</div> */}
+			<div className="button-mash-container-gael">
+				<button className={value * 10 === 9 ? 'button-mash-gael circle' : 'hidden'}onClick={() => props.handleInputSelect('gamepad')} ></button></div>
+				
+			{isOn ? (<div className="about-hist druids">{value * 10 === 3 ? <img src={druids} className="druids" alt="druids" /> : null}
+			</div>): null}
 		</>
 			);
 }

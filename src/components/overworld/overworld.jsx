@@ -4432,17 +4432,19 @@ document.addEventListener('click',(e) =>
     win === ar ais go contae, xp + 100 .
     */
 
-
-        function helloTullyField5() { 
-            // alert('✓')
-
-/*we want to alert player that they have completed a quest, collected a ring. Also, inform them that they can rotate phone for new ui elements: Rings can be spent like in a pachinko- among the faries of dunnyshee: the prize being the return to Ireland of the avatar initially selected; As a reward, the player would be granted login password and credentials to be the author of their own ring/fort location. api includes input fields for ringfort name in english and Irish, 8 text strings and spaces for translation, and slots for 8 images; and a quiz questions + answers api for winning the ring of + location name.*/
+        function helloDunashee() { 
+            /*we want to alert player that they have completed a quest, collected a ring. Also, inform them that they can rotate phone for new ui elements: Rings can be spent like in a pachinko- among the faries of dunnyshee: the prize being the return to Ireland of the avatar initially selected; As a reward, the player would be granted login password and credentials to be the author of their own ring/fort location. api includes input fields for ringfort name in english and Irish, 8 text strings and spaces for translation, and slots for 8 images; and a quiz questions + answers api for winning the ring of + location name.*/
             narrativeCode = 34
             setTimeout(function () { 
                 $('.rotate-phone-container').css('display', 'flex')
                 $('.rotate-phone-container').fadeIn()
 
             },3000)
+        }
+        function helloTullyField5() { 
+            // alert('✓')
+
+
             
             // returnToCounty();
      $('.score-container').fadeIn()
@@ -5291,7 +5293,7 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
 
 
 
-                    <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'Said '+this.props.choiceRingEng+' "Return  with rings." "I will '+this.props.heroNameEng+'", said '+localStorage.getItem('hname')+'.'}</p>
+                    <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'Said '+this.props.choiceRingEng+' "Return  with a ring." "I will '+this.props.heroNameEng+'", said '+localStorage.getItem('hname')+'.'}</p>
 
                 <div className="ringOfFerna">
                     {/* <Rings7/> */}
