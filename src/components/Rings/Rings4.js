@@ -9,7 +9,7 @@ import emerald from '../../images/misc_crystal_new.png'
 import betweenFields from '../../images/realta.fdef7a42.gif'
 import tutorial0r from '../../images/tutorials/tutorial0r.png';
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
-import heroShadow from '../../images/stone-soup/hero-shadow-0.png'
+import heroShadow from '../../images/empty.png'
 import empty from '../../images/empty.png';
 import './rings1.css'
 import avatar1 from '../../images/players/spéirbhean0.gif';
@@ -547,7 +547,7 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 		document.querySelector(".names-e").classList.add('fade-in-champ'); document.querySelector(".names-i").classList.add('fade-in-champ');
 		document.querySelector(".question-text").classList.add('fade-out-champ');
 		document.querySelector(".tutorial0-container").classList.add('fade-out-champ');
-		document.querySelector(".button-mash-ring-4").classList.add('circle');	
+		// document.querySelector(".button-mash-ring-4").classList.add('circle');	
 	} 
 	
 
@@ -1206,7 +1206,7 @@ return (
 			</div>
 	  <div className="input-elements-container-8" >
 	  <img src={lens} id="lens" className="lens-ring4" alt="a glass lens" />
-			<CircularInput  value={value} className="dial dial4" onChange={tryValue}  >
+			<CircularInput  value={value} className="dial4" onChange={tryValue}  >
 				<CircularTrack
 				stroke="rgba(171,144,0,0)"
 						strokeWidth={'3px'}
@@ -1220,11 +1220,6 @@ return (
         <p x={100} y={100} className="names-i" textAnchor="middle" dy="0.3em" fontWeight="bold">
 					{hname = namesInIrish[Math.floor(value * 100) + round.current * 100]}
 				</p>
-				
-			{<p className="names-e">
-				{ namesInEnglish[ Math.floor(value * 100) + round.current * 100]}	
-				</p>}
-			
 
 			<img src={ogHero === "1" ?  avatar1  : empty} className="og-hero"  alt="hero portrait"/>
 			
@@ -1236,7 +1231,9 @@ return (
 			<img src={ogHero === "7" ? avatar7 :empty} className="og-hero"  alt="hero portrait"/>
 			<img src={ogHero === "8" ? avatar8 :empty} className="og-hero"  alt="hero portrait"/>
 			<img src={ogHero === "9" ? avatar9 :empty} className="og-hero"  alt="hero portrait"/>
-			
+			{<p className="names-e">
+		{ namesInEnglish[ Math.floor(value * 100) + round.current * 100]}	
+		</p>}
 			</div>
 			
 			
@@ -1250,17 +1247,20 @@ return (
 			
 				</button>
 				
+	
 			
 		
 
-				<img src={heroShadow} className="hero-shadow" alt="champion portrait" />
+				{/* <img src={heroShadow} className="hero-shadow" alt="champion portrait" /> */}
 		
 	  </div>
 
 		<p id="hints-ring-4" className={props.isOn ? "hints" : "hidden"}>{'Choose a champion, ' + props.heroNameEng}</p>
+		
+	
 
 			</>
 			);
-}
+		}
 
 

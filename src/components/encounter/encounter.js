@@ -1,7 +1,8 @@
+
 // import * as React from "react";
 import darkFields from '../../images/about2/stone-0.png'
 import { render } from "react-dom";
-import './gael-ring.css';
+// import './gael-ring.css';
 import mash from '../../images/gifs/mash.gif';
 import seas1 from '../../images/gael-ring/seas.gif'
 import React, { useState, useEffect } from 'react'
@@ -48,19 +49,22 @@ import slide8 from '../../images/About1/4.gif'
 import slide9 from '../../images/About1/ceist2.png'
 import slide10 from '../../images/about2/stone-0.png'
 
-import './tully-nally-style.css';
-import './gael-ring.css';
+// import './tully-nally-style.css';
+import '../Rings/gael-ring.css';
 import {
   CircularInput,
   CircularTrack,
   CircularThumb,
 } from "react-circular-input";
 
+import encounter from './encounters.json'
 
+export default function Encounter(props) {
+	// JSON.stringify(encounter0);
 
-export default function Rings3(props) {
+// alert( JSON.parse(encounter0))
 
-
+// alert(JSON.stringify(encounter[1].locationDescriptionGae[1]));
 	const stepValue = v => Math.round(v * 10) / 10
 
 	const [isOn, toggleIsOn] = useToggle();
@@ -89,87 +93,19 @@ export default function Rings3(props) {
 	function hideText() { 
 		alert();
 	}
-let ogHero = localStorage.getItem('portrait') 
-	var irishText = [
-		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >&nbsp; &nbsp;Fadó fadó...</span>`,
-	
+	let irishText = JSON.stringify(encounter[0].locationDescriptionGae)
+	let engText =  JSON.stringify(encounter[0].locationDescriptionEng)
+	 irishText = JSON.parse(irishText)
+	 engText = JSON.parse(engText)
 
-		`<span style="font-family:aonchlo;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.</span>`,
-	
-		`<span style="font-family:aonchlo;">Trí banríonn a bhí in árd-fhlaitheas ánn<br/>
-		Éirú, Banba, Fóladh.</span>`,
-			
-			`<span style="font-family:aonchlo;">Chas a draoithe stoirm i gcoinne naimhead fad taingaire. </span>`,
 
+	// for (let i = 0; i < locationDescriptionGae.length; i++) {
 		
-		`D'freagair Amergín dríocht na hóileánn le filíocht na nGael</span>`,
-	
-`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;"> &nbsp; &nbsp;Am gaeth i m-muir <br/>
- &nbsp; &nbsp;Am tond trethan<br/>
- &nbsp; &nbsp;Am fuaim mara...</span>
-`,	
-
-	`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp;Am dam seċt ndirend <br/>
- &nbsp; &nbsp;Am séig i n-aill<br/>
-&nbsp; &nbsp;Am dér gréne<br/>
-&nbsp; &nbsp;Am cain lubai...</span>
-`,
-			
-
-
-`<br/><span style="font-family:aonchlo;">&nbsp; &nbsp;Am bri danae<br/>
-&nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
-&nbsp; &nbsp;Am dé delbas <br/>
-&nbsp; &nbsp;do ċind codnu...</span>
-<span style="font-family:aonchlo;animation:fade-in 1.5s forwards;"><br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
-&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span>
-`,	
-		`<span style="font-family:aonchlo;">Bhriseadh ar Ríthe na Tuaithe Dé Dannan.</span>`,
-
-		`<span style="font-family:aonchlo; ">
-		Bin tús na cíannta Gaelach, de réir an finscéalíocht.</span>`,
-		
-		];
+	// 	irishText.push(locationDescriptionGae[i])
+	//  }
+// alert(locationDescriptionGae)
 	// let tullyPortrait = setPlayerIcon();
-	let engText = [
-		
-		`&nbsp; Long long ago...`,
-
-		
-		 `Amergin of the Bright Knees <br/> Birth of Song,
-		 Soldier of Spain <br/>
-		 adventured to the island of Dé Dannan.`, 
-		 `Three queens were worshiped there<br/>
-		 Éiru, Banba, Fóladh.`,
-
 	
-		`Their Druids hurled a tempest against a long prophesized enemy.`,`
-		Amergín answered island magic with Gaelic verse`,
-				
-		` I am the wind which breaths upon the sea<br/>
-		  I am the wave of the ocean<br/>
-		  I am the murmur of the billows</div>`,
-		
-
-	  `I am Stag of Seven Tines<br/>
-	  I am a Hawk on a Cliff<br/>
-	  I am a beam of the sun<br/>
-	  I am the fairest of plants`,
-	  
-
-		`I am a word of science<br/>
-	   I am the point of the lance of battle<br/>
-	   ...(I am) a Song on a Spear<br/>
-	   an Enchantment of Winds.`
-		,  
-					`The kings of Dé Danann 
-			fell in battle.`
-				,
-
-		`So began centuries of Gaelic civilization<br/>
-		So the legend goes.`
-
-];
 	function gaelChallenge() { 
 		document.getElementById('dir-pad').style.opacity='1'
 
@@ -351,7 +287,6 @@ function thumbStart() {
 	// document.querySelector(".question-text").classList.add('fade-out-champ');
 
 } 
-
 	
 	return (
 

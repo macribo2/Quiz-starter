@@ -40,24 +40,7 @@ export default function SettingsMenu(props) {
 	let isOn = props.isOn
 	 let tollDubh = [
 	
-		 'Taobh cùl an doras',
-		 'ní bheidh griann',
-		 'ní beidh bórd, ní beidh fíonn ',
-		 'Taobh cùl an doras ',
-		 'ní bheidh griann',
-		 'ní beidh bórd, ní beidh fíonn ',
-		 'Thainig sé',
-		 'treasna tonn',
-		 'Ó Thainig sé ',
-		 'Le eachaibh luath is iochar throm',
-		 'Thainig sé',
-		 'Thàinig seé, à Sasainn ann',
-		 `Le eachaibh luath is iochar throm`,
-		 `Ar eiginn ar n-eirigh as ar suain`,
-		 `Ar eiginn ar n-eirigh as ar suain`,
-		 `An Gaidheal 'sa leabaidh`,
-		 `An Gaidheal 'na shuain`,
-		 `Is ar eiginn ar n-eirigh`,
+			 `Is ar eiginn ar n-eirigh`,
 		 'as ar suain',
 		 ' ',
 		 ' '];

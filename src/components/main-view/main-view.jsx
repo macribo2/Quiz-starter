@@ -4,7 +4,7 @@ import React, { useState, Component } from 'react';
 import Sparkles from 'react-sparkle'
 import ding3 from '../../audio/ding3.wav'
 import SettingsMenu from '../../components/settings-menu/settings-menu'
-import glass from '../../images/big-glass.png';
+import glass from '../../images/big-glass1.png';
 import dirpad from '../../images/dirpad.png';
 import lens from '../../images/ciorcal-glass.png';
 import portrait from '../../images/vert-mode.png'

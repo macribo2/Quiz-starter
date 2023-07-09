@@ -12,7 +12,7 @@ import '../Rings/rings1.css';
 import emerald from '../../images/misc_crystal_new.png'
 import { Score }  from '../score/score'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
-import lens from '../../images/ciorcal-glass4.png';
+import lens from '../../images/fog4.png';
 import stats from '../../images/inv/stats.png';
 import disk from '../../images/inv/diskette.png';
 import chat from '../../images/inv/chat.png';
@@ -24,12 +24,13 @@ import promptVid from '../../images/stars.gif'
 import ciaroga from '../../images/players/agnes_new.png'
 import phone1 from '../../images/phone-0.png';
 import glass from '../../images/big-glass.png';
+import glassPortait from '../../images/big-glass-portrait.png';
 import defaultField from '../../images/localMaps/defaultField.png';
 import collinstown from '../../images/localMaps/collinstown.png';
 import fernaRiver from '../../images/localMaps/dungeonfog.png';
 import ferna from '../../images/localMaps/fearnasringfort.png';
 import statsMenu from '../../images/fog3.png';
-import invMenu from '../../images/inv/inv-bg.png';
+import invMenu from '../../images/vert-bg0.png';
 import diskMenu from '../../images/blackripple.gif';
 import Battle from '../battle/battle0'
 import EascaLocation from '../easca-location/easca-location'
@@ -423,7 +424,8 @@ export default class Overworld extends React.Component {
             inventoryVisible: false,
             showEascaLocation:true,
             // whereAmI: localStorage.getItem('whereAmI')
-            data:""
+            data: "",
+            speakWithDM:true
         }
 
     }
@@ -5131,7 +5133,7 @@ storyTimer()
                     {/* {this.state.showEascaLocation ? <EascaLocation whereAmI= "geaga" />:null} */}
 
                     <div id ="touch-hint-3-container" className="touch-hint-3-container">
-                        <div className='touch-hint-3 circle' onTouchEnd={this.helloHint0}></div>
+                        {/* <div className='touch-hint-3 circle' onTouchEnd={this.helloHint0}></div> */}
                     
                </div>
  
@@ -5155,14 +5157,13 @@ storyTimer()
                 <div className="portraitMode">
                    
                 <p id="gae-notes" > {gaeNotes[narrativeCode]}</p>
-                <p id="eng-notes" > {engNotes[narrativeCode]}</p>
 
                 <Easca id="easca"/>
                 <div id="ui-container">
 
-
+                    
 {/* <img src={stats} alt="" className="stats"onClick={() => {
-        if (this.state.statsVisible) {
+    if (this.state.statsVisible) {
             this.setState({ statsVisible: false })
 
 
@@ -5177,7 +5178,7 @@ storyTimer()
                 <p className="App-intro">{this.state.data}</p>
 
                         <img src={chat} id="chat" alt="chat button" rel="preload" className="inventory" onClick={() => {
-                           
+                            
                         $('#eng-notes').html('');
                             
                             $('#gae-notes').html('');
@@ -5234,7 +5235,7 @@ storyTimer()
                             <img className="bit" src={ bit}/>
                             </div>
                             <p id="readme">
-                                 
+                                
                                 {readme}
               <a>This project is a fork of https://www.freecodecamp.org/news/how-to-build-a-quiz-app-using-react/</a>
         
@@ -5261,7 +5262,54 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                         </div>
                     </div>                    
 <img rel="preload"src={ this.state.statsVisible? statsMenu: null} alt="" className="statsMenu" />                   
-<img rel="preload"src={this.state.inventoryVisible? invMenu: null } alt="" className="invMenu" />                 
+<img rel="preload"src={this.state.inventoryVisible? invMenu: null } alt="" className="invMenu" />   
+
+
+{this.state.isOn ? (<div id="glass">
+				
+                < img src={glassPortait} rel="preload"className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />
+                       
+                                <p id="eng-notes" > {engNotes[narrativeCode]}</p>
+                
+            </div>) : null}
+                    
+<div className='ui-container_directional-pad'>
+                <div className="directional-pad dir-pad-portrait-mode" id="dir-pad" onTouchStart={this.props.incrementScore} onTouchEnd={localStorage.setItem('whereAmI', 'westmeath')
+                }>
+
+
+                <div className='grid-container'>
+    
+    <div className="grid-item"></div>
+    
+    <div className="grid-item" ></div>
+    
+    <div className="grid-item" id="toggle-glass-btn2"><img src={this.state.isOn ? pearl : emerald} id="glass-btn-img" alt="a crystal or precious stone toggle on off button"   onClick={()=>{
+            if (this.state.isOn) {
+                this.setState({ isOn: false })
+                console.log("hi from toggle glass overworld portrait mode")
+                 }
+            else {
+                (this.setState({ isOn: true }))
+                console.log("hi from toggle glass portrait overworld")
+            }
+            {/* setTimeout(()=> { this.setState({ isOn: false }) }, 3000) */}
+                
+
+        
+        }}	 /></div>
+
+    <div className="grid-item"></div>
+
+            <div className="grid-item"></div>
+         
+</div>
+
+
+
+                </div>            
+                </div>
+
                 </div>
                 
                 <img id="inventory" rel="preload" src={invMenu}></img>
