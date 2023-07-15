@@ -548,6 +548,10 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 		document.querySelector(".question-text").classList.add('fade-out-champ');
 		document.querySelector(".tutorial0-container").classList.add('fade-out-champ');
 		// document.querySelector(".button-mash-ring-4").classList.add('circle');	
+		document.querySelector(".names-i").style.display='block';
+
+		document.querySelector(".names-i").classList.add('fade-in-champ');
+		// alert();
 	} 
 	
 
@@ -711,7 +715,7 @@ const [rng, setRng] = useState(Math.floor(Math.random()*3))
 		'man from Desmond (Co. Cork)',
 		'Lord',
 		'pointed',
-		'a Viking',
+		'Viking',
 		'old, ancient',
 		'steed',
 		'diminutive of Cu, meaning hound',
@@ -745,7 +749,7 @@ const [rng, setRng] = useState(Math.floor(Math.random()*3))
 		'little curly-haired one',
 		'of Tuama',
 		'fair-haired',
-		'art , craft',
+		'art, craft',
 		'fair lady',
 		'chief, noble, best',
 		'freedom',
@@ -1255,7 +1259,7 @@ return (
 		
 	  </div>
 
-		<p id="hints-ring-4" className={props.isOn ? "hints" : "hidden"}>{'Choose a champion, ' + props.heroNameEng}</p>
+		<p id="hints-ring-4" className={props.isOn ? "hints" : "hidden"}></p>
 		
 	
 

@@ -35,6 +35,60 @@ import diskMenu from '../../images/blackripple.gif';
 import Battle from '../battle/battle0'
 import EascaLocation from '../easca-location/easca-location'
 import rocks from '../../images/rocks.png'
+import place0 from '../../images/empty.png'
+import butter from '../../images/ai-art/places/butter.jpg'
+import tullyn from '../../images/ai-art/places/tullyn.jpg'
+import collin from '../../images/ai-art/places/collin.jpg';
+import corlis from '../../images/ai-art/places/corlis.jpg';
+import kilbeg from '../../images/ai-art/places/kilbeg.jpg'; 
+import mullin from '../../images/ai-art/places/mullin.jpg'; 
+import place7 from '../../images/ai-art/places/1.png'
+import place8 from '../../images/ai-art/places/1.png'
+import place9 from '../../images/ai-art/places/1.png'
+import place10 from '../../images/ai-art/places/1.png'
+import place11 from '../../images/ai-art/places/1.png'
+import place12 from '../../images/ai-art/places/1.png'
+import place13 from '../../images/ai-art/places/1.png'
+import place14 from '../../images/ai-art/places/1.png'
+import place15 from '../../images/ai-art/places/1.png'
+import place16 from '../../images/ai-art/places/1.png'
+import place17 from '../../images/ai-art/places/1.png'
+import place18 from '../../images/ai-art/places/1.png'
+import place19 from '../../images/ai-art/places/1.png'
+import place20 from '../../images/ai-art/places/1.png'
+import place21 from '../../images/ai-art/places/1.png'
+import place22 from '../../images/ai-art/places/1.png'
+import place23 from '../../images/ai-art/places/1.png'
+import place24 from '../../images/ai-art/places/1.png'
+import place25 from '../../images/ai-art/places/1.png'
+import place26 from '../../images/ai-art/places/1.png'
+import place27 from '../../images/ai-art/places/1.png'
+import place28 from '../../images/ai-art/places/1.png'
+import place29 from '../../images/ai-art/places/1.png'
+import place30 from '../../images/ai-art/places/1.png'
+import place31 from '../../images/ai-art/places/1.png'
+import place32 from '../../images/ai-art/places/1.png'
+import place33 from '../../images/ai-art/places/1.png'
+import place34 from '../../images/ai-art/places/1.png'
+import place35 from '../../images/ai-art/places/1.png'
+import place36 from '../../images/ai-art/places/1.png'
+import place37 from '../../images/ai-art/places/1.png'
+import place38 from '../../images/ai-art/places/1.png'
+import place39 from '../../images/ai-art/places/1.png'
+import place40 from '../../images/ai-art/places/1.png'
+import place41 from '../../images/ai-art/places/1.png'
+import place42 from '../../images/ai-art/places/1.png'
+import place43 from '../../images/ai-art/places/1.png'
+import place44 from '../../images/ai-art/places/1.png'
+import place45 from '../../images/ai-art/places/1.png'
+import place46 from '../../images/ai-art/places/1.png'
+import place47 from '../../images/ai-art/places/1.png'
+import place48 from '../../images/ai-art/places/1.png'
+import place49 from '../../images/ai-art/places/1.png'
+import place50 from '../../images/ai-art/places/1.png'
+import place51 from '../../images/ai-art/places/1.png'
+import place52 from '../../images/ai-art/places/1.png'
+import place53 from '../../images/ai-art/places/1.png'
 
 import gigakoops from '../../audio/Gigakoops - Level 2 - High Clouds.mp3'
 import jam from '../../audio/ultima-tone-long.wav'
@@ -48,7 +102,7 @@ import Rings1 from '../Rings/Rings1'
 import $ from 'jquery';
 import empty from "../../images/empty.png"
 import shamrocks from "../../images/overworld/shamrock.png"
-import geaga from "../../images/yin-yan.png"
+import geaga from "../../images/empty.png"
 //empty image for geaga beceause they're just handlers for player triggering geaga event. Geaga image now in geagaSprite
 import ringIcon from '../../images/gold.png'
 import blocked from '../../images/empty.png'
@@ -183,6 +237,8 @@ let overworldPortrait;
 let whereAmIHolder = 'null';
 let avatar = "";
 let showHint3 = false;
+let locationGraphic = place0;
+
 
 let secondLocation = "Dún Laoghaire";
 function setGeagaIcon(icon) { 
@@ -404,6 +460,8 @@ function setPlayerIcon() {
     }
 }
 
+
+
 function setNPCIcon(npc) {
     // let overworldPortrait = localStorage.getItem('portrait');
     
@@ -549,7 +607,8 @@ $('#hero').attr('src', setPlayerIcon());
             $("#tully-challenge-bg").fadeOut()
             // $("#tullynally-lens").fadeOut()
             
-$("#loc").html("")
+            $("#loc").html("")
+            locationGraphic = place0;
 $("#locEng").html("")
 $("#locEng").fadeOut()
             $('#btn-b').fadeOut();
@@ -590,7 +649,7 @@ $("#locEng").fadeOut()
             
             
             $('.location-title-card-text-container').fadeOut(3000,'linear');
-                $('.emblem-container').fadeOut(4000,'linear');
+                $('.emblem-container').fadeOut(2000,'linear');
             $('#hints-geaga').fadeOut();
                 if (showHint3 === true) { 
                     setTimeout(function () { 
@@ -3626,7 +3685,30 @@ $("#locEng").fadeIn()
             }
            
             $('#loc').html(newLocations[loc])
+            switch (newLocations[loc]) {
+                case '': locationGraphic = place0; break;
+                case "Baile na gCailleach": locationGraphic = collin; break;
+                case "Ráth na Féileacáin": locationGraphic = butter; break;
+                case "Tulaigh an Eallaigh": locationGraphic = tullyn; break;
+                case "Na Colúir": locationGraphic = corlis;  break;
+                case "Cill Ḃeagáin": locationGraphic = kilbeg; break;
+                case "An Muileann gCearr": locationGraphic = mullin; break;
+                // case '': break;
+                // case '': break;
+                // case '': break;
+                // case '': break;
+                // case '': break;
+                // case '': break;
+                // case '': break;
+                // case '': break;
+                // case '': break;
+                // case '': break;
+                // case '': break;
+                // case '': break;
+                // case '': break;
+                default: break;
 
+             }
             $('.big-btn-img').fadeIn();
             playerOverLocation = true;
         }
@@ -3634,6 +3716,7 @@ $("#locEng").fadeIn()
         function clearLocation() {
             $('#loc').html("")
             $('#locEng').html("")
+            locationGraphic = place0; 
 $("#locEng").fadeOut()
 
 $('#walkies-overlay').fadeIn();
@@ -3953,6 +4036,7 @@ alert("Chun troid!" )
         //   refresh();
         // jQuery.fx.off = false;
         function animatePlayer() {
+            
             let cellWidth = Math.floor(document.getElementById("stage").clientWidth / 10);
             let cellHeight = Math.floor(document.getElementById("stage").clientHeight / 10);
             console.log("Cell height and width from animatePlayer()"+cellHeight)
@@ -5065,7 +5149,8 @@ storyTimer()
 
         // playerFacing = imreoir.avatar;
 
-}
+
+    }
 
   
 
@@ -5146,7 +5231,18 @@ storyTimer()
                     <div id="event-report"></div>
                    							
                     <p className='eng-question-text'></p>
-                    
+                    <div className="location-graphic-container">
+                    {/* <div className="ui-container_b-btn">
+                    <BtnB  ></BtnB>
+ </div> */}
+                        <img src={ locationGraphic} className="location-graphic" alt="graphic of location"/>
+           
+           
+                        {  locationGraphic !== place0?	<div id="buttonmash" className="buttonmash-loc-graphic" >
+				
+						<div className = "circle"></div>
+					</div>:null}
+                    </div>
                 </div>) : null}
                 <Silken id="silken"></Silken>
                 <h2 id="output2"> "{ heroName}!"</h2>
@@ -5175,7 +5271,9 @@ storyTimer()
         }
     }}  />
      */}
-                <p className="App-intro">{this.state.data}</p>
+
+
+                        <p className="App-intro">{this.state.data}</p>
 
                         <img src={chat} id="chat" alt="chat button" rel="preload" className="inventory" onClick={() => {
                             
@@ -5189,21 +5287,7 @@ storyTimer()
                         this.setState({ diskVisible: false })
         }
                         }} />
-                        <img src={stats} onTouchStart={()=>{
-    this.setState({data: "true yo" })
-                        }}id="stats" alt="person button" rel="preload" className="person inventory" onClick={() => {
-                            crossSwords();
-                        {/* $('#eng-notes').html(''); */}
-                            setTimeout(function () {
-
-                            $('#easca').fadeIn() 
-
-                             },1000)
-
-                        if (this.state.diskVisible) {
-                        this.setState({ diskVisible: false })
-        }
-    }}  />
+             
 {/* <h1 id="" >⚔</h1> */}
     <img src={disk} alt="" className="disk" onClick={() => {
         if (this.state.diskVisible) {
@@ -5265,12 +5349,13 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
 <img rel="preload"src={this.state.inventoryVisible? invMenu: null } alt="" className="invMenu" />   
 
 
-{this.state.isOn ? (<div id="glass">
-				
+                    {this.state.isOn ? (<div id="glass">
+                       
+                        
                 < img src={glassPortait} rel="preload"className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />
                        
                                 <p id="eng-notes" > {engNotes[narrativeCode]}</p>
-                
+                              
             </div>) : null}
                     
 <div className='ui-container_directional-pad'>
@@ -5322,7 +5407,6 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                     
                     <div className="daff-container" >
                     {/* <img src={ rocks} className="rocks" alt="circle of rocks" /> */}
-                {/* <ReactRain className="react-rain" numDrops="200" /> */}
     
                     </div>:null}
 
@@ -5341,7 +5425,7 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
 
 
 
-                    <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'Said '+this.props.choiceRingEng+' "Return  with a ring." "I will '+this.props.heroNameEng+'", said '+localStorage.getItem('hname')+'.'}</p>
+                    <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'"Ipsum", says '+this.props.choiceRingEng+'. "Delor sit", says '+localStorage.getItem('hname')+'.'}</p>
 
                 <div className="ringOfFerna">
                     {/* <Rings7/> */}
@@ -5353,10 +5437,7 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                     
                     {/* <Rings5 heroName={this.props.heroName} heroNameEng={ this.props.heroNameEng} toggleIsOn={this.props.toggleIsOn} isOn={this.props.isOn} proceedThroughQuiz={this.props.proceedThroughQuiz } fadeOutNoOne={ this.fadeOutNoOne } /> */}
                     </div>
-          <div className="ui-container_b-btn">
-                    <BtnB id="b-btn" ></BtnB>
- </div>
-
+ 
 
 
  <div className='ui-container_directional-pad'>

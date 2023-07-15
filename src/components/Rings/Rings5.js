@@ -675,6 +675,7 @@ tullyP.style.transform = 'rotate(180deg)'
 //thumbStart is a hack to prevent side effect of making question text fade out when player is at location 'geaga'.
 function thumbStart() { 
 	document.querySelector(".champion-portrait").classList.add('fade-in-champ');
+	
 	document.querySelector(".numbers-e").classList.add('fade-in-champ'); document.querySelector(".numbers-i").classList.add('fade-in-champ');
 	document.querySelector(".question-text").classList.add('fade-out-champ');
 

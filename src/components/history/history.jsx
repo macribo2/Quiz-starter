@@ -2,8 +2,8 @@
 import React from 'react';
 import '../concept/concept.css'
 import './history.css';
-// import Rings3 from '../Rings/Rings-amergin'
-import Rings3 from '../encounter/encounter'
+import Rings3 from '../Rings/Rings-amergin'
+// import Rings3 from '../encounter/encounter'
 
 // import Rings3 from '../Rings/Rings3'
 import { Rings5 } from '../Rings/Rings5'

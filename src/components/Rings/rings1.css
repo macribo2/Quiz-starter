@@ -96,7 +96,7 @@
 }
 .button-mash-ring-4 {
 
-margin-left:15%;
+margin-left:12%;
 margin-bottom: 1%;
     align-items: center;
 /* position: fixed; */
@@ -387,12 +387,12 @@ z-index: 101;
 .names-i, .numbers-i, .history-i{
   /* opacity: 0; */
 /* top:5%; */
-  font-size: 1.7em;
+font-size: 4em;
   position: fixed;
   font-family: 'aonchlo';
   /* left:3%; */
       }
-
+.names-i{display: none;}
       .og-hero{
         transform: scale(.7);
         display: block !important;

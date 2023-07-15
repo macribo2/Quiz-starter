@@ -199,7 +199,7 @@ export default function App() {
 			
 		},
 		{
-			questionText: 'Roghnaigh féinnidh, ' + heroNames[localStorage.getItem('portrait')]+'. ',
+			questionText: '',
 			answerOptions: [
 				
 			],
@@ -208,7 +208,7 @@ export default function App() {
 	
 		{
 			// tosníonn an scéal anseo. 
-			questionText:  'Arsa '+ choiceRing[localStorage.getItem('portrait')]+' <br/>"Fill le fáinne."<br/><div id="delay-in">"Fillfaidh '+heroNames[localStorage.getItem('portrait')] +'" <br/>arsa '+  hn+'.</div>' ,
+			questionText:  '"Ipsum",<br/>arsa '+  hn+'.<div id="delay-in">"Dolor sit" <br/> arsa '+ choiceRing[localStorage.getItem('portrait')]+'.</div>' ,
 			answerOptions: [
 				
 			],

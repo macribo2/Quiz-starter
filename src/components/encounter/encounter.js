@@ -23,13 +23,14 @@ import fromFour from '../../images/about2/stone-4.png'
 import fromFive from '../../images/about2/stone-5.png'
 import fromSix from '../../images/about2/stone-6.png'
 import fromSeven from '../../images/about2/stone-7.png'
-import boat from '../../images/gael-ring/boat.png'
+import boat from '../../images/ai-art/boat.png'
 import druids from '../../images/gael-ring/druids.png'
 import deer from '../../images/gael-ring/deer.gif'
 import science from '../../images/gael-ring/science.gif'
 import wind from '../../images/gael-ring//wind.gif'
 import glass from '../../images/big-glass.png';
 
+import locationBG from  '../../images/big-glass.png'
 import champion99 from '../../images/champions/99.png'
 
 
@@ -49,7 +50,7 @@ import slide8 from '../../images/About1/4.gif'
 import slide9 from '../../images/About1/ceist2.png'
 import slide10 from '../../images/about2/stone-0.png'
 
-// import './tully-nally-style.css';
+import './encounter.css';
 import '../Rings/gael-ring.css';
 import {
   CircularInput,
@@ -60,11 +61,28 @@ import {
 import encounter from './encounters.json'
 
 export default function Encounter(props) {
-	// JSON.stringify(encounter0);
+let questionsGae =[
 
-// alert( JSON.parse(encounter0))
+	{
+		questionText: 'Lorem Ach tá tír mhór chumasach i gcóngaracht di agus tá fhios ag na	',
+		answerOptions: [
+			 { answerText: 'Clé', isCorrect: false },
+			 { answerText: 'Deas', isCorrect: false },
+			 { answerText: 'Soir', isCorrect: false },
+			 { answerText: 'Síos', isCorrect: true },
+		],
+	}]
+	let questionsEng =[
 
-// alert(JSON.stringify(encounter[1].locationDescriptionGae[1]));
+		{
+			questionText: 'and what do you say to that?',
+			answerOptions: [
+				 { answerText: 'left', isCorrect: false },
+				 { answerText: 'right', isCorrect: false },
+				 { answerText: 'east', isCorrect: false },
+				 { answerText: 'down', isCorrect: true },
+			],
+		}]
 	const stepValue = v => Math.round(v * 10) / 10
 
 	const [isOn, toggleIsOn] = useToggle();
@@ -170,7 +188,29 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 		
 	
 	}
+	const handleAnswerButtonClick = (isCorrect, storyPath) => {
+		// setIsFadedOut(false)
+		// alert('handleAnswer')
+		setTimeout(function () {
+			// setIsFadedOut(true)
+			
+			if (isCorrect) {
+				// setScore(score + 1)
+			}
+			localStorage.setItem('portrait', value * 10);
 
+			// const nextQuestion = currentQuestion + 1;
+			// setCurrentQuestion(nextQuestion);
+			
+		}, 50)
+		// console.log("currentQuestion" + currentQuestion)
+		console.log("value:" + value)
+		return (
+
+			{/* <ReactAudioPlayer src= {ding3}  autoPlay /> */}
+			
+		)
+	}
 	
   const updateValue = v => {
     diff.current = v - prevValue.current;
@@ -291,7 +331,7 @@ function thumbStart() {
 	return (
 
 		<>
-			
+{/* 			
 
 		<div className={value * 10 === 5 ? "gael-bg" : "hidden"}>
 					<img rel="preload" className={value * 10 === 5 ? "sea-wave" : "hidden"} src={seas1} alt="" />
@@ -301,7 +341,7 @@ function thumbStart() {
 		<div className={value * 10 === 4 || value * 10 === 5 || value * 10 === 6 || value * 10 === 7  ? "gael-bg" : "hidden"}>
 					<img rel="preload" className= "sea-wave"  src={seas1} alt="" />
 					
-				</div>
+				</div> */}
 			<div className="gael-ring-0">
 		{/* <img id="gael-ring-lens" rel="preload" src={outerLocation} className="question-img tullynally-zoom" alt="dark green fields background" />	 */}
 		
@@ -337,29 +377,29 @@ function thumbStart() {
 < img  src={glass} className="question-img" rel="preload" id="glass-img" alt="glass bg for translucent overlay effect." />	
 			<div dangerouslySetInnerHTML={{ __html: engText[Math.floor(value * 10) + round.current * 100] }} x={100} y={100} id="e-id" className="history-e" style={{ opacity: isOn ? 1: 0}}></div>
 			
-			<div className="about-hist">{value*10 === 0 ? <img src={slide0} className="slide"alt="enegized stonet" /> : null}
+			{/* <div className="about-hist">{value*10 === 0 ? <img src={slide0} className="slide"alt="enegized stonet" /> : null}
                     </div>
                     <div className="about-hist">{value*10=== 1 ? <img className="slide slide1"src={slide1} alt="waves" /> : null}
-					</div>
-					<div className="about-hist">{value*10=== 1 ? <img className="slide slide1b"src={boat} alt="waves" /> : null}
-                    </div>
-                    <div className="about-hist">{value*10=== 2 ? <img className="slide" src={slide2} alt="queen" /> : null}
+					</div> */}
+					{/* <div className="about-hist">{value*10=== 1 ? <img className="slide slide1b"src={boat} alt="waves" /> : null} */}
+                    {/* </div> */}
+                    {/* <div className="about-hist">{value*10=== 2 ? <img className="slide" src={slide2} alt="queen" /> : null}
                     </div>
                     <div className="about-hist">{value*10 === 3 ? <img src={slide3} className="slide"alt="storm" /> : null}
 					</div>
 					
                     <div className="about-hist">{value*10=== 4 ? <img src={slide4} className="slide" alt="slide illustritative of text." /> : null}
-                    </div>
-                    <div className="about-hist">{value*10 === 5 ? <img src={wind} className="slide"alt="slide illustritative of text." /> : null}
-                    </div>
-                    <div className="about-hist">{value*10 === 6 ? <img src={deer} className="slide" alt="slide illustritative of text." /> : null}
-                    </div>
+                    </div> */}
+                    {/* <div className="about-hist">{value*10 === 5 ? <img src={wind} className="slide"alt="slide illustritative of text." /> : null} */}
+                    {/* </div> */}
+                    {/* <div className="about-hist">{value*10 === 6 ? <img src={deer} className="slide" alt="slide illustritative of text." /> : null} */}
+                    {/* </div> */}
 
-                    <div className="about-hist">{value*10 === 7? <img src={science} className="slide"alt="" /> : null}
-					</div>
-					<div className="about-hist">{stepValue*10 === 8? <img src={slide8} alt="" /> : null}
+                    {/* <div className="about-hist">{value*10 === 7? <img src={science} className="slide"alt="" /> : null} */}
+					{/* </div> */}
+					{/* <div className="about-hist">{stepValue*10 === 8? <img src={slide8} alt="" /> : null}
                     </div>                    <div className="about-hist">{stepValue*10 === 9? <img src={slide9} alt="" /> : null}
-                    </div>
+                    </div> */}
 
 {/* <p className={currentQuestion === 1 ? "choice-ring-0-hint" : "hidden"}>{choiceRingEng[value * 10]}</p> */}
 
@@ -409,11 +449,48 @@ function thumbStart() {
 			<div id="ring-5-challenge-container"className="challenge-container">
 				<img id="gael-challenge-bg" src={gaelChallengeBG} alt="" />
 			</div> */}
-			<div className="button-mash-container-gael">
-				<button className={value * 10 === 9 ? 'mash' : 'hidden'} onClick={() => props.handleInputSelect('gamepad')} ><img className="mash-img" src={ mash} alt="gif of rings"/></button></div>
+			{/* <div className="button-mash-container-gael">
+				<button className={value * 10 === 9 ? 'mash' : 'hidden'} onClick={() => props.handleInputSelect('gamepad')} ><img className="mash-img" src={ mash} alt="gif of rings"/></button></div> */}
 				
-			{isOn ? (<div className="about-hist druids">{value * 10 === 3 ? <img src={druids} className="druids" alt="druids" /> : null}
-			</div>): null}
+			
+			{ 
+
+				
+			}
+			{/* {isOn ? (<div className="about-hist druids">{value * 10 === 3 ? <img src={druids} className="druids" alt="druids" /> : null}
+			</div>): null} */}
+
+
+			<div className={value * 10 === 9 ? 'question-section' : 'hidden'}>
+					
+					<div className='question-count'> 		
+						</div>
+						{/* <img src={ gradient} className="gradient"/> */}
+						
+				{!
+				isOn ? <>
+					<div dangerouslySetInnerHTML={{ __html: questionsGae[0].questionText }} className='question-text'></div>
+
+					<div className='answer-section'>
+						{questionsGae[0].answerOptions.map((answerOption, index) => (<button className="answers" key={index}
+							onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}
+								
+						>{answerOption.answerText}</button>))}
+					</div>
+				</> : <>
+					<div dangerouslySetInnerHTML={{ __html: questionsEng[0].questionText }} className='question-text'></div>
+
+					<div className='answer-section'>
+						{questionsEng[0].answerOptions.map((answerOption, index) => (<button className="answers" key={index}
+							onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}
+								
+						>{answerOption.answerText}</button>))}
+					</div>
+				</> }
+				 
+				
+				
+					</div>
 		</>
 			);
 }

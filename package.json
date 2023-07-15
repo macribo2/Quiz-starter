@@ -31,6 +31,7 @@
     "react-simple-keyboard": "^3.5.47",
     "react-sparkle": "^1.0.9",
     "sass": "^1.57.1",
+    "shortid": "^2.2.16",
     "url": "^0.11.0"
   },
   "scripts": {
@@ -40,9 +41,6 @@
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:5000",
-
-
-  
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -58,6 +56,4 @@
       "last 1 safari version"
     ]
   }
-
-
 }

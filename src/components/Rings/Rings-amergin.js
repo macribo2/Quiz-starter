@@ -22,7 +22,8 @@ import fromFour from '../../images/about2/stone-4.png'
 import fromFive from '../../images/about2/stone-5.png'
 import fromSix from '../../images/about2/stone-6.png'
 import fromSeven from '../../images/about2/stone-7.png'
-import boat from '../../images/gael-ring/boat.png'
+import boat from '../../images/ai-art/boat.png'
+import poem from '../../images/gael-ring/poem.gif'
 import druids from '../../images/gael-ring/druids.png'
 import deer from '../../images/gael-ring/deer.gif'
 import science from '../../images/gael-ring/science.gif'
@@ -94,9 +95,9 @@ let ogHero = localStorage.getItem('portrait')
 		`<span style="font-family:aonchlo;animation:fade-in 0.5s forwards;" >&nbsp; &nbsp;Fadó fadó...</span>`,
 	
 
-		`<span style="font-family:aonchlo;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Tuaithe Dé Danann.</span>`,
+		`<span style="font-family:aonchlo;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Túatha Dé Danann.</span>`,
 	
-		`<span style="font-family:aonchlo;">Trí banríonn a bhí in árd-fhlaitheas ánn<br/>
+		`<span style="font-family:aonchlo;">Ag na Túatha bhí trí Banríon<br/>
 		Éirú, Banba, Fóladh.</span>`,
 			
 			`<span style="font-family:aonchlo;">Chas a draoithe stoirm i gcoinne naimhead fad taingaire. </span>`,
@@ -104,30 +105,40 @@ let ogHero = localStorage.getItem('portrait')
 		
 		`D'freagair Amergín dríocht na hóileánn le filíocht na nGael</span>`,
 	
-`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;"> &nbsp; &nbsp;Am gaeth i m-muir <br/>
+`<br/>
+
+<div className="poem">
+
+<span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp;Am gaeth i m-muir <br/>
  &nbsp; &nbsp;Am tond trethan<br/>
  &nbsp; &nbsp;Am fuaim mara...</span>
+</div>
+
 `,	
 
-	`<br/><span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp;Am dam seċt ndirend <br/>
+	`
+	<div className="poem">
+	<span style="font-family:aonchlo;font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp;Am dam seċt ndirend <br/>
  &nbsp; &nbsp;Am séig i n-aill<br/>
 &nbsp; &nbsp;Am dér gréne<br/>
 &nbsp; &nbsp;Am cain lubai...</span>
-`,
+</div>`,
 			
 
 
-`<br/><span style="font-family:aonchlo;">&nbsp; &nbsp;Am bri danae<br/>
+`
+<div className="poem">
+<span style="font-family:aonchlo;">&nbsp; &nbsp;Am bri danae<br/>
 &nbsp; &nbsp;Am bri i fodb fras feoċtu<br/>
 &nbsp; &nbsp;Am dé delbas <br/>
 &nbsp; &nbsp;do ċind codnu...</span>
 <span style="font-family:aonchlo;animation:fade-in 1.5s forwards;"><br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
-&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span>
+&nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span></div>
 `,	
-		`<span style="font-family:aonchlo;">Bhriseadh ar Ríthe na Tuaithe Dé Dannan.</span>`,
+		`<span style="font-family:aonchlo;position:fixed;left:40%;width:55%;top:30%">Bhriseadh ar Ríthe <br/> Túatha Dé Danann.</span>`,
 
-		`<span style="font-family:aonchlo; ">
-		Bin tús na cíannta Gaelach, de réir an finscéalíocht.</span>`,
+		`<span style="font-family:aonchlo; position:fixed;left:40%;width:55%;top: 15%;%">
+		Bin tús na cíannta Gaelach, de réir finscéal.</span>`,
 		
 		];
 	// let tullyPortrait = setPlayerIcon();
@@ -139,11 +150,11 @@ let ogHero = localStorage.getItem('portrait')
 		 `Amergin of the Bright Knees <br/> Birth of Song,
 		 Soldier of Spain <br/>
 		 adventured to the island of Dé Dannan.`, 
-		 `Three queens were worshiped there<br/>
+		 `The tribes had three queens<br/>
 		 Éiru, Banba, Fóladh.`,
 
 	
-		`Their Druids hurled a tempest against a long prophesized enemy.`,`
+		`Their Druids hurled a tempest against the long prophesized enemy.`,`
 		Amergín answered island magic with Gaelic verse`,
 				
 		` I am the wind which breaths upon the sea<br/>
@@ -166,8 +177,8 @@ let ogHero = localStorage.getItem('portrait')
 			fell in battle.`
 				,
 
-		`So began centuries of Gaelic civilization<br/>
-		So the legend goes.`
+		`So began centuries of Gaelic civilization,<br/>
+		according to legend.`
 
 ];
 	function gaelChallenge() { 
@@ -363,7 +374,7 @@ function thumbStart() {
 					
 				</div>
 
-		<div className={value * 10 === 4 || value * 10 === 5 || value * 10 === 6 || value * 10 === 7  ? "gael-bg" : "hidden"}>
+		<div className={value * 10 === 3 || value * 10 === 4 || value * 10 === 5 || value * 10 === 6 || value * 10 === 7  ? "gael-bg" : "hidden"}>
 					<img rel="preload" className= "sea-wave"  src={seas1} alt="" />
 					
 				</div>
@@ -394,9 +405,24 @@ function thumbStart() {
 				<img id="tut-g" src={tutorial0} className="tutorial0 tut-ring5" alt="spinning arrow" />
 				</div>
 
-
-				<div  dangerouslySetInnerHTML= {{__html:irishText[ Math.floor(value* 10) + round.current * 100]}} x={100} y={100} id="n-id" className="history-i" textAnchor="middle" dy="0.3em" fontWeight="bold" ></div>
-
+	 
+				<div id="ring-gael" className="ring-gael-dial-container">			 <CircularInput value={stepValue(value)}
+		onChange={v => setValue(stepValue(v))}  className="dial dial-gael" >
+				<CircularTrack
+				stroke="#523f0d"
+						strokeWidth={'3px'}
+				/>
+				<CircularThumb  fill="#58511b"
+				/>
+			</CircularInput>
+	
+			
+			
+				
+				</div>
+				<div className={value*10===5 || value*10===6 || value*10===7 ?"song":'tales'}>
+				<div  dangerouslySetInnerHTML= {{__html:irishText[ Math.floor(value* 10) + round.current * 100]}} x={100} y={100} id="n-id" className={value===0?"history-i long-style":"history-i" }textAnchor="middle" dy="0.3em" fontWeight="bold" ></div>
+				</div>
 
 				{isOn ? (<div id="glass">
 < img  src={glass} className="question-img" rel="preload" id="glass-img" alt="glass bg for translucent overlay effect." />	
@@ -413,7 +439,7 @@ function thumbStart() {
                     <div className="about-hist">{value*10 === 3 ? <img src={slide3} className="slide"alt="storm" /> : null}
 					</div>
 					
-                    <div className="about-hist">{value*10=== 4 ? <img src={slide4} className="slide" alt="slide illustritative of text." /> : null}
+                    <div className="about-hist">{value*10 === 4 ? <img src={poem} className="slide slide-amergin	" alt="Amergín." /> : null}
                     </div>
                     <div className="about-hist">{value*10 === 5 ? <img src={wind} className="slide"alt="slide illustritative of text." /> : null}
                     </div>
@@ -423,6 +449,7 @@ function thumbStart() {
                     <div className="about-hist">{value*10 === 7? <img src={science} className="slide"alt="" /> : null}
 					</div>
 					<div className="about-hist">{stepValue*10 === 8? <img src={slide8} alt="" /> : null}
+			
                     </div>                    <div className="about-hist">{stepValue*10 === 9? <img src={slide9} alt="" /> : null}
                     </div>
 
@@ -433,24 +460,6 @@ function thumbStart() {
 
 				
 					
-			 
-			 <div id="ring-gael" className="ring-gael-dial-container">			 <CircularInput value={stepValue(value)}
-		onChange={v => setValue(stepValue(v))}  className="dial dial-gael" >
-				<CircularTrack
-				stroke="#523f0d"
-						strokeWidth={'3px'}
-				/>
-				<CircularThumb  fill="#58511b"
-				/>
-			</CircularInput>
-	
-			
-					<div className='toggle-glass-btn-container'>
-						{/* className={ value>=0.68 && value<= 1 || value>=0 && value<= 0.02 ?'tog-glass':'hidden'} */}
-						<button id="toggle-glass-btn-history"  onClick={toggleIsOn} ><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button></div>
-			
-				
-				</div>		
 
 
 			{/* <img src={ogHero === "9" ? avatar9 :empty} className="og-hero"  alt="hero portrait"/> */}
@@ -478,7 +487,12 @@ function thumbStart() {
 				<button className={value * 10 === 9 ? 'mash' : 'hidden'} onClick={() => props.handleInputSelect('gamepad')} ><img className="mash-img" src={ mash} alt="gif of rings"/></button></div>
 				
 			{isOn ? (<div className="about-hist druids">{value * 10 === 3 ? <img src={druids} className="druids" alt="druids" /> : null}
-			</div>): null}
+			</div>) : null}
+			
+
+			<div className='toggle-glass-btn-container'>
+						{/* className={ value>=0.68 && value<= 1 || value>=0 && value<= 0.02 ?'tog-glass':'hidden'} */}
+						<button id="toggle-glass-btn-history"  onClick={toggleIsOn} ><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button></div>
 		</>
 			);
 }
