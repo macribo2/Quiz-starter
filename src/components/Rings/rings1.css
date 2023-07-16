@@ -383,6 +383,13 @@ z-index: 101;
   font-family:'Courier New', Courier, monospace;
 
 }
+.names-e{
+  top:75%;
+  z-index: 9999;
+  opacity:0;
+/* display:none; */
+animation: fade-in 1s forwards;
+}
 
 .names-i, .numbers-i, .history-i{
   /* opacity: 0; */
@@ -401,7 +408,9 @@ font-size: 4em;
         position: fixed;
         right: 2%;
         bottom: 21%;
-    
+    z-index: 999;
+    top: 5%;
+    animation: fade-in 0.5s  forwards
       }
       
       
@@ -428,14 +437,14 @@ top:5%;
         top:0;
         left:3%;
         position:fixed;
-        z-index: 105;
+        z-index: 1905;
         display: flex;
         align-items: center;
         
       }
       .input-elements-container-8{
         
-        z-index: 99;
+        z-index: 1175;
 
       }
       .input-elements-container-7, .field-container, .input-elements-container-7b{
@@ -464,6 +473,7 @@ top:5%;
         border:3px solid black;
       }
       .fade-in-champ{
+        display: block;
         animation:fade-in 0.5s forwards;
       }
       .fade-out-champ{

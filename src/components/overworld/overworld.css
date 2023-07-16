@@ -864,6 +864,10 @@ p {
   position: relative;
   z-index: 50;
   border-radius: 50%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  
 
 }
 
@@ -1001,16 +1005,22 @@ border-radius: 50%;
   border-radius: 50%;
 
 }
-
+#hero-portrait{
+  z-index: 900;
+  position: fixed;
+  transform: scale(25.5);
+  top: 120%;
+  opacity: 0.5;
+  right: 19%;
+}
 .countyMap {
-  /* height: 400px; */
-  /* width: 400px; */
+  
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   /* border: 4px solid purple; */
 
-  height: 100%;
-  width: 60%;
+  /* height: 100%; */
+  width: 100%;
 }
 
 #walkies {
@@ -1075,6 +1085,7 @@ border-radius: 50%;
   padding: 10px;
   text-shadow: -4px -4px 4px #000, 4px -4px 4px #000, -4px 4px 4px #000, 4px 4px 4px #000;
 
+  animation: fade-in 0.7s forwards;
 
 }
 
@@ -1085,7 +1096,6 @@ border-radius: 50%;
   top: 20%;
   display: block;
   width: 76%;
-  animation: fade-in 0.7s forwards;
 }
 
 .locDown {
@@ -1334,7 +1344,6 @@ border-radius: 50%;
   height: 100%;
   text-align: center;
   pointer-events: none;
-  z-index: 1515;
   /* background-color: black; */
   align-content: center;
   justify-content: left;
@@ -1346,7 +1355,7 @@ border-radius: 50%;
 
 .location-title-card-text-container {
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1516;
+  z-index: 9999;
   transform: scale(1);
 
 }
@@ -1355,6 +1364,7 @@ border-radius: 50%;
   /* border:4px solid palegreen; */
   width: 740px;
   height: 360px;
+  pointer-events: none;
 }
 
 .animateEmblem {
@@ -1509,7 +1519,7 @@ width:85%;
 
   pointer-events: all;
   /* border: 4px solid blue; */
-  padding: 10%;
+  /* padding: 10%; */
   opacity: 0.8
 }
 
@@ -1520,11 +1530,12 @@ width:85%;
 }
 
 #chat {
-  top: 85%;
-  position: fixed;
-  left: 75%;
-  transform: scale(0.77);
+  transform: scale(0.9);
   z-index: 998;
+  left: -3px;
+opacity: 0;
+display:none !important;
+/* animation: fade-in 5s ease-in forwards; */
 }
 
 .disk {
@@ -1537,11 +1548,12 @@ width:85%;
   top: -23%;
 }
 
-.reveal {
+.visible {
   /* opacity: 0; */
-  /* animation: fade-in 1s forwards !important; */
+  animation: fade-in 1s forwards !important;
   /* border:4px solid orange; */
 }
+
 
 #ui-container {
   /* border: 4px solid orange; */
@@ -1620,7 +1632,7 @@ top: 80%;
 
 
   /* border: 5px solid blue; */
-  z-index: 1121;
+  z-index: 9121;
   position: fixed;
   bottom: 0;
   left: -4%;

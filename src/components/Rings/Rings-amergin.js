@@ -33,6 +33,11 @@ import glass from '../../images/big-glass.png';
 import champion99 from '../../images/champions/99.png'
 
 
+import ReactRain from 'react-rain-animation';
+
+// import all the styles
+import "react-rain-animation/lib/style.css";
+
 
 
 
@@ -439,7 +444,8 @@ function thumbStart() {
                     <div className="about-hist">{value*10 === 3 ? <img src={slide3} className="slide"alt="storm" /> : null}
 					</div>
 					
-                    <div className="about-hist">{value*10 === 4 ? <img src={poem} className="slide slide-amergin	" alt="Amergín." /> : null}
+					<div className="about-hist">{value * 10 === 4 ? <><img src={poem} className="slide slide-amergin	" alt="Amergín." />
+					<ReactRain numDrops="200"/></> : null}
                     </div>
                     <div className="about-hist">{value*10 === 5 ? <img src={wind} className="slide"alt="slide illustritative of text." /> : null}
                     </div>

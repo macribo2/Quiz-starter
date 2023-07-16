@@ -208,7 +208,7 @@ export default function App() {
 	
 		{
 			// tosníonn an scéal anseo. 
-			questionText:  '"Ipsum",<br/>arsa '+  hn+'.<div id="delay-in">"Dolor sit" <br/> arsa '+ choiceRing[localStorage.getItem('portrait')]+'.</div>' ,
+			questionText:  '<p id="delay-in1">\'Lorem ipsum\', arsa '+ choiceRing[localStorage.getItem('portrait')]+'.<br/>\'Dolor sit\' arsa '+  hn+'.</p>',
 			answerOptions: [
 				
 			],
@@ -575,11 +575,11 @@ if(value*10 !== 0 ){
 		`Golden-headed Niamh`,
 		`
 		 The Pleasant Little Branch`,
-		`"Young Deer", greatest poet of Ireland, warrior of the Fianna`,
-		`The Dark One`,
-		`The Pagan Champion of Valentia`,
-		`The Vampire Chieftain`,
-		`The Legendary warrior, seer, poet`,
+		`Young Deer, greatest poet of Ireland, warrior of the Fianna`,
+		`The Dark one`,
+		`The Pagan champion of Valentia`,
+		`Vampire`,
+		`Legendary warrior, seer, poet`,
 		`one of the Fair Folk `,
 		`Fedelm the poet`,
 		``

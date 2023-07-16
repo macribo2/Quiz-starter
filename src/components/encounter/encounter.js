@@ -3,6 +3,8 @@
 import darkFields from '../../images/about2/stone-0.png'
 import { render } from "react-dom";
 // import './gael-ring.css';
+// import encounterBG from '../../images/blackripple.gif'
+import encounterBG from '../../images/black.png'
 import mash from '../../images/gifs/mash.gif';
 import seas1 from '../../images/gael-ring/seas.gif'
 import React, { useState, useEffect } from 'react'
@@ -29,7 +31,6 @@ import deer from '../../images/gael-ring/deer.gif'
 import science from '../../images/gael-ring/science.gif'
 import wind from '../../images/gael-ring//wind.gif'
 import glass from '../../images/big-glass.png';
-
 import locationBG from  '../../images/big-glass.png'
 import champion99 from '../../images/champions/99.png'
 
@@ -323,7 +324,7 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 //thumbStart is a hack to prevent side effect of making question text fade out when player is at location 'geaga'.
 function thumbStart() { 
 	// document.querySelector(".champion-portrait").classList.add('fade-in-champ');
-	// document.querySelector(".history-e").classList.add('fade-in-champ'); document.querySelector(".history-i").classList.add('fade-in-champ');
+	// document.querySelector(".history-e").classList.add('fade-in-champ'); document.querySelector(".encounter-i").classList.add('fade-in-champ');
 	// document.querySelector(".question-text").classList.add('fade-out-champ');
 
 } 
@@ -331,7 +332,11 @@ function thumbStart() {
 	return (
 
 		<>
-{/* 			
+
+			<div className='encounter-bg-container'>
+				<img src={ encounterBG} alt="encounter background img" className="encounter-bg-img" />
+			</div>
+			{/*
 
 		<div className={value * 10 === 5 ? "gael-bg" : "hidden"}>
 					<img rel="preload" className={value * 10 === 5 ? "sea-wave" : "hidden"} src={seas1} alt="" />
@@ -370,7 +375,7 @@ function thumbStart() {
 				</div>
 
 
-				<div  dangerouslySetInnerHTML= {{__html:irishText[ Math.floor(value* 10) + round.current * 100]}} x={100} y={100} id="n-id" className="history-i" textAnchor="middle" dy="0.3em" fontWeight="bold" ></div>
+				<div  dangerouslySetInnerHTML= {{__html:irishText[ Math.floor(value* 10) + round.current * 100]}} x={100} y={100} id="n-id" className="encounter-i" textAnchor="middle" dy="0.3em" fontWeight="bold" ></div>
 
 
 				{isOn ? (<div id="glass">

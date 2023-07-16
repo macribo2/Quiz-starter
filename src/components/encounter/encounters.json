@@ -46,8 +46,8 @@
 	
 		{"encounterNumber":"3",
 		"encounterNameGae": "Test Ainm",
-		"encounterNameEng": "Test Name Eng",
-		"locationDescriptionGae": ["dTest","dlorem", "dipsum", "ddelor", "dsit" ,"damit"],
+		"encounterNameEng": "Path of Poetry",
+		"locationDescriptionGae": ["Imbas forosnai,","teinm laedo,", "dichetal di chennaib", "ddelor", "dsit" ,"damit"],
 		"locationDescriptionEng": ["dEng Test","dEng lorem", "dEng ipsum", "dEng delor", "Eng sit" ,"Eng amit"],
 		"locationBG": "url('../../images/gael-ring/druids.png')",
 		"encounterDescriptionAfterSuccessEng":"tis done",
@@ -57,4 +57,48 @@
 		"encounterDescriptionWhileAwaitingCompletionGae":"Ag feitheamh...",
 		"encounterDescriptionWhileAwaitingCompletionEng": "Waiting..."}
 	
+,
+{"encounterNumber":"4",
+"encounterNameGae": "Teach uisce",
+"encounterNameEng": "Waterhouse",
+"locationDescriptionGae": ["An cuid atá fórbartha i speiceas ar bith,","neamhghnáthach maith, nó ar bealach aonarach,", "I gcompráid leis an cuid sin i measc slúite na speicis is gaolmhar,", "Is nós leis a bheith íontach athraitheach.", "" ,""],
+"locationDescriptionEng": ["A part developed in any species","in an extraordinary degree or manner,", "in comparison with the same part in allied species,", "tends to be highly variable", "" ,""],
+"locationBG": "url('../../images/gael-ring/druids.png')",
+"encounterDescriptionAfterSuccessEng":"tis done",
+"encounterDescriptionAfterSuccessGae":"deanta",
+"encounterDescriptionAfterFailureGae":"Teip",
+"encounterDescriptionAfterFailureEng":"Failed...",
+"encounterDescriptionWhileAwaitingCompletionGae":"Ag feitheamh...",
+"encounterDescriptionWhileAwaitingCompletionEng": "Waiting..."},
+
+
+{"encounterNumber":"5",
+"encounterNameGae": "Baile na gCailleach",
+"encounterNameEng": "Collinstown",
+
+"locationDescriptionGae": [ "", "" ,""],
+"locationDescriptionEng": ["You sense the presence of the veilled ones.","One of them, in a velvet cloak, steps forward.","She asks, 'What brings you to our dark haven, mortal?"," Speak your purpose if you dare.'"],
+"locationBG": "url('../../images/gael-ring/druids.png')",
+"encounterDescriptionAfterSuccessEng":"tis done",
+"encounterDescriptionAfterSuccessGae":"deanta",
+"encounterDescriptionAfterFailureGae":"Teip",
+"encounterDescriptionAfterFailureEng":"Failed...",
+"encounterDescriptionWhileAwaitingCompletionGae":"Ag feitheamh...",
+"encounterDescriptionWhileAwaitingCompletionEng": "Waiting..."}
+,
+{"encounterNumber":"",
+"encounterNameGae": "",
+"encounterNameEng": "",
+"locationDescriptionGae": ["","", "", "", "" ,""],
+"locationDescriptionEng": ["","", "", "", "" ,""],
+"locationBG": "url('../../images/gael-ring/druids.png')",
+"encounterDescriptionAfterSuccessEng":"tis done",
+"encounterDescriptionAfterSuccessGae":"deanta",
+"encounterDescriptionAfterFailureGae":"Teip",
+"encounterDescriptionAfterFailureEng":"Failed...",
+"encounterDescriptionWhileAwaitingCompletionGae":"Ag feitheamh...",
+"encounterDescriptionWhileAwaitingCompletionEng": "Waiting..."}
+
+
+
 	]

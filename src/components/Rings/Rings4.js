@@ -131,7 +131,7 @@ import {
 
 
 export function Rings4(props) {
-	
+	const [showDiv, setShowDiv] = useState(false);
 
 	let hname;
 
@@ -142,7 +142,7 @@ export function Rings4(props) {
 
 
 	function hideText() { 
-		alert();
+		// alert();
 	}
 	let ogHero = localStorage.getItem('portrait') 
 
@@ -543,8 +543,9 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 
 	//thumbStart is a hack to prevent side effect of making question text fade out when player is at location 'geaga'.
 	function thumbStart() {
+		setShowDiv(true);
 		document.querySelector(".champion-portrait").classList.add('fade-in-champ');
-		document.querySelector(".names-e").classList.add('fade-in-champ'); document.querySelector(".names-i").classList.add('fade-in-champ');
+		document.querySelector(".names-i").classList.add('fade-in-champ');
 		document.querySelector(".question-text").classList.add('fade-out-champ');
 		document.querySelector(".tutorial0-container").classList.add('fade-out-champ');
 		// document.querySelector(".button-mash-ring-4").classList.add('circle');	
@@ -653,18 +654,18 @@ const [rng, setRng] = useState(Math.floor(Math.random()*3))
 		`Eithne`,
 		`Pádraig`,
 		`Líam`,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
-		``,
+		'Éanna',
+		'Rónnad',
+		'Neasa',
+		'Cillian',
+		'Olcán',
+		'Lonán',
+		'Treasa',
+		'Sárnait',
+		'Osnait',
+		'Giolla-Padraig',
+		'Echna'
+	
 	
 	
 	]
@@ -733,7 +734,7 @@ const [rng, setRng] = useState(Math.floor(Math.random()*3))
 		'hawk',
 		'lightening',
 		'she who intoxicates',
-		'Dionysus	brown lord',
+		'Dionysus brown lord',
 		'cruel or fierce',
 		'Noble',
 		'after Macha, goddess of Sovereignty',
@@ -756,12 +757,21 @@ const [rng, setRng] = useState(Math.floor(Math.random()*3))
 		'dark',
 		'radience, light',
 		'goddess of love and beauty, patron of County Cork. Also, queen of the banshees',
-		' from uan \'lamb\' . Of truth, beauty, and unity',
-
+		'from uan \'lamb\'. Of truth, beauty, and unity',
 		'There were at least nine Saint Eithnes',
-'from the Latin Patricius, meaning "of the patrician class',
-'strong-willed warrior '
-
+'from the Latin Patricius, meaning of the patrician class',
+'strong-willed warrior ',
+'birdlike',
+'seal',
+'not gentle',
+'church',
+'wolf',
+'blackbird',
+'strength',
+'chief, noble, best',
+'deer',
+'Pat Samurai',
+'steed'
 	]
 }
 
@@ -808,14 +818,14 @@ if (rng === 1) {
 		'milk-white, milk-like',
 		'grey servant',
 		'great',
-		'Molaise	pet from of Laisrén',
+		'My light',
 		'milk-white, milk-like',
 		'rock,  white, Gaulish World King.',
 		'ninne was the first word this saint spoke',
 		'abundance, flood',
 		'without injunction or envy',
 		'comely, beautiful',
-		' sea battler',
+		'sea battler',
 		'fire',
 		'a place name in Co. Longford',
 		'an early goddess, also Ireland',
@@ -855,7 +865,7 @@ if (rng === 1) {
 		'fawn',
 		'fire',
 		'saint',
-		'Iar + Lug (Celtic god names)',
+		'Iar + Lug Celtic gods)',
 		'blossom, bloom',
 		'radiant blossom',
 		'hero, champion',
@@ -1208,7 +1218,29 @@ return (
 					<img rel="preload" src={tutorial0r} className='tutorial' id="tutorial0r" alt="a spinning arrow circle inviting user input" /></div>
 		</div>
 			</div>
-	  <div className="input-elements-container-8" >
+	
+
+		<p id="hints-ring-4" className={props.isOn ? "hints" : "hidden"}></p>
+		
+		{ props.isOn?<><img src={ogHero === "1" ?  avatar1  : empty} className="og-hero"  alt="hero portrait"/>
+			
+			<img src={ogHero === "2" ? avatar2 :empty} className="og-hero"  alt="hero portrait"/>
+			<img src={ogHero === "3" ? avatar3 :empty} className="og-hero"  alt="hero portrait"/>
+			<img src={ogHero === "4" ? avatar4 :empty} className="og-hero"  alt="hero portrait"/>
+			<img src={ogHero === "5" ? avatar5 :empty} className="og-hero"  alt="hero portrait"/>
+			<img src={ogHero === "6" ? avatar6 :empty} className="og-hero"  alt="hero portrait"/>
+			<img src={ogHero === "7" ? avatar7 :empty} className="og-hero"  alt="hero portrait"/>
+			<img src={ogHero === "8" ? avatar8 :empty} className="og-hero"  alt="hero portrait"/>
+			<img src={ogHero === "9" ? avatar9 :empty} className="og-hero"  alt="hero portrait"/>
+			</>
+			:null }
+
+			{showDiv && props.isOn?<>  <p className="names-e">
+		{ namesInEnglish[ Math.floor(value * 100) + round.current * 100]}	
+		</p></> : null}
+				
+			
+		  <div className="input-elements-container-8" >
 	  <img src={lens} id="lens" className="lens-ring4" alt="a glass lens" />
 			<CircularInput  value={value} className="dial4" onChange={tryValue}  >
 				<CircularTrack
@@ -1225,46 +1257,23 @@ return (
 					{hname = namesInIrish[Math.floor(value * 100) + round.current * 100]}
 				</p>
 
-			<img src={ogHero === "1" ?  avatar1  : empty} className="og-hero"  alt="hero portrait"/>
-			
-			<img src={ogHero === "2" ? avatar2 :empty} className="og-hero"  alt="hero portrait"/>
-			<img src={ogHero === "3" ? avatar3 :empty} className="og-hero"  alt="hero portrait"/>
-			<img src={ogHero === "4" ? avatar4 :empty} className="og-hero"  alt="hero portrait"/>
-			<img src={ogHero === "5" ? avatar5 :empty} className="og-hero"  alt="hero portrait"/>
-			<img src={ogHero === "6" ? avatar6 :empty} className="og-hero"  alt="hero portrait"/>
-			<img src={ogHero === "7" ? avatar7 :empty} className="og-hero"  alt="hero portrait"/>
-			<img src={ogHero === "8" ? avatar8 :empty} className="og-hero"  alt="hero portrait"/>
-			<img src={ogHero === "9" ? avatar9 :empty} className="og-hero"  alt="hero portrait"/>
-			{<p className="names-e">
-		{ namesInEnglish[ Math.floor(value * 100) + round.current * 100]}	
-		</p>}
 			</div>
-			
-			
-			 <div className="input-elements-container-5">
+		<div className="input-elements-container-5">
 					
-				<button className="button-mash-ring-4" 
-					onClick={props.fadeOutNoOne} onTouchEnd={props.proceedThroughQuiz}>
-					
-					<img src={champIcon} className="champion-portrait " alt="champion portrait" />
-							
-			
-				</button>
+			<button className="button-mash-ring-4" onTouchStart={() => {
+				setShowDiv(false);}}
+						onClick={props.fadeOutNoOne} onTouchEnd={props.proceedThroughQuiz}>
+						
+						<img src={champIcon} className="champion-portrait " alt="champion portrait" />
+								
 				
-	
+					</button>
 			
-		
-
-				{/* <img src={heroShadow} className="hero-shadow" alt="champion portrait" /> */}
-		
-	  </div>
-
-		<p id="hints-ring-4" className={props.isOn ? "hints" : "hidden"}></p>
-		
+		  </div>
 	
-
 			</>
 			);
 		}
 
+		// document.querySelector(".names-e").classList.add(''); 
 

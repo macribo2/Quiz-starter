@@ -1469,10 +1469,20 @@ z-index: 99;
       position: fixed;
     }
 
-#delay-in{
+#delay-in1{
+  text-align: left;
   font-family: aonchlo;
   opacity: 0;
+  margin-left: 17%;
   animation: delay-fade-in 4s forwards linear;
+  font-size: 0.7em;
+  margin-top: 2%;
+}
+
+#delay-in0{
+  font-family: aonchlo;
+  opacity: 0;
+  animation: delay-fade-in 2s forwards linear;
 }
 
     ul {

@@ -30,6 +30,7 @@ import collinstown from '../../images/localMaps/collinstown.png';
 import fernaRiver from '../../images/localMaps/dungeonfog.png';
 import ferna from '../../images/localMaps/fearnasringfort.png';
 import statsMenu from '../../images/fog3.png';
+import invIcon from '../../images/inv/backpack.png';
 import invMenu from '../../images/vert-bg0.png';
 import diskMenu from '../../images/blackripple.gif';
 import Battle from '../battle/battle0'
@@ -89,14 +90,14 @@ import place50 from '../../images/ai-art/places/1.png'
 import place51 from '../../images/ai-art/places/1.png'
 import place52 from '../../images/ai-art/places/1.png'
 import place53 from '../../images/ai-art/places/1.png'
-
+import Encounter from '../encounter/encounter'
 import gigakoops from '../../audio/Gigakoops - Level 2 - High Clouds.mp3'
 import jam from '../../audio/ultima-tone-long.wav'
 import ReactAudioPlayer from 'react-audio-player';
 // import county emblems
 
 import Rings1 from '../Rings/Rings1'
-
+import ogHero from '../../images/agnes.png'
 
 // import { Register } from './../register/register'
 import $ from 'jquery';
@@ -480,7 +481,8 @@ export default class Overworld extends React.Component {
             statsVisible: false,
             diskVisible: false,
             inventoryVisible: false,
-            showEascaLocation:true,
+            showEascaLocation: true,
+            isVisible:false,
             // whereAmI: localStorage.getItem('whereAmI')
             data: "",
             speakWithDM:true
@@ -497,6 +499,7 @@ export default class Overworld extends React.Component {
         this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
     }
     jQueryCode = () => {
+        // alert(this.isOn);
         var anchors = document.getElementsByTagName('*');
         for(var i = 0; i < anchors.length; i++) {
             var anchor = anchors[i];
@@ -3841,6 +3844,8 @@ $('#walkies-overlay').fadeIn();
 
             },1500)
          }        $('#north').on('touchstart', function () {
+             if (this.isOn) {return }
+            
             // playerFacing = imreoir.avatar;
              stillPressedNorth = false;
              updateEventReport('ó thuaidh')
@@ -5062,6 +5067,7 @@ $('#loc').fadeOut();
     }
     
     componentDidMount() {
+        const { isOn } = this.state;
         this.jQueryCode();
         window.addEventListener("resize", this.resize.bind(this));
         this.resize();
@@ -5097,7 +5103,7 @@ $('#loc').fadeOut();
         showHint3 = false;
     }
     render() {
-
+        const { isVisible } = this.state;
         //just in case the player hasn't already dismissed the flashing purple light on btn #north.
         $('#north').removeClass('prompt-north')
 
@@ -5137,7 +5143,14 @@ storyTimer()
         }
       
     let isOn = this.props.isOn;
-
+        let runEvent = function() {
+            // this.setState({ isOn: false })
+            $('.encounter').fadeIn();
+            // alert('run event');
+        }   
+        let revealStyle = {
+            animation: 'fade-in 4s forwards',
+        }
     let crossSwords = function() {
      
         // alert("Chun troid!" )
@@ -5238,7 +5251,7 @@ storyTimer()
                         <img src={ locationGraphic} className="location-graphic" alt="graphic of location"/>
            
            
-                        {  locationGraphic !== place0?	<div id="buttonmash" className="buttonmash-loc-graphic" >
+                        {locationGraphic !== place0 ? <div id="buttonmash"  onClick={(value) => runEvent(locationGraphic)} className="buttonmash-loc-graphic" >
 				
 						<div className = "circle"></div>
 					</div>:null}
@@ -5254,7 +5267,6 @@ storyTimer()
                    
                 <p id="gae-notes" > {gaeNotes[narrativeCode]}</p>
 
-                <Easca id="easca"/>
                 <div id="ui-container">
 
                     
@@ -5275,19 +5287,7 @@ storyTimer()
 
                         <p className="App-intro">{this.state.data}</p>
 
-                        <img src={chat} id="chat" alt="chat button" rel="preload" className="inventory" onClick={() => {
-                            
-                        $('#eng-notes').html('');
-                            
-                            $('#gae-notes').html('');
-                        $('#easca').fadeIn() 
-                        $('.react-simple-keyboard').fadeIn() 
-
-                        if (this.state.diskVisible) {
-                        this.setState({ diskVisible: false })
-        }
-                        }} />
-             
+                       
 {/* <h1 id="" >⚔</h1> */}
     <img src={disk} alt="" className="disk" onClick={() => {
         if (this.state.diskVisible) {
@@ -5346,7 +5346,7 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                         </div>
                     </div>                    
 <img rel="preload"src={ this.state.statsVisible? statsMenu: null} alt="" className="statsMenu" />                   
-<img rel="preload"src={this.state.inventoryVisible? invMenu: null } alt="" className="invMenu" />   
+<img rel="preload"src={this.state.inventoryVisible? invIcon: null } alt="" className="invIcon" />   
 
 
                     {this.state.isOn ? (<div id="glass">
@@ -5372,6 +5372,7 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
     <div className="grid-item" id="toggle-glass-btn2"><img src={this.state.isOn ? pearl : emerald} id="glass-btn-img" alt="a crystal or precious stone toggle on off button"   onClick={()=>{
             if (this.state.isOn) {
                 this.setState({ isOn: false })
+
                 console.log("hi from toggle glass overworld portrait mode")
                  }
             else {
@@ -5396,12 +5397,11 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                 </div>
 
                 </div>
+                <Easca id="easca"/>
                 
-                <img id="inventory" rel="preload" src={invMenu}></img>
-               
        storyTimer={()=>storyTimer}
        <p id="loc" alt="holder for location names"></p>
-                <p id="locEng" className={this.state.isOn ? "reveal" : "locDown"} alt="holder for location names English">
+                <p style={ revealStyle}id="locEng" className={`fade-in ${isVisible ? 'visible' : 'hidden'}`} alt="holder for location names English">
                 </p>
                 {this.state.whereAmI === "geaga" ?
                     
@@ -5425,7 +5425,7 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
 
 
 
-                    <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'"Ipsum", says '+this.props.choiceRingEng+'. "Delor sit", says '+localStorage.getItem('hname')+'.'}</p>
+                    <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI==='geaga' ?"hints":"hidden"}>{'"Lorem ipsum", says '+this.props.choiceRingEng+'. "Delor sit", says '+localStorage.getItem('hname')+'.'}</p>
 
                 <div className="ringOfFerna">
                     {/* <Rings7/> */}
@@ -5448,12 +5448,36 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                 <div className='grid-container'>
     
     <div className="grid-item"></div>
-    <div className="grid-item" id="north">
+                                
+                            <div className="grid-item" id="north">
+                                {this.state.isOn? <img src={chat} id="chat" alt="chat button" rel="preload" className="inventory" onClick={() => {
+                                
+                                    $('#eng-notes').html('');
+                                    
+                                    $('#gae-notes').html('');
+                                    $('#easca').fadeIn()
+                                    $('.react-simple-keyboard').fadeIn()
+        
+                                    if (this.state.diskVisible) {
+                                        this.setState({ diskVisible: false })
+                                    }
+                                }} /> :null}
     </div>
     <div className="grid-item" ></div>
     <div className="grid-item" id="west">
-    </div>
-    <div className="grid-item" id="toggle-glass-btn2"><img src={this.state.isOn ? pearl : emerald} id="glass-btn-img" alt="a crystal or precious stone toggle on off button"   onClick={()=>{
+    {this.state.isOn? <img src={invMenu} id="inventory" alt="equipment icon" rel="preload" className="inventory" onClick={() => {
+                                alert('test ok')
+    
+                                if (this.state.diskVisible) {
+                                    this.setState({ diskVisible: false })
+                                }
+                            }} /> :null}
+    
+                            </div>
+                            <div className="grid-item" id="toggle-glass-btn2"><img src={this.state.isOn ? pearl : emerald} id="glass-btn-img" alt="a crystal or precious stone toggle on off button" onClick={() => {
+                                this.setState(prevState => ({
+      isVisible: !prevState.isVisible
+    }));
             if (this.state.isOn) {
                 this.setState({ isOn: false })
                 console.log("hi from toggle glass overworld")
@@ -5468,7 +5492,11 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
         
         }}	 /></div>
     <div className="grid-item" id="east">
-    </div>
+   
+    <img id="inventory" rel="preload" src={invMenu}></img>
+               
+   
+                            </div>
     <div className="grid-item"></div>
     <div className="grid-item" id="south">
     </div>
@@ -5480,11 +5508,19 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
 
                 </div>            
                 </div>
+                <>
+                    <div className="encounter">
 
+                <Encounter />
+
+                    </div>
+                </>
                 <Score returnToCounty={this.returnToCounty} />   
                 <div className="rotate-phone-container">
                     <img className="rotate-phone-img"src={ rotatePhone } alt="rotate phone icon" />
-                           </div> </div>
+                </div>
+            
+            </div>
 
             
 

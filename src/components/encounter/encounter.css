@@ -14,3 +14,19 @@ animation:fade-in 3s linear forward;
 	100%{opacity:1}
 
 }
+.encounter-bg-container{
+	height:100%;
+	left:0;
+	top: 0;
+	width: 100%;
+	position: fixed;
+	z-index: 11112;
+	display: grid;
+	/* justify-content:center; */
+}
+.encounter-bg-img{
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+
+}

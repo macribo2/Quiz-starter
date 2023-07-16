@@ -43,7 +43,7 @@ DM Description:
 "As you cautiously step into Baile na gCailleach, a peculiar sight unfolds before you. In the town center, a group of goth witches, adorned in dark attire and elaborate jewelry, gather around a flickering bonfire. Their pale faces contrast with the vibrant hues of their hair, and the sound of melancholic music fills the air. The atmosphere is equal parts eerie and enchanting as the witches engage in their peculiar rituals."
 
 First Encounter:
-"You approach the group of goth witches, their eyes fixating on you with a mix of curiosity and skepticism. One of them, with intricate face paint and a velvet cloak, steps forward. She raises an eyebrow and asks, 'What brings you to our dark haven, mortal? Speak your purpose if you dare.'"
+`"You approach the group of goth witches, their eyes fixating on you with a mix of curiosity and skepticism. One of them, with intricate face paint and a velvet cloak, steps forward. She raises an eyebrow and asks, 'What brings you to our dark haven, mortal? Speak your purpose if you dare.'"`
 
 Choices:
 

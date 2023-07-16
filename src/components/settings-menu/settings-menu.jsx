@@ -100,7 +100,8 @@ let randLights = Math.floor(Math.random * 8)
 			<div className="light light8"></div>
 			<div className="light light1"></div>
 			<div className="light light9"></div>
-			<div className="light light10"></div> 
+			<div className="light light10"></div>
+			<div className="light light2"></div><div className="light light4"></div>
 			
 		</div>
 <div className='menu-container'>
