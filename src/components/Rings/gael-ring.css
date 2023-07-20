@@ -156,7 +156,7 @@ border: 4px solid #514a19;
     .gael-bg {z-index: -1;
       animation: fade-in 1s linear forwards;
     }
-    .button-mash-container-gael{
+    .button-mash-container-gael, .button-mash-container-encounter{
       z-index: 800;
       height: 266px;
       width: 266px;

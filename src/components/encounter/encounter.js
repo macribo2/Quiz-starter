@@ -1,22 +1,12 @@
-
+import resultBg from '../../images/black.png'
 // import * as React from "react";
-import darkFields from '../../images/about2/stone-0.png'
-import { render } from "react-dom";
-// import './gael-ring.css';
+import './encounter-ring.css';
 // import encounterBG from '../../images/blackripple.gif'
-import encounterBG from '../../images/black.png'
-import mash from '../../images/gifs/mash.gif';
-import seas1 from '../../images/gael-ring/seas.gif'
+import encounterBG from '../../images/bg0.png'
 import React, { useState, useEffect } from 'react'
-import lens from '../../images/ciorcal-glass-light.png';
-import empty from '../../images/empty.png';
 import tutorial0 from '../../images/tutorials/tutorial0.png';
-import gaelChallengeBG from '../../images/about2/01.png'
-import lensCap from '../../images/About1/feicimthu.png'
-import outerLocation from '../../images/ciorcal-glass7.png';
 import emerald from '../../images/misc_crystal_new.png'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
-import stoneBG from '../../images/About1/ceist.png'
 import folamh from '../../images/about2/stone-0.png'
 import fromOne from '../../images/about2/stone-1.png'
 import fromTwo from '../../images/about2/stone-2.png'
@@ -25,52 +15,59 @@ import fromFour from '../../images/about2/stone-4.png'
 import fromFive from '../../images/about2/stone-5.png'
 import fromSix from '../../images/about2/stone-6.png'
 import fromSeven from '../../images/about2/stone-7.png'
-import boat from '../../images/ai-art/boat.png'
 import druids from '../../images/gael-ring/druids.png'
-import deer from '../../images/gael-ring/deer.gif'
-import science from '../../images/gael-ring/science.gif'
-import wind from '../../images/gael-ring//wind.gif'
-import glass from '../../images/big-glass.png';
-import locationBG from  '../../images/big-glass.png'
-import champion99 from '../../images/champions/99.png'
+import glass from '../../images/bg1.png';
+import witch0 from '../../images/ai-art/npcs/witch0.jpg'
+import mash from '../../images/gifs/mash.gif';
 
-
-
-
-
-
-import slide0 from '../../images/gael-ring/fado.png'
-import slide1 from '../../images/gael-ring/tonnta3.gif'
-import slide2 from '../../images/gael-ring/queens.png'
-import slide3 from '../../images/gael-ring/storm.png'
-import slide4 from '../../images/gael-ring/adaptive-icon.png'
-import slide5 from '../../images/gael-ring/adaptive-icon.png'
-import slide6 from '../../images/gael-ring/adaptive-icon.png'
-import slide7 from '../../images/gael-ring/adaptive-icon.png'
-import slide8 from '../../images/About1/4.gif'
-import slide9 from '../../images/About1/ceist2.png'
-import slide10 from '../../images/about2/stone-0.png'
 
 import './encounter.css';
-import '../Rings/gael-ring.css';
+import './encounter-ring.css';
 import {
-  CircularInput,
+	CircularInput,
   CircularTrack,
   CircularThumb,
 } from "react-circular-input";
 
 import encounter from './encounters.json'
 
-export default function Encounter(props) {
+export default function Encounter({ hideEncounterComponent}) {
+	
+	let encounterID = 0;
+	// if (localStorage.getItem('encounterID') != null) {
+	// 	encounterID = localStorage.getItem('encounterID')
+	//  };
+	
+	// alert(localStorage.getItem('encounterID'))
+	
+	let answGae = JSON.stringify(encounter[encounterID].answGae)
+	answGae = JSON.parse(answGae)
+	let answEng = JSON.stringify(encounter[encounterID].answEng)
+	let irishText = JSON.stringify(encounter[encounterID].locationDescriptionGae)
+	let engText = JSON.stringify(encounter[encounterID].locationDescriptionEng)
+	let encounterConclusionsEng = JSON.stringify(encounter[encounterID].encounterConclusionsEng)
+	let encounterConclusionsGae = JSON.stringify(encounter[encounterID].encounterConclusionsGae)
+	irishText = JSON.parse(irishText)
+	engText = JSON.parse(engText)
+	answEng = JSON.parse(answEng)
+
+	let engTurnToPage = JSON.stringify(encounter[encounterID].engTurnToPage)
+	engTurnToPage = JSON.parse(engTurnToPage)
+
+
+	let gaeTurnToPage = JSON.stringify(encounter[encounterID].gaeTurnToPage)
+	gaeTurnToPage = JSON.parse(gaeTurnToPage)
+
+	const [value, setValue] = React.useState(0);
 let questionsGae =[
 
 	{
 		questionText: 'Lorem Ach tá tír mhór chumasach i gcóngaracht di agus tá fhios ag na	',
 		answerOptions: [
-			 { answerText: 'Clé', isCorrect: false },
-			 { answerText: 'Deas', isCorrect: false },
-			 { answerText: 'Soir', isCorrect: false },
-			 { answerText: 'Síos', isCorrect: true },
+			{ answerText: answGae[0] },
+			{ answerText: answGae[1] },
+			{ answerText: answGae[2] },
+			{ answerText: answGae[3] },
 		],
 	}]
 	let questionsEng =[
@@ -78,10 +75,10 @@ let questionsGae =[
 		{
 			questionText: 'and what do you say to that?',
 			answerOptions: [
-				 { answerText: 'left', isCorrect: false },
-				 { answerText: 'right', isCorrect: false },
-				 { answerText: 'east', isCorrect: false },
-				 { answerText: 'down', isCorrect: true },
+				 { answerText: answEng[0] },
+				 { answerText: answEng[1] },
+				 { answerText: answEng[2] },
+				 { answerText: answEng[3] },
 			],
 		}]
 	const stepValue = v => Math.round(v * 10) / 10
@@ -112,11 +109,11 @@ let questionsGae =[
 	function hideText() { 
 		alert();
 	}
-	let irishText = JSON.stringify(encounter[0].locationDescriptionGae)
-	let engText =  JSON.stringify(encounter[0].locationDescriptionEng)
-	 irishText = JSON.parse(irishText)
-	 engText = JSON.parse(engText)
 
+
+	// const imageSource = require(`${illustrations[1]}`).default;
+
+	// alert(illustrations)
 
 	// for (let i = 0; i < locationDescriptionGae.length; i++) {
 		
@@ -125,24 +122,24 @@ let questionsGae =[
 // alert(locationDescriptionGae)
 	// let tullyPortrait = setPlayerIcon();
 	
-	function gaelChallenge() { 
+	function encounterChallenge() { 
 		document.getElementById('dir-pad').style.opacity='1'
 
-		document.getElementById('ring-gael').style.display='none'
+		document.getElementById('ring-encounter').style.display='none'
 		document.getElementById('binary-portrait').style.display='none'
-		document.getElementById('gael-challenge-bg').style.display='block'
-		document.getElementById('gael-challenge-bg').classList.add('fade-in-champ')	
+		document.getElementById('encounter-challenge-bg').style.display='block'
+		document.getElementById('encounter-challenge-bg').classList.add('fade-in-champ')	
 		document.getElementById('n-id').innerHTML='Curdaigh gort a cúig';
 		document.getElementById('e-id').innerHTML='Search field five';
 
-		document.getElementById('bg-container-gael').style.opacity='0.5'
+		document.getElementById('bg-container-encounter').style.opacity='0.5'
 		// document.getElementById('bg-container-rings-5').setAttribute.src = {darkFields}
 		document.getElementById('mash-5').style.display='none'	}
-	const [value, setValue] = React.useState(0);
   const prevValue = React.useRef(0);
   const diff = React.useRef(0);
   const dir = React.useRef(0);
   const round = React.useRef(0);
+  let storyResult = document.getElementsByClassName("story-result")
 
   const max = 0.99;
   const min = 0;
@@ -167,7 +164,8 @@ let questionsGae =[
     // if (requestedValue > max) return maxValue;
     if (requestedValue < min) return minValue;
     else return v;
-};
+  };
+	
 let champPortrait = document.getElementsByClassName('champion-portrait')
 
 	//when player turns dial to select champion:  show avatar in fairy ring; fade in eng and irish names, fade out question text.
@@ -189,28 +187,15 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 		
 	
 	}
-	const handleAnswerButtonClick = (isCorrect, storyPath) => {
-		// setIsFadedOut(false)
-		// alert('handleAnswer')
-		setTimeout(function () {
-			// setIsFadedOut(true)
-			
-			if (isCorrect) {
-				// setScore(score + 1)
-			}
-			localStorage.setItem('portrait', value * 10);
+	const [displayStyle, setDisplayStyle] = useState('none');
 
-			// const nextQuestion = currentQuestion + 1;
-			// setCurrentQuestion(nextQuestion);
-			
-		}, 50)
-		// console.log("currentQuestion" + currentQuestion)
-		console.log("value:" + value)
-		return (
+	const [storyChoice, setStoryChoice] = useState(0);
+	
+	const handleAnswerButtonClick = (index) => {
+		setStoryChoice(index);
+	
+		setDisplayStyle('grid');
 
-			{/* <ReactAudioPlayer src= {ding3}  autoPlay /> */}
-			
-		)
 	}
 	
   const updateValue = v => {
@@ -328,27 +313,26 @@ function thumbStart() {
 	// document.querySelector(".question-text").classList.add('fade-out-champ');
 
 } 
-	
-	return (
+		return (
 
 		<>
 
 			<div className='encounter-bg-container'>
 				<img src={ encounterBG} alt="encounter background img" className="encounter-bg-img" />
 			</div>
+{/* 
+		<div className={value * 10 === 5 ? "encounter-bg" : "hidden"}>
+					<img rel="preload" className={value * 10 === 5 ? "sea-wave" : "hidden"} src={witch0} alt="" />
+					
+				</div> */}
 			{/*
 
-		<div className={value * 10 === 5 ? "gael-bg" : "hidden"}>
-					<img rel="preload" className={value * 10 === 5 ? "sea-wave" : "hidden"} src={seas1} alt="" />
-					
-				</div>
-
-		<div className={value * 10 === 4 || value * 10 === 5 || value * 10 === 6 || value * 10 === 7  ? "gael-bg" : "hidden"}>
+		<div className={value * 10 === 4 || value * 10 === 5 || value * 10 === 6 || value * 10 === 7  ? "encounter-bg" : "hidden"}>
 					<img rel="preload" className= "sea-wave"  src={seas1} alt="" />
 					
 				</div> */}
-			<div className="gael-ring-0">
-		{/* <img id="gael-ring-lens" rel="preload" src={outerLocation} className="question-img tullynally-zoom" alt="dark green fields background" />	 */}
+			<div className="encounter-ring-0">
+		{/* <img id="encounter-ring-lens" rel="preload" src={outerLocation} className="question-img tullynally-zoom" alt="dark green fields background" />	 */}
 		
 		
 		
@@ -359,63 +343,43 @@ function thumbStart() {
 				
 				
 		
-				<div id="bg-container-gael" className="bg-container tullynally-zoom"><img src={stoneBG} alt="geometric 8bit forest in a stone ring." /></div>
+
 			<div className="ring-5-binary-container">
 			
-			{/* <img src={binaryIcon} id='binary-portrait' className="binary-portrait tullynally-zoom" alt="representation of binary numbers in stone" /> */}
-	  </div> 
-{/* 
-<img src={tullyPortrait} id="tully-p" className="champion-portrait tully-portrait tullynally-zoom" alt="champion portrait" /> */}
-				{/* <div className="ring-5-lens-cap-container"> */}
-{/* <img src={lensCap} className="lens-cap" alt="a fantasy landscape a ring of stones, a haunted tree" /> */}
-			{/* </div> */}
-	 
+			  </div> 
+
 			<div className="tut-ring-g-container">
 				<img id="tut-g" src={tutorial0} className="tutorial0 tut-ring5" alt="spinning arrow" />
 				</div>
 
-
+				<div className="encounter-i-container">
 				<div  dangerouslySetInnerHTML= {{__html:irishText[ Math.floor(value* 10) + round.current * 100]}} x={100} y={100} id="n-id" className="encounter-i" textAnchor="middle" dy="0.3em" fontWeight="bold" ></div>
-
+				</div>
 
 				{isOn ? (<div id="glass">
 < img  src={glass} className="question-img" rel="preload" id="glass-img" alt="glass bg for translucent overlay effect." />	
-			<div dangerouslySetInnerHTML={{ __html: engText[Math.floor(value * 10) + round.current * 100] }} x={100} y={100} id="e-id" className="history-e" style={{ opacity: isOn ? 1: 0}}></div>
+			<div dangerouslySetInnerHTML={{ __html: engText[Math.floor(value * 10) + round.current * 100] }} x={100} y={100} id="e-id" className="encounter-e" style={{ opacity: isOn ? 1: 0}}></div>
 			
-			{/* <div className="about-hist">{value*10 === 0 ? <img src={slide0} className="slide"alt="enegized stonet" /> : null}
-                    </div>
-                    <div className="about-hist">{value*10=== 1 ? <img className="slide slide1"src={slide1} alt="waves" /> : null}
-					</div> */}
-					{/* <div className="about-hist">{value*10=== 1 ? <img className="slide slide1b"src={boat} alt="waves" /> : null} */}
-                    {/* </div> */}
-                    {/* <div className="about-hist">{value*10=== 2 ? <img className="slide" src={slide2} alt="queen" /> : null}
-                    </div>
-                    <div className="about-hist">{value*10 === 3 ? <img src={slide3} className="slide"alt="storm" /> : null}
-					</div>
+{/* set encounter specific illustrations for while isOn */}
 					
-                    <div className="about-hist">{value*10=== 4 ? <img src={slide4} className="slide" alt="slide illustritative of text." /> : null}
-                    </div> */}
-                    {/* <div className="about-hist">{value*10 === 5 ? <img src={wind} className="slide"alt="slide illustritative of text." /> : null} */}
-                    {/* </div> */}
-                    {/* <div className="about-hist">{value*10 === 6 ? <img src={deer} className="slide" alt="slide illustritative of text." /> : null} */}
-                    {/* </div> */}
+		 <div className="about-hist">{value*10 === 2  ? <img src={witch0} className="slide encounter-illustration"alt="story illustrations" /> : null} 
+					</div> 
 
-                    {/* <div className="about-hist">{value*10 === 7? <img src={science} className="slide"alt="" /> : null} */}
-					{/* </div> */}
-					{/* <div className="about-hist">{stepValue*10 === 8? <img src={slide8} alt="" /> : null}
-                    </div>                    <div className="about-hist">{stepValue*10 === 9? <img src={slide9} alt="" /> : null}
-                    </div> */}
+					
+					<div className="about-hist">{value*10 === 3  ? <img src={witch0} className="slide encounter-illustration"alt="story illustrations" /> : null} 
+					</div> 
 
-{/* <p className={currentQuestion === 1 ? "choice-ring-0-hint" : "hidden"}>{choiceRingEng[value * 10]}</p> */}
-
+										
+		 <div className="about-hist">{value*10 === 1  ? <img src={witch0} className="slide encounter-illustration"alt="story illustrations" /> : null} 
+					</div> 
 
 </div>) : null}
 
 				
 					
 			 
-			 <div id="ring-gael" className="ring-gael-dial-container">			 <CircularInput value={stepValue(value)}
-		onChange={v => setValue(stepValue(v))}  className="dial dial-gael" >
+			 <div id="ring-encounter" className="ring-encounter-dial-container">			 <CircularInput value={stepValue(value)}
+		onChange={v => setValue(stepValue(v))}  className="dial dial-encounter" >
 				<CircularTrack
 				stroke="#523f0d"
 						strokeWidth={'3px'}
@@ -425,9 +389,7 @@ function thumbStart() {
 			</CircularInput>
 	
 			
-					<div className='toggle-glass-btn-container'>
-						{/* className={ value>=0.68 && value<= 1 || value>=0 && value<= 0.02 ?'tog-glass':'hidden'} */}
-						<button id="toggle-glass-btn-history"  onClick={toggleIsOn} ><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button></div>
+					
 			
 				
 				</div>		
@@ -438,7 +400,7 @@ function thumbStart() {
 
 			</div>
 
-			<div className="ring-text-container-gael" >
+			<div className="ring-text-container-encounter" >
 			
 					
 			
@@ -452,9 +414,9 @@ function thumbStart() {
 	
 			
 			<div id="ring-5-challenge-container"className="challenge-container">
-				<img id="gael-challenge-bg" src={gaelChallengeBG} alt="" />
+				<img id="encounter-challenge-bg" src={encounterChallengeBG} alt="" />
 			</div> */}
-			{/* <div className="button-mash-container-gael">
+			{/* <div className="button-mash-container-encounter">
 				<button className={value * 10 === 9 ? 'mash' : 'hidden'} onClick={() => props.handleInputSelect('gamepad')} ><img className="mash-img" src={ mash} alt="gif of rings"/></button></div> */}
 				
 			
@@ -462,11 +424,11 @@ function thumbStart() {
 
 				
 			}
-			{/* {isOn ? (<div className="about-hist druids">{value * 10 === 3 ? <img src={druids} className="druids" alt="druids" /> : null}
-			</div>): null} */}
+			{isOn ? (<div className="about-hist druids">{value * 10 === 3 ? <img src={druids} className="druids" alt="druids" /> : null}
+			</div>): null}
 
 
-			<div className={value * 10 === 9 ? 'question-section' : 'hidden'}>
+			<div className={value * 10 === 4 ? 'question-section question-section-encounter' : 'hidden'}>
 					
 					<div className='question-count'> 		
 						</div>
@@ -478,7 +440,7 @@ function thumbStart() {
 
 					<div className='answer-section'>
 						{questionsGae[0].answerOptions.map((answerOption, index) => (<button className="answers" key={index}
-							onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}
+							onClick={() => handleAnswerButtonClick(index)}
 								
 						>{answerOption.answerText}</button>))}
 					</div>
@@ -486,7 +448,7 @@ function thumbStart() {
 					<div dangerouslySetInnerHTML={{ __html: questionsEng[0].questionText }} className='question-text'></div>
 
 					<div className='answer-section'>
-						{questionsEng[0].answerOptions.map((answerOption, index) => (<button className="answers" key={index}
+						{questionsEng[0].answerOptions.map((answerOption, index) => (<button className="answers eng-text" key={index}
 							onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}
 								
 						>{answerOption.answerText}</button>))}
@@ -494,8 +456,27 @@ function thumbStart() {
 				</> }
 				 
 				
-				
 					</div>
+
+					
+			
+			{/* story resolution panel */}
+
+			<div id='story-result' style={{ display: displayStyle }}>
+				<img src={ resultBg} className="result-bg-img"alt="bg at end of encounter." />
+			<div className="encounter-i-container">
+				{isOn? <div id="n-id" className="encounter-i eng-text"  >{engTurnToPage[storyChoice]}</div>:<div id="n-id" className="encounter-i"  >{gaeTurnToPage[storyChoice]}</div>}
+
+				<div className="button-mash-container-encounter">
+				<button className='mash'  onClick={hideEncounterComponent} ><img className="mash-img" src={ mash} alt="gif of rings"/></button></div>
+				
+				</div>
+
+			</div>			
+
+			<div className='toggle-glass-btn-container encounter-version'>
+						{/* className={ value>=0.68 && value<= 1 || value>=0 && value<= 0.02 ?'tog-glass':'hidden'} */}
+				<button id="toggle-glass-btn-history" onClick={toggleIsOn} ><img src={isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button></div>	
 		</>
 			);
 }

@@ -485,7 +485,9 @@ if (score === 1){
 			var id = null;
 			var elem = document.getElementById("holder");   
 			var pos = 0;
-			clearInterval(id);
+				clearInterval(id);
+				var dial = document.getElementById("dial-main")
+				dial.style.display = 'none';
 			id = setInterval(frame, 800);
 			function frame() {
 			  if (pos == 350) {
@@ -651,31 +653,11 @@ let thePucaOf = localStorage.getItem('pucaEng')
 				
 				<div className="input-elements-bg-container">
 				
-					<img rel="preload"src={lens} id="lens" alt="a glass 	" />
+					{/* <img rel="preload"src={lens} id="lens" alt="a glass 	" /> */}
 				</div>
 
 				
-				<div className="input-elements-container">
-
-				<CircularInput className="dial" value={value} onChange={v => setValue(stepValue(v))} >{ }
-						<CircularTrack 
-						stroke="rgb(155,130,0)"
-						strokeWidth={'3px'}
-						/>
-						<CircularProgress
-							border="rgba(255,250,5,0)"
-							stroke="rgba(195,150,5,0.8)"
-						strokeWidth={'3px'}/>
-						<CircularThumb fill="rgba(167,174,158,0.99)"
-							
-						strokeWidth={'3px'}
-					stroke="rgba(180,180,180,1)" 
-							
-						>
-						
-						</CircularThumb>
-					</CircularInput>
-			</div>
+			
 			
 				<img rel="preload" src = {gradient}className="gradient" alt="gradiate to black" />
 
@@ -690,7 +672,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 					
 				/>}</p>
 
-				<div className="input-elements-container">
+				<div className="input-elements-container-mash">
 			
 				<div id="buttonmash" value={value} onClick={(value) => buttonMashClick(true, value)}>
 				
@@ -832,7 +814,27 @@ let thePucaOf = localStorage.getItem('pucaEng')
 				</div> */}
 			<img id="fields-lens" rel="preload" src={darkGreenFields} className="question-img" alt="dark green fields lens" />		
 
+			<div className="input-elements-container">
+
+<CircularInput className="dial" id="dial-main" value={value} onChange={v => setValue(stepValue(v))} >{ }
+		<CircularTrack 
+		stroke="rgb(155,130,0)"
+		strokeWidth={'3px'}
+		/>
+		<CircularProgress
+			border="rgba(255,250,5,0)"
+			stroke="rgba(195,150,5,0.8)"
+		strokeWidth={'3px'}/>
+		<CircularThumb fill="rgba(167,174,158,0.99)"
 			
+		strokeWidth={'3px'}
+	stroke="rgba(180,180,180,1)" 
+			
+		>
+		
+		</CircularThumb>
+	</CircularInput>
+</div>
 			 
 				{isOn ? (<div id="glass">
 
@@ -854,7 +856,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			
 				<div id="holder" className="avatar-holder" >
 								<div className='fader'>
-			<img rel="preload" src={tutorial0} className={value*10 === 0 ? 'avatar':'hidden' } id="tutorial0" alt="a spinning arrow circle inviing user input" />
+			{/* <img rel="preload" src={tutorial0} className={value*10 === 0 ? 'avatar':'hidden' } id="tutorial0" alt="a spinning arrow circle inviing user input" /> */}
 			</div>
 			<img rel="preload" src={avatar1} className={value*10 === 1 ? 'avatar':'hidden' } id={currentQuestion ===10? "avatar":null } alt="a  an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>		
 			<img rel="preload" src={avatar2} className={value*10 === 2 ? 'avatar':'hidden' } id={currentQuestion ===10? "avatar":null } alt="a  an rpg style playable character" style={currentQuestion ===9?{ animation: "lower-fields 3s forwards" }:null}/>		

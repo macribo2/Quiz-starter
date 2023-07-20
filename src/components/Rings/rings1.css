@@ -391,7 +391,7 @@ z-index: 101;
 animation: fade-in 1s forwards;
 }
 
-.names-i, .numbers-i, .history-i{
+ .names-i, .numbers-i, .history-i{
   /* opacity: 0; */
 /* top:5%; */
 font-size: 4em;

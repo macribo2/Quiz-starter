@@ -9,6 +9,9 @@
   top: 0;
   left: 0;
 }
+.encounter{
+	display: none;
+}
 .rotate-phone-img{
   transform:translate(0%,50%);
   height:50%;
@@ -1163,7 +1166,7 @@ border-radius: 50%;
   /* top: 15%; */
   transform: scale(1);
   width:100%;
-
+pointer-events: none;
 
 
 
@@ -1314,7 +1317,8 @@ border-radius: 50%;
   /* display:  block; */
   /* margin-top:4%; */
   opacity: 1;
-  transform: scale(0.5)
+  transform: scale(0.5);
+  pointer-events:none;
 }
 
 .countyMap-container {
@@ -1357,6 +1361,8 @@ border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
   transform: scale(1);
+  pointer-events: none;
+
 
 }
 

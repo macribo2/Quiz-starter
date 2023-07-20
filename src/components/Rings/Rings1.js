@@ -101,7 +101,7 @@ export default function Rings1(props) {
 		<>
 			
 			<div className="input-elements-container2">
-		<img src={lens} id="lens" alt="a glass lens" />
+		{/* <img src={lens} id="lens" alt="a glass lens" /> */}
 			
 		<div className="input-elements-container">
 			

@@ -1,16 +1,22 @@
-[{"encounterNumber":"0",
-		"encounterNameGae": "Test Ainm",
-		"encounterNameEng": "Test Name Eng",
-		"locationDescriptionGae": ["aTest","alorem", "aipsum", "adelor", "asit" ,"aamit"],
-		"locationDescriptionEng": ["aEng Test","aEng lorem", "aEng ipsum", "aEng delor", "Eng sit" ,"Eng amit"],
-		"encounterGraphics": ["url('../../images/gael-ring/druids.png')","url('../../images/gael-ring/druids.png')","url('../../images/gael-ring/druids.png')","url('../../images/gael-ring/druids.png')","url('../../images/gael-ring/druids.png')","url('../../images/gael-ring/druids.png')","url('../../images/gael-ring/druids.png')","url('../../images/gael-ring/druids.png')"],
-		"encounterDescriptionAfterSuccessEng":"tis done",
-		"encounterDescriptionAfterSuccessGae":"deanta",
-		"encounterDescriptionAfterFailureGae":"Teip",
-		"encounterDescriptionAfterFailureEng":"Failed...",
-		"encounterDescriptionWhileAwaitingCompletionGae":"Ag feitheamh...",
-		"encounterDescriptionWhileAwaitingCompletionEng": "Waiting..."},
+[
 	
+{"encounterNumber":"0",
+"encounterNameGae": "Baile na gCailleach",
+"encounterNameEng": "Collinstown",
+
+"locationDescriptionGae": [ "Tá na Caillaigh fá bhrághaid.", "Siúlann duine acú chugat." ,"Iarrann sí, 'Cad a thugann isteach inár gcónaíodh dorcha thú, gan choinne?","Labhair amach do chuspóir"],
+"locationDescriptionEng": ["You sense the presence of the veiled ones.","One of them approaches.","She asks, 'What brings you to our dark haven, uninvited?","Speak your purpose."],
+"locationBG": "../../images/gael-ring/druids.png`",
+"illustrations": ["../../images/about2/stone-7.png","../../images/about2/stone-7.png"],
+"questionGae":"",
+"questionEng":"",
+"answGae":["Chaith masla lei.","Lorg comhairle uaithí","Fág"],
+"answEng":["Hurl insults at her","Seek advice from her","Leave"],
+"gaeTurnToPage":["Tagann meangadh gáire uirthí. 'Frog anois thú,' arsa sí. Laighsfaidh braon ó Pol an Púca thú. go dté tú slán.","Sna garráin naofa, ciúnann gáire na síoga.Feicim Bád le seoltaí iarainn.","fágann tú."],
+"engTurnToPage":[ "The witch smiles. 'You are now a frog. A drop from Pollapooka will cure you. Good day.'","I hear conflict in the Otherworld.  I see Ships with Iron sails.","You leave."],
+"encounterz":"tis done"
+}
+,
 	
 		{"encounterNumber":"1",
 		"encounterNameGae": "Test Ainm",

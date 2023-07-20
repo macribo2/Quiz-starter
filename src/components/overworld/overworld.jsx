@@ -43,27 +43,22 @@ import collin from '../../images/ai-art/places/collin.jpg';
 import corlis from '../../images/ai-art/places/corlis.jpg';
 import kilbeg from '../../images/ai-art/places/kilbeg.jpg'; 
 import mullin from '../../images/ai-art/places/mullin.jpg'; 
-import place7 from '../../images/ai-art/places/1.png'
-import place8 from '../../images/ai-art/places/1.png'
-import place9 from '../../images/ai-art/places/1.png'
-import place10 from '../../images/ai-art/places/1.png'
-import place11 from '../../images/ai-art/places/1.png'
-import place12 from '../../images/ai-art/places/1.png'
-import place13 from '../../images/ai-art/places/1.png'
-import place14 from '../../images/ai-art/places/1.png'
-import place15 from '../../images/ai-art/places/1.png'
-import place16 from '../../images/ai-art/places/1.png'
-import place17 from '../../images/ai-art/places/1.png'
-import place18 from '../../images/ai-art/places/1.png'
-import place19 from '../../images/ai-art/places/1.png'
-import place20 from '../../images/ai-art/places/1.png'
-import place21 from '../../images/ai-art/places/1.png'
-import place22 from '../../images/ai-art/places/1.png'
-import place23 from '../../images/ai-art/places/1.png'
-import place24 from '../../images/ai-art/places/1.png'
-import place25 from '../../images/ai-art/places/1.png'
-import place26 from '../../images/ai-art/places/1.png'
-import place27 from '../../images/ai-art/places/1.png'
+import beltur from '../../images/ai-art/places/beltur.jpg'
+import birr from '../../images/ai-art/places/birr.jpg'
+import clonma from '../../images/ai-art/places/clonma.jpg'
+import dunare from '../../images/ai-art/places/dunare.jpg'
+import edende from '../../images/ai-art/places/edende.jpg'
+import kilbri from '../../images/ai-art/places/kilbri.jpg'
+import kinnit from '../../images/ai-art/places/kinnit.jpg'
+import lisgre from '../../images/ai-art/places/lisgre.jpg'
+import navan from '../../images/ai-art/places/navan.jpg'
+import oakwoo from '../../images/ai-art/places/oakwoo.jpg'
+import rathan from '../../images/ai-art/places/rathan.jpg'
+import redhil from '../../images/ai-art/places/redhil.jpg'
+import rathca from '../../images/ai-art/places/rathca.jpg'
+import ridge from '../../images/ai-art/places/ridge.jpg'
+import sacred from '../../images/ai-art/places/sacred.jpg'
+import shinro from '../../images/ai-art/places/shinro .jpg'
 import place28 from '../../images/ai-art/places/1.png'
 import place29 from '../../images/ai-art/places/1.png'
 import place30 from '../../images/ai-art/places/1.png'
@@ -90,6 +85,7 @@ import place50 from '../../images/ai-art/places/1.png'
 import place51 from '../../images/ai-art/places/1.png'
 import place52 from '../../images/ai-art/places/1.png'
 import place53 from '../../images/ai-art/places/1.png'
+import derryn from '../../images/ai-art/places/derryn.jpg'
 import Encounter from '../encounter/encounter'
 import gigakoops from '../../audio/Gigakoops - Level 2 - High Clouds.mp3'
 import jam from '../../audio/ultima-tone-long.wav'
@@ -108,9 +104,7 @@ import geaga from "../../images/empty.png"
 import ringIcon from '../../images/gold.png'
 import blocked from '../../images/empty.png'
 import sea0 from '../../images/tonnta1.gif'
-// import sea1 from '../../images/tonnta2.gif'
-// import sea2 from '../../images/tonnta3.gif'
-// import sea3 from '../../images/tonnta1.gif'
+
 import { Col, Row } from 'react-bootstrap'
 import town0 from '../../images/shields.png'
 import Silken from '../silken/silken'
@@ -485,7 +479,9 @@ export default class Overworld extends React.Component {
             isVisible:false,
             // whereAmI: localStorage.getItem('whereAmI')
             data: "",
-            speakWithDM:true
+            speakWithDM: true,
+            isEncounterComponentVisible: true,
+            encounterID:0
         }
 
     }
@@ -641,7 +637,7 @@ $("#locEng").fadeOut()
             $('.location-title-card-text-container').fadeIn();
 
             $('.emblem-container').fadeIn();
-            setTimeout(function () { 
+    
             // $('.countyMap').css('left', imreoir.whereAmI.left)
             // $('.countyMap').css('top', imreoir.whereAmI.top)
             
@@ -666,7 +662,7 @@ $("#locEng").fadeOut()
                     
                     }, 5000)
                 }
-            }, 2000)
+         
            
 
 
@@ -3689,13 +3685,69 @@ $("#locEng").fadeIn()
            
             $('#loc').html(newLocations[loc])
             switch (newLocations[loc]) {
-                case '': locationGraphic = place0; break;
-                case "Baile na gCailleach": locationGraphic = collin; break;
-                case "Ráth na Féileacáin": locationGraphic = butter; break;
-                case "Tulaigh an Eallaigh": locationGraphic = tullyn; break;
-                case "Na Colúir": locationGraphic = corlis;  break;
-                case "Cill Ḃeagáin": locationGraphic = kilbeg; break;
-                case "An Muileann gCearr": locationGraphic = mullin; break;
+                case '': locationGraphic = place0; localStorage.setItem('encounterID', 0); break;
+                case "Baile na gCailleach": locationGraphic = collin; localStorage.setItem('encounterID', 1); break;
+                case "Ráth na Féileacáin": locationGraphic = butter; localStorage.setItem('encounterID', 2); break;
+                case "Tulaigh an Eallaigh": locationGraphic = tullyn; localStorage.setItem('encounterID', 3); break;
+                case "Na Colúir": locationGraphic = corlis; localStorage.setItem('encounterID', 4); break;
+                case "Cill Ḃeagáin": locationGraphic = kilbeg; localStorage.setItem('encounterID', 5); break;
+                ;case "An Muileann gCearr": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                    ; case "Doire na Criaḋ": locationGraphic = derryn; localStorage.setItem('encounterID', 7); break;
+                
+                    ; case "An Cnoc Rua": locationGraphic = redhil; localStorage.setItem('encounterID', 8); break;
+                
+                    ; case "Béal Tairbirt": locationGraphic = beltur; localStorage.setItem('encounterID', 9); break;; case "An Dromainn": locationGraphic = mullin; localStorage.setItem('encounterID', 10);
+                    break;;
+                case "Dún an Rí": locationGraphic = mullin; localStorage.setItem('encounterID', 11); break;; case "Lios Cré": locationGraphic = mullin; localStorage.setItem('encounterID', 12); break;;
+                case "Caisleán na Deirge": locationGraphic = mullin; localStorage.setItem('encounterID', 13); break;; case "Seisceann Siúil": locationGraphic = mullin; localStorage.setItem('encounterID', 14); break;;
+                case "Baile Mhic Gofraidh": locationGraphic = mullin; localStorage.setItem('encounterID', 15); break;
+                    ; case "An Ċorr Ċríochach": locationGraphic = mullin; localStorage.setItem('encounterID', 16); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 17); break;
+                case "Dún Geanainn": locationGraphic = mullin; localStorage.setItem('encounterID', 18); break;
+                case "Cluain Ṁic Nóis": locationGraphic = clonma; localStorage.setItem('encounterID', 19); break;
+                case "Éadan Doire": locationGraphic = edende; localStorage.setItem('encounterID', 20); break;
+                case "Biorra": locationGraphic = birr; localStorage.setItem('encounterID', 21); break;
+                case "Cionn Eitigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "Ráth Iomġáin": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "Suí an Róin": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "Dún Dealgan": locationGraphic = mullin; localStorage.setItem('encounterID', 6 ); break;
+                case "An Grianfort": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "Ceann Ċloċair": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "Baile Átha Ḟirdia": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "Poll an Phúca": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "Baile an Ġearlánaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+                case "An Ómaigh": locationGraphic = mullin; localStorage.setItem('encounterID', 6); break;
+
                 // case '': break;
                 // case '': break;
                 // case '': break;
@@ -5164,8 +5216,10 @@ storyTimer()
 
 
     }
-
-  
+        function hideEncounterComponent(){ 
+            this.setState({ isEncounterComponentVisible: false });
+            alert(this.state.isEncounterComponentVisible)
+        }
 
         return (
             
@@ -5509,11 +5563,11 @@ additional graphics from <a href="https://game-icons.net/"> https://game-icons.n
                 </div>            
                 </div>
                 <>
-                    <div className="encounter">
+                    {this.state.isEncounterComponentVisible && <div className="encounter">
 
-                <Encounter />
+                        <Encounter hideEncounterComponent={this.hideEncounterComponent} />
 
-                    </div>
+                    </div>}
                 </>
                 <Score returnToCounty={this.returnToCounty} />   
                 <div className="rotate-phone-container">
