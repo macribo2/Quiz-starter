@@ -17,19 +17,13 @@
       "Suí an Róin"
     ],
     "locationsEng": [
-
-     "Clonmacnoise  - Meadow of the Sons of Nós ",
+      "Clonmacnoise  - Meadow of the Sons of Nós ",
       "Edenderry - Hill-brow of the oak wood ",
-
       " Birr - plain of water ",
-
       "The head of Princess Eitigh ( Kinnitty )",
-
       "Iomgháin's ring-fort ( Rathangan )",
-
       "Seat of the seal ( Shinrone )"
-
-     ]
+    ]
   },
   {
     "emblem": "louth",
@@ -43,16 +37,12 @@
       "Baile an Ġearlánaigh"
     ],
     "locationsEng": [
-
       "Dundalk - fort of Dealgan, Fir Bolg Chieftain",
       "Greenore - the sun fort",
-
       "Clogherhead - rocky headland",
-      "Ardee - te ford of Ferdi",
+      "Ardee - the ford of Ferdia",
       "Puckstown - hole of the Pooka",
       "Castlebellingham - Gernon’s Town"
-
-
     ],
     "county": "Co. An Lú",
     "mapData": "[[3,3,3,2,2,2,2,1,1,1],[3,3,0,0,0,0,0,0,32,1],[3,3,0,0,0,0,0,0,0,1],[4,4,0,0,0,30,0,31,0,1],[4,4,0,0,0,0,1,1,1,1],[4,0,0,0,0,0,1,1,1,1],[4,0,0,0,34,0,35,1,1,1],[5,5,33,0,0,0,0,1,1,1],[5,5,0,0,0,0,0,1,1,1],[5,5,5,6,6,6,6,1,1,1]]",
@@ -73,9 +63,8 @@
       "Dún Ċormaic"
     ],
     "locationsEng": [
-
       "Killinierin - Forest of Iron",
-      "Inis Córṫaidh",
+      "Island of Rocks",
       "Pollaphuca - Hole of the Pooka",
       "Mullinagore - The Grazing of Goats",
       "Owenduff  - The Black River",
@@ -104,7 +93,7 @@
       "Poulaphouca - the Pooka's hole",
       "Castleconnell - O Connell's Castle",
       "Ford of the Ash",
-      "An Ḟeoṫanaċ",
+      "Place of thistles",
       "Bruree - Abode of kings"
     ],
     "county": "Co. Luimnach",
@@ -131,7 +120,7 @@
       "Clontarf - Meadow of Bulls ",
       "Howth - Éadar's peak",
       "Dun Laoghaire - Fort of High King Laoghaire Mac Néill",
-      " Dalkey - Thorn Island"
+      "Dalkey - Thorn Island"
     ],
     "county": "Co. Baile Átha Ċliath",
     "mapData": "[[3,3,3,2,2,2,2,9,9,1],[3,3,0,0,0,0,0,0,1,1],[3,3,0,0,0,0,0,0,1,1],[4,4,0,0,30,0,0,0,1,1],[4,0,0,0,0,0,33,1,1,1],[4,0,0,0,31,32,0,1,1,1],[4,0,0,0,0,0,0,1,1,1],[5,5,0,0,0,0,34,1,1,1],[5,5,5,0,0,0,0,35,1,1],[5,5,5,6,6,6,7,1,1,1]]",
@@ -152,12 +141,12 @@
       "Dromad"
     ],
     "locationsEng": [
-"Glenade - lake of the glen of jealousy",
-"Garvagh - rough land",
-"Drumshanbo  - ridge of the huts",
-"Aughnasheelan - Field of the fairy",
-"Feenagh - wooded place",
-"Dromod - long ridge"
+      "Glenade - lake of the glen of jealousy",
+      "Garvagh - rough land",
+      "Drumshanbo  - ridge of the huts",
+      "Aughnasheelan - Field of the fairy",
+      "Feenagh - wooded place",
+      "Dromod - long ridge"
     ],
     "county": "Co. na Liatroma",
     "mapData": "[[1,3,0,0,2,2,2,2,9,9],[1,3,30,0,0,0,9,9,9,9],[1,3,0,0,0,0,9,9,9,9],[4,4,0,31,0,0,9,9,9,9],[4,4,0,0,0,0,9,9,9,9],[4,4,5,32,1,0,33,8,8,8],[4,4,5,5,0,0,0,0,8,8],[5,5,5,5,0,0,34,0,0,7],[5,5,5,5,35,0,0,0,0,7],[5,5,5,5,6,6,6,7,7,7]]",
@@ -309,7 +298,7 @@
     ],
     "locationsEng": [
       "Cloodfad - long meadow",
-      "Baile an Tobair",
+      "Town of the well",
       "Lough Bofin - lake of the blonde cow",
       "Scramóg",
       "Lough Boderg - lake of the red cow",
@@ -336,10 +325,10 @@
     "locationsEng": [
       "Derry - oak grove",
       "Limavady - leap of the dog",
-      "Bridge of Fíolta (seeded?)",
+      "Bridge overgrown",
       "Maghera - plain of the ringfort",
       "Shanmullagh - the old summit",
-      "Muine Mór"
+      "Moneymor - great thicket"
     ],
     "county": "Co. Ḋoire",
     "mapData": "[[3,1,1,0,0,0,0,0,9,9],[3,1,1,1,31,0,0,0,9,9],[3,30,0,0,0,0,0,0,9,9],[4,0,0,0,32,0,0,0,8,8],[4,0,0,0,0,0,0,0,0,8],[4,0,0,0,0,0,0,0,33,8],[4,0,0,0,0,0,0,34,0,8],[5,5,5,6,0,0,0,0,0,7],[5,5,5,6,0,0,0,35,0,7],[5,5,5,6,6,6,6,6,6,7]]",
@@ -362,7 +351,7 @@
     "locationsEng": [
       "Bellanagarrigeeny - Ford of the flagstone",
       "Mullaghmore - the great summit",
-      "Keshcorrn Caves",
+      "Caves of Corann, Harper of Dain Céacht, God of healing.",
       "Maugherow - the plain of Eabha",
       "Ballydawley - home of the O Dalys",
       "Tobercurry - well of the cauldron"
@@ -438,9 +427,9 @@
       "Cill Ṁíodáin"
     ],
     "locationsEng": [
-      "Sléiḃte an Ċomaraigh",
+      "The shepherd's mountains",
       "the black town",
-      "Tullach an Iarainn",
+      "The Hillock of Iron",
       "Cluain Ḟia",
       "Dungarvan - Garbhann's Fort",
       "Cill Ṁíodáin"
@@ -464,12 +453,12 @@
       "Sliaḃ Rua"
     ],
     "locationsEng": [
-      "Ġráinseaċ Ċuffe",
-      "Baile Ṁic Andáin",
-      "Bearna na Gaoiṫe",
-      "Dún Garḃáin",
-      "Baile an Ṗoill",
-      "Sliaḃ Rua"
+      "Cuffe's Grange",
+      "Fortress town of Anglo-Norman Mercenary Thomas FitzAnthony",
+      "windy gap",
+      "Fortress of the Rough people",
+      "Ballinphull - town of the hole",
+      "The red mountain"
     ],
     "county": "Co. Ċill Ċainniġ",
     "mapData": "[[3,3,3,2,2,2,2,9,9,9],[3,3,0,0,0,0,0,0,9,9],[3,3,0,0,0,0,0,0,9,9],[4,4,4,30,0,0,0,0,8,8],[4,4,4,0,0,0,31,0,8,8],[4,4,4,0,0,32,0,0,8,8],[4,4,4,0,33,0,0,0,8,8],[5,5,5,34,0,0,0,0,7,7],[5,5,5,0,0,35,0,0,7,7],[5,5,5,6,6,6,6,7,7,7]]",
@@ -486,7 +475,7 @@
       "Ráth Ċairn",
       "Cill Ḃríde",
       "Teamhair",
-      "Buaile na Bréachṁaí ",
+      "Buaile na Bréachṁaí",
       "Tigh na Sióg"
     ],
     "locationsEng": [
@@ -516,12 +505,12 @@
       "An tSnaidhm"
     ],
     "locationsEng": [
-      "Cathair Saiḋḃín",
-      "An Daingean",
-      "Gleann na bPúcaí",
-      "Sliabh Mis",
-      "Na Cruaċa Duḃa",
-      "An tSnaidhm"
+      "Saidhbh city",
+      "The Stronghold",
+      "Valley of the Pookas",
+      "The Mountain of Mis",
+      "The Black Stacks",
+      "The Knot"
     ],
     "county": "Co. Ċiarraí",
     "mapData": "[[1,1,1,1,1,1,0,0,9,9],[1,1,1,1,0,0,0,0,0,9],[1,0,0,0,33,0,0,0,0,9],[30,0,0,0,0,0,0,0,0,8],[31,1,32,1,0,0,0,0,0,8],[1,1,1,0,0,0,0,0,0,8],[4,0,0,0,0,34,0,0,0,8],[1,0,0,0,0,0,0,0,0,7],[1,0,35,0,1,0,0,0,0,7],[1,1,1,1,6,6,6,7,7,7]]",
@@ -585,12 +574,17 @@
   {
     "emblem": "westmeath",
     "co": "westmeath",
-    "locations": [      "Baile na gCailleach","Ráth na Féileacáin","Tulaigh an Eallaigh","Na Colúir", "Cill Ḃeagáin",
+    "locations": [
+      "Baile na gCailleach",
+      "Caisleán Chnoc Droinne",
+      "Loch Dairbhreach",
+      "Na Colúir",
+      "Cill Ḃeagáin",
       "An Muileann gCearr"
     ],
     "locationsEng": [
       "Collinstown - town of the veiled women or town of the hags",
-      "Fort Butterfly",
+      "Lough Derravaragh - lake of the oaks",
       "Tullynally - hillock of the swans",
       "Corlis - the pidgeons",
       "Kilbeggan - church of Bécán, distinguished Irish Saint",
@@ -646,7 +640,7 @@
       "Port An Dúnáin",
       "Baile Úr",
       "Baile an Ṁuilinn",
-      "Lios Liath"
+      "The grey fortress"
     ],
     "county": "Co. Ard Ṁaċa",
     "mapData": "[[3,3,3,30,0,32,2,2,2,9],[3,3,3,0,31,0,0,0,9,9],[3,3,0,0,0,0,0,0,9,9],[4,0,0,0,0,0,0,0,8,8],[4,0,0,0,34,0,0,0,8,8],[4,0,0,0,0,0,0,0,8,8],[4,5,0,33,0,0,0,0,8,8],[5,5,5,0,0,0,35,0,8,8],[5,5,5,5,0,0,0,0,8,8],[5,5,5,6,6,6,6,7,7,7]]",
@@ -687,7 +681,7 @@
     "locations": [
       "Scairbh na gCaorach",
       "Cluain Eois",
-      "Einistir Ḃuithe",
+      "Mainistir Ḃuithe",
       "Teach an Scotaigh",
       "Crícheán Rua",
       "Carraig Ṁaċaire Rois"
@@ -695,7 +689,7 @@
     "locationsEng": [
       "Scairbh na gCaorach",
       "Cluain Eois",
-      "Einistir Ḃuithe",
+      "Monastary of Saint Buíte",
       "Teach an Scotaigh",
       "Crícheán Rua",
       "Carraig Ṁaċaire Rois"
@@ -719,7 +713,7 @@
       "Inis Meáin "
     ],
     "locationsEng": [
-      "Poll an Phúca",
+      "Hole of the Pooka (Galway)",
       "Cill Cais",
       "An Spidéal ",
       "An Teach Dóite",
@@ -772,10 +766,10 @@
     ],
     "locationsEng": [
       "Ceann Boirne",
-      "Fíoch Rua",
+      "Red Feud",
       "An Tulach",
       "Cill Rois",
-      "Leaba Ṡíoda",
+      "Labasheeda - Silken bed",
       "Bun Raite"
     ],
     "county": "Co. An Ċláir",
@@ -796,7 +790,6 @@
       "Dún an Rí",
       "Lios Cré"
     ],
-
     "locationsEng": [
       "Derrynacreeve - Oakwood of the clay",
       "Redhills - the red hill",
@@ -838,7 +831,6 @@
     "left": "16px",
     "zoom": "scale(1.6)"
   },
-
   {
     "emblem": "geaga",
     "co": "geaga",
@@ -850,7 +842,6 @@
       "An Ċorr Ċríochach",
       "Dún Geanainn"
     ],
-
     "county": "ó náid go haon",
     "mapData": "[[3,3,3,3,3,3,3,3,3,3],[3,3,3,3,3,3,3,3,3,3],[3,3,3,3,3,3,3,3,3,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,3,3,3,3,3,3,3,3,3]]",
     "countyBG": "url('./countyMaps/geaga-2.png')",
@@ -859,12 +850,3 @@
     "zoom": "scale(1.6)"
   }
 ]
-
-
-
-
-
-
-
-
-  
