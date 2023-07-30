@@ -38,7 +38,6 @@ export default function Encounter({ hideEncounterComponent }) {
 		encounterID = localStorage.getItem('encounterID')
 
 		// alert(encounterID)
-	};
 
 	let answGae = JSON.stringify(encounter[encounterID].answGae)
 	answGae = JSON.parse(answGae)
@@ -483,3 +482,4 @@ export default function Encounter({ hideEncounterComponent }) {
 }
 
 
+};

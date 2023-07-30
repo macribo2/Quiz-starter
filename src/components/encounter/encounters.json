@@ -8821,14 +8821,10 @@
 			"heave",
 			"ho"
 		],
-		"locationDescriptionGae": [
-			"Adelor",
-			"Bsit",
-			"Gaelamet",
-			"Mutt"
+		"locationDescriptionGae": ["An t-Ochtapas","Tá mé ocht inniu, arsa an tOchtapas Is tá mo chairde ag teacht le haghaidh tae","Is breá liom bheith ocht, arsa an tOchtapas, Beidh an chóisir againn ar a sé.","Tá mé ocht inniu arsa an tOchtapas Is tá mo chairde ag teacht le haghaidh tae,","Is breá liom bheith ocht arsa an tOchtapas,vBa sheachtapas mé inné!"
 		],
 		"answGae": [
-			"k",
+			"Gabriel Rosenstock",
 			"j",
 			"i",
 			"h"

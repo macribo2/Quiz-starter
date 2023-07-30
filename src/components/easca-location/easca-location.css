@@ -527,7 +527,7 @@
   
   
   .waves {
-	background-image: url('../../images/tonnta1.gif');
+	background-image: url('../../images/tonnta1.jpg');
 	height: 150px;
 	width: 150px;
 	z-index: 6;
@@ -551,7 +551,7 @@
   
   #sea1 {
 	left: 20%;
-	background-image: url('../../images/tonnta1.gif')
+	background-image: url('../../images/tonnta1.jpg')
   }.gif
   
   #sea2 {
@@ -560,7 +560,7 @@
   
   #sea3 {
 	left: 60%;
-	background-image: url('../../images/tonnta1.gif')
+	background-image: url('../../images/tonnta1.jpg')
   }
   
   #sea4 {
@@ -569,27 +569,27 @@
   
   #sea5 {
 	left: 100%;
-	background-image: url('../../images/tonnta1.gif')
+	background-image: url('../../images/tonnta1.jpg')
   }
   
   #sea6 {
 	left: 120%;
-	background-image: url('../../images/tonnta1.gif')
+	background-image: url('../../images/tonnta1.jpg')
   }
   
   #sea7 {
 	left: 140%;
-	background-image: url('../../images/tonnta1.gif')
+	background-image: url('../../images/tonnta1.jpg')
   }
   
   #sea8 {
 	left: 160%;
-	background-image: url('../../images/tonnta1.gif')
+	background-image: url('../../images/tonnta1.jpg')
   }
   
   #sea9 {
 	left: 180%;
-	background-image: url('../../images/tonnta1.gif')
+	background-image: url('../../images/tonnta1.jpg')
   }
   
   #stat-text {

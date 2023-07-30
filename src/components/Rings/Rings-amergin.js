@@ -437,7 +437,7 @@ export default function Rings3(props) {
 
 					<div className="about-hist">{value * 10 === 0 ? <img src={slide0} className="slide" alt="enegized stonet" /> : null}
 					</div>
-					<div className="about-hist">{value * 10 === 1 ? <img className="slide slide1" src={slide1} alt="waves" /> : null}
+					<div className="about-hist sea-slide">{value * 10 === 1 ? <img className="slide slide1" src={slide1} alt="waves" /> : null}
 					</div>
 					<div className="about-hist">{value * 10 === 1 ? <img className="slide slide1b" src={boat} alt="waves" /> : null}
 					</div>
