@@ -37,7 +37,7 @@ import Battle from '../battle/battle0'
 import EascaLocation from '../easca-location/easca-location'
 import rocks from '../../images/rocks.png'
 import place0 from '../../images/empty.png'
-import butter from '../../images/ai-art/places/butter.jpg'
+import lderra from '../../images/ai-art/places/lderra.jpg'
 import tullyn from '../../images/ai-art/places/tullyn.jpg'
 import collin from '../../images/ai-art/places/collin.jpg';
 import corlis from '../../images/ai-art/places/corlis.jpg';
@@ -59,7 +59,14 @@ import rathca from '../../images/ai-art/places/rathca.jpg'
 import ridge from '../../images/ai-art/places/ridge.jpg'
 import sacred from '../../images/ai-art/places/sacred.jpg'
 import shinro from '../../images/ai-art/places/shinro .jpg'
+import macair from '../../images/ai-art/places/macair.jpg'
 
+import caisui from '../../images/ai-art/places/caisui.jpg'
+import athnaf from '../../images/ai-art/places/athnaf.jpg'
+import bealfe from '../../images/ai-art/places/bealfe.jpg'
+import arklow from '../../images/ai-art/places/arklow.jpg'
+import avoca from '../../images/ai-art/places/avoca.jpg'
+import leiman from '../../images/ai-art/places/leiman.jpg'
 import dundeal from '../../images/ai-art/places/dundeal.jpg'
 import angria from '../../images/ai-art/places/angria.jpg'
 import bafhir from '../../images/ai-art/places/bafhir.jpg'
@@ -3828,7 +3835,7 @@ export default class Overworld extends React.Component {
             switch (newLocations[loc]) {
                 case '': locationGraphic = place0; localStorage.setItem('encounterID', 0); break;
                 case "Baile na gCailleach": locationGraphic = collin; localStorage.setItem('encounterID', 1); break;
-                case "Ráth na Féileacáin": locationGraphic = butter; localStorage.setItem('encounterID', 2); break;
+                case "Loch Dairbhreach": locationGraphic = lderra; localStorage.setItem('encounterID', 2); break;
                 case "Tulaigh an Eallaigh": locationGraphic = tullyn; localStorage.setItem('encounterID', 3); break;
                 case "Na Colúir": locationGraphic = corlis; localStorage.setItem('encounterID', 4); break;
                 case "Cill Ḃeagáin": locationGraphic = kilbeg; localStorage.setItem('encounterID', 5); break;
@@ -3841,8 +3848,8 @@ export default class Overworld extends React.Component {
                 case "Suí an Róin": locationGraphic = shinro; localStorage.setItem('encounterID', 12); break;
                 case "Dún Dealgan": locationGraphic = dundeal; localStorage.setItem('encounterID', 13); break;
                 case "An Grianfort": locationGraphic = angria; localStorage.setItem('encounterID', 14); break;
-                case "Ceann Ċloċair": locationGraphic = collin; localStorage.setItem('encounterID', 15); break
-                case "Baile Átha Ḟirdia": locationGraphic = collin; localStorage.setItem('encounterID', 16); break;
+                case "Ceann Ċloċair": locationGraphic = iceith; localStorage.setItem('encounterID', 15); break
+                case "Baile Átha Ḟirdia": locationGraphic = bafhir; localStorage.setItem('encounterID', 16); break;
                 case "Poll an Phúca": locationGraphic = pollph1; localStorage.setItem('encounterID', 17); break;
                 case "Baile an Ġearlánaigh": locationGraphic = baghea; localStorage.setItem('encounterID', 18); break;
                 case "Coill an Iarainn": locationGraphic = caiara; localStorage.setItem('encounterID', 19); break;
@@ -3853,8 +3860,8 @@ export default class Overworld extends React.Component {
                 case "Dún Ċormaic": locationGraphic = duncor; localStorage.setItem('encounterID', 24); break;
                 case "Pailis Ċaonraí": locationGraphic = pcaonr; localStorage.setItem('encounterID', 25); break;
                 case "Poll an Phúca": locationGraphic = pollph3; localStorage.setItem('encounterID', 26); break;
-                case "Caisleán Uí Ċonaill": locationGraphic = collin; localStorage.setItem('encounterID', 27); break;
-                case "Áth na bḞuinseog": locationGraphic = collin; localStorage.setItem('encounterID', 28); break;
+                case "Caisleán Uí Ċonaill": locationGraphic = caisui; localStorage.setItem('encounterID', 27); break;
+                case "Áth na bḞuinseog": locationGraphic = athnaf; localStorage.setItem('encounterID', 28); break;
                 case "An Ḟeoṫanaċ": locationGraphic = anfheot; localStorage.setItem('encounterID', 29); break;
                 case "Brú Rí": locationGraphic = bruri; localStorage.setItem('encounterID', 30); break;
                 case "Fionnġlas": locationGraphic = fionng; localStorage.setItem('encounterID', 31); break;
@@ -3873,8 +3880,8 @@ export default class Overworld extends React.Component {
                 case "Dearḃóg": locationGraphic = dearbh; localStorage.setItem('encounterID', 44); break;
                 case "Aċaḋ Eoċaille": locationGraphic = aeocha; localStorage.setItem('encounterID', 45); break;
                 case "Carn Ṁéaḃla": locationGraphic = carnmh; localStorage.setItem('encounterID', 46); break;
-                case "Carraig Ḟearġais": locationGraphic = collin; localStorage.setItem('encounterID', 47); break;
-                case "Béal Feiriste": locationGraphic = collin; localStorage.setItem('encounterID', 48); break;
+                case "Carraig Ḟearġais": locationGraphic = dlaoig; localStorage.setItem('encounterID', 47); break;
+                case "Béal Feiriste": locationGraphic = bealfe; localStorage.setItem('encounterID', 48); break;
                 case "Cionn Dhún Damh": locationGraphic = cddamh; localStorage.setItem('encounterID', 49); break;
                 case "Baile idir Dhá Abhainn": locationGraphic = bidabh; localStorage.setItem('encounterID', 50); break;
                 case "Sléiḃte Ḋoire Ḃeatha": locationGraphic = sdbhea; localStorage.setItem('encounterID', 51); break;
@@ -3887,7 +3894,7 @@ export default class Overworld extends React.Component {
                 case "Lios na Daróg": locationGraphic = lnadar; localStorage.setItem('encounterID', 58); break;
                 case "Scriobaċ": locationGraphic = scriob; localStorage.setItem('encounterID', 59); break;
                 case "Inis Ceiṫleann": locationGraphic = iceith; localStorage.setItem('encounterID', 60); break;
-                case "Cill na Mallaċ": locationGraphic = collin; localStorage.setItem('encounterID', 61); break;
+                case "Cill na Mallaċ": locationGraphic = dromad; localStorage.setItem('encounterID', 61); break;
                 case "Sliabh an Nóglaigh": locationGraphic = sanogl; localStorage.setItem('encounterID', 62); break;
                 case "Gleann an Ṗreaċáin": locationGraphic = gaphre; localStorage.setItem('encounterID', 63); break;
                 case "Beal na mḂláth": locationGraphic = bnmhla; localStorage.setItem('encounterID', 64); break;
@@ -3897,8 +3904,8 @@ export default class Overworld extends React.Component {
                 case "Na Cloċa Liaṫa": locationGraphic = ncliat; localStorage.setItem('encounterID', 68); break;
                 case "Siol Éalaiġ": locationGraphic = sealai; localStorage.setItem('encounterID', 69); break;
                 case "Dún Ard": locationGraphic = dard; localStorage.setItem('encounterID', 70); break;
-                case "An tInḃear Mór": locationGraphic = collin; localStorage.setItem('encounterID', 71); break;
-                case "Aḃóca": locationGraphic = collin; localStorage.setItem('encounterID', 72); break;
+                case "An tInḃear Mór": locationGraphic = arklow; localStorage.setItem('encounterID', 71); break;
+                case "Aḃóca": locationGraphic = avoca; localStorage.setItem('encounterID', 72); break;
                 case "Cluain Fada": locationGraphic = clfada; localStorage.setItem('encounterID', 73); break;
                 case "Baile an Tobair": locationGraphic = batoba; localStorage.setItem('encounterID', 74); break;
                 case "Loch Bó Finne": locationGraphic = lbfinn; localStorage.setItem('encounterID', 75); break;
@@ -3906,9 +3913,9 @@ export default class Overworld extends React.Component {
                 case "Loch Bó Dearge": locationGraphic = lbdear; localStorage.setItem('encounterID', 77); break;
                 case "Corr na Fola": locationGraphic = cnfola; localStorage.setItem('encounterID', 78); break;
                 case "Doire": locationGraphic = doire; localStorage.setItem('encounterID', 79); break;
-                case "Léim an Ṁadaiḋ": locationGraphic = collin; localStorage.setItem('encounterID', 80); break;
+                case "Léim an Ṁadaiḋ": locationGraphic = leiman; localStorage.setItem('encounterID', 80); break;
                 case "Droichead Fíolta": locationGraphic = dfiolt; localStorage.setItem('encounterID', 81); break;
-                case "Maċaire Ráṫa": locationGraphic = collin; localStorage.setItem('encounterID', 82); break;
+                case "Maċaire Ráṫa": locationGraphic = macair; localStorage.setItem('encounterID', 82); break;
                 case "An Seanṁullach": locationGraphic = aseanm; localStorage.setItem('encounterID', 83); break;
                 case "Muine Mór": locationGraphic = muimor; localStorage.setItem('encounterID', 84); break;
                 case "Béal Átha na gCarraigíní": locationGraphic = collin; localStorage.setItem('encounterID', 85); break;
