@@ -3825,7 +3825,8 @@ export default class Overworld extends React.Component {
 
         }
         function readyLocation(loc) {
-            if (imreoir.whereAmI != "geaga") {
+            localStorage.setItem('encounterID', 0);
+            if (imreoir.whereAmI !== "geaga") {
 
                 $('#btn-b').css('display', 'block');
                 $('#btn-b').fadeIn();
@@ -4026,15 +4027,7 @@ export default class Overworld extends React.Component {
                 case "Caisleán na Deirge": locationGraphic = collin; localStorage.setItem('encounterID', 198); break;
                 case "Baile Mhic Gofraidh": locationGraphic = collin; localStorage.setItem('encounterID', 199); break;
                 case "An Ómaigh": locationGraphic = collin; localStorage.setItem('encounterID', 200); break;
-
-
-
-
-
-
-
-
-                // case '': break;
+                
 
                 default: break;
 
@@ -4203,11 +4196,11 @@ export default class Overworld extends React.Component {
                                 keydownHandler('up');
 
 
-                            }, 500)
+                            }, 5)
                         }
                     }
                 }
-            }, 500);
+            }, 50);
         });
         $('#south').on('touchend', function () {
             stillPressedSouth = false
@@ -4254,11 +4247,11 @@ export default class Overworld extends React.Component {
                                 keydownHandler('down');
 
 
-                            }, 500)
+                            }, 5)
                         }
                     }
                 }
-            }, 500);
+            }, 50);
             // !keyboardActive;
             updateEventReport('ó dheas')
 
@@ -4272,7 +4265,7 @@ export default class Overworld extends React.Component {
                 alert("Chun troid!")
                 $('#océ').css('visibility', 'visible');
             }
-            setTimeout(handleFirstDown, 1000);
+            setTimeout(handleFirstDown, 100);
             //override bug where player moves south then turns to face south with this jq :
             $('#hero').attr('src', setPlayerIcon());
 
@@ -4317,11 +4310,11 @@ export default class Overworld extends React.Component {
                                 animatePlayer();
 
 
-                            }, 500)
+                            }, 5)
                         }
                     }
                 }
-            }, 500);
+            }, 50);
 
         });
         $('#west').on('touchstart', function () {
@@ -4354,11 +4347,11 @@ export default class Overworld extends React.Component {
                                 keydownHandler('left');
 
 
-                            }, 500)
+                            }, 5)
                         }
                     }
                 }
-            }, 500);
+            }, 50);
         });
 
 
@@ -4404,18 +4397,6 @@ export default class Overworld extends React.Component {
 
 
 
-            // window.location.replace('http://167.172.184.73:1337/contact');
-
-            //         $('#output2').fadeIn();
-            //         setTimeout(function(){ 
-            //             $('.input-elements-container2').css('display', 'flex');
-            //             $('.input-elements-container2').fadeIn();
-
-            //         },1000)
-
-            //         $('#silken').fadeIn();
-            //         $('#silken').css('display', 'block');
-            //     }
 
         };
 
@@ -4830,7 +4811,7 @@ export default class Overworld extends React.Component {
                 $('#stage').fadeIn();
                 $('.toolbar').fadeIn();
 
-            }, 1300)
+            }, 130)
         }
 
 
@@ -4856,7 +4837,7 @@ export default class Overworld extends React.Component {
                 $('.rotate-phone-container').css('display', 'flex')
                 $('.rotate-phone-container').fadeIn()
 
-            }, 3000)
+            }, 300)
         }
         function helloTullyField5() {
             // alert('✓')

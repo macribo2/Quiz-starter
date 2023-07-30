@@ -173,6 +173,37 @@
 
 }
 
+#Rain{
+  position: fixed;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: 88;
+  transform:rotate(15deg) scale(1.2);
+
+}
+.amergin-wave {
+
+  background-image: url('../../images/tonnta1.jpg');
+
+  /* background-size: contain; */
+  /* left: 26%; */
+  background-repeat: repeat;
+  opacity: 0.6;
+  border-radius: 50%;
+  z-index: 800;
+  height: 266px;
+  width: 266px;
+  position: fixed;
+  bottom: 7%;
+  transform: translate(0%,5%);
+  left: 4%;
+  pointer-events: none;
+  padding-bottom: 2px;
+border: 5px solid rgba(125, 110, 24, 0.932);
+}
 .gael-bg {
   z-index: -1;
   animation: fade-in 1s linear forwards;
@@ -240,7 +271,7 @@
   width: 100%;
   text-align: center;
   /* padding-top: 1%; */
-  transform: translate(5%, -30%);
+  transform: translate(-3%, -12%);
   /* border-radius: 50%; */
 }
 
