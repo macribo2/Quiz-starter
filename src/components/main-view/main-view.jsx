@@ -208,7 +208,7 @@ export default function App() {
 	
 		{
 			// tosníonn an scéal anseo. 
-			questionText:  '<p id="delay-in1">\'Lorem ipsum\', arsa '+ choiceRing[localStorage.getItem('portrait')]+'.<br/>\'Dolor sit\' arsa '+  hn+'.</p>',
+			questionText:  '<p id="delay-in1">\'Ar aire\', arsa '+ choiceRing[localStorage.getItem('portrait')]+'.</p><br/><br/><p id="delay-in2">\'Ar son na cúise\' arsa '+  hn+'.</p>',
 			answerOptions: [
 				
 			],
@@ -581,7 +581,7 @@ if(value*10 !== 0 ){
 		`The Dark one`,
 		`The Pagan champion of Valentia`,
 		`Vampire`,
-		`Legendary warrior, seer, poet`,
+		`The legendary warrior, seer, poet`,
 		`one of the Fair Folk `,
 		`Fedelm the poet`,
 		``

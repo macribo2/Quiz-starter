@@ -1540,14 +1540,18 @@ button svg {
   position: fixed;
 }
 
-#delay-in1 {
+#delay-in1, #delay-in2, .delay-in1 {
   text-align: left;
   font-family: urchlo;
-  opacity: 0;
+  opacity: 0.2;
   margin-left: 17%;
-  animation: delay-fade-in 4s forwards linear;
+  animation: delay-fade-in 4s forwards steps(4);
   font-size: 0.7em;
   margin-top: 2%;
+}
+#delay-in2{
+  animation: delay-fade-in 6s forwards steps(6);
+
 }
 
 #delay-in0 {
@@ -1697,7 +1701,7 @@ ul {
     opacity: 0;
   }
 
-  70% {
+  30% {
     opacity: 0;
 
   }

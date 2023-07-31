@@ -447,7 +447,22 @@ export default function Rings3(props) {
 					</div>
 
 					<div className="about-hist">{value * 10 === 4 ? <><img src={poem} className="slide slide-amergin	" alt="Amergín." />
-						<ReactRain numDrops="4200" /></> : null}
+					<div className="rain1">
+						
+						<ReactRain numDrops="511" />
+						</div>
+						<div className="rain2">
+						<ReactRain  numDrops="511" />
+						</div>
+						<div className="rain3">
+
+						<ReactRain numDrops="511" />
+						</div>
+						<div className="rain4">
+
+						<ReactRain numDrops="511" />
+</div>					
+					</> : null}
 					</div>
 					<div className="about-hist">{value * 10 === 5 ? <img src={wind} className="slide" alt="slide illustritative of text." /> : null}
 					</div>
