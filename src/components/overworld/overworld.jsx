@@ -5654,14 +5654,14 @@ export default class Overworld extends React.Component {
                     <img rel="preload" src={this.state.inventoryVisible ? invIcon : null} alt="" className="invIcon" />
 
 
-                    {this.state.isOn ? (<div id="glass">
+                    {/* {this.state.isOn ? (<div id="glass">
 
 
                         < img src={glassPortait} rel="preload" className="question-img" id="glass-img" alt="glass bg for translucent overlay effect." />
 
                         <p id="eng-notes" > {engNotes[narrativeCode]}</p>
 
-                    </div>) : null}
+                    </div>) : null} */}
 
                     <div className='ui-container_directional-pad'>
                         <div className="directional-pad dir-pad-portrait-mode" id="dir-pad" onTouchStart={this.props.incrementScore} onTouchEnd={localStorage.setItem('whereAmI', 'westmeath')

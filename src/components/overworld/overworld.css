@@ -1492,40 +1492,47 @@ p {
 #portrait,
 #inventory {
   display: none;
+  
 }
 
 .portraitMode {
   display: none;
 
 }
-
-@media screen and (orientation:portrait) {
-
-  #portrait,
-  #inventory,
-  .portraitMode {
-    display: block;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 9999;
-    position: fixed;
-    background-size: contain;
-
-  }
-
-  #inventory {
-    z-index: 10000;
-
-
-  }
-
-  .portraitMode {
-    z-index: 10001;
-
+@media screen and (orientation:landscape) {
+  #iron-key-text {
+top: 47% !important;
+transform: scale(1) !important;
+/* border: 4px solid blue; */
   }
 }
+/* for vert mode */
+@media screen and (orientation:portrait) {
+
+#dial-gael{
+/* position:fixed;   */
+/* top:20% !important; */
+
+}
+
+.ring-gael-dial-container{
+display: grid;
+/* border: 4px solid blue; */
+
+  justify-content: center;
+  align-items: center;
+   
+
+}
+
+  #iron-key-text {
+    top: 79%;
+  transform: scale(0.7);
+  
+
+}
+}
+
 
 .daff-container {
   height: 100%;

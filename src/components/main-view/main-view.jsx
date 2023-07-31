@@ -645,7 +645,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 			<img rel="preload" src={distantTown} className="distant-town" alt="distant town large gif" />
 		
 
-		<img id="portrait" rel="preload" src={ portrait}></img>
+		{/* <img id="portrait" rel="preload" src={ portrait}></img> */}
 		<button id={currentQuestion === 7 || currentQuestion === 0 ? "hidden" : "toggle-glass-btn"} onClick={toggleIsOn} ><img src={ isOn ?pearl:emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button>
 
 
