@@ -48,7 +48,7 @@
 	"encounterNameGae": "Baile na gCailleach",
 	"encounterNameEng": "Collinstown",
 	"locationDescriptionGae": [
-		"Tággg na Caillaigh fá bhrághaid.",
+		"Tá na Caillaigh fá bhrághaid.",
 		"Siúlann duine acú chugat.",
 		"Iarrann sí, 'Cad a thugann isteach inár gcónaíodh dorcha thú, gan choinne?",
 		"Labhair amach do chuspóir"
@@ -238,16 +238,16 @@
 		"Ag bárr an Tullach, tagann tú ar cruit ársa, ag luí i gcoinne cloch.","Tagann foisracht ort."
 	],
 	"answGae": [
-		"k",
-		"j",
-		"i",
-		"h"
+		"Leag lámh ar an chruit.",
+		"",
+		"Síar",
+		""
 	],
 	"answEng": [
-		"a",
-		"b",
-		"c",
-		"d"
+		"Place your hand upon the harp",
+		"",
+		"Back",
+		""
 	],
 	"engTurnToPage": [
 		"As you touch the harp, a haunting tune fills the air.",

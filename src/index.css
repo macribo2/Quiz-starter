@@ -1395,7 +1395,7 @@ button svg {
   z-index: 995;
   /* border: 4px solid blueviolet; */
   justify-content: center;
-  margin-left: 4px;
+  margin: 5px 5px 5px 5px;
 
 
   display: grid;
@@ -1545,12 +1545,12 @@ button svg {
   font-family: urchlo;
   opacity: 0.2;
   margin-left: 17%;
-  animation: delay-fade-in 4s forwards steps(4);
+  animation: delay-fade-in 2s forwards steps(4);
   font-size: 0.7em;
   margin-top: 2%;
 }
 #delay-in2{
-  animation: delay-fade-in 6s forwards steps(6);
+  animation: delay-fade-in 3.45s forwards steps(6);
 
 }
 

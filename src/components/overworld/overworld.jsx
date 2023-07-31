@@ -5730,7 +5730,7 @@ export default class Overworld extends React.Component {
 
 
 
-                <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI === 'geaga' ? "hints" : "hidden"}>{'"Be watchful", said ' + this.props.choiceRingEng + '. "For the cause.", said ' + localStorage.getItem('hname') + '.'}</p>
+                <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI === 'geaga' ? "hints" : "hidden"}>{'"Be watchful", said ' + this.props.choiceRingEng + '. "For the cause", said ' + localStorage.getItem('hname') + '.'}</p>
 
                 <div className="ringOfFerna">
                     {/* <Rings7/> */}

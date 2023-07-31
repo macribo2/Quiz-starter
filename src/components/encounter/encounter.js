@@ -367,17 +367,19 @@ alert('x')		}
 						< img src={glass} className="question-img" rel="preload" id="glass-img" alt="glass bg for translucent overlay effect." />
 						<div dangerouslySetInnerHTML={{ __html: engText[Math.floor(value * 10) + round.current * 100] }} x={100} y={100} id="e-id" className="encounter-e" style={{ opacity: isOn ? 1 : 0 }}></div>
 			
-						{/* set encounter specific illustrations for while isOn */}
-					
-						<div className="about-hist">{value * 10 === 2 ? <img src={witch0} className="slide encounter-illustration" alt="story illustrations" /> : null}
+						{/* set encounter specific illustrations for while isOn 
+						
+						witches of collinstown*/}
+						{
+						<div className="about-hist">{value * 10 === 2 && encounterID=== 1? <img src={witch0} className="slide encounter-illustration" alt="story illustrations" /> : null}
 						</div>
-
+					}
 					
-						<div className="about-hist">{value * 10 === 3 ? <img src={witch0} className="slide encounter-illustration" alt="story illustrations" /> : null}
+						<div className="about-hist">{value * 10 === 3 && encounterID=== 1? <img src={witch0} className="slide encounter-illustration" alt="story illustrations" /> : null}
 						</div>
 
 										
-						<div className="about-hist">{value * 10 === 1 ? <img src={witch0} className="slide encounter-illustration" alt="story illustrations" /> : null}
+						<div className="about-hist">{value * 10 === 1 && encounterID=== 1? <img src={witch0} className="slide encounter-illustration" alt="story illustrations" /> : null}
 						</div>
 
 					</div>) : null}
