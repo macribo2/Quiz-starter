@@ -557,12 +557,12 @@
       "An Éill"
     ],
     "locationsEng": [
-      "Cill Ala",
-      "Caisleán an Ḃarraiġ",
-      "Baile Ui Ḟiacáin",
-      "An Caoláire Rua",
-      "Lios an tSaṁaiḋ",
-      "An Éill"
+      "Ala's Church",
+      "Castle of the Barrow",
+      "Town of the Fitzgahan",
+      "The Red Narrow River",
+      "Saimh's Ringfort",
+      "The Cliff"
     ],
     "county": "Co. Ṁaigh Eo",
     "mapData": "[[1,1,0,0,0,0,0,9,9,9],[1,1,1,0,0,0,0,9,9,9],[1,1,0,0,0,0,0,30,0,9],[1,0,0,0,31,0,0,0,0,8],[1,1,32,0,0,0,0,0,0,8],[1,1,1,0,0,0,0,0,0,8],[1,1,1,0,0,0,0,0,0,8],[1,1,1,0,34,0,0,0,0,7],[1,5,5,33,0,0,0,35,7,7],[5,5,5,5,6,6,6,7,7,7]]",
@@ -609,12 +609,12 @@
       "Cill Ċaoil"
     ],
     "locationsEng": [
-      "An Lorgain",
-      "Lios na gCearrḃach",
-      "An Caisleán Riaḃach",
-      "An Ṁainistir Liath",
-      "Dún Pádraig",
-      "Cill Ċaoil"
+      "The Ridge",
+      "Ringfort of the Sheep",
+      "The Grey Castle",
+      "The Grey Monastery",
+      "Patrick's fort",
+      "Church of Caol"
     ],
     "county": "Co. An Dúin",
     "mapData": "[[3,3,3,2,2,2,2,2,1,1],[3,3,3,0,0,0,0,0,0,1],[3,3,3,0,32,0,0,0,33,1],[4,4,31,0,0,0,0,0,0,0],[4,4,0,0,0,0,0,0,0,0],[4,30,0,0,0,0,0,34,0,1],[4,4,0,0,0,0,0,0,1,1],[5,5,0,0,0,0,0,0,1,1],[5,5,0,0,35,0,1,1,1,1],[5,5,1,0,0,0,1,1,1,1]]",
@@ -635,11 +635,11 @@
       "Lios Liath"
     ],
     "locationsEng": [
-      "Sráid na nAlbanach",
-      "Craigavon",
-      "Port An Dúnáin",
-      "Baile Úr",
-      "Baile an Ṁuilinn",
+      "Street of the Scots",
+      "Rock of the Marsh",
+      "Port of the fort",
+      "New town",
+      "Town of the mill",
       "The grey fortress"
     ],
     "county": "Co. Ard Ṁaċa",
@@ -661,12 +661,12 @@
       "Cill Daṁáin"
     ],
     "locationsEng": [
-      "Cill Deirge",
-      "Baile Uí Ṁurċú",
-      "Baile Haicéid",
-      "An Ḃuiríos",
-      "Miseal",
-      "Cill Daṁáin"
+      "Church of Deirge",
+      "Town of the O'Murphy's",
+      "Town of the Hackett's",
+      "Borough of Clan O'Drone",
+      "Myshall, low plain",
+      "Church of Damhain"
     ],
     "county": "Co. Ċeaṫarlaċ",
     "mapData": "[[3,3,3,2,2,2,2,9,9,9],[3,3,3,3,0,0,31,0,0,9],[3,3,0,30,0,0,8,0,0,9],[4,4,0,0,0,0,8,8,8,8],[4,4,0,0,0,32,0,8,8,8],[4,4,4,33,0,0,0,34,8,8],[4,4,5,0,0,0,35,8,8,8],[5,5,5,0,0,0,7,7,7,7],[5,5,5,0,0,0,7,7,7,7],[5,5,5,6,6,6,6,7,7,7]]",
@@ -687,12 +687,12 @@
       "Carraig Ṁaċaire Rois"
     ],
     "locationsEng": [
-      "Scairbh na gCaorach",
-      "Cluain Eois",
+      "Rocky Place of the Sheep",
+      "Clones - Meadow of Eois",
       "Monastary of Saint Buíte",
-      "Teach an Scotaigh",
-      "Crícheán Rua",
-      "Carraig Ṁaċaire Rois"
+      "House of the Scot",
+      "Red crossing",
+      "Rock of the thorney plain"
     ],
     "county": "Co. Ṁuineaċáin",
     "mapData": "[[3,3,3,2,2,2,2,9,9,9],[3,3,3,30,0,0,9,9,9,9],[3,3,0,0,0,0,0,9,9,9],[4,4,31,0,0,0,0,0,8,8],[4,0,0,0,32,0,0,0,0,8],[4,0,0,0,0,0,0,0,34,8],[4,33,0,0,0,0,0,0,0,8],[5,5,0,0,0,0,0,0,0,7],[5,5,5,5,0,0,0,35,0,7],[5,5,5,5,5,6,7,7,7,7]]",
@@ -715,10 +715,10 @@
     "locationsEng": [
       "Hole of the Pooka (Galway)",
       "Cill Cais",
-      "An Spidéal ",
-      "An Teach Dóite",
-      "An Ċeaṫrú Rua",
-      "Inis Meáin "
+      "The Hospital",
+      "The Burned House",
+      "The Red Quarter",
+      "Middle Island"
     ],
     "county": "Co. na Gailliṁe",
     "mapData": "[[1,3,3,2,2,2,2,9,9,9],[1,3,3,3,2,2,0,0,0,9],[0,0,0,0,0,0,30,0,0,9],[0,0,0,0,0,0,0,0,0,9],[1,0,34,0,32,0,0,0,0,9],[1,1,0,0,31,0,33,0,0,8],[1,35,0,1,1,0,0,0,0,8],[1,1,1,6,0,0,0,0,0,7],[1,1,1,6,6,6,6,7,7,7],[1,1,5,6,6,6,6,7,7,7]]",
@@ -743,7 +743,7 @@
       "The Springs",
       "Alun's Wood",
       "Plain of Nuada",
-      "The flat open plain",
+      "A place of the running horse",
       "Salmon Leap"
     ],
     "county": "Co. Ċill Dara",
@@ -757,7 +757,7 @@
     "emblem": "clare",
     "co": "clare",
     "locations": [
-      "Ceann Boirne",
+      "An Carn",
       "Fíoch Rua",
       "An Tulach",
       "Cill Rois",
@@ -765,12 +765,12 @@
       "Bun Raite"
     ],
     "locationsEng": [
-      "Ceann Boirne",
+      "Carron, the Cairn",
       "Red Feud",
       "The Hill",
       "Church of Rois",
       "Labasheeda - Silken bed",
-      "end of the Raite"
+      "Bottom of the ringfort"
     ],
     "county": "Co. An Ċláir",
     "mapData": "[[1,1,1,1,2,2,2,2,9,9],[1,1,1,0,0,0,0,0,9,9],[1,1,0,30,0,0,0,0,0,8],[1,1,0,0,0,0,0,0,0,8],[1,1,0,0,0,0,0,32,0,8],[1,1,0,31,0,0,0,0,0,8],[1,1,0,0,0,0,0,0,0,7],[0,0,0,34,0,1,35,0,0,7],[1,1,33,0,0,1,1,1,1,1],[1,1,1,1,1,1,1,1,1,1]]",

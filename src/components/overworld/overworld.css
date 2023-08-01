@@ -1499,39 +1499,6 @@ p {
   display: none;
 
 }
-@media screen and (orientation:landscape) {
-  #iron-key-text {
-top: 47% !important;
-transform: scale(1) !important;
-/* border: 4px solid blue; */
-  }
-}
-/* for vert mode */
-@media screen and (orientation:portrait) {
-
-#dial-gael{
-/* position:fixed;   */
-/* top:20% !important; */
-
-}
-
-.ring-gael-dial-container{
-display: grid;
-/* border: 4px solid blue; */
-
-  justify-content: center;
-  align-items: center;
-   
-
-}
-
-  #iron-key-text {
-    top: 79%;
-  transform: scale(0.7);
-  
-
-}
-}
 
 
 .daff-container {

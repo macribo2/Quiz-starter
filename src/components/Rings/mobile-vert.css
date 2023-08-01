@@ -1,0 +1,112 @@
+
+  /* Styles for mobile devices in landscape mode */
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+
+	.song{
+		transform: translate(-3%, -%) !important;
+	}
+	
+	.history-e {
+		font-family: 'anaphora';
+		margin-left: 20%;
+		margin-top: 4%;
+		/* border: 4px solid green; */
+		top: 22% !important;
+
+		left: 26%;
+		width: 55%;
+		z-index: 99;
+	  }
+	/* Add your landscape mode styles here */
+	#iron-key-text {
+		top: 35% !important;
+		transform: scale(1) !important;
+		/* border: 4px solid blue; */
+	}
+	
+	
+	.history-i{
+		width: 60%;
+		top: 4%;
+		left: 45%;
+		font-size: 2em;
+		pointer-events: none;
+		
+	}
+}
+/* for vert mode */
+/* Styles for mobile devices in portrait mode */
+@media screen and (max-width: 767px) and (orientation: portrait) {
+	/* Add your portrait mode styles here */
+
+	.history-e {
+		font-family: 'anaphora';
+		margin-left: 20%;
+		margin-top: 4%;
+		/* border: 4px solid green; */
+		font-size: 2em;
+		z-index: 99;
+		transform: translate(-45%,0);
+		top: 2% !important;
+		left: 37%;
+		width: 85% !important;
+	}
+
+	.distant-town{animation: none;}
+	.history-i{
+		
+		top: 4%;
+		left: 7%;
+		font-size: 1.8em;
+		pointer-events: none;
+		width:90% !important;
+		/* border: 5px solid blue; */
+		transform:translate(-40%,-35%);
+	}
+
+	/* .tails{
+		border:4px solid green;
+	} */
+	#dial-gael{
+		/* position:fixed;   */
+		/* top:20% !important; */
+		
+  }
+  
+  .ring-gael-dial-container{
+  display: grid;
+  /* border: 4px solid blue; */
+  
+  justify-content: center;
+  align-items: center;
+	 
+  
+  }
+  
+  #iron-key-text {
+	  top: 51%;
+	  transform: scale(0.7);
+	  
+	  
+	}
+	.iron-key-portrait {
+    left: 26%;
+    margin-top: 164%;}
+  .menu-container{
+	  top:46% 
+	  /* border:4px solid green */
+	}
+
+	.amergin-wave{
+		transform: translate(0,120%) !important;
+		
+
+	}
+	.slide1b{
+		transform: translate(0,120%) scale(0.4) !important;
+	}
+.song{
+	transform: translate(-3%, 5%) !important;
+}
+}
+  

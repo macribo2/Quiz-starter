@@ -1,4 +1,6 @@
 import './settings-menu.css';
+import './../Rings/mobile-vert.css';
+
 import './lights.css';
 import Easca from '../easca/easca2';
 import bg0 from '../../images/fog3.png';
@@ -105,10 +107,10 @@ let randLights = Math.floor(Math.random * 8)
 			
 		</div>
 <div className='menu-container'>
-			<button className="menu"
+			<button className="menu menu-btn"
 				onClick={() => setShowHist(true)}
 			>about</button>
-			<button className="menu"
+			<button className="menu menu-btn"
 			onClick={() => props.handleInputSelect('begin')}
 			>begin</button>
 			{showHistory === true ? <History isOn={isOn} toggleIsOn={toggleIsOn} handleInputSelect={ props.handleInputSelect} />:null}
