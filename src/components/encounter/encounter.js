@@ -367,19 +367,17 @@ alert('x')		}
 						< img src={glass} className="question-img" rel="preload" id="glass-img" alt="glass bg for translucent overlay effect." />
 						<div dangerouslySetInnerHTML={{ __html: engText[Math.floor(value * 10) + round.current * 100] }} x={100} y={100} id="e-id" className="encounter-e" style={{ opacity: isOn ? 1 : 0 }}></div>
 			
-						{/* set encounter specific illustrations for while isOn 
-						
-						witches of collinstown*/}
-						{
-						<div className="about-hist">{value * 10 === 2 && encounterID=== 1? <img src={witch0} className="slide encounter-illustration" alt="story illustrations" /> : null}
-						</div>
-					}
+						{/* set encounter specific illustrations for while isOn */}
 					
-						<div className="about-hist">{value * 10 === 3 && encounterID=== 1? <img src={witch0} className="slide encounter-illustration" alt="story illustrations" /> : null}
+						<div className="about-hist">{value * 10 === 2 ? <img src={witch0} className="slide encounter-illustration" alt="story illustrations" /> : null}
+						</div>
+
+					
+						<div className="about-hist">{value * 10 === 3 ? <img src={witch0} className="slide encounter-illustration" alt="story illustrations" /> : null}
 						</div>
 
 										
-						<div className="about-hist">{value * 10 === 1 && encounterID=== 1? <img src={witch0} className="slide encounter-illustration" alt="story illustrations" /> : null}
+						<div className="about-hist">{value * 10 === 1 ? <img src={witch0} className="slide encounter-illustration" alt="story illustrations" /> : null}
 						</div>
 
 					</div>) : null}
@@ -425,6 +423,8 @@ alert('x')		}
 			<div id="ring-5-challenge-container"className="challenge-container">
 				<img id="encounter-challenge-bg" src={encounterChallengeBG} alt="" />
 			</div> */}
+				<div className="button-mash-container-encounter">
+				<button className={value * 10 === 9 ? 'mash' : 'hidden'} onClick={() => this.handleExitLocation} ><img className="mash-img" src={ mash} alt="gif of rings"/></button></div>
 				
 			
 				{
@@ -475,8 +475,7 @@ alert('x')		}
 						{isOn ? <div id="n-id" className="encounter-i eng-text"  >{engTurnToPage[storyChoice]}</div> : <div id="n-id" className="encounter-i"  >{gaeTurnToPage[storyChoice]}</div>}
 
 						<div className="button-mash-container-encounter">
-							<button className='mash' onClick={hideEncounterComponent} ><img className="mash-img" src={mash} alt="gif of rings" /></button>
-						</div>
+							<button className='mash' onClick={hideEncounterComponent} ><img className="mash-img" src={mash} alt="gif of rings" /></button></div>
 				
 					</div>
 
@@ -485,11 +484,6 @@ alert('x')		}
 				<div className='toggle-glass-btn-container encounter-version'>
 					{/* className={ value>=0.68 && value<= 1 || value>=0 && value<= 0.02 ?'tog-glass':'hidden'} */}
 					<button id="toggle-glass-btn-history" onClick={toggleIsOn} ><img src={isOn ? pearl : emerald} id="blank" alt="a crystal or precious stone toggle on off button" /></button></div>
-
-					<div className="button-mash-container-encounter">
-				<button className={value * 10 === 9 ? 'mash' : 'hidden'} onClick={() => this.handleExitLocation()} ><img className="mash-img" src={ mash} alt="gif of rings"/></button></div>
-				
-
 			</>
 		);
 	}

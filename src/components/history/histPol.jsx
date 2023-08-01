@@ -229,7 +229,7 @@ export class History extends React.Component {
         ]
         let storyTexts = [
 
-            `Fadó fado...`,
+          
             `Ón treabh Ibírach 'Míl Espáine'
      a dtagann na Gael,
      de réir na finscéalíochta. 

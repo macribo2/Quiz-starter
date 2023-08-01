@@ -97,7 +97,7 @@ export default function Rings3(props) {
 	}
 	let ogHero = localStorage.getItem('portrait')
 	var irishText = [
-		`<span style="font-family:urchlo;animation:fade-in 0.5s forwards;" >&nbsp; &nbsp; Fadó fadó...</span>`,
+		`<span style="font-family:urchlo;animation:fade-in 0.5s forwards;" >Fadó fadó...</span>`,
 
 
 		`<span style="font-family:urchlo;">d'Aistir Amergín Glúingel Míl Espáine go hOileann na Túatha Dé Danann.</span>`,

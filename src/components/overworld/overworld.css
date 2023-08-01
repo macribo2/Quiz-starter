@@ -1492,6 +1492,7 @@ p {
 #portrait,
 #inventory {
   display: none;
+  
 }
 
 .portraitMode {
@@ -1499,33 +1500,6 @@ p {
 
 }
 
-@media screen and (orientation:portrait) {
-
-  #portrait,
-  #inventory,
-  .portraitMode {
-    display: block;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 9999;
-    position: fixed;
-    background-size: contain;
-
-  }
-
-  #inventory {
-    z-index: 10000;
-
-
-  }
-
-  .portraitMode {
-    z-index: 10001;
-
-  }
-}
 
 .daff-container {
   height: 100%;

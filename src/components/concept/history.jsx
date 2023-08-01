@@ -57,8 +57,7 @@ let textBottom = [
     ``,
     ``,
 
-    `Fadó fadó...`,
-
+   
     `mac`,
     `file`,
     `oileán`,
@@ -89,7 +88,7 @@ let textBottom = [
 
 let topTeacs0 = [
 
-    `Fadó fado...`,
+  
     `Ón treabh Ibírach 'Míl Espáine'
      a dtagann na Gael,
      de réir na finscéalíochta. 
