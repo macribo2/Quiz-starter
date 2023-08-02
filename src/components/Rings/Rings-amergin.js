@@ -140,7 +140,7 @@ export default function Rings3(props) {
 <span style="font-family:aonchlo;animation:fade-in 1.5s forwards;"><br/><span style=" font-family:aonchlo;animation:fade-in 0.5s forwards;">&nbsp; &nbsp; &nbsp; &nbsp;...Cáinte im gai<br/> 
 &nbsp; &nbsp; &nbsp; &nbsp;	cainte gaiṫe.</span></div>
 `,
-		`<span style="font-family:urchlo;position:fixed;left:40%;width:55%;top:30%">Bhriseadh ar Ríthe <br/> Túatha Dé Danann.</span>`,
+		`<span style="font-family:urchlo;position:fixed;left:40%;width:55%;top:30%">Briseadh ar Ríthe Túatha Dé Danann.</span>`,
 
 		`<span style="font-family:urchlo; position:fixed;left:40%;width:55%;top: 15%;%">
 		Bin tús na cíannta Gaelach, de réir finscéal.</span>`,
@@ -154,12 +154,12 @@ export default function Rings3(props) {
 
 		`Amergin of the Bright Knees <br/> Birth of Song,
 		 Soldier of Spain <br/>
-		 adventured to the island of Dé Dannan.`,
-		`The tribes had three queens<br/>
+		 led his people to the island of Dé Dannan.`,
+		`The island had three queens<br/>
 		 Éiru, Banba, Fóladh.`,
 
 
-		`Their Druids hurled a tempest against the long prophesized enemy.`, `
+		`Their Druids hurled a tempest against long prophesized Milisians.`, `
 		Amergín answered island magic with Gaelic verse`,
 
 		` I am the wind which breaths upon the sea<br/>
@@ -449,18 +449,18 @@ export default function Rings3(props) {
 					<div className="about-hist">{value * 10 === 4 ? <><img src={poem} className="slide slide-amergin	" alt="Amergín." />
 					<div className="rain1">
 						
-						<ReactRain numDrops="511" />
+						<ReactRain numDrops="256" />
 						</div>
 						<div className="rain2">
-						<ReactRain  numDrops="511" />
+						<ReactRain  numDrops="256" />
 						</div>
 						<div className="rain3">
 
-						<ReactRain numDrops="511" />
+						<ReactRain numDrops="256" />
 						</div>
 						<div className="rain4">
 
-						<ReactRain numDrops="511" />
+						<ReactRain numDrops="256" />
 </div>					
 					</> : null}
 					</div>

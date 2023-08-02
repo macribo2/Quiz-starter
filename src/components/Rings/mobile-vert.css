@@ -2,6 +2,16 @@
   /* Styles for mobile devices in landscape mode */
   @media screen and (max-width: 767px) and (orientation: landscape) {
 
+	.sea-wave{
+		height: 100% !important;
+		width: 300% !important;
+	}
+	.about-hist{
+
+		justify-content: left;
+	  }
+
+
 	.song{
 		transform: translate(-3%, -%) !important;
 	}
@@ -13,8 +23,9 @@
 		/* border: 4px solid green; */
 		top: 22% !important;
 
-		left: 26%;
-		width: 55%;
+		left: 26% !important;
+		    width:50% !important;
+
 		z-index: 99;
 	  }
 	/* Add your landscape mode styles here */
@@ -23,12 +34,16 @@
 		transform: scale(1) !important;
 		/* border: 4px solid blue; */
 	}
-	
-	
-	.history-i{
-		width: 60%;
+	.button-mash-container-gael{
+	    position: fixed !important;
+    bottom: 7% ;
+    left: 4%;
+
+  }	
+  .history-i{
+	  width: 60%;
 		top: 4%;
-		left: 45%;
+		left: 46%;
 		font-size: 2em;
 		pointer-events: none;
 		
@@ -38,7 +53,6 @@
 /* Styles for mobile devices in portrait mode */
 @media screen and (max-width: 767px) and (orientation: portrait) {
 	/* Add your portrait mode styles here */
-
 	.history-e {
 		font-family: 'anaphora';
 		margin-left: 20%;
@@ -50,37 +64,46 @@
 		top: 2% !important;
 		left: 37%;
 		width: 85% !important;
+		
 	}
 
 	.distant-town{animation: none;}
 	.history-i{
 		
 		top: 4%;
-		left: 7%;
+		left: 3%;
 		font-size: 1.8em;
 		pointer-events: none;
 		width:90% !important;
 		/* border: 5px solid blue; */
-		transform:translate(-40%,-35%);
-	}
+		transform:translate(-45%,-35%);
 
+
+	}
+	
 	/* .tails{
 		border:4px solid green;
 	} */
-	#dial-gael{
+	.dial-gael{
 		/* position:fixed;   */
 		/* top:20% !important; */
+		left: 0 !important;
+		justify-content: center !important;
+		position:relative !important }
 		
-  }
-  
-  .ring-gael-dial-container{
-  display: grid;
-  /* border: 4px solid blue; */
-  
-  justify-content: center;
+		.ring-gael-dial-container{
+			display: grid;
+			/* border: 4px solid blue; */
+			padding-top:41%;
+			justify-content: center !important;
   align-items: center;
 	 
   
+}
+
+  .about-hist{
+
+	justify-content: center;
   }
   
   #iron-key-text {
@@ -98,9 +121,11 @@
 	}
 
 	.amergin-wave{
-		transform: translate(0,120%) !important;
-		
 
+		top: 51% !important;
+		transform: translate(0%,5%);
+		left: 15% !important;
+		
 	}
 	.slide1b{
 		transform: translate(0,120%) scale(0.4) !important;
@@ -108,5 +133,19 @@
 .song{
 	transform: translate(-3%, 5%) !important;
 }
+
+.mash{
+	margin-top: 15%;
 }
-  
+.button-mash-container-gael{
+	position: relative !important;
+    bottom: 0% !important;
+    left: 0% !important;
+
+}
+
+.sea-wave{
+	height: 100%;
+	width: 600% !important;
+}
+}
