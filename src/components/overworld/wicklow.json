@@ -1,0 +1,27 @@
+
+  {
+    "emblem": "wicklow",
+    "co": "wicklow",
+    "locations": [
+      "Poll an Ṗúca",
+      "Na Cloċa Liaṫa",
+      "Siol Éalaiġ",
+      "Dún Ard",
+      "An tInḃear Mór",
+      "Aḃóca"
+    ],
+    "locationsEng": [
+      "Hole of the Pooka",
+      "The grey stones",
+      "Shillelagh - thonged willow",
+      "Donard - high fortress",
+      "Arklow - meadow of Arnkell. The Great Estuary",
+      "From Oboka, a river in Ptolemy's Geography"
+    ],
+    "county": "Co. Ċill Ṁantáin",
+    "mapData": [[3,3,3,2,2,2,2,9,9,1],[3,3,0,30,0,0,0,31,0,1],[3,3,0,0,0,0,0,0,0,1],[4,0,32,0,0,0,0,0,0,1],[4,0,0,0,0,0,0,0,1,1],[4,33,0,0,0,0,0,0,0,1],[4,4,0,0,0,0,0,0,0,1],[5,5,0,0,0,0,34,35,1,1],[5,5,0,0,0,0,0,0,1,1],[5,5,5,6,6,6,6,7,1,1]],
+    "countyBG": "url('./countyMaps/wicklow.png')",
+    "top": "60px",
+    "left": "-30px",
+    "zoom": "scale(1.7)"
+  }

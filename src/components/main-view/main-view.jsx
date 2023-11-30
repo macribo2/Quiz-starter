@@ -199,7 +199,7 @@ export default function App() {
 			
 		},
 		{
-			questionText: 'Roghnaigh féinnidh, ' + heroNames[localStorage.getItem('portrait')]+'. ',
+			questionText: 'Roghnaigh fichillín, ' + heroNames[localStorage.getItem('portrait')]+'. ',
 			answerOptions: [
 				
 			],

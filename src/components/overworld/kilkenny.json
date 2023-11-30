@@ -1,0 +1,27 @@
+
+  {
+    "emblem": "kilkenny",
+    "co": "kilkenny",
+    "locations": [
+      "Ġráinseaċ Ċuffe",
+      "Baile Ṁic Andáin",
+      "Bearna na Gaoiṫe",
+      "Dún Garḃáin",
+      "Baile an Ṗoill",
+      "Sliaḃ Rua"
+    ],
+    "locationsEng": [
+      "Cuffe's Grange",
+      "Fortress town of Anglo-Norman Mercenary Thomas FitzAnthony",
+      "windy gap",
+      "Fortress of the Rough people",
+      "Ballinphull - town of the hole",
+      "The red mountain"
+    ],
+    "county": "Co. Ċill Ċainniġ",
+    "mapData": [[3,3,3,2,2,2,2,9,9,9],[3,3,0,0,0,0,0,0,9,9],[3,3,0,0,0,0,0,0,9,9],[4,4,4,30,0,0,0,0,8,8],[4,4,4,0,0,0,31,0,8,8],[4,4,4,0,0,32,0,0,8,8],[4,4,4,0,33,0,0,0,8,8],[5,5,5,34,0,0,0,0,7,7],[5,5,5,0,0,35,0,0,7,7],[5,5,5,6,6,6,6,7,7,7]],
+    "countyBG": "url('./countyMaps/kilkenny.png')",
+    "top": "66px",
+    "left": "16px",
+    "zoom": "scale(1.4)"
+  }

@@ -1,0 +1,27 @@
+
+  {
+    "emblem": "meath",
+    "co": "meath",
+    "locations": [
+      "An Uaimh",
+      "Ráth Ċairn",
+      "Cill Ḃríde",
+      "Teamhair",
+      "Buaile na Bréachṁaí",
+      "Tigh na Sióg"
+    ],
+    "locationsEng": [
+      "Navan - the cave",
+      "Rathcairn -  ring-fort pile of rocks",
+      "Kilbride - Church of St Bridget",
+      "sacred space, elevated place",
+      "Ballinabrackey - Summer pasture of the wolf-plain",
+      "Fairyhouse"
+    ],
+    "county": "Co. Na Mí",
+    "mapData": [[2,2,2,2,2,2,2,9,9,9],[2,3,3,0,0,0,0,9,9,9],[3,0,0,0,0,0,0,0,9,9],[4,0,0,0,30,0,0,0,0,8],[4,0,31,0,0,33,0,0,0,8],[4,4,0,32,0,0,0,0,0,8],[4,4,0,0,0,0,0,0,0,8],[5,5,0,0,0,0,35,0,0,7],[5,0,34,0,0,0,0,0,0,7],[5,5,5,5,6,6,7,7,7,7]],
+    "countyBG": "url('./countyMaps/meath.png')",
+    "top": "60px",
+    "left": "16px",
+    "zoom": "scale(1.6)"
+  }

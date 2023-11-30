@@ -1,0 +1,26 @@
+  {
+      "emblem": "waterford",
+      "co": "waterford",
+      "locations": [
+        "Sléiḃte an Ċomaraigh",
+        "An Baile Dubh",
+        "Tullach an Iarainn",
+        "Cluain Ḟia",
+        "Dún Garḃán",
+        "Cill Ṁíodáin"
+      ],
+      "locationsEng": [
+        "The shepherd's mountains",
+        "the black town",
+        "The Hillock of Iron",
+        "Cluain Ḟia",
+        "Dungarvan - Garbhann's Fort",
+        "Cill Ṁíodáin"
+      ],
+      "county": "Co. Ṗort Láirge",
+      "mapData": [[3,3,3,2,2,2,2,9,9,9],[3,3,3,0,0,0,2,9,9,9],[3,3,3,0,30,0,0,0,9,1],[4,0,31,0,0,0,0,0,35,0],[4,0,0,0,0,0,0,0,0,0],[4,0,0,0,0,0,1,1,1,1],[4,32,0,0,34,1,1,1,1,1],[5,5,0,0,33,1,1,1,1,1],[5,1,0,1,1,1,1,1,1,1],[5,1,1,1,1,1,1,1,1,1]],
+      "countyBG": "url('./countyMaps/waterford.png')",
+      "top": "60px",
+      "left": "-14px",
+      "zoom": "scale(1.4)"
+    }

@@ -1,0 +1,26 @@
+{
+    "emblem": "cavan",
+    "co": "cavan",
+    "locations": [
+      "Doire na Criaḋ",
+      "An Cnoc Rua",
+      "Béal Tairbirt",
+      "An Dromainn",
+      "Dún an Rí",
+      "Lios Cré"
+    ],
+    "locationsEng": [
+      "Derrynacreeve - Oakwood of the clay",
+      "Redhills - the red hill",
+      "Belturbet - mouth of the isthmus",
+      "The ridge",
+      "Dunaree - fort of the king",
+      "Lisgrea - ringfort of earth"
+    ],
+    "county": "Co. An Caḃáin",
+    "mapData": [[3,3,3,2,2,2,2,9,9,9],[4,0,30,2,2,9,9,9,9,9],[4,0,0,0,2,9,9,9,9,9],[4,0,0,0,31,0,0,0,8,8],[4,4,0,0,0,0,32,0,0,8],[4,4,0,0,0,0,0,0,0,8],[4,4,5,0,0,0,0,0,34,8],[5,5,5,5,0,0,33,0,0,7],[5,5,5,5,0,0,0,0,35,7],[5,5,5,6,6,6,6,7,7,7]],
+    "countyBG": "url('./countyMaps/cavan.png')",
+    "top": "80px",
+    "left": "0px",
+    "zoom": "scale(1.4)"
+  }

@@ -1,0 +1,53 @@
+
+      {
+        "emblem": "mayo",
+        "co": "mayo",
+        "locations": [
+          "Cill Ala",
+          "Caisleán an Ḃarraiġ",
+          "Baile Ui Ḟiacáin",
+          "An Caoláire Rua",
+          "Lios an tSaṁaiḋ",
+          "An Éill"
+        ],
+        "locationsEng": [
+          {
+            "emblem": "westmeath",
+            "co": "westmeath",
+            "locations": [
+              "Baile na gCailleach",
+              "Loch Dairbhreach",
+              "Tulaigh an Eallaigh",
+              "Na Colúir",
+              "Cill Ḃeagáin",
+              "An Muileann gCearr"
+            ],
+            "locationsEng": [
+              "Collinstown - town of the veiled women or town of the hags",
+              "Lough Derravaragh - lake of the oaks",
+              "Tullynally - hillock of the swans",
+              "Corlis - the pidgeons",
+              "Kilbeggan - church of Bécán, distinguished Irish Saint",
+              "Mullingar - the crooked mill"
+            ],
+            "county": "Co. Na hIarṁí",
+            "mapData": [[3, 3, 3, 3, 3, 2, 2, 9, 9, 9],[3,3,3,0,0,0,30,9,9,9],[3,3,3,0,0,0,0,0,0,9],[4,4,0,0,0,0,0,0,0,8],[4,0,0,0,0,0,31,0,0,8],[4,0,33,0,0,0,0,0,0,8],[4,0,0,0,32,0,0,0,0,8],[5,0,0,0,0,0,35,0,7,7],[6,6,6,6,34,0,7,7,7,7],[6,6,6,6,6,6,6,7,7,7]],
+            "countyBG": "url('./countyMaps/westmeath.png')",
+            "top": "60px",
+            "left": "1px",
+            "zoom": "scale(1.3)"
+          },
+          "Cill Ala",
+          "Caisleán an Ḃarraiġ",
+          "Baile Ui Ḟiacáin",
+          "An Caoláire Rua",
+          "Lios an tSaṁaiḋ",
+          "An Éill"
+        ],
+        "county": "Co. Ṁaigh Eo",
+        "mapData": [[1,1,0,0,0,0,0,9,9,9],[1,1,1,0,0,0,0,9,9,9],[1,1,0,0,0,0,0,30,0,9],[1,0,0,0,31,0,0,0,0,8],[1,1,32,0,0,0,0,0,0,8],[1,1,1,0,0,0,0,0,0,8],[1,1,1,0,0,0,0,0,0,8],[1,1,1,0,34,0,0,0,0,7],[1,5,5,33,0,0,0,35,7,7],[5,5,5,5,6,6,6,7,7,7]],
+        "countyBG": "url('./countyMaps/mayo.png')",
+        "top": "60px",
+        "left": "16px",
+        "zoom": "scale(1.6)"
+      }

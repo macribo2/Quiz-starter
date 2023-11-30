@@ -1,0 +1,27 @@
+
+  {
+    "emblem": "sligo",
+    "co": "sligo",
+    "locations": [
+      "Béal Átha na gCarraigíní",
+      "An Mullach Mór",
+      "Uaimheanna na Céise",
+      "Machaire Eabha",
+      "Baile Uí Ḋálaigh",
+      "Tobar an Ċoire"
+    ],
+    "locationsEng": [
+      "Bellanagarrigeeny - Ford of the flagstone",
+      "Mullaghmore - the great summit",
+      "Caves of Corann, Harper of Dain Céacht, God of healing.",
+      "Maugherow - the plain of Eabha",
+      "Ballydawley - home of the O Dalys",
+      "Tobercurry - well of the cauldron"
+    ],
+    "county": "Co. Ṡligiġ",
+    "mapData": [[1,1,1,1,1,1,2,9,9,9],[1,1,1,1,1,33,0,0,9,9],[4,0,0,1,1,0,30,0,9,9],[4,0,0,34,0,0,0,0,8,8],[4,0,0,0,0,31,0,0,0,8],[4,0,0,0,0,0,0,0,0,8],[5,0,0,0,0,0,0,0,0,8],[5,0,0,35,0,0,0,32,0,7],[5,1,0,0,6,0,0,0,7,7],[5,5,5,6,6,6,6,7,7,7]],
+    "countyBG": "url('./countyMaps/sligo.png')",
+    "top": "92px",
+    "left": "29px",
+    "zoom": "scale(1.8)"
+  }

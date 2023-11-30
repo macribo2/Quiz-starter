@@ -1,0 +1,26 @@
+  {
+    "emblem": "clare",
+    "co": "clare",
+    "locations": [
+      "Ceann Boirne",
+      "Fíoch Rua",
+      "An Tulach",
+      "Cill Rois",
+      "Leaba Ṡíoda",
+      "Bun Raite"
+    ],
+    "locationsEng": [
+      "Ceann Boirne",
+      "Red Feud",
+      "The Hill",
+      "Church of Rois",
+      "Labasheeda - Silken bed",
+      "end of the Raite"
+    ],
+    "county": "Co. An Ċláir",
+    "mapData": [[1,1,1,1,2,2,2,2,9,9],[1,1,1,0,0,0,0,0,9,9],[1,1,0,30,0,0,0,0,0,8],[1,1,0,0,0,0,0,0,0,8],[1,1,0,0,0,0,0,32,0,8],[1,1,0,31,0,0,0,0,0,8],[1,1,0,0,0,0,0,0,0,7],[0,0,0,34,0,1,35,0,0,7],[1,1,33,0,0,1,1,1,1,1],[1,1,1,1,1,1,1,1,1,1]],
+    "countyBG": "url('./countyMaps/clare.png')",
+    "top": "61px",
+    "left": "23px",
+    "zoom": "scale(1.3)"
+  }

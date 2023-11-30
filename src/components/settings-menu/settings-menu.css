@@ -809,6 +809,7 @@ transform: scale(2);
     position: fixed;
     z-index: 9000;
     margin-left: 1%;
+    transform:scale(0.4)
 }
 
 .runrig{

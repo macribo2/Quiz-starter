@@ -1,0 +1,19 @@
+
+  {
+    "emblem": "geaga",
+    "co": "geaga",
+    "locations": [
+      "Caisleán na Deirge",
+      "Baile Mhic Gofraidh",
+      "An Ómaigh",
+      "Seisceann Siúil",
+      "An Ċorr Ċríochach",
+      "Dún Geanainn"
+    ],
+    "county": "ó náid go haon",
+    "mapData": [[3,3,3,3,3,3,3,3,3,3],[3,3,3,3,3,3,3,3,3,3],[3,3,3,3,3,3,3,3,3,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,0,0,0,0,0,0,0,0,3],[3,3,3,3,3,3,3,3,3,3]],
+    "countyBG": "url('./countyMaps/geaga-2.png')",
+    "top": "76px",
+    "left": "16px",
+    "zoom": "scale(1.6)"
+  }

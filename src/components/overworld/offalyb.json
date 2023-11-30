@@ -1,0 +1,26 @@
+[ {
+    "co": "offaly",
+    "emblem": "offaly",
+    "county": "Co. Uíḃ Ḟailí",
+    "mapData": [[3, 3, 3, 2, 2, 2, 2, 2, 9, 9],[3, 3, 30, 0, 0, 0, 0, 0, 0, 8],[3, 0, 0, 0, 0, 0, 0, 0, 31, 8],[4, 0, 0, 0, 0, 0, 0, 0, 0, 8],[4, 0, 0, 0, 0, 0, 0, 34, 0, 8],[4, 0, 32, 0, 0, 0, 0, 7, 7, 7],[4, 0, 0, 0, 0, 0, 7, 7, 7, 7],[5, 0, 0, 0, 33, 7, 7, 7, 7, 7], [5, 0, 35, 6, 6, 7, 7, 7, 7, 7],[5, 6, 6, 6, 6, 7, 7, 7, 7, 7]],
+    "countyBG": "url('./countyMaps/offaly.png')",
+    "top": "60px",
+    "left": "16px",
+    "zoom": "scale(1.7)",
+    "locations": [
+      "Cluain Ṁic Nóis",
+      "Éadan Doire",
+      "Biorra",
+      "Cionn Eitigh",
+      "Ráth Iomġáin",
+      "Suí an Róin"
+    ],
+    "locationsEng": [
+      "Clonmacnoise  - Meadow of the Sons of Nós ",
+      "Edenderry - Hill-brow of the oak wood ",
+      " Birr - plain of water ",
+      "The head of Princess Eitigh ( Kinnitty )",
+      "Rathangan - Iomgháin's ring-fort  ",
+      "Shinrone - Seat of the seal"
+    ]
+  }]

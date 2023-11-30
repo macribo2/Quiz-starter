@@ -1,0 +1,27 @@
+
+  {
+    "emblem": "donegal",
+    "co": "donegal",
+    "locations": [
+      "Cionn Dhún Damh",
+      "Baile idir Dhá Abhainn",
+      "Sléiḃte Ḋoire Ḃeatha",
+      "Leitir Ceanainn",
+      "Bealach Féich",
+      "Na Cruacha Gorma"
+    ],
+    "locationsEng": [
+      "Dunaff Head - Headland of the Stag (or Ox)",
+      "Ballyederowen - town between two rivers",
+      " Derryveagh  - Mountain of the living oaks",
+      "Letterkenny - hillside of the O'Cannons",
+      "Ballybofey - Fiach's pass",
+      "Croaghgorm - the blue stack mountains"
+    ],
+    "county": "Co. Ḋún na nGall",
+    "mapData": [[1,1,1,1,1,1,30,0,0,0],[1,1,1,1,0,0,0,0,0,0],[1,1,0,31,0,0,0,0,0,1],[1,0,0,32,0,0,0,0,8,8],[1,1,0,0,0,33,0,0,8,8],[1,0,0,0,0,0,0,0,8,8],[0,0,35,0,34,0,0,7,8,8],[0,0,0,0,0,0,6,7,7,7],[1,1,1,0,0,0,6,7,7,7],[1,1,1,5,6,6,6,7,7,7]],
+    "countyBG": "url('./countyMaps/donegal.png')",
+    "top": "60px",
+    "left": "0px",
+    "zoom": "scale(1.6)"
+  }
