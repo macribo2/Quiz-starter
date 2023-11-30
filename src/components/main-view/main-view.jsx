@@ -522,7 +522,6 @@ if(value*10 !== 0 ){
 
 			console.log(someVal)
 		
-	
 		gottenRing0 = localStorage.getItem('ring0');
 
 		const nextQuestion = currentQuestion + 1;
