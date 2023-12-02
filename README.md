@@ -1,4 +1,4 @@
-Pixel art concept for a video game:
+    
 
 Ficheall
 

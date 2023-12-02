@@ -451,7 +451,7 @@ position:fixed;
   font-family: aonchlo;
   z-index: 10000;
   word-wrap: break-word;
-  margin-top:-1%;
+  /* margin-top:-1%; */
 
 }
 
@@ -803,9 +803,9 @@ transform: scale(2);
     }
    
 #iron-key-text{
-	animation: fade-in-ik 24s forwards;
+	animation: fade-in-ik 54s forwards;
     margin-top: 0%;
-    top: 32%;
+    top: 10%;
     position: fixed;
     z-index: 9000;
     margin-left: 1%;

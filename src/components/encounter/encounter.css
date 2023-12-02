@@ -46,7 +46,7 @@ opacity: 1;
 .button-mash-container{
 	background-color: rgba(0,0,0,0);
     display: block;
-    pointer-events: all;
+    pointer-events: none;
 }
 .encounter-i-container{
 	pointer-events: none;

@@ -121,7 +121,8 @@ import champion96 from '../../images/champions/96.png'
 import champion97 from '../../images/champions/97.png'
 import champion98 from '../../images/champions/98.png'
 import champion99 from '../../images/champions/99.png'
-
+import opponent1 from '../../images/draoi0.gif'
+import tree from '../../images/tree.png'
 import {
   CircularInput,
   CircularTrack,
@@ -1214,8 +1215,7 @@ return (
 				<img src={lensCap} className="lens-cap" alt="a fantasy landscape a ring of stones, a haunted tree" />
 				<div className='tutorial-container'>
 		
-		<div className="tutorial0-container">
-					<img rel="preload" src={tutorial0r} className='tutorial' id="tutorial0r" alt="a spinning arrow circle inviting user input" /></div>
+		<div className="tutorial0-container"></div>
 		</div>
 			</div>
 	
@@ -1235,9 +1235,27 @@ return (
 			</>
 			:null }
 
-			{showDiv && props.isOn?<>  <p className="names-e">
-		{ namesInEnglish[ Math.floor(value * 100) + round.current * 100]}	
-		</p></> : null}
+
+		
+		{props.isOn ? <>
+			
+			<img src={tree} alt="a tree" className='tree' />
+			<img src={opponent1} className="og-opponent" alt="opponent portrait" />
+			
+			<img src={ogHero === "2" ? avatar2 :empty} className="og-hero"  alt="hero portrait"/>
+			<img src={ogHero === "3" ? avatar3 :empty} className="og-hero"  alt="hero portrait"/>
+			<img src={ogHero === "4" ? avatar4 :empty} className="og-hero"  alt="hero portrait"/>
+			<img src={ogHero === "5" ? avatar5 :empty} className="og-hero"  alt="hero portrait"/>
+			<img src={ogHero === "6" ? avatar6 :empty} className="og-hero"  alt="hero portrait"/>
+			<img src={ogHero === "7" ? avatar7 :empty} className="og-hero"  alt="hero portrait"/>
+			<img src={ogHero === "8" ? avatar8 :empty} className="og-hero"  alt="hero portrait"/>
+			<img src={ogHero === "9" ? avatar9 :empty} className="og-hero"  alt="hero portrait"/>
+			<p x={100} y={100} className="names-i in-g" textAnchor="middle" dy="0.3em" fontWeight="bold">
+					{hname = namesInIrish[Math.floor(value * 100) + round.current * 100]}
+				</p>
+			</>
+			:null }
+
 				
 			
 		  <div className="input-elements-container-8" >
@@ -1270,7 +1288,10 @@ return (
 					</button>
 			
 		  </div>
-	
+		  {showDiv && props.isOn?<>  <p className="names-e">
+		{ namesInEnglish[ Math.floor(value * 100) + round.current * 100]}	
+		</p></> : null}
+				
 			</>
 			);
 		}

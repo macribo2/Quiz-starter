@@ -137,34 +137,31 @@
 }
 
 .map-lens-container {
-  transform: scale(1.2);
-  position: fixed;
-  z-index: 10;
-  top: -4px;
-  left: 0%;
-  display: flex;
-  justify-content: center;
-  /* width:100%; */
-  height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Use viewport height for full-screen height */
+  overflow: hidden; /* Ensure no scrollbars due to child element exceeding the viewport height */
 
   /* pointer-events: none; */
 }
 
 .map-lens {
   pointer-events: none;
-  /* height: 100%; */
-  /* width: 100%; */
   z-index: 15;
-  /* border-width: 0; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-size: cover; */
-  border-left: 10px solid #1a111a;
-  border-right: 120px solid #353c2c;
 
-  left: 8%;
-  position: fixed;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+   width: auto;  /* Uncomment this line if you want the image to scale proportionally with its original aspect ratio */
+}
+
+.map-lens-adjust{
+  left: 0%;
 
 }
 
@@ -1185,12 +1182,13 @@ p {
   font-family: urchlo;
   z-index: 10000;
   word-wrap: break-word;
-  margin-top: 0%;
+  /* margin-top: 0%; */
   position: fixed;
   /* top: 15%; */
-  transform: scale(1);
+  transform: scale(3);
   width: 100%;
   pointer-events: none;
+  margin-top: 25%;
 
 
 

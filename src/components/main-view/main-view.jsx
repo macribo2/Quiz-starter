@@ -208,7 +208,7 @@ export default function App() {
 	
 		{
 			// tosníonn an scéal anseo. 
-			questionText:  'Arsa '+ choiceRing[localStorage.getItem('portrait')]+' <br/>"Fill le fáinní."<br/><div id="delay-in">"Fillfaidh '+heroNames[localStorage.getItem('portrait')] +'" <br/>arsa '+  hn+'.</div>' ,
+			questionText:  '"Cad é ridire?" a díarr '+ choiceRing[localStorage.getItem('portrait')]+' <br/>""<br/><div id="delay-in">"Fichilín ar capall a '+heroNames[localStorage.getItem('portrait')] +'" <br/>arsa '+  hn+'.</div>' ,
 			answerOptions: [
 				
 			],
@@ -822,13 +822,7 @@ let thePucaOf = localStorage.getItem('pucaEng')
 
 			{currentQuestion === 6 ? < Rings0 toggleIsOn={toggleIsOn} isOn={ isOn} isFadedOut={ isFadedOut}  buttonMashClick={buttonMash2Click} /> : null}
 
-			{/* <button id="toggle-settings-btn" onClick={setSettings}	><img src={blank} id="blank" alt="transparent square" /></button> */}
-
 			
-			{/* <div className="linux-lens-container" >
-					<img rel="preload" className="map-lens" src={darkGreenFields} alt="" />
-					
-				</div> */}
 			<img id="fields-lens" rel="preload" src={darkGreenFields} className="question-img" alt="dark green fields lens" />		
 
 			

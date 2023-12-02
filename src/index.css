@@ -333,11 +333,9 @@ width: 740px;
           justify-content: center;
   text-align: center;
   /* -webkit-text-stroke: 1px #000000; */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-  background-image: -o-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
-  background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
  
 }
+
 
 .timer-text {
   background: rgb(230, 153, 12);
@@ -1197,7 +1195,7 @@ width: 100%;
   -webkit-animation: rainbow_animation 60s ease-in-out infinite;
           animation: rainbow_animation 60s ease-in-out infinite;
   background-size: 400% 100%;
-  font-family: aonchlo;
+  font-family: urchlo;
   /* -webkit-text-stroke-width: 2px; */
 pointer-events: none;
 background-color: rgba(32,34,45,1);}
@@ -1711,7 +1709,7 @@ display:flex;
 }
 
 .tutorial0-container{
-  transform:scale(0.9)
+  /* transform:scale(0.9) */
 }
 
 @media only screen and (min-width: 1026px) {

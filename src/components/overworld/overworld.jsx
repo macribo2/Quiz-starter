@@ -12,7 +12,7 @@ import '../Rings/rings1.css';
 import emerald from '../../images/misc_crystal_new.png'
 import { Score } from '../score/score'
 import pearl from '../../images/stone-soup/misc_crystal_old.png';
-import lens from '../../images/fog4.png';
+import lens from '../../images/fog5.png';
 import stats from '../../images/inv/stats.png';
 import disk from '../../images/inv/diskette.png';
 import chat from '../../images/inv/chat.png';
@@ -232,6 +232,7 @@ import pollph3 from '../../images/ai-art/places/1.png'
 import cuicon from '../../images/ai-art/places/1.png'
 import ceannc from '../../images/ai-art/places/1.png'
 import pollph4 from '../../images/ai-art/places/1.png'
+import ChessLike from '../ChessLike/chessLike'
 
 import derryn from '../../images/ai-art/places/derryn.jpg'
 import Encounter from '../encounter/encounter'
@@ -5730,11 +5731,10 @@ export default class Overworld extends React.Component {
 
 
 
-                <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI === 'geaga' ? "hints" : "hidden"}>{'"Be watchful", said ' + this.props.choiceRingEng + '. "For the cause", said ' + localStorage.getItem('hname') + '.'}</p>
+                <p id="hints-geaga" className={this.state.isOn && this.state.whereAmI === 'geaga' ? "hints" : "hidden"}>{'"What is a knight?", asked ' + this.props.choiceRingEng + '. "A pawn on a horse", said ' + localStorage.getItem('hname') + '.'}</p>
 
                 <div className="ringOfFerna">
-                    {/* <Rings7/> */}
-                </div>
+                    {/* <Rings7/> */}                </div>
 
                 <div className="ringOfTullyNally" >
                     {/* <img src={ daff} className="daffs" alt="small yellow flowers stir in the breeze" /> */}
@@ -5779,6 +5779,13 @@ export default class Overworld extends React.Component {
                                 }} /> : null}
 
                             </div>
+
+
+
+
+
+
+
                             <div className="grid-item" id="toggle-glass-btn2"><img src={this.state.isOn ? pearl : emerald} id="glass-btn-img" alt="a crystal or precious stone toggle on off button" onClick={() => {
                                 this.setState(prevState => ({
                                     isVisible: !prevState.isVisible
@@ -5791,10 +5798,12 @@ export default class Overworld extends React.Component {
                                     (this.setState({ isOn: true }))
                                     console.log("hi from toggle glass  overworld")
                                 }
-                                {/* setTimeout(()=> { this.setState({ isOn: false }) }, 3000) */ }
+                            
+
+                             
 
 
-
+                                
                             }} /></div>
                             <div className="grid-item" id="east">
 
@@ -5825,6 +5834,7 @@ export default class Overworld extends React.Component {
                     <img className="rotate-phone-img" src={rotatePhone} alt="rotate phone icon" />
                 </div>
 
+<ChessLike/>
             </div>
 
 

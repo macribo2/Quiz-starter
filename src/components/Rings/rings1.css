@@ -152,10 +152,15 @@ z-index: 888;
   animation: fade-in 2s linear forwards;
 
 }
-.linux-lens-container{
- z-index: 999;
- /* transform: scale(0.5); */
+.linux-lens-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Use viewport height for full-screen height */
+  overflow: hidden; /* Ensure no scrollbars due to child element exceeding the viewport height */
+
 }
+
+
 
 
 .linux-land-container{
@@ -227,6 +232,7 @@ animation: linux-land 5s steps(15) forwards;
 }
 
 #lens{
+  border:4px
   /* z-index: 99; */
 }
 
@@ -363,12 +369,13 @@ z-index: 101;
 }
 
 .names-e,.numbers-e{
+  font-family: Anaphora;
   position: fixed;
  top:80%;
   left: 2%;
                 
   padding: 5px;
-  opacity: 0;
+  opacity: 1;
 
   font-size:1.5em;
   /* font-family:'anaphora' */
@@ -377,24 +384,46 @@ z-index: 101;
 
 .names-i, .numbers-i{
   opacity: 0;
-/* top:5%; */
+top:1%;
   font-size: 2em;
   position: fixed;
   font-family: 'aonchlo';
   /* left:3%; */
       }
 
-      .og-hero{
+.in-g{
+  opacity: 1;
+  color:  violet;
+}
+
+
+      .og-hero, .og-opponent, .tree{
         transform: scale(.7);
         display: block !important;
         height: 200px;
         width: 200px; 
         position: fixed;
         right: 2%;
-        bottom: 21%;
-    
+        bottom: 1%;
+        z-index: 999;
       }
-      
+      .og-opponent{
+transform: scaleX(-1) scale(0.7);
+        right:15%;
+        /* border:4px solid blue; */
+      }
+      .og-hero{
+        right: -10%;
+
+
+      }
+      .tree{
+        top: -45%;
+        height: 626px;
+        width: 730px;
+        right: -44%;
+
+      }
       
       .input-elements-container-5{
         pointer-events: none;
@@ -420,7 +449,7 @@ top:5%;
         height: 100%;
         width:100%;
         top:0;
-        left:0;
+        left:-23%;
         position:fixed;
         z-index: 105;
         display: flex;
@@ -439,12 +468,12 @@ top:5%;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack:center;
-            -ms-flex-pack:center;
-                justify-content:center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -webkit-box-pack:left;
+            -ms-flex-pack:left;
+                justify-content:left;
+        -webkit-box-align: left;
+            -ms-flex-align: left;
+                align-items: left;
         height:100%;
         width:100%;
         left: 0;
@@ -696,7 +725,7 @@ transform: scale(1.2);
   left:0;
   height:100%;
   width:100%;
-justify-content: center;
+justify-content: left;
 align-items: center;
 display:flex;
 z-index: 33;

@@ -78,12 +78,13 @@ export default function Rings3(props) {
 
 	
 	let Ring3AnsEng = [
-		`Did you wear the ring?
+		`
 		`, 
 		`The ring turns`, 
-`The ring shines`,
-`There is a vision in the ring`,
-		 `Within you is the way`,		
+		`The ring shines`,
+``,
+`begin from zero`,
+		 		
 		 `to return to Ireland`,
 		 `to return to Ireland`,	
 		 `to return to Ireland`,
@@ -96,11 +97,11 @@ export default function Rings3(props) {
 
 	let Ring3Ans = [
 
-		`Ar chaith tú an fáinne?`,
+		``,
 		`casann an fáinne`,
 		`lasann an fáinne`,			
-		`Tá fís sa fáinne`,
-		`Ionat atá an slí`,
+		`	`,
+		`tosnaigh ó náid`,
 		`le filleadh go hÉireann`,
 		`le filleadh go hÉireann`,	
 		`le filleadh go hÉireann`,	
@@ -117,6 +118,11 @@ export default function Rings3(props) {
 
 	
 	]
+
+
+
+
+
 	function reportStepValue3 () {
 		alert(showTheGlass);
 		console.log(showTheGlass);
