@@ -81,7 +81,7 @@ export default class NumberOne extends React.Component  {
 		this.jQueryCode();
 	}
 	fadeOutNoOne() { 
-		$('.chess-like').fadeIn();
+		$('.chess-container').fadeIn();
 		$('.pawn-filter').fadeOut();
 		$('.lens-cap').fadeOut();
 		$('.between-fields').fadeOut();

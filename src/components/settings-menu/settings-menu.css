@@ -457,11 +457,11 @@ position:fixed;
 
 #output2{
   z-index: 9999;
-  display:none;
+  /* display:none; */
   position:fixed;
-  font-family: aonchlo;
-  top: 38%;
+  top: 90%;
   left: 4%;
+  animation:fade-out 15s forwards;
 }
 
 .btn {

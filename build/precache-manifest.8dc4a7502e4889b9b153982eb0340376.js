@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "f0129f7a00ba216ead73",
-    "url": "/static/css/main.1149f594.chunk.css"
+    "revision": "4058cc33a41f6faf4098",
+    "url": "/static/css/main.2e330c7a.chunk.css"
   },
   {
-    "revision": "f0129f7a00ba216ead73",
-    "url": "/static/js/main.5f30d022.chunk.js"
+    "revision": "4058cc33a41f6faf4098",
+    "url": "/static/js/main.6230acba.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "e5d8d4e1dc5b0b20ece4",
+    "revision": "de77af72fc77a2e1b103",
     "url": "/static/css/2.bb1d6663.chunk.css"
   },
   {
-    "revision": "e5d8d4e1dc5b0b20ece4",
-    "url": "/static/js/2.620c8980.chunk.js"
+    "revision": "de77af72fc77a2e1b103",
+    "url": "/static/js/2.f7b3bd3d.chunk.js"
   },
   {
     "revision": "f470d634cc8265f5376b00ad90fe2b2b",
@@ -306,6 +306,10 @@ self.__precacheManifest = [
   {
     "revision": "c91f2998c662b9b309ff3f87a7cad520",
     "url": "/static/media/tree.c91f2998.png"
+  },
+  {
+    "revision": "9f93ff907a54b4242000412ada165cee",
+    "url": "/static/media/pawn.9f93ff90.png"
   },
   {
     "revision": "34422b8a007ae6f6d1072ada3f4771bf",
@@ -700,6 +704,10 @@ self.__precacheManifest = [
     "url": "/static/media/dunpad.e3e4d4e2.jpg"
   },
   {
+    "revision": "515bfc37aaf01510310e95147728cc33",
+    "url": "/static/media/24c.515bfc37.png"
+  },
+  {
     "revision": "1ab4bddb21afb7c45f7add10998d29ba",
     "url": "/static/media/derryn.1ab4bddb.jpg"
   },
@@ -724,8 +732,8 @@ self.__precacheManifest = [
     "url": "/static/media/ding3.5ba3bc46.wav"
   },
   {
-    "revision": "ad840e88d1c07125dbe019192fdf5224",
-    "url": "/static/media/iron-key.ad840e88.png"
+    "revision": "9699a04dd7fdbcf5dd921f6701373f3e",
+    "url": "/static/media/iron-key.9699a04d.png"
   },
   {
     "revision": "7a831bd2383ca74b5ceea113cd63f05c",
@@ -804,20 +812,20 @@ self.__precacheManifest = [
     "url": "/static/media/big-glass-portrait.fd4fb14b.png"
   },
   {
-    "revision": "f00de7d9918169a9feeb00e77a9a2f56",
-    "url": "/static/media/ciorcal-glass-bg.f00de7d9.png"
-  },
-  {
-    "revision": "fefaccef8a9d6893e3e1ed77e3170cff",
-    "url": "/static/media/field.fefaccef.png"
-  },
-  {
     "revision": "4c08d21eb3bd0552d1d16f9773ad4bd6",
     "url": "/static/media/fortuna-glass.4c08d21e.png"
   },
   {
+    "revision": "f00de7d9918169a9feeb00e77a9a2f56",
+    "url": "/static/media/ciorcal-glass-bg.f00de7d9.png"
+  },
+  {
     "revision": "ee5004be8978604da5e223282c5bbe51",
     "url": "/static/media/sea.ee5004be.png"
+  },
+  {
+    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
+    "url": "/static/media/mapFrame4.0cdb344e.png"
   },
   {
     "revision": "c84c06495852ac730bd653c3aa9bff25",
@@ -840,20 +848,20 @@ self.__precacheManifest = [
     "url": "/static/media/suile0.b67d2f1b.gif"
   },
   {
-    "revision": "9bbe18cf6d054928f146dafcf058fcb1",
-    "url": "/static/media/suile3.9bbe18cf.gif"
-  },
-  {
     "revision": "915b9892e08123110f3e6b4ab5a3fb6e",
     "url": "/static/media/mapFrame2.915b9892.png"
   },
   {
-    "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
-    "url": "/static/media/fortuna-glass-lit.29cb5d03.png"
+    "revision": "fefaccef8a9d6893e3e1ed77e3170cff",
+    "url": "/static/media/field.fefaccef.png"
   },
   {
-    "revision": "0cdb344e4fbf91bff6d9eaa0cdb88941",
-    "url": "/static/media/mapFrame4.0cdb344e.png"
+    "revision": "9bbe18cf6d054928f146dafcf058fcb1",
+    "url": "/static/media/suile3.9bbe18cf.gif"
+  },
+  {
+    "revision": "29cb5d03956b7ce387a59b240a2fbf1e",
+    "url": "/static/media/fortuna-glass-lit.29cb5d03.png"
   },
   {
     "revision": "cfabbdb47b5376a44c3f8bd99fe2f968",
@@ -936,7 +944,7 @@ self.__precacheManifest = [
     "url": "/static/media/dink.6651d091.wav"
   },
   {
-    "revision": "19560c2e24d5b3d019a28b2d42e45fcf",
+    "revision": "60602fd4451502e3ae1032a6da836e0d",
     "url": "/index.html"
   }
 ];

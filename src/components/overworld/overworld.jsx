@@ -5564,7 +5564,6 @@ export default class Overworld extends React.Component {
                     </div>
                 </div>) : null}
                 <Silken id="silken"></Silken>
-                <h2 id="output2"> "{heroName}!"</h2>
                 {/* <Rings1/> */}
 
 

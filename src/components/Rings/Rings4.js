@@ -224,15 +224,25 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
 	let champIcon = champion0;
 	let champID = Math.floor(value * 100);
 	let questionTextElements = document.getElementsByClassName('question-text');
-
+	let ing = document.getElementsByClassName('in-g'); 
 if (champID !== 25) {
   // Check if there are any elements with the class 'question-text'
   if (questionTextElements.length > 0) {
-    // Iterate over the collection and add the 'fade-out' class to each element
+    
+	  // Iterate over the collection and add the 'fade-out' class to each element
     for (let i = 0; i < questionTextElements.length; i++) {
       questionTextElements[i].classList.add('fade-out-champ');
     }
   }
+  if (ing.length > 0) {
+    
+	// Iterate over the collection and add the 'fade-out' class to each element
+  for (let i = 0; i < ing.length; i++) {
+	questionTextElements[i].style.display= 'block';
+  }
+}
+	
+	let output2 = document.getElementsByClassName('');
 }
 
 	if (champID === 100){
@@ -1266,6 +1276,9 @@ return (
 			<p x={100} y={100} className="names-i in-g" textAnchor="middle" dy="0.3em" fontWeight="bold">
 					{hname = namesInIrish[Math.floor(value * 100) + round.current * 100]}
 				</p>
+
+                <h2 id="output2"> Maebh invites you to choose a pawn.</h2>
+			
 			</>
 			:null }
 
@@ -1286,9 +1299,6 @@ return (
 				</CircularInput>
 				
 
-	        <p x={100} y={100} className="names-i" textAnchor="middle" dy="0.3em" fontWeight="bold">
-						{hname = namesInIrish[Math.floor(value * 100) + round.current * 100]}
-					</p>
 
 				</div>
 		<div className="input-elements-container-5">
@@ -1303,12 +1313,17 @@ return (
 					</button>
 			
 		  </div>
-		  {showDiv && props.isOn?<>  <p className="names-e">
+		
+		  <p x={100} y={100} className="names-i" textAnchor="middle" dy="0.3em" fontWeight="bold">
+						{hname = namesInIrish[Math.floor(value * 100) + round.current * 100]}
+					</p>	
+		{showDiv && props.isOn ? <>  <p className="names-e">
 		{ namesInEnglish[ Math.floor(value * 100) + round.current * 100]}	
 		</p></> : null}
 			</>
 			);
 		}
+	    
 
 		// document.querySelector(".names-e").classList.add(''); 
 
