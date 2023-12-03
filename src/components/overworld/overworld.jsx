@@ -5727,7 +5727,7 @@ export default class Overworld extends React.Component {
                 <Battle className="battle0" />
 
 
-                <NumberOne proceedThroughQuiz={this.props.proceedThroughQuiz} toggleIsOn={this.props.toggleIsOn} isOn={this.state.isOn} heroNameEng={this.props.heroNameEng} heroName={this.props.heroName} />
+                <NumberOne  proceedThroughQuiz={this.props.proceedThroughQuiz} toggleIsOn={this.props.toggleIsOn} isOn={this.state.isOn} heroNameEng={this.props.heroNameEng} heroName={this.props.heroName} />
 
 
 

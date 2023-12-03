@@ -128,6 +128,7 @@ import {
   CircularTrack,
   CircularThumb,
 } from "react-circular-input";
+import pawn from '../../images/pawn.png'
 
 
 
@@ -222,7 +223,17 @@ let champPortrait = document.getElementsByClassName('champion-portrait')
   };
 	let champIcon = champion0;
 	let champID = Math.floor(value * 100);
+	let questionTextElements = document.getElementsByClassName('question-text');
 
+if (champID !== 25) {
+  // Check if there are any elements with the class 'question-text'
+  if (questionTextElements.length > 0) {
+    // Iterate over the collection and add the 'fade-out' class to each element
+    for (let i = 0; i < questionTextElements.length; i++) {
+      questionTextElements[i].classList.add('fade-out-champ');
+    }
+  }
+}
 
 	if (champID === 100){
 		champIcon = champion0;
@@ -1201,8 +1212,7 @@ if (rng === 2) {
 		'grey lady',
 		'sallow',]
 }
-
-
+	
 
 return (
 	
@@ -1212,11 +1222,14 @@ return (
 				
 		</div>
 <div className="input-elements-container-7">
+		<img className="pawn-filter" src={pawn} alt="pawn-frame" />
 				<img src={lensCap} className="lens-cap" alt="a fantasy landscape a ring of stones, a haunted tree" />
 				<div className='tutorial-container'>
 		
 		<div className="tutorial0-container"></div>
-		</div>
+		
+			
+			</div>
 			</div>
 	
 
@@ -1258,24 +1271,26 @@ return (
 
 				
 			
-		  <div className="input-elements-container-8" >
-	  <img src={lens} id="lens" className="lens-ring4" alt="a glass lens" />
-			<CircularInput  value={value} className="dial4" onChange={tryValue}  >
-				<CircularTrack
-				stroke="rgba(171,144,0,0)"
-						strokeWidth={'3px'}
-				/>
-					<CircularThumb fill="rgba(135,5,2)"
-						stroke="rgba(180,180,180,1)"
-						strokeWidth={'3px'} />
-			</CircularInput>
-			
+		  		
+			<div className="input-elements-container-8"  >
+				
+					<CircularInput  value={value} className="dial4" onChange={tryValue}  >
+					<CircularTrack
+					stroke="rgba(171,144,0,0)"
+							strokeWidth={'3px'}
+					/>
 
-        <p x={100} y={100} className="names-i" textAnchor="middle" dy="0.3em" fontWeight="bold">
-					{hname = namesInIrish[Math.floor(value * 100) + round.current * 100]}
-				</p>
+						<CircularThumb fill="rgba(135,5,2)"
+							stroke="rgba(180,180,180,1)"
+							strokeWidth={'3px'} />
+				</CircularInput>
+				
 
-			</div>
+	        <p x={100} y={100} className="names-i" textAnchor="middle" dy="0.3em" fontWeight="bold">
+						{hname = namesInIrish[Math.floor(value * 100) + round.current * 100]}
+					</p>
+
+				</div>
 		<div className="input-elements-container-5">
 					
 			<button className="button-mash-ring-4" onTouchStart={() => {
@@ -1291,7 +1306,6 @@ return (
 		  {showDiv && props.isOn?<>  <p className="names-e">
 		{ namesInEnglish[ Math.floor(value * 100) + round.current * 100]}	
 		</p></> : null}
-				
 			</>
 			);
 		}

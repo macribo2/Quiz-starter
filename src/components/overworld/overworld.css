@@ -156,8 +156,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 100%;
-   width: auto;  /* Uncomment this line if you want the image to scale proportionally with its original aspect ratio */
+  height: 110%;
+  max-width: 100%; 
+  max-height: 100%; 
+
 }
 
 .map-lens-adjust{
@@ -1188,7 +1190,7 @@ p {
   transform: scale(3);
   width: 100%;
   pointer-events: none;
-  margin-top: 25%;
+  margin-top: 20%;
 
 
 

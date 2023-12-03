@@ -1278,7 +1278,7 @@ position: relative;
 
 #mob-effect2{
   z-index: 99;
-  border:333px solid blue;
+  /* border:333px solid blue; */
 }
 #toggle-settings-btn,
 #toggle-glass-btn {

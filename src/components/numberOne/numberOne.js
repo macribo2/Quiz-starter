@@ -65,17 +65,24 @@ import './no-one.css';
 import skybg from '../../images/blinding-light-county.jpg'
 import fields2 from '../../images/empty.png'
 import { Rings5 } from '../Rings/Rings5';
-export default  class NumberOne extends React.Component  {
+
+
+
+export default class NumberOne extends React.Component  {
+	
 	constructor() {
         super();
         this.state = {
         }
     }
-    
+	
+
     componentDidMount() {
 		this.jQueryCode();
 	}
 	fadeOutNoOne() { 
+		$('.chess-like').fadeIn();
+		$('.pawn-filter').fadeOut();
 		$('.lens-cap').fadeOut();
 		$('.between-fields').fadeOut();
 		$('#hero').fadeIn();
@@ -1458,11 +1465,9 @@ let		ls = ()=>{
 		
 			}})
 				}
-			
-			
 				
-			
 			}
+			
 		
 			
 render()
@@ -1495,7 +1500,7 @@ render()
 			</div>	
 				 </div>
 	
-				 <Rings4 heroName={this.props.heroName} heroNameEng={ this.props.heroNameEng} toggleIsOn={this.props.toggleIsOn} isOn={this.props.isOn} proceedThroughQuiz={this.props.proceedThroughQuiz } fadeOutNoOne={ this.fadeOutNoOne } />
+				 <Rings4    heroName={this.props.heroName} heroNameEng={ this.props.heroNameEng} toggleIsOn={this.props.toggleIsOn} isOn={this.props.isOn} proceedThroughQuiz={this.props.proceedThroughQuiz } fadeOutNoOne={ this.fadeOutNoOne } />
 				 
 			 </>
 

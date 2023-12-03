@@ -208,7 +208,7 @@ export default function App() {
 	
 		{
 			// tosníonn an scéal anseo. 
-			questionText:  '"Cad é ridire?" a díarr '+ choiceRing[localStorage.getItem('portrait')]+' <br/>""<br/><div id="delay-in">"Fichilín ar capall a '+heroNames[localStorage.getItem('portrait')] +'" <br/>arsa '+  hn+'.</div>' ,
+			questionText:  '"Cad é Ridire?" a díarr '+ choiceRing[localStorage.getItem('portrait')]+' <br/><br/><div id="delay-in"></div>' ,
 			answerOptions: [
 				
 			],

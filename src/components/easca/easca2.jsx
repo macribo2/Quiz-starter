@@ -79,7 +79,7 @@ export default class Easca extends React.Component {
             <>
             <textarea maxLength="162" className="easca-input"
           value={this.state.input}
-          placeholder={"..."}
+          placeholder={""}
           onChange={e => this.onChangeInput(e)}
         />
             <Keyboard 
