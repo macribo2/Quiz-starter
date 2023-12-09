@@ -16,7 +16,6 @@ import lens from '../../images/fog5.png';
 import stats from '../../images/inv/stats.png';
 import disk from '../../images/inv/diskette.png';
 import chat from '../../images/inv/chat.png';
-import { Redirect, useLocation } from "react-router-dom";
 import daff from '../../images/localMaps/daff.gif'
 import portrait from '../../images/empty.png'
 import { BtnB } from './../ui/btn-b';
@@ -232,7 +231,6 @@ import pollph3 from '../../images/ai-art/places/1.png'
 import cuicon from '../../images/ai-art/places/1.png'
 import ceannc from '../../images/ai-art/places/1.png'
 import pollph4 from '../../images/ai-art/places/1.png'
-import ChessLike from '../ChessLike/chessLike'
 
 import derryn from '../../images/ai-art/places/derryn.jpg'
 import Encounter from '../encounter/encounter'
@@ -5195,7 +5193,7 @@ export default class Overworld extends React.Component {
                 playerColumn = 5;
 
                 setTimeout(function () {
-                    return <Redirect to="/login" />
+                    // return <Redirect to="/login" />
                 }, 500)
             }
 
@@ -5833,7 +5831,6 @@ export default class Overworld extends React.Component {
                     <img className="rotate-phone-img" src={rotatePhone} alt="rotate phone icon" />
                 </div>
 
-<ChessLike/>
             </div>
 
 

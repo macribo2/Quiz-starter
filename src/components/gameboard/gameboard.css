@@ -39,7 +39,7 @@
 
 .grid::before {
 	content: "";
-	background-image: url('../../images/bgb.jpg');
+	/* background-image: url('../../images/bgb.jpg'); */
 	opacity: 0; /* Set initial opacity to 0 */
 	position: absolute;
 	top: 0;
@@ -143,7 +143,7 @@
   
   .highlighted {
 	background-color: rgba(62, 62, 27, 0);
-	background-image: url('../../images/97.png');
+	/* background-image: url('../../images/97.png'); */
 	background-size: contain;
 	background-repeat: no-repeat;
   }
@@ -269,7 +269,7 @@
 	background-size: contain;
 	height: 552px;
 	width: 552px;
-	background-image: url('../../images/bg3.jpg');
+	/* background-image: url('../../images/bg3.jpg'); */
   /* transform:scale(0.55); */
 	background-repeat: no-repeat;
 }

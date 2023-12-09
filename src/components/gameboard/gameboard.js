@@ -1,10 +1,11 @@
 import './gameboard.css'
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { igate } from 'react-router-dom';
 import EnemyKnight from '../enemies/EnemyKnight'
 import blackKnight from '../../images/knight.png'
 import whiteKnight from '../../images/knight2.png'
 import Modal from '../modal/Modal'; // Import the Modal component
+import '../dublin/dublin.css';
 
 function GameBoard({ setCurrentMap, currentMap, currentCounty, countyData, startAnimation, stopAnimation }) {
 
@@ -124,7 +125,6 @@ function GameBoard({ setCurrentMap, currentMap, currentCounty, countyData, start
 
   // Initialize highlightedSquare to the first square
   const [highlightedSquare, setHighlightedSquare] = useState({ rowIndex: 10, cellIndex: 9 });
-  const navigate = useNavigate();
 
   const greenKnightRef = useRef(null); // Create a ref for the green knight
 
@@ -162,7 +162,7 @@ function GameBoard({ setCurrentMap, currentMap, currentCounty, countyData, start
 
   const switchToCounty = (targetCounty) => {
     setCurrentMap(targetCounty.toLowerCase());
-    navigate(`/${targetCounty.toLowerCase()}`);
+    // navigate(`/${targetCounty.toLowerCase()}`);
   };
 
   
@@ -653,7 +653,7 @@ function resumeAnimation() {
 
 
       </div>
-      <button onClick={openModal} id="pauseButton" className='toggle-modal'>Open Modal</button>
+      {/* <button onClick={openModal} id="pauseButton" className='toggle-modal'>Open Modal</button> */}
 
 <Modal isOpen={isModalOpen} onClose={closeModal}>
   <h2>Modal Content</h2>

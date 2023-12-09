@@ -10,6 +10,7 @@ import lens from '../../images/ciorcal-glass.png';
 import portrait from '../../images/vert-mode.png'
 import gradient from '../../images/gradient2.png';
 import darkGreenFields from '../../images/ciorcal-glass4.png';
+import ChessLike from '../ChessLike/chessLike'
 
 import tutorial0 from '../../images/tutorials/tutorial0.png';
 import avatar1 from '../../images/players/spéirbhean0.png';
@@ -924,7 +925,8 @@ let thePucaOf = localStorage.getItem('pucaEng')
 		</div>
 		{currentQuestion>=8?setIsFadedOut(true):null}
 	
-	
+		<ChessLike/>
+
 	</>
 	
 	);

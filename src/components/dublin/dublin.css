@@ -10,6 +10,12 @@ body{
 
 /* src/components/CountyGameBoards/Dublin/DublinGameBoard.css */
 .county-game-board {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 	/* Add any styling for the county game board container here */
   }
   
