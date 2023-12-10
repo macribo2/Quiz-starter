@@ -5,6 +5,14 @@
 	width: 100%;
 	margin: 0 auto;
 	text-align: center;
+    position: fixed;
+    /* border: 5px solid orange; */
+    left: 0;
+	height: 100%;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+
   }
   
   /* Define cell styles */
@@ -13,7 +21,7 @@
 	height: 64px;
 	padding-bottom: 10%;
 	background-color: #cccccc00;
-	/* border: 1px solid #aaa; */
+	border: 1px solid #aaa;
 	box-sizing: border-box;
 	transform: rotate(90deg);
   }
@@ -22,24 +30,31 @@
   .highlighted-kn {
 	/* background-color: rgba(164, 51, 149, 0.556) !important; */
   }
-  
   /* Define grid styles */
   .grid {
 	/* padding-left: 50%; */
-	display: grid;
-	grid-template-columns: repeat(100, 1fr);
 	margin: 0 auto;
 	gap: 2px;
 	background-color: white;
 	color:rgba(255, 255, 255, 0);
-	transform: rotate(-90deg);
-	/* background-image: url('../../images/bg2.jpg'); */
-  }
+	transform: rotate(-90deg) ;
+	background-image: url('../../images/bg2.jpg');
+  top:0%;
+  position: relative;
+height:100%;
+width: 100%;
+border: 6px solid purple;
+z-index: 9999;
+display: grid;
+
+
+/* position:fixed; */
+}
 
 
 .grid::before {
 	content: "";
-	/* background-image: url('../../images/bgb.jpg'); */
+	background-image: url('../../images/bgb.jpg');
 	opacity: 0; /* Set initial opacity to 0 */
 	position: absolute;
 	top: 0;
@@ -151,7 +166,7 @@
   /* Styles for the green square */
   .green-square {
 	/* background-color: green; */
-  }
+}
   
   /* Styles for highlighted purple */
   .highlighted-purple {
@@ -166,7 +181,7 @@
 	background-image: url('../../images/knight2.png');
 	background-size: contain;
 	background-repeat: no-repeat;	
-  }
+}
   
   /* Position the green knight within the grid */
   .green-knight-container {
@@ -232,7 +247,7 @@
     left: 35%;
 	z-index: 9000;
 }
-  #square-4-16{
+#square-4-16{
     /* border:5px solid whitesmoke; */
 }
 
@@ -241,7 +256,7 @@
 	
 	background-repeat: no-repeat;
 	background-size: contain;
-	}
+}
 
 	/* For rotating both white and black horses */
 .rotate-horse-45 {
@@ -269,7 +284,7 @@
 	background-size: contain;
 	height: 552px;
 	width: 552px;
-	/* background-image: url('../../images/bg3.jpg'); */
+	background-image: url('../../images/bg3.jpg');
   /* transform:scale(0.55); */
 	background-repeat: no-repeat;
 }
@@ -300,3 +315,12 @@
 		}
 	  }
 	
+	.chess-like-gameboard-container{
+	  height: 100%;
+	  width:100%;
+	  top:0;
+	  left:0;
+	  position: fixed;
+	  border: 5px solid khaki;
+	
+	}

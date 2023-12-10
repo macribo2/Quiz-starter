@@ -108,6 +108,7 @@ const closeMapTransition = () => {
 useEffect(() => {
   // Listen for changes in currentMap and wicklowMap
   if (currentMap === gameData.wicklow.map) {
+    alert('Cill Meantán')
     // Perform any necessary actions when switching to Wicklow
     // This could include updating player position or other logic
   }

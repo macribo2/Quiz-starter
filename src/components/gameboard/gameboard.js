@@ -9,6 +9,9 @@ import '../dublin/dublin.css';
 
 function GameBoard({ setCurrentMap, currentMap, currentCounty, countyData, startAnimation, stopAnimation }) {
 
+console.log(currentMap)
+
+  
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -293,7 +296,7 @@ if (rowIndex !== initialRow || cellIndex !== initialCol) {
  
     
     // Remove the 'highlighted-kn' class from all squares
-    document.querySelectorAll('.cell').forEach((square) => {
+    document.querySelectorAll('.chess-like-cell').forEach((square) => {
       square.classList.remove('highlighted-kn');
       square.style.border = 'none'; // Remove the border from all squares
   });
@@ -406,7 +409,7 @@ if (rowIndex !== initialRow || cellIndex !== initialCol) {
   
   
     // Remove the 'highlighted-kn' class from all squares
-    document.querySelectorAll('.cell').forEach((square) => {
+    document.querySelectorAll('.chess-like-cell').forEach((square) => {
       const element = square;
       if (element) {
         square.classList.remove('highlighted-kn');
@@ -597,9 +600,7 @@ function resumeAnimation() {
   }, []); // The empty dependency array ensures this runs once after the component mounts
   
   return (
-    <div>
-
-      <div className="game-board" isPaused = {isModalOpen}>
+    <div className="chess-like-gameboard-container">
 
         <div className="grid">
         {currentMap.slice().reverse().map((row, rowIndex) => (
@@ -609,7 +610,7 @@ function resumeAnimation() {
               const isTargetSquare = targetSquare && targetSquare.rowIndex === rowIndex && targetSquare.cellIndex === cellIndex;
               const isblack = (rowIndex + cellIndex) % 2 === 0; // Check both rowIndex and cellIndex
   
-              const squareClasses = `cell ${
+              const squareClasses = `chess-like-cell ${
                 highlightedSquare.rowIndex === rowIndex &&
                 highlightedSquare.cellIndex === cellIndex
                   ? 'highlighted'
@@ -645,6 +646,8 @@ function resumeAnimation() {
         ))}
       </div>
   
+      <div className="game-board" isPaused = {isModalOpen}>
+
       <div ref={greenKnightRef} className={`green-knight ${isOriginalGreenKnightSquare ? 'original-green-knight' : ''}`}>
         {isOriginalGreenKnightSquare && (
           <EnemyKnight greenKnightPosition={greenKnightPosition} />
@@ -653,13 +656,7 @@ function resumeAnimation() {
 
 
       </div>
-      {/* <button onClick={openModal} id="pauseButton" className='toggle-modal'>Open Modal</button> */}
-
-<Modal isOpen={isModalOpen} onClose={closeModal}>
-  <h2>Modal Content</h2>
-  <p>This is the content of your modal.</p>
-</Modal>
-
+ 
       </div>
 
   );
