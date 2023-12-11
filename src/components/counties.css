@@ -1,48 +1,7 @@
-
-@font-face {
-	font-family: aonchlo;
-	src: url(../fonts/aonchlo.ttf);
-}
-
-.game-intro{
-
-	height:100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	background-color: black;
-	/* border: 5px solid blue; */
-	
-	background-repeat: repeat;
-
-}
-
-.stars{
-	position: fixed;
-	top: 10%;
-	left: 30%;
-	height: 60%;
-	width: auto;
-	z-index: -1;
-}
-
 .title{
 	position: fixed;
 	padding: 5%;
 	color: darkgrey;
-	font-size: 4em;
-	left:5%;
-	font-family: 'aonchlo';
-	animation:fade-in 35s forwards;
-}
-.title-eng{
-	position: fixed;
-	padding: 5%;
-	color: beige;
-	font-size: 2em;
-	right:10%;
-top:45%;
-animation:eng-tip 8s forwards;
 }
 .overlay {
 	position: fixed;
@@ -53,7 +12,7 @@ animation:eng-tip 8s forwards;
 	background-color: rgba(0, 0, 0, 0.8);
 	display: none;
 	justify-content: center;
-	align-items: center;
+		align-items: center;
 	transition: opacity 0.5s;
   }
   
@@ -66,23 +25,6 @@ animation:eng-tip 8s forwards;
 	text-align: center;
 	color: white;
   }
-  #home-bg{
-margin-top:10%;
-	/* border: 25px solid black; */
-  }
-  body, html {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-  }
-  .home-container{
-	display: grid;
-	justify-content: center;
-height: 100%;
-width: 100%;
-background-color: black;
-	/* border: 50px solid black; */
-  }
   
 .drift-down-animation {
 /* border:14px solid orange; */
@@ -92,50 +34,6 @@ animation: driftDown 60s linear forwards ;
 }
   
 
-  
-
-@keyframes eng-tip {
-	0% {
-	  opacity:0
-	}
-
-	23%{
-		opacity:0
-	
-	}
-	26%{
-		opacity:1
-	
-	}
-	75%{
-		opacity:1
-	
-	}
-
-	100% {
-		opacity:0
-		
-	}
-  }
-  
-
-
-@keyframes fade-in {
-	0% {
-	  opacity:0
-
-	
-	}
-	26%{
-		opacity:1
-	
-	}
-
-	100% {
-		opacity:1
-		
-  }
-}
   
 
 @keyframes driftDown {
@@ -166,7 +64,7 @@ animation: driftDown 60s linear forwards ;
   /* Global styles for all devices */
 body {
 	font-family: Arial, sans-serif;
-	background-color:black;
+	background-color: #f0f0f0;
 	color: #333;
   }
   
@@ -190,22 +88,4 @@ body {
   transform: rotate(45deg) translate(5px,-10px);
 
   /* background-color:  orange; */
-}
-
-.title-button{
-height: 100px;
-    width: 200px;
-top:50%;
-position:fixed;
-left:8%;
-border: 5px solid rgba(221, 160, 221, 0.651);
-border-radius: 15%;
-background-color: rgba(0, 0, 0, 0);
-animation:fade-in 45s forwards;
-
-}
-
-#pawn-icon,#pawn-icon2{
-	font-size: 3em;
-	color:white
 }

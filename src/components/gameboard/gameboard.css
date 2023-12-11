@@ -2,6 +2,8 @@
 
 /* Center the game board */
 .game-board {
+	caret-color: transparent;
+
 	width: 100%;
 	margin: 0 auto;
 	text-align: center;
@@ -214,6 +216,7 @@ display: grid;
 	left: 0;
 	background-color: rgba(0, 0, 0, 1); /* Opaque black */
 	z-index: 99991;
+	
 	pointer-events: none; /* Allows clicks to pass through to the game board */
   }
   
@@ -227,7 +230,8 @@ display: grid;
 	background-color: rgba(0, 0, 0, 1); /* Opaque black */
 	z-index: 99991;
 	pointer-events: none; /* Allows clicks to pass through to the game board */
-  }
+opacity: 0.5	;  
+}
   
   /* Create a right mask layer to hide the right area */
   .right-mask {
@@ -239,7 +243,9 @@ display: grid;
 	background-color: rgba(0, 0, 0, 1); /* Opaque black */
 	z-index: 99991;
 	pointer-events: none; /* Allows clicks to pass through to the game board */
-  }
+	opacity: 0.5	;  
+
+}
   
   .toggle-modal{
 	position: fixed;
